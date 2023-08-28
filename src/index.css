@@ -215,7 +215,7 @@ tr:hover {
 
 .calculator__titleContainer {
   border: 1px solid #eeeeee;
-  background-image: url("../images/calculator__image.jpg");
+  /*background-image: url("../images/calculator__image.jpg");*/
   background-size: cover;
 }
 
@@ -275,7 +275,7 @@ tr:hover {
 .article__div--highlighted {
   width: 300px;
   height: 300px;
-  background-image: url("../images/pink.png");
+  /*background-image: url("../images/pink.png");*/
 }
 
 .article__div--noFlex {
@@ -343,7 +343,7 @@ tr:hover {
 
 .calculator__titleContainer--currency {
   border: 1px solid #eeeeee;
-  background-image: url("../images/currencyBackground.png");
+  /*background-image: url("../images/currencyBackground.png");*/
   background-size: cover;
 }
 
