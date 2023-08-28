@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/KatarzynaZaloba/blog-2/static/css/main.e87410c9.css",
-    "main.js": "/KatarzynaZaloba/blog-2/static/js/main.724f146f.js",
-    "static/js/787.f587e8d5.chunk.js": "/KatarzynaZaloba/blog-2/static/js/787.f587e8d5.chunk.js",
-    "static/media/kate.jpg": "/KatarzynaZaloba/blog-2/static/media/kate.4591bd1781b34abc5f40.jpg",
-    "index.html": "/KatarzynaZaloba/blog-2/index.html",
-    "main.e87410c9.css.map": "/KatarzynaZaloba/blog-2/static/css/main.e87410c9.css.map",
-    "main.724f146f.js.map": "/KatarzynaZaloba/blog-2/static/js/main.724f146f.js.map",
-    "787.f587e8d5.chunk.js.map": "/KatarzynaZaloba/blog-2/static/js/787.f587e8d5.chunk.js.map"
+    "main.css": "/blog-2/static/css/main.e87410c9.css",
+    "main.js": "/blog-2/static/js/main.d460360e.js",
+    "static/js/787.f587e8d5.chunk.js": "/blog-2/static/js/787.f587e8d5.chunk.js",
+    "static/media/kate.jpg": "/blog-2/static/media/kate.4591bd1781b34abc5f40.jpg",
+    "index.html": "/blog-2/index.html",
+    "main.e87410c9.css.map": "/blog-2/static/css/main.e87410c9.css.map",
+    "main.d460360e.js.map": "/blog-2/static/js/main.d460360e.js.map",
+    "787.f587e8d5.chunk.js.map": "/blog-2/static/js/787.f587e8d5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e87410c9.css",
-    "static/js/main.724f146f.js"
+    "static/js/main.d460360e.js"
   ]
 }
