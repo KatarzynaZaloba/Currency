@@ -23,22 +23,6 @@ body {
   text-align: center;
 }
 
-.article__header {
-  text-align: left;
-}
-
-.article__subheader {
-  color: #2a5537;
-  text-align: center;
-}
-
-.article__subsubheader {
-  font-size: 12px;
-  text-align: justify;
-  padding-top: 20px;
-  border-bottom: 1px solid #2a5537;
-}
-
 .article__subsubsubheader {
   font-size: 18px;
   text-decoration: underline;
