@@ -22,9 +22,14 @@ function App() {
                         date="28 sierpnia 2023 roku"
                         title="Przenosiny"
                         body={
+                            <>
                             <Paragraph>
                                 Zdecydowałam się w końcu na przeniesienie bloga na Reacta. Wracam niebawem!
                             </Paragraph>
+                            <Paragraph>
+                                Stara wersja bloga <a href="https://katarzynazaloba.github.io/blog-old/">TUTAJ</a>
+                            </Paragraph>
+                            </>
                         }
                         />
                     }
