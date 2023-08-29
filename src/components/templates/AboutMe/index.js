@@ -14,13 +14,11 @@ const AboutMe = () => {
                 <>
                     <p>
                         Hej, mam na imię Kasia i jestem tutaj, ponieważ zainteresowałam się programowaniem.
-                        Bardzo miło mi będzie zaprosić cię do zgłębienia reszty strony. W wolnych chwilach
-                        uwielbiam truchtać po lesie.
+                        Bardzo miło mi będzie zaprosić cię do zgłębienia reszty strony.
                     </p>
                     <p>
-                        Zawodowo zajmowałam się ochroną danych osobowych, wszelkiego rodzaju wsparciem technicznym
-                        (helpdesk), miniserwisem
-                        sprzętów IT i układaniem procesów i instrukcji.</p>
+                        W wolnych chwilach uwielbiam truchtać po lesie. Zawodowo zajmowałam się ochroną danych osobowych, wszelkiego rodzaju wsparciem technicznym
+                        (helpdesk), miniserwisem sprzętów IT i układaniem procesów i instrukcji.</p>
                     <p>
                         Od dziecka marzyłam o programowaniu. Dopiero po swoich trzydziestych urodzinach
                         uświadomiłam

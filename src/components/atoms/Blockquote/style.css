@@ -1,0 +1,12 @@
+.article__blockquote {
+    background-color: #f5f3f3;
+    text-align: left;
+    padding: 10px;
+    word-wrap: break-word;
+    max-width: 90%;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333333;
+}
