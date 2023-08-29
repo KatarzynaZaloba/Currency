@@ -1,0 +1,6 @@
+.article__thead {
+    border: 1px solid black;
+    padding: 10px;
+    background-color: #f5f3f3;
+    word-wrap: break-word;
+}
