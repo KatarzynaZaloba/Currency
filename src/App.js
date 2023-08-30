@@ -915,7 +915,7 @@ function App() {
                                 }
                             />
                             <Article
-                                date="3 sierpnia 2023"
+                                date="3 sierpnia 2023 roku"
                                 title="Podsumowanie"
                                 body={
                                     <>
@@ -977,6 +977,109 @@ function App() {
                                         <p>I kolejna dobra wiadomość — z dnia na dzień coraz pewniej pracuję z kodem. I
                                             bardzo się z tego
                                             cieszę! </p>
+                                    </>
+                                }
+                            />
+                            <Article
+                                date="2 sierpnia 2023 roku"
+                                title="React c.d."
+                                body={
+                                    <>
+                                        <SmallestHeader>Atrybuty w JSX</SmallestHeader>
+                                        <Blockquote>
+                                            <b>const</b> element = (<br/>
+                                            &nbsp;&nbsp;&lt;div className="container"><br/>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;button disabled=&#123;true&#125;>Wyłączony
+                                            przycisk&lt;/button><br/>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;button disabled>Wyłączony
+                                            przycisk&lt;/button><br/>
+                                            &nbsp;&nbsp;&lt;/div><br/>
+                                            );
+                                        </Blockquote>
+                                        <p>Do określenia klasy nie używamy atrybutu <i>class</i> tylko className.
+                                            W <i>JSX</i> możemy przekazywać różne typy , nawet <i>boolean-a</i> i tak
+                                            jak w załączonym przykładzie wyżej - dodać
+                                            wartość <i>true</i> w <i>curly braces</i> do atrybutu <i>disabled</i>.
+                                            Oczywiście podkreślić trzeba, że obowiązuje tutaj konwencja <i>camelCase</i>.
+                                        </p>
+                                        <SmallestHeader>Atrybuty spread</SmallestHeader>
+                                        <Blockquote>
+                                            <b>const</b> attributes = (<br/>
+                                            &nbsp;&nbsp;className: "button",<br/>
+                                            &nbsp;&nbsp;disabled: <b>true</b>,<br/>
+                                            );<br/><br/>
+                                            <b>const</b> element = (<br/>
+                                            &nbsp;&nbsp;&lt;button &#123;...attributes&#125;><br/>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;Wyłączony przycisk<br/>
+                                            &nbsp;&nbsp;&lt;/button><br/>
+                                            );
+                                        </Blockquote>
+                                    </>
+                                }
+                            />
+                            <Article
+                                date="1 sierpnia 2023 roku"
+                                title="React"
+                                body={
+                                    <>
+                                        <p>React jest odpowiedzialny za to, żeby łatwo podzielić na komponenty aplikację
+                                            i
+                                            renderować dynamicznie HTML-a</p>
+                                        <SmallestHeader>React</SmallestHeader>
+                                        <ListUnordered>
+                                            <ListItem>React.js jest biblioteką JavaScript</ListItem>
+                                            <ListItem>bardzo ułatwia tworzenie interaktywnych
+                                                interfejsów użytkownika (coś
+                                                dynamicznie się zmienia na stronie po akcji użytkownika bez potrzeby
+                                                przeładowywania całej
+                                                strony)
+                                            </ListItem>
+                                            <ListItem>pozwala na efektywne renderowanie
+                                                <ListUnordered>
+                                                    <ListItem>aktualizuje tylko to, co trzeba w
+                                                        drzewie DOM
+                                                    </ListItem>
+                                                </ListUnordered>
+                                            </ListItem>
+                                            <ListItem>bazuje na komponentach
+                                            </ListItem>
+                                        </ListUnordered>
+                                        <SmallestHeader>Dodanie Reacta i Babela do strony</SmallestHeader>
+                                        <Blockquote>
+                                            &lt;script defer src="https://unpkg.com/react@18/umd/react.development.js"
+                                            crossorigin>&lt;/script><br/>
+                                            &lt;script defer
+                                            src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+                                            crossorigin>&lt;/script><br/>
+                                            &lt;script defer
+                                            src="https://unpkg.com/babel-standalone@6/babel.min.js">&lt;/script><br/>
+                                        </Blockquote>
+                                        <SmallestHeader>Pierwszy element React i render</SmallestHeader>
+                                        <Blockquote>
+                                            &lt;div id="root">&lt;/div><br/>
+                                            &lt;script type="text/babel"><br/>
+                                            &nbsp;&nbsp;const element = &lt;h1>Hello, world!&lt;/h1>;<br/>
+                                            &nbsp;&nbsp;ReactDOM.render(element, document.getElementById('root'));<br/>
+                                            &lt;/script>
+                                        </Blockquote>
+                                        <SmallestHeader>JSX</SmallestHeader>
+                                        <Blockquote>
+                                            const element = <h3>Hello world!</h3>;
+                                        </Blockquote>
+                                        <ListUnordered>
+                                            <ListItem>to nie jest łańcuch znaków, to nie jest <b>HTML</b>, to
+                                                jest <b>JSX</b>
+                                                <ListUnordered>
+                                                    <ListItem>czyli rozszerzenie składni <b>JS</b>
+                                                    </ListItem>
+                                                </ListUnordered>
+                                            </ListItem>
+                                        </ListUnordered>
+                                        <SmallestHeader>Wyrażenia wewnątrz JSX</SmallestHeader>
+                                        <Blockquote>
+                                            const name = "Kasia";<br/>
+                                            const element = &lt;h1>Cześć &#123;name&#125;!&lt;/h1>;
+                                        </Blockquote>
                                     </>
                                 }
                             />
