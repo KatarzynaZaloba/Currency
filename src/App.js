@@ -1083,6 +1083,120 @@ function App() {
                                     </>
                                 }
                             />
+                            <Article
+                                date="31 lipca 2023 roku"
+                                title="Immutability - c.d."
+                                body={
+                                <>
+                                    <SmallestHeader>Edycja elementu tablicy</SmallestHeader>
+                                   <Blockquote>
+                                        <b>const</b> tasks = [<br/>
+                                        &nbsp;&nbsp;&#123title: "ugotować obiad", done: false&#125;,<br/>
+                                        &nbsp;&nbsp;&#123title: "zrobić pranie", done: true&#125;,<br/>
+                                        &nbsp;&nbsp;&#123title: "zrobić zakupy", done: false&#125;,<br/>
+                                        ];<br/><br/>
+                                        <b>const</b> editIndex = 1;<br/><br/>
+                                        <b>const</b> tasksWithUpdatedItem = [<br/>
+                                        &nbsp;&nbsp;...tasks.slice(0, editIndex),<br/>
+                                        &nbsp;&nbsp;&#123...tasks[editIndex], done: false&#125;,<br/>
+                                        &nbsp;&nbsp;...tasks.slice(editIndex + 1),<br/>
+                                        ];
+                                    </Blockquote>
+                                </>
+                                }
+                            />
+                            <Article
+                                date="28 lipca 2023 roku"
+                                title="Immutability"
+                                body={
+                                <>
+                                    <SmallestHeader>Wartości prymitywne są niemutowalne</SmallestHeader>
+                                    <Blockquote>
+                                        <b>const</b> string = "tekst<br/>
+                                        <b>const</b> stringUpperCased = string.toUpperCase();<br/><br/>
+                                        <b>const</b> number = 5;<br/>
+                                        <b>cont</b> numberFormatted = number.toFixed(2);
+                                    </Blockquote>
+                                    <SmallestHeader>Obiekty i tablice możemy mutować</SmallestHeader>
+                                    <Blockquote>
+                                        <b>const</b> person = &#123;name: "Krzysiek"&#125;;<br/>
+                                        person.name = "Kosmo";<br/><br/>
+                                        <b>const </b> cars = ["beemka"];<br/>
+                                        cars.push("merc");
+                                    </Blockquote>
+                                    <SmallestHeader>Dlaczego to <em>nie jest</em> fajne</SmallestHeader>
+                                    <ListUnordered>
+                                        <ListItem>kod jest mało przewidywalny i mało czytelny
+                                        </ListItem>
+                                        <ListItem>mogą pojawiać się błędy trudne do wykrycia
+                                        </ListItem>
+                                        <ListItem>trudno wykrywać zmiany</ListItem>
+                                    </ListUnordered>
+                                    <SmallestHeader>Praca z obiektami i tablicami bez
+                                        mutowania</SmallestHeader>
+                                    <SmallestHeader>Edycja właściwości obiektu</SmallestHeader>
+                                    <Blockquote>
+                                        <b>const</b> person = &#123;<br/>
+                                        &nbsp;&nbsp;name: "Kasia"<br/>
+                                        &nbsp;&nbsp;surname: "Pelasia"<br/>
+                                        &#125;;<br/><br/>
+                                        <b>const</b> updatedPerson = &#123;<br/>
+                                        &nbsp;&nbsp;...person,<br/>
+                                        &nbsp;&nbsp;name: "Erwina",<br/>
+                                        &#125;;
+                                    </Blockquote>
+                                        <SmallestHeader>Dodawanie właściwości do obiektu</SmallestHeader>
+                                        <Blockquote>
+                                            <b>const</b> person = &#123;<br/>
+                                            &nbsp;&nbsp;name: "Kasia"<br/>
+                                            &nbsp;&nbsp;surname: "Pelasia"<br/>
+                                            &#125;;<br/><br/>
+                                            <b>const</b> personWithAge = &#123;<br/>
+                                            &nbsp;&nbsp;...person,<br/>
+                                            &nbsp;&nbsp;age: 39,<br/>
+                                            &#125;;
+                                        </Blockquote>
+                                            <SmallestHeader>Usunięcie właściwości obiektu</SmallestHeader>
+                                            <Blockquote>
+                                                <b>const</b> person = &#123;<br/>
+                                                &nbsp;&nbsp;name: "Kasia"<br/>
+                                                &nbsp;&nbsp;surname: "Pelasia"<br/>
+                                                &nbsp;&nbsp;age: 39,<br/>
+                                                &#125;;<br/><br/>
+                                                <b>const</b> &#123;<br/>
+                                                &nbsp;&nbsp;age,<br/>
+                                                &nbsp;&nbsp;...personWithAge,<br/>
+                                                &#125; = person;
+                                            </Blockquote>
+                                                <SmallestHeader>Dodanie elementu do
+                                                    tablicy</SmallestHeader>
+                                                <Blockquote>
+                                                    <b>const</b> tasks = [<br/>
+                                                    &nbsp;&nbsp;&#123;title: "ugotować obiad", done: false&#125;,<br/>
+                                                    &nbsp;&nbsp;&#123;title: "posprzątać garaż", done: true&#125;,<br/>
+                                                    ];<br/><br/>
+                                                    <b>const</b> tasksWithNewElement = [<br/>
+                                                    &nbsp;&nbsp;...tasks,<br/>
+                                                    &nbsp;&nbsp;&#123;title: "zrobić pranie", done: false&#125;,<br/>
+                                                    ];
+                                                </Blockquote>
+                                                <SmallestHeader>Usunięcie elementu z
+                                                    tablicy</SmallestHeader>
+                                                <Blockquote>
+                                                    <b>const</b> tasks = [<br/>
+                                                    &nbsp;&nbsp;&#123;title: "ugotować obiad", done: false&#125;,<br/>
+                                                    &nbsp;&nbsp;&#123;title: "posprzątać garaż", done: true&#125;,<br/>
+                                                    &nbsp;&nbsp;&#123;title: "zrobić pranie", done: false&#125;,<br/>
+                                                    ];<br/><br/>
+                                                    <b>const</b> removedIndex = 1;<br/><br/>
+                                                    <b>const</b> tasksWithoutSecondElement = [<br/>
+                                                    &nbsp;&nbsp;...tasks.slice(0, removedIndex),<br/>
+                                                    &nbsp;&nbsp;...tasks.slice(removedIndex + 1),<br/>
+                                                    ];
+                                                </Blockquote>
+                                </>
+                                }
+                                />
                         </>
                     }
                 />
