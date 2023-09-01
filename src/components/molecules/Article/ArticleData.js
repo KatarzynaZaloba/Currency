@@ -5,6 +5,48 @@ import Schema from "../../../images/schemat.png";
 
 export const articlesLink = [
     {
+        id: 24,
+        date: "4 czerwca 2023 roku",
+        title: "JavaScript - document.querySelector()",
+        body: (
+            <>
+                <p>Metody querySelector używamy do <em>"złapania"</em> elementu <i>HTML</i>, np. wpisując w konsolę
+                    (za pomocą <i>DevTools</i>):</p>
+                <blockquote className="article__blockquote">
+                    &gt; <i>document.querySelector</i>("h2");<br/>
+                    &lt; &lt;h2&gt;O mnie&lt;/h2&gt;;
+                </blockquote>
+                <p>Możemy następnie danemu elementowi HTML (albo klasie elementu, lub konkretnemu elementowi HTML
+                    (id)), <strong>dodać</strong> klasę: </p>
+                <blockquote className="article__blockquote">
+                    nazwaKlasyElementuHTML.<i>classList.add</i>("nowaNazwaKlasy");
+                </blockquote>
+                <p>Możemy <strong>usunąć</strong> klasę elementowi HTML, np.:</p>
+                <blockquote className="article__blockquote">
+                    nazwaKlasyElementuHTML.<i>classList.remove</i>("nowaNazwaKlasy");
+                </blockquote>
+                <p>Możemy <strong>przełączać</strong> klasę elementowi HTML, np.:</p>
+                <blockquote className="article__blockquote">
+                    nazwaKlasyElementuHTML.<i>classList.toggle</i>("nowaNazwaKlasy");
+                </blockquote>
+                <p>Możemy <strong>zmienić</strong> tekst elementowi HTML, np.:</p>
+                <blockquote className="article__blockquote">
+                    nazwaKlasyElementuHTML.<i>innerText</i> = "Nowy tekst";
+                </blockquote>
+                <p>Możemy <strong>zmienić</strong> zawartość HTML elementowi HTML, np.:</p>
+                <blockquote className="article__blockquote">
+                    nazwaKlasyElementuHTML.<i>innerHTML</i> = "Nowa treść ze
+                    &lt;span&gt; znacznikiem HTML
+                    &lt;/span&gt;".;
+                </blockquote>
+                <p>Możemy <strong>usunąć</strong> element HTML, np.:</p>
+                <blockquote className="article__blockquote">
+                    nazwaKlasyElementuHTML.<i>remove()</i>;
+                </blockquote>
+            </>
+        )
+    },
+    {
         id: 23,
         date: "4 czerwca 2023 roku",
         title: "JavaScript - składnia",
