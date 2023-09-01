@@ -5,6 +5,54 @@ import Schema from "../../../images/schemat.png";
 
 export const articlesLink = [
     {
+        id: 51,
+        date: "11 lipca 2023",
+        title: "CSS - Flex c.d.",
+        body: (
+            <>
+            <h4 className="article__subsubsubheader">flex-direction</h4>
+            <p>Flex layout ma dwie osie: główną i prostopadłą (main i cross). Oś prostopadła to oś pionowa.</p>
+            <p>Wartości dla <b>flex-direction</b>, to:</p>
+            <ul className="article__unorderedList">
+                <li className="article__listItem">
+                    row
+                </li>
+                <li className="article__listItem">
+                    row-reverse,
+                </li>
+                <li className="article__listItem">
+                    column - gdy wpiszemy do właściwości <i>flex-direction</i> wartość <i>column</i>, nasz element
+                    będzie zachowywał się, jakby w ogóle <i>Flex-a</i> nie było. Czy aby <em>na pewno</em>? Jeżeli
+                    mamy ustawionego <i>Flex-a</i>, to nie zachodzi <i>margin collapsing</i>.
+                    <blockquote className="article__blockquote">
+                        .container &#123;<br/>
+                        &nbsp;&nbsp;display: flex;<br/>
+                        &nbsp;&nbsp;<b>flex-direction: column;</b><br/>
+                        &#125;;
+                    </blockquote>
+                    </li>
+                        <li className="article__listItem">
+                            column reverse.
+                        </li>
+                    </ul>
+                        <p>Bardzo fajnym ćwiczeniem będzie, jeśli za pomocą <i>DevTools-ów</i> "złapiesz" <i>div-a</i> z
+                        poprzedniego wpisu i dodasz właściwość <i>flex-direction</i> i "pobawisz się" z wartościami, które
+                        są też dostępne w tym narzędziu.</p>
+                        <h4 className="article__subsubsubheader">flex-basis</h4>
+                        <p>Gdy ustawimy sobie elementy w <i>kontenerze nadrzędnym</i> jako <i>flex-direction: row</i>, to
+                        zauważymy, że szerokość elementów powinna być stała, jednak wysokość będzie się rozciągać na
+                        wysokość rodzica. Możemy wyznaczyć stałą szerokość elementów w tym przypadku i do tego posłuży nam
+                        właśnie <i>flex-basis</i>. Jeżeli ustawiliśmy <i>flex-direction: column</i>, to <i>flex-basis</i>
+                        będzie się odnosił do wysokości elementów, a nie szerokości. Oczywiście nie możemy powiększać
+                        szerokości/ wysokości elementów w nieskończoność — możemy je ustawić maksymalnie tak, aby nie
+                        przekroczyć dostępnej szerokości lub wysokości narzuconej przez rodzica. Właściwości <i>width</i> i
+                        <i>height</i> również zadziałają, jednak wygodniej jest stosować <i>flex-basis</i>, ponieważ nie
+                        musimy wtedy pilnować czy mamy ustawiony <i>flex direction</i> na <i>row</i>, czy <i>column</i> i
+                        przede wszystkim <i>flex-basis</i> ma wyższy priorytet.</p>
+            </>
+        )
+    },
+    {
         id: 50,
         date: "09 lipca 2023 roku",
         title: "CSS - Flex",
