@@ -18,8 +18,14 @@ import Thead from "./components/atoms/Thead";
 import Tr from "./components/atoms/Tr";
 import Th from "./components/atoms/Th";
 import TableContainer from "./components/atoms/TableContainer";
+import {
+    articlesLink
+} from "./components/molecules/Article/ArticleData";
 
 function App() {
+
+    const sortedArticles = [...articlesLink].sort((a, b) => b.id - a.id);
+
     return (
         <div>
             <Container>
@@ -31,18 +37,14 @@ function App() {
                     subtitle=""
                     body={
                         <>
+                            {sortedArticles.map((article) => (
                             <Article
-                                date="28 sierpnia 2023 roku"
-                                title="Przenosiny"
-                                body={
-                                    <>
-                                        <p>Zdecydowałam się w końcu na przeniesienie bloga na Reacta. Wracam
-                                            niebawem!</p>
-                                        <p>Stara wersja bloga <a
-                                            href="https://katarzynazaloba.github.io/blog-old/">TUTAJ</a></p>
-                                    </>
-                                }
+                                key={article.id}
+                                date={article.date}
+                                title={article.title}
+                                body={article.body}
                             />
+                                ))}
                             <Article
                                 date="18 sierpnia 2023 roku"
                                 title="React - formularze"
