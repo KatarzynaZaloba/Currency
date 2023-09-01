@@ -5,6 +5,21 @@ import Schema from "../../../images/schemat.png";
 
 export const articlesLink = [
     {
+        id: 20,
+        date: "1 czerwca 2023 roku",
+        title: "HTML - znaczniki span i div",
+        body: (
+            <>
+                <p>
+                    Powyższe znaczniki nie mają znaczenia semantycznego. Służą zwykle do osadzania długich treści w
+                    <i>elementach liniowych</i> (&lt;div&gt;) i do osadzania fragmentów tekstu w <i>elementach
+                    blokowych</i> (&lt;span&gt;). Są pożyteczne ze względu na <em>łapanie</em> elementów w
+                    <i>JavaScript</i>.
+                </p>
+            </>
+        )
+    },
+    {
         id: 19,
         date: "1 czerwca 2023 roku",
         title: "CSS - podstawy",
