@@ -2,8 +2,142 @@ import React from "react";
 import "./style.css";
 import Kate from "../../../images/scarpa.jpg";
 import Schema from "../../../images/schemat.png";
+import Null from "../../../images/nullUndefined.jpg";
 
 export const articlesLink = [
+    {
+        id: 54,
+        date: "13 lipca 2023 roku",
+        title: "JavaScript - boolean, null, undefined",
+        body: (
+            <>
+                <figure className="article__figure">
+                    <img alt="różnica między null i undefined " className="article__image"
+                         src={Null}/>
+                        <figcaption className="article__figcaption">
+                            Różnica między null i undefined<br/>
+                            Źródło: https://codecrumbs.com/
+                        </figcaption>
+                </figure>
+                <h4 className="article__subsubsubheader">boolean</h4>
+                <p>Mamy dwie wartości typu boolean: <i>true</i> i <i>false</i> i <i>on</i> <i>off</i>. <i>Boolean</i>
+                    jest zwracany przez <i>operatory porównania</i>.</p>
+                <blockquote className="article__blockquote">
+                    > let <b>zmienna</b> = true;
+                </blockquote>
+                <blockquote className="article__blockquote">
+                    > typeof <b>zmienna</b><br/>
+                    &lt;
+                    "boolean"
+                </blockquote>
+                <p>Możemy teraz zmienić tą wartość, ale tylko na <i>false</i>:</p>
+                <blockquote className="article__blockquote">
+                    > let <b>zmienna</b> = false<br/>
+                </blockquote>
+                <p>Możemy też <i>pobawić się</i> <i>boolean-em</i> przypisując działanie do jakiejś zmiennej, np.</p>
+                <blockquote className="article__blockquote">
+                    > 10 > 4<br/>
+                    &lt; true
+                </blockquote>
+                <blockquote className="article__blockquote">
+                    > let <b>czy10JestWiekszeNiz4</b> = 10 > 4<br/>
+                </blockquote>
+                <blockquote className="article__blockquote">
+                    > <b>czy10JestWiekszeNiz4</b><br/>
+                    &lt; true
+                </blockquote>
+                <h4 className="article__subsubsubheader">wartości <i>falsy</i></h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        0, -0,
+                    </li>
+                    <li className="article__listItem">
+                        "" - pusty łańcuch znaków,
+                    </li>
+                    <li className="article__listItem">
+                        false,
+                    </li>
+                    <li className="article__listItem">
+                        NaN
+                    </li>
+                    <li className="article__listItem">
+                        undefined,
+                    </li>
+                    <li className="article__listItem">
+                        null,
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">Konwertowanie na boolean</h4>
+                <p>Tak jak każdą zmienną możemy sobie konwertować na string, np. za pomocą metody <i>toString</i> albo
+                    na liczby za pomocą metody <i>Number</i> tak i możemy przekonwertować na <i>boolean</i>. Możemy to
+                    zrobić w następujący sposób:</p>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        !!wartość - <b>logical NOT</b> - operator zaprzeczający
+                    </li>
+                    <li className="article__listItem">
+                        Boolean(wartość)
+                    </li>
+                </ul>
+                <blockquote className="article__blockquote">
+                    > let <b>liczba</b> = 5;<br/>
+                </blockquote>
+                <blockquote className="article__blockquote">
+                    > let <b>czyLiczba</b> = !!liczba;<br/>
+                </blockquote>
+                <blockquote className="article__blockquote">
+                    > <b>czyLiczba</b><br/>
+                    &lt; true
+                </blockquote>
+                <h4 className="article__subsubsubheader">Typ null</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        let zmienna = null — deklarujemy tylko w taki sposób,
+                    </li>
+                    <li className="article__listItem">
+                        "celowy brak wartości",,
+                    </li>
+                    <li className="article__listItem">
+                        jedyna możliwa wartość: null
+                    </li>
+                    <li className="article__listItem">
+                        jeżeli chcemy sprawdzić, czy zmienna jest <i>null-em</i>:
+                        <blockquote className="article__blockquote">
+                            if (zmienna === null)
+                        </blockquote>
+                    </li>
+                    <li className="article__listItem">
+                        <b>uwaga!</b>
+                        <blockquote className="article__blockquote">
+                            typeof null = "object"
+                        </blockquote>
+                    </li>
+                </ul>
+                <p>Używamy tego typu, jeżeli nie ma wartości.</p>
+                <h4 className="article__subsubsubheader">Typ undefined</h4>
+                <blockquote className="article__blockquote">
+                    let <b>zmienna</b>;<br/>
+                </blockquote>
+                <blockquote className="article__blockquote">
+                    let <b>zmienna</b> = undefined;
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        "wartość niezdefiniowana"
+                    </li>
+                    <li className="article__listItem">
+                        jedyna możliwa wartość: <b>undefined</b>,,
+                    </li>
+                    <li className="article__listItem">
+                        sprawdzenie, czy zmienna jest <i>undefined</i>:
+                        <blockquote className="article__blockquote">
+                            if (<b>zmienna</b> === undefined)
+                        </blockquote>
+                    </li>
+                </ul>
+            </>
+        )
+    },
     {
         id: 53,
         date: "13 lipca 2023 roku",
