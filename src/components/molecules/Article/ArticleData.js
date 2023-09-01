@@ -5,6 +5,87 @@ import Schema from "../../../images/schemat.png";
 
 export const articlesLink = [
     {
+        id: 42,
+        date: "30 czerwca 2023 roku",
+        title: "Kalkulator BMI",
+        body: (
+            <>
+                <p>Dzisiaj będę ćwiczyć stylowanie kalkulatora BMI. Bo co to za Frontend-owiec, który nie podaje
+                    użytkownikowi przepięknego interfejsu?</p>
+                <div className="calculator__container">
+                    <div className="calculator__titleContainer">
+                        <h4 className="calculator__title">Kalkulator BMI</h4>
+                    </div>
+                    <form className="js-form">
+                        <fieldset className="calculator__fieldset">
+                            <legend className="calculator__legend">Podaj swoje wymiary, aby obliczyć swoje BMI</legend>
+                            <div className="calculator__subContainer">
+                                <label className="calculator__label">
+                                    Twój wzrost:
+                                    <input className="calculator__input js-height" required type="number" min="1"
+                                           step="any"/>
+                                </label>
+                                <label className="calculator__label">
+                                    Twoja waga:
+                                    <input className="calculator__input js-weight" required type="number" min="1"
+                                           step="any"/>
+                                </label>
+                            </div>
+                        </fieldset>
+                        <button className="calculator__button">Policz BMI!</button>
+                        <p className="calculator__paragraph">Twoje BMI wynosi: <strong className="js-bmi">N/A</strong>.
+                            Co to
+                            oznacza - <strong className="js-result">N/A</strong></p>
+                    </form>
+                </div>
+                <p>Wygląda lepiej, prawda?</p>
+                <p>Kod przedstawia się następująco:</p>
+                <blockquote className="article__blockquote">
+                    <b>script.js</b><br/><br/>
+                    let heightElement = document.querySelector(".js-height");<br/>
+                    let weightElement = document.querySelector(".js-weight");<br/>
+                    let formElement = document.querySelector(".js-form");<br/>
+                    let bmiElement = document.querySelector(".js-bmi");<br/>
+                    let resultElement = document.querySelector(".js-result");<br/><br/>
+
+                    formElement.addEventListener("submit", (event) => &#123;<br/>
+                    event.preventDefault();<br/><br/>
+
+                    let height = heightElement.value;<br/>
+                    let weight = weightElement.value;<br/>
+                    let bmi = weight / ((height / 100) ** 2);<br/><br/>
+
+                    bmiElement.innerText = bmi.toFixed(2);<br/>
+
+                    let result = "";<br/>
+
+                    if (bmi &lt; 16) &#123;<br/>
+                    result = "Wygłodzenie";<br/>
+                    &#125; else if (bmi >= 16 && bmi &lt;= 16.99) &#123;<br/>
+                    result = "Wychudzenie";<br/>
+                    &#125; else if (bmi >= 17 && bmi &lt;= 18.49) &#123;<br/>
+                    result = "Niedowaga";<br/>
+                    &#125; else if (bmi >= 18.5 && bmi &lt;= 24.99) &#123;<br/>
+                    result = "Wartość prawidłowa";<br/>
+                    &#125; else if (bmi >= 25 && bmi &lt;= 29.99) &#123;<br/>
+                    result = "Nadwaga";<br/>
+                    &#125; else if (bmi >= 30 && bmi &lt;= 34.99) &#123;<br/>
+                    result = "Otyłość I stopnia";<br/>
+                    &#125; else if (bmi >= 35 && bmi &lt;= 39.99) &#123;<br/>
+                    result = "Otyłość II stopnia";<br/>
+                    &#125;<br/><br/>
+
+                    resultElement.innerText = result;<br/>
+                    &#125;);<br/><br/>
+
+                    heightElement.addEventListener("input", () => &#123;<br/>
+                    console.log(`Aktualny wzrost: $&#123;heightElement.value&#125;`);<br/>
+                    &#125;);<br/>
+                </blockquote>
+            </>
+        )
+    },
+    {
         id: 41,
         date: "29 czerwca 2023 roku",
         title: "JavaScript - formularze c.d.",
