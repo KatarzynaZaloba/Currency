@@ -5,6 +5,184 @@ import Schema from "../../../images/schemat.png";
 
 export const articlesLink = [
     {
+        id: 31,
+        date: "13 czerwca 2023 roku",
+        title: "JavaScript - if/else vs ternary vs switch",
+        body: (
+            <>
+                <p>Poniżej wstawiłam przycisk, podłączony do body i do button. Do buttona dodałam klasę
+                    <i>switchButton</i>, a do body dałam klasę <i>body</i>. Jeśli chodzi o kod w JS, wygląda to tak:
+                </p>
+                <blockquote className="article__blockquote">
+                    let <b>button</b> = document.querySelector(".switchButton");<br/>
+                    let <b>body</b> = document.querySelector(".body");<br/>
+                    <br/>
+                    button.addEventListener("click", () => &#123;<br/>
+                    body.classList.add("dark")<br/>
+                    &#125;);
+                </blockquote>
+                <button className="switchButton">Włącz <span className="themeName">ciemny</span> motyw</button>
+                <p>Natomiast w CSS-ach wygląda to tak:</p>
+                <blockquote className="article__blockquote"><b>.dark </b>&#123;<br/>
+                    &nbsp;&nbsp;color: #eee;<br/>
+                    &nbsp;&nbsp;background-color: #222;<br/>
+                    &#125;
+                </blockquote>
+                <p><s>Generalnie spoko działa, jednak musiałabym podpiąć blockquote z ciemnym tekstem, żeby
+                    nie
+                    znikał
+                    tekst po kliknięciu.</s> - zrobione. K.</p>
+                <p>Co dalej? Wypadałoby, aby po wybraniu ciemnego motywu, zmieniała się nazwa na przycisku.
+                    Możemy
+                    to zrobić, otaczając znacznikiem <i>span</i> konkretne słowo, lub wyrażenie, które
+                    chcemy
+                    zmienić, np.:</p>
+                <blockquote className="article__blockquote">&lt;button
+                    class="switchButton"&gt;Włącz &lt;span
+                    class="<b>themeName</b>"&gt;ciemny&lt;/span&gt; motyw&lt;/button&gt;
+                </blockquote>
+                <p>Natomiast kod w <i>JavaScript</i>, po dodaniu warunku <i>if else</i> oraz zmianie metody
+                    z
+                    <i>add</i> na <i>toggle</i>będzie wyglądał teraz tak:
+                </p>
+                <blockquote className="article__blockquote">
+                    let <b>button</b> = document.querySelector(".switchButton");<br/>
+                    let <b>body</b> = document.querySelector(".body");<br/>
+                    let <b>themeName</b> = document.querySelector(".themeName");<br/>
+                    <br/>
+                    button.addEventListener("click", () => &#123;<br/>
+                    &nbsp;&nbsp;body.classList.toggle("dark");<br/>
+
+                    &nbsp;&nbsp;<b>if</b> (body.classList.contains("dark")) &#123;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;themeName.innerText = "jasny";<br/>
+                    &nbsp;&nbsp;&#125; <b>else </b>&#123;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;themeName.innerText = "ciemny";<br/>
+                    &nbsp;&nbsp;&#125;<br/>
+                    &#125;);
+                </blockquote>
+                <p>Natomiast używamy dwa razy tej samej operacji, jednak zmienia się jedynie tekst.
+                    W tej sytuacji
+                    lepiej jest użyć potrójnego operatora <i>ternary</i>. Wyrażenie będzie w ten
+                    sposób krótsze,
+                    np.: </p>
+                <blockquote className="article__blockquote">let <b>button</b> =
+                    document.querySelector(".switchButton");<br/>
+                    let <b>body</b> = document.querySelector(".body");<br/>
+                    let <b>themeName</b> = document.querySelector(".themeName");<br/>
+                    <br/>
+                    button.addEventListener("click", () => &#123;<br/>
+                    &nbsp;&nbsp;body.classList.toggle("dark");<br/>
+                    &nbsp;&nbsp;themeName.innerText = body.classList.contains("dark") ?
+                    "jasny" : "ciemny";<br/>
+                    &#125;);
+                </blockquote>
+                <p>Reasumując, <i>if else</i> przyda nam się, kiedy będziemy chcieli
+                    przeprowadzić <em>różne</em>
+                    operacje na <em>jednym</em> warunku. Natomiast jeśli chcemy
+                    przeprowadzić jedną akcję na różnych
+                    wartościach, wtedy używamy <i>ternary</i>.</p>
+                <p>Pora na kolejny przykład.</p>
+                <p>Dzień tygodnia: <strong className="day">czwartek</strong></p>
+                <p>Mam jeszcze <strong className="howMuch"></strong> czasu na zrobienie
+                    pracy domowej.</p>
+                <blockquote className="article__blockquote">Dzień tygodnia: &lt;strong
+                    class="day">poniedziałek&lt;/span>&lt;/strong>
+                    Mam jeszcze &lt;strong class="<b>howMuch</b>">&lt;/strong> czasu na
+                    zrobienie pracy domowej.
+                </blockquote>
+                Po wpisaniu dowolnego dnia tygodnia, pojawi się opcja "dużo", "trochę"
+                lub "mało". Ze strony
+                <i>JavaScript</i>, wygląda to tak:
+                <blockquote className="article__blockquote">
+                    let <b>day</b> = document.querySelector(".day").innerText;<br/>
+                    let <b>howMuch</b> = document.querySelector(".howMuch");<br/>
+                    <br/>
+                    <b>if</b> (day === "poniedziałek" || day === "wtorek") &#123;<br/>
+                    &nbsp;&nbsp;howMuch.innerText = "dużo";<br/>
+                    &#125; <b>else if</b> (day === "środa" || day === "czwartek") &#123;<br/>
+                    &nbsp;&nbsp;howMuch.innerText = "trochę";<br/>
+                    &#125; <b>else</b> &#123;<br/>
+                    &nbsp;&nbsp;howMuch.innerText = "mało";<br/>
+                    &#125;
+                </blockquote>
+                <p>W tym przypadku możemy również użyć potrójnego operatora,
+                    ponieważ robię to samo, tyle że z inną
+                    wartością. Wyglądałoby to tak: </p>
+                <blockquote className="article__blockquote">
+                    let <b>day</b> =
+                    document.querySelector(".day").innerText;<br/>
+                    let <b>howMuch</b> = document.querySelector(".howMuch");<br/><br/>
+                    howMuch.innerText = (day === "poniedziałek" || day ===
+                    "wtorek")<br/>
+                    &nbsp;&nbsp;? "dużo"<br/>
+                    &nbsp;&nbsp;: (<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;(day === "środa" || day ===
+                    "czwartek")<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;? "trochę"<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: "mało"<br/>
+                    );
+                </blockquote>
+                <p>Niby spoko pomysł, ale mamy teraz trzypoziomowego potrójnego
+                    operatora, co w zasadzie czytelne nie
+                    jest. Przyda nam się tutaj <i>switch</i>!</p>
+                <blockquote className="article__blockquote">
+                    let <b>day</b> =
+                    document.querySelector(".day").innerText;<br/>
+                    let <b>howMuch</b> = document.querySelector(".howMuch");<br/>
+                    <br/>
+                    switch (day) &#123;<br/>
+                    & nbsp;&nbsp;<b>case "poniedziałek":</b><br/>
+                    &nbsp;&nbsp;<b>case "wtorek":</b><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;howMuch.innerText = "dużo";<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<b>break;</b><br/>
+                    <br/>
+                    &nbsp;&nbsp;<b>case "środa":</b><br/>
+                    &nbsp;&nbsp;<b>case "czwartek":</b><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;howMuch.innerText =
+                    "trochę";<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<b>break;</b><br/>
+                    <br/>
+                    &nbsp;&nbsp;<b>default:</b><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;howMuch.innerText =
+                    "mało";<br/>
+                    &#125;
+                </blockquote>
+                <p>Jedno zadanie, trzy możliwości, a ile
+                    radochy! Najbardziej przejrzysty jest
+                    tutaj <i>switch</i></p>
+            </>
+        )
+    },
+    {
+        id: 30,
+        date: "13 czerwca 2023 roku",
+        title: "A gdybyś tak...",
+        body: (
+            <>
+                <p>... już dziś wiedział, że za rok będziesz mistrzem w jakiejś dziedzinie. Poddałbyś się?</p>
+                <p>W sytuacjach kryzysowych, przypominam sobie tę frazę. Ma swoją moc. No właśnie, gdybyśmy z góry
+                    wiedzieli, że w przyszłości wszystko się ułoży, balibyśmy się przyszłości?</p>
+                <p>Czy warto się bać przyszłości? I tak i nie. Z jednej strony, gdybyśmy z góry wiedzieli, że w
+                    przyszłości osiągniemy swoje cele, spoczęlibyśmy na "laurach", nie robiąc nic, bo przecież i tak
+                    będzie wszystko ok. Z drugiej strony, gdybyśmy bali się przyszłości, bez wiedzy co nas czeka,
+                    stalibyśmy w miejscu i również nie robilibyśmy nic.</p>
+                <p>Preferuję inne podejście — obierz cel, działaj, a wtedy na pewno Ci się uda!</p>
+                <p>Życie to sinusoida — raz na górze, raz w dołku, ale pewni jesteśmy jednego — będąc na górze,
+                    zejdziemy do doliny, a będąc w dole, zaczniemy się wspinać do góry. Nie wiem, czy potrzebujesz tych
+                    słów. Może jesteś teraz w kryzysie, może chcesz zrezygnować, ale jeśli mogę Ci coś poradzić — nie
+                    poddawaj się!</p>
+                <p>Jest 21:33. Jestem po pracy w dwóch miejscach. Padam na twarz. Normalnie o tej godzinie położyłabym
+                    się spać. Jednak postanowiłam działać i się uczyć. Dlaczego? Bo wiem, że będzie dobrze,
+                    <em>jeśli</em> będę działać.</p>
+                <p>Tak więc powracam do powtórki mojego kursu programowania.</p>
+                <img alt="Nigdy nie lekceważ potęgi małych kroków"
+                     className="article__image"
+                     src="https://scontent.fpoz4-1.fna.fbcdn.net/v/t1.6435-9/195448370_4005096606272698_2037275807942576100_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=_ZntUwXTkdEAX_JsaPK&_nc_ht=scontent.fpoz4-1.fna&oh=00_AfBWsLmeh-BowoYlGFB-BdAYGn0q84PTylwtyMyB8UnmeQ&oe=64B0299E"
+                     title="Nigdy nie lekceważ potęgi małych kroków"/>
+            </>
+        )
+    },
+    {
         id: 29,
         date: "8 czerwca 2023 roku",
         title: "JavaScript - Ternary (operator potrójny)",
@@ -40,11 +218,11 @@ export const articlesLink = [
                 <figure className="article__figure">
                     <img alt="starówka Sandomierza" className="panorama article__image"
                          src="https://swietokrzyskie.travel/media/cache/original/uploads/5d3814683ddf7.jpg"/>
-                        <figcaption className="article__figcaption">">widok z lotu ptaka na starówkę w
-                            Sandomierzu<br/>źródło: <a
-                                href="https://swietokrzyskie.travel/informator_turystyczny/miasta_i_regiony/sandomierz_sandomierz"
-                                title="swietokrzyskie.travel">https://swietokrzyskie.travel/informator_turystyczny/miasta_i_regiony/sandomierz_sandomierz</a>
-                        </figcaption>
+                    <figcaption className="article__figcaption">">widok z lotu ptaka na starówkę w
+                        Sandomierzu<br/>źródło: <a
+                            href="https://swietokrzyskie.travel/informator_turystyczny/miasta_i_regiony/sandomierz_sandomierz"
+                            title="swietokrzyskie.travel">https://swietokrzyskie.travel/informator_turystyczny/miasta_i_regiony/sandomierz_sandomierz</a>
+                    </figcaption>
                 </figure>
                 <p>
                     Zauważyłam też, że mam problem z akapitami w &lt;blockquote&gt; i wszystkie odstępy się zlewają —
@@ -64,40 +242,40 @@ export const articlesLink = [
                     &nbsp;&nbsp;&nbsp;&nbsp;jeśliNicNiePasujeWykonajTenKod();<br/>
                     &#125;
                 </blockquote>
-                    <p>
-                        Konstrukcja switch pozwala na operacje na kilku opcjach naraz bez wchodzenia w
-                        stan <i>"ifozy"</i>.
-                        Pomoże nam uprościć sprawę, jeśli chcemy w zależności od jakiegoś wyrażenia, zrobić kilka
-                        różnych
-                        rzeczy. Mamy tutaj:
-                    </p>
-                    <ul className="article__unorderedList">
-                        <li className="article__listItem"><b>switch</b></li>
-                        <li className="article__listItem"><b>wyrażenie</b> - może tutaj być cokolwiek</li>
-                        <li className="article__listItem"><b>case1 & case2</b> - opcje; tutaj kod wykona się zarówno
-                            przy opcji1, jak i opcji2
-                        </li>
-                        <li className="article__listItem"><b>break</b> - słowo kluczowe, które jest potrzebne, żeby nie
-                            wykonał się kolejny kod;
-                            umożliwia zakończenie <i>switch</i>-a, po spełnieniu (w tym przypadku) którejś z opcji.
-                        </li>
-                        <li className="article__listItem"><b>case3</b> - opcja trzecia, gdzie mamy jeszcze inny kod do
-                            wykonania
-                        </li>
-                        <li className="article__listItem"><b>default</b> - blok, w którym wykona się kod, jeżeli żadna z
-                            powyższych opcji nie jest
-                            spełniona, czyli jeżeli żadna opcja nie pasuje do tego wyrażenia, które daliśmy w nawiasie
-                            po <i>switch</i>; nie jest obowiązkowy, ale pomijajmy go, dopiero jak będziemy 100% pewnie,
-                            że
-                            zawarliśmy wszystkie opcje w <i>switch!</i></li>
-                    </ul>
-                    <p>Kiedy przydaje się switch?</p>
-                    <ul className="article__unorderedList">
-                        <li className="article__listItem">kiedy byłoby za dużo <i>if else</i></li>
-                        <li className="article__listItem">kiedy mamy kilka opcji w zależności od wartości jednego
-                            wyrażenia
-                        </li>
-                    </ul>
+                <p>
+                    Konstrukcja switch pozwala na operacje na kilku opcjach naraz bez wchodzenia w
+                    stan <i>"ifozy"</i>.
+                    Pomoże nam uprościć sprawę, jeśli chcemy w zależności od jakiegoś wyrażenia, zrobić kilka
+                    różnych
+                    rzeczy. Mamy tutaj:
+                </p>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem"><b>switch</b></li>
+                    <li className="article__listItem"><b>wyrażenie</b> - może tutaj być cokolwiek</li>
+                    <li className="article__listItem"><b>case1 & case2</b> - opcje; tutaj kod wykona się zarówno
+                        przy opcji1, jak i opcji2
+                    </li>
+                    <li className="article__listItem"><b>break</b> - słowo kluczowe, które jest potrzebne, żeby nie
+                        wykonał się kolejny kod;
+                        umożliwia zakończenie <i>switch</i>-a, po spełnieniu (w tym przypadku) którejś z opcji.
+                    </li>
+                    <li className="article__listItem"><b>case3</b> - opcja trzecia, gdzie mamy jeszcze inny kod do
+                        wykonania
+                    </li>
+                    <li className="article__listItem"><b>default</b> - blok, w którym wykona się kod, jeżeli żadna z
+                        powyższych opcji nie jest
+                        spełniona, czyli jeżeli żadna opcja nie pasuje do tego wyrażenia, które daliśmy w nawiasie
+                        po <i>switch</i>; nie jest obowiązkowy, ale pomijajmy go, dopiero jak będziemy 100% pewnie,
+                        że
+                        zawarliśmy wszystkie opcje w <i>switch!</i></li>
+                </ul>
+                <p>Kiedy przydaje się switch?</p>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">kiedy byłoby za dużo <i>if else</i></li>
+                    <li className="article__listItem">kiedy mamy kilka opcji w zależności od wartości jednego
+                        wyrażenia
+                    </li>
+                </ul>
             </>
         )
     },
@@ -157,42 +335,42 @@ export const articlesLink = [
                     &#125; <b>else</b> &#123;<br/>
                     &nbsp;&nbsp;&nbsp;&nbsp;zróbCośInnegoJeśliNiespełniony();
                 </blockquote>
-                    <p>Tłumacząc najprościej, powyżej mamy <i>if</i> (jeżeli) warunek zostanie wykonany, wykonaj funkcję
+                <p>Tłumacząc najprościej, powyżej mamy <i>if</i> (jeżeli) warunek zostanie wykonany, wykonaj funkcję
                     (program) zróbCośJeśliSpełniony(); w innym przypadku wykonaj funkcję (program)
                     zróbCośInnegoJeśliNiespełniony().</p>
-                    <p>A oto i kilka innych przykładów z <i>if else</i></p>
-                    <blockquote className="article__blockquote">
+                <p>A oto i kilka innych przykładów z <i>if else</i></p>
+                <blockquote className="article__blockquote">
                     <b>if</b> (number1 > number2) &#123;<br/>
                     &nbsp;&nbsp;console.log("number1 jest większa.");<br/>
                     &#125;<b> else</b> &#123;<br/>
                     &nbsp;&nbsp;console.log("number1 nie jest większa!");<br/>&#125;
                 </blockquote>
-                    <p>Czyli znowu, jeżeli warunek, w którym number1 jest większa od number2 zostanie spełniony, pokaż w
-                        konsoli "number1 jest większa". W przeciwnym przypadku pokaż w konsoli "number1 nie jest
-                        większa"</p>
-                    <blockquote className="article__blockquote">
-                        <b>if</b> (container.classList.contains("dark"))&#123;<br/>
-                        &nbsp;&nbsp;console.log("Jest ustawiony ciemny motyw!"); <br/>
-                        &#125;
-                    </blockquote>
-                        <p>Jeżeli klasa elementu z nazwą <i>container</i> zawiera klasę "dark", wyświetl na konsoli
-                            "Jest
-                            ustawiony ciemny motyw!"</p>
-                        <blockquote className="article__blockquote">
-                            <b>if</b> (button.innerText === "Zamknij")&#123;<br/>
-                            &nbsp;&nbsp;button.innerText === "Otwórz";<br/>&#125;
-                        </blockquote>
-                            <p>
-                                Jeżeli w przycisku jest tekst "Zamknij", to wpisujemy do przycisku tekst "Otwórz".
-                            </p>
-                            <p>
-                                Należy pamiętać, że <i>else</i> nie jest obowiązkowy, natomiast kod w
-                                bloku <i>if</i> wykona się
-                                zawsze, niezależnie od warunku.
-                            </p>
-                            <p>
-                                Klamry nie zawsze są wymagane, ale lepiej <b>ich nie pomijać</b>
-                            </p>
+                <p>Czyli znowu, jeżeli warunek, w którym number1 jest większa od number2 zostanie spełniony, pokaż w
+                    konsoli "number1 jest większa". W przeciwnym przypadku pokaż w konsoli "number1 nie jest
+                    większa"</p>
+                <blockquote className="article__blockquote">
+                    <b>if</b> (container.classList.contains("dark"))&#123;<br/>
+                    &nbsp;&nbsp;console.log("Jest ustawiony ciemny motyw!"); <br/>
+                    &#125;
+                </blockquote>
+                <p>Jeżeli klasa elementu z nazwą <i>container</i> zawiera klasę "dark", wyświetl na konsoli
+                    "Jest
+                    ustawiony ciemny motyw!"</p>
+                <blockquote className="article__blockquote">
+                    <b>if</b> (button.innerText === "Zamknij")&#123;<br/>
+                    &nbsp;&nbsp;button.innerText === "Otwórz";<br/>&#125;
+                </blockquote>
+                <p>
+                    Jeżeli w przycisku jest tekst "Zamknij", to wpisujemy do przycisku tekst "Otwórz".
+                </p>
+                <p>
+                    Należy pamiętać, że <i>else</i> nie jest obowiązkowy, natomiast kod w
+                    bloku <i>if</i> wykona się
+                    zawsze, niezależnie od warunku.
+                </p>
+                <p>
+                    Klamry nie zawsze są wymagane, ale lepiej <b>ich nie pomijać</b>
+                </p>
             </>
         ),
     },
@@ -379,55 +557,55 @@ export const articlesLink = [
                     &nbsp;&nbsp;text-align: left;<br/>
                     &#125;
                 </blockquote>
-                    <ul className="article__unorderedList">
-                        <li className="article__listItem">
-                            TYLKO nazwy znacznika
-                        </li>
-                    </ul>
-                    <blockquote className="article__blockquote">
-                        h3 &#123;<br/>
-                        &nbsp;&nbsp;text-align: left;<br/>
-                        &#125;<br/>
-                    </blockquote>
-                        <p>Aby to lepiej zobrazować, posłużę się tutaj przykładem odwołania po <i>klasie</i></p>
-                        <blockquote className="article__blockquote">
-                            <b>&#46;header</b> &#123;<br/>
-                            &nbsp;&nbsp;color&#58; purple;<br/>
-                            &#125;
-                        </blockquote>
-                            <ul className="article__unorderedList">
-                                <li className="article__listItem"><i>selektor</i> - określa które elementy są ostylowane
-                                </li>
-                                <li className="article__listItem"><i>klamry</i> (brackets)</li>
-                                <li className="article__listItem"><i>nazwa właściwości</i> - czyli jak styl będzie
-                                    zmieniany
-                                </li>
-                                <li className="article__listItem">wartość zmienianej właściwości po dwukropku</li>
-                                <li className="article__listItem"><i>deklaracje</i> - pary właściwość: wartość</li>
-                            </ul>
-                            <h4 className="article__subsubsubheader">Jakie są sposoby osadzania?</h4>
-                            <ul className="article__unorderedList">
-                                <li className="article__listItem">osobny link do arkusza styli w oddzielnym pliku</li>
-                            </ul>
-                            <blockquote className="article__blockquote">&lt;link href="css/style.css"
-                                rel="stylesheet"&gt;
-                            </blockquote>
-                            <ul className="article__unorderedList">
-                                <li className="article__listItem">znacznik &lt;style&gt;</li>
-                            </ul>
-                            <blockquote className="article__blockquote">
-                                &lt;style&gt;<br/>
-                                <b>&#46;header</b> &#123;<br/>
-                                &nbsp;&nbsp;color&#58; purple;<br/>
-                                &#125;<br/>
-                                &lt;/style&gt;
-                            </blockquote>
-                            <ul className="article__unorderedList">
-                                <li className="article__listItem">atrybut style</li>
-                            </ul>
-                            <blockquote className="article__blockquote">&lt;p style="color:
-                                red"&gt;Tekst&lt;/p&gt;
-                            </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        TYLKO nazwy znacznika
+                    </li>
+                </ul>
+                <blockquote className="article__blockquote">
+                    h3 &#123;<br/>
+                    &nbsp;&nbsp;text-align: left;<br/>
+                    &#125;<br/>
+                </blockquote>
+                <p>Aby to lepiej zobrazować, posłużę się tutaj przykładem odwołania po <i>klasie</i></p>
+                <blockquote className="article__blockquote">
+                    <b>&#46;header</b> &#123;<br/>
+                    &nbsp;&nbsp;color&#58; purple;<br/>
+                    &#125;
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem"><i>selektor</i> - określa które elementy są ostylowane
+                    </li>
+                    <li className="article__listItem"><i>klamry</i> (brackets)</li>
+                    <li className="article__listItem"><i>nazwa właściwości</i> - czyli jak styl będzie
+                        zmieniany
+                    </li>
+                    <li className="article__listItem">wartość zmienianej właściwości po dwukropku</li>
+                    <li className="article__listItem"><i>deklaracje</i> - pary właściwość: wartość</li>
+                </ul>
+                <h4 className="article__subsubsubheader">Jakie są sposoby osadzania?</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">osobny link do arkusza styli w oddzielnym pliku</li>
+                </ul>
+                <blockquote className="article__blockquote">&lt;link href="css/style.css"
+                    rel="stylesheet"&gt;
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">znacznik &lt;style&gt;</li>
+                </ul>
+                <blockquote className="article__blockquote">
+                    &lt;style&gt;<br/>
+                    <b>&#46;header</b> &#123;<br/>
+                    &nbsp;&nbsp;color&#58; purple;<br/>
+                    &#125;<br/>
+                    &lt;/style&gt;
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">atrybut style</li>
+                </ul>
+                <blockquote className="article__blockquote">&lt;p style="color:
+                    red"&gt;Tekst&lt;/p&gt;
+                </blockquote>
             </>
         )
     },
@@ -542,58 +720,58 @@ export const articlesLink = [
                     one
                     używane zgodnie z konwencją.
                 </p>
-                    <div className="div-table-overflow">
-                        <table className="article__table">
-                            <caption className="article__caption">przykłady znaczników HTML wraz ze znaczeniem</caption>
-                            <thead className="article__thead">
-                            <tr className="article__tr">
-                                <th className="article__th">
-                                    symbol
-                                </th>
-                                <th className="article__th">
-                                    nazwa
-                                </th>
-                                <th className="article__th">
-                                    opis
-                                </th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr className="article__tr">
-                                <td>&lt;br&gt;</td>
-                                <td><i>line break</i></td>
-                                <td>łamie wiersz w miejscu wskazanym, ale nie należy go używać w celu dodania odstępu
-                                </td>
-                            </tr>
-                            <tr className="article__tr">
-                                <td>&lt;strong&gt;</td>
-                                <td><i>strong importance</i></td>
-                                <td>używamy, gdy jest coś ważnego/pilnego do przekazania, lub gdy jest to ostrzeżenie
-                                </td>
-                            </tr>
-                            <tr className="article__tr">
-                                <td>&lt;b&gt;</td>
-                                <td><i>bring attention to</i></td>
-                                <td>używamy, gdy chcemy zwrócić uwagę na jakiś fragment, ale nie jest on ważniejszy od
-                                    pozostałej treści, używany rzadziej niż &lt;strong&gt;
-                                </td>
-                            </tr>
-                            <tr className="article__tr">
-                                <td>&lt;em&gt;</td>
-                                <td><i>emphasis</i></td>
-                                <td>używamy, gdy kładziemy nacisk na jakieś słowo w wyrażeniu</td>
-                            </tr>
-                            <tr className="article__tr">
-                                <td>&lt;i&gt;</td>
-                                <td><i>idiomatic text</i></td>
-                                <td>używamy do pojęć technicznych, słów w obcym języku lub myśli</td>
-                            </tr>
-                            </tbody>
-                            <tfoot>
+                <div className="div-table-overflow">
+                    <table className="article__table">
+                        <caption className="article__caption">przykłady znaczników HTML wraz ze znaczeniem</caption>
+                        <thead className="article__thead">
+                        <tr className="article__tr">
+                            <th className="article__th">
+                                symbol
+                            </th>
+                            <th className="article__th">
+                                nazwa
+                            </th>
+                            <th className="article__th">
+                                opis
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr className="article__tr">
+                            <td>&lt;br&gt;</td>
+                            <td><i>line break</i></td>
+                            <td>łamie wiersz w miejscu wskazanym, ale nie należy go używać w celu dodania odstępu
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>&lt;strong&gt;</td>
+                            <td><i>strong importance</i></td>
+                            <td>używamy, gdy jest coś ważnego/pilnego do przekazania, lub gdy jest to ostrzeżenie
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>&lt;b&gt;</td>
+                            <td><i>bring attention to</i></td>
+                            <td>używamy, gdy chcemy zwrócić uwagę na jakiś fragment, ale nie jest on ważniejszy od
+                                pozostałej treści, używany rzadziej niż &lt;strong&gt;
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>&lt;em&gt;</td>
+                            <td><i>emphasis</i></td>
+                            <td>używamy, gdy kładziemy nacisk na jakieś słowo w wyrażeniu</td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>&lt;i&gt;</td>
+                            <td><i>idiomatic text</i></td>
+                            <td>używamy do pojęć technicznych, słów w obcym języku lub myśli</td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
 
-                            </tfoot>
-                        </table>
-                    </div>
+                        </tfoot>
+                    </table>
+                </div>
             </>
         )
     },
@@ -603,116 +781,116 @@ export const articlesLink = [
         title: "Operatory operacji logicznych",
         body: (
             <>
-                    <div className="div-table-overflow">
-                        <table className="article__table">
-                            <caption className="article__caption">
-                                Przykład operatora
-                            </caption>
-                            <thead className="article__thead">
-                            <tr className="article__tr">
-                                <th className="article__th">
-                                    symbol
-                                </th>
-                                <th className="article__th">
-                                    Operator
-                                </th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr className="article__tr">
-                                <td>=</td>
-                                <td>Operator przypisania; jeżeli nazwa zmiennej znajduje się po lewej stronie symbolu
-                                    przypisania " = ", to otrzymuje ona nową wartość, np.
-                                    <blockquote className="article__blockquote">suma = 1; // <i>Odtąd zmienna suma
-                                        będzie
-                                        mieć wartość 1.</i>
-                                    </blockquote>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div className="div-table-overflow">
-                        <table className="article__table">
-                            <caption className="article__caption">
-                                Proste typy danych
-                            </caption>
-                            <thead className="article__thead">
-                            <tr className="article__tr">
-                                <th className="article__th">
-                                    skrót
-                                </th>
-                                <th className="article__th">
-                                    opis
-                                </th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr className="article__tr">
-                                <td><i>int</i></td>
-                                <td> - liczba całkowita
-                                </td>
-                            </tr>
-                            <tr className="article__tr">
-                                <td><i>float</i></td>
-                                <td> - liczba zmiennoprzecinkowa
-                                </td>
-                            </tr>
-                            <tr className="article__tr">
-                                <td><i>string</i></td>
-                                <td> - łańcuch znaków
-                                </td>
-                            </tr>
-                            <tr className="article__tr">
-                                <td><i>bool</i></td>
-                                <td> - typ True/False
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div className="div-table-overflow">
-                        <table className="article__table">
-                            <caption className="article__caption">
-                                Proste operatory
-                            </caption>
-                            <thead className="article__thead">
-                            <tr className="article__tr">
-                                <th className="article__th">
-                                    rodzaj
-                                </th>
-                                <th className="article__th">
-                                    symbole
-                                </th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr className="article__tr">
-                                <td><i>bitowe</i></td>
-                                <td>(OR, AND)
-                                </td>
-                            </tr>
-                            <tr className="article__tr">
-                                <td><i>arytmetyczne</i></td>
-                                <td>(+ - * /)
-                                </td>
-                            </tr>
-                            <tr className="article__tr">
-                                <td><i>porównania</i></td>
-                                <td>&#40;== &lt; &gt; &#41;
-                                </td>
-                            </tr>
-                            <tr className="article__tr">
-                                <td><i>logiczne</i></td>
-                                <td>(prawda/fałsz)
-                                </td>
-                            </tr>
-                            </tbody>
-                            <tfoot>
+                <div className="div-table-overflow">
+                    <table className="article__table">
+                        <caption className="article__caption">
+                            Przykład operatora
+                        </caption>
+                        <thead className="article__thead">
+                        <tr className="article__tr">
+                            <th className="article__th">
+                                symbol
+                            </th>
+                            <th className="article__th">
+                                Operator
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr className="article__tr">
+                            <td>=</td>
+                            <td>Operator przypisania; jeżeli nazwa zmiennej znajduje się po lewej stronie symbolu
+                                przypisania " = ", to otrzymuje ona nową wartość, np.
+                                <blockquote className="article__blockquote">suma = 1; // <i>Odtąd zmienna suma
+                                    będzie
+                                    mieć wartość 1.</i>
+                                </blockquote>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div className="div-table-overflow">
+                    <table className="article__table">
+                        <caption className="article__caption">
+                            Proste typy danych
+                        </caption>
+                        <thead className="article__thead">
+                        <tr className="article__tr">
+                            <th className="article__th">
+                                skrót
+                            </th>
+                            <th className="article__th">
+                                opis
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr className="article__tr">
+                            <td><i>int</i></td>
+                            <td> - liczba całkowita
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td><i>float</i></td>
+                            <td> - liczba zmiennoprzecinkowa
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td><i>string</i></td>
+                            <td> - łańcuch znaków
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td><i>bool</i></td>
+                            <td> - typ True/False
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div className="div-table-overflow">
+                    <table className="article__table">
+                        <caption className="article__caption">
+                            Proste operatory
+                        </caption>
+                        <thead className="article__thead">
+                        <tr className="article__tr">
+                            <th className="article__th">
+                                rodzaj
+                            </th>
+                            <th className="article__th">
+                                symbole
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr className="article__tr">
+                            <td><i>bitowe</i></td>
+                            <td>(OR, AND)
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td><i>arytmetyczne</i></td>
+                            <td>(+ - * /)
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td><i>porównania</i></td>
+                            <td>&#40;== &lt; &gt; &#41;
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td><i>logiczne</i></td>
+                            <td>(prawda/fałsz)
+                            </td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
 
-                            </tfoot>
-                        </table>
-                    </div>
+                        </tfoot>
+                    </table>
+                </div>
             </>
         ),
     },
@@ -725,46 +903,46 @@ export const articlesLink = [
                 <p>
                     Co zawierają instrukcje?
                 </p>
-                    <ul className="article__unorderedList">
-                        <li className="article__listItem"><i>literały</i> - wartości (np. napisy, liczby) wpisane w kod
-                            źródłowy,
-                            kopiowane do kodu wykonywalnego podczas kompilacji;
-                        </li>
-                        <li className="article__listItem"><i>stałe</i> - symbole (nazwy) reprezentujące ustalone
-                            wartości,
-                            zastępowane tymi wartościami podczas kompilacji;
-                        </li>
-                        <li className="article__listItem"><i>wyrażenia</i> - zapis obliczeń;</li>
-                        <li className="article__listItem"><i>zmienne lub nazwy zmiennych</i> - symbole reprezentujące
-                            wartości,
-                            które mogą zmieniać w czasie wykonywania programu;
-                        </li>
-                        <li className="article__listItem"><i>słowa kluczowe</i> - symbole reprezentujące określone
-                            działania
-                            (np.
-                            <i>for, do, while, if, else, return</i>);
-                        </li>
-                        <li className="article__listItem"><i>wywołania funkcji</i> - symbole oznaczające miejsca w
-                            programie,
-                            w
-                            których należy wykonać instrukcje wchodzące w skład treści danej funkcji (wyniki wykonania
-                            funkcji też "pojawiają się" w tych miejscach);
-                        </li>
-                        <li className="article__listItem"><i>znaki przerwy;</i></li>
-                        <li className="article__listItem"><i>spacje;</i></li>
-                        <li className="article__listItem"><i>tabulacje poziome;</i></li>
-                        <li className="article__listItem">przejścia do następnego wiersza (są pomijane podczas
-                            kompilacji,
-                            tylko
-                            istnieją pewne ograniczenia dotyczące miejsc, w których może być umieszczone przejście do
-                            następnego wiersza, o ile nie zostanie poprzedzone znakiem "\" (<i>backslash</i>));
-                        </li>
-                        <li className="article__listItem">komentarze, które umieszczamy po symbolu "//" do końca
-                            wiersza,
-                            lub
-                            między symbolami "/* oraz */" (komentarze są ignorowane przez kompilator).
-                        </li>
-                    </ul>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem"><i>literały</i> - wartości (np. napisy, liczby) wpisane w kod
+                        źródłowy,
+                        kopiowane do kodu wykonywalnego podczas kompilacji;
+                    </li>
+                    <li className="article__listItem"><i>stałe</i> - symbole (nazwy) reprezentujące ustalone
+                        wartości,
+                        zastępowane tymi wartościami podczas kompilacji;
+                    </li>
+                    <li className="article__listItem"><i>wyrażenia</i> - zapis obliczeń;</li>
+                    <li className="article__listItem"><i>zmienne lub nazwy zmiennych</i> - symbole reprezentujące
+                        wartości,
+                        które mogą zmieniać w czasie wykonywania programu;
+                    </li>
+                    <li className="article__listItem"><i>słowa kluczowe</i> - symbole reprezentujące określone
+                        działania
+                        (np.
+                        <i>for, do, while, if, else, return</i>);
+                    </li>
+                    <li className="article__listItem"><i>wywołania funkcji</i> - symbole oznaczające miejsca w
+                        programie,
+                        w
+                        których należy wykonać instrukcje wchodzące w skład treści danej funkcji (wyniki wykonania
+                        funkcji też "pojawiają się" w tych miejscach);
+                    </li>
+                    <li className="article__listItem"><i>znaki przerwy;</i></li>
+                    <li className="article__listItem"><i>spacje;</i></li>
+                    <li className="article__listItem"><i>tabulacje poziome;</i></li>
+                    <li className="article__listItem">przejścia do następnego wiersza (są pomijane podczas
+                        kompilacji,
+                        tylko
+                        istnieją pewne ograniczenia dotyczące miejsc, w których może być umieszczone przejście do
+                        następnego wiersza, o ile nie zostanie poprzedzone znakiem "\" (<i>backslash</i>));
+                    </li>
+                    <li className="article__listItem">komentarze, które umieszczamy po symbolu "//" do końca
+                        wiersza,
+                        lub
+                        między symbolami "/* oraz */" (komentarze są ignorowane przez kompilator).
+                    </li>
+                </ul>
             </>
         ),
     },
@@ -1083,47 +1261,47 @@ export const articlesLink = [
                     poniższy
                     przykład zdania:
                 </p>
-                    <blockquote className="article__blockquote">My cat is very grumpy.</blockquote>
-                    <p>
-                        Nie wiem za bardzo jak przetłumaczyć "stands by itself", ale chodzi tu o sytuację, gdy chcemy,
-                        stworzyć nowy akapit z treścią. Do tego celu służy znacznik
-                        &lt;p&gt;&lt;/p&gt;.
-                    </p>
-                    <p>
-                        &lt;p&gt;My cat is very grumpy.&lt;/p&gt;
-                    </p>
-                    <p>
-                        <b>BTW</b> Właśnie odkryłam jak w HTML umieścić w/w znaczniki tak, aby kod został zignorowany!
-                    </p>
-                    <figure className="article__figure">
-                        <img className="article__image"
-                             src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-small.png"
-                             alt="grafika przedstawiająca tagi w HTML" />
-                            <figcaption className="article__figcaption">">Uwaga! Tagi w HTML nie są wrażliwe na zmianę
-                                wysokości
-                                liter! Znów przykład z MDN-a —
-                                gdy mamy znacznik &lt;title&gt; &lt;/title&gt;, możemy użyć
-                                np. &lt;Title&gt; &lt;/Title&gt; czy
-                                &lt;TiTlE&gt; &lt;/TiTlE&gt; i nie będzie to miało żadnego znaczenia.
-                            </figcaption>
-                    </figure>
-                    <p>
-                        Dobrze, to teraz wyjaśniając, z czym tu mamy do czynienia:</p>
-                    <ul className="article__unorderedList">
-                        <li className="article__listItem">
-                            The opening tag (znacznik otwierający): Zawiera nazwę elementu, jak w tym przykładzie p od
-                            "paragraph". Umieszczony jest przed tekstem i otoczony jest nawiasami ostrokątnymi.
-                        </li>
-                        <li className="article__listItem">The content (treść): Mamy tutaj dosłownie treść, którą chcemy
-                            otoczyć
-                            znacznikami HTML
-                        </li>
-                        <li className="article__listItem">The closing tag (znacznik zamykający): Tak samo, jak w
-                            przypadku
-                            znacznika otwierającego, tyle że umieszczany po treści. Pokazuje gdzie dany element się
-                            kończy.
-                        </li>
-                    </ul>
+                <blockquote className="article__blockquote">My cat is very grumpy.</blockquote>
+                <p>
+                    Nie wiem za bardzo jak przetłumaczyć "stands by itself", ale chodzi tu o sytuację, gdy chcemy,
+                    stworzyć nowy akapit z treścią. Do tego celu służy znacznik
+                    &lt;p&gt;&lt;/p&gt;.
+                </p>
+                <p>
+                    &lt;p&gt;My cat is very grumpy.&lt;/p&gt;
+                </p>
+                <p>
+                    <b>BTW</b> Właśnie odkryłam jak w HTML umieścić w/w znaczniki tak, aby kod został zignorowany!
+                </p>
+                <figure className="article__figure">
+                    <img className="article__image"
+                         src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-small.png"
+                         alt="grafika przedstawiająca tagi w HTML"/>
+                    <figcaption className="article__figcaption">">Uwaga! Tagi w HTML nie są wrażliwe na zmianę
+                        wysokości
+                        liter! Znów przykład z MDN-a —
+                        gdy mamy znacznik &lt;title&gt; &lt;/title&gt;, możemy użyć
+                        np. &lt;Title&gt; &lt;/Title&gt; czy
+                        &lt;TiTlE&gt; &lt;/TiTlE&gt; i nie będzie to miało żadnego znaczenia.
+                    </figcaption>
+                </figure>
+                <p>
+                    Dobrze, to teraz wyjaśniając, z czym tu mamy do czynienia:</p>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        The opening tag (znacznik otwierający): Zawiera nazwę elementu, jak w tym przykładzie p od
+                        "paragraph". Umieszczony jest przed tekstem i otoczony jest nawiasami ostrokątnymi.
+                    </li>
+                    <li className="article__listItem">The content (treść): Mamy tutaj dosłownie treść, którą chcemy
+                        otoczyć
+                        znacznikami HTML
+                    </li>
+                    <li className="article__listItem">The closing tag (znacznik zamykający): Tak samo, jak w
+                        przypadku
+                        znacznika otwierającego, tyle że umieszczany po treści. Pokazuje gdzie dany element się
+                        kończy.
+                    </li>
+                </ul>
             </>
         ),
     },
@@ -1171,7 +1349,7 @@ export const articlesLink = [
         date: "27 maja 2023 roku",
         title: "Początki początków, czyli algorytmy i schematy blokowe",
         body: (
-                <>
+            <>
                 <p>
                     Jeszcze za czasów moich studiów logistycznych, byłam uczona czym są procesy zachodzące w
                     organizacji
@@ -1199,36 +1377,36 @@ export const articlesLink = [
                 </p>
                 <figure className="article__figure">
                     <img alt="schemat pakowania dziecka do szkoły" className="article__image" src={Schema}/>
-                        <figcaption className="article__figcaption">Schemat pakowania dziecka do szkoły</figcaption>
+                    <figcaption className="article__figcaption">Schemat pakowania dziecka do szkoły</figcaption>
                 </figure>
-                    <p>Mamy tutaj następujące elementy:</p>
-                    <ul className="list">
-                        <li className="article__listItem">START / KONIEC — początek lub koniec procesu</li>
-                        <li className="article__listItem">równoległobok - "przygotowanie"</li>
-                        <li className="article__listItem">prostokąt - instrukcja / akcja / operacja</li>
-                        <li className="article__listItem">romb - warunek.</li>
-                    </ul>
-                    <p>
-                        Kto ma dzieci, ten — mam nadzieję — zgodzi się ze mną, że szykowanie latorośli do szkoły to
-                        <em>bardzo</em> pochłaniający czas proces. Ale tak, właśnie podeszłam do tego zagadnienia w ten
-                        sposób. W organizacjach schematy procesów i przepływu informacji wyglądają podobnie. Czy w
-                        programowaniu również? Jeśli tak, to jesteśmy w DOMu! (taki żarcik).
-                    </p>
-                    <p>
-                        <b>PS.</b><s>Widzę, że mimo poprawnego ustawienia importu do obrazków, jakimś cudem nie
-                        pojawiają
-                        się one po wrzuceniu strony na GitHub pages. Mało tego, wyrównanie do lewej listy na local-u
-                        działa, a na GitHub pages już nie. Mam ot praktyczny przykład problemu, który możemy
-                        rozwiązać
-                        na dniach.</s>Już działa!
-                    </p>
-                    <p>
-                        <b>PS2.</b> Zaczyna mnie razić wygląd bloga (pewnie Ciebie też), ale jeszcze raz podkreślam
-                        <strong> Blog ma być żywym organizmem, przykładem postępu w mojej powtórce nauki HTML, CSS i
-                            JS.</strong>
-                    </p>
-                </>
-                ),
+                <p>Mamy tutaj następujące elementy:</p>
+                <ul className="list">
+                    <li className="article__listItem">START / KONIEC — początek lub koniec procesu</li>
+                    <li className="article__listItem">równoległobok - "przygotowanie"</li>
+                    <li className="article__listItem">prostokąt - instrukcja / akcja / operacja</li>
+                    <li className="article__listItem">romb - warunek.</li>
+                </ul>
+                <p>
+                    Kto ma dzieci, ten — mam nadzieję — zgodzi się ze mną, że szykowanie latorośli do szkoły to
+                    <em>bardzo</em> pochłaniający czas proces. Ale tak, właśnie podeszłam do tego zagadnienia w ten
+                    sposób. W organizacjach schematy procesów i przepływu informacji wyglądają podobnie. Czy w
+                    programowaniu również? Jeśli tak, to jesteśmy w DOMu! (taki żarcik).
+                </p>
+                <p>
+                    <b>PS.</b><s>Widzę, że mimo poprawnego ustawienia importu do obrazków, jakimś cudem nie
+                    pojawiają
+                    się one po wrzuceniu strony na GitHub pages. Mało tego, wyrównanie do lewej listy na local-u
+                    działa, a na GitHub pages już nie. Mam ot praktyczny przykład problemu, który możemy
+                    rozwiązać
+                    na dniach.</s>Już działa!
+                </p>
+                <p>
+                    <b>PS2.</b> Zaczyna mnie razić wygląd bloga (pewnie Ciebie też), ale jeszcze raz podkreślam
+                    <strong> Blog ma być żywym organizmem, przykładem postępu w mojej powtórce nauki HTML, CSS i
+                        JS.</strong>
+                </p>
+            </>
+        ),
     },
     {
         id: 2,
@@ -1302,84 +1480,84 @@ export const articlesLink = [
         date: "25 maja 2023 roku",
         title: "Pierwsza rozmowa techniczna",
         body: (
-                <>
-                    <p>
-                        Zapamiętam ten dzień na dobre. Wczoraj miałam swoją pierwszą rozmowę techniczną. Moje zawodowe
-                        zboczenie jako m.in. Inspektora Ochrony Danych zobowiązuje mnie również do przypomnienia, że
-                        dziś mija 5 lat od wprowadzenia <i>RODO</i> w Polsce. Ale to w ramach ciekawostki. Przecież
-                        tutaj będę
-                        pisać o
-                        swojej przygodzie z programowaniem.</p>
-                    <p>
-                        Wracając do tej rozmowy technicznej. Nie wiem, czy nadal pamiętacie to uczucie albo, czy rozmowa
-                        techniczna jest także przed Wami jak przede mną była owego wczorajszego dnia, ale to czas, gdy
-                        wątpliwości są poddawane Twoje umiejętności i na pewno wiara w siebie. I rozmowa techniczna nie
-                        ma na celu oczywiście pokazania czego kandydat nie umie (a nie umiałam sporo!), ale zwrócenie
-                        uwagi na
-                        to, z czego należy się jeszcze dokształcić.
-                    </p>
-                    <p>
-                        Piszę to akurat na moim pierwszym projekcie z kursu <i>"YouCode - Frontend Developer od
-                        podstaw"</i>
-                        z taką nostalgią jednak, ponieważ pamiętam, jaka ekscytacja towarzyszyła mi przy oddaniu tejże
-                        mojej <b>pierwszej</b> pracy domowej. Mimo że była nieidealna - <i>CSS</i> porozrzucane
-                        oddzielnie i
-                        znaczniki też jakoś z konwencją <i>BEM</i> mało co miały związane, to jednak złapałam się na
-                        tym, że to
-                        uczucie do mnie wróciło.
-                    </p>
-                    <p>
-                        Dzień po takiej <em>małej katastrofie</em>, ze świeżym umysłem zasiadłam do podsumowania mojej
-                        ścieżki,
-                        którą obrałam w grudniu 2022 roku. Dlaczego "małej katastrofie"? Dlatego, że podeszłam totalnie
-                        źle
-                        do zadania rekrutacyjnego, którego wykonanie otworzyło mi drzwi do rozmowy technicznej, na
-                        której
-                        omawiane były metody z tegoż, że zadania. Dlaczego źle, zapytacie? Ponieważ tak skupiłam się na
-                        wykonaniu zadania, że wyłączyłam myślenie, uporczywie szukając rozwiązania, które mogłoby mi
-                        pomóc,
-                        implementując je i nie rozumiejąc jego specyfiki.
-                    </p>
-                    <p>
-                        (Czytając poprzedni akapit, dochodzę do wniosku, że używam strasznie długich zdań. Może się
-                        wyrobię,
-                        ponieważ praktyka czyni mistrza).
-                    </p>
-                    <p>
-                        Dostałam na pewno nauczkę, a jako że <b>uczę się na błędach</b>, postanowiłam jeszcze raz wrócić
-                        do
-                        kursu.
-                        Słyszeliście o <i>syndromie oszusta</i>? Wczoraj uświadomiłam sobie, na czym on polega. A
-                        słyszeliście też o
-                        zjawisku <i>przeładowania treści</i> lub <i>nadmiaru informacji</i> w mózgu? Jest to raczej
-                        przypadłość
-                        nowicjuszy, takich jak ja, którzy napędzani wewnętrzną motywacją zdobywania nauki, pochłaniają
-                        wiedzę
-                        hurtowymi ilościami, by potem... ta wiedza zniknęła! Skąd to wiem? Dowiedziałam się o tym
-                        zjawisku
-                        dosyć niedawno, po ukończeniu kursu i oczywiście przepracowaniu każdego z modułów. Miałam
-                        momenty,
-                        że moduły tygodniowe pochłaniałam podczas <em></em>jednego dnia. Bardzo niezdrowo i bardzo bez
-                        sensu
-                        zważywszy na fakt, że nie pamiętam części materiału z tego okresu. Brzmi znajomo?
-                    </p>
-                    <p>
-                        Szukałam teorii wszędzie — na kursie, na <i>Codenga</i>, na <i>youtube</i>,
-                        na <i>freeCodeCamp</i>
-                        (bardzo
-                        fajna
-                        strona - polecam!), ale zapomniałam o jednym — o codziennej praktyce. Jak to się mówi mądry
-                        Polak po
-                        szkodzie — tak ze swojej strony mogę tylko podpowiedzieć, żeby jednak nie składać wypowiedzenia,
-                        jeśli nie ma się planu B. Możliwe, że moim wczorajszym popisem przekreśliłam swoje szanse na
-                        pracę w
-                        naprawdę super firmie. Czeka mnie teraz miesiąc na wypowiedzeniu — miesiąc niepewności co dalej.
-                    </p>
-                    <p>
-                        Natomiast dzięki temu doświadczeniu wiem, co chcę robić. <strong>Chcę zostać zawodowym
-                        <i>Frontend</i>-owcem!</strong>
-                    </p>
-                </>
-            ),
+            <>
+                <p>
+                    Zapamiętam ten dzień na dobre. Wczoraj miałam swoją pierwszą rozmowę techniczną. Moje zawodowe
+                    zboczenie jako m.in. Inspektora Ochrony Danych zobowiązuje mnie również do przypomnienia, że
+                    dziś mija 5 lat od wprowadzenia <i>RODO</i> w Polsce. Ale to w ramach ciekawostki. Przecież
+                    tutaj będę
+                    pisać o
+                    swojej przygodzie z programowaniem.</p>
+                <p>
+                    Wracając do tej rozmowy technicznej. Nie wiem, czy nadal pamiętacie to uczucie albo, czy rozmowa
+                    techniczna jest także przed Wami jak przede mną była owego wczorajszego dnia, ale to czas, gdy
+                    wątpliwości są poddawane Twoje umiejętności i na pewno wiara w siebie. I rozmowa techniczna nie
+                    ma na celu oczywiście pokazania czego kandydat nie umie (a nie umiałam sporo!), ale zwrócenie
+                    uwagi na
+                    to, z czego należy się jeszcze dokształcić.
+                </p>
+                <p>
+                    Piszę to akurat na moim pierwszym projekcie z kursu <i>"YouCode - Frontend Developer od
+                    podstaw"</i>
+                    z taką nostalgią jednak, ponieważ pamiętam, jaka ekscytacja towarzyszyła mi przy oddaniu tejże
+                    mojej <b>pierwszej</b> pracy domowej. Mimo że była nieidealna - <i>CSS</i> porozrzucane
+                    oddzielnie i
+                    znaczniki też jakoś z konwencją <i>BEM</i> mało co miały związane, to jednak złapałam się na
+                    tym, że to
+                    uczucie do mnie wróciło.
+                </p>
+                <p>
+                    Dzień po takiej <em>małej katastrofie</em>, ze świeżym umysłem zasiadłam do podsumowania mojej
+                    ścieżki,
+                    którą obrałam w grudniu 2022 roku. Dlaczego "małej katastrofie"? Dlatego, że podeszłam totalnie
+                    źle
+                    do zadania rekrutacyjnego, którego wykonanie otworzyło mi drzwi do rozmowy technicznej, na
+                    której
+                    omawiane były metody z tegoż, że zadania. Dlaczego źle, zapytacie? Ponieważ tak skupiłam się na
+                    wykonaniu zadania, że wyłączyłam myślenie, uporczywie szukając rozwiązania, które mogłoby mi
+                    pomóc,
+                    implementując je i nie rozumiejąc jego specyfiki.
+                </p>
+                <p>
+                    (Czytając poprzedni akapit, dochodzę do wniosku, że używam strasznie długich zdań. Może się
+                    wyrobię,
+                    ponieważ praktyka czyni mistrza).
+                </p>
+                <p>
+                    Dostałam na pewno nauczkę, a jako że <b>uczę się na błędach</b>, postanowiłam jeszcze raz wrócić
+                    do
+                    kursu.
+                    Słyszeliście o <i>syndromie oszusta</i>? Wczoraj uświadomiłam sobie, na czym on polega. A
+                    słyszeliście też o
+                    zjawisku <i>przeładowania treści</i> lub <i>nadmiaru informacji</i> w mózgu? Jest to raczej
+                    przypadłość
+                    nowicjuszy, takich jak ja, którzy napędzani wewnętrzną motywacją zdobywania nauki, pochłaniają
+                    wiedzę
+                    hurtowymi ilościami, by potem... ta wiedza zniknęła! Skąd to wiem? Dowiedziałam się o tym
+                    zjawisku
+                    dosyć niedawno, po ukończeniu kursu i oczywiście przepracowaniu każdego z modułów. Miałam
+                    momenty,
+                    że moduły tygodniowe pochłaniałam podczas <em></em>jednego dnia. Bardzo niezdrowo i bardzo bez
+                    sensu
+                    zważywszy na fakt, że nie pamiętam części materiału z tego okresu. Brzmi znajomo?
+                </p>
+                <p>
+                    Szukałam teorii wszędzie — na kursie, na <i>Codenga</i>, na <i>youtube</i>,
+                    na <i>freeCodeCamp</i>
+                    (bardzo
+                    fajna
+                    strona - polecam!), ale zapomniałam o jednym — o codziennej praktyce. Jak to się mówi mądry
+                    Polak po
+                    szkodzie — tak ze swojej strony mogę tylko podpowiedzieć, żeby jednak nie składać wypowiedzenia,
+                    jeśli nie ma się planu B. Możliwe, że moim wczorajszym popisem przekreśliłam swoje szanse na
+                    pracę w
+                    naprawdę super firmie. Czeka mnie teraz miesiąc na wypowiedzeniu — miesiąc niepewności co dalej.
+                </p>
+                <p>
+                    Natomiast dzięki temu doświadczeniu wiem, co chcę robić. <strong>Chcę zostać zawodowym
+                    <i>Frontend</i>-owcem!</strong>
+                </p>
+            </>
+        ),
     },
 ];
