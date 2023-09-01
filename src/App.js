@@ -38,6 +38,16 @@ function App() {
                     body={
                         <>
                             <Article
+                                date="28 sierpnia 2023 roku"
+                                title="Przenosiny"
+                                body={
+                                    <>
+                                        <p>Zdecydowałam się w końcu na przeniesienie bloga na Reacta. Wracam niebawem!</p>
+                                        <p>Stara wersja bloga <a href="https://katarzynazaloba.github.io/blog-old/">TUTAJ</a></p>
+                                    </>
+                                }
+                            />
+                            <Article
                                 date="18 sierpnia 2023 roku"
                                 title="React - formularze"
                                 body={<>
