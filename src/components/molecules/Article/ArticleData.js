@@ -5,86 +5,671 @@ import Schema from "../../../images/schemat.png";
 
 export const articlesLink = [
     {
-        id: 42,
-        date: "30 czerwca 2023 roku",
-        title: "Kalkulator BMI",
+        id: 48,
+        date: "08 lipca 2023 roku",
+        title: "CSS - obraz w tle",
         body: (
             <>
-                <p>Dzisiaj będę ćwiczyć stylowanie kalkulatora BMI. Bo co to za Frontend-owiec, który nie podaje
-                    użytkownikowi przepięknego interfejsu?</p>
-                <div className="calculator__container">
-                    <div className="calculator__titleContainer">
-                        <h4 className="calculator__title">Kalkulator BMI</h4>
-                    </div>
-                    <form className="js-form">
-                        <fieldset className="calculator__fieldset">
-                            <legend className="calculator__legend">Podaj swoje wymiary, aby obliczyć swoje BMI</legend>
-                            <div className="calculator__subContainer">
-                                <label className="calculator__label">
-                                    Twój wzrost:
-                                    <input className="calculator__input js-height" required type="number" min="1"
-                                           step="any"/>
-                                </label>
-                                <label className="calculator__label">
-                                    Twoja waga:
-                                    <input className="calculator__input js-weight" required type="number" min="1"
-                                           step="any"/>
-                                </label>
-                            </div>
-                        </fieldset>
-                        <button className="calculator__button">Policz BMI!</button>
-                        <p className="calculator__paragraph">Twoje BMI wynosi: <strong className="js-bmi">N/A</strong>.
-                            Co to
-                            oznacza - <strong className="js-result">N/A</strong></p>
-                    </form>
-                </div>
-                <p>Wygląda lepiej, prawda?</p>
-                <p>Kod przedstawia się następująco:</p>
+                <p>Za pomocą CSS-a możemy umieścić obrazek w tle wybranego elementu. Do tego użyjemy
+                    właściwości <i>background-image</i>.
+                </p>
+                <h4 className="article__subsubsubheader">background-image</h4>
                 <blockquote className="article__blockquote">
-                    <b>script.js</b><br/><br/>
-                    let heightElement = document.querySelector(".js-height");<br/>
-                    let weightElement = document.querySelector(".js-weight");<br/>
-                    let formElement = document.querySelector(".js-form");<br/>
-                    let bmiElement = document.querySelector(".js-bmi");<br/>
-                    let resultElement = document.querySelector(".js-result");<br/><br/>
-
-                    formElement.addEventListener("submit", (event) => &#123;<br/>
-                    event.preventDefault();<br/><br/>
-
-                    let height = heightElement.value;<br/>
-                    let weight = weightElement.value;<br/>
-                    let bmi = weight / ((height / 100) ** 2);<br/><br/>
-
-                    bmiElement.innerText = bmi.toFixed(2);<br/>
-
-                    let result = "";<br/>
-
-                    if (bmi &lt; 16) &#123;<br/>
-                    result = "Wygłodzenie";<br/>
-                    &#125; else if (bmi >= 16 && bmi &lt;= 16.99) &#123;<br/>
-                    result = "Wychudzenie";<br/>
-                    &#125; else if (bmi >= 17 && bmi &lt;= 18.49) &#123;<br/>
-                    result = "Niedowaga";<br/>
-                    &#125; else if (bmi >= 18.5 && bmi &lt;= 24.99) &#123;<br/>
-                    result = "Wartość prawidłowa";<br/>
-                    &#125; else if (bmi >= 25 && bmi &lt;= 29.99) &#123;<br/>
-                    result = "Nadwaga";<br/>
-                    &#125; else if (bmi >= 30 && bmi &lt;= 34.99) &#123;<br/>
-                    result = "Otyłość I stopnia";<br/>
-                    &#125; else if (bmi >= 35 && bmi &lt;= 39.99) &#123;<br/>
-                    result = "Otyłość II stopnia";<br/>
-                    &#125;<br/><br/>
-
-                    resultElement.innerText = result;<br/>
-                    &#125;);<br/><br/>
-
-                    heightElement.addEventListener("input", () => &#123;<br/>
-                    console.log(`Aktualny wzrost: $&#123;heightElement.value&#125;`);<br/>
-                    &#125;);<br/>
+                    .element &#123;<br/>
+                    &nbsp;&nbsp;background-image: url(".../images/nazwaObrazka.jpg");<br/>
+                    &#125;;
                 </blockquote>
+                <p>Przechodząc do praktyki, dodaję <i>div-a</i> z klasą <i>"article__div--highlighted"</i>:</p>
+                <div className="article__div--highlighted"></div>
+                <blockquote className="article__blockquote">
+                    .article__div--highlighted &#123;<br/>
+                    &nbsp;&nbsp;width: 300px;<br/>
+                    &nbsp;&nbsp;height: 300px;<br/>
+                    &nbsp;&nbsp;background-image: url("../images/pink.png");<br/>
+                    &#125;
+                </blockquote>
+                <p>Jeżeli chcemy, aby wielkość obrazka była dynamicznie zamienialna, dodajemy następujące
+                    właściwości:</p>
+                <blockquote className="article__blockquote">
+                    .article__div--highlighted &#123;<br/>
+                    &nbsp;&nbsp;width: 300px;<br/>
+                    <b>&nbsp;&nbsp;resize: both;</b><br/>
+                    &nbsp;&nbsp;overflox: auto;<br/>//
+                </blockquote>
+                <p>Mała uwaga, też przy okazji powtórzenia materiału pewne rzeczy rozjaśnię — warto dodawać
+                    ".." przed /
+                    (slash-em), ponieważ miejsce ".." stanowi adres, do którego podpięty jest obrazek zaraz
+                    po /
+                    (slash-u). Jeżeli wpiszemy w to miejsce:</p>
+                <blockquote className="article__blockquote">
+                    &nbsp;&nbsp;background-image: url("/images/pink.png");<br/>
+                </blockquote>
+                <p>to na naszym lokalnym serwerze to nam zadziała, ale korzystając z innej opcji, np.
+                    używając
+                    DevTools-ów i wchodząc w Styles, a potem klikając na adres obrazka, pojawi nam się błąd
+                    z
+                    informacją, że pliku nie znaleziono.</p>
+                <h4 className="article__subsubsubheader">background-repeat i jej wartości:</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        <b>no repeat</b> - obrazek w ogóle się nie powtarza,
+                    </li>
+                    <li className="article__listItem">
+                        <b>space</b> - obrazek powtarza się tyle razy ile się zmieści cały, pusta przestrzeń
+                        jest równo
+                        rozmieszczona między obrazkami, elementy są wyjustowane i w poziomie i pionie,
+                    </li>
+                    <li className="article__listItem">
+                        <b>round</b> - obrazki rozciągają się tak, aby nie było żadnej przestrzeni między
+                        nimi, skalują
+                        się, przez co mogą powstać nieproporcjonalne wartości obrazka,
+                    </li>
+                    <li className="article__listItem">
+                        <b>repeat</b> - wartość domyślna,
+                    </li>
+                    <li className="article__listItem">
+                        różne wartości w pionie i poziomie
+                        <ul className="article__unorderedList">
+                            <li className="article__listItem">
+                                np. <b>no-repeat repeat</b> - obrazek będzie się powtarzał w pionie, ale nie
+                                będzie się
+                                powtarzał w poziomie,
+                            </li>
+                            <li className="article__listItem">
+                                <b>space round</b> - space jest w poziomie, a round jest w pionie.
+                            </li>
+                            <li className="article__listItem">
+                                <b>repeat-y</b> lub <b>repeat-x</b>- powtarzanie wyłącznie w pionie lub w
+                                poziomie
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">background-position i jej wartości:</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        <b>center</b> - obrazek jest na środku niezależnie od rozmiaru elementu,
+                    </li>
+                    <li className="article__listItem">
+                        <b>top | right | bottom | left</b> - obrazek jest na górze | na prawo | na dole | na
+                        lewo —
+                        niezależnie od rozmiaru elementu
+                    </li>
+                    <li className="article__listItem">
+                        <b>top right | bottom | left</b> - obrazek jest wyrównany do górnego prawego rogu i
+                        analogicznie
+                        przy wypisywaniu wartości z lewej top | bottom i wartości z prawej left | right etc,
+                    </li>
+                    <li className="article__listItem">
+                        <b>25% 75%</b> - obrazek ustawiony jest na 25% rozmiaru elementu od lewej i 75%
+                        rozmiaru
+                        elementu od góry,
+                    </li>
+                    <li className="article__listItem">
+                        <b>10px 20px</b> - obrazek ustawiony jest na 10px od lewej i 20px od góry,
+                    </li>
+                    <li className="article__listItem">
+                        <b>right 10% bottom 20%</b> - obrazek ustawiony jest na 10% od prawej i 20% od dołu,
+                    </li>
+                    <li className="article__listItem">
+                        można ustawić kilka obrazków, aby wyświetlały się jeden w jednym miejscu, a drugi w
+                        drugim
+                        miejscu używając wartości po przecinku
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">background-size i jej wartości:</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        <b>100px</b> - szerokość 100px, wysokość automatyczna,
+                    </li>
+                    <li className="article__listItem">
+                        <b>auto 100px</b> - szerokość automatyczna, wysokość 100px
+                    </li>
+                    <li className="article__listItem">
+                        <b>cover</b> - wypełnia element, zachowując proporcje, przycina w pionie lub w
+                        poziomie.
+                        <blockquote className="article__blockquote">
+                            .article__div--highlighted &#123;<br/>
+                            &nbsp;&nbsp;width: 300px;<br/>
+                            &nbsp;&nbsp;resize: both;<br/>
+                            &nbsp;&nbsp;overflox: auto;<br/>
+                            &nbsp;&nbsp;height: 300px;<br/>
+                            &nbsp;&nbsp;background-image: url("../images/pink.png");<br/>
+                            <b>&nbsp;&nbsp;background-size: cover;<br/>
+                                &nbsp;&nbsp;background-position: center;<br/></b>
+                            &#125;
+                        </blockquote>
+                        <br/>
+                        Przy dodaniu <i>background-position: center</i> obrazek będzie zawsze
+                        docinany po zewnętrznych
+                        krawędziach.
+                    </li>
+                    <li className="article__listItem">
+                        <b>contain</b> - wypełnia element, zachowując proporcje, zostawia pustą
+                        przestrzeń w pionie lub
+                        w poziomie
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">background-attachment i jej
+                    wartości:</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        określa jak zachowuje się tło przy przewijaniu
+                        <ul className="article__unorderedList">
+                            <li className="article__listItem">
+                                <b>fixed</b> - w ogóle się nie rusza
+                                <blockquote className="article__blockquote">
+                                    .article__div--highlighted &#123;<br/>
+                                    &nbsp;&nbsp;width: 300px;<br/>
+                                    &nbsp;&nbsp;resize: both;<br/>
+                                    &nbsp;&nbsp;overflox: auto;<br/>
+                                    &nbsp;&nbsp;height: 300px;<br/>
+                                    &nbsp;&nbsp;background-image: url("../images/pink.png");<br/>
+                                    &nbsp;&nbsp;background-size: cover;<br/>
+                                    &nbsp;&nbsp;background-position: center;<br/>
+                                    <b>&nbsp;&nbsp;background-attachment: fixed;<br/></b>
+                                </blockquote>
+                                <br/>
+                            </li>
+                            <li>
+                                <b>local</b> - "przyklejone" do treści
+                            </li>
+                            <li>
+                                <b>scroll</b> - "przyklejone" do elementu, nie przewija
+                                się z treścią
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">skrót
+                    background:</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        pozwala ustawić 8 właściwości związanych z tłem
+                        naraz
+
+                        <blockquote className="article__blockquote">
+                            .element &#123;<br/>
+                            &nbsp;&nbsp;background: center / contain
+                            no-repeat url("../images/nazwaObrazka.jpg")
+                            #ccc;<br/>
+                            &#125;
+                        </blockquote>
+                    </li>
+                </ul>
             </>
         )
     },
+    {
+        id: 47,
+        date: "06 lipca 2023 roku",
+        title: "OpenGraph i ikonka strony",
+        body: (
+            <>
+                <p>OpenGraph to protokół, który pozwala lepiej opisywać strony internetowe. Przydaje się do tego, aby
+                    kontrolować m.in. jak wygląda miniaturka do naszej strony (np. og:image). Poza tym
+                    używając <i>OpenGraph</i>,
+                    możemy umieścić szereg informacji dotyczących naszej strony.</p>
+                <p>Dodajemy wtedy konkretne znaczniki <i>&lt;meta></i> do <i>&lt;head></i> strony:</p>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        og:title
+                        <blockquote className="article__blockquote">
+                            &lt;meta property="og:title" content="The Rock" />
+                        </blockquote>
+                    </li>
+                    <li className="article__listItem">
+                        og:type - np. article, website, book, video, movie etc.
+                        <blockquote className="article__blockquote">
+                            &lt;meta property="og:type" content="video.movie" />
+                        </blockquote>
+                    </li>
+                    <li className="article__listItem">
+                        og:image
+                        <blockquote className="article__blockquote">
+                            &lt;meta property="og:image:type" content="image/jpeg" /><br/>
+                            &lt;meta property="og:image:width" content="400" /><br/>
+                            &lt;meta property="og:image:height" content="300" /><br/>
+                            &lt;meta property="og:image:alt" content="A shiny red apple with a bite taken out" /><br/>
+                        </blockquote>
+                    </li>
+                    <li className="article__listItem">
+                        og:url - pełen adres URL.
+                        <blockquote className="article__blockquote">
+                            &lt;meta property="og:url" content="https://www.imdb.com/title/tt0117500/" />
+                        </blockquote>
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">Sharing Debugger</h4>
+                <p>Nawiązując do wartości <i>og:image</i>, warto stworzyć taką miniaturkę strony w rozdzielczości 1200px
+                    x 1200px i najlepiej ustawić tekst miniaturki w centrum obrazka, ponieważ zależnie od źródła, gdzie
+                    link do strony został udostępniony, może wyglądać inaczej. Możemy w tym celu użyć np. w aplikacji
+                    <i>Canva</i> i zapisać w formacie <i>.png</i>.</p>
+                <p>Warto oczywiście używać statycznych grafik umieszczonych w kodzie źródłowym strony.</p>
+                <p><i>Sharing Debugger</i> jest to narzędzie od <i>Meta</i>, w którym możemy sprawdzić
+                    protokół <i>OpenGraph</i>
+                    interesującej nas strony.</p>
+                <p>Narzędzie to znajduje się pod tym <a href="https://developers.facebook.com/tools/debug/"
+                                                        target="_blank" title="Sharing Debugger">linkiem.</a></p>
+                <p>Możemy dzięki niemu sprawdzić, w jaki sposób zostanie udostępniona konkretna strona — w tym przypadku
+                    udostępniona na Facebooku.</p>
+                <h4 className="article__subsubsubheader">Ikonka strony</h4>
+                <p>Ikonka strony to nic innego jak ten mały obrazek pokazujący się nam w lewym górnym rogu zakładki
+                    strony w przeglądarce. Jakiś czas temu używać trzeba było jedynie ikon w formacie <i>ico</i>,
+                    natomiast aktualnie można używać również formatu <i>.png</i> .</p>
+                <blockquote className="article__blockquote">
+                    &lt;link rel="icon" href="icon.png">
+                </blockquote>
+                <p>Po takim podsumowaniu, zabieram się za dodawanie tagów &lt;meta> .</p>
+            </>
+        )
+    },
+    {
+        id: 46,
+        date: "05 lipca 2023 roku",
+        title: "README i Markdown",
+        body: (
+            <>
+                <p>Przy okazji tej powtórki z lekcji, ogarnę moje README, bo widzę, że od momentu "przebranżowienia"
+                    bloga ze starego projektu homepage, nie dokonałam zmiany w tym pliku.</p>
+                <p>Cóż to jest README?</p>
+                <p>README to plik napisany w języku znaczników, jakim jest Markdown.</p>
+                <p>Markdown powstał w 2004 roku dzięki John-owi Gruber-owi i pozwala dodać formatowanie do prostych
+                    dokumentów tekstowych, jak np. dokumentacje techniczne.</p>
+                <p>Konwencja nakazuje, aby plik README pisać właśnie wielkimi literami.</p>
+                <p>Pozwolę sobie na wrzucenie ściągi do Markdown.</p>
+                <h4 className="article__subsubsubheader">Nagłówki</h4>
+                <blockquote className="article__blockquote">
+                    # H1<br/>
+                    ## H2<br/>
+                    ### H3<br/>
+                    #### H4 <br/>
+                    ##### H5<br/>
+                    ###### H6
+                </blockquote>
+                <h4 className="article__subsubsubheader">Wytłuszczenie i kursywa</h4>
+                <blockquote className="article__blockquote">
+                    **wytłuszczenie**<br/>
+                    *kursywa*<br/>
+                </blockquote>
+                <h4 className="article__subsubsubheader">Listy uporządkowane</h4>
+                <blockquote className="article__blockquote">
+                    1. element 1<br/>
+                    2. element 2<br/>
+                </blockquote>
+                <h4 className="article__subsubsubheader">Listy nieuporządkowane</h4>
+                <blockquote className="article__blockquote">
+                    - element 1<br/>
+                    - element 2<br/>
+                </blockquote>
+                <h4 className="article__subsubsubheader">Linki</h4>
+                <blockquote className="article__blockquote">
+                    [Nazwa hiperłącza](https://adresstronywww.com)
+                </blockquote>
+                <p>lub:</p>
+                <blockquote className="article__blockquote">
+                    https://adresstronywww.com
+                </blockquote>
+                <h4 className="article__subsubsubheader">Obrazki</h4>
+                <blockquote className="article__blockquote">
+                    ![Alternatywny tekst](https://adres-obrazka.com)
+                </blockquote>
+                <h4 className="article__subsubsubheader">Kod</h4>
+                <p>krótki fragment kodu:</p>
+                <blockquote className="article__blockquote">
+                    `kod`
+                </blockquote>
+                <p>Blok kodu:</p>
+                <blockquote className="article__blockquote">
+                    ```nazwaJęzyka<br/>
+                    pierwsza linia kodu;<br/>
+                    druga linia kodu;<br/>```
+                </blockquote>
+                <p>Po więcej przykładów odsyłam do dokumentacji <a href="https://www.markdownguide.org/basic-syntax/"
+                                                                   target="_blank"
+                                                                   title="Dokumentacja Markdown">Markdown</a>
+                </p>
+                <p>Po krótkim powtórzeniu, zabieram się za edycję README.md!</p>
+            </>
+        )
+    },
+    {
+        id: 45,
+        date: "04 lipca 2023 roku",
+        title: "Żółw programistyczny",
+        body: (
+            <>
+                <p>Mam nieodparte wrażenie, że powtórka materiału z kursu idzie mi strasznie wolno, jednak dzisiaj
+                    okazało się, że obrałam powolną, lecz słuszną drogę! Jeżeli ktoś z Was zastanawia się nad
+                    wprowadzeniem takiej formy utrwalania wiedzy — gorąco zachęcam! Już mówię dlaczego.</p>
+                <p>Wcześniej tworzyłam odręczne notatki po każdej lekcji. Błędem prowadzenia odręcznych notatek jest
+                    niewątpliwie to, że treść pisaną piszemy... długopisem (albo rysikiem jak w moim przypadku). Gdybym
+                    miała tę wiedzę, co dziś — prowadziłabym notatki w blogu. Dlaczego? Mając do dyspozycji kod, z
+                    którym pracujesz, ćwiczysz wiedzę, praktykujesz ją. A jak wiemy — praktyka czyni mistrza!</p>
+                <p>Zanim przejdę do powtórki materiału o README i Markdown, jeszcze po krótce przedstawię moje błędy
+                    podczas nauki, tak abyś Ty — jeśli to czytasz i dopiero zaczynasz — uniknął moich błędów na początku
+                    tejże fascynującej drogi.</p>
+                <p>W grudniu 2022 roku postanowiłam przebranżowić się i wreszcie zacząć programować. Trafiłam tak na
+                    kurs <a href="https://youcode.pl/" target="_blank"
+                            title="strona kursu Frontend Developer od Podstaw od YouCode">YouCode</a>.
+                    Jednak wewnętrzna motywacja sprawiła, że zaczęłam szukać materiałów z innych źródeł jak np. <a
+                        href="https://www.freecodecamp.org/" target="_blank"
+                        title="strona freeCodeCamp">freeCodeCamp</a>
+                    czy mini-kursy <a href="https://codenga.pl/" target="_blank" title="strona Codenga">Codenga.</a></p>
+                <p>Popełniłam pierwszy błąd - "latałam" po materiałach i stronach, przez to nie skupiłam się od dechy do
+                    dechy na kursie. Jeśli jesteś na tej drodze — pamiętaj o pierwszej ważnej zasadzie - <b>Jedno źródło
+                        nauki na raz!</b></p>
+                <p>Miałam ostatnio przyjemność brać w rozmowach rekrutacyjnych i w porównaniu do mojego fiasco z końca
+                    maja — czułam się pewniej i faktycznie mogłam podzielić się przyswojoną wiedzą i przede wszystkim
+                    <b>rozumiałam to, o czym mówię</b>.</p>
+                <p>Dlatego zachęcam do utrwalania wiedzy tym sposobem!</p>
+            </>
+        )
+    },
+    {
+        id: 44,
+        date: "04 lipca 2023 roku",
+        title: "Git - rozproszony system kontroli wersji",
+        body: (
+            <>
+                <p>Szukając trochę informacji na temat czym jest rozproszony system kontroli wersji, natknęłam się na
+                    książkę o tym samym tytule Włodzimierza Gajdy. W dobie materiałów dostępnych online ciężko znaleźć
+                    sprawdzone materiały papierowe, ponieważ aktualizacja informacji zawartych w materiałach papierowych
+                    jest kosztowna, pracochłonna i nie każde wydawnictwo podejmuje się tego procesu. Z drugiej strony
+                    tez możemy natknąć się na nieaktualizowanie materiały w sieci. </p>
+                <p>Po powtórzeniu materiału z mojego kursu, chciałabym wgryźć się w temat związany z Git-em bardziej niż
+                    tutaj.</p>
+                <p>Jako, że blog prowadzę w postaci notatek, przede wszystkim wypunktuję, co trzeba "ogarnąć", aby
+                    zaprzyjaźnić się z Git-em.</p>
+                <ol className="article__orderedList">
+                    <li className="article__listItem">
+                        Przede wszystkich wchodzimy na <a href="https://git-scm.com/"> oficjalną stronę Git-a</a> i
+                        pobieramy go do naszej wersji systemowej na komputerze.
+                    </li>
+                    <li className="article__listItem">
+                        Uruchamiamy Git Bash. Tworzymy swoją "wizytówkę", podpinając naszą nazwę użytkownika i adres
+                        e-mail poprzez wpisanie w oknie Git Bash-a:
+                        <blockquote className="article__blockquote">
+                            git config --global user.name "NAZWA UŻYTKOWNIKA"
+                        </blockquote>
+                        <blockquote className="article__blockquote">
+                            git config --global user.email "ADRES@EMAIL.COM"
+                        </blockquote>
+                    </li>
+                    <li className="article__listItem">
+                        Inicjalizacja repozytorium — wchodzimy do folderu, w którym mamy projekt i wpisujemy np. za
+                        pomocą Terminala w programie do edycji kodu:
+                        <blockquote className="article__blockquote">
+                            git init
+                        </blockquote>
+                    </li>
+                    <li className="article__listItem">
+                        Pierwszy commit
+                        <blockquote className="article__blockquote">
+                            git add<br/>
+                        </blockquote>
+                        <blockquote className="article__blockquote">
+                            git commit -m "Initial commit"
+                        </blockquote>
+                    </li>
+                    <li className="article__listItem">
+                        Pokazanie indeksu i obszaru roboczego:
+                        <blockquote className="article__blockquote">
+                            git status<br/>
+                        </blockquote>
+                    </li>
+                    <li className="article__listItem">
+                        Dodanie wybranych plików do indeksu:
+                        <blockquote className="article__blockquote">
+                            git add style.css script.js
+                        </blockquote>
+                    </li>
+                    <li className="article__listItem">
+                        Lista commit-ów:
+                        <blockquote className="article__blockquote">
+                            git log
+                        </blockquote>
+                        <blockquote className="article__blockquote">
+                            git log --pretty=oneline
+                        </blockquote>
+                    </li>
+                    <li className="article__listItem">
+                        Odrzucenie zmian:
+                        <blockquote className="article__blockquote">
+                            git reset --hard
+                        </blockquote>
+                    </li>
+                    <li className="article__listItem">
+                        Wypchnięcie zmian na serwer
+                        <blockquote className="article__blockquote">
+                            git push
+                        </blockquote>
+                    </li>
+                    <li className="article__listItem">
+                        Pobranie zmian z serwera
+                        <blockquote className="article__blockquote">
+                            git pull
+                        </blockquote>
+                    </li>
+                </ol>
+            </>
+        )
+    },
+    {
+        id: 43,
+        date: "03 lipca 2023 roku",
+        title: "JavaScript - Podstawowa matematyka",
+        body: (
+            <>
+                <p>JS daje nam wiele sposobów na manipulowanie liczbami.</p>
+                <ol className="article__orderedList">
+                    <li className="article__listItem">
+                        <b>Zaokrąglanie</b>
+                        <ul className="article__unorderedList">
+                            <li className="article__listItem">
+                                Math.round(liczba) - do najbliższej liczby całkowitej,
+                            </li>
+                            <li className="article__listItem">
+                                Math.ceil(liczba) - w górę,
+                            </li>
+                            <li className="article__listItem">
+                                Math.floor(liczba) - w dół,
+                            </li>
+                        </ul>
+                    </li>
+                    <li className="article__listItem">
+                        <b>Konkretna liczba miejsc po przecinku</b>
+                        <ul className="article__unorderedList">
+                            <li className="article__listItem">
+                                5.12345.toFixed(2) // "5.12",
+                            </li>
+                            <li className="article__listItem">
+                                zwraca łańcuch znaków,
+                            </li>
+                        </ul>
+                    </li>
+                    <li className="article__listItem">
+                        <b>Pierwiastek kwadratowy</b>
+                        <ul className="article__unorderedList">
+                            <li className="article__listItem">
+                                Math.sqrt(16) //4
+                            </li>
+                            <li className="article__listItem">
+                                Math.sqrt(-1) //NaN
+                            </li>
+                        </ul>
+                    </li>
+                    <li className="article__listItem">
+                        <b>Najmniejsza i największa wartość</b>
+                        <ul className="article__unorderedList">
+                            <li className="article__listItem">
+                                Math.max(1,2,3) //3
+                            </li>
+                            <li className="article__listItem">
+                                Math.min(1,2,3) //1
+                            </li>
+                            <li className="article__listItem">
+                                Dowolna liczba argumentów
+                            </li>
+                        </ul>
+                    </li>
+                    <li className="article__listItem">
+                        <b>Losowa liczba</b>
+                        <ul className="article__unorderedList">
+                            <li className="article__listItem">
+                                Math.random()
+                                <ul className="article__unorderedList">
+                                    <li className="article__listItem">
+                                        pseudo-losowa liczba od zera do "prawie 1", np. 0.37961
+                                    </li>
+                                </ul>
+                            </li>
+                            <li className="article__listItem">
+                                Math.floor(Math.random()*5)
+                                <ul className="article__unorderedList">
+                                    <li className="article__listItem">
+                                        losowa liczba całkowita od 0 do 4
+                                    </li>
+                                    <li className="article__listItem">
+                                        <b>Symulator rzutu kością:</b> Math.floor(Math.random()*6)+1
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li className="article__listItem">
+                        <b>Konwertowanie na liczbę</b>
+                        <ul className="article__unorderedList">
+                            <li className="article__listItem">
+                                Konkatenacja
+                                <blockquote className="article__blockquote">
+                                    "10" + 0 === "100"
+                                </blockquote>
+                            </li>
+                            <li className="article__listItem">
+                                Number()
+                                <blockquote className="article__blockquote">
+                                    Number("5") &nbsp;&nbsp;&nbsp;&nbsp;//5<br/>
+                                    Number("2 jabłka") &nbsp;&nbsp;&nbsp;&nbsp;//NaN<br/>
+                                </blockquote>
+                            </li>
+                            <li className="article__listItem">
+                                + (unary operators)
+                                <blockquote className="article__blockquote">
+                                    +"5" &nbsp;&nbsp;&nbsp;//5<br/>
+                                    +"2 jabłka" &nbsp;&nbsp;&nbsp;&nbsp;//Nan<br/>
+                                </blockquote>
+                            </li>
+                            <li className="article__listItem">
+                                działania arytmetyczne inne niż dodawanie
+                                <blockquote className="article__blockquote">
+                                    "5" * 1 &nbsp;&nbsp;&nbsp;&nbsp;//5<br/>
+                                    "5" - 3 &nbsp;&nbsp;&nbsp;&nbsp;//2<br/>
+                                    "2 jabłka"/2 &nbsp;&nbsp;&nbsp;&nbsp;//NaN
+                                </blockquote>
+                            </li>
+                            <li className="article__listItem">
+                                parseInt(), parseFloat()
+                                <blockquote className="article__blockquote">
+                                    parseInt("5") &nbsp;&nbsp;&nbsp;&nbsp;//5<br/>
+                                    parseInt("56") &nbsp;&nbsp;&nbsp;&nbsp;//5<br/>
+                                    parseInt("2 jabłka") &nbsp;&nbsp;&nbsp;&nbsp;//2<br/>
+                                    parseInt("jabłka") &nbsp;&nbsp;&nbsp;&nbsp;/NaN<br/>
+                                    parseInt("kurki 3") &nbsp;&nbsp;&nbsp;&nbsp;//NaN<br/>
+                                </blockquote>
+                                <ul className="article__unorderedList">
+                                    <li className="article__listItem">
+                                        parseFloat - analogicznie dla liczb z cyframi po przecinku.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+            </>
+        )
+    },
+    // {
+    //     id: 42,
+    //     date: "30 czerwca 2023 roku",
+    //     title: "Kalkulator BMI",
+    //     body: (
+    //         <>
+    //             <p>Dzisiaj będę ćwiczyć stylowanie kalkulatora BMI. Bo co to za Frontend-owiec, który nie podaje
+    //                 użytkownikowi przepięknego interfejsu?</p>
+    //             <div className="calculator__container">
+    //                 <div className="calculator__titleContainer">
+    //                     <h4 className="calculator__title">Kalkulator BMI</h4>
+    //                 </div>
+    //                 <form className="js-form">
+    //                     <fieldset className="calculator__fieldset">
+    //                         <legend className="calculator__legend">Podaj swoje wymiary, aby obliczyć swoje BMI</legend>
+    //                         <div className="calculator__subContainer">
+    //                             <label className="calculator__label">
+    //                                 Twój wzrost:
+    //                                 <input className="calculator__input js-height" required type="number" min="1"
+    //                                        step="any"/>
+    //                             </label>
+    //                             <label className="calculator__label">
+    //                                 Twoja waga:
+    //                                 <input className="calculator__input js-weight" required type="number" min="1"
+    //                                        step="any"/>
+    //                             </label>
+    //                         </div>
+    //                     </fieldset>
+    //                     <button className="calculator__button">Policz BMI!</button>
+    //                     <p className="calculator__paragraph">Twoje BMI wynosi: <strong className="js-bmi">N/A</strong>.
+    //                         Co to
+    //                         oznacza - <strong className="js-result">N/A</strong></p>
+    //                 </form>
+    //             </div>
+    //             <p>Wygląda lepiej, prawda?</p>
+    //             <p>Kod przedstawia się następująco:</p>
+    //             <blockquote className="article__blockquote">
+    //                 <b>script.js</b><br/><br/>
+    //                 let heightElement = document.querySelector(".js-height");<br/>
+    //                 let weightElement = document.querySelector(".js-weight");<br/>
+    //                 let formElement = document.querySelector(".js-form");<br/>
+    //                 let bmiElement = document.querySelector(".js-bmi");<br/>
+    //                 let resultElement = document.querySelector(".js-result");<br/><br/>
+    //
+    //                 formElement.addEventListener("submit", (event) => &#123;<br/>
+    //                 event.preventDefault();<br/><br/>
+    //
+    //                 let height = heightElement.value;<br/>
+    //                 let weight = weightElement.value;<br/>
+    //                 let bmi = weight / ((height / 100) ** 2);<br/><br/>
+    //
+    //                 bmiElement.innerText = bmi.toFixed(2);<br/>
+    //
+    //                 let result = "";<br/>
+    //
+    //                 if (bmi &lt; 16) &#123;<br/>
+    //                 result = "Wygłodzenie";<br/>
+    //                 &#125; else if (bmi >= 16 && bmi &lt;= 16.99) &#123;<br/>
+    //                 result = "Wychudzenie";<br/>
+    //                 &#125; else if (bmi >= 17 && bmi &lt;= 18.49) &#123;<br/>
+    //                 result = "Niedowaga";<br/>
+    //                 &#125; else if (bmi >= 18.5 && bmi &lt;= 24.99) &#123;<br/>
+    //                 result = "Wartość prawidłowa";<br/>
+    //                 &#125; else if (bmi >= 25 && bmi &lt;= 29.99) &#123;<br/>
+    //                 result = "Nadwaga";<br/>
+    //                 &#125; else if (bmi >= 30 && bmi &lt;= 34.99) &#123;<br/>
+    //                 result = "Otyłość I stopnia";<br/>
+    //                 &#125; else if (bmi >= 35 && bmi &lt;= 39.99) &#123;<br/>
+    //                 result = "Otyłość II stopnia";<br/>
+    //                 &#125;<br/><br/>
+    //
+    //                 resultElement.innerText = result;<br/>
+    //                 &#125;);<br/><br/>
+    //
+    //                 heightElement.addEventListener("input", () => &#123;<br/>
+    //                 console.log(`Aktualny wzrost: $&#123;heightElement.value&#125;`);<br/>
+    //                 &#125;);<br/>
+    //             </blockquote>
+    //         </>
+    //     )
+    // },
     {
         id: 41,
         date: "29 czerwca 2023 roku",
@@ -108,52 +693,52 @@ export const articlesLink = [
                     &nbsp;&nbsp;bmiElement.innerText = bmi.toFixed(2);<br/>
                     &#125;);
                 </blockquote>
-                    <p>Natomiast w zwykłym HTML-u wygląda to tak:</p>
-                    <blockquote className="article__blockquote">
-                        &lt;form class="js-form"><br/>
-                        &nbsp;&nbsp;&lt;fieldset><br/>
-                        &nbsp;&nbsp;&nbsp;&lt;legend>Twoje dane:&lt;/legend><br/>
-                        &nbsp;&nbsp;&nbsp;&lt;p><br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;label><br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Twój wzrost:<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input class="js-height" required type="number" min="1"
-                        step="any"><br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label><br/>
-                        &nbsp;&nbsp;&nbsp;&lt;/p><br/>
-                        &nbsp;&nbsp;&nbsp;&lt;p><br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;label><br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Twoja waga:<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input class="js-weight" required type="number" min="1"
-                        step="any"><br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label><br/>
-                        &nbsp;&nbsp;&nbsp;&lt;/p><br/>
-                        &nbsp;&nbsp;&lt;/fieldset><br/>
-                        &nbsp;&nbsp;&nbsp;&lt;p><br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;button>Policz BMI!&lt;/button><br/>
-                        &nbsp;&nbsp;&nbsp;&lt;/p><br/>
-                        &lt;/form><br/>
-                    </blockquote>
-                    <form className="js-form">
-                        <fieldset>
-                            <legend>Twoje dane:</legend>
-                            <p>
-                                <label>
-                                    Twój wzrost:
-                                    <input className="js-height" required type="number" min="1" step="any"/>
-                                </label>
-                            </p>
-                            <p>
-                                <label>
-                                    Twoja waga:
-                                    <input className="js-weight" required type="number" min="1" step="any"/>
-                                </label>
-                            </p>
-                        </fieldset>
+                <p>Natomiast w zwykłym HTML-u wygląda to tak:</p>
+                <blockquote className="article__blockquote">
+                    &lt;form class="js-form"><br/>
+                    &nbsp;&nbsp;&lt;fieldset><br/>
+                    &nbsp;&nbsp;&nbsp;&lt;legend>Twoje dane:&lt;/legend><br/>
+                    &nbsp;&nbsp;&nbsp;&lt;p><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;label><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Twój wzrost:<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input class="js-height" required type="number" min="1"
+                    step="any"><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label><br/>
+                    &nbsp;&nbsp;&nbsp;&lt;/p><br/>
+                    &nbsp;&nbsp;&nbsp;&lt;p><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;label><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Twoja waga:<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input class="js-weight" required type="number" min="1"
+                    step="any"><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label><br/>
+                    &nbsp;&nbsp;&nbsp;&lt;/p><br/>
+                    &nbsp;&nbsp;&lt;/fieldset><br/>
+                    &nbsp;&nbsp;&nbsp;&lt;p><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;button>Policz BMI!&lt;/button><br/>
+                    &nbsp;&nbsp;&nbsp;&lt;/p><br/>
+                    &lt;/form><br/>
+                </blockquote>
+                <form className="js-form">
+                    <fieldset>
+                        <legend>Twoje dane:</legend>
                         <p>
-                            <button>Policz BMI!</button>
+                            <label>
+                                Twój wzrost:
+                                <input className="js-height" required type="number" min="1" step="any"/>
+                            </label>
                         </p>
-                    </form>
-                    <p>Twoje BMI wynosi: <strong className="js-bmi">N/A</strong></p>
+                        <p>
+                            <label>
+                                Twoja waga:
+                                <input className="js-weight" required type="number" min="1" step="any"/>
+                            </label>
+                        </p>
+                    </fieldset>
+                    <p>
+                        <button>Policz BMI!</button>
+                    </p>
+                </form>
+                <p>Twoje BMI wynosi: <strong className="js-bmi">N/A</strong></p>
             </>
         )
     },
@@ -384,131 +969,131 @@ export const articlesLink = [
         title: "HTML - formularze c.d",
         body: (
             <>
-            <h4 className="article__subsubsubheader">input / password - hasło</h4>
-            <label>
-                Podaj swoje hasło:
-                <input name="password" type="password"/>
-            </label>
-            <blockquote className="article__blockquote">
-                &lt;label><br/>
-                &nbsp;&nbsp;&lt;Podaj swoje hasło:<br/>
-                &nbsp;&nbsp;&lt;input type="password" name="password"><br/>
-                &lt;/label><br/>
-            </blockquote>
-            <ul className="article__unorderedList">
-                <li className="article__listItem">
-                    ukrywa wpisywane znaki, natomiast jesteśmy w stanie podejrzeć hasło, wpisując w konsolę
-                    $0.value,
-                </li>
-                <li className="article__listItem">
-                    hasło jest wysyłane <i>plaintext-em</i>, jeśli połączenie nie jest szyfrowane.
-                </li>
-            </ul>
-            <h4 className="article__subsubsubheader">input / number</h4>
-            <label>
-                Twój wzrost:
-                <input name="height" type="number"/>
-            </label>
-            <blockquote className="article__blockquote">
-                &lt;label><br/>
-                &nbsp;&nbsp;&lt;Twój wzrost<br/>
-                &nbsp;&nbsp;&lt;input type="number" name="number"><br/>
-                &lt;/label><br/>
-            </blockquote>
-            <ul className="article__unorderedList">
-                <li className="article__listItem">
-                    pole liczbowe,
-                </li>
-                <li className="article__listItem">
-                    atrybut step (step="any") (step="0,02") określa skalę co ile ma wzrastać wartość,
-                </li>
-                <li className="article__listItem">
-                    atrybuty min i max określają minimalną i maksymalną wartość,
-                </li>
-            </ul>
-            <h4 className="article__subsubsubheader">input / range</h4>
-            <label>
-                Maksymalna cena:
-                <input max="2000" min="1000" name="maxPrice" step="100" type="range"/>
-            </label>
-            <blockquote className="article__blockquote">
-                &lt;label><br/>
-                &nbsp;&nbsp;&lt;Maksymalna cena:<br/>
-                &nbsp;&nbsp;&lt;input type="range" name="maxPrice" min="1000" max="2000" step="100"><br/>
-                &lt;/label><br/>
-            </blockquote>
-            <ul className="article__unorderedList">
-                <li className="article__listItem">
-                    inny sposób na wpisanie liczby,
-                </li>
-                <li className="article__listItem">
-                    warto ustawić min, max i step,
-                </li>
-                <li className="article__listItem">
-                    nie pokazuje liczby.
-                </li>
-            </ul>
-            <h4 className="article__subsubsubheader">input / tel</h4>
-            <label>
-                Numer telefonu:
-                <input name="tel" type="tel"/>
-            </label>
-            <blockquote className="article__blockquote">
-                &lt;label><br/>
-                &nbsp;&nbsp;&lt;Numer telefonu:<br/>
-                &nbsp;&nbsp;&lt;input type="tel" name="tel"><br/>
-                &lt;/label><br/>
-            </blockquote>
-            <ul className="article__unorderedList">
-                <li className="article__listItem">
-                    numer telefonu,
-                </li>
-                <li className="article__listItem">
-                    można wpisać cokolwiek,
-                </li>
-            </ul>
-            <h4 className="article__subsubsubheader">input / url</h4>
-            <label>
-                Adres Twojej strony internetowej:
-                <input name="website" type="url"/>
-            </label>
-            <ul className="article__unorderedList">
-                <li className="article__listItem">
-                    adres URL,
-                </li>
-                <li className="article__listItem">
-                    sprawdza poprawność,
-                </li>
-            </ul>
-            <h4 className="article__subsubsubheader">autocomplete box</h4>
-            <label>
-                Marka samochodu:
-                <input list="carBrands" name="carBrand"/>
+                <h4 className="article__subsubsubheader">input / password - hasło</h4>
+                <label>
+                    Podaj swoje hasło:
+                    <input name="password" type="password"/>
+                </label>
+                <blockquote className="article__blockquote">
+                    &lt;label><br/>
+                    &nbsp;&nbsp;&lt;Podaj swoje hasło:<br/>
+                    &nbsp;&nbsp;&lt;input type="password" name="password"><br/>
+                    &lt;/label><br/>
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        ukrywa wpisywane znaki, natomiast jesteśmy w stanie podejrzeć hasło, wpisując w konsolę
+                        $0.value,
+                    </li>
+                    <li className="article__listItem">
+                        hasło jest wysyłane <i>plaintext-em</i>, jeśli połączenie nie jest szyfrowane.
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">input / number</h4>
+                <label>
+                    Twój wzrost:
+                    <input name="height" type="number"/>
+                </label>
+                <blockquote className="article__blockquote">
+                    &lt;label><br/>
+                    &nbsp;&nbsp;&lt;Twój wzrost<br/>
+                    &nbsp;&nbsp;&lt;input type="number" name="number"><br/>
+                    &lt;/label><br/>
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        pole liczbowe,
+                    </li>
+                    <li className="article__listItem">
+                        atrybut step (step="any") (step="0,02") określa skalę co ile ma wzrastać wartość,
+                    </li>
+                    <li className="article__listItem">
+                        atrybuty min i max określają minimalną i maksymalną wartość,
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">input / range</h4>
+                <label>
+                    Maksymalna cena:
+                    <input max="2000" min="1000" name="maxPrice" step="100" type="range"/>
+                </label>
+                <blockquote className="article__blockquote">
+                    &lt;label><br/>
+                    &nbsp;&nbsp;&lt;Maksymalna cena:<br/>
+                    &nbsp;&nbsp;&lt;input type="range" name="maxPrice" min="1000" max="2000" step="100"><br/>
+                    &lt;/label><br/>
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        inny sposób na wpisanie liczby,
+                    </li>
+                    <li className="article__listItem">
+                        warto ustawić min, max i step,
+                    </li>
+                    <li className="article__listItem">
+                        nie pokazuje liczby.
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">input / tel</h4>
+                <label>
+                    Numer telefonu:
+                    <input name="tel" type="tel"/>
+                </label>
+                <blockquote className="article__blockquote">
+                    &lt;label><br/>
+                    &nbsp;&nbsp;&lt;Numer telefonu:<br/>
+                    &nbsp;&nbsp;&lt;input type="tel" name="tel"><br/>
+                    &lt;/label><br/>
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        numer telefonu,
+                    </li>
+                    <li className="article__listItem">
+                        można wpisać cokolwiek,
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">input / url</h4>
+                <label>
+                    Adres Twojej strony internetowej:
+                    <input name="website" type="url"/>
+                </label>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        adres URL,
+                    </li>
+                    <li className="article__listItem">
+                        sprawdza poprawność,
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">autocomplete box</h4>
+                <label>
+                    Marka samochodu:
+                    <input list="carBrands" name="carBrand"/>
                     <datalist id="carBrands">
                         <option>Audi</option>
                         <option>BMW</option>
                         &lt;
                         <option>Tesla</option>
                     </datalist>
-            </label>
-            <blockquote className="article__blockquote">
-                label><br/>
-                &nbsp;&nbsp;&lt;Marka samochodu:<br/>
-                &nbsp;&nbsp;&lt;input name="carBrand" list="carBrands"><br/>
-                &nbsp;&nbsp;&lt;datalist id="carBrands"><br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;option>Audi&lt;/option><br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;option>BMW&lt;/option><br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;option>Tesla&lt;/option><br/>
-                &nbsp;&nbsp;&lt;/datalist><br/>
-                &lt;/label><br/>
-            </blockquote>
-            <ul className="article__unorderedList">
-                <li className="article__listItem">
-                    input z sugerowanymi opcjami (dropdown),
-                </li>
-            </ul>
-            <h4 className="article__subsubsubheader">input / hidden</h4>
-            <input name="something" type="hidden" value="something"/>
+                </label>
+                <blockquote className="article__blockquote">
+                    label><br/>
+                    &nbsp;&nbsp;&lt;Marka samochodu:<br/>
+                    &nbsp;&nbsp;&lt;input name="carBrand" list="carBrands"><br/>
+                    &nbsp;&nbsp;&lt;datalist id="carBrands"><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;option>Audi&lt;/option><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;option>BMW&lt;/option><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;option>Tesla&lt;/option><br/>
+                    &nbsp;&nbsp;&lt;/datalist><br/>
+                    &lt;/label><br/>
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        input z sugerowanymi opcjami (dropdown),
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">input / hidden</h4>
+                <input name="something" type="hidden" value="something"/>
                 <blockquote className="article__blockquote">
                     &lt;input type="hidden" name="something" value="something"><br/>
                 </blockquote>
@@ -612,186 +1197,186 @@ export const articlesLink = [
                 <blockquote className="article__blockquote">
                     &lt;form <b>action</b>="/strona-docelowa" <b>method</b>="post">&lt;/form>
                 </blockquote>
-                    <ul className="article__unorderedList">
-                        <li className="article__listItem">
-                            atrybut <b>action</b> - adres url, pod który zostanie wysłany formularz
-                        </li>
-                        <li className="article__listItem">
-                            atrybut <b>method</b> - definiuje, jakiej metody HTTP użyjemy do wysłania formularza
-                        </li>
-                    </ul>
-                    <h4 className="article__subsubsubheader">Input (text)</h4>
-                    <blockquote className="article__blockquote">&lt;input name="myName"></blockquote>
-                    <p>Atrybuty:</p>
-                    <ul className="article__unorderedList">
-                        <li className="article__listItem">
-                            <b>name</b> - nazwa pola,
-                        </li>
-                        <li className="article__listItem">
-                            <b>readonly</b> - pole tylko do odczytu,
-                            <label>
-                                <input readOnly/>
-                            </label>
-                        </li>
-                        <li className="article__listItem">
-                            <b>disabled</b> - pole wyłączone/ nieaktywne,
-                            <label>
-                                <input disabled/>
-                            </label>
-                        </li>
-                        <li className="article__listItem">
-                            <b>placeholder</b> - tekst w przypadku pustej wartości,
-                            <label>
-                                <input placeholder="Wpisz coś"/>
-                            </label>
-                        </li>
-                        <li className="article__listItem">
-                            <b>autofocus</b> - skupienie wskaźnika na danym polu input,
-                        </li>
-                    </ul>
-                    <p><b>label</b> - opisuje pole, ważny pod kątem dostępności</p>
-                    <blockquote className="article__blockquote">
-                        &lt;label>Imię i nazwisko&lt;input name="name">&lt;/label><br/><br/>
-                        &lt;!-- lub: --><br/><br/>
-                        &lt;label for="name">Imię i nazwisko:&lt;/label><br/>
-                        &lt;input id="name" name="name"><br/>
-                    </blockquote>
-                    <label>Imię i nazwisko<input name="name"/></label>
-                    <h4 className="article__subsubsubheader">przyciski</h4>
-                    <blockquote className="article__blockquote">
-                        &lt;button>Wyślij!&lt;/button><br/><br/>
-                        &lt;!-- lub: --><br/><br/>
-                        &lt;input type="submit" value="Wyślij!">
-                    </blockquote>
-                    <button>Wyślij!</button>
-                    <ul className="article__unorderedList">
-                        <li className="article__listItem">
-                            mogą mieć różne funkcje w zależności od atrybutu type:
-                            <ul className="article__unorderedList">
-                                <li className="article__listItem"><b>submit</b> - wysyła formularz (domyślny dla
-                                    formularza),
-                                </li>
-                                <li className="article__listItem"><b>reset</b> - resetuje formularz,</li>
-                                <li className="article__listItem"><b>button</b> - zwykły przycisk, brak domyślnej akcji,
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <h4 className="article__subsubsubheader">textarea</h4>
-                    <blockquote className="article__blockquote">
-                        &lt;textarea name="description">&lt;/textarea>
-                    </blockquote>
-                    <p><label>
-                        <textarea name="description"></textarea>
-                    </label></p>
-                    <ul className="article__unorderedList">
-                        <li className="article__listItem">pole na wiele linii tekstu,</li>
-                        <li className="article__listItem">przyjmuje tylko zwykły niesformatowany tekst,</li>
-                        <li className="article__listItem">domyślna wartość wewnątrz znacznika,</li>
-                        <li className="article__listItem">posiada znacznik zamykający,</li>
-                        <li className="article__listItem">białe znaki mają znaczenie,</li>
-                        <li className="article__listItem">domyślnie da się zmienić rozmiar okna,</li>
-                        <li className="article__listItem">atrybut <b>cols</b> - szerokość w kolumnach,</li>
-                        <li className="article__listItem">atrybut <b>rows</b> - wysokość w wierszach,</li>
-                    </ul>
-                    <h4 className="article__subsubsubheader">fieldset i legend</h4>
-                    <fieldset>
-                        <legend>Dane osobowe</legend>
-                        <p>
-                            <label>Imię: <input name="firstName"/>
-                            </label>
-                        </p>
-                    </fieldset>
-                    <ul className="article__unorderedList">
-                        <li className="article__listItem">wygodne rozwiązanie do tworzenia grup pól,</li>
-                        <li className="article__listItem">ważne z punktu widzenia dostępności,</li>
-                    </ul>
-                    <h4 className="article__subsubsubheader">input / checkbox — pole wyboru</h4>
-                    <label>
-                        <input checked name="Kuba Badach" type="checkbox"/>
-                    </label>Kuba Badach
-                    <blockquote className="article__blockquote">
-                        &lt;input type="checkbox" name="Kuba Badach" checked>Kuba Badach
-                    </blockquote>
-                    <ul className="article__unorderedList">
-                        <li className="article__listItem">tak / nie</li>
-                        <li className="article__listItem">atrybut checked — domyślne zaznaczenie,</li>
-                        <li className="article__listItem">wartość jest wysyłana tylko, jeśli pole jest zaznaczone,</li>
-                        <li className="article__listItem">jeśli nie ma value, wysyłana jest wartość "on".</li>
-                    </ul>
-                    <h4 className="article__subsubsubheader">input / radio — jeden wybór z wielu opcji</h4>
-                    <label>
-                        <input checked name="favouriteSinger" type="radio" value="badach"/>
-                    </label> Kuba Badach
-                    <label>
-                        <input name="favouriteSinger" type="radio" value="bieber"/>
-                    </label> Justin Bieber
-                    <blockquote className="article__blockquote">
-                        &lt;input type="radio" name="favouriteSinger" value="badach" checked> Kuba Badach<br/>
-                        &lt;input type="radio" name="favouriteSinger" value="bieber" checked> Justin Bieber
-                    </blockquote>
-                    <ul className="article__unorderedList">
-                        <li className="article__listItem">pola z tym samym atrybutem name,</li>
-                        <li className="article__listItem">tylko jedno pole z grupy może być zaznaczone,</li>
-                        <li className="article__listItem">wysyłana jest wartość tylko zaznaczonego pola,</li>
-                        <li className="article__listItem">nie da się odznaczyć pola.</li>
-                    </ul>
-                    <h4 className="article__subsubsubheader">select</h4>
-                    <label>
-                        ulubiony wokalista:
-                        <select name="favouriteSinger">
-                            <option value="badach">Kuba Badach</option>
-                            <option selected value="timberlake">Justin Timberlake</option>
-                        </select>
-                    </label>
-                    <blockquote className="article__blockquote">
-                        &lt;label><br/>
-                        &nbsp;&nbsp;ulubiony wokalista:<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;select name="favouriteSinger"><br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="badach">Kuba Badach&lt;/option><br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="timberlake" selected>Justin Timberlake
-                        &lt;/option><br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/select><br/>
-                        &lt;/label>
-                    </blockquote>
-                    <ul className="article__unorderedList">
-                        <li className="article__listItem">rozwijana lista opcji,</li>
-                        <li className="article__listItem">atrybut selected w option - domyślna wartość,</li>
-                        <li className="article__listItem">zostanie wysłana wartość wybranej opcji,</li>
-                        <li className="article__listItem">atrybut size — liczba widocznych opcji,</li>
-                        <li className="article__listItem">atrybut multiple — wielokrotny wybór.</li>
-                    </ul>
-                    <h4 className="article__subsubsubheader">input / file</h4>
-                    <label>
-                        Załącz swoje CV
-                        <input name="cv" type="file"/>
-                    </label>
-                    <blockquote className="article__blockquote">
-                        &lt;label><br/>
-                        &nbsp;&nbsp;Załącz swoje CV<br/>
-                        &nbsp;&nbsp;&lt;input type="file" name="cv"><br/>
-                        &lt;/label>
-                    </blockquote>
-                    <ul className="article__unorderedList">
-                        <li className="article__listItem">wybór plików,</li>
-                        <li className="article__listItem">atrybut multiple — wiele plików,</li>
-                    </ul>
-                    <h4 className="article__subsubsubheader">input / email</h4>
-                    <label>
-                        Adres e-mail do kontaktu:
-                        <input name="email" type="email"/>
-                    </label>
-                    <blockquote className="article__blockquote">
-                        &lt;label><br/>
-                        &nbsp;&nbsp;Adres e-mail do kontaktu:<br/>
-                        &nbsp;&nbsp;&lt;input type="email" name="email"><br/>
-                        &lt;/label><br/>
-                    </blockquote>
-                    <ul className="article__unorderedList">
-                        <li className="article__listItem">adres e-mail,</li>
-                        <li className="article__listItem">w bardzo podstawowy sposób sprawdza poprawność,</li>
-                        <li className="article__listItem">przy walidacji można użyć atrybutu pattern.</li>
-                    </ul>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        atrybut <b>action</b> - adres url, pod który zostanie wysłany formularz
+                    </li>
+                    <li className="article__listItem">
+                        atrybut <b>method</b> - definiuje, jakiej metody HTTP użyjemy do wysłania formularza
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">Input (text)</h4>
+                <blockquote className="article__blockquote">&lt;input name="myName"></blockquote>
+                <p>Atrybuty:</p>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        <b>name</b> - nazwa pola,
+                    </li>
+                    <li className="article__listItem">
+                        <b>readonly</b> - pole tylko do odczytu,
+                        <label>
+                            <input readOnly/>
+                        </label>
+                    </li>
+                    <li className="article__listItem">
+                        <b>disabled</b> - pole wyłączone/ nieaktywne,
+                        <label>
+                            <input disabled/>
+                        </label>
+                    </li>
+                    <li className="article__listItem">
+                        <b>placeholder</b> - tekst w przypadku pustej wartości,
+                        <label>
+                            <input placeholder="Wpisz coś"/>
+                        </label>
+                    </li>
+                    <li className="article__listItem">
+                        <b>autofocus</b> - skupienie wskaźnika na danym polu input,
+                    </li>
+                </ul>
+                <p><b>label</b> - opisuje pole, ważny pod kątem dostępności</p>
+                <blockquote className="article__blockquote">
+                    &lt;label>Imię i nazwisko&lt;input name="name">&lt;/label><br/><br/>
+                    &lt;!-- lub: --><br/><br/>
+                    &lt;label for="name">Imię i nazwisko:&lt;/label><br/>
+                    &lt;input id="name" name="name"><br/>
+                </blockquote>
+                <label>Imię i nazwisko<input name="name"/></label>
+                <h4 className="article__subsubsubheader">przyciski</h4>
+                <blockquote className="article__blockquote">
+                    &lt;button>Wyślij!&lt;/button><br/><br/>
+                    &lt;!-- lub: --><br/><br/>
+                    &lt;input type="submit" value="Wyślij!">
+                </blockquote>
+                <button>Wyślij!</button>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        mogą mieć różne funkcje w zależności od atrybutu type:
+                        <ul className="article__unorderedList">
+                            <li className="article__listItem"><b>submit</b> - wysyła formularz (domyślny dla
+                                formularza),
+                            </li>
+                            <li className="article__listItem"><b>reset</b> - resetuje formularz,</li>
+                            <li className="article__listItem"><b>button</b> - zwykły przycisk, brak domyślnej akcji,
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">textarea</h4>
+                <blockquote className="article__blockquote">
+                    &lt;textarea name="description">&lt;/textarea>
+                </blockquote>
+                <p><label>
+                    <textarea name="description"></textarea>
+                </label></p>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">pole na wiele linii tekstu,</li>
+                    <li className="article__listItem">przyjmuje tylko zwykły niesformatowany tekst,</li>
+                    <li className="article__listItem">domyślna wartość wewnątrz znacznika,</li>
+                    <li className="article__listItem">posiada znacznik zamykający,</li>
+                    <li className="article__listItem">białe znaki mają znaczenie,</li>
+                    <li className="article__listItem">domyślnie da się zmienić rozmiar okna,</li>
+                    <li className="article__listItem">atrybut <b>cols</b> - szerokość w kolumnach,</li>
+                    <li className="article__listItem">atrybut <b>rows</b> - wysokość w wierszach,</li>
+                </ul>
+                <h4 className="article__subsubsubheader">fieldset i legend</h4>
+                <fieldset>
+                    <legend>Dane osobowe</legend>
+                    <p>
+                        <label>Imię: <input name="firstName"/>
+                        </label>
+                    </p>
+                </fieldset>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">wygodne rozwiązanie do tworzenia grup pól,</li>
+                    <li className="article__listItem">ważne z punktu widzenia dostępności,</li>
+                </ul>
+                <h4 className="article__subsubsubheader">input / checkbox — pole wyboru</h4>
+                <label>
+                    <input checked name="Kuba Badach" type="checkbox"/>
+                </label>Kuba Badach
+                <blockquote className="article__blockquote">
+                    &lt;input type="checkbox" name="Kuba Badach" checked>Kuba Badach
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">tak / nie</li>
+                    <li className="article__listItem">atrybut checked — domyślne zaznaczenie,</li>
+                    <li className="article__listItem">wartość jest wysyłana tylko, jeśli pole jest zaznaczone,</li>
+                    <li className="article__listItem">jeśli nie ma value, wysyłana jest wartość "on".</li>
+                </ul>
+                <h4 className="article__subsubsubheader">input / radio — jeden wybór z wielu opcji</h4>
+                <label>
+                    <input checked name="favouriteSinger" type="radio" value="badach"/>
+                </label> Kuba Badach
+                <label>
+                    <input name="favouriteSinger" type="radio" value="bieber"/>
+                </label> Justin Bieber
+                <blockquote className="article__blockquote">
+                    &lt;input type="radio" name="favouriteSinger" value="badach" checked> Kuba Badach<br/>
+                    &lt;input type="radio" name="favouriteSinger" value="bieber" checked> Justin Bieber
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">pola z tym samym atrybutem name,</li>
+                    <li className="article__listItem">tylko jedno pole z grupy może być zaznaczone,</li>
+                    <li className="article__listItem">wysyłana jest wartość tylko zaznaczonego pola,</li>
+                    <li className="article__listItem">nie da się odznaczyć pola.</li>
+                </ul>
+                <h4 className="article__subsubsubheader">select</h4>
+                <label>
+                    ulubiony wokalista:
+                    <select name="favouriteSinger">
+                        <option value="badach">Kuba Badach</option>
+                        <option selected value="timberlake">Justin Timberlake</option>
+                    </select>
+                </label>
+                <blockquote className="article__blockquote">
+                    &lt;label><br/>
+                    &nbsp;&nbsp;ulubiony wokalista:<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;select name="favouriteSinger"><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="badach">Kuba Badach&lt;/option><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="timberlake" selected>Justin Timberlake
+                    &lt;/option><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/select><br/>
+                    &lt;/label>
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">rozwijana lista opcji,</li>
+                    <li className="article__listItem">atrybut selected w option - domyślna wartość,</li>
+                    <li className="article__listItem">zostanie wysłana wartość wybranej opcji,</li>
+                    <li className="article__listItem">atrybut size — liczba widocznych opcji,</li>
+                    <li className="article__listItem">atrybut multiple — wielokrotny wybór.</li>
+                </ul>
+                <h4 className="article__subsubsubheader">input / file</h4>
+                <label>
+                    Załącz swoje CV
+                    <input name="cv" type="file"/>
+                </label>
+                <blockquote className="article__blockquote">
+                    &lt;label><br/>
+                    &nbsp;&nbsp;Załącz swoje CV<br/>
+                    &nbsp;&nbsp;&lt;input type="file" name="cv"><br/>
+                    &lt;/label>
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">wybór plików,</li>
+                    <li className="article__listItem">atrybut multiple — wiele plików,</li>
+                </ul>
+                <h4 className="article__subsubsubheader">input / email</h4>
+                <label>
+                    Adres e-mail do kontaktu:
+                    <input name="email" type="email"/>
+                </label>
+                <blockquote className="article__blockquote">
+                    &lt;label><br/>
+                    &nbsp;&nbsp;Adres e-mail do kontaktu:<br/>
+                    &nbsp;&nbsp;&lt;input type="email" name="email"><br/>
+                    &lt;/label><br/>
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">adres e-mail,</li>
+                    <li className="article__listItem">w bardzo podstawowy sposób sprawdza poprawność,</li>
+                    <li className="article__listItem">przy walidacji można użyć atrybutu pattern.</li>
+                </ul>
             </>
         )
     },
@@ -1254,7 +1839,8 @@ export const articlesLink = [
                             <td>Kod błędu aplikacji po stronie klienta</td>
                             <td>Misdirected Request</td>
                             <td>Zapytanie zostało skierowane do serwera, który nie powinien go otrzymać lub
-                                który nie jest w stanie na nie odpowiedzieć</td>
+                                który nie jest w stanie na nie odpowiedzieć
+                            </td>
                         </tr>
                         <tr className="article__tr">
                             <td>422</td>
