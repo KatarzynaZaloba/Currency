@@ -5,6 +5,73 @@ import Schema from "../../../images/schemat.png";
 
 export const articlesLink = [
     {
+        id: 15,
+        date: "30 maja 2023 roku",
+        title: "HTML - utrwalenie różnic między kilkoma znacznikami",
+        body: (
+            <>
+                <p>
+                    Oto kilka znaczników <i>HTML</i>, których gwoli powtórzenia uzupełnię w poniższej tabeli. Po
+                    umieszczeniu przejrzę tą całą moją dotychczasową treść i zmienię w/w znaczniki tak, aby były
+                    one
+                    używane zgodnie z konwencją.
+                </p>
+                    <div className="div-table-overflow">
+                        <table className="article__table">
+                            <caption className="article__caption">przykłady znaczników HTML wraz ze znaczeniem</caption>
+                            <thead className="article__thead">
+                            <tr className="article__tr">
+                                <th className="article__th">
+                                    symbol
+                                </th>
+                                <th className="article__th">
+                                    nazwa
+                                </th>
+                                <th className="article__th">
+                                    opis
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr className="article__tr">
+                                <td>&lt;br&gt;</td>
+                                <td><i>line break</i></td>
+                                <td>łamie wiersz w miejscu wskazanym, ale nie należy go używać w celu dodania odstępu
+                                </td>
+                            </tr>
+                            <tr className="article__tr">
+                                <td>&lt;strong&gt;</td>
+                                <td><i>strong importance</i></td>
+                                <td>używamy, gdy jest coś ważnego/pilnego do przekazania, lub gdy jest to ostrzeżenie
+                                </td>
+                            </tr>
+                            <tr className="article__tr">
+                                <td>&lt;b&gt;</td>
+                                <td><i>bring attention to</i></td>
+                                <td>używamy, gdy chcemy zwrócić uwagę na jakiś fragment, ale nie jest on ważniejszy od
+                                    pozostałej treści, używany rzadziej niż &lt;strong&gt;
+                                </td>
+                            </tr>
+                            <tr className="article__tr">
+                                <td>&lt;em&gt;</td>
+                                <td><i>emphasis</i></td>
+                                <td>używamy, gdy kładziemy nacisk na jakieś słowo w wyrażeniu</td>
+                            </tr>
+                            <tr className="article__tr">
+                                <td>&lt;i&gt;</td>
+                                <td><i>idiomatic text</i></td>
+                                <td>używamy do pojęć technicznych, słów w obcym języku lub myśli</td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+
+                            </tfoot>
+                        </table>
+                    </div>
+            </>
+        )
+    },
+    {
         id: 14,
         date: "30 maja 2023 roku",
         title: "Operatory operacji logicznych",
