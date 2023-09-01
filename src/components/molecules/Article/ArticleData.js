@@ -5,6 +5,59 @@ import Schema from "../../../images/schemat.png";
 
 export const articlesLink = [
     {
+        id: 34,
+        date: "16 czerwca 2023 roku",
+        title: "CSS - konwencja BEM",
+        body: (
+            <>
+                <p>Bardzo się cieszę, że mogę znowu udoskonalić bloga o tym razem znaczniki z klasami w zgodzie z
+                    konwencją BEM. Nie mogę się doczekać, kiedy powtórzę <i>React-a</i> i przeniosę strukturę plików —
+                    ale nie
+                    wszystko na raz!</p>
+                <p>Konwencja BEM polega na dodaniu nazwy klasy, w której umieszczamy nazwę bloku, w którym jest element,
+                    łącznik w postaci znaku "__" z nazwą stylowanego elementu i/lub <i>modyfikator</i>.</p>
+                <blockquote className="article__blockquote">.block__element--modifier</blockquote>
+                <p>Zgodnie z konwencją BEM, zawsze stylujemy po klasach, nie po znacznikach. Dzielimy tym samym stronę
+                    na
+                    bloki, które są niezależne i mogą być używane w różnych miejscach. Bloki to najwyższe poziomy
+                    stylowania. Wewnątrz każdego z bloków są elementy, które nie są samodzielne. W nazwie klasy zgodnie
+                    z konwencją BEM nie zagnieżdżamy elementów. Używamy nazwy klasy zgodnie z powyższym wzorem.</p>
+                <p>Do najważniejszych cech BEM-a niewątpliwie należą:</p>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">pomaga w tworzeniu komponentów wielokrotnego użytku,</li>
+                    <li className="article__listItem">bloki są samodzielne i nie polegają na sobie nawzajem,</li>
+                    <li className="article__listItem">łatwość implementacji — wystarczy trzymać się prostej konwencji
+                        nazywania klas,
+                    </li>
+                    <li className="article__listItem">sprawia, że kod jest łatwiejszy do zrozumienia,</li>
+                    <li className="article__listItem">sprawia, że łatwiej pracować z kodem i go utrzymywać,</li>
+                    <li className="article__listItem">pozwala na swobodne rozrastanie się aplikacji (skalowanie),</li>
+                    <li className="article__listItem">sprawia, że wszyscy developerzy w zespole "mówią tym samym
+                        językiem",
+                    </li>
+                    <li className="article__listItem">sprawia, że kod powstaje szybciej,</li>
+                    <li className="article__listItem">sprawia, że powstaje mniej kodu,</li>
+                    <li className="article__listItem">jest bardzo popularny na świecie,</li>
+                    <li className="article__listItem">eliminuje problem nadpisywania się styli (specify),</li>
+                    <li className="article__listItem">pozwala na szybkie wdrożenie nowych osób w zespole.</li>
+                </ul>
+                <p>Teoria, teorią, a ja zabieram się do roboty!</p>
+            </>
+        )
+    },
+    {
+        id: 33,
+        date: "15 czerwca 2023 roku",
+        title: "CSS - powtórzenie z pseudo klas i stylowania tabel, list i linków",
+        body: (
+            <>
+                <p>Dziś będzie krótko. Pozwólcie, że wrócę do spisania notatek w późniejszym czasie, gdy już czas na
+                    to pozwoli. Na ten moment przejdę do zadań praktycznych i odpicuję stronę zgodnie z powtórką z
+                    dzisiaj, w ramach utrwalenia. Każdą zmianę można nadal obejrzeć w repozytorium na GitHub-ie.</p>
+            </>
+        )
+    },
+    {
         id: 32,
         date: "14 czerwca 2023 roku",
         title: "Jak działa Internet?",
