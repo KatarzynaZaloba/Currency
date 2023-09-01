@@ -4,7 +4,195 @@ import Kate from "../../../images/scarpa.jpg";
 import Schema from "../../../images/schemat.png";
 
 export const articlesLink = [
-    {},
+    // {
+    //     id: 14,
+    //     date:
+    // },
+    {
+        id: 13,
+        date: "30 maja 2023 roku",
+        title: "Instrukcja",
+        body: (
+            <>
+                <p>
+                    Co zawierają instrukcje?
+                </p>
+                    <ul className="article__unorderedList">
+                        <li className="article__listItem"><i>literały</i> - wartości (np. napisy, liczby) wpisane w kod
+                            źródłowy,
+                            kopiowane do kodu wykonywalnego podczas kompilacji;
+                        </li>
+                        <li className="article__listItem"><i>stałe</i> - symbole (nazwy) reprezentujące ustalone
+                            wartości,
+                            zastępowane tymi wartościami podczas kompilacji;
+                        </li>
+                        <li className="article__listItem"><i>wyrażenia</i> - zapis obliczeń;</li>
+                        <li className="article__listItem"><i>zmienne lub nazwy zmiennych</i> - symbole reprezentujące
+                            wartości,
+                            które mogą zmieniać w czasie wykonywania programu;
+                        </li>
+                        <li className="article__listItem"><i>słowa kluczowe</i> - symbole reprezentujące określone
+                            działania
+                            (np.
+                            <i>for, do, while, if, else, return</i>);
+                        </li>
+                        <li className="article__listItem"><i>wywołania funkcji</i> - symbole oznaczające miejsca w
+                            programie,
+                            w
+                            których należy wykonać instrukcje wchodzące w skład treści danej funkcji (wyniki wykonania
+                            funkcji też "pojawiają się" w tych miejscach);
+                        </li>
+                        <li className="article__listItem"><i>znaki przerwy;</i></li>
+                        <li className="article__listItem"><i>spacje;</i></li>
+                        <li className="article__listItem"><i>tabulacje poziome;</i></li>
+                        <li className="article__listItem">przejścia do następnego wiersza (są pomijane podczas
+                            kompilacji,
+                            tylko
+                            istnieją pewne ograniczenia dotyczące miejsc, w których może być umieszczone przejście do
+                            następnego wiersza, o ile nie zostanie poprzedzone znakiem "\" (<i>backslash</i>));
+                        </li>
+                        <li className="article__listItem">komentarze, które umieszczamy po symbolu "//" do końca
+                            wiersza,
+                            lub
+                            między symbolami "/* oraz */" (komentarze są ignorowane przez kompilator).
+                        </li>
+                    </ul>
+            </>
+        ),
+    },
+    {
+        id: 12,
+        date: "30 maja 2023 roku",
+        title: "Funkcja",
+        body: (
+            <>
+                <p>
+                    Po dniu w biurze, ogarnięciu kilku kilometrów i spełnieniu kilku obowiązków domowych, powracam
+                    teraz
+                    do swoich materiałów z Uczelni. Czymże jest funkcja?
+                </p>
+                <p>
+                    <i>Funkcja</i> to wyróżniona część <i>kodu źródłowego</i>, stanowiąca odrębną całość, składająca
+                    się
+                    z treści oraz nagłówka.
+                </p>
+                <p>
+                    <i>Treść funkcji</i> to blok, którego sposób wykonywania w ogóle zależy od pewnej liczby
+                    wartości,
+                    zwanych <i>parametrami</i> lub <i>argumentami funkcji</i>, pochodzących z innych części programu
+                    i
+                    kończy się wygenerowaniem <i>wyniku</i>, przeznaczonego do wykorzystania w innych częściach
+                    programu.
+                </p>
+                <p>
+                    <i>Nagłówek funkcji</i> to część definicji funkcji określająca typ danych dla wyniku, nazwę
+                    funkcji
+                    oraz listę jej argumentów.
+                </p>
+            </>
+        ),
+    },
+    {
+        id: 11,
+        date: "30 maja 2023 roku",
+        title: "Wsparcie i hejterzy",
+        body: (
+            <>
+                <p>
+                    Czy słyszeliście o wszelkiego rodzaju grupach juniorów w <i>IT</i> szukających na portalach
+                    społecznościowych stażu lub pierwszej pracy? Mogłabym określić część tej społeczności jako
+                    zgrupowanie <em>sfrustrowanych</em> hejterów, którym się nie udało (lub nie udaje) i których
+                    zadaniem jest <em>zniechęcać i przyczepiać</em> się do każdego, kto określi, że szuka stażu.
+                </p>
+                <p>
+                    Można przeczytać tam, że teraz, żeby wejść do <i>Frontend-u</i> to jest za późno, albo że <i>>po
+                    co
+                    próbujesz skoro i tak się nie dostaniesz</i>. A nie daj borze zielony, jak wrzucisz tam info
+                    o
+                    sobie i swój pierwszy draft CV (<i>który może być kogoś pierwszym w życiu</i>)! Od razu
+                    przeczytasz,
+                    że ten angielski to <em>nie taki</em>, a tutaj same oklepane projekty, a jeszcze tam klauzula
+                    informacyjna i zgoda na przetwarzanie jest niepotrzebna (!)...
+                </p>
+                <p>
+                    Też stałam się ofiarą zmasowanego hejtu pod jednym z moich postów. I nie było mi z tym
+                    przyjemnie,
+                    oj nie! Pokazałam nawet je P.: <i>"Popatrz, ja się chyba nie nadaję..."</i>, na co on swoim
+                    spokojnym głosem odpowiedział <i>"Nie słuchaj frustratów. Nie daj się zniechęcić. Przecież
+                    wiesz, że
+                    to jest Twój konik!"</i>.
+                </p>
+                <p>
+                    P. miał rację. Jeszcze nigdy nie czułam takiej pasji w tym, co robię. No dobra, może oprócz
+                    chwil,
+                    gdy robiłam zestawy tzw. "skrętek" (<i>RJ45</i>). Olałam temat. Negatywne komentarze nie
+                    przestały
+                    się wysypywać. Jeden komentarz był o charakterze pozytywnym, gdzie życzono mi powodzenia.
+                </p>
+                <p>
+                    Dostałam po jakimś czasie i wiadomość prywatną od mojej imienniczki. Napisała mi wiele ciepłych
+                    słów
+                    i opowiedziała trochę o sobie. Jeszcze nie zaczęła programować, ale o tym marzy. Pomyślałam o
+                    sobie
+                    sprzed 6ciu miesięcy — pamiętam dokładnie to uczucie towarzyszące ekscytacji, gdy mogłam sobie
+                    pozwolić na pójście na kurs i zacząć tę przygodę!
+                </p>
+                <p>
+                    Jednak są normalni ludzie na tym świecie!
+                </p>
+                <p>
+                    <strong>Nigdy w siebie nie wątp!</strong>
+                </p>
+            </>
+        ),
+    },
+    {
+        id: 10,
+        date: "29 maja 2023 roku",
+        title: "Podstawy języka programowania",
+        body: (
+            <>
+                <p>
+                    Aby rozwiązać problem przy pomocy programowania, należy najpierw:</p>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">Określić problem (co chcę osiągnąć)</li>
+                    <li className="article__listItem">Wybrać algorytm, czyli metodę poszukiwania rozwiązania (jak będę
+                        to
+                        robić)
+                    </li>
+                    <li className="article__listItem">Tworzyć kod źródłowy, stanowiący reprezentację wybranego algorytmu
+                        (kodowanie)
+                    </li>
+                    <li className="article__listItem">Kompilować kod źródłowy, czyli tworzyć kod wykonywalny gotowy do
+                        wykonania programu
+                    </li>
+                    <li className="article__listItem">Sprawdzić i testować program. Jeśli znajdę błąd, wrócić do etapu
+                        tworzenia kodu źródłowego (lub nawet do etapu algorytmu).
+                    </li>
+                </ul>
+                <p>
+                    No dobra, ale czym jest algorytm?
+                </p>
+                <p>
+                    Zgodnie z poprawną definicją, algorytm to zbiór <u>dobrze</u> zdefiniowanych instrukcji
+                    przeznaczony
+                    do wykonania określonego zadania, który przy ustalonym stanie początkowym pozwala na uzyskanie
+                    <u>odpowiedniego, rozpoznawalnego</u> stanu końcowego.
+                </p>
+                <p>
+                    Jeszcze bardziej upraszczając, to metoda poszukiwania (lub tworzenia) rozwiązania zadanego
+                    problemu.
+                </p>
+                <p>
+                    Niestety nie dla każdego problemu istnieje skuteczny algorytm pozwalający znaleźć rozwiązanie.
+                    Mamy
+                    wtedy do czynienia z tzw. <i>Problemami nieobliczalnymi</i> lub Problemami, dla których
+                    algorytmy są
+                    złożone na tyle, by spowodować zbyt długie wykonywanie programu.
+                </p>
+            </>
+        ),
+    },
     {
         id: 9,
         date: "29 maja 2023 roku",

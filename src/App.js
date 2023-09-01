@@ -37,14 +37,6 @@ function App() {
                     subtitle=""
                     body={
                         <>
-                            {sortedArticles.map((article) => (
-                            <Article
-                                key={article.id}
-                                date={article.date}
-                                title={article.title}
-                                body={article.body}
-                            />
-                                ))}
                             <Article
                                 date="18 sierpnia 2023 roku"
                                 title="React - formularze"
@@ -1199,6 +1191,14 @@ function App() {
                                 </>
                                 }
                                 />
+                            {sortedArticles.map((article) => (
+                                <Article
+                                    key={article.id}
+                                    date={article.date}
+                                    title={article.title}
+                                    body={article.body}
+                                />
+                            ))}
                         </>
                     }
                 />
