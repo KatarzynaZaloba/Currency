@@ -5,6 +5,65 @@ import Schema from "../../../images/schemat.png";
 
 export const articlesLink = [
     {
+        id: 22,
+        date: "4 czerwca 2023 roku",
+        title: "JavaScript - sposoby osadzania",
+        body: (
+            <>
+                <p><i>JavaScript-a</i> możemy umieścić na stronie na kilka sposobów:</p>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">poprzez zastosowanie znacznika &lt;script&gt; &lt;/script&gt;
+                        przed końcowym znacznikiem
+                        &lt;/body&gt;, tak aby załadować skrypt, dopiero jak załaduje nam się cała zawartość DOM,
+                        np.:
+                    </li>
+                </ul>
+                <blockquote className="article__blockquote">
+                    &lt;script&gt;<br/>console.log("Hello
+                    world");<br/>&lt;/script&gt;
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">poprzez odwołanie do pliku z <i>JavaScript-em</i>, przed końcowym
+                        znacznikiem &lt;/body&gt;, tak, aby załadować skrypt dopiero jak załaduje nam się cała zawartość
+                        DOM, np.:
+                    </li>
+                </ul>
+                <blockquote className="article__blockquote">
+                    &lt;script src="js/script.js"&gt;&lt;/script&gt;
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">poprzez odwołanie do pliku z <i>JavaScript-em</i> z atrybutem
+                        <i>defer</i>
+                        i umieszczeniem odwołania
+                        przed końcowym znacznikiem &lt;/head&gt;, tak aby załadować skrypt dopiero jak załaduje nam
+                        się cała zawartość DOM, np.:
+                    </li>
+                </ul>
+                <blockquote className="article__blockquote">
+                    &lt;script defer src="js/script.js"&gt;&lt;/script&gt;
+                </blockquote>
+            </>
+        )
+    },
+    {
+        id: 21,
+        date: "4 czerwca 2023 roku",
+        title: "Porządki z CSS-ami",
+        body: (
+            <>
+                <p>Tak jak podejrzewałam — powtarzając wiedzę z kursu i pochłaniając materiały dydaktyczne z Uczelni
+                    spowodowałam, że patrzę innym spojrzeniem na to, co już poznałam i jeszcze lepiej zaczynam
+                    rozumieć co z czym się łączy.</p>
+                <p>Minusem tego trybu nauki jest niewątpliwie pracochłonność, ale koniec końców efektem
+                    jest specjalista, który <em>rozumie</em> co robi.</p>
+                <p>Zrobiłam porządek z blogiem — pousuwałam na razie <i>JavaScript</i>, wyczyściłam <i>klasy</i> i
+                    ostylowałam stronę po <i>elementach</i> - dużo prościej i krócej zarazem. Gdy wpadnie mi
+                    oczywiście kwestia dodawania elementów, które powinny być inne od pozostałych — wrócę do
+                    stylowania po <i>klasach</i> i po <i>id.</i></p>
+            </>
+        )
+    },
+    {
         id: 20,
         date: "1 czerwca 2023 roku",
         title: "HTML - znaczniki span i div",
