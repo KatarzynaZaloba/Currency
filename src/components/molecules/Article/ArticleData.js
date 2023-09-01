@@ -5,50 +5,165 @@ import Schema from "../../../images/schemat.png";
 
 export const articlesLink = [
     {
+        id: 52,
+        date: "12 lipca 2023 roku",
+        title: "CSS - Flex c.d.",
+        body: (
+            <>
+                <h4 className="article__subsubsubheader">flex-grow</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        określa ile pozostałego miejsca ma zostać przypisane do <i>flex item</i>.
+                        <blockquote className="article__blockquote">
+                            .element1 &#123;<br/>
+                            &nbsp;&nbsp;flex-grow: 1;<br/>
+                            &#125;;<br/><br/>
+                            .element2 &#123;<br/>
+                            &nbsp;&nbsp;flex-grow: 2;<br/>
+                            &#125;<br/><br/>
+                            .element3 &#123;<br/>
+                            &nbsp;&nbsp;flex-grow: 0;<br/>
+                            &#125;<br/>
+                        </blockquote>
+                    </li>
+                    <li className="article__listItem">
+                        domyślnie 0, czyli nie rozciąga się, ale można to zmienić na 1, czyli rozciąga się.
+                    </li>
+                    <li className="article__listItem">
+                        działa na zasadzie proporcji, więc jeżeli jeden element ma wartość 1, a drugi 2, to
+                        drugi będzie
+                        miał dwa razy więcej miejsca. Jeżeli jeden element ma wartość 1, a drugi 0, to drugi nie
+                        będzie
+                        miał miejsca.
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">flex-shrink</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        określa jak bardzo element może się skurczyć, by zmieścić wszystkie elementy w linii.
+                        <blockquote className="article__blockquote">
+                            .element1 &#123;<br/>
+                            &nbsp;&nbsp;flex-shrink: 1;<br/>
+                            &#125;;<br/><br/>
+                            .element2 &#123;<br/>
+                            &nbsp;&nbsp;flex-shrink: 2;<br/>
+                            &#125;<br/><br/>
+                            .element3 &#123;<br/>
+                            &nbsp;&nbsp;flex-shrink: 0;<br/>
+                            &#125;<br/>
+                        </blockquote>
+                    </li>
+                    <li className="article__listItem">gdyby każdy element, miałby wartość 0 w <i>flex-shrink</i>,
+                        to
+                        elementy wyjdą z <i>kontenera nadrzędnego</i></li>
+                    <li className="article__listItem">działa na zasadzie proporcji</li>
+                    <li className="article__listItem">wartość domyślna to 1.</li>
+                </ul>
+                <h4 className="article__subsubsubheader">skrót flex</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        flex-grow, flex-shrink, flex-basis
+                        <ul className="article__unorderedList">
+                            <li className="article__listItem">elementy nie poszerzają się, ale mogą się kurczyć, a ich
+                                szerokość jest automatyczna:
+                                <blockquote className="article__blockquote">
+                                    .element1 &#123;<br/>
+                                    &nbsp;&nbsp;flex: 0 1 auto;<br/>
+                                    &#125;;<br/>
+                                </blockquote>
+                            </li>
+                            <li className="article__listItem">elementy i poszerzają się i się kurczą, ale mogą się
+                                kurczyć, a ich szerokość jest automatyczna (nie będą wystawały poza kontener):
+                                <blockquote className="article__blockquote">
+                                    .element1 &#123;<br/>
+                                    &nbsp;&nbsp;flex: 1 1 auto;<br/>
+                                    &#125;;<br/>
+                                </blockquote>
+                                zamiast tego zapisu, możemy napisać samo <i>flex: auto</i> i zadziała nam tak samo
+                            </li>
+                            <li className="article__listItem">elementy mają rozmiar zależny od ich treści, ale
+                                się ani nie
+                                zwężają, ani nie poszerzają:
+                                <blockquote className="article__blockquote">
+                                    .element1 &#123;<br/>
+                                    & nbsp;&nbsp;flex: 0 0 auto;<br/>
+                                    &#125;;<br/>
+                                </blockquote>
+                                zamiast tego zapisu, możemy napisać samo <i>flex: none</i> i zadziała nam
+                                tak samo
+                            </li>
+                            <li className="article__listItem">elementy mają identyczną
+                                szerokość/wysokość, nie poszerzają
+                                się i się nie kurczą
+                                <blockquote className="article__blockquote">
+                                    .element1 &#123;<br/>
+                                    &nbsp;&nbsp;flex: 1 0 0;<br/>
+                                    &#125;;<br/>
+                                </blockquote>
+                                zamiast tego zapisu, możemy napisać samo <i>flex: 1</i> i zadziała
+                                nam tak samo
+                            </li>
+                            <li className="article__listItem">elementy mogą się nie mieścić —
+                                nie pozwalają się skurczyć,
+                                ani poszerzyć, a ich wartość szerokości/wysokości jest ustawiona
+                                na "sztywno".
+                                <blockquote className="article__blockquote">
+                                    .element1 &#123;<br/>
+                                    &nbsp;&nbsp;flex: 0 0 100;<br/>
+                                    &#125;;<br/>
+                                </blockquote>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </>
+        )
+    },
+    {
         id: 51,
         date: "11 lipca 2023",
         title: "CSS - Flex c.d.",
         body: (
             <>
-            <h4 className="article__subsubsubheader">flex-direction</h4>
-            <p>Flex layout ma dwie osie: główną i prostopadłą (main i cross). Oś prostopadła to oś pionowa.</p>
-            <p>Wartości dla <b>flex-direction</b>, to:</p>
-            <ul className="article__unorderedList">
-                <li className="article__listItem">
-                    row
-                </li>
-                <li className="article__listItem">
-                    row-reverse,
-                </li>
-                <li className="article__listItem">
-                    column - gdy wpiszemy do właściwości <i>flex-direction</i> wartość <i>column</i>, nasz element
-                    będzie zachowywał się, jakby w ogóle <i>Flex-a</i> nie było. Czy aby <em>na pewno</em>? Jeżeli
-                    mamy ustawionego <i>Flex-a</i>, to nie zachodzi <i>margin collapsing</i>.
-                    <blockquote className="article__blockquote">
-                        .container &#123;<br/>
-                        &nbsp;&nbsp;display: flex;<br/>
-                        &nbsp;&nbsp;<b>flex-direction: column;</b><br/>
-                        &#125;;
-                    </blockquote>
+                <h4 className="article__subsubsubheader">flex-direction</h4>
+                <p>Flex layout ma dwie osie: główną i prostopadłą (main i cross). Oś prostopadła to oś pionowa.</p>
+                <p>Wartości dla <b>flex-direction</b>, to:</p>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        row
                     </li>
-                        <li className="article__listItem">
-                            column reverse.
-                        </li>
-                    </ul>
-                        <p>Bardzo fajnym ćwiczeniem będzie, jeśli za pomocą <i>DevTools-ów</i> "złapiesz" <i>div-a</i> z
-                        poprzedniego wpisu i dodasz właściwość <i>flex-direction</i> i "pobawisz się" z wartościami, które
-                        są też dostępne w tym narzędziu.</p>
-                        <h4 className="article__subsubsubheader">flex-basis</h4>
-                        <p>Gdy ustawimy sobie elementy w <i>kontenerze nadrzędnym</i> jako <i>flex-direction: row</i>, to
-                        zauważymy, że szerokość elementów powinna być stała, jednak wysokość będzie się rozciągać na
-                        wysokość rodzica. Możemy wyznaczyć stałą szerokość elementów w tym przypadku i do tego posłuży nam
-                        właśnie <i>flex-basis</i>. Jeżeli ustawiliśmy <i>flex-direction: column</i>, to <i>flex-basis</i>
-                        będzie się odnosił do wysokości elementów, a nie szerokości. Oczywiście nie możemy powiększać
-                        szerokości/ wysokości elementów w nieskończoność — możemy je ustawić maksymalnie tak, aby nie
-                        przekroczyć dostępnej szerokości lub wysokości narzuconej przez rodzica. Właściwości <i>width</i> i
-                        <i>height</i> również zadziałają, jednak wygodniej jest stosować <i>flex-basis</i>, ponieważ nie
-                        musimy wtedy pilnować czy mamy ustawiony <i>flex direction</i> na <i>row</i>, czy <i>column</i> i
-                        przede wszystkim <i>flex-basis</i> ma wyższy priorytet.</p>
+                    <li className="article__listItem">
+                        row-reverse,
+                    </li>
+                    <li className="article__listItem">
+                        column - gdy wpiszemy do właściwości <i>flex-direction</i> wartość <i>column</i>, nasz element
+                        będzie zachowywał się, jakby w ogóle <i>Flex-a</i> nie było. Czy aby <em>na pewno</em>? Jeżeli
+                        mamy ustawionego <i>Flex-a</i>, to nie zachodzi <i>margin collapsing</i>.
+                        <blockquote className="article__blockquote">
+                            .container &#123;<br/>
+                            &nbsp;&nbsp;display: flex;<br/>
+                            &nbsp;&nbsp;<b>flex-direction: column;</b><br/>
+                            &#125;;
+                        </blockquote>
+                    </li>
+                    <li className="article__listItem">
+                        column reverse.
+                    </li>
+                </ul>
+                <p>Bardzo fajnym ćwiczeniem będzie, jeśli za pomocą <i>DevTools-ów</i> "złapiesz" <i>div-a</i> z
+                    poprzedniego wpisu i dodasz właściwość <i>flex-direction</i> i "pobawisz się" z wartościami, które
+                    są też dostępne w tym narzędziu.</p>
+                <h4 className="article__subsubsubheader">flex-basis</h4>
+                <p>Gdy ustawimy sobie elementy w <i>kontenerze nadrzędnym</i> jako <i>flex-direction: row</i>, to
+                    zauważymy, że szerokość elementów powinna być stała, jednak wysokość będzie się rozciągać na
+                    wysokość rodzica. Możemy wyznaczyć stałą szerokość elementów w tym przypadku i do tego posłuży nam
+                    właśnie <i>flex-basis</i>. Jeżeli ustawiliśmy <i>flex-direction: column</i>, to <i>flex-basis</i>
+                    będzie się odnosił do wysokości elementów, a nie szerokości. Oczywiście nie możemy powiększać
+                    szerokości/ wysokości elementów w nieskończoność — możemy je ustawić maksymalnie tak, aby nie
+                    przekroczyć dostępnej szerokości lub wysokości narzuconej przez rodzica. Właściwości <i>width</i> i
+                    <i>height</i> również zadziałają, jednak wygodniej jest stosować <i>flex-basis</i>, ponieważ nie
+                    musimy wtedy pilnować czy mamy ustawiony <i>flex direction</i> na <i>row</i>, czy <i>column</i> i
+                    przede wszystkim <i>flex-basis</i> ma wyższy priorytet.</p>
             </>
         )
     },
@@ -66,114 +181,114 @@ export const articlesLink = [
                     &nbsp;&nbsp;<b>display: flex</b>;<br/>
                     &#125;;
                 </blockquote>
-                    <p>Jeżeli chcemy zobaczyć różnicę położenia obiektów przy wyborze <i>Flex-a</i> i bez wybrania
-                        <i>Flex-a</i>, to weźmy sobie na przykład 3 <i>divy z poniższymi klasami</i>:</p>
-                    <div className="article__div--noFlex">
-                        <div className="article__div--noFlexItem">
-                        </div>
-                        <div className="article__div--noFlexItem">
-                        </div>
-                        <div className="article__div--noFlexItem">
-                        </div>
+                <p>Jeżeli chcemy zobaczyć różnicę położenia obiektów przy wyborze <i>Flex-a</i> i bez wybrania
+                    <i>Flex-a</i>, to weźmy sobie na przykład 3 <i>divy z poniższymi klasami</i>:</p>
+                <div className="article__div--noFlex">
+                    <div className="article__div--noFlexItem">
                     </div>
-                    <blockquote className="article__blockquote">
-                        &lt;div class="article__div--noFlex"><br/>
-                        &nbsp;&nbsp;&lt;div class="article__div--noFlexItem"><br/>
-                        &nbsp;&nbsp;&lt;/div><br/>
-                        &nbsp;&nbsp;&lt;div class="article__div--noFlexItem"><br/>
-                        &nbsp;&nbsp;&lt;/div><br/>
-                        &nbsp;&nbsp;&lt;div class="article__div--noFlexItem"><br/>
-                        &nbsp;&nbsp;&lt;/div><br/>
-                        &lt;/div><br/>
-                    </blockquote>
-                    <blockquote className="article__blockquote">
-                        .article__div--noFlex &#123;<br/>
-                        &nbsp;&nbsp;margin: auto;<br/>
-                        &nbsp;&nbsp;max-width: 500px;<br/>
-                        &nbsp;&nbsp;border: 10px solid black;<br/>
-                        &#125;<br/><br/>
+                    <div className="article__div--noFlexItem">
+                    </div>
+                    <div className="article__div--noFlexItem">
+                    </div>
+                </div>
+                <blockquote className="article__blockquote">
+                    &lt;div class="article__div--noFlex"><br/>
+                    &nbsp;&nbsp;&lt;div class="article__div--noFlexItem"><br/>
+                    &nbsp;&nbsp;&lt;/div><br/>
+                    &nbsp;&nbsp;&lt;div class="article__div--noFlexItem"><br/>
+                    &nbsp;&nbsp;&lt;/div><br/>
+                    &nbsp;&nbsp;&lt;div class="article__div--noFlexItem"><br/>
+                    &nbsp;&nbsp;&lt;/div><br/>
+                    &lt;/div><br/>
+                </blockquote>
+                <blockquote className="article__blockquote">
+                    .article__div--noFlex &#123;<br/>
+                    &nbsp;&nbsp;margin: auto;<br/>
+                    &nbsp;&nbsp;max-width: 500px;<br/>
+                    &nbsp;&nbsp;border: 10px solid black;<br/>
+                    &#125;<br/><br/>
 
-                        .article__div--noFlexItem &#123;<br/>
-                        &nbsp;&nbsp;padding: 20px;<br/>
-                        &nbsp;&nbsp;background: #39744a;<br/>
-                        &nbsp;&nbsp;color: white;<br/>
-                        &nbsp;&nbsp;margin: 10px;<br/>
-                        &#125;<br/>
-                    </blockquote>
-                        <p>To jest przykład ułożenia kontenerów <i>bez Flex-a</i>. <i>Div</i> jest elementem blokowym,
-                            więc
-                            będzie zajmował całą szerokość dostępnej powierzchni. Oczywiście troszeczkę udoskonaliłam,
-                            dodając
-                            <i>max-width</i> zamiast <i>width</i>, aby wyglądało to też dobrze na mniejszych ekranach.
-                        </p>
-                        <p>Jak natomiast będą się zachowywały <i>div-y</i>, jeżeli dodamy wartość <i>flex</i> do
-                            właściwości <i>display</i>?
-                            Zobaczmy:</p>
-                        <div className="article__div--Flex">
-                            <div className="article__div--FlexItem">
-                            </div>
-                            <div className="article__div--FlexItem">
-                            </div>
-                            <div className="article__div--FlexItem">
-                            </div>
-                        </div>
-                        <p>Jak zauważymy, <i>div-y</i> przestały być elementami blokowymi, natomiast zmieniły się w
-                            elementy
-                            liniowe i zajmują tyle miejsca, ile pozwala im na zmieszczenie się
-                            w <i>div-ie</i> nadrzędnym, czyli
-                            zgodnie z obraną wartością <i>max-width: 500px</i>. Jeśli chodzi o kod, wygląda to teraz
-                            tak:</p>
-                        <blockquote className="article__blockquote">
-                            .article__div--Flex &#123;<br/>
-                            &nbsp;&nbsp;<b>display: flex</b><br/>
-                            &nbsp;&nbsp;margin: auto;<br/>
-                            &nbsp;&nbsp;max-width: 500px;<br/>
-                            &nbsp;&nbsp;border: 10px solid black;<br/>
-                            &#125;<br/><br/>
+                    .article__div--noFlexItem &#123;<br/>
+                    &nbsp;&nbsp;padding: 20px;<br/>
+                    &nbsp;&nbsp;background: #39744a;<br/>
+                    &nbsp;&nbsp;color: white;<br/>
+                    &nbsp;&nbsp;margin: 10px;<br/>
+                    &#125;<br/>
+                </blockquote>
+                <p>To jest przykład ułożenia kontenerów <i>bez Flex-a</i>. <i>Div</i> jest elementem blokowym,
+                    więc
+                    będzie zajmował całą szerokość dostępnej powierzchni. Oczywiście troszeczkę udoskonaliłam,
+                    dodając
+                    <i>max-width</i> zamiast <i>width</i>, aby wyglądało to też dobrze na mniejszych ekranach.
+                </p>
+                <p>Jak natomiast będą się zachowywały <i>div-y</i>, jeżeli dodamy wartość <i>flex</i> do
+                    właściwości <i>display</i>?
+                    Zobaczmy:</p>
+                <div className="article__div--Flex">
+                    <div className="article__div--FlexItem">
+                    </div>
+                    <div className="article__div--FlexItem">
+                    </div>
+                    <div className="article__div--FlexItem">
+                    </div>
+                </div>
+                <p>Jak zauważymy, <i>div-y</i> przestały być elementami blokowymi, natomiast zmieniły się w
+                    elementy
+                    liniowe i zajmują tyle miejsca, ile pozwala im na zmieszczenie się
+                    w <i>div-ie</i> nadrzędnym, czyli
+                    zgodnie z obraną wartością <i>max-width: 500px</i>. Jeśli chodzi o kod, wygląda to teraz
+                    tak:</p>
+                <blockquote className="article__blockquote">
+                    .article__div--Flex &#123;<br/>
+                    &nbsp;&nbsp;<b>display: flex</b><br/>
+                    &nbsp;&nbsp;margin: auto;<br/>
+                    &nbsp;&nbsp;max-width: 500px;<br/>
+                    &nbsp;&nbsp;border: 10px solid black;<br/>
+                    &#125;<br/><br/>
 
-                            .article__div--FlexItem &#123;<br/>
-                            &nbsp;&nbsp;padding: 20px;<br/>
-                            &nbsp;&nbsp;background: #39744a;<br/>
-                            &nbsp;&nbsp;color: white;<br/>
-                            &nbsp;&nbsp;margin: 10px;<br/>
-                            &#125;<br/>
-                        </blockquote>
-                            <p>W sumie, jak już ćwiczę — sprawdzę jak będą zachowywać się elementy
-                                w <i>div-ie</i> nadrzędnym, jeśli
-                                zwiększę ilość elementów:</p>
-                            <div className="article__div--Flex">
-                                <div className="article__div--FlexItem">
-                                </div>
-                                <div className="article__div--FlexItem">
-                                </div>
-                                <div className="article__div--FlexItem">
-                                </div>
-                                <div className="article__div--FlexItem">
-                                </div>
-                                <div className="article__div--FlexItem">
-                                </div>
-                                <div className="article__div--FlexItem">
-                                </div>
-                                <div className="article__div--FlexItem">
-                                </div>
-                                <div className="article__div--FlexItem">
-                                </div>
-                                <div className="article__div--FlexItem">
-                                </div>
-                            </div>
-                            <p>Będą <em>wyłazić</em> poza kontener (aktualnie tego nie widać, bo od razu naniosłam
-                                zmiany), więc
-                                najrozsądniej jest tutaj wpisać kolejną właściwość, jaką
-                                jest <i>flex-wrap</i> na <i>wrap;</i></p>
-                            <blockquote className="article__blockquote">
-                                .article__div--Flex &#123;<br/>
-                                &nbsp;&nbsp;<b>display: flex<br/>
-                                &nbsp;&nbsp;flex-wrap: wrap;</b><br/>
-                                &nbsp;&nbsp;margin: auto;<br/>
-                                &nbsp;&nbsp;max-width: 500px;<br/>
-                                &nbsp;&nbsp;border: 10px solid black;<br/>
-                                &#125;<br/><br/>
-                            </blockquote>
+                    .article__div--FlexItem &#123;<br/>
+                    &nbsp;&nbsp;padding: 20px;<br/>
+                    &nbsp;&nbsp;background: #39744a;<br/>
+                    &nbsp;&nbsp;color: white;<br/>
+                    &nbsp;&nbsp;margin: 10px;<br/>
+                    &#125;<br/>
+                </blockquote>
+                <p>W sumie, jak już ćwiczę — sprawdzę jak będą zachowywać się elementy
+                    w <i>div-ie</i> nadrzędnym, jeśli
+                    zwiększę ilość elementów:</p>
+                <div className="article__div--Flex">
+                    <div className="article__div--FlexItem">
+                    </div>
+                    <div className="article__div--FlexItem">
+                    </div>
+                    <div className="article__div--FlexItem">
+                    </div>
+                    <div className="article__div--FlexItem">
+                    </div>
+                    <div className="article__div--FlexItem">
+                    </div>
+                    <div className="article__div--FlexItem">
+                    </div>
+                    <div className="article__div--FlexItem">
+                    </div>
+                    <div className="article__div--FlexItem">
+                    </div>
+                    <div className="article__div--FlexItem">
+                    </div>
+                </div>
+                <p>Będą <em>wyłazić</em> poza kontener (aktualnie tego nie widać, bo od razu naniosłam
+                    zmiany), więc
+                    najrozsądniej jest tutaj wpisać kolejną właściwość, jaką
+                    jest <i>flex-wrap</i> na <i>wrap;</i></p>
+                <blockquote className="article__blockquote">
+                    .article__div--Flex &#123;<br/>
+                    &nbsp;&nbsp;<b>display: flex<br/>
+                    &nbsp;&nbsp;flex-wrap: wrap;</b><br/>
+                    &nbsp;&nbsp;margin: auto;<br/>
+                    &nbsp;&nbsp;max-width: 500px;<br/>
+                    &nbsp;&nbsp;border: 10px solid black;<br/>
+                    &#125;<br/><br/>
+                </blockquote>
             </>
         )
     },
@@ -183,177 +298,177 @@ export const articlesLink = [
         title: "CSS - wyrównanie tekstu, dekoracje, wcięcia, wielkość liter, object-fit, object-position, calc",
         body: (
             <>
-            <h4 className="article__subsubsubheader">text-align</h4>
-            <p>Wyrównuje treść wewnątrz elementów blokowych i komórek tabeli</p>
-            <ul className="article__unorderedList">
-                <li className="article__listItem">
-                    Wartości właściwości <b>text-align</b>, których używamy:
-                    <ul className="article__unorderedList">
-                        <li className="article__listItem">
-                            left
-                        </li>
-                        <li className="article__listItem">
-                            right
-                        </li>
-                        <li className="article__listItem">
-                            center
-                        </li>
-                        <li className="article__listItem">
-                            justify
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <h4 className="article__subsubsubheader">text-indent</h4>
-            <p><b>text-indent</b> to właściwość, która jest odpowiedzialna za wcięcie teksty w blokowym elemencie (%
-                odnosi się do szerokości bloku).</p>
-            <h4 className="article__subsubsubheader">text-decoration</h4>
-            <ul className="article__unorderedList">
-                <li className="article__listItem">
-                    określa wygląd linii dekoracyjnych tekstu,
-                </li>
-                <li className="article__listItem">
-                    gdy chcemy usunąć podkreślenie z linku, wpisujemy wartość <b>none</b>,
-                    <blockquote className="article__blockquote">
-                        .element &#123;<br/>
-                        &nbsp;&nbsp;<b>text-decoration:</b> none;<br/>
-                        &#125;;
-                    </blockquote>
+                <h4 className="article__subsubsubheader">text-align</h4>
+                <p>Wyrównuje treść wewnątrz elementów blokowych i komórek tabeli</p>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        Wartości właściwości <b>text-align</b>, których używamy:
+                        <ul className="article__unorderedList">
+                            <li className="article__listItem">
+                                left
+                            </li>
+                            <li className="article__listItem">
+                                right
+                            </li>
+                            <li className="article__listItem">
+                                center
+                            </li>
+                            <li className="article__listItem">
+                                justify
+                            </li>
+                        </ul>
                     </li>
-                        <li className="article__listItem">
+                </ul>
+                <h4 className="article__subsubsubheader">text-indent</h4>
+                <p><b>text-indent</b> to właściwość, która jest odpowiedzialna za wcięcie teksty w blokowym elemencie (%
+                    odnosi się do szerokości bloku).</p>
+                <h4 className="article__subsubsubheader">text-decoration</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        określa wygląd linii dekoracyjnych tekstu,
+                    </li>
+                    <li className="article__listItem">
+                        gdy chcemy usunąć podkreślenie z linku, wpisujemy wartość <b>none</b>,
+                        <blockquote className="article__blockquote">
+                            .element &#123;<br/>
+                            &nbsp;&nbsp;<b>text-decoration:</b> none;<br/>
+                            &#125;;
+                        </blockquote>
+                    </li>
+                    <li className="article__listItem">
                         <b>text-decoration: underline dotted red</b> - trzy wartości w jednej właściwości, spowodują, że
                         tekst zostanie podkreślony kropkowaną czerwoną linią,
-                        </li>
-                        <li className="article__listItem">
+                    </li>
+                    <li className="article__listItem">
                         text-decoration-line:
                         <ul className="article__unorderedList">
-                        <li className="article__listItem">
-                        <b>underline</b> - podkreślenie,
-                        </li>
-                        <li className="article__listItem">
-                        <b>overline</b> - linia nad tekstem,
-                        </li>
-                        <li className="article__listItem">
-                        <b>line-through</b> - przekreślenie,
-                        </li>
-                        <li className="article__listItem">
-                        kilka po spacji, np <b>underline overline</b>,
-                        </li>
-                        <li className="article__listItem">
-                        <b>none</b> - brak podkreślenia,
-                        </li>
+                            <li className="article__listItem">
+                                <b>underline</b> - podkreślenie,
+                            </li>
+                            <li className="article__listItem">
+                                <b>overline</b> - linia nad tekstem,
+                            </li>
+                            <li className="article__listItem">
+                                <b>line-through</b> - przekreślenie,
+                            </li>
+                            <li className="article__listItem">
+                                kilka po spacji, np <b>underline overline</b>,
+                            </li>
+                            <li className="article__listItem">
+                                <b>none</b> - brak podkreślenia,
+                            </li>
                         </ul>
-                        </li>
-                        <li className="article__listItem">
+                    </li>
+                    <li className="article__listItem">
                         <b>text-decoration-color</b> - określa kolor linii
-                        </li>
-                        <li className="article__listItem">
+                    </li>
+                    <li className="article__listItem">
                         <b>text-decoration-style</b>
                         <ul className="article__unorderedList">
-                        <li className="article__listItem">
-                        solid
-                        </li>
-                        <li className="article__listItem">
-                        double
-                        </li>
-                        <li className="article__listItem">
-                        dotted
-                        </li>
-                        <li className="article__listItem">
-                        dashed
-                        </li>
-                        <li className="article__listItem">
-                        wavy
-                        </li>
+                            <li className="article__listItem">
+                                solid
+                            </li>
+                            <li className="article__listItem">
+                                double
+                            </li>
+                            <li className="article__listItem">
+                                dotted
+                            </li>
+                            <li className="article__listItem">
+                                dashed
+                            </li>
+                            <li className="article__listItem">
+                                wavy
+                            </li>
                         </ul>
-                        </li>
-                        </ul>
-                        <h4 className="article__subsubsubheader">text-transform</h4>
-                        <ul className="article__unorderedList">
-                        <li className="article__listItem">
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">text-transform</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
                         przydaje się do zamiany wszystkich liter na małe, wielkie lub do zamiany wszystkich pierwszych
                         liter na wielkie;
-                        </li>
-                        <li className="article__listItem">
+                    </li>
+                    <li className="article__listItem">
                         wartości:
                         <ul className="article__unorderedList">
-                        <li className="article__listItem">
-                        <b>uppercase</b> - wszystkie litery wielkie,
-                        </li>
-                        <li className="article__listItem">
-                        <b>lowercase</b> - wszystkie litery małe,
-                        </li>
-                        <li className="article__listItem">
-                        <b>capitalize</b> - pierwsza litera w każdym słowie jest wielka, a reszta liter
-                        pozostaje bez zmian,
-                        </li>
-                        <li className="article__listItem">
-                        <b>none</b> - nie zmienia nic,
-                        </li>
+                            <li className="article__listItem">
+                                <b>uppercase</b> - wszystkie litery wielkie,
+                            </li>
+                            <li className="article__listItem">
+                                <b>lowercase</b> - wszystkie litery małe,
+                            </li>
+                            <li className="article__listItem">
+                                <b>capitalize</b> - pierwsza litera w każdym słowie jest wielka, a reszta liter
+                                pozostaje bez zmian,
+                            </li>
+                            <li className="article__listItem">
+                                <b>none</b> - nie zmienia nic,
+                            </li>
                         </ul>
-                        </li>
-                        </ul>
-                        <h4 className="article__subsubsubheader">object-fit</h4>
-                        <ul className="article__unorderedList">
-                        <li className="article__listItem">
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">object-fit</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
                         określa, jak skalować np. obrazek, by wpasować się w kontener,
-                        </li>
-                        <li className="article__listItem">
+                    </li>
+                    <li className="article__listItem">
                         wartości:
-                        </li>
-                        <li className="article__listItem">
+                    </li>
+                    <li className="article__listItem">
                         <b>cover</b> - wypełnia kontener, ścina boki,
-                        </li>
-                        <li className="article__listItem">
+                    </li>
+                    <li className="article__listItem">
                         <b>contain</b> - mieści się w kontenerze, zostawia pustą przestrzeń po bokach,
-                        </li>
-                        <li className="article__listItem">
+                    </li>
+                    <li className="article__listItem">
                         <b>fill</b> - wartość domyślna - wypełnia kontener, nie zachowując proporcji,
-                        </li>
-                        </ul>
-                        <h4 className="article__subsubsubheader">object-position</h4>
-                        <ul className="article__unorderedList">
-                        <li className="article__listItem">
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">object-position</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
                         położenie, np. obrazka w kontenerze,
-                        </li>
-                        <li className="article__listItem">
+                    </li>
+                    <li className="article__listItem">
                         format taki sam jak przy background-position,
-                        </li>
-                        <li className="article__listItem">
+                    </li>
+                    <li className="article__listItem">
                         domyślnie: 50% 50%,
-                        </li>
-                        <li className="article__listItem">
+                    </li>
+                    <li className="article__listItem">
                         <b>contain</b> - mieści się w kontenerze, zostawia pustą przestrzeń po bokach,
-                        </li>
-                        <li className="article__listItem">
+                    </li>
+                    <li className="article__listItem">
                         <b>fill</b> - wartość domyślna - wypełnia kontener, nie zachowując proporcji,
-                        </li>
-                        </ul>
-                        <h4 className="article__subsubsubheader">calc</h4>
-                        <ul className="article__unorderedList">
-                        <li className="article__listItem">
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">calc</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
                         obliczenia w CSS-ie, kiedy nie chcemy przypisać stałej wartości
-                        </li>
-                        <li className="article__listItem">
+                    </li>
+                    <li className="article__listItem">
                         <b>width: calc(100%-80px);</b>,
-                        </li>
-                        <li className="article__listItem">
+                    </li>
+                    <li className="article__listItem">
                         działania
                         <ul className="article__unorderedList">
-                        <li className="article__listItem">
-                        +-
-                        <ul className="article__unorderedList">
-                        <li className="article__listItem">
-                        koniecznie ze spacją, inaczej nie zadziała
-                        </li>
+                            <li className="article__listItem">
+                                +-
+                                <ul className="article__unorderedList">
+                                    <li className="article__listItem">
+                                        koniecznie ze spacją, inaczej nie zadziała
+                                    </li>
+                                </ul>
+                            </li>
+                            <li className="article__listItem">
+                                */
+                            </li>
                         </ul>
-                        </li>
-                        <li className="article__listItem">
-                        */
-                        </li>
-                        </ul>
-                        </li>
-                        </ul>
+                    </li>
+                </ul>
             </>
         )
     },
