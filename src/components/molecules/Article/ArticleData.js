@@ -4,10 +4,125 @@ import Kate from "../../../images/scarpa.jpg";
 import Schema from "../../../images/schemat.png";
 
 export const articlesLink = [
-    // {
-    //     id: 14,
-    //     date:
-    // },
+    {
+        id: 14,
+        date: "30 maja 2023 roku",
+        title: "Operatory operacji logicznych",
+        body: (
+            <>
+                    <div className="div-table-overflow">
+                        <table className="article__table">
+                            <caption className="article__caption">
+                                Przykład operatora
+                            </caption>
+                            <thead className="article__thead">
+                            <tr className="article__tr">
+                                <th className="article__th">
+                                    symbol
+                                </th>
+                                <th className="article__th">
+                                    Operator
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr className="article__tr">
+                                <td>=</td>
+                                <td>Operator przypisania; jeżeli nazwa zmiennej znajduje się po lewej stronie symbolu
+                                    przypisania " = ", to otrzymuje ona nową wartość, np.
+                                    <blockquote className="article__blockquote">suma = 1; // <i>Odtąd zmienna suma
+                                        będzie
+                                        mieć wartość 1.</i>
+                                    </blockquote>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div className="div-table-overflow">
+                        <table className="article__table">
+                            <caption className="article__caption">
+                                Proste typy danych
+                            </caption>
+                            <thead className="article__thead">
+                            <tr className="article__tr">
+                                <th className="article__th">
+                                    skrót
+                                </th>
+                                <th className="article__th">
+                                    opis
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr className="article__tr">
+                                <td><i>int</i></td>
+                                <td> - liczba całkowita
+                                </td>
+                            </tr>
+                            <tr className="article__tr">
+                                <td><i>float</i></td>
+                                <td> - liczba zmiennoprzecinkowa
+                                </td>
+                            </tr>
+                            <tr className="article__tr">
+                                <td><i>string</i></td>
+                                <td> - łańcuch znaków
+                                </td>
+                            </tr>
+                            <tr className="article__tr">
+                                <td><i>bool</i></td>
+                                <td> - typ True/False
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div className="div-table-overflow">
+                        <table className="article__table">
+                            <caption className="article__caption">
+                                Proste operatory
+                            </caption>
+                            <thead className="article__thead">
+                            <tr className="article__tr">
+                                <th className="article__th">
+                                    rodzaj
+                                </th>
+                                <th className="article__th">
+                                    symbole
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr className="article__tr">
+                                <td><i>bitowe</i></td>
+                                <td>(OR, AND)
+                                </td>
+                            </tr>
+                            <tr className="article__tr">
+                                <td><i>arytmetyczne</i></td>
+                                <td>(+ - * /)
+                                </td>
+                            </tr>
+                            <tr className="article__tr">
+                                <td><i>porównania</i></td>
+                                <td>&#40;== &lt; &gt; &#41;
+                                </td>
+                            </tr>
+                            <tr className="article__tr">
+                                <td><i>logiczne</i></td>
+                                <td>(prawda/fałsz)
+                                </td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+
+                            </tfoot>
+                        </table>
+                    </div>
+            </>
+        ),
+    },
     {
         id: 13,
         date: "30 maja 2023 roku",
