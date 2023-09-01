@@ -5,6 +5,17 @@ import Schema from "../../../images/schemat.png";
 
 export const articlesLink = [
     {
+        id: 30,
+        date: "28 czerwca 2023 roku",
+        title: "Webstorm",
+        body: (
+            <>
+                <p>Dziś zaczęłam korzystać z WebStorm-a. Odpaliłam bloga... i wykazało 492 błędy! Dziś poświęcę czas na
+                    korektę kodu. Do nauki wrócę jutro.</p>
+            </>
+        )
+    },
+    {
         id: 39,
         date: "27 czerwca 2023 roku",
         title: "JavaScript - Formularze c.d.",
