@@ -6,6 +6,305 @@ import Null from "../../../images/nullUndefined.jpg";
 
 export const articlesLink = [
     {
+        id: 55,
+        date: "14 lipca 2023 roku",
+        title: "JavaScript - wstęp do funkcji",
+        body: (
+            <>
+                <p>Przeżyjmy to jeszcze raz! Czym jest funkcja?</p>
+                <p>Funkcja to zestaw instrukcji, które ma wykonać dany program.</p>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        może mieć nazwę (mamy też funkcje anonimowe),
+                    </li>
+                    <li className="article__listItem">
+                        może przyjmować parametry (argumenty),
+                    </li>
+                    <li className="article__listItem">
+                        może zwracać wartość.
+                    </li>
+                </ul>
+                <p>Pora na praktykę.</p>
+                <p>Stwórzmy funkcję, która będzie zwracać liczbę pomnożoną przez 2:</p>
+                <blockquote className="article__blockquote">
+                    function double(number) &#123;<br/>
+                    &nbsp;&nbsp;return number * 2;<br/>
+                    &#125;<br/>
+                </blockquote>
+                <p>Na razie nic się nie dzieje, ponieważ funkcja została jedynie zadeklarowana. Aby wywołać funkcję,
+                    możemy np. użyć <i>console.log</i>:</p>
+                <blockquote className="article__blockquote">
+                    function double(number) &#123;<br/>
+                    &nbsp;&nbsp;return number * 2;<br/>
+                    &#125;<br/><br/>
+                    <b>console.log(double(10));<br/></b>
+                </blockquote>
+                <p>Na Konsoli wypisze mi się:</p>
+                <blockquote className="article__blockquote">
+                    20
+                </blockquote>
+                <h4 className="article__subsubsubheader">Składnia</h4>
+                <blockquote className="article__blockquote">
+                    <b>function <i>nazwa</i></b> (parametr1, parametr2) &#123;<br/>
+                    &nbsp;&nbsp;// instrukcje<br/>
+                    &nbsp;&nbsp;<b>return</b> wartość;<br/>
+                    &#125;
+                </blockquote>
+                <p>W przypadku parametrów typu <i>number, string, undefined, null i boolean</i> wartość
+                    zostanie
+                    skopiowana do funkcji,</p>
+                <blockquote className="article__blockquote">
+                    <b>function <i>double2</i></b>(number) &#123;<br/>
+                    &nbsp;&nbsp;return number * 2;<br/>
+                    &#125;<br/><br/>
+                    let myNumber = 5;<br/><br/>
+                    console.log(double2(myNumber));<br/>
+                </blockquote>
+                <p>Na konsoli wypisze mi się teraz:</p>
+                <blockquote className="article__blockquote">
+                    10
+                </blockquote>
+                <h4 className="article__subsubsubheader">Wywołanie funkcji</h4>
+                <blockquote className="article__blockquote">
+                    let doubled = double(5);
+                </blockquote>
+                <h4 className="article__subsubsubheader">Funkcje strzałkowe - <b>arrow functions</b>
+                </h4>
+                <blockquote className="article__blockquote">
+                    let double = number => number * 2;
+                </blockquote>
+                <p>Funkcja strzałkowa daje nam prostszy, krótszy zapis. Ten zapis: </p>
+                <blockquote className="article__blockquote">
+                    <b>function <i>double2</i></b>(number) &#123;<br/>
+                    &nbsp;&nbsp;return number * 2;<br/>
+                    &#125;<br/><br/>
+                    let myNumber = 5;<br/><br/>
+                    console.log(double2(myNumber));<br/>
+                </blockquote>
+                <p>Można zamienić na taki zapis:</p>
+                <blockquote className="article__blockquote">
+                    <b>let <i>double2</i></b> = (number) => &#123;<br/>
+                    &nbsp;&nbsp;return number * 2;<br/>
+                    &#125;<br/><br/>
+                    let myNumber = 5;<br/><br/>
+                    console.log(double2(myNumber));<br/>
+                </blockquote>
+                <p>Od tego momentu ma znaczenie, czy funkcja, którą chcemy wywołać jest
+                    zadeklarowana przed jej
+                    wywołaniem. <i>Hoisting (windowanie)</i> tutaj nie zadziała.</p>
+                <p>Możemy jeszcze bardziej ten zapis skrócić:</p>
+                <blockquote className="article__blockquote">
+                    <b>let <i>double2</i></b> = number => &#123;<br/>
+                    &nbsp;&nbsp;return number * 2;<br/>
+                    &#125;<br/><br/>
+                    let myNumber = 5;<br/><br/>
+                    console.log(double2(myNumber));<br/>
+                </blockquote>
+                <p>A potem <em>jeszcze bardziej</em> skrócić:</p>
+                <blockquote className="article__blockquote">
+                    <b>let <i>double2</i></b> = number => &#123;<br/>
+                    &nbsp;&nbsp; number * 2;<br/>
+                    &#125;<br/><br/>
+                    let myNumber = 5;<br/><br/>
+                    console.log(double2(myNumber));<br/>
+                </blockquote>
+                <p>I <em>jeszcze bardziej</em> skrócić:</p>
+                <blockquote className="article__blockquote">
+                    <b>let <i>double2</i></b> = number => number * 2;
+                    <br/><br/>
+                    let myNumber = 5;<br/><br/>
+                    console.log(double2(myNumber));<br/>
+                </blockquote>
+                <p>W tym przypadku nie musimy używać <i>return</i>, ponieważ funkcja
+                    zwraca wartość.</p>
+                <h4 className="article__subsubsubheader">Zasięg zmiennych w funkcji</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        wewnątrz funkcji mamy dostęp do zmiennych zadeklarowanych poza
+                        funkcją,
+                    </li>
+                    <li className="article__listItem">
+                        poza funkcją nie mamy dostępu do zmiennych zadeklarowanych
+                        wewnątrz funkcji.
+                    </li>
+                </ul>
+                <p>Brzmi to bardzo skomplikowanie, jednak postaram się przećwiczyć to
+                    jeszcze raz, aby mieć 100% jasność
+                    o co chodzi.</p>
+                <p>Jeżeli wyżej została zadeklarowana zmienna <b>myNumber</b> to ja mogę
+                    jej sobie tutaj użyć.</p>
+                <blockquote className="article__blockquote">
+                    <b>let <i>double2</i></b> = number => &#123;<br/>
+                    <b>&nbsp;&nbsp; console.log(`myNumber wynosi $&#123;myNumber&#125;`)</b><br/>
+                    &#125;<br/>
+                    &nbsp;&nbsp;return number * 2;<br/>
+                    &#125;<br/><br/>
+                    <b>let myNumber = 5;<br/><br/></b>
+                    console.log(double2(myNumber));<br/>
+                </blockquote>
+                <p> Konsola pokaże mi dzięki temu:</p>
+                <blockquote className="article__blockquote">
+                    myNumber wynosi 5
+                </blockquote>
+                <p>Ale gdybyśmy wewnątrz tej funkcji zadeklarować inną zmienną, to
+                    nie będzie jej widać na zewnątrz.</p>
+                <blockquote className="article__blockquote">
+                    function double2(number) &#123;<br/>
+                    &nbsp;&nbsp;console.log(`myNumber wynosi $&#123;myNumber&#125;`);<br/>
+                    &nbsp;&nbsp;<b>let zmienna = 11;</b><br/>
+                    &nbsp;&nbsp;return number * 2;<br/>
+                    &#125;;<br/><br/>
+                    let myNumber = 5;<br/><br/>
+                    console.log(double2(myNumber));<br/>
+                    <b>zmienna</b>
+                </blockquote>
+                <p>Zmienna zadeklarowana funkcji może być obsługiwana jedynie w
+                    funkcji. Nigdzie indziej jej nie ma.</p>
+                <h4 className="article__subsubsubheader">let, const, var</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        <b>let</b> - zmienna — zasięg blokowy — jeżeli
+                        zadeklaruję zmienną przez <i>let</i> w bloku, to
+                        ta zmienna nie będzie widoczna poza tym blokiem
+                        <blockquote className="article__blockquote">
+                            &#123;<br/><br/>
+                            <b>let <i>zmienna</i></b> = 5;<br/>
+                            console.log(zmienna&#125;;<br/>
+                            &#125;<br/>
+                            <br/>
+                            console.log(zmienna);<br/>
+                        </blockquote>
+                        <p>W tym przypadku konsola pokaże mi błąd,
+                            ponieważ zmienna <b>zmienna</b> jest
+                            zadeklarowana w
+                            bloku i nie jest widoczna poza nim.</p>
+                    </li>
+                    <li className="article__listItem">
+                        <b>const</b> - stała - zasięg blokowy -
+                        gdybyśmy zamienili w tym samym
+                        przykładzie <i>let</i> na
+                        <i>const</i> to zadziałałoby nam to podobnie
+                        jak <i>let</i>, ale nie będziemy mogli
+                        zmienić
+                        wartości tej zmiennej:
+                        <blockquote className="article__blockquote">
+                            &#123;<br/><br/>
+                                <b>const <i>zmienna</i></b> = 5;<br/>
+                                <b>zmienna = 6;<br/></b>
+                                console.log(zmienna&#125;;<br/>
+                            &#125;<br/>
+                            <br/>
+                            console.log(zmienna);<br/>
+                        </blockquote>
+                        Dostanę wtedy błąd na konsoli
+                        mówiący, że nie mogę zmienić
+                        wartości stałej.
+                    </li>
+                    <li className="article__listItem">
+                        <b>var</b> - zmienna - zasięg
+                        funkcyjny. Jeżeli wewnątrz
+                        funkcji
+                        zadeklaruję <i>var</i> to
+                        pomimo wpisania console.log w
+                        środku funkcji, to zmienna nie
+                        pokaże się, dopóki nie wywołam
+                        funkcji.
+                        <blockquote
+                            className="article__blockquote">
+                            <b>function <i>myFunction</i></b>() &#123;
+                            <br/>
+                            & nbsp;&nbsp;var zmienna
+                            = 5;<br/>
+                            &nbsp;&nbsp;console.log(zmienna);<br/>
+                            &#125;<br/>
+                            myFunction();<br/>
+                        </blockquote>
+                        Jeżeli jednak wywołam
+                        zmienną
+                        w <i>console.log</i> poza
+                        funkcją, to ona się nie
+                        wyświetli. Ale
+                        jeżeli umieścimy var w
+                        bloku, to wywołanie
+                        zmiennej poza blokiem
+                        zadziała:
+                        <blockquote
+                            className="article__blockquote">
+                            <b>function <i>myFunction</i></b>() &#123;
+                            <br/>
+                            &#125;<br/>
+                            &nbsp;&nbsp;var
+                            zmienna = 5;<br/>
+                            &#125;<br/>
+                            &nbsp;&nbsp;console.log(zmienna);<br/>
+                            &#125;<br/>
+                            myFunction();<br/>
+                        </blockquote>
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">Funkcja
+                    anonimowa</h4>
+                <p><b>Funkcja
+                    anonimowa</b> to
+                    taka,
+                    która
+                    nie ma
+                    nazwy.
+                    Właściwie
+                    każda
+                    funkcja
+                    strzałkowa
+                    jest
+                    funkcją
+                    anonimową.
+                    Również
+                    funkcja
+                    z użytym
+                    słowem <i>function</i> też
+                    jest
+                    funkcją
+                    anonimową.
+                    Używamy <i>funkcji
+                        anonimowych</i> gdy
+                    przekazujemy
+                    funkcję
+                    do
+                    innych
+                    funkcji.
+                </p>
+                <blockquote
+                    className="article__blockquote">
+                    <b>let <i>double</i></b> =
+                    function
+                    (number) &#123;
+                    <br/>
+                    & nbsp;&nbsp;return
+                    number
+                    * 2;<br/>
+                    &#125;;<br/>
+                </blockquote>
+                <p>Powyżej
+                    jest
+                    pokazany
+                    przykład
+                    funkcji
+                    anonimowej
+                    —
+                    jak
+                    zauważymy
+                    —
+                    nie
+                    ma
+                    nazwy
+                    funkcji
+                    po
+                    słowie
+                    <i>function</i>.
+                </p>
+            </>
+        )
+    },
+    {
         id: 54,
         date: "13 lipca 2023 roku",
         title: "JavaScript - boolean, null, undefined",
@@ -14,10 +313,10 @@ export const articlesLink = [
                 <figure className="article__figure">
                     <img alt="różnica między null i undefined " className="article__image"
                          src={Null}/>
-                        <figcaption className="article__figcaption">
-                            Różnica między null i undefined<br/>
-                            Źródło: https://codecrumbs.com/
-                        </figcaption>
+                    <figcaption className="article__figcaption">
+                        Różnica między null i undefined<br/>
+                        Źródło: https://codecrumbs.com/
+                    </figcaption>
                 </figure>
                 <h4 className="article__subsubsubheader">boolean</h4>
                 <p>Mamy dwie wartości typu boolean: <i>true</i> i <i>false</i> i <i>on</i> <i>off</i>. <i>Boolean</i>
@@ -197,179 +496,179 @@ export const articlesLink = [
                     &nbsp;&nbsp;margin: 10px;<br/>
                     &#125;<br/><br/>
                 </blockquote>
-                    <h4 className="article__subsubsubheader">align-self</h4>
-                    <ul className="article__unorderedList">
-                        <li className="article__listItem">
-                            pozwala ustawić wyrównanie dla pojedynczego elementu
-                        </li>
-                        <li className="article__listItem">
-                            wartości takie same jak <i>align-items</i>
-                        </li>
-                    </ul>
-                    <div className="article__div--FlexAligned">
-                        <div className="article__div--FlexItemAligned article__div--FlexItemFirst">1
-                        </div>
-                        <div className="article__div--FlexItemAligned">2
-                        </div>
-                        <div className="article__div--FlexItemAligned">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores atque autem
-                        </div>
+                <h4 className="article__subsubsubheader">align-self</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        pozwala ustawić wyrównanie dla pojedynczego elementu
+                    </li>
+                    <li className="article__listItem">
+                        wartości takie same jak <i>align-items</i>
+                    </li>
+                </ul>
+                <div className="article__div--FlexAligned">
+                    <div className="article__div--FlexItemAligned article__div--FlexItemFirst">1
                     </div>
-                    <p>Natomiast w kodzie przedstawia nam się to tak:</p>
-                    <blockquote className="article__blockquote">
-                        &lt;div class="article__div--FlexAligned"><br/>
-                        &nbsp;&nbsp;&lt;div
-                        class="article__div--FlexItemAligned <b>article__div--FlexItemFirst</b>">1<br/>
-                        &nbsp;&nbsp;&lt;/div><br/>
-                        &nbsp;&nbsp;&lt;div class="article__div--FlexItemAligned">2<br/>
-                        &nbsp;&nbsp;&lt;/div><br/>
-                        &nbsp;&nbsp;&lt;div class="article__div--FlexItemAligned"><br/>
-                        &nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores atque
-                        autem<br/>
-                        &nbsp;&nbsp;&lt;/div><br/>
-                        &lt;/div><br/>
-                    </blockquote>
-                    <blockquote className="article__blockquote">
-                        .article__div--FlexItemFirst &#123;<br/>
-                        &nbsp;&nbsp;<b>align-self: flex-end;</b><br/>
-                        &#125;<br/>
-                    </blockquote>
-                        <h4 className="article__subsubsubheader">justify-content</h4>
+                    <div className="article__div--FlexItemAligned">2
+                    </div>
+                    <div className="article__div--FlexItemAligned">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores atque autem
+                    </div>
+                </div>
+                <p>Natomiast w kodzie przedstawia nam się to tak:</p>
+                <blockquote className="article__blockquote">
+                    &lt;div class="article__div--FlexAligned"><br/>
+                    &nbsp;&nbsp;&lt;div
+                    class="article__div--FlexItemAligned <b>article__div--FlexItemFirst</b>">1<br/>
+                    &nbsp;&nbsp;&lt;/div><br/>
+                    &nbsp;&nbsp;&lt;div class="article__div--FlexItemAligned">2<br/>
+                    &nbsp;&nbsp;&lt;/div><br/>
+                    &nbsp;&nbsp;&lt;div class="article__div--FlexItemAligned"><br/>
+                    &nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores atque
+                    autem<br/>
+                    &nbsp;&nbsp;&lt;/div><br/>
+                    &lt;/div><br/>
+                </blockquote>
+                <blockquote className="article__blockquote">
+                    .article__div--FlexItemFirst &#123;<br/>
+                    &nbsp;&nbsp;<b>align-self: flex-end;</b><br/>
+                    &#125;<br/>
+                </blockquote>
+                <h4 className="article__subsubsubheader">justify-content</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        wyrównuje elementy w głównej osi,
+                    </li>
+                    <li className="article__listItem">
+                        wartości: flex-start, flex-end, center - podobnie jak przy <i>align-items</i>
                         <ul className="article__unorderedList">
                             <li className="article__listItem">
-                                wyrównuje elementy w głównej osi,
+                                <b>space-between</b> - równa przestrzeń między elementami
                             </li>
                             <li className="article__listItem">
-                                wartości: flex-start, flex-end, center - podobnie jak przy <i>align-items</i>
-                                <ul className="article__unorderedList">
-                                    <li className="article__listItem">
-                                        <b>space-between</b> - równa przestrzeń między elementami
-                                    </li>
-                                    <li className="article__listItem">
-                                        <b>space-around</b> - równa przestrzeń po obu stronach elementów,
-                                    </li>
-                                    <li className="article__listItem">
-                                        <b>space-evenly</b> - równa przestrzeń między elementami i przy krawędzi
-                                    </li>
-                                </ul>
+                                <b>space-around</b> - równa przestrzeń po obu stronach elementów,
                             </li>
                             <li className="article__listItem">
-                                domyślna wartość: <i>flex-start</i>.
+                                <b>space-evenly</b> - równa przestrzeń między elementami i przy krawędzi
                             </li>
                         </ul>
-                        <div className="article__div--FlexContented">
-                            <div className="article__div--FlexItem">1
-                            </div>
-                            <div className="article__div--FlexItem">2
-                            </div>
-                            <div className="article__div--FlexItem">3
-                            </div>
-                        </div>
+                    </li>
+                    <li className="article__listItem">
+                        domyślna wartość: <i>flex-start</i>.
+                    </li>
+                </ul>
+                <div className="article__div--FlexContented">
+                    <div className="article__div--FlexItem">1
+                    </div>
+                    <div className="article__div--FlexItem">2
+                    </div>
+                    <div className="article__div--FlexItem">3
+                    </div>
+                </div>
+                <blockquote className="article__blockquote">
+                    .article__div--FlexContented &#123;<br/>
+                    &nbsp;&nbsp;display: flex;<br/>
+                    &nbsp;&nbsp;flex-wrap: wrap;<br/>
+                    &nbsp;&nbsp;margin: auto;<br/>
+                    &nbsp;&nbsp;max-width: 500px;<br/>
+                    &nbsp;&nbsp;border: 10px solid black;<br/>
+                    &nbsp;&nbsp;<b>justify-content: center;</b><br/>
+                    &#125;<br/>
+                </blockquote>
+                <h4 className="article__subsubsubheader">order</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        pozwala zmienić kolejność elementów,
+                    </li>
+                    <li className="article__listItem">
+                        domyślnie każdy element ma wartość 0, ale możemy sobie ustawić dowolną liczbę
+                        dodatnią lub
+                        ujemną,
+                    </li>
+                    <li className="article__listItem">
+                        jeżeli chcemy, aby któryś z elementów pokazał się przed wszystkimi, stosujemy
+                        wartość ujemną
+                    </li>
+                </ul>
+                <div className="article__div--FlexContented">
+                    <div className="article__div--FlexItem">1
+                    </div>
+                    <div className="article__div--FlexItem">2
+                    </div>
+                    <div className="article__div--FlexItem article__div--FlexItemLast">3
+                    </div>
+                </div>
+                <blockquote className="article__blockquote">
+                    .article__div--FlexItemLast &#123;<br/>
+                    &nbsp;&nbsp;<b>order: -1;</b><br/>
+                    &#125;<br/>
+                </blockquote>
+                <blockquote className="article__blockquote">
+                    &lt;div class="article__div--FlexContented"><br/>
+                    &nbsp;&nbsp;&lt;div class="article__div--FlexItem">1<br/>
+                    &nbsp;&nbsp;&lt;/div><br/>
+                    &nbsp;&nbsp;&lt;div class="article__div--FlexItem">2<br/>
+                    &nbsp;&nbsp;&lt;/div><br/>
+                    &nbsp;&nbsp;&lt;div class="article__div--FlexItem <b>article__div--FlexItemLast</b>">3<br/>
+                    &nbsp;&nbsp;&lt;/div><br/>
+                    &lt;/div>
+                </blockquote>
+                <h4 className="article__subsubsubheader">flex-wrap</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        określa, czy elementy mogą przechodzić do kolejnego wiersza,
+                        <ul className="article__unorderedList">
+                            <li className="article__listItem">
+                                jeśli tak, to w jakim kierunku mają się układać,
+                            </li>
+                        </ul>
+                    </li>
+                    <li className="article__listItem">
+                        <b>wrap</b> - pozwala na przechodzenie do kolejnego wiersza,
+                    </li>
+                    <li className="article__listItem">
+                        <b>wrap-reverse</b> - odwrotny kierunek,
+                    </li>
+                    <li className="article__listItem">
+                        domyślnie <b>nowrap</b>
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">align-content</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        określa rozmieszczenie pustej przestrzeni w osi prostopadłej
+                        <ul className="article__unorderedList">
+                            <li className="article__listItem">
+                                jeśli jest wiele linii
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">skrót flex-flow</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        flex-direction i flex-wrap w jednym
+                    </li>
+                    <li className="article__listItem">
+                        np. column wrap
                         <blockquote className="article__blockquote">
-                            .article__div--FlexContented &#123;<br/>
-                            &nbsp;&nbsp;display: flex;<br/>
-                            &nbsp;&nbsp;flex-wrap: wrap;<br/>
-                            &nbsp;&nbsp;margin: auto;<br/>
-                            &nbsp;&nbsp;max-width: 500px;<br/>
-                            &nbsp;&nbsp;border: 10px solid black;<br/>
-                            &nbsp;&nbsp;<b>justify-content: center;</b><br/>
-                            &#125;<br/>
+                            .element &#123;<br/>
+                            &nbsp;&nbsp;flex-flow: column wrap;<br/>
+                            &#125;
                         </blockquote>
-                            <h4 className="article__subsubsubheader">order</h4>
-                            <ul className="article__unorderedList">
-                                <li className="article__listItem">
-                                    pozwala zmienić kolejność elementów,
-                                </li>
-                                <li className="article__listItem">
-                                    domyślnie każdy element ma wartość 0, ale możemy sobie ustawić dowolną liczbę
-                                    dodatnią lub
-                                    ujemną,
-                                </li>
-                                <li className="article__listItem">
-                                    jeżeli chcemy, aby któryś z elementów pokazał się przed wszystkimi, stosujemy
-                                    wartość ujemną
-                                </li>
-                            </ul>
-                            <div className="article__div--FlexContented">
-                                <div className="article__div--FlexItem">1
-                                </div>
-                                <div className="article__div--FlexItem">2
-                                </div>
-                                <div className="article__div--FlexItem article__div--FlexItemLast">3
-                                </div>
-                            </div>
-                            <blockquote className="article__blockquote">
-                                .article__div--FlexItemLast &#123;<br/>
-                                &nbsp;&nbsp;<b>order: -1;</b><br/>
-                                &#125;<br/>
-                            </blockquote>
-                                <blockquote className="article__blockquote">
-                                    &lt;div class="article__div--FlexContented"><br/>
-                                    &nbsp;&nbsp;&lt;div class="article__div--FlexItem">1<br/>
-                                    &nbsp;&nbsp;&lt;/div><br/>
-                                    &nbsp;&nbsp;&lt;div class="article__div--FlexItem">2<br/>
-                                    &nbsp;&nbsp;&lt;/div><br/>
-                                    &nbsp;&nbsp;&lt;div class="article__div--FlexItem <b>article__div--FlexItemLast</b>">3<br/>
-                                    &nbsp;&nbsp;&lt;/div><br/>
-                                    &lt;/div>
-                                </blockquote>
-                                <h4 className="article__subsubsubheader">flex-wrap</h4>
-                                <ul className="article__unorderedList">
-                                    <li className="article__listItem">
-                                        określa, czy elementy mogą przechodzić do kolejnego wiersza,
-                                        <ul className="article__unorderedList">
-                                            <li className="article__listItem">
-                                                jeśli tak, to w jakim kierunku mają się układać,
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li className="article__listItem">
-                                        <b>wrap</b> - pozwala na przechodzenie do kolejnego wiersza,
-                                    </li>
-                                    <li className="article__listItem">
-                                        <b>wrap-reverse</b> - odwrotny kierunek,
-                                    </li>
-                                    <li className="article__listItem">
-                                        domyślnie <b>nowrap</b>
-                                    </li>
-                                </ul>
-                                <h4 className="article__subsubsubheader">align-content</h4>
-                                <ul className="article__unorderedList">
-                                    <li className="article__listItem">
-                                        określa rozmieszczenie pustej przestrzeni w osi prostopadłej
-                                        <ul className="article__unorderedList">
-                                            <li className="article__listItem">
-                                                jeśli jest wiele linii
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <h4 className="article__subsubsubheader">skrót flex-flow</h4>
-                                <ul className="article__unorderedList">
-                                    <li className="article__listItem">
-                                        flex-direction i flex-wrap w jednym
-                                    </li>
-                                    <li className="article__listItem">
-                                        np. column wrap
-                                        <blockquote className="article__blockquote">
-                                            .element &#123;<br/>
-                                            &nbsp;&nbsp;flex-flow: column wrap;<br/>
-                                            &#125;
-                                        </blockquote>
-                                        </li>
-                                            </ul>
-                                            <p>A tutaj można utrwalić swoją wiedzę z <i>Flex-a</i>:</p>
-                                            <ul className="article__unorderedList">
-                                            <li className="article__listItem">
-                                            <a href="https://flexboxfroggy.com/#pl" target="_blank">Flexbox Froggy</a>
-                                            </li>
-                                            <li className="article__listItem">
-                                            <a href="https://mastery.games/flexboxzombies" target="_blank">Flexbox Zombies</a>
-                                            </li>
-                                            <li className="article__listItem">
-                                            <a href="https://codepen.io/osublake/pen/dMLQJr" target="_blank">CodePen Demo</a>
-                                            </li>
-                                            </ul>
+                    </li>
+                </ul>
+                <p>A tutaj można utrwalić swoją wiedzę z <i>Flex-a</i>:</p>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        <a href="https://flexboxfroggy.com/#pl" target="_blank">Flexbox Froggy</a>
+                    </li>
+                    <li className="article__listItem">
+                        <a href="https://mastery.games/flexboxzombies" target="_blank">Flexbox Zombies</a>
+                    </li>
+                    <li className="article__listItem">
+                        <a href="https://codepen.io/osublake/pen/dMLQJr" target="_blank">CodePen Demo</a>
+                    </li>
+                </ul>
             </>
         )
     },
