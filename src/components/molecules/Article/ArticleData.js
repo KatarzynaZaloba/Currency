@@ -5,6 +5,587 @@ import Schema from "../../../images/schemat.png";
 
 export const articlesLink = [
     {
+        id: 32,
+        date: "14 czerwca 2023 roku",
+        title: "Jak działa Internet?",
+        body: (
+            <>
+                <p>
+                    <b>Internet</b> to globalna sieć połączonych ze sobą urządzeń; urządzenia komunikują się między sobą
+                    za pomocą protokołu <i>TCP / IP</i>. Każde urządzenie ma przypisany swój adres <i>IP</i>. Internet
+                    <em>nie</em> może się zepsuć, dopóki urządzenia mogą się so tej sieci podpiąć.
+                </p>
+                <p>
+                    <b>URL - Uniform Resource Locator (URL)</b>, lub potocznie <i>adres internetowy</i>, posiada
+                    następującą składnię:
+                </p>
+                <blockquote className="article__blockquote">
+                    &#123;protokół&#125;://&#123;host&#125;(:&#123;port&#125;)&#123;ścieżka&#125;(?&#123;parametry&#125;)(#&#123;sekcja&#125;)
+                </blockquote>
+                <blockquote className="article__blockquote">https: &#47;/ domena.pl:8080/ sciezka?
+                    param1=wartosc1&amp;param2=wartosc2 #sekcja
+                </blockquote>
+                <p>Przejdźmy sobie do krótkiego omówienia elementów składni <i>URL</i>:</p>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem"><b>https - protokół (<i>protocol</i>)</b> - wersja protokołu
+                        <i>http</i> z szyfrowaniem <i>SSL</i> jest wersją bezpieczną, szyfrowaną, uniemożliwiającą
+                        <em>podsłuchanie</em> tego, co wprowadzamy na stronie.
+                    </li>
+                    <li className="article__listItem"><b> domena.pl</b> - zarejestrowana nazwa (domena) lub adres
+                        <i>IP</i> (host); gdy używamy przeglądarki - używamy domen, a nie adresów <i>IP</i>.
+                    </li>
+                    <li className="article__listItem"><b>8080 port</b> - pod różnymi portami możemy otrzymać różne
+                        odpowiedzi z serwera; jeśli nie wpiszemy portu, przeglądarka doda port domyślny. Jeśli mamy
+                        protokół <i>http</i>, to możemy być pewni, że przeglądarka dopisze nam port 80. W przypadku
+                        protokołu <i>https</i>, przeglądarka dopisze port 443.
+                    </li>
+                    <li className="article__listItem"><b>/sciezka</b> - ścieżka (path), pod jakim folderem dostępny jest
+                        dany zasób; serwer może na podstawie ścieżki dowolnie operować, co ma zwrócić
+                    </li>
+                    <li className="article__listItem"><b>parametr1=wartosc1&amp;parametr2=wartosc2</b> - parametry /
+                        zapytanie (query).
+                    </li>
+                </ul>
+                <p><b>DNS - Domain Name System</b> - dzięki niemu urządzenia mogą powiązać domenę z adresem. Jest to
+                    system rozproszony, więc nie ma jednego serwera, który odpowiada na pytanie, która <i>domena</i>, to
+                    które <i>IP</i>. To jest jak książka telefoniczna, wpisujemy sobie w przeglądarkę nazwę domeny, ale
+                    przeglądarka potrzebuje adresu <i>IP</i>, żeby połączyć nas z danym serwerem i właśnie <i>DNS</i>
+                    tłumaczy nazwy domen na odpowiadające im adresy <i>IP</i>.</p>
+                <p>Adres <i>IP</i> to jest synonim miejsca zamieszkania. Musimy go znać, żeby się połączyć z danym
+                    urządzeniem i dzięki temu systemowi, nie musimy pamiętać adresów <i>IP</i> i tylko wystarczy, że
+                    pamiętamy nazwę domeny. Sytuacja jest analogiczna w przypadku zapisywania numeru telefonu przyjaciół
+                    lub członków rodziny — zapisujemy je w telefonie pod <i>nazwą</i>. Nie musimy pamiętać wtedy
+                    konkretnych numerów telefonów. </p>
+                <p>Aby sprawdzić adres IP, wystarczy:</p>
+                <ol className="article__orderedList">
+                    <li className="article__listItem">użyć <i>DevTools-ów</i> (np. w przeglądarce Chrom),</li>
+                    <li className="article__listItem">wybrać zakładkę <i>Network</i>,</li>
+                    <li className="article__listItem">odświeżyć stronę,</li>
+                    <li className="article__listItem"> wejść na samą górę w zakładce <i>Network</i>,</li>
+                    <li className="article__listItem">kliknąć w wiersz, w którym mamy nazwę domeny, którą obserwujemy,
+                    </li>
+                    <li className="article__listItem">wybrać zakładkę <i>Header</i> i podzakładkę <i>General</i></li>
+                    <li className="article__listItem">w linii "Remote Address" mamy podany adres <i>IP</i> domeny.</li>
+                </ol>
+                <p><b>Protokół HTTP(s)</b> - HyperText Transfer Protocol — działa na zasadzie
+                    <i>request-response</i> (żądanie - odpowiedź). Na tej zasadzie odbywa się cała komunikacja
+                    między przeglądarką a serwerem. <i>Żądanie</i> i <i>odpowiedź</i> mają nagłówki i treść
+                    (ciało/body).
+                </p>
+                <p>Analogicznie do poprzedniej instrukcji, gdzie sprawdzaliśmy adres IP, możemy sprawdzić też jak
+                    wyglądają <i>nagłówki</i> i <i>ciała</i> dla <i>żądań</i> i <i>odpowiedzi</i>.</p>
+                <div className="div-table-overflow">
+                    <table className="article__table">
+                        <caption className="article__caption">Kody błędów protokołów http</caption>
+                        <thead className="article__thead">
+                        <tr className="article__tr">
+                            <th className="article__th">
+                                kody:
+                            </th>
+                            <th className="article__th">
+                                rodzaj odpowiedzi
+                            </th>
+                            <th className="article__th">
+                                opis słowny
+                            </th>
+                            <th className="article__th">
+                                znaczenie / zwrócony zasób
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr className="article__tr">
+                            <td>100</td>
+                            <td>informacyjne</td>
+                            <td>Continue</td>
+                            <td>Kontynuuj – prośba o dalsze wysyłanie zapytania</td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>101</td>
+                            <td>informacyjne</td>
+                            <td>Switching Protocols</td>
+                            <td>Zmiana protokołu</td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>110</td>
+                            <td>informacyjne</td>
+                            <td>Connection Timed Out</td>
+                            <td>Przekroczono czas połączenia. Serwer zbyt długo nie odpowiada</td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>111</td>
+                            <td>informacyjne</td>
+                            <td>Connection refused</td>
+                            <td>Serwer odrzucił połączenie</td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>200</td>
+                            <td>Kod powodzenia</td>
+                            <td>OK</td>
+                            <td>Zawartość żądanego dokumentu (najczęściej zwracany nagłówek odpowiedzi w
+                                komunikacji WWW Internetu)
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>201</td>
+                            <td>Kod powodzenia</td>
+                            <td>Created</td>
+                            <td>Utworzono – wysłany dokument został zapisany na serwerze</td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>202</td>
+                            <td>Kod powodzenia</td>
+                            <td>Accepted</td>
+                            <td>Przyjęto – zapytanie zostało przyjęte do obsłużenia, lecz jego zrealizowanie
+                                jeszcze się nie skończyło
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>203</td>
+                            <td>Kod powodzenia</td>
+                            <td>Non-Authoritative Information</td>
+                            <td>Informacja nieautorytatywna – zwrócona informacja nie odpowiada dokładnie
+                                odpowiedzi pierwotnego serwera, lecz została utworzona z lokalnych bądź
+                                zewnętrznych kopii
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>204</td>
+                            <td>Kod powodzenia</td>
+                            <td>No content</td>
+                            <td>Brak zawartości – serwer zrealizował zapytanie klienta i nie potrzebuje zwracać
+                                żadnej treści
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>205</td>
+                            <td>Kod powodzenia</td>
+                            <td>Reset Content</td>
+                            <td>Przywróć zawartość – serwer zrealizował zapytanie i klient powinien przywrócić
+                                pierwotny wygląd dokumentu
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>206</td>
+                            <td>Kod powodzenia</td>
+                            <td>Partial Content</td>
+                            <td>Część zawartości – serwer zrealizował tylko część zapytania typu GET, odpowiedź
+                                musi zawierać nagłówek Content-Range informujący o zakresie bajtowym zwróconego
+                                elementu
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>300</td>
+                            <td>Kod powodzenia</td>
+                            <td>Multiple Choices</td>
+                            <td>Wiele możliwości – istnieje więcej niż jeden sposób obsłużenia danego zapytania,
+                                serwer może podać adres zasobu, który pozwala na wybór jednoznacznego zapytania
+                                spośród możliwych
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>301</td>
+                            <td>Kod przekierowania</td>
+                            <td>Moved Permanently</td>
+                            <td>Trwale przeniesiony – żądany zasób zmienił swój URI i w przyszłości zasób
+                                powinien być szukany pod wskazanym nowym adresem
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>302</td>
+                            <td>Kod przekierowania</td>
+                            <td>Found</td>
+                            <td>Znaleziono – żądany zasób jest chwilowo dostępny pod innym adresem, a przyszłe
+                                odwołania do zasobu powinny być kierowane pod adres pierwotny
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>303</td>
+                            <td>Kod przekierowania</td>
+                            <td>See Other</td>
+                            <td>Zobacz inne – odpowiedź na żądanie znajduje się pod innym URI i tam klient
+                                powinien się skierować. To jest właściwy sposób przekierowywania w odpowiedzi na
+                                żądanie metodą POST
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>304</td>
+                            <td>Kod przekierowania</td>
+                            <td>Not Modified</td>
+                            <td>Nie zmieniono – zawartość zasobu nie podległa zmianie według warunku
+                                przekazanego przez klienta (np. data ostatniej wersji zasobu pobranej przez
+                                klienta – pamięć podręczna przeglądarki)
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>305</td>
+                            <td>Kod przekierowania</td>
+                            <td>Use proxy</td>
+                            <td>Użyj serwera proxy – do żądanego zasobu trzeba odwołać się przez serwer proxy
+                                podany w nagłówku Location odpowiedzi
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>306</td>
+                            <td>Kod przekierowania</td>
+                            <td>Switch proxy</td>
+                            <td>Kod nieużywany, aczkolwiek zastrzeżony dla starszych wersji protokołu</td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>307</td>
+                            <td>Kod przekierowania</td>
+                            <td>Too many redirects</td>
+                            <td>Zbyt wiele przekierowań</td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>310</td>
+                            <td>Kod przekierowania</td>
+                            <td>Temporary Redirect</td>
+                            <td>Tymczasowe przekierowanie – żądany zasób znajduje się chwilowo pod innym adresem
+                                URI, odpowiedź powinna zawierać zmieniony adres zasobu, na który klient
+                                zobowiązany jest się przenieść
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>400</td>
+                            <td>Kod błędu aplikacji po stronie klienta</td>
+                            <td>Bad Request</td>
+                            <td>Nieprawidłowe zapytanie – żądanie nie może być obsłużone przez serwer z powodu
+                                nieprawidłowości postrzeganej jako błąd użytkownika (np. błędna składnia
+                                zapytania)
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>401</td>
+                            <td>Kod błędu aplikacji po stronie klienta</td>
+                            <td>Unauthorized</td>
+                            <td>Nieautoryzowany dostęp – żądanie zasobu, który wymaga uwierzytelnienia</td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>402</td>
+                            <td>Kod błędu aplikacji po stronie klienta</td>
+                            <td>Payment Required</td>
+                            <td>Wymagana opłata – odpowiedź zarezerwowana na przyszłość. Google Developers API
+                                korzysta z tego kodu, jeśli dany programista przekroczył dzienny limit zapytań
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>403</td>
+                            <td>Kod błędu aplikacji po stronie klienta</td>
+                            <td>Forbidden</td>
+                            <td>Zabroniony – serwer zrozumiał zapytanie, lecz konfiguracja bezpieczeństwa
+                                zabrania mu zwrócić żądany zasób
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>404</td>
+                            <td>Kod błędu aplikacji po stronie klienta</td>
+                            <td>Not Found</td>
+                            <td>Nie znaleziono – serwer nie odnalazł zasobu według podanego URL ani niczego co
+                                by wskazywało na istnienie takiego zasobu w przeszłości
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>405</td>
+                            <td>Kod błędu aplikacji po stronie klienta</td>
+                            <td>Method Not Allowed</td>
+                            <td>Niedozwolona metoda – metoda zawarta w żądaniu nie jest dozwolona dla wskazanego
+                                zasobu, odpowiedź zawiera też listę dozwolonych metod
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>406</td>
+                            <td>Kod błędu aplikacji po stronie klienta</td>
+                            <td>Not Acceptable</td>
+                            <td>Niedozwolone – zażądany zasób nie jest w stanie zwrócić odpowiedzi mogącej być
+                                obsłużonej przez klienta według informacji podanych w zapytaniu
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>407</td>
+                            <td>Kod błędu aplikacji po stronie klienta</td>
+                            <td>Proxy Authentication Required</td>
+                            <td>Wymagane uwierzytelnienie do serwera pośredniczącego (ang. proxy) – analogicznie
+                                do kodu 401, dotyczy dostępu do serwera proxy
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>408</td>
+                            <td>Kod błędu aplikacji po stronie klienta</td>
+                            <td>Request Timeout</td>
+                            <td>Koniec czasu oczekiwania na żądanie – klient nie przesłał zapytania do serwera w
+                                określonym czasie
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>409</td>
+                            <td>Kod błędu aplikacji po stronie klienta</td>
+                            <td>Conflict</td>
+                            <td>Konflikt – żądanie nie może być zrealizowane, ponieważ występuje konflikt z
+                                obecnym statusem zasobu, ten kod odpowiedzi jest zwracany tylko w przypadku
+                                podejrzewania przez serwer, że klient może znaleźć przyczyny błędu i przesłać
+                                ponownie prawidłowe zapytanie. Odpowiedź serwera powinna zawierać informację
+                                umożliwiające klientowi rozwiązanie problemu, jednak nie jest to obowiązkowe
+                                (np. przesłanie 2 razy identycznego dokumentu, kiedy wymagana jest unikalność)
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>410</td>
+                            <td>Kod błędu aplikacji po stronie klienta</td>
+                            <td>Gone</td>
+                            <td>Zniknął (usunięto) – zażądany zasób nie jest dłużej dostępny i nieznany jest
+                                jego ewentualny nowy adres URI; klient powinien już więcej nie odwoływać się do
+                                tego zasobu
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>411</td>
+                            <td>Kod błędu aplikacji po stronie klienta</td>
+                            <td>Length required</td>
+                            <td>Wymagana długość – serwer odmawia zrealizowania zapytania ze względu na brak
+                                nagłówka Content-Length w zapytaniu; klient może powtórzyć zapytanie dodając doń
+                                poprawny nagłówek długości
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>412</td>
+                            <td>Kod błędu aplikacji po stronie klienta</td>
+                            <td>Precondition Failed</td>
+                            <td>Warunek wstępny nie może być spełniony – serwer nie może spełnić przynajmniej
+                                jednego z warunków zawartych w zapytaniu
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>413</td>
+                            <td>Kod błędu aplikacji po stronie klienta</td>
+                            <td>Request Entity Too Large</td>
+                            <td>Encja zapytania zbyt długa – całkowita długość zapytania jest zbyt długa dla
+                                serwera
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>414</td>
+                            <td>Kod błędu aplikacji po stronie klienta</td>
+                            <td>Request-URI Too Long</td>
+                            <td>Adres URI zapytania zbyt długi – długość zażądanego URI jest większa niż
+                                maksymalna oczekiwana przez serwer
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>415</td>
+                            <td>Kod błędu aplikacji po stronie klienta</td>
+                            <td>Unsupported Media Type</td>
+                            <td>Nieznany sposób żądania – serwer odmawia przyjęcia zapytania, ponieważ jego
+                                składnia jest niezrozumiała dla serwera
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>416</td>
+                            <td>Kod błędu aplikacji po stronie klienta</td>
+                            <td>Requested Range Not Satisfiable</td>
+                            <td>Zakres bajtowy podany w zapytaniu nie do obsłużenia – klient podał w zapytaniu
+                                zakres, który nie może być zastosowany do wskazanego zasobu
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>417</td>
+                            <td>Kod błędu aplikacji po stronie klienta</td>
+                            <td>Expectation Failed</td>
+                            <td>Oczekiwana wartość nie do zwrócenia – oczekiwanie podane w nagłówku Expect
+                                żądania nie może być spełnione przez serwer lub – jeśli zapytanie realizuje
+                                serwer proxy – serwer ma dowód, że oczekiwanie nie będzie spełnione przez
+                                następny w łańcuchu serwer realizujący zapytanie
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>418</td>
+                            <td>Kod błędu aplikacji po stronie klienta</td>
+                            <td>I’m a teapot</td>
+                            <td>„Jestem czajnikiem” – tzw. easter egg. Zdefiniowany w 1998. Obecnie nie jest
+                                implementowany do serwerów HTTP, ale znane są takie przypadki
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>421</td>
+                            <td>Kod błędu aplikacji po stronie klienta</td>
+                            <td>Misdirected Request</td>
+                            <td>Zapytanie zostało skierowane do serwera, który nie powinien go otrzymać lub
+                                który nie jest w stanie na nie odpowiedzieć</td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>422</td>
+                            <td>Kod błędu aplikacji po stronie klienta</td>
+                            <td>Unprocessable entity</td>
+                            <td> Zapytanie było poprawnie sformułowane, ale było niemożliwe do kontynuowania z
+                                powodu semantycznych błędów
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>423</td>
+                            <td>Kod błędu aplikacji po stronie klienta</td>
+                            <td>Locked (WebDAV)</td>
+                            <td>Próba uzyskania dostępu do zasobu, który jest aktualnie zablokowany</td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>424</td>
+                            <td>Kod błędu aplikacji po stronie klienta</td>
+                            <td>Failed Dependency (WebDAV)</td>
+                            <td>Brak powodzenia żądania, ponieważ jest ono zależne od innego żądania, które
+                                również nie powiodło się
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>425</td>
+                            <td>Kod błędu aplikacji po stronie klienta</td>
+                            <td>Too Early</td>
+                            <td>Serwer nie chce ryzykować przetwarzania żądania, które może zostać powtórzone ze
+                                względu na ryzyko ataku typu Replay
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>426</td>
+                            <td>Kod błędu aplikacji po stronie klienta</td>
+                            <td>Upgrade Required</td>
+                            <td>Serwer odmawia wykonania żądania, używając aktualnego protokołu. Wymagany
+                                protokół dla klienta przekazany jest w nagłówku Upgrade
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>428</td>
+                            <td>Kod błędu aplikacji po stronie klienta</td>
+                            <td>Precondition Required</td>
+                            <td>Brak nagłówka wstępnego, który jest wymagany przez serwer. Żądanie musi być
+                                warunkowe
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>429</td>
+                            <td>Kod błędu aplikacji po stronie klienta</td>
+                            <td>Too Many Requests</td>
+                            <td>Użytkownik wysłał za wiele żądań w danym czasie</td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>429</td>
+                            <td>Kod błędu aplikacji po stronie klienta</td>
+                            <td>Too Many Requests</td>
+                            <td>Użytkownik wysłał za wiele żądań w danym czasie</td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>431</td>
+                            <td>Kod błędu aplikacji po stronie klienta</td>
+                            <td>Request Header Fields Too Large</td>
+                            <td>Serwer odmawia wykonania żądania ze względu na zbyt duże pole lub pola nagłówka
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>451</td>
+                            <td>Kod błędu aplikacji po stronie klienta</td>
+                            <td>Unavailable For Legal Reasons</td>
+                            <td>Zawartość niedostępna z powodów prawnych – strona lub zasób zostały zablokowane
+                                z powodów naruszenia prawa, w tym także z powodu ocenzurowania zawartości przez
+                                władze. Wartość kodu jest nawiązaniem do powieści „451 stopni Fahrenheita”
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>500</td>
+                            <td>Kod błędu serwera HTTP</td>
+                            <td>Internal Server Error</td>
+                            <td>Wewnętrzny błąd serwera – serwer napotkał niespodziewane trudności, które
+                                uniemożliwiły zrealizowanie żądania
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>501</td>
+                            <td>Kod błędu serwera HTTP</td>
+                            <td>Not Implemented</td>
+                            <td>Nie zaimplementowano – serwer nie dysponuje funkcjonalnością wymaganą w
+                                zapytaniu; ten kod jest zwracany, gdy serwer otrzymał nieznany typ zapytania
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>502</td>
+                            <td>Kod błędu serwera HTTP</td>
+                            <td>Bad Gateway</td>
+                            <td>Błąd bramy – serwer – spełniający funkcję bramy lub pośrednika – otrzymał
+                                niepoprawną odpowiedź od serwera nadrzędnego i nie jest w stanie zrealizować
+                                żądania klienta
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>503</td>
+                            <td>Kod błędu serwera HTTP</td>
+                            <td>Service Unavailable</td>
+                            <td>Usługa niedostępna – serwer nie jest w stanie w danej chwili zrealizować
+                                zapytania klienta ze względu na przeciążenie
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>504</td>
+                            <td>Kod błędu serwera HTTP</td>
+                            <td>Gateway Timeout</td>
+                            <td>Przekroczony czas bramy – serwer – spełniający funkcję bramy lub pośrednika – nie
+                                otrzymał w ustalonym czasie odpowiedzi od wskazanego serwera HTTP, FTP, LDAP
+                                itp. lub serwer DNS jest potrzebny do obsłużenia zapytania
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>505</td>
+                            <td>Kod błędu serwera HTTP</td>
+                            <td>HTTP Version Not Supported</td>
+                            <td>Nieobsługiwana wersja HTTP – serwer nie obsługuje bądź odmawia obsługi wskazanej
+                                przez klienta wersji HTTP
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>506</td>
+                            <td>Kod błędu serwera HTTP</td>
+                            <td>Variant Also Negotiates</td>
+                            <td>Wariant również negocjuje (w wolnym tłumaczeniu)</td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>507</td>
+                            <td>Kod błędu serwera HTTP</td>
+                            <td>Insufficient Storage (WebDAV)</td>
+                            <td>Serwer nie jest w stanie zapisać danych związanych z wykonaniem zapytania</td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>508</td>
+                            <td>Kod błędu serwera HTTP</td>
+                            <td>Loop Detected (WebDAV)</td>
+                            <td>Serwer wykrył nieskończoną pętlę w trakcie przetwarzania zapytania</td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>509</td>
+                            <td>Kod błędu serwera HTTP</td>
+                            <td>Bandwidth Limit Exceeded</td>
+                            <td>Serwer jest tymczasowo niedostępny, ponieważ właściciel strony przekroczył limit
+                                transferu danych.
+                            </td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>510</td>
+                            <td>Kod błędu serwera HTTP</td>
+                            <td>Not Extended</td>
+                            <td>Brak rozszerzenia HTTP koniecznego do obsługi danego zapytania</td>
+                        </tr>
+                        <tr className="article__tr">
+                            <td>511</td>
+                            <td>Kod błędu serwera HTTP</td>
+                            <td>Network Authentication Required</td>
+                            <td>Wymagane uwierzytelnienie przed otrzymaniem dostępu do sieci. W zamyśle
+                                wykorzystywane przez pośredników kontrolujących dostęp do sieci (np.: wymaganie
+                                potwierdzenia zasad użytkowania przed udostępnieniem połączenia)
+                            </td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        </tfoot>
+                    </table>
+                </div>
+            </>
+        )
+    },
+    {
         id: 31,
         date: "13 czerwca 2023 roku",
         title: "JavaScript - if/else vs ternary vs switch",
