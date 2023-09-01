@@ -4,6 +4,106 @@ import Kate from "../../../images/scarpa.jpg";
 import Schema from "../../../images/schemat.png";
 
 export const articlesLink = [
+    {},
+    {
+        id: 18,
+        date: "1 czerwca 2023 roku",
+        title: "Odkopałam pierwszą lekcję o CSS",
+        body: (
+            <>
+                <p>
+                    Coraz bardziej się cieszę na powtórki materiałów, ponieważ z każdą powtórką będę mogła
+                    zaktualizować bloga o nowe funkcje. I chociaż korci mnie, by od razu zrobić porządek z
+                    <i>CSS</i> i <i>JS</i> na mojej stronie, to czekam cierpliwie na ten moment aż przejdę do
+                    powtórki z lekcji właściwych tym tematom.
+                </p>
+                <p>
+                    Naukę podzieliłam sobie na część z kursu <i>YouCode - Frontend Developer od podstaw</i> i na
+                    materiały z Uczelni na temat <i>Frontend-u</i>. Powiem szczerze, że wybrałam dobry moment, bo
+                    jedne materiały uzupełniają drugie i na odwrót. W programie nauki mam wykłady z zaawansowanego
+                    <i>HTML</i> i <i>CSS</i> - dla mnie super sprawa!
+                </p>
+                <p>
+                    Tak więc <i>CSS</i> - <i>Cascading Style Sheets</i>, czyli kaskadowe arkusze stylów to język
+                    arkusza stylów używanego do ... stylowania znaczników <i>HTML</i>. (Chyba muszę poszukać
+                    synonimów słowa styl).
+                </p>
+                <p>
+                    <i>CSS</i> to oddzielna warstwa strony, która jest odpowiedzialna za to, jak wyglądają elementy w
+                    <i>HTML</i>. I każda przeglądarka może mieć swoją interpretację <i>CSS</i>, a już w ogóle
+                    najgorzej radzi sobie <i>IE</i>. Na kursie dowiedziałam się, że warto sprawdzać kompatybilność
+                    <i>CSS</i> z różnymi wersjami różnych przeglądarek. Przydatne linki do sprawdzenia są <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"
+                    title="MDN, a jakże">TU</a> i <a href="https://caniuse.com/" target="_blank"
+                                                     title="CanIUse">TU</a>. Natomiast muszę jeszcze dokładniej
+                    poczytać, o co chodzi z tym <a
+                    href="https://www.w3.org/TR/css-2020/" target="_blank"
+                    title="Strona W3C o CSS Snapshot 2020">CSS Snapshot 2020.</a> I wypadałoby mi odwiedzić też
+                    i <a href="https://www.w3.org/Style/CSS/" target="_blank"
+                         title="Ironicznie brzydka strona o CSS">TĄ</a> stronę, by zapoznać się z dokumentacją.
+                </p>
+                <p>
+                    Będę jeszcze wałkować temat związany z <i>CSS</i>, więc rozsiądźcie się wygodnie.
+                </p>
+            </>
+        )
+    },
+    {
+        id: 17,
+        date: "31 maja 2023 roku",
+        title: "HTML - Semantyczność",
+        body: (
+            <>
+                <p>
+                    Dziś wsłuchiwałam się w wykład Tomasza Kanieckiego dotyczącego znaczników w HTML5. Łapię się na
+                    tym, że często zapominam o semantyczności, czyli o stosowaniu znaczników zgodnie z
+                    przeznaczeniem, aby m.in. umożliwić przeglądanie strony osobom z czytnikami ekranów.
+                </p>
+                <p>
+                    Od razu po przykładach z wykładu, przystąpiłam do edycji kodu mojego bloga. Dodałam znaczniki
+                    takie jak &lt;article&gt;, &lt;header&gt;, &lt;figure&gt; i &lt;figcaption&gt;. Z czasem pewnie
+                    je ostyluję w CSS-ie, ale nie wyprzedzam faktów. Preferuję jednak naukę powolną, ale opartą na
+                    praktyce. Zauważyłam, że ta metodologia nauki sprawia, że więcej przyswajam i zapamiętuję. Mamy
+                    progres!
+                </p>
+                <p>
+                    Jeśli śledzicie repozytorium bloga na<i> GitHub-ie</i>, to zauważycie, w których miejscach co nieco
+                    poprawiłam.
+                </p>
+                <p>
+                    Mam nadzieję, że w przyszłości moje aplikacje webowe będą dostępne dla osób również z
+                    niepełnosprawnościami.
+                </p>
+            </>
+        )
+    },
+    {
+        id: 16,
+        date: "30 maja 2023 roku",
+        title: "HTML - elementy liniowe, elementy blokowe i elementy liniowo-blokowe",
+        body: (
+            <>
+                <p>
+                    <i>Elementami blokowymi</i> są znaczniki, w których zawierany jest tekst ciągiem, np. &lt;p&gt;
+                    czy &lt;h1&gt;, &lt;h2&gt; itd.
+                </p>
+                <p>
+                    <i>Elementy blokowe</i> zajmują całą dostępną szerokość (można to zobaczyć w
+                    <i>DevTools-ach</i>).
+                </p>
+                <p>
+                    Natomiast <i>elementy liniowe</i> to znaczniki typu np. &lt;strong&gt; czy &lt;em&gt; i zajmują
+                    tyle miejsca, ile potrzebują dla swojej treści.
+                </p>
+                <p>
+                    Ciekawostka jest tutaj <i>textarea</i>, który jest elementem liniowo-blokowym.
+                </p>
+                <p>
+                    Nie układamy elementów <i>blokowych</i> w <i>liniowych</i>.
+                </p>
+            </>
+        )
+    },
     {
         id: 15,
         date: "30 maja 2023 roku",
