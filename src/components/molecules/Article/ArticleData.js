@@ -5,6 +5,241 @@ import Schema from "../../../images/schemat.png";
 
 export const articlesLink = [
     {
+        id: 53,
+        date: "13 lipca 2023 roku",
+        title: "CSS - Flex c.d.",
+        body: (
+            <>
+                <h4 className="article__subsubsubheader">align-items</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        określa wyrównanie elementów w osi prostopadłej
+                    </li>
+                    <li className="article__listItem">
+                        wartości: flex-start, flex-end, center - "góra", "dół", "środek",
+                    </li>
+                    <li className="article__listItem">
+                        domyślnie: stretch.
+                    </li>
+                </ul>
+                <p>Dlaczego w <i>wartościach</i> właściwości mamy <i>flex-start</i> i <i>flex-end</i>? Ponieważ
+                    położenie tych elementów jest względne, zależnie od właściwości <i>flex-direction</i>.</p>
+                <div className="article__div--FlexAligned">
+                    <div className="article__div--FlexItemAligned">1
+                    </div>
+                    <div className="article__div--FlexItemAligned">2
+                    </div>
+                    <div className="article__div--FlexItemAligned">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores atque autem
+                    </div>
+                </div>
+                <p>Powyższy przykład przedstawia się następująco:</p>
+                <blockquote className="article__blockquote">
+                    &lt;div class="article__div--FlexAligned"><br/>
+                    &nbsp;&nbsp;&lt;div class="article__div--FlexItemAligned">1<br/>
+                    &nbsp;&nbsp;&lt;/div><br/>
+                    &nbsp;&nbsp;&lt;div class="article__div--FlexItemAligned">2<br/>
+                    &nbsp;&nbsp;&lt;/div><br/>
+                    &nbsp;&nbsp;&lt;div class="article__div--FlexItemAligned"><br/>
+                    &nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores atque autem<br/>
+                    &nbsp;&nbsp;&lt;/div><br/>
+                    &lt;/div><br/>
+                </blockquote>
+                <blockquote className="article__blockquote">
+                    .article__div--FlexAligned &#123;<br/>
+                    &nbsp;&nbsp;display: flex;<br/>
+                    &nbsp;&nbsp;flex-wrap: wrap;<br/>
+                    &nbsp;&nbsp;margin: auto;<br/>
+                    &nbsp;&nbsp;max-width: 500px;<br/>
+                    &nbsp;&nbsp;border: 10px solid black;<br/>
+                    &nbsp;&nbsp;<b>align-items: center;</b><br/>
+                    &nbsp;&nbsp;flex-direction: column;<br/>
+                    &#125;<br/><br/>
+
+                    .article__div--FlexItemAligned &#123;<br/>
+                    &nbsp;&nbsp;padding: 20px;<br/>
+                    &nbsp;&nbsp;background: #39744a;<br/>
+                    &nbsp;&nbsp;color: white;<br/>
+                    &nbsp;&nbsp;margin: 10px;<br/>
+                    &#125;<br/><br/>
+                </blockquote>
+                    <h4 className="article__subsubsubheader">align-self</h4>
+                    <ul className="article__unorderedList">
+                        <li className="article__listItem">
+                            pozwala ustawić wyrównanie dla pojedynczego elementu
+                        </li>
+                        <li className="article__listItem">
+                            wartości takie same jak <i>align-items</i>
+                        </li>
+                    </ul>
+                    <div className="article__div--FlexAligned">
+                        <div className="article__div--FlexItemAligned article__div--FlexItemFirst">1
+                        </div>
+                        <div className="article__div--FlexItemAligned">2
+                        </div>
+                        <div className="article__div--FlexItemAligned">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores atque autem
+                        </div>
+                    </div>
+                    <p>Natomiast w kodzie przedstawia nam się to tak:</p>
+                    <blockquote className="article__blockquote">
+                        &lt;div class="article__div--FlexAligned"><br/>
+                        &nbsp;&nbsp;&lt;div
+                        class="article__div--FlexItemAligned <b>article__div--FlexItemFirst</b>">1<br/>
+                        &nbsp;&nbsp;&lt;/div><br/>
+                        &nbsp;&nbsp;&lt;div class="article__div--FlexItemAligned">2<br/>
+                        &nbsp;&nbsp;&lt;/div><br/>
+                        &nbsp;&nbsp;&lt;div class="article__div--FlexItemAligned"><br/>
+                        &nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores atque
+                        autem<br/>
+                        &nbsp;&nbsp;&lt;/div><br/>
+                        &lt;/div><br/>
+                    </blockquote>
+                    <blockquote className="article__blockquote">
+                        .article__div--FlexItemFirst &#123;<br/>
+                        &nbsp;&nbsp;<b>align-self: flex-end;</b><br/>
+                        &#125;<br/>
+                    </blockquote>
+                        <h4 className="article__subsubsubheader">justify-content</h4>
+                        <ul className="article__unorderedList">
+                            <li className="article__listItem">
+                                wyrównuje elementy w głównej osi,
+                            </li>
+                            <li className="article__listItem">
+                                wartości: flex-start, flex-end, center - podobnie jak przy <i>align-items</i>
+                                <ul className="article__unorderedList">
+                                    <li className="article__listItem">
+                                        <b>space-between</b> - równa przestrzeń między elementami
+                                    </li>
+                                    <li className="article__listItem">
+                                        <b>space-around</b> - równa przestrzeń po obu stronach elementów,
+                                    </li>
+                                    <li className="article__listItem">
+                                        <b>space-evenly</b> - równa przestrzeń między elementami i przy krawędzi
+                                    </li>
+                                </ul>
+                            </li>
+                            <li className="article__listItem">
+                                domyślna wartość: <i>flex-start</i>.
+                            </li>
+                        </ul>
+                        <div className="article__div--FlexContented">
+                            <div className="article__div--FlexItem">1
+                            </div>
+                            <div className="article__div--FlexItem">2
+                            </div>
+                            <div className="article__div--FlexItem">3
+                            </div>
+                        </div>
+                        <blockquote className="article__blockquote">
+                            .article__div--FlexContented &#123;<br/>
+                            &nbsp;&nbsp;display: flex;<br/>
+                            &nbsp;&nbsp;flex-wrap: wrap;<br/>
+                            &nbsp;&nbsp;margin: auto;<br/>
+                            &nbsp;&nbsp;max-width: 500px;<br/>
+                            &nbsp;&nbsp;border: 10px solid black;<br/>
+                            &nbsp;&nbsp;<b>justify-content: center;</b><br/>
+                            &#125;<br/>
+                        </blockquote>
+                            <h4 className="article__subsubsubheader">order</h4>
+                            <ul className="article__unorderedList">
+                                <li className="article__listItem">
+                                    pozwala zmienić kolejność elementów,
+                                </li>
+                                <li className="article__listItem">
+                                    domyślnie każdy element ma wartość 0, ale możemy sobie ustawić dowolną liczbę
+                                    dodatnią lub
+                                    ujemną,
+                                </li>
+                                <li className="article__listItem">
+                                    jeżeli chcemy, aby któryś z elementów pokazał się przed wszystkimi, stosujemy
+                                    wartość ujemną
+                                </li>
+                            </ul>
+                            <div className="article__div--FlexContented">
+                                <div className="article__div--FlexItem">1
+                                </div>
+                                <div className="article__div--FlexItem">2
+                                </div>
+                                <div className="article__div--FlexItem article__div--FlexItemLast">3
+                                </div>
+                            </div>
+                            <blockquote className="article__blockquote">
+                                .article__div--FlexItemLast &#123;<br/>
+                                &nbsp;&nbsp;<b>order: -1;</b><br/>
+                                &#125;<br/>
+                            </blockquote>
+                                <blockquote className="article__blockquote">
+                                    &lt;div class="article__div--FlexContented"><br/>
+                                    &nbsp;&nbsp;&lt;div class="article__div--FlexItem">1<br/>
+                                    &nbsp;&nbsp;&lt;/div><br/>
+                                    &nbsp;&nbsp;&lt;div class="article__div--FlexItem">2<br/>
+                                    &nbsp;&nbsp;&lt;/div><br/>
+                                    &nbsp;&nbsp;&lt;div class="article__div--FlexItem <b>article__div--FlexItemLast</b>">3<br/>
+                                    &nbsp;&nbsp;&lt;/div><br/>
+                                    &lt;/div>
+                                </blockquote>
+                                <h4 className="article__subsubsubheader">flex-wrap</h4>
+                                <ul className="article__unorderedList">
+                                    <li className="article__listItem">
+                                        określa, czy elementy mogą przechodzić do kolejnego wiersza,
+                                        <ul className="article__unorderedList">
+                                            <li className="article__listItem">
+                                                jeśli tak, to w jakim kierunku mają się układać,
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li className="article__listItem">
+                                        <b>wrap</b> - pozwala na przechodzenie do kolejnego wiersza,
+                                    </li>
+                                    <li className="article__listItem">
+                                        <b>wrap-reverse</b> - odwrotny kierunek,
+                                    </li>
+                                    <li className="article__listItem">
+                                        domyślnie <b>nowrap</b>
+                                    </li>
+                                </ul>
+                                <h4 className="article__subsubsubheader">align-content</h4>
+                                <ul className="article__unorderedList">
+                                    <li className="article__listItem">
+                                        określa rozmieszczenie pustej przestrzeni w osi prostopadłej
+                                        <ul className="article__unorderedList">
+                                            <li className="article__listItem">
+                                                jeśli jest wiele linii
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <h4 className="article__subsubsubheader">skrót flex-flow</h4>
+                                <ul className="article__unorderedList">
+                                    <li className="article__listItem">
+                                        flex-direction i flex-wrap w jednym
+                                    </li>
+                                    <li className="article__listItem">
+                                        np. column wrap
+                                        <blockquote className="article__blockquote">
+                                            .element &#123;<br/>
+                                            &nbsp;&nbsp;flex-flow: column wrap;<br/>
+                                            &#125;
+                                        </blockquote>
+                                        </li>
+                                            </ul>
+                                            <p>A tutaj można utrwalić swoją wiedzę z <i>Flex-a</i>:</p>
+                                            <ul className="article__unorderedList">
+                                            <li className="article__listItem">
+                                            <a href="https://flexboxfroggy.com/#pl" target="_blank">Flexbox Froggy</a>
+                                            </li>
+                                            <li className="article__listItem">
+                                            <a href="https://mastery.games/flexboxzombies" target="_blank">Flexbox Zombies</a>
+                                            </li>
+                                            <li className="article__listItem">
+                                            <a href="https://codepen.io/osublake/pen/dMLQJr" target="_blank">CodePen Demo</a>
+                                            </li>
+                                            </ul>
+            </>
+        )
+    },
+    {
         id: 52,
         date: "12 lipca 2023 roku",
         title: "CSS - Flex c.d.",
