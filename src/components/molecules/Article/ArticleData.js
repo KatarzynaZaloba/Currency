@@ -5,6 +5,38 @@ import Schema from "../../../images/schemat.png";
 
 export const articlesLink = [
     {
+        id: 27,
+        date: "7 czerwca 2023 roku",
+        title: "JavaScript - else if - ćwiczenie",
+        body: (
+            <>
+                <p>Do instrukcji warunkowej <i>if else</i> możemy dodać kolejny blok <i>else if</i>. Służy to do
+                    dodania większej ilości warunków, np.</p>
+                <blockquote className="article__blockquote">
+                    <b>if</b> (warunek1) &#123;<br/>
+                    &nbsp;&nbsp;wykonajKodNr1();<br/>
+                    &#125; <b>else if</b> (warunek2) &#123;<br/>
+                    &nbsp;&nbsp;wykonajKodNr2();<br/>
+                    &#125; <b>else</b> &#123;<br/>
+                    &nbsp;&nbsp;wykonajKodNr3();<br/>
+                    &#125;
+                </blockquote>
+            </>
+        )
+    },
+    // {
+    //     id: 27,
+    //     date: "7 czerwca 2023 roku",
+    //     title: "JavaScript - if else - ćwiczenie",
+    //     body: (
+    //         <>
+    //             <p>Pozwoliłam sobie na przećwiczenie po raz enty warunku if/else. W tym przypadku pojawi się kolejny
+    //                 przycisk, który powinien zmienić tekst po wciśnięciu. Spróbujmy.</p>
+    //             <button className="button">Włącz ciemny motyw</button>
+    //         </>
+    //     )
+    // },
+    {
         id: 26,
         date: "6 czerwca 2023 roku",
         title: "JavaScript - if else",
@@ -32,7 +64,7 @@ export const articlesLink = [
                     (program) zróbCośJeśliSpełniony(); w innym przypadku wykonaj funkcję (program)
                     zróbCośInnegoJeśliNiespełniony().</p>
                     <p>A oto i kilka innych przykładów z <i>if else</i></p>
-                    <blockquote class="article__blockquote">
+                    <blockquote className="article__blockquote">
                     <b>if</b> (number1 > number2) &#123;<br/>
                     &nbsp;&nbsp;console.log("number1 jest większa.");<br/>
                     &#125;<b> else</b> &#123;<br/>
