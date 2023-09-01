@@ -5,7 +5,79 @@ import Schema from "../../../images/schemat.png";
 
 export const articlesLink = [
     {
-        id: 30,
+        id: 41,
+        date: "29 czerwca 2023 roku",
+        title: "JavaScript - formularze c.d.",
+        body: (
+            <>
+                <p>Dziś mam do zaprezentowania totalnie podstawowy kalkulator BMI. Kod w JS wygląda następująco:</p>
+                <blockquote className="article__blockquote">
+                    let heightElement = document.querySelector(".js-height");<br/>
+                    let weightElement = document.querySelector(".js-weight");<br/>
+                    let formElement = document.querySelector(".js-form");<br/>
+                    let bmiElement = document.querySelector(".js-bmi");<br/><br/>
+
+                    formElement.addEventListener("submit", (event) => &#123;<br/>
+                    &nbsp;&nbsp;event.preventDefault();<br/><br/>
+
+                    &nbsp;&nbsp;let height = heightElement.value;<br/>
+                    &nbsp;&nbsp;let weight = weightElement.value;<br/>
+                    &nbsp;&nbsp;let bmi = weight / ((height / 100) ** 2);<br/><br/>
+
+                    &nbsp;&nbsp;bmiElement.innerText = bmi.toFixed(2);<br/>
+                    &#125;);
+                </blockquote>
+                    <p>Natomiast w zwykłym HTML-u wygląda to tak:</p>
+                    <blockquote className="article__blockquote">
+                        &lt;form class="js-form"><br/>
+                        &nbsp;&nbsp;&lt;fieldset><br/>
+                        &nbsp;&nbsp;&nbsp;&lt;legend>Twoje dane:&lt;/legend><br/>
+                        &nbsp;&nbsp;&nbsp;&lt;p><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;label><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Twój wzrost:<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input class="js-height" required type="number" min="1"
+                        step="any"><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label><br/>
+                        &nbsp;&nbsp;&nbsp;&lt;/p><br/>
+                        &nbsp;&nbsp;&nbsp;&lt;p><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;label><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Twoja waga:<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input class="js-weight" required type="number" min="1"
+                        step="any"><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label><br/>
+                        &nbsp;&nbsp;&nbsp;&lt;/p><br/>
+                        &nbsp;&nbsp;&lt;/fieldset><br/>
+                        &nbsp;&nbsp;&nbsp;&lt;p><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;button>Policz BMI!&lt;/button><br/>
+                        &nbsp;&nbsp;&nbsp;&lt;/p><br/>
+                        &lt;/form><br/>
+                    </blockquote>
+                    <form className="js-form">
+                        <fieldset>
+                            <legend>Twoje dane:</legend>
+                            <p>
+                                <label>
+                                    Twój wzrost:
+                                    <input className="js-height" required type="number" min="1" step="any"/>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    Twoja waga:
+                                    <input className="js-weight" required type="number" min="1" step="any"/>
+                                </label>
+                            </p>
+                        </fieldset>
+                        <p>
+                            <button>Policz BMI!</button>
+                        </p>
+                    </form>
+                    <p>Twoje BMI wynosi: <strong className="js-bmi">N/A</strong></p>
+            </>
+        )
+    },
+    {
+        id: 40,
         date: "28 czerwca 2023 roku",
         title: "Webstorm",
         body: (
