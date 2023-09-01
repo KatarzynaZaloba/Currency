@@ -4,7 +4,83 @@ import Kate from "../../../images/scarpa.jpg";
 import Schema from "../../../images/schemat.png";
 
 export const articlesLink = [
-    {},
+    {
+        id: 19,
+        date: "1 czerwca 2023 roku",
+        title: "CSS - podstawy",
+        body: (
+            <>
+                <p>
+                    Pora na przećwiczenie podstawowych zagadnień ze składni. Odwołanie do elementu <i>HTML</i> może
+                    być poprzez <i>id</i>, <i>klasę</i> lub poprzez <i>nazwę elementu</i>. Gdy odwołujemy się do
+                    <i>klasy</i>, w miejscu selektora wpisujemy "." (kropkę) i nazwę <i>klasy</i>; gdy odwołujemy
+                    się do konkretnego <em>jedynego</em> elementu <i>HTML</i>, używamy "#" (hashtaga) i nazwy
+                    nadanego <i>id</i>. Są jeszcze dwie opcje stylowania elementów <i>HTML</i>, gdzie nie
+                    potrzebujemy ani <i>klasy</i> ani <i>id</i> i stylujemy wszystkie dane rodzaje elementu o
+                    konkretnej nazwie, używając:
+                </p>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        "zagnieżdżania"
+                    </li>
+                </ul>
+                <blockquote className="article__blockquote">
+                    article header h3 &#123;<br/>
+                    &nbsp;&nbsp;text-align: left;<br/>
+                    &#125;
+                </blockquote>
+                    <ul className="article__unorderedList">
+                        <li className="article__listItem">
+                            TYLKO nazwy znacznika
+                        </li>
+                    </ul>
+                    <blockquote className="article__blockquote">
+                        h3 &#123;<br/>
+                        &nbsp;&nbsp;text-align: left;<br/>
+                        &#125;<br/>
+                    </blockquote>
+                        <p>Aby to lepiej zobrazować, posłużę się tutaj przykładem odwołania po <i>klasie</i></p>
+                        <blockquote className="article__blockquote">
+                            <b>&#46;header</b> &#123;<br/>
+                            &nbsp;&nbsp;color&#58; purple;<br/>
+                            &#125;
+                        </blockquote>
+                            <ul className="article__unorderedList">
+                                <li className="article__listItem"><i>selektor</i> - określa które elementy są ostylowane
+                                </li>
+                                <li className="article__listItem"><i>klamry</i> (brackets)</li>
+                                <li className="article__listItem"><i>nazwa właściwości</i> - czyli jak styl będzie
+                                    zmieniany
+                                </li>
+                                <li className="article__listItem">wartość zmienianej właściwości po dwukropku</li>
+                                <li className="article__listItem"><i>deklaracje</i> - pary właściwość: wartość</li>
+                            </ul>
+                            <h4 className="article__subsubsubheader">Jakie są sposoby osadzania?</h4>
+                            <ul className="article__unorderedList">
+                                <li className="article__listItem">osobny link do arkusza styli w oddzielnym pliku</li>
+                            </ul>
+                            <blockquote className="article__blockquote">&lt;link href="css/style.css"
+                                rel="stylesheet"&gt;
+                            </blockquote>
+                            <ul className="article__unorderedList">
+                                <li className="article__listItem">znacznik &lt;style&gt;</li>
+                            </ul>
+                            <blockquote className="article__blockquote">
+                                &lt;style&gt;<br/>
+                                <b>&#46;header</b> &#123;<br/>
+                                &nbsp;&nbsp;color&#58; purple;<br/>
+                                &#125;<br/>
+                                &lt;/style&gt;
+                            </blockquote>
+                            <ul className="article__unorderedList">
+                                <li className="article__listItem">atrybut style</li>
+                            </ul>
+                            <blockquote className="article__blockquote">&lt;p style="color:
+                                red"&gt;Tekst&lt;/p&gt;
+                            </blockquote>
+            </>
+        )
+    },
     {
         id: 18,
         date: "1 czerwca 2023 roku",
