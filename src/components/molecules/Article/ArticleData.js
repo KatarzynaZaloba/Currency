@@ -5,6 +5,146 @@ import Schema from "../../../images/schemat.png";
 
 export const articlesLink = [
     {
+        id: 39,
+        date: "27 czerwca 2023 roku",
+        title: "JavaScript - Formularze c.d.",
+        body: (
+            <>
+                <p>Kontynuując ćwiczenia z formularzami, wracam do JavaScript-a. Później mamy przykładowe pole
+                    radio.</p>
+                <form action=" "
+                      method="POST">
+                    <fieldset>
+                        <legend>
+                            Pole typu radio
+                        </legend>
+                        <ul className="article__withoutBulletList">
+                            <li>
+                                <label>
+                                    Opcja 1
+                                    <input className="js-radio-1" name="radio" type="radio" value="opcja-1"/>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    Opcja 2
+                                    <input className="js-radio-2" name="radio" type="radio" value="opcja-2"/>
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </form>
+                <p>Kod przedstawia się mniej więcej tak:</p>
+                <blockquote className="article__blockquote">
+                    &lt;form action="https//postman-echo.com" method="POST"><br/>
+                    &nbsp;&nbsp;&lt;fieldset><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;legend><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pole typu radio<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/legend><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul class="article__withoutBulletList"><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Opcja 1<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" value="opcja-1" name="radio"
+                    class="js-radio-1"><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Opcja 2<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" value="opcja-2" name="radio"
+                    class="js-radio-2"><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul><br/>
+                    &nbsp;&nbsp;&lt;/fieldset><br/>
+                    &lt;/form><br/>
+                </blockquote>
+                <p>Możemy "złapać" elementy typu radio, poprzez dopisanie klasy i użycie document.querySelector, jak
+                    niżej:</p>
+                <blockquote className="article__blockquote">
+                    let radioElement1 = document.querySelector(".js-radio-1");<br/>
+                    let radioElement2 = document.querySelector(".js-radio-2");<br/>
+                    console.log(radioElement1);<br/>
+                    console.log(radioElement2);<br/>
+                </blockquote>
+                <p>Następnie, jeśli chcielibyśmy zaznaczyć jeden element typu radio, używając np. Konsoli w
+                    Devtools-ach, wpisujemy w konsolę:</p>
+                <blockquote className="article__blockquote">
+                    radioElement1.checked = true;
+                </blockquote>
+                <p>I tym o to sposobem zaznaczyliśmy interesującą nas opcję!</p>
+                <p>Do przydatnych metod łapania pól na pewno zaliczymy:</p>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        click() - symuluje kliknięcie,
+                    </li>
+                    <li className="article__listItem">
+                        focus() - ustawia focus,
+                    </li>
+                    <li className="article__listItem">
+                        blur() - usuwa focus,
+                    </li>
+                </ul>
+            </>
+        )
+    },
+    {
+        id: 38,
+        date: "24 czerwca 2023 roku",
+        title: "JavaScript - Formularze",
+        body: (
+            <>
+                <h4 className="article__subsubsubheader">Przydatne właściwości pól formularza</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        value,
+                    </li>
+                    <li className="article__listItem">
+                        checked dla radio i checkbox,
+                    </li>
+                </ul>
+                <p>Żeby "złapać" input-a i móc nim operować w JS, musimy najpierw dopisać klasę, np.:</p>
+                <blockquote className="article__blockquote">
+                    &lt;input class="js-height">
+                </blockquote>
+                <label>
+                    <input className="js-height" value="170"/>
+                </label>
+                <p>Następnie w naszym pliku script.js wpisujemy: </p>
+                <blockquote className="article__blockquote">
+                    let heightElement = document.querySelector(".js-height");
+                </blockquote>
+                <p>Następnie w script.js wpisujemy:</p>
+                <blockquote className="article__blockquote">
+                    console.log(heightElement);
+                </blockquote>
+                <p>Następnie w konsoli wpisujemy:</p>
+                <blockquote className="article__blockquote">
+                    heightElement.value;
+                </blockquote>
+                <p>Pojawi się tym samym wartość (string) wprowadzona do input-a. Żeby pokazać w konsoli liczbę, nie
+                    string należy wpisać:</p>
+                <blockquote className="article__blockquote">
+                    +heightElement.value;
+                </blockquote>
+                <p>Aby zmienić wartość w inpucie, możemy wpisać do konsoli:</p>
+                <blockquote className="article__blockquote">
+                    heightElement.value = "192";
+                </blockquote>
+                <p>Gdy dodamy value "na wejściu" przez HTML, to będzie to inne value niż to wprowadzone w JS. Przy
+                    wpisaniu value w JS, wartość w oknie dodana w HTML zostanie nadpisana, natomiast wartość atrybutu
+                    value już nie.</p>
+                <p>Żeby to sprawdzić, po ustawieniu w HTML value = "170", wpisujemy w konsolę:</p>
+                <blockquote className="article__blockquote">
+                    let heightElement = document.querySelector(".js-height");
+                </blockquote>
+                <p>Następnie wpiszemy heightElement.value, pokaże "170", ale jak zmienimy w inpucie na "180", to
+                    value w HTML będzie nadal "170".</p>
+            </>
+        )
+    },
+    {
         id: 37,
         date: "22 czerwca 2023 roku",
         title: "HTML - walidacja formularzy",
