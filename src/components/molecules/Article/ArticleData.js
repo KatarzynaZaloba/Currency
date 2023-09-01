@@ -5,6 +5,423 @@ import Schema from "../../../images/schemat.png";
 
 export const articlesLink = [
     {
+        id: 36,
+        date: "21 czerwca 2023 roku",
+        title: "HTML - formularze c.d",
+        body: (
+            <>
+            <h4 className="article__subsubsubheader">input / password - hasło</h4>
+            <label>
+                Podaj swoje hasło:
+                <input name="password" type="password"/>
+            </label>
+            <blockquote className="article__blockquote">
+                &lt;label><br/>
+                &nbsp;&nbsp;&lt;Podaj swoje hasło:<br/>
+                &nbsp;&nbsp;&lt;input type="password" name="password"><br/>
+                &lt;/label><br/>
+            </blockquote>
+            <ul className="article__unorderedList">
+                <li className="article__listItem">
+                    ukrywa wpisywane znaki, natomiast jesteśmy w stanie podejrzeć hasło, wpisując w konsolę
+                    $0.value,
+                </li>
+                <li className="article__listItem">
+                    hasło jest wysyłane <i>plaintext-em</i>, jeśli połączenie nie jest szyfrowane.
+                </li>
+            </ul>
+            <h4 className="article__subsubsubheader">input / number</h4>
+            <label>
+                Twój wzrost:
+                <input name="height" type="number"/>
+            </label>
+            <blockquote className="article__blockquote">
+                &lt;label><br/>
+                &nbsp;&nbsp;&lt;Twój wzrost<br/>
+                &nbsp;&nbsp;&lt;input type="number" name="number"><br/>
+                &lt;/label><br/>
+            </blockquote>
+            <ul className="article__unorderedList">
+                <li className="article__listItem">
+                    pole liczbowe,
+                </li>
+                <li className="article__listItem">
+                    atrybut step (step="any") (step="0,02") określa skalę co ile ma wzrastać wartość,
+                </li>
+                <li className="article__listItem">
+                    atrybuty min i max określają minimalną i maksymalną wartość,
+                </li>
+            </ul>
+            <h4 className="article__subsubsubheader">input / range</h4>
+            <label>
+                Maksymalna cena:
+                <input max="2000" min="1000" name="maxPrice" step="100" type="range"/>
+            </label>
+            <blockquote className="article__blockquote">
+                &lt;label><br/>
+                &nbsp;&nbsp;&lt;Maksymalna cena:<br/>
+                &nbsp;&nbsp;&lt;input type="range" name="maxPrice" min="1000" max="2000" step="100"><br/>
+                &lt;/label><br/>
+            </blockquote>
+            <ul className="article__unorderedList">
+                <li className="article__listItem">
+                    inny sposób na wpisanie liczby,
+                </li>
+                <li className="article__listItem">
+                    warto ustawić min, max i step,
+                </li>
+                <li className="article__listItem">
+                    nie pokazuje liczby.
+                </li>
+            </ul>
+            <h4 className="article__subsubsubheader">input / tel</h4>
+            <label>
+                Numer telefonu:
+                <input name="tel" type="tel"/>
+            </label>
+            <blockquote className="article__blockquote">
+                &lt;label><br/>
+                &nbsp;&nbsp;&lt;Numer telefonu:<br/>
+                &nbsp;&nbsp;&lt;input type="tel" name="tel"><br/>
+                &lt;/label><br/>
+            </blockquote>
+            <ul className="article__unorderedList">
+                <li className="article__listItem">
+                    numer telefonu,
+                </li>
+                <li className="article__listItem">
+                    można wpisać cokolwiek,
+                </li>
+            </ul>
+            <h4 className="article__subsubsubheader">input / url</h4>
+            <label>
+                Adres Twojej strony internetowej:
+                <input name="website" type="url"/>
+            </label>
+            <ul className="article__unorderedList">
+                <li className="article__listItem">
+                    adres URL,
+                </li>
+                <li className="article__listItem">
+                    sprawdza poprawność,
+                </li>
+            </ul>
+            <h4 className="article__subsubsubheader">autocomplete box</h4>
+            <label>
+                Marka samochodu:
+                <input list="carBrands" name="carBrand"/>
+                    <datalist id="carBrands">
+                        <option>Audi</option>
+                        <option>BMW</option>
+                        &lt;
+                        <option>Tesla</option>
+                    </datalist>
+            </label>
+            <blockquote className="article__blockquote">
+                label><br/>
+                &nbsp;&nbsp;&lt;Marka samochodu:<br/>
+                &nbsp;&nbsp;&lt;input name="carBrand" list="carBrands"><br/>
+                &nbsp;&nbsp;&lt;datalist id="carBrands"><br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;option>Audi&lt;/option><br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;option>BMW&lt;/option><br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;option>Tesla&lt;/option><br/>
+                &nbsp;&nbsp;&lt;/datalist><br/>
+                &lt;/label><br/>
+            </blockquote>
+            <ul className="article__unorderedList">
+                <li className="article__listItem">
+                    input z sugerowanymi opcjami (dropdown),
+                </li>
+            </ul>
+            <h4 className="article__subsubsubheader">input / hidden</h4>
+            <input name="something" type="hidden" value="something"/>
+                <blockquote className="article__blockquote">
+                    &lt;input type="hidden" name="something" value="something"><br/>
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        pole niewidoczne dla użytkownika, ale widoczne dla developera,
+                    </li>
+                    <li className="article__listItem">
+                        niemożliwe do edycji, ale wysyłane,
+                    </li>
+                    <li className="article__listItem">
+                        powinien mieć atrybuty name i value.
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">input / color</h4>
+                <label>
+                    <input name="color" type="color" value="#ccc"/>
+                </label>
+                <blockquote className="article__blockquote">
+                    &lt;input name="color" type="color" type="color" value="#ccc"><br/>
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        wybór koloru,
+                    </li>
+                    <li className="article__listItem">
+                        wartość zawsze w formacie 6-znakowego hexa.
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">input / data i czas</h4>
+                <label>
+                    <input name="date" type="date"/>
+                </label>
+                <blockquote className="article__blockquote">
+                    &lt;input name="date" type="date"><br/>
+                </blockquote>
+                <label>
+                    <input name="dateAndTime" type="datetime-local"/>
+                </label>
+                <blockquote className="article__blockquote">
+                    &lt;input name="dateAndTime" type="datetime-local"><br/>
+                </blockquote>
+                <label>
+                    <input name="time" type="time"/>
+                </label>
+                <blockquote className="article__blockquote">
+                    &lt;input name="time" type="time"><br/>
+                </blockquote>
+                <label>
+                    <input name="week" type="week"/>
+                </label>
+                <blockquote className="article__blockquote">
+                    &lt;input name="week" type="week"><br/>
+                </blockquote>
+                <label>
+                    <input name="month" type="month"/>
+                </label>
+                <blockquote className="article__blockquote">
+                    &lt;input name="month" type="month"><br/>
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        słabo wspierane.
+                    </li>
+                </ul>
+            </>
+        )
+    },
+    {
+        id: 35,
+        date: "18 czerwca 2023 roku",
+        title: "HTML - formularze",
+        body: (
+            <>
+                <p>Formularze są najprostszym sposobem na zebranie i wysłanie informacji o użytkowniku.</p>
+                <p>Kod podstawowego formularza wygląda następująco, a poniżej mamy przykład jak taki formularz może
+                    wyglądać.</p>
+                <blockquote className="article__blockquote">
+                    &lt;form><br/>
+                    &nbsp;&nbsp;&lt;p><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;label><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Imię i nazwisko &lt;input name="name"><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label><br/>
+                    &nbsp;&nbsp;&lt;/p><br/>
+                    &nbsp;&nbsp;&lt;p><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;button>Wyślij!&lt;/button><br/>
+                    &nbsp;&nbsp;&lt;/p><br/>
+                    &lt;/form><br/>
+                </blockquote>
+                <form>
+                    <p>
+                        <label>
+                            Imię i nazwisko <input name="name"/>
+                        </label>
+                    </p>
+                    <p>
+                        <button>Wyślij!</button>
+                    </p>
+                </form>
+                <h4 className="article__subsubsubheader">Form - szczegóły</h4>
+                <blockquote className="article__blockquote">
+                    &lt;form <b>action</b>="/strona-docelowa" <b>method</b>="post">&lt;/form>
+                </blockquote>
+                    <ul className="article__unorderedList">
+                        <li className="article__listItem">
+                            atrybut <b>action</b> - adres url, pod który zostanie wysłany formularz
+                        </li>
+                        <li className="article__listItem">
+                            atrybut <b>method</b> - definiuje, jakiej metody HTTP użyjemy do wysłania formularza
+                        </li>
+                    </ul>
+                    <h4 className="article__subsubsubheader">Input (text)</h4>
+                    <blockquote className="article__blockquote">&lt;input name="myName"></blockquote>
+                    <p>Atrybuty:</p>
+                    <ul className="article__unorderedList">
+                        <li className="article__listItem">
+                            <b>name</b> - nazwa pola,
+                        </li>
+                        <li className="article__listItem">
+                            <b>readonly</b> - pole tylko do odczytu,
+                            <label>
+                                <input readOnly/>
+                            </label>
+                        </li>
+                        <li className="article__listItem">
+                            <b>disabled</b> - pole wyłączone/ nieaktywne,
+                            <label>
+                                <input disabled/>
+                            </label>
+                        </li>
+                        <li className="article__listItem">
+                            <b>placeholder</b> - tekst w przypadku pustej wartości,
+                            <label>
+                                <input placeholder="Wpisz coś"/>
+                            </label>
+                        </li>
+                        <li className="article__listItem">
+                            <b>autofocus</b> - skupienie wskaźnika na danym polu input,
+                        </li>
+                    </ul>
+                    <p><b>label</b> - opisuje pole, ważny pod kątem dostępności</p>
+                    <blockquote className="article__blockquote">
+                        &lt;label>Imię i nazwisko&lt;input name="name">&lt;/label><br/><br/>
+                        &lt;!-- lub: --><br/><br/>
+                        &lt;label for="name">Imię i nazwisko:&lt;/label><br/>
+                        &lt;input id="name" name="name"><br/>
+                    </blockquote>
+                    <label>Imię i nazwisko<input name="name"/></label>
+                    <h4 className="article__subsubsubheader">przyciski</h4>
+                    <blockquote className="article__blockquote">
+                        &lt;button>Wyślij!&lt;/button><br/><br/>
+                        &lt;!-- lub: --><br/><br/>
+                        &lt;input type="submit" value="Wyślij!">
+                    </blockquote>
+                    <button>Wyślij!</button>
+                    <ul className="article__unorderedList">
+                        <li className="article__listItem">
+                            mogą mieć różne funkcje w zależności od atrybutu type:
+                            <ul className="article__unorderedList">
+                                <li className="article__listItem"><b>submit</b> - wysyła formularz (domyślny dla
+                                    formularza),
+                                </li>
+                                <li className="article__listItem"><b>reset</b> - resetuje formularz,</li>
+                                <li className="article__listItem"><b>button</b> - zwykły przycisk, brak domyślnej akcji,
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h4 className="article__subsubsubheader">textarea</h4>
+                    <blockquote className="article__blockquote">
+                        &lt;textarea name="description">&lt;/textarea>
+                    </blockquote>
+                    <p><label>
+                        <textarea name="description"></textarea>
+                    </label></p>
+                    <ul className="article__unorderedList">
+                        <li className="article__listItem">pole na wiele linii tekstu,</li>
+                        <li className="article__listItem">przyjmuje tylko zwykły niesformatowany tekst,</li>
+                        <li className="article__listItem">domyślna wartość wewnątrz znacznika,</li>
+                        <li className="article__listItem">posiada znacznik zamykający,</li>
+                        <li className="article__listItem">białe znaki mają znaczenie,</li>
+                        <li className="article__listItem">domyślnie da się zmienić rozmiar okna,</li>
+                        <li className="article__listItem">atrybut <b>cols</b> - szerokość w kolumnach,</li>
+                        <li className="article__listItem">atrybut <b>rows</b> - wysokość w wierszach,</li>
+                    </ul>
+                    <h4 className="article__subsubsubheader">fieldset i legend</h4>
+                    <fieldset>
+                        <legend>Dane osobowe</legend>
+                        <p>
+                            <label>Imię: <input name="firstName"/>
+                            </label>
+                        </p>
+                    </fieldset>
+                    <ul className="article__unorderedList">
+                        <li className="article__listItem">wygodne rozwiązanie do tworzenia grup pól,</li>
+                        <li className="article__listItem">ważne z punktu widzenia dostępności,</li>
+                    </ul>
+                    <h4 className="article__subsubsubheader">input / checkbox — pole wyboru</h4>
+                    <label>
+                        <input checked name="Kuba Badach" type="checkbox"/>
+                    </label>Kuba Badach
+                    <blockquote className="article__blockquote">
+                        &lt;input type="checkbox" name="Kuba Badach" checked>Kuba Badach
+                    </blockquote>
+                    <ul className="article__unorderedList">
+                        <li className="article__listItem">tak / nie</li>
+                        <li className="article__listItem">atrybut checked — domyślne zaznaczenie,</li>
+                        <li className="article__listItem">wartość jest wysyłana tylko, jeśli pole jest zaznaczone,</li>
+                        <li className="article__listItem">jeśli nie ma value, wysyłana jest wartość "on".</li>
+                    </ul>
+                    <h4 className="article__subsubsubheader">input / radio — jeden wybór z wielu opcji</h4>
+                    <label>
+                        <input checked name="favouriteSinger" type="radio" value="badach"/>
+                    </label> Kuba Badach
+                    <label>
+                        <input name="favouriteSinger" type="radio" value="bieber"/>
+                    </label> Justin Bieber
+                    <blockquote className="article__blockquote">
+                        &lt;input type="radio" name="favouriteSinger" value="badach" checked> Kuba Badach<br/>
+                        &lt;input type="radio" name="favouriteSinger" value="bieber" checked> Justin Bieber
+                    </blockquote>
+                    <ul className="article__unorderedList">
+                        <li className="article__listItem">pola z tym samym atrybutem name,</li>
+                        <li className="article__listItem">tylko jedno pole z grupy może być zaznaczone,</li>
+                        <li className="article__listItem">wysyłana jest wartość tylko zaznaczonego pola,</li>
+                        <li className="article__listItem">nie da się odznaczyć pola.</li>
+                    </ul>
+                    <h4 className="article__subsubsubheader">select</h4>
+                    <label>
+                        ulubiony wokalista:
+                        <select name="favouriteSinger">
+                            <option value="badach">Kuba Badach</option>
+                            <option selected value="timberlake">Justin Timberlake</option>
+                        </select>
+                    </label>
+                    <blockquote className="article__blockquote">
+                        &lt;label><br/>
+                        &nbsp;&nbsp;ulubiony wokalista:<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;select name="favouriteSinger"><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="badach">Kuba Badach&lt;/option><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="timberlake" selected>Justin Timberlake
+                        &lt;/option><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/select><br/>
+                        &lt;/label>
+                    </blockquote>
+                    <ul className="article__unorderedList">
+                        <li className="article__listItem">rozwijana lista opcji,</li>
+                        <li className="article__listItem">atrybut selected w option - domyślna wartość,</li>
+                        <li className="article__listItem">zostanie wysłana wartość wybranej opcji,</li>
+                        <li className="article__listItem">atrybut size — liczba widocznych opcji,</li>
+                        <li className="article__listItem">atrybut multiple — wielokrotny wybór.</li>
+                    </ul>
+                    <h4 className="article__subsubsubheader">input / file</h4>
+                    <label>
+                        Załącz swoje CV
+                        <input name="cv" type="file"/>
+                    </label>
+                    <blockquote className="article__blockquote">
+                        &lt;label><br/>
+                        &nbsp;&nbsp;Załącz swoje CV<br/>
+                        &nbsp;&nbsp;&lt;input type="file" name="cv"><br/>
+                        &lt;/label>
+                    </blockquote>
+                    <ul className="article__unorderedList">
+                        <li className="article__listItem">wybór plików,</li>
+                        <li className="article__listItem">atrybut multiple — wiele plików,</li>
+                    </ul>
+                    <h4 className="article__subsubsubheader">input / email</h4>
+                    <label>
+                        Adres e-mail do kontaktu:
+                        <input name="email" type="email"/>
+                    </label>
+                    <blockquote className="article__blockquote">
+                        &lt;label><br/>
+                        &nbsp;&nbsp;Adres e-mail do kontaktu:<br/>
+                        &nbsp;&nbsp;&lt;input type="email" name="email"><br/>
+                        &lt;/label><br/>
+                    </blockquote>
+                    <ul className="article__unorderedList">
+                        <li className="article__listItem">adres e-mail,</li>
+                        <li className="article__listItem">w bardzo podstawowy sposób sprawdza poprawność,</li>
+                        <li className="article__listItem">przy walidacji można użyć atrybutu pattern.</li>
+                    </ul>
+            </>
+        )
+    },
+    {
         id: 34,
         date: "16 czerwca 2023 roku",
         title: "CSS - konwencja BEM",
