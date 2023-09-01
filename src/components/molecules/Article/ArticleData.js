@@ -5,6 +5,186 @@ import Schema from "../../../images/schemat.png";
 
 export const articlesLink = [
     {
+        id: 49,
+        date: "09 lipca 2023 roku",
+        title: "CSS - wyrównanie tekstu, dekoracje, wcięcia, wielkość liter, object-fit, object-position, calc",
+        body: (
+            <>
+            <h4 className="article__subsubsubheader">text-align</h4>
+            <p>Wyrównuje treść wewnątrz elementów blokowych i komórek tabeli</p>
+            <ul className="article__unorderedList">
+                <li className="article__listItem">
+                    Wartości właściwości <b>text-align</b>, których używamy:
+                    <ul className="article__unorderedList">
+                        <li className="article__listItem">
+                            left
+                        </li>
+                        <li className="article__listItem">
+                            right
+                        </li>
+                        <li className="article__listItem">
+                            center
+                        </li>
+                        <li className="article__listItem">
+                            justify
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <h4 className="article__subsubsubheader">text-indent</h4>
+            <p><b>text-indent</b> to właściwość, która jest odpowiedzialna za wcięcie teksty w blokowym elemencie (%
+                odnosi się do szerokości bloku).</p>
+            <h4 className="article__subsubsubheader">text-decoration</h4>
+            <ul className="article__unorderedList">
+                <li className="article__listItem">
+                    określa wygląd linii dekoracyjnych tekstu,
+                </li>
+                <li className="article__listItem">
+                    gdy chcemy usunąć podkreślenie z linku, wpisujemy wartość <b>none</b>,
+                    <blockquote className="article__blockquote">
+                        .element &#123;<br/>
+                        &nbsp;&nbsp;<b>text-decoration:</b> none;<br/>
+                        &#125;;
+                    </blockquote>
+                    </li>
+                        <li className="article__listItem">
+                        <b>text-decoration: underline dotted red</b> - trzy wartości w jednej właściwości, spowodują, że
+                        tekst zostanie podkreślony kropkowaną czerwoną linią,
+                        </li>
+                        <li className="article__listItem">
+                        text-decoration-line:
+                        <ul className="article__unorderedList">
+                        <li className="article__listItem">
+                        <b>underline</b> - podkreślenie,
+                        </li>
+                        <li className="article__listItem">
+                        <b>overline</b> - linia nad tekstem,
+                        </li>
+                        <li className="article__listItem">
+                        <b>line-through</b> - przekreślenie,
+                        </li>
+                        <li className="article__listItem">
+                        kilka po spacji, np <b>underline overline</b>,
+                        </li>
+                        <li className="article__listItem">
+                        <b>none</b> - brak podkreślenia,
+                        </li>
+                        </ul>
+                        </li>
+                        <li className="article__listItem">
+                        <b>text-decoration-color</b> - określa kolor linii
+                        </li>
+                        <li className="article__listItem">
+                        <b>text-decoration-style</b>
+                        <ul className="article__unorderedList">
+                        <li className="article__listItem">
+                        solid
+                        </li>
+                        <li className="article__listItem">
+                        double
+                        </li>
+                        <li className="article__listItem">
+                        dotted
+                        </li>
+                        <li className="article__listItem">
+                        dashed
+                        </li>
+                        <li className="article__listItem">
+                        wavy
+                        </li>
+                        </ul>
+                        </li>
+                        </ul>
+                        <h4 className="article__subsubsubheader">text-transform</h4>
+                        <ul className="article__unorderedList">
+                        <li className="article__listItem">
+                        przydaje się do zamiany wszystkich liter na małe, wielkie lub do zamiany wszystkich pierwszych
+                        liter na wielkie;
+                        </li>
+                        <li className="article__listItem">
+                        wartości:
+                        <ul className="article__unorderedList">
+                        <li className="article__listItem">
+                        <b>uppercase</b> - wszystkie litery wielkie,
+                        </li>
+                        <li className="article__listItem">
+                        <b>lowercase</b> - wszystkie litery małe,
+                        </li>
+                        <li className="article__listItem">
+                        <b>capitalize</b> - pierwsza litera w każdym słowie jest wielka, a reszta liter
+                        pozostaje bez zmian,
+                        </li>
+                        <li className="article__listItem">
+                        <b>none</b> - nie zmienia nic,
+                        </li>
+                        </ul>
+                        </li>
+                        </ul>
+                        <h4 className="article__subsubsubheader">object-fit</h4>
+                        <ul className="article__unorderedList">
+                        <li className="article__listItem">
+                        określa, jak skalować np. obrazek, by wpasować się w kontener,
+                        </li>
+                        <li className="article__listItem">
+                        wartości:
+                        </li>
+                        <li className="article__listItem">
+                        <b>cover</b> - wypełnia kontener, ścina boki,
+                        </li>
+                        <li className="article__listItem">
+                        <b>contain</b> - mieści się w kontenerze, zostawia pustą przestrzeń po bokach,
+                        </li>
+                        <li className="article__listItem">
+                        <b>fill</b> - wartość domyślna - wypełnia kontener, nie zachowując proporcji,
+                        </li>
+                        </ul>
+                        <h4 className="article__subsubsubheader">object-position</h4>
+                        <ul className="article__unorderedList">
+                        <li className="article__listItem">
+                        położenie, np. obrazka w kontenerze,
+                        </li>
+                        <li className="article__listItem">
+                        format taki sam jak przy background-position,
+                        </li>
+                        <li className="article__listItem">
+                        domyślnie: 50% 50%,
+                        </li>
+                        <li className="article__listItem">
+                        <b>contain</b> - mieści się w kontenerze, zostawia pustą przestrzeń po bokach,
+                        </li>
+                        <li className="article__listItem">
+                        <b>fill</b> - wartość domyślna - wypełnia kontener, nie zachowując proporcji,
+                        </li>
+                        </ul>
+                        <h4 className="article__subsubsubheader">calc</h4>
+                        <ul className="article__unorderedList">
+                        <li className="article__listItem">
+                        obliczenia w CSS-ie, kiedy nie chcemy przypisać stałej wartości
+                        </li>
+                        <li className="article__listItem">
+                        <b>width: calc(100%-80px);</b>,
+                        </li>
+                        <li className="article__listItem">
+                        działania
+                        <ul className="article__unorderedList">
+                        <li className="article__listItem">
+                        +-
+                        <ul className="article__unorderedList">
+                        <li className="article__listItem">
+                        koniecznie ze spacją, inaczej nie zadziała
+                        </li>
+                        </ul>
+                        </li>
+                        <li className="article__listItem">
+                        */
+                        </li>
+                        </ul>
+                        </li>
+                        </ul>
+            </>
+        )
+    },
+    {
         id: 48,
         date: "08 lipca 2023 roku",
         title: "CSS - obraz w tle",
