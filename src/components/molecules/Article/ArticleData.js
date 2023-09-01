@@ -5,6 +5,33 @@ import Schema from "../../../images/schemat.png";
 
 export const articlesLink = [
     {
+        id: 23,
+        date: "4 czerwca 2023 roku",
+        title: "JavaScript - składnia",
+        body: (
+            <>
+                <blockquote className="article__blockquote">
+                    <b>let</b> nazwa = wartość;
+                </blockquote>
+                <p>Nazwa zmiennej ma znaczenie — inaczej niż w przypadku <i>HTML</i>, w <i>JavaScript</i> różnice
+                    liter są ważne, więc przypisując wartość do zmiennej <i>nazwa</i>, nie będzie ona przypisana
+                    automatycznie do zmiennych <i>Nazwa</i>, <i>NaZwA</i> itd.
+                </p>
+                <p>Nazwa zmiennej musi zaczynać się od litery, "_" (ang. <i>underscore</i>) lub "$".</p>
+                <p>Nazwa zmiennej jak najbardziej może zawierać cyfry, ale nie mogą one być na pierwszym miejscu.
+                </p>
+                <p>Jest kilka słów wbudowanych do <i>JavaScript-a</i>, których nie możemy użyć do nazwania zmiennej, np.
+                    <i>var</i>, <i>let</i>, <i>function</i> itd. <a href="https://mothereff.in/js-variables"
+                                                                    target="_blank"
+                                                                    title="JavaScript variable name validator">Przydatna
+                        stronka, do
+                        sprawdzenia, czy nazwa, której chcesz użyć, nie jest zajęta</a>.
+                </p>
+                <p>Przy nazywaniu zmiennych używamy konwencji <i>camelCase</i> oraz liter alfabetu łacińskiego..</p>
+            </>
+        )
+    },
+    {
         id: 22,
         date: "4 czerwca 2023 roku",
         title: "JavaScript - sposoby osadzania",
