@@ -5,6 +5,76 @@ import Schema from "../../../images/schemat.png";
 
 export const articlesLink = [
     {
+        id: 37,
+        date: "22 czerwca 2023 roku",
+        title: "HTML - walidacja formularzy",
+        body: (
+            <>
+                <p>Zanim formularz zostanie wysłany, musi zostać zwalidowany.</p>
+                <h4 className="article__subsubsubheader">atrybuty dotyczące walidacji</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        <b>required</b> - pole nie może być puste,
+                    </li>
+                    <li className="article__listItem">
+                        <b>minlength</b> i <b>maxlength</b> - minimalna i maksymalna liczba znaków dla tekstowych
+                        pól,
+                    </li>
+                    <li className="article__listItem">
+                        <b>min</b> lub <b>max</b> - minimalna lub maksymalna wartość dla pól liczbowych i dat/czasu,
+                    </li>
+                    <li className="article__listItem">
+                        <b>type</b> - np. e-mail czy liczba,
+                    </li>
+                    <li className="article__listItem">
+                        <b>pattern</b> - wyrażenie regularne (regular expression).
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">pattern</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        wyrażenie regularne,
+                    </li>
+                    <li className="article__listItem">
+                        czyli wzór-kombinacje znaków,
+                    </li>
+                    <li className="article__listItem">
+                        idealne do walidacji,
+                    </li>
+                    <li className="article__listItem">
+                        type - np. e-mail czy liczba,
+                    </li>
+                    <li className="article__listItem">
+                        przykłady:
+                        <ul className="article__unorderedList">
+                            <li className="article__listItem">https?
+                                <ul className="article__unorderedList">
+                                    <li className="article__listItem">http lub https,</li>
+                                </ul>
+                            </li>
+                            <li className="article__listItem">[0-9]{2} - [0-9]{3},
+                                <ul className="article__unorderedList">
+                                    <li className="article__listItem">kod pocztowy — dwie cyfry, myślnik, 3 cyfry,</li>
+                                </ul>
+                            </li>
+                            <li className="article__listItem">(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8},
+                                <ul className="article__unorderedList">
+                                    <li className="article__listItem">co najmniej 8 znaków, przynajmniej jedna mała
+                                        litera, jedna wielka i jedna cyfra.
+                                    </li>
+                                    <li className="article__listItem">narzędzie do tłumaczenia pattern-ów: regex.com
+                                    </li>
+                                </ul>
+                            </li>
+                            <li className="article__listItem">pattern nie zastępuje required.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </>
+        )
+    },
+    {
         id: 36,
         date: "21 czerwca 2023 roku",
         title: "HTML - formularze c.d",
