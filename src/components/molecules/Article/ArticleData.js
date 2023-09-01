@@ -5,6 +5,27 @@ import Schema from "../../../images/schemat.png";
 
 export const articlesLink = [
     {
+        id: 29,
+        date: "8 czerwca 2023 roku",
+        title: "JavaScript - Ternary (operator potrójny)",
+        body: (
+            <>
+                <blockquote className="article__blockquote">warunek ? jeśliSpełniony() : jeśliNieSpełniony();
+                </blockquote>
+                <p>Jest to krótka i przydatna składnia wtedy, kiedy chcemy sprawdzić prosty warunek — stawiamy warunek,
+                    który jeśli jest spełniony, odpalamy funkcję <i>jeśliSpełniony()</i>, a jeśli nie został spełniony,
+                    odpalamy funkcję <i>jeśliNieSPełniony()</i></p>
+                <p>Na pewno zaletami takiego typu zapisu są</p>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">krótka i wygodna składnia</li>
+                    <li className="article__listItem">najlepszy w sytuacji, gdy mamy jedną zmienną i warunki typu
+                        "tak/nie".
+                    </li>
+                </ul>
+            </>
+        )
+    },
+    {
         id: 28,
         date: "8 czerwca 2023 roku",
         title: "Sandomierz & JavaScript - Switch",
