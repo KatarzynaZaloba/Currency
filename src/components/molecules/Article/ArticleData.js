@@ -5,6 +5,131 @@ import Schema from "../../../images/schemat.png";
 
 export const articlesLink = [
     {
+        id: 50,
+        date: "09 lipca 2023 roku",
+        title: "CSS - Flex",
+        body: (
+            <>
+                <p><b>Flex</b> to moduł w CSS-ie, który pozwala nam układać elementy w wierszach i kolumnach.</p>
+                <p>Aby dodać <b>Flex-a</b> należy przede wszystkim dodać wartość <i>flex</i> do właściwości
+                    <i>display</i>. Nasz (w tym przypadku <i>div</i> zostanie <i>flex-container-em.</i></p>
+                <blockquote className="article__blockquote">
+                    .container &#123;<br/>
+                    &nbsp;&nbsp;<b>display: flex</b>;<br/>
+                    &#125;;
+                </blockquote>
+                    <p>Jeżeli chcemy zobaczyć różnicę położenia obiektów przy wyborze <i>Flex-a</i> i bez wybrania
+                        <i>Flex-a</i>, to weźmy sobie na przykład 3 <i>divy z poniższymi klasami</i>:</p>
+                    <div className="article__div--noFlex">
+                        <div className="article__div--noFlexItem">
+                        </div>
+                        <div className="article__div--noFlexItem">
+                        </div>
+                        <div className="article__div--noFlexItem">
+                        </div>
+                    </div>
+                    <blockquote className="article__blockquote">
+                        &lt;div class="article__div--noFlex"><br/>
+                        &nbsp;&nbsp;&lt;div class="article__div--noFlexItem"><br/>
+                        &nbsp;&nbsp;&lt;/div><br/>
+                        &nbsp;&nbsp;&lt;div class="article__div--noFlexItem"><br/>
+                        &nbsp;&nbsp;&lt;/div><br/>
+                        &nbsp;&nbsp;&lt;div class="article__div--noFlexItem"><br/>
+                        &nbsp;&nbsp;&lt;/div><br/>
+                        &lt;/div><br/>
+                    </blockquote>
+                    <blockquote className="article__blockquote">
+                        .article__div--noFlex &#123;<br/>
+                        &nbsp;&nbsp;margin: auto;<br/>
+                        &nbsp;&nbsp;max-width: 500px;<br/>
+                        &nbsp;&nbsp;border: 10px solid black;<br/>
+                        &#125;<br/><br/>
+
+                        .article__div--noFlexItem &#123;<br/>
+                        &nbsp;&nbsp;padding: 20px;<br/>
+                        &nbsp;&nbsp;background: #39744a;<br/>
+                        &nbsp;&nbsp;color: white;<br/>
+                        &nbsp;&nbsp;margin: 10px;<br/>
+                        &#125;<br/>
+                    </blockquote>
+                        <p>To jest przykład ułożenia kontenerów <i>bez Flex-a</i>. <i>Div</i> jest elementem blokowym,
+                            więc
+                            będzie zajmował całą szerokość dostępnej powierzchni. Oczywiście troszeczkę udoskonaliłam,
+                            dodając
+                            <i>max-width</i> zamiast <i>width</i>, aby wyglądało to też dobrze na mniejszych ekranach.
+                        </p>
+                        <p>Jak natomiast będą się zachowywały <i>div-y</i>, jeżeli dodamy wartość <i>flex</i> do
+                            właściwości <i>display</i>?
+                            Zobaczmy:</p>
+                        <div className="article__div--Flex">
+                            <div className="article__div--FlexItem">
+                            </div>
+                            <div className="article__div--FlexItem">
+                            </div>
+                            <div className="article__div--FlexItem">
+                            </div>
+                        </div>
+                        <p>Jak zauważymy, <i>div-y</i> przestały być elementami blokowymi, natomiast zmieniły się w
+                            elementy
+                            liniowe i zajmują tyle miejsca, ile pozwala im na zmieszczenie się
+                            w <i>div-ie</i> nadrzędnym, czyli
+                            zgodnie z obraną wartością <i>max-width: 500px</i>. Jeśli chodzi o kod, wygląda to teraz
+                            tak:</p>
+                        <blockquote className="article__blockquote">
+                            .article__div--Flex &#123;<br/>
+                            &nbsp;&nbsp;<b>display: flex</b><br/>
+                            &nbsp;&nbsp;margin: auto;<br/>
+                            &nbsp;&nbsp;max-width: 500px;<br/>
+                            &nbsp;&nbsp;border: 10px solid black;<br/>
+                            &#125;<br/><br/>
+
+                            .article__div--FlexItem &#123;<br/>
+                            &nbsp;&nbsp;padding: 20px;<br/>
+                            &nbsp;&nbsp;background: #39744a;<br/>
+                            &nbsp;&nbsp;color: white;<br/>
+                            &nbsp;&nbsp;margin: 10px;<br/>
+                            &#125;<br/>
+                        </blockquote>
+                            <p>W sumie, jak już ćwiczę — sprawdzę jak będą zachowywać się elementy
+                                w <i>div-ie</i> nadrzędnym, jeśli
+                                zwiększę ilość elementów:</p>
+                            <div className="article__div--Flex">
+                                <div className="article__div--FlexItem">
+                                </div>
+                                <div className="article__div--FlexItem">
+                                </div>
+                                <div className="article__div--FlexItem">
+                                </div>
+                                <div className="article__div--FlexItem">
+                                </div>
+                                <div className="article__div--FlexItem">
+                                </div>
+                                <div className="article__div--FlexItem">
+                                </div>
+                                <div className="article__div--FlexItem">
+                                </div>
+                                <div className="article__div--FlexItem">
+                                </div>
+                                <div className="article__div--FlexItem">
+                                </div>
+                            </div>
+                            <p>Będą <em>wyłazić</em> poza kontener (aktualnie tego nie widać, bo od razu naniosłam
+                                zmiany), więc
+                                najrozsądniej jest tutaj wpisać kolejną właściwość, jaką
+                                jest <i>flex-wrap</i> na <i>wrap;</i></p>
+                            <blockquote className="article__blockquote">
+                                .article__div--Flex &#123;<br/>
+                                &nbsp;&nbsp;<b>display: flex<br/>
+                                &nbsp;&nbsp;flex-wrap: wrap;</b><br/>
+                                &nbsp;&nbsp;margin: auto;<br/>
+                                &nbsp;&nbsp;max-width: 500px;<br/>
+                                &nbsp;&nbsp;border: 10px solid black;<br/>
+                                &#125;<br/><br/>
+                            </blockquote>
+            </>
+        )
+    },
+    {
         id: 49,
         date: "09 lipca 2023 roku",
         title: "CSS - wyrównanie tekstu, dekoracje, wcięcia, wielkość liter, object-fit, object-position, calc",
