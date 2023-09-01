@@ -5,6 +5,24 @@ import Schema from "../../../images/schemat.png";
 
 export const articlesLink = [
     {
+
+    },
+    // {
+    //     id: 25,
+    //     date: "4 czerwca 2023 roku",
+    //     title: "JavaScript - ćwiczenie z przyciskiem (addEventListener)",
+    //     body: (
+    //         <>
+    //             <blockquote className="article__blockquote">
+    //                 button.addEventListener("click", () =>&#123;<br/>
+    //                 &nbsp;&nbsp;naglowek.remove();
+    //                 <br/>&#125;);&lt;br>
+    //             </blockquote>
+    //             <button className="button">Usuń nagłówek</button>
+    //         </>
+    //     )
+    // },
+    {
         id: 24,
         date: "4 czerwca 2023 roku",
         title: "JavaScript - document.querySelector()",
