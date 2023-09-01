@@ -6,6 +6,46 @@ import Null from "../../../images/nullUndefined.jpg";
 
 export const articlesLink = [
     {
+        id: 56,
+        date: "17 lipca 2023 roku",
+        title: "JavaScript - prosty kalkulator walutowy",
+        body: (
+            <>
+                <p>Dziś ćwiczę <i>JavaScript</i> tworząc prosty kalkulator walutowy.</p>
+                <div className="calculator__titleContainer--currency">
+                    <h4 className="calculator__title">Kalkulator walut</h4>
+                </div>
+                <form className="js-form2">
+                    <fieldset className="calculator__fieldset">
+                        <legend className="calculator__legend">Podaj wartość i wybierz walutę, aby obliczyć wartość zł
+                            po
+                            kursie
+                        </legend>
+                        <div className="calculator__subContainer">
+                            <label className="calculator__label">
+                                Kwota w PLN
+                                <input className="calculator__input js-input" name="PLN" type="number" min="0.01"
+                                       step="any"
+                                       placeholder="PLN" required/>
+                            </label>
+                            <label className="calculator__label">
+                                Waluta
+                                <select className="calculator__input js-currency" name="currency">
+                                    <option className="calculator__selectOption" value="EUR">EUR</option>
+                                    <option className="calculator__selectOption" value="GBP">GBP</option>
+                                </select>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <button className="calculator__button">Pokaż wartość waluty po kursie</button>
+                    <p className="calculator__paragraph result js-result"> - </p>
+                    <p className="calculator__paragraph--centered">Kurs walut pochodzi z Tabeli nr 135/A/NBP/2023 z dnia
+                        2023-07-14</p>
+                </form>
+            </>
+        )
+    },
+    {
         id: 55,
         date: "14 lipca 2023 roku",
         title: "JavaScript - wstęp do funkcji",
