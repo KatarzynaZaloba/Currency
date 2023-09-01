@@ -5,7 +5,67 @@ import Schema from "../../../images/schemat.png";
 
 export const articlesLink = [
     {
-
+        id: 26,
+        date: "6 czerwca 2023 roku",
+        title: "JavaScript - if else",
+        body: (
+            <>
+                <p>
+                    Zanim przejdę do powtórzenia materiału, ogłoszę wszem wobec, że zostałam obdarzona <em>mega
+                </em>zaufaniem i otrzymałam swoją drugą szansę w postaci pracy!
+                </p>
+                <p>Na razie ogrom informacji trochę mnie przytłacza, jednak głęboko wierzę, że się wyrobię z czasem.
+                </p>
+                <p>Niestety muszę na moment opuścić <i>HTML</i> i <i>CSS</i>, żeby wgryźć się jeszcze raz z
+                    <i>JavaScript</i>-em.
+                </p>
+                <p>Instrukcje warunkowe są niesamowicie przydatne w podejmowaniu decyzji. Podstawową instrukcją
+                    warunkową jest na pewno <i>if else:</i>
+                </p>
+                <blockquote className="article__blockquote">
+                    <b>if</b> (warunek) &#123;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;zróbCośJeśliSpełniony();<br/>
+                    &#125; <b>else</b> &#123;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;zróbCośInnegoJeśliNiespełniony();
+                </blockquote>
+                    <p>Tłumacząc najprościej, powyżej mamy <i>if</i> (jeżeli) warunek zostanie wykonany, wykonaj funkcję
+                    (program) zróbCośJeśliSpełniony(); w innym przypadku wykonaj funkcję (program)
+                    zróbCośInnegoJeśliNiespełniony().</p>
+                    <p>A oto i kilka innych przykładów z <i>if else</i></p>
+                    <blockquote class="article__blockquote">
+                    <b>if</b> (number1 > number2) &#123;<br/>
+                    &nbsp;&nbsp;console.log("number1 jest większa.");<br/>
+                    &#125;<b> else</b> &#123;<br/>
+                    &nbsp;&nbsp;console.log("number1 nie jest większa!");<br/>&#125;
+                </blockquote>
+                    <p>Czyli znowu, jeżeli warunek, w którym number1 jest większa od number2 zostanie spełniony, pokaż w
+                        konsoli "number1 jest większa". W przeciwnym przypadku pokaż w konsoli "number1 nie jest
+                        większa"</p>
+                    <blockquote className="article__blockquote">
+                        <b>if</b> (container.classList.contains("dark"))&#123;<br/>
+                        &nbsp;&nbsp;console.log("Jest ustawiony ciemny motyw!"); <br/>
+                        &#125;
+                    </blockquote>
+                        <p>Jeżeli klasa elementu z nazwą <i>container</i> zawiera klasę "dark", wyświetl na konsoli
+                            "Jest
+                            ustawiony ciemny motyw!"</p>
+                        <blockquote className="article__blockquote">
+                            <b>if</b> (button.innerText === "Zamknij")&#123;<br/>
+                            &nbsp;&nbsp;button.innerText === "Otwórz";<br/>&#125;
+                        </blockquote>
+                            <p>
+                                Jeżeli w przycisku jest tekst "Zamknij", to wpisujemy do przycisku tekst "Otwórz".
+                            </p>
+                            <p>
+                                Należy pamiętać, że <i>else</i> nie jest obowiązkowy, natomiast kod w
+                                bloku <i>if</i> wykona się
+                                zawsze, niezależnie od warunku.
+                            </p>
+                            <p>
+                                Klamry nie zawsze są wymagane, ale lepiej <b>ich nie pomijać</b>
+                            </p>
+            </>
+        ),
     },
     // {
     //     id: 25,
