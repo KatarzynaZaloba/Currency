@@ -5,6 +5,82 @@ import Schema from "../../../images/schemat.png";
 
 export const articlesLink = [
     {
+        id: 28,
+        date: "8 czerwca 2023 roku",
+        title: "Sandomierz & JavaScript - Switch",
+        body: (
+            <>
+                <p>
+                    Dziś zawędrowałam do <i>miasta ojca Mateusza</i>. Mam tym samym niezwykłą sposobność zmiany
+                    środowiska i może częściowe wytchnienie. Jednak mimo urlopu nie zatrzymuje się i wracam do powtórki
+                    materiałów z kursu <i>Krzyśka Dąbrowskiego</i>. Jeszcze tylko mały obrazek z Sandomierzem i
+                    działamy.
+                </p>
+                <figure className="article__figure">
+                    <img alt="starówka Sandomierza" className="panorama article__image"
+                         src="https://swietokrzyskie.travel/media/cache/original/uploads/5d3814683ddf7.jpg"/>
+                        <figcaption className="article__figcaption">">widok z lotu ptaka na starówkę w
+                            Sandomierzu<br/>źródło: <a
+                                href="https://swietokrzyskie.travel/informator_turystyczny/miasta_i_regiony/sandomierz_sandomierz"
+                                title="swietokrzyskie.travel">https://swietokrzyskie.travel/informator_turystyczny/miasta_i_regiony/sandomierz_sandomierz</a>
+                        </figcaption>
+                </figure>
+                <p>
+                    Zauważyłam też, że mam problem z akapitami w &lt;blockquote&gt; i wszystkie odstępy się zlewają —
+                    naprawię poprzednie wpisy z czasem, a na razie pozwoliłam sobie na poprawkę w poniższym elemencie
+                    HTML.
+                </p>
+                <blockquote className="article__blockquote">
+                    <b>switch</b> (wyrażenie) &#123;<br/>
+                    &nbsp;&nbsp;<b>case</b> opcja 1:<br/>
+                    &nbsp;&nbsp;<b>case</b> opcja 2:<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;wykonajTenKod();<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>break</b>;<br/><br/>
+                    &nbsp;&nbsp;<b>case</b> opcja 3:<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;zamiastTegoWykonajTenKod();<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>break</b>;<br/><br/>
+                    &nbsp;&nbsp;<b>default</b>:<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;jeśliNicNiePasujeWykonajTenKod();<br/>
+                    &#125;
+                </blockquote>
+                    <p>
+                        Konstrukcja switch pozwala na operacje na kilku opcjach naraz bez wchodzenia w
+                        stan <i>"ifozy"</i>.
+                        Pomoże nam uprościć sprawę, jeśli chcemy w zależności od jakiegoś wyrażenia, zrobić kilka
+                        różnych
+                        rzeczy. Mamy tutaj:
+                    </p>
+                    <ul className="article__unorderedList">
+                        <li className="article__listItem"><b>switch</b></li>
+                        <li className="article__listItem"><b>wyrażenie</b> - może tutaj być cokolwiek</li>
+                        <li className="article__listItem"><b>case1 & case2</b> - opcje; tutaj kod wykona się zarówno
+                            przy opcji1, jak i opcji2
+                        </li>
+                        <li className="article__listItem"><b>break</b> - słowo kluczowe, które jest potrzebne, żeby nie
+                            wykonał się kolejny kod;
+                            umożliwia zakończenie <i>switch</i>-a, po spełnieniu (w tym przypadku) którejś z opcji.
+                        </li>
+                        <li className="article__listItem"><b>case3</b> - opcja trzecia, gdzie mamy jeszcze inny kod do
+                            wykonania
+                        </li>
+                        <li className="article__listItem"><b>default</b> - blok, w którym wykona się kod, jeżeli żadna z
+                            powyższych opcji nie jest
+                            spełniona, czyli jeżeli żadna opcja nie pasuje do tego wyrażenia, które daliśmy w nawiasie
+                            po <i>switch</i>; nie jest obowiązkowy, ale pomijajmy go, dopiero jak będziemy 100% pewnie,
+                            że
+                            zawarliśmy wszystkie opcje w <i>switch!</i></li>
+                    </ul>
+                    <p>Kiedy przydaje się switch?</p>
+                    <ul className="article__unorderedList">
+                        <li className="article__listItem">kiedy byłoby za dużo <i>if else</i></li>
+                        <li className="article__listItem">kiedy mamy kilka opcji w zależności od wartości jednego
+                            wyrażenia
+                        </li>
+                    </ul>
+            </>
+        )
+    },
+    {
         id: 27,
         date: "7 czerwca 2023 roku",
         title: "JavaScript - else if - ćwiczenie",
