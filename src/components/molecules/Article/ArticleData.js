@@ -6,6 +6,459 @@ import Null from "../../../images/nullUndefined.jpg";
 
 export const articlesLink = [
     {
+        id: 58,
+        date: "18 lipca 2023 roku",
+        title: "CSS - Grid",
+        body: (
+            <>
+                <p><i>Grid</i> jest połączeniem tabeli i <i>FLex-a</i>.</p>
+                <h4 className="article__subsubsubheader">Podstawowy przykład</h4>
+                <p>Trzy kolumny - szerokie na 100px, 200px i 300px.</p>
+                <blockquote className="article__blockquote">
+                    .container &#123;<br/>
+                    &nbsp;&nbsp;display: grid;<br/>
+                    &nbsp;&nbsp;grid-template-columns: 100px 200px 300px<br/>
+                    &#125;<br/>
+                </blockquote>
+                    <div className="container--Grid">
+                        <div className="container__item--Grid">1</div>
+                        <div className="container__item--Grid">2</div>
+                        <div className="container__item--Grid">3</div>
+                        <div className="container__item--Grid">4</div>
+                        <div className="container__item--Grid">5</div>
+                        <div className="container__item--Grid">6</div>
+                        <div className="container__item--Grid">7</div>
+                        <div className="container__item--Grid">8</div>
+                    </div>
+                    <h4 className="article__subsubsubheader">Jednostka fr</h4>
+                    <blockquote className="article__blockquote">
+                        .container &#123;<br/>
+                        &nbsp;&nbsp;display: grid;<br/>
+                        &nbsp;&nbsp;grid-template-columns: 100px 1fr 2fr<br/>
+                        &#125;<br/>
+                    </blockquote>
+                        <ul className="article__unorderedList">
+                            <li className="article__listItem">ułamek (fraction) dostępnej przestrzeni
+                            </li>
+                            <li>3 kolumny:
+                                <ul className="article__unorderedList">
+                                    <li className="article__listItem">
+                                        100px,
+                                    </li>
+                                    <li className="article__listItem">
+                                        1/3 dostępnej przestrzeni,
+                                    </li>
+                                    <li className="article__listItem">
+                                        2/3 dostępnej przestrzeni,
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div className="container--Grid2">
+                            <div className="container__item--Grid2">1</div>
+                            <div className="container__item--Grid2">2</div>
+                            <div className="container__item--Grid2">3</div>
+                            <div className="container__item--Grid2">4</div>
+                            <div className="container__item--Grid2">5</div>
+                            <div className="container__item--Grid2">6</div>
+                            <div className="container__item--Grid2">7</div>
+                            <div className="container__item--Grid2">8</div>
+                        </div>
+                        <h4 className="article__subsubsubheader">Repeat</h4>
+                        <blockquote className="article__blockquote">
+                            .container &#123;<br/>
+                            &nbsp;&nbsp;display: grid;<br/>
+                            &nbsp;&nbsp;grid-template-columns: repeat(3, 1fr);<br/>
+                            &#125;<br/>
+                        </blockquote>
+                            <ul className="article__unorderedList">
+                                <li className="article__listItem">
+                                    wygodny zapis
+                                </li>
+                                <li className="article__listItem">
+                                    3 kolumny równiej szerokości
+                                </li>
+                            </ul>
+                            <div className="container--Grid3">
+                                <div className="container__item--Grid3">1</div>
+                                <div className="container__item--Grid3">2</div>
+                                <div className="container__item--Grid3">3</div>
+                                <div className="container__item--Grid3">4</div>
+                                <div className="container__item--Grid3">5</div>
+                                <div className="container__item--Grid3">6</div>
+                                <div className="container__item--Grid3">7</div>
+                                <div className="container__item--Grid3">8</div>
+                            </div>
+                            <h4 className="article__subsubsubheader">Bardziej złożony przykład repeat</h4>
+                            <blockquote className="article__blockquote">
+                                .container &#123;<br/>
+                                &nbsp;&nbsp;display: grid;<br/>
+                                &nbsp;&nbsp;grid-template-columns: 100px repeat(2, 1fr, 2fr);<br/>
+                                &#125;<br/>
+                            </blockquote>
+                                <ul className="article__unorderedList">
+                                    <li className="article__listItem">
+                                        5 kolumn
+                                        <ul className="article__unorderedList">
+                                            <li className="article__listItem">
+                                                100px,
+                                            </li>
+                                            <li className="article__listItem">
+                                                1/6 dostępnej przestrzeni
+                                            </li>
+                                            <li className="article__listItem">
+                                                1/3 dostępnej przestrzeni
+                                            </li>
+                                            <li className="article__listItem">
+                                                1/6 dostępnej przestrzeni
+                                            </li>
+                                            <li className="article__listItem">
+                                                1/3 dostępnej przestrzeni
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <div className="container--Grid4">
+                                    <div className="container__item--Grid4">1</div>
+                                    <div className="container__item--Grid4">2</div>
+                                    <div className="container__item--Grid4">3</div>
+                                    <div className="container__item--Grid4">4</div>
+                                    <div className="container__item--Grid4">5</div>
+                                    <div className="container__item--Grid4">6</div>
+                                    <div className="container__item--Grid4">7</div>
+                                    <div className="container__item--Grid4">8</div>
+                                </div>
+                                <h4 className="article__subsubsubheader">Auto-fill</h4>
+                                <blockquote className="article__blockquote">
+                                    .container &#123;<br/>
+                                    &nbsp;&nbsp;display: grid;<br/>
+                                    &nbsp;&nbsp;grid-template-columns: repeat(auto-fill, 200px);<br/>
+                                    &#125;<br/>
+                                </blockquote>
+                                    <ul className="article__unorderedList">
+                                        <li className="article__listItem">
+                                            kolumny szerokie na 200px,
+                                        </li>
+                                        <li className="article__listItem">
+                                            tyle, ile się zmieści
+                                        </li>
+                                    </ul>
+                                    <div className="container--Grid5">
+                                        <div className="container__item--Grid4">1</div>
+                                        <div className="container__item--Grid4">2</div>
+                                        <div className="container__item--Grid4">3</div>
+                                        <div className="container__item--Grid4">4</div>
+                                        <div className="container__item--Grid4">5</div>
+                                        <div className="container__item--Grid4">6</div>
+                                        <div className="container__item--Grid4">7</div>
+                                        <div className="container__item--Grid4">8</div>
+                                    </div>
+                                    <h4 className="article__subsubsubheader">Minmax</h4>
+                                    <blockquote className="article__blockquote">
+                                        .container &#123;<br/>
+                                        &nbsp;&nbsp;display: grid;<br/>
+                                        &nbsp;&nbsp;grid-template-columns: repeat(auto-fill, minmax(200px, 1fr);<br/>
+                                        &#125;<br/>
+                                    </blockquote>
+                                        <ul className="article__unorderedList">
+                                            <li className="article__listItem">
+                                                bardziej elastyczne podejście do szerokości kolumn
+                                            </li>
+                                        </ul>
+                                        <div className="container--Grid6">
+                                            <div className="container__item--Grid4">1</div>
+                                            <div className="container__item--Grid4">2</div>
+                                            <div className="container__item--Grid4">3</div>
+                                            <div className="container__item--Grid4">4</div>
+                                            <div className="container__item--Grid4">5</div>
+                                            <div className="container__item--Grid4">6</div>
+                                            <div className="container__item--Grid4">7</div>
+                                            <div className="container__item--Grid4">8</div>
+                                        </div>
+                                        <h4 className="article__subsubsubheader">gap</h4>
+                                        <blockquote className="article__blockquote">
+                                            .container &#123;<br/>
+                                            &nbsp;&nbsp;display: grid;<br/>
+                                            &nbsp;&nbsp;grid-template-columns: repeat(3, 1fr);<br/>
+                                            &nbsp;&nbsp;grid-gap: 20px 30px;<br/>
+                                            &#125;<br/>
+                                        </blockquote>
+                                            <ul className="article__unorderedList">
+                                                <li className="article__listItem">
+                                                    odstęp między wierszami i kolumnami
+                                                </li>
+                                                <li className="article__listItem">
+                                                    jedna wartość — równe odstępy
+                                                </li>
+                                                <li className="article__listItem">
+                                                    właściwość <i>gap</i> nie działa w Safari.
+                                                </li>
+                                                <li className="article__listItem">
+                                                    właściwość <i>gap</i> nie istnieje
+                                                    we <i>Flex-ie</i> poza <i>Mozillą</i>.
+                                                </li>
+                                            </ul>
+                                            <div className="container--Grid7">
+                                                <div className="container__item--Grid7">1</div>
+                                                <div className="container__item--Grid7">2</div>
+                                                <div className="container__item--Grid7">3</div>
+                                                <div className="container__item--Grid7">4</div>
+                                                <div className="container__item--Grid7">5</div>
+                                                <div className="container__item--Grid7">6</div>
+                                                <div className="container__item--Grid7">7</div>
+                                                <div className="container__item--Grid7">8</div>
+                                            </div>
+                                            <h4 className="article__subsubsubheader">gap - row/column</h4>
+                                            <p>Możemy też ustawić <i>gap</i> <em>tylko</em> między wierszami
+                                                lub <em>tylko</em> między kolumnami.
+                                            </p>
+                                            <blockquote className="article__blockquote">
+                                                .container &#123;<br/>
+                                                &nbsp;&nbsp;display: grid;<br/>
+                                                &nbsp;&nbsp;grid-template-columns: repeat(3, 1fr);<br/>
+                                                &nbsp;&nbsp;grid-row-gap: 20px;<br/>
+                                                &#125;<br/>
+                                            </blockquote>
+                                                <div className="container--Grid8">
+                                                    <div className="container__item--Grid7">1</div>
+                                                    <div className="container__item--Grid7">2</div>
+                                                    <div className="container__item--Grid7">3</div>
+                                                    <div className="container__item--Grid7">4</div>
+                                                    <div className="container__item--Grid7">5</div>
+                                                    <div className="container__item--Grid7">6</div>
+                                                    <div className="container__item--Grid7">7</div>
+                                                    <div className="container__item--Grid7">8</div>
+                                                </div>
+                                                <p>lub:</p>
+                                                <blockquote className="article__blockquote">
+                                                    .container &#123;<br/>
+                                                    &nbsp;&nbsp;display: grid;<br/>
+                                                    &nbsp;&nbsp;grid-template-columns: repeat(3, 1fr);<br/>
+                                                    &nbsp;&nbsp;grid-column-gap: 20px;
+                                                    &#125;<br/>
+                                                </blockquote>
+                                                    <div className="container--Grid9">
+                                                        <div className="container__item--Grid7">1</div>
+                                                        <div className="container__item--Grid7">2</div>
+                                                        <div className="container__item--Grid7">3</div>
+                                                        <div className="container__item--Grid7">4</div>
+                                                        <div className="container__item--Grid7">5</div>
+                                                        <div className="container__item--Grid7">6</div>
+                                                        <div className="container__item--Grid7">7</div>
+                                                        <div className="container__item--Grid7">8</div>
+                                                    </div>
+                                                    <p>Podsumowując, nie używamy <i>gap: 20px</i> tylko stosujemy <i>grid-gap:
+                                                        20px</i>, ponieważ pierwsze
+                                                        rozwiązanie nie zadziała nam w przeglądarce <i>Safari</i></p>
+                                                    <h4 className="article__subsubsubheader">grid-template-rows</h4>
+                                                    <blockquote className="article__blockquote">
+                                                        .container &#123;<br/>
+                                                        &nbsp;&nbsp;display: grid;<br/>
+                                                        &nbsp;&nbsp;grid-template-rows: repeat(3, 100px 200px);<br/>
+                                                        &#125;<br/>
+                                                    </blockquote>
+                                                        <ul className="article__unorderedList">
+                                                            <li className="article__listItem">
+                                                                definiujemy wiersze zamiast kolumn,
+                                                            </li>
+                                                            <li className="article__listItem">
+                                                                możemy definiować i wiersze i kolumny
+                                                            </li>
+                                                        </ul>
+                                                        <div className="container--Grid10">
+                                                            <div className="container__item--Grid7">1</div>
+                                                            <div className="container__item--Grid7">2</div>
+                                                            <div className="container__item--Grid7">3</div>
+                                                            <div className="container__item--Grid7">4</div>
+                                                            <div className="container__item--Grid7">5</div>
+                                                            <div className="container__item--Grid7">6</div>
+                                                            <div className="container__item--Grid7">7</div>
+                                                            <div className="container__item--Grid7">8</div>
+                                                        </div>
+                                                        <h4 className="article__subsubsubheader">grid-auto-rows</h4>
+                                                        <blockquote className="article__blockquote">
+                                                            .container &#123;<br/>
+                                                            &nbsp;&nbsp;display: grid;<br/>
+                                                            &nbsp;&nbsp;grid-template-columns: repeat(2, 1fr);<br/>
+                                                            &nbsp;&nbsp;grid-template-rows: 50px;<br/>
+                                                            &nbsp;&nbsp;grid-auto-rows: 100px 200px;<br/>
+                                                            &#125;<br/>
+                                                        </blockquote>
+                                                            <ul className="article__unorderedList">
+                                                                <li className="article__listItem">
+                                                                    wysokość wierszy dodanych automatycznie
+                                                                    <ul className="article__unorderedList">
+                                                                        <li className="article__listItem">
+                                                                            czyli tzw. <i>implicit grid</i> (niejawny,
+                                                                            domniemany)
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li className="article__listItem">
+                                                                    domyślnie takie wiersze mają wysokość odpowiadającą
+                                                                    treści najwyższego elementu w wierszu
+                                                                </li>
+                                                            </ul>
+                                                            <div className="container--Grid11">
+                                                                <div className="container__item--Grid7">1</div>
+                                                                <div className="container__item--Grid7">2</div>
+                                                                <div className="container__item--Grid7">3</div>
+                                                                <div className="container__item--Grid7">4</div>
+                                                                <div className="container__item--Grid7">5</div>
+                                                                <div className="container__item--Grid7">6</div>
+                                                                <div className="container__item--Grid7">7</div>
+                                                                <div className="container__item--Grid7">8</div>
+                                                            </div>
+                                                            <h4 className="article__subsubsubheader">Zagnieżdżanie
+                                                                grida</h4>
+                                                            <blockquote className="article__blockquote">
+                                                                .container &#123;<br/>
+                                                                &nbsp;&nbsp;display: grid;<br/>
+                                                                &nbsp;&nbsp;grid-template-columns: repeat(2, 1fr);<br/>
+                                                                &nbsp;&nbsp;grid-gap: 10px;<br/>
+                                                                &#125;<br/>
+                                                                .container__item &#123;<br/>
+                                                                &nbsp;&nbsp;display: grid;<br/>
+                                                                &nbsp;&nbsp;grid-template-rows: 100px 200px<br/>
+                                                                &nbsp;&nbsp;grid-gap: 20px;<br/>
+                                                                &#125;<br/>
+                                                            </blockquote>
+                                                                <div className="container--Grid12">
+                                                                    <div className="container__item--Grid12">1</div>
+                                                                    <div className="container__item--Grid12">2</div>
+                                                                    <div className="container__item--Grid12">3</div>
+                                                                    <div className="container__item--Grid12">4</div>
+                                                                    <div className="container__item--Grid12">
+                                                                        <div>A</div>
+                                                                        <div>B</div>
+                                                                    </div>
+                                                                    <div className="container__item--Grid12">6</div>
+                                                                    <div className="container__item--Grid12">7</div>
+                                                                    <div className="container__item--Grid12">8</div>
+                                                                </div>
+                                                                <ul className="article__unorderedList">
+                                                                    <li className="article__listItem">
+                                                                        dwa zupełnie odrębne gridy ze swoimi
+                                                                        właściwościami - <i>siatka w siatce</i></li>
+                                                                </ul>
+                                                                <h4 className="article__subsubsubheader">Wyrównanie</h4>
+                                                                <ul className="article__unorderedList">
+                                                                    <li className="article__listItem">
+                                                                        <b>align-items, justify-items</b>
+                                                                        <ul className="article__unorderedList">
+                                                                            <li className="article__listItem">
+                                                                                wyrównują w wierszach lub w kolumnach
+                                                                            </li>
+                                                                            <li className="article__listItem">
+                                                                                wartości: start | end | center
+                                                                            </li>
+                                                                            <li className="article__listItem">
+                                                                                domyślnie elementy się rozciągają
+                                                                            </li>
+                                                                            <li className="article__listItem">
+                                                                                <b>align-self i
+                                                                                    justify-self</b> pozwalają na inne
+                                                                                wyrównanie dla poszczególnych
+                                                                                elementów
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                                <div className="container--Grid13">
+                                                                    <div className="container__item--Grid13">1</div>
+                                                                    <div className="container__item--Grid13">2</div>
+                                                                    <div className="container__item--Grid13">3</div>
+                                                                    <div className="container__item--Grid13">4</div>
+                                                                    <div className="container__item--Grid13">5</div>
+                                                                    <div className="container__item--Grid13">6</div>
+                                                                    <div className="container__item--Grid13">7</div>
+                                                                    <div
+                                                                        className="container__item--Grid13 container__item--Grid13last">8
+                                                                    </div>
+                                                                </div>
+                                                                <ul className="article__unorderedList">
+                                                                    <li className="article__listItem">
+                                                                        <b>align-content, justify-content</b>
+                                                                        <ul className="article__unorderedList">
+                                                                            <li className="article__listItem">
+                                                                                określają rozmieszczenie przestrzeni
+                                                                                między wierszami lub kolumnami
+                                                                            </li>
+                                                                            <li className="article__listItem">
+                                                                                wartości: start | end | center | stretch
+                                                                                | space-around | space-between |
+                                                                                space-evenly
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                                <div className="container--Grid14">
+                                                                    <div className="container__item--Grid14">1</div>
+                                                                    <div className="container__item--Grid14">2</div>
+                                                                    <div className="container__item--Grid14">3</div>
+                                                                    <div className="container__item--Grid14">4</div>
+                                                                </div>
+                                                                <h4 className="article__subsubsubheader">Zmiana
+                                                                    położenia elementu w <i>Grid-zie</i></h4>
+                                                                <blockquote className="article__blockquote">
+                                                                    .container &#123;<br/>
+                                                                    &nbsp;&nbsp;display: grid;<br/>
+                                                                    &nbsp;&nbsp;grid-template-columns: repeat(5,
+                                                                    1fr);<br/>
+                                                                    &nbsp;&nbsp;grid-template-rows: repeat(5,
+                                                                    100px);<br/>
+                                                                    &#125;<br/><br/>
+                                                                    .container__elemenent &#123;<br/>
+                                                                    &nbsp;&nbsp;grid-column-start: 3;<br/>
+                                                                    &nbsp;&nbsp;grid-column-end: -2;<br/>
+                                                                    &nbsp;&nbsp;grid-row-start: 1<br/>
+                                                                    &nbsp;&nbsp;grid-row-end: 3;<br/>
+                                                                    &#125;
+                                                                </blockquote>
+                                                                    <div className="container--Grid15">
+                                                                        <div className="container__item--Grid15">1</div>
+                                                                        <div className="container__item--Grid15">2</div>
+                                                                        <div className="container__item--Grid15">3</div>
+                                                                        <div className="container__item--Grid15">4</div>
+                                                                        <div className="container__item--Grid15">5</div>
+                                                                        <div className="container__item--Grid15">6</div>
+                                                                        <div className="container__item--Grid15">7</div>
+                                                                        <div
+                                                                            className="container__item--Grid15 container__item--Grid15last">8
+                                                                        </div>
+                                                                    </div>
+                                                                    <p>Jeszcze inny przykład z użyciem <i>span</i>.</p>
+                                                                    <blockquote className="article__blockquote">
+                                                                        .container__elemenent &#123;<br/>
+                                                                        &nbsp;&nbsp;grid-column-start: 3;<br/>
+                                                                        &nbsp;&nbsp;grid-column-end: span 3;<br/>
+                                                                        &nbsp;&nbsp;grid-row-start: 1<br/>
+                                                                        &nbsp;&nbsp;grid-row-end: span 3;<br/>
+                                                                        &#125;
+                                                                    </blockquote>
+                                                                        <div className="container--Grid15">
+                                                                            <div className="container__item--Grid15">1
+                                                                            </div>
+                                                                            <div className="container__item--Grid15">2
+                                                                            </div>
+                                                                            <div className="container__item--Grid15">3
+                                                                            </div>
+                                                                            <div className="container__item--Grid15">4
+                                                                            </div>
+                                                                            <div className="container__item--Grid15">5
+                                                                            </div>
+                                                                            <div className="container__item--Grid15">6
+                                                                            </div>
+                                                                            <div className="container__item--Grid15">7
+                                                                            </div>
+                                                                            <div
+                                                                                className="container__item--Grid15 container__item--Grid16last">8
+                                                                            </div>
+                                                                        </div>
+            </>
+        )
+    },
+    {
         id: 57,
         date: "17 lipca 2023 roku",
         title: "CSS- Media queries",
