@@ -3,11 +3,210 @@ import "./style.css";
 import Kate from "../../../images/scarpa.jpg";
 import Schema from "../../../images/schemat.png";
 import Null from "../../../images/nullUndefined.jpg";
+import Blockquote from "../../atoms/Blockquote";
+import SmallestHeader from "../../atoms/SmallestHeader";
+import ListUnordered from "../../molecules/ListUnordered";
+import ListItem from "../../atoms/ListItem";
+import ListOrdered from "../../molecules/ListOrdered";
+import Table from "../../molecules/Table";
+import Caption from "../../atoms/Caption";
+import Thead from "../../atoms/Thead";
+import Tr from "../../atoms/Tr";
+import Th from "../../atoms/Th";
+import TableContainer from "../../atoms/TableContainer";
 
 export const articlesLink = [
     {
+        id: 73
+    },
+    {
+        id: 72,
+        date: "1 sierpnia 2023 roku",
+        title: "React",
+        body: (
+            <>
+                <p>React jest odpowiedzialny za to, żeby łatwo podzielić na komponenty aplikację
+                    i
+                    renderować dynamicznie HTML-a</p>
+                <SmallestHeader>React</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>React.js jest biblioteką JavaScript</ListItem>
+                    <ListItem>bardzo ułatwia tworzenie interaktywnych
+                        interfejsów użytkownika (coś
+                        dynamicznie się zmienia na stronie po akcji użytkownika bez potrzeby
+                        przeładowywania całej
+                        strony)
+                    </ListItem>
+                    <ListItem>pozwala na efektywne renderowanie
+                        <ListUnordered>
+                            <ListItem>aktualizuje tylko to, co trzeba w
+                                drzewie DOM
+                            </ListItem>
+                        </ListUnordered>
+                    </ListItem>
+                    <ListItem>bazuje na komponentach
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>Dodanie Reacta i Babela do strony</SmallestHeader>
+                <Blockquote>
+                    &lt;script defer src="https://unpkg.com/react@18/umd/react.development.js"
+                    crossorigin>&lt;/script><br/>
+                    &lt;script defer
+                    src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+                    crossorigin>&lt;/script><br/>
+                    &lt;script defer
+                    src="https://unpkg.com/babel-standalone@6/babel.min.js">&lt;/script><br/>
+                </Blockquote>
+                <SmallestHeader>Pierwszy element React i render</SmallestHeader>
+                <Blockquote>
+                    &lt;div id="root">&lt;/div><br/>
+                    &lt;script type="text/babel"><br/>
+                    &nbsp;&nbsp;const element = &lt;h1>Hello, world!&lt;/h1>;<br/>
+                    &nbsp;&nbsp;ReactDOM.render(element, document.getElementById('root'));<br/>
+                    &lt;/script>
+                </Blockquote>
+                <SmallestHeader>JSX</SmallestHeader>
+                <Blockquote>
+                    const element = <h3>Hello world!</h3>;
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>to nie jest łańcuch znaków, to nie jest <b>HTML</b>, to
+                        jest <b>JSX</b>
+                        <ListUnordered>
+                            <ListItem>czyli rozszerzenie składni <b>JS</b>
+                            </ListItem>
+                        </ListUnordered>
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>Wyrażenia wewnątrz JSX</SmallestHeader>
+                <Blockquote>
+                    const name = "Kasia";<br/>
+                    const element = &lt;h1>Cześć &#123;name&#125;!&lt;/h1>;
+                </Blockquote>
+            </>
+        )
+    },
+    {
+        id: 71,
+        date: "31 lipca 2023 roku",
+        title: "Immutability - c.d.",
+        body: (
+            <>
+                <>
+                    <SmallestHeader>Edycja elementu tablicy</SmallestHeader>
+                    <Blockquote>
+                        <b>const</b> tasks = [<br/>
+                        &nbsp;&nbsp;&#123title: "ugotować obiad", done: false&#125;,<br/>
+                        &nbsp;&nbsp;&#123title: "zrobić pranie", done: true&#125;,<br/>
+                        &nbsp;&nbsp;&#123title: "zrobić zakupy", done: false&#125;,<br/>
+                        ];<br/><br/>
+                        <b>const</b> editIndex = 1;<br/><br/>
+                        <b>const</b> tasksWithUpdatedItem = [<br/>
+                        &nbsp;&nbsp;...tasks.slice(0, editIndex),<br/>
+                        &nbsp;&nbsp;&#123...tasks[editIndex], done: false&#125;,<br/>
+                        &nbsp;&nbsp;...tasks.slice(editIndex + 1),<br/>
+                        ];
+                    </Blockquote>
+                </>
+            </>
+        )
+    },
+    {
+        id: 70,
+        date: "28 lipca 2023 roku",
+        title: "Immutability",
+        body: (
+            <>
+                <SmallestHeader>Wartości prymitywne są niemutowalne</SmallestHeader>
+                <Blockquote>
+                    <b>const</b> string = "tekst<br/>
+                    <b>const</b> stringUpperCased = string.toUpperCase();<br/><br/>
+                    <b>const</b> number = 5;<br/>
+                    <b>cont</b> numberFormatted = number.toFixed(2);
+                </Blockquote>
+                <SmallestHeader>Obiekty i tablice możemy mutować</SmallestHeader>
+                <Blockquote>
+                    <b>const</b> person = &#123;name: "Krzysiek"&#125;;<br/>
+                    person.name = "Kosmo";<br/><br/>
+                    <b>const </b> cars = ["beemka"];<br/>
+                    cars.push("merc");
+                </Blockquote>
+                <SmallestHeader>Dlaczego to <em>nie jest</em> fajne</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>kod jest mało przewidywalny i mało czytelny
+                    </ListItem>
+                    <ListItem>mogą pojawiać się błędy trudne do wykrycia
+                    </ListItem>
+                    <ListItem>trudno wykrywać zmiany</ListItem>
+                </ListUnordered>
+                <SmallestHeader>Praca z obiektami i tablicami bez
+                    mutowania</SmallestHeader>
+                <SmallestHeader>Edycja właściwości obiektu</SmallestHeader>
+                <Blockquote>
+                    <b>const</b> person = &#123;<br/>
+                    &nbsp;&nbsp;name: "Kasia"<br/>
+                    &nbsp;&nbsp;surname: "Pelasia"<br/>
+                    &#125;;<br/><br/>
+                    <b>const</b> updatedPerson = &#123;<br/>
+                    &nbsp;&nbsp;...person,<br/>
+                    &nbsp;&nbsp;name: "Erwina",<br/>
+                    &#125;;
+                </Blockquote>
+                <SmallestHeader>Dodawanie właściwości do obiektu</SmallestHeader>
+                <Blockquote>
+                    <b>const</b> person = &#123;<br/>
+                    &nbsp;&nbsp;name: "Kasia"<br/>
+                    &nbsp;&nbsp;surname: "Pelasia"<br/>
+                    &#125;;<br/><br/>
+                    <b>const</b> personWithAge = &#123;<br/>
+                    &nbsp;&nbsp;...person,<br/>
+                    &nbsp;&nbsp;age: 39,<br/>
+                    &#125;;
+                </Blockquote>
+                <SmallestHeader>Usunięcie właściwości obiektu</SmallestHeader>
+                <Blockquote>
+                    <b>const</b> person = &#123;<br/>
+                    &nbsp;&nbsp;name: "Kasia"<br/>
+                    &nbsp;&nbsp;surname: "Pelasia"<br/>
+                    &nbsp;&nbsp;age: 39,<br/>
+                    &#125;;<br/><br/>
+                    <b>const</b> &#123;<br/>
+                    &nbsp;&nbsp;age,<br/>
+                    &nbsp;&nbsp;...personWithAge,<br/>
+                    &#125; = person;
+                </Blockquote>
+                <SmallestHeader>Dodanie elementu do
+                    tablicy</SmallestHeader>
+                <Blockquote>
+                    <b>const</b> tasks = [<br/>
+                    &nbsp;&nbsp;&#123;title: "ugotować obiad", done: false&#125;,<br/>
+                    &nbsp;&nbsp;&#123;title: "posprzątać garaż", done: true&#125;,<br/>
+                    ];<br/><br/>
+                    <b>const</b> tasksWithNewElement = [<br/>
+                    &nbsp;&nbsp;...tasks,<br/>
+                    &nbsp;&nbsp;&#123;title: "zrobić pranie", done: false&#125;,<br/>
+                    ];
+                </Blockquote>
+                <SmallestHeader>Usunięcie elementu z
+                    tablicy</SmallestHeader>
+                <Blockquote>
+                    <b>const</b> tasks = [<br/>
+                    &nbsp;&nbsp;&#123;title: "ugotować obiad", done: false&#125;,<br/>
+                    &nbsp;&nbsp;&#123;title: "posprzątać garaż", done: true&#125;,<br/>
+                    &nbsp;&nbsp;&#123;title: "zrobić pranie", done: false&#125;,<br/>
+                    ];<br/><br/>
+                    <b>const</b> removedIndex = 1;<br/><br/>
+                    <b>const</b> tasksWithoutSecondElement = [<br/>
+                    &nbsp;&nbsp;...tasks.slice(0, removedIndex),<br/>
+                    &nbsp;&nbsp;...tasks.slice(removedIndex + 1),<br/>
+                    ];
+                </Blockquote>
+            </>
+        )
+    },
+    {
         id: 69,
-        date: "27 lipca 2023 roku",
+        date: "28 lipca 2023 roku",
         title: "JavaScript - ćwiczenia z tablicami",
         body: (
             <>
