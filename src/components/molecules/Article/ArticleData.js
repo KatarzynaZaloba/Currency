@@ -6,6 +6,87 @@ import Null from "../../../images/nullUndefined.jpg";
 
 export const articlesLink = [
     {
+        id: 60,
+        date: "19 lipca 2023 roku",
+        title: "JavaScript - więcej o funkcjach i zmiennych",
+        body: (
+            <>
+            <h4 className="article__subsubsubheader">typeof "function"</h4>
+            <p>Najprostszy sposób, aby sprawdzić, czy coś jest funkcją.</p>
+            <blockquote className="article__blockquote">
+                <b>const <i>myFunction</i></b> = () => &#123;<br/>
+                &nbsp;&nbsp;console.log("something");<br/>
+                &#125;<br/><br/>
+
+                console.log(typeof myFunction === "function");
+            </blockquote>
+                <p>Jeśli <i>myFunction</i> jest funkcją, to konsola zwróci mi:</p>
+                <blockquote className="article__blockquote">
+                    true
+                </blockquote>
+                <h4 className="article__subsubsubheader">Jeśli tworzymy funkcję za pomocą słowa function lub tworzymy
+                    zmienną za pomocą słowa var</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">występuje tzw. <i>hoisting</i>
+                        <ul className="article__unorderedList">
+                            <li className="article__listItem">funkcja lub zmienna jest dostępna w całej funkcji
+                                niezależnie
+                                od tego, w której linii została zadeklarowana
+                            </li>
+                        </ul>
+                    </li>
+                    <li className="article__listItem">
+                        jeśli deklarujemy poza jakąś funkcją, tworzymy zmienną lub funkcję globalną
+                    </li>
+                    <li className="article__listItem">
+                        taka funkcja lub zmienna globalna będzie dostępna jako właściwość obiektu <i>window</i>
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">Zmienne let lub stała const poza blokiem lub funkcją staną się
+                    globalne.</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        ale nie będzie właściwością obiektu window
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">Ponowna deklaracja var nie jest błędem</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        <b>let</b> i <b>const</b> - tak
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">var i let mogę zadeklarować, a później przypisać wartość</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        nie mogę tak zrobić z <b>const</b>
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">Można zadeklarować kilka zmiennych po przecinku</h4>
+                <blockquote className="article__blockquote">
+                    <b> let <i>result, amount</i></b> = 10;<br/><br/>
+                    <b> const</b><br/>
+                    &nbsp;&nbsp;number = 5,<br/>
+                    &nbsp;&nbsp;string = "tekst";<br/><br/>
+                    <b>var <i>myVariable</i></b>;
+                </blockquote>
+                <h4 className="article__subsubsubheader">Funkcja może posiadać parametry domyślne</h4>
+                <blockquote className="article__blockquote">
+                    <b>const <i>power</i></b> = (a, b = 1) => a**b;
+                </blockquote>
+                <h4 className="article__subsubsubheader">Funkcja może wywoływać samą siebie</h4>
+                <blockquote className="article__blockquote">
+                    <b>const <i>factorial</i></b> = (number) => &#123;<br/>
+                    &nbsp;&nbsp;if (!number) &#123;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;return 1;<br/>
+                    &nbsp;&nbsp;&#125;<br/><br/>
+                    return factorial(number - 1) * number;<br/>
+                    &#125;
+                </blockquote>
+                    <p>Nazywa się to <i>rekurencją (ang. recursion)</i></p>
+            </>
+        )
+    },
+    {
         id: 59,
         date: "19 lipca 2023 roku",
         title: "CSS - Grid c.d.",
