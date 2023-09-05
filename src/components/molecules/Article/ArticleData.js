@@ -17,6 +17,380 @@ import TableContainer from "../../atoms/TableContainer";
 
 export const articlesLink = [
     {
+        id: 79,
+        date: "11 sierpnia 2023 roku",
+        title: "JavaScript modules",
+        body: (
+            <>
+                <SmallestHeader>>Named exports</SmallestHeader>
+                <Blockquote>
+                    &#47;&#47; module.js<br/>
+                    <b>const</b> myFunction = () => &#123;<br/>
+                    &nbsp;&nbsp;console.log('hello');<br/>
+                    &#125;;<br/><br/>
+                    <b>export</b> &#123;myFunction&#125;;<br/>
+                    <b>export const</b> text = 'hello world';<br/><br/>
+                    <b>export default</b> &#123;<br/>
+                    &nbsp;&nbsp;some: "Object",<br/>
+                    &#125;;<br/><br/>
+                    &#47;&#47;index.js<br/>
+                    <b>import</b> module, &#123;myFunction, text &#125; <b>from</b> "./module";
+                </Blockquote>
+                <SmallestHeader>Zmienianie nazwy importów i exportów</SmallestHeader>
+                <Blockquote>
+                    &#47;&#47; zmiana nazwy eksportu<br/>
+                    <b>export</b> &#123;myFunction <b> as < /b> anotherFunctionName &#125;;<br/><br/>
+                    &#47;&#47; zmiana nazwy importu<br/>
+                    <b>import</b> &#123;text <b>as</b> anotherName &#125;
+                    <b>from</b> "./module";
+                </Blockquote>
+                <SmallestHeader>Import wszystkiego</SmallestHeader>
+                <Blockquote>
+                    <b>import</b> * <b>as</b> module <b>from</b> "./module";
+                </Blockquote>
+                <SmallestHeader>Kod modułu jest wykonywany raz</SmallestHeader>
+                <p>Nawet jeśli jest importowany wielokrotnie.</p>
+            </>
+        )
+    },
+    {
+        id: 78,
+        date: "11 sierpnia 2023 roku",
+        title: "Jeszcze raz o create-react-app",
+        body: (
+            <>
+                <SmallestHeader>Stworzenie nowego projektu</SmallestHeader>
+                <Blockquote>
+                    npx create-react-app my-app<br/>
+                    cd my-app<br/>
+                    npm start
+                </Blockquote>
+                <SmallestHeader>npm run build</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>po w pisaniu tej komendy <b>Webpack</b> stworzy wersję naszej
+                        aplikacji przeznaczoną do deploymentu — tzw. <b>build</b>
+                    </ListItem>
+                    <ListItem>w tej wersji wszystkie pliki <b>JS</b> i <b>CSS</b> są połączone w
+                        zaledwie kilka zminifikowanych plików, dzięki czemu aplikacja <i><q>na
+                            produkcji</q></i> ładuje
+                        się i działa szybciej
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>Struktura plików</SmallestHeader>
+                <SmallestHeader>node_modules</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>folder, w którym są źródła bibliotek (zależności), których
+                        używa <b>create-react-app</b>
+                        <ListUnordered>
+                            <ListItem>
+                                w szczególności jest
+                                tam <b>React</b>, <b>ReactDOM</b>, <b>Webpack</b>, <b>Babel</b>,
+                                <b>ESLint</b>, <b>Jest</b>, <b>PostCSS</b> itd.
+                            </ListItem>
+                        </ListUnordered>
+                    </ListItem>
+                    <ListItem>
+                        jest on generowany automatycznie podczas instalacji
+                    </ListItem>
+                    <ListItem>
+                        może być ogromny, zwykle zawiera tysiące plików
+                    </ListItem>
+                    <ListItem>
+                        nie modyfikujemy tego folderu ani go nie commitujemy
+                    </ListItem>
+                    <ListItem>
+                        ten folder w każdej chwili można wygenerować, wpisując komendę <b>npm
+                        install</b>
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>src</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
+                        folder ze źródłami naszej aplikacji
+                    </ListItem>
+                    <ListItem>
+                        <b>Webpack</b> przy budowaniu aplikacji bierze pod uwagę tylko pliki
+                        umieszczone w tym folderze
+                    </ListItem>
+                    <ListItem>
+                        <b>Webpack</b> pte pliki łączy i z nich powstają wynikowe pliki w
+                        folderze <b>build</b>
+                    </ListItem>
+                    <ListItem>
+                        głównie zawiera pliki <b>JS</b> i <b>CSS</b>, ale może zawierać inne
+                        pliki,
+                        np. obrazki
+                    </ListItem>
+                    <ListItem>
+                        to tutaj zamieszczamy wszystkie nasze komponenty i prawie wyłącznie
+                        modyfikujemy właśnie ten
+                        folder
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>src/index.js</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
+                        tzw. <i>JS entry point</i>
+                    </ListItem>
+                    <ListItem>
+                        główny plik <b>JS</b>, od którego <b>Webpack</b> zaczyna
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>Pozostałe pliki w folderze src</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
+                        <b>serviceWorker.js</b> - potrzebne, kiedy tworzymy PWA
+                    </ListItem>
+                    <ListItem>
+                        <b>setupTests.js</b> - dodaje asercje, dzięki którym wygodniej pisze się
+                        testy kodu
+                    </ListItem>
+                    <ListItem>
+                        <b>index.css</b> - główne globalne style
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>public/index.html</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
+                        szablon strony, do której <b>Webpack</b> doda wygenerowane
+                        pliki <b>JS</b> i <b>CSS</b>
+                    </ListItem>
+                    <ListItem>
+                        warto w tym pliku zmienić język na <b>pl</b>, jeśli aplikacja jest po
+                        polsku
+                    </ListItem>
+                    <ListItem>
+                        warto podmienić ikonkę strony
+                    </ListItem>
+                    <ListItem>
+                        <b>%PUBLIC_URL%</b> zostanie zamienione na adres URL naszej aplikacji
+                    </ListItem>
+                    <ListItem>
+                        warto dodać <b>og:image</b>
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>pozostałe pliki w folderze public</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
+                        <b>favicon.ico, logo192.png, logo512png</b> - ikonka strony
+                    </ListItem>
+                    <ListItem>
+                        <b>manifest.json</b> - potrzebne, kiedy tworzymy PWA
+                    </ListItem>
+                    <ListItem>
+                        <b>robots.txt</b> — informacja dla botów (pozwolenie na indeksowanie
+                        strony)
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>package.json</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
+                        zawiera różne dane na temat projektu
+                    </ListItem>
+                    <ListItem>
+                        <b>dependencies</b> - zależności (biblioteki, paczki), których używa
+                        nasza
+                        aplikacja
+                    </ListItem>
+                    <ListItem>
+                        na podstawie tego, co jest wymienione w <b>dependencies</b>, generuje
+                        się
+                        cały folder <b>node_modules</b>
+                    </ListItem>
+                    <ListItem>
+                        <b>eslintConfig</b> - konfiguracja <b>ESLinta</b>
+                    </ListItem>
+                    <ListItem>
+                        <b>browserslist</b> - przeglądarki, jakie wspieramy (można to sprawdzić
+                        na
+                        stronie <a href="https://browserl.ist/" target="_blank">browserl.ist</a>)
+                    </ListItem>
+                    <ListItem>
+                        <b>scripts</b> - tu definiujemy tzw. <i>npm scripts</i>
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>package-lock.json</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
+                        w tym pliku zapisane jest dokładnie, z jakich wersji bibliotek
+                        korzystamy w
+                        projekcie
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>README.md</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
+                        warto wprowadzić zmiany pod naszą aplikację
+                    </ListItem>
+                    <ListItem>
+                        warto zostawić informację o dostępnych skryptach
+                    </ListItem>
+                    <ListItem>
+                        warto usunąć sekcję dot. dokumentacji <b>create-react-app</b>
+                    </ListItem>
+                </ListUnordered>
+            </>
+        )
+
+    },
+    {
+        id: 77,
+        date: "10 sierpnia 2023 roku",
+        title: "Zmiany",
+        body: (
+            <>
+                <p>Dziś będzie bez notatek z teorii. Nadal się uczę oczywiście, ale ja dzisiaj
+                    nie o
+                    tym.</p>
+                <p>Strasznie się dużo pozmieniało w moim życiu i zastanawiam się, kiedy tak
+                    naprawdę
+                    był ten punkt
+                    zwrotny, gdy szykowałam grunt pod to, co jest dzisiaj. Gdy tak siedzę i
+                    rozmyślam, nasuwa mi się
+                    jeden dzień, a właśnie okres mojego życia, gdy pierwszy raz pomyślałam, czy
+                    by
+                    czegoś w tym życiu
+                    nie zmienić.</p>
+                <p>To była wiosna 2020 roku, kiedy zostaliśmy zesłani na przymusowe zdalne z
+                    powodu
+                    covida. Trzy razy w
+                    tygodniu dzień rozpoczynałam od porannych 8-kilometrowych przebieżek po
+                    lesie. W
+                    tamtym momencie
+                    marzyłam o przebiegnięciu GSB tak jak np. Rafał Kot — mój ówczesny idol
+                    ultramaratonu. Po
+                    przebieżkach był szybki prysznic i start pracy ze świeżym umysłem. Wtedy
+                    poczułam, że ten tryb pracy
+                    jest dla mnie idealny.</p>
+                <p>Aktualnie po ok. 3,5 roku, pracuję zdalnie jako <i>Junior Frontend
+                    Developer</i> przy jednym z super
+                    projektów budowania portalu dla pacjentów onkologicznych. Biegam dwa razy w
+                    tygodniu przed pracą ok.
+                    3-kilometrowe przebieżki, w sobotę trochę dłuższe. Poznaję fantastycznych
+                    ludzi
+                    o niesamowitych
+                    osobowościach. To uczucie — gdy poznajesz nową osobę i nie macie przed sobą
+                    sztucznego dystansu, a
+                    rozmowa po prostu płynie — jest niesamowite. Powstaje, wtedy gdy pasjonat
+                    spotyka się z pasjonatem.
+                    Uczę się nowych technologii, codziennie powtarzam materiał z kursu. Patrzę
+                    na
+                    pracę doświadczonych
+                    programistów i z zapałem ich doganiam.</p>
+                <p>A pomyśleć, że mogło mnie to wszystko ominąć.</p>
+                <p>I jasne, w tym moim punkcie życia, gdy jestem zainteresowana
+                    web-developmentem,
+                    mam takie <i>coś</i>
+                    w mojej głowie, które <em>mówi</em> mi <q>Dlaczego nie poszłam na studia
+                        informatyczne, gdy miałam
+                        19 lat?</q> Czy żałuję? I tak i nie. Jestem po logistyce i po
+                    administracji.
+                    Pracowałam jako
+                    specjalista ds. importu, specjalista ds. administracyjnych, koordynator
+                    jakości
+                    i procesów IT,
+                    inspektor ochrony danych osobowych. Takie jest moje doświadczenie i gdyby
+                    nie
+                    ono nie byłabym teraz
+                    tym, kim jestem dziś. Poza tym kwestia studiów to nie jest tematem
+                    zamkniętym.
+                    Aktualnie studiuję
+                    podyplomowo <i>Frontend Development</i>.</p>
+                <p>Każda zmiana rodzi na początku uczucie strachu, ale po pewnym czasie ten
+                    strach
+                    zamienia się w
+                    ogromną satysfakcję z podjętych decyzji.</p>
+                <q className="article__quote">Dreams without goals are just dreams and
+                    ultimately
+                    they fuel disappointment.
+                    On the road to achieving your dreams, you must apply discipline but more
+                    importantly constistency
+                    because without commitment you never will start and without constistency you
+                    will never finish</q>
+                <p>- Denzel Washington</p>
+            </>
+        )
+    },
+    {
+        id: 76,
+        date: "8 sierpnia 2023 roku",
+        title: "create-react-app",
+        body: (
+            <>
+                <p>Aby skorzystać z tego polecenia, uruchamiamy <i>Git Bash-a</i> i wpisujemy w
+                    okno
+                    konsoli:</p>
+                <ListUnordered>
+                    <ListItem>odniesienie do ścieżki, w której chcemy
+                        utworzyć projekt
+                        <Blockquote>
+                            cd c:\dev
+                        </Blockquote>
+                        <ListUnordered>
+                            <ListItem>następnie polecenie stworzenia
+                                aplikacji reactowej
+                                <Blockquote>
+                                    npx create-react-app nazwa_aplikacji
+                                </Blockquote>
+                            </ListItem>
+                        </ListUnordered>
+                    </ListItem>
+                </ListUnordered>
+                <p>Powiem szczerze, że miałam problem z ponownym użyciem tej komendy. Więc
+                    wrzucam
+                    tutaj rozwiązanie,
+                    jeżeli ta komenda nie działa:</p>
+                <ListOrdered>
+                    <ListItem><b>Sprawdź wersję Node.je i npm:</b> Upewnij
+                        się, że masz
+                        zainstalowaną wersję Node.js i npm. Możesz to zrobić, wpisując
+                        następujące
+                        komendy w terminalu:
+                        <Blockquote>
+                            node -v<br/>
+                            npm -v
+                        </Blockquote>
+                        Upewnij się, że otrzymujesz poprawne numery wersji dla obu tych
+                        narzędzi.
+                    </ListItem>
+                    <ListItem><b>Aktualizacja npm:</b> Jeśli npm jest
+                        przestarzały, warto go
+                        zaktualizować. Możesz to zrobić za pomocą komendy:
+                        <Blockquote>
+                            npm install -g npm@latest
+                        </Blockquote>
+                        Ta komenda zainstaluje najnowszą wersję npm.
+                    </ListItem>
+                    <ListItem><b>Wyczyść cache npm:</b> Czasami problemy
+                        mogą być spowodowane
+                        uszkodzonym cache npm. Możesz go wyczyścić, wpisując:
+                        <Blockquote>
+                            npm cache clean --force
+                        </Blockquote>
+                    </ListItem>
+                    <ListItem><b>Utwórz nowy projekt w innej
+                        lokalizacji:</b> Jeśli problem nadal
+                        występuje, spróbuj utworzyć nowy projekt w zupełnie innej lokalizacji na
+                        dysku, np. na pulpicie
+                        lub w innym katalogu. To pomoże ustalić, czy problem jest związany z
+                        daną
+                        ścieżką.
+                    </ListItem>
+                    <ListItem><b>Reinstalacja Node.js:</b> Jeśli żaden z
+                        powyższych kroków nie
+                        pomaga, możesz spróbować przeinstalować <i>Node.js</i> w celu
+                        naprawienia
+                        ewentualnych uszkodzeń
+                        instalacji.
+                    </ListItem>
+                </ListOrdered>
+                <p>Trochę poćwiczę. Zastanawiam się, czy nie przenieść całego bloga na Reacta.
+                    Bo w
+                    sumie dlaczego nie? </p>
+            </>
+        )
+    },
+    {
         id: 75,
         date: "7 sierpnia 2023 roku",
         title: "React - c.d.",
@@ -469,169 +843,175 @@ export const articlesLink = [
         title: "JavaScript - ćwiczenia z tablicami",
         body: (
             <>
-        <h4 className="article__subsubsubheader">Wyciąganie fragmentu tablicy</h4>
-        <blockquote className="article__blockquote">
-            <b>const</b> seasons = ["wiosna", "lato", "jesień", "zima"];<br/><br/>
-            <b>const</b> last2seasons = seasons.slice(2); &nbsp;&nbsp;// ["jesień", "zima"]<br/><br/>
-            <b>const</b> middle2seasons = seasons.slice(1, 3); &nbsp;&nbsp;// ["lato", "jesień"]<br/><br/>
-            <b>const</b> last3seasons = seasons.slice(-3); &nbsp;&nbsp;// ["lato", "jesień", "zima"]<br/><br/>
-            <b>const</b> allButLast = seasons.slice(0, -1); &nbsp;&nbsp;// ["wiosna", "lato", "jesień"]
-        </blockquote>
-        <ul className="article__unorderedList">
-            <li className="article__listItem">tworzy nową tablicę</li>
-        </ul>
-        <h4 className="article__subsubsubheader">indexOf, lastIndexOf</h4>
-        <blockquote className="article__blockquote">
-            <b>const</b> numbers = [20, 10, 45, 10];<br/><br/>
-
-            console.log(numbers.indexOf(10)); &nbsp;&nbsp;// 1<br/>
-            console.log(numbers.lastIndexOf(10)); &nbsp;&nbsp;// 3<br/>
-            console.log(numbers.indexOf(5)); &nbsp;&nbsp;// -1<br/>
-            console.log(numbers.lastIndexOf(5)); &nbsp;&nbsp;// -1<br/>
-        </blockquote>
-        <ul className="article__unorderedList">
-            <li className="article__listItem">jeżeli index nie został znaleziony, to zwraca -1</li>
-        </ul>
-        <h4 className="article__subsubsubheader">find</h4>
-        <blockquote className="article__blockquote">
-            <b>const</b> numbers = [-7, 0, 10, -6, 45];<br/><br/>
-            <b>const</b> firstPositive = numbers.find(number > number > 0); &nbsp;&nbsp;// 10<br/>
-            <b>const</b> first100 = numbers.find(number === 100); &nbsp;&nbsp;// undefined<br/><br/>
-            <b>const</b> persons = [<br/>
-            &nbsp;&nbsp;&#123;name: "Kasia"&#125;,<br/>
-            &nbsp;&nbsp;&#123;name: "Marta"&#125;,<br/>
-            ];<br/><br/>
-            <b>const</b> chris = persons.find((&#123; name &#153;) => name === "Marta");
-        </blockquote>
-        <ul className="article__unorderedList">
-            <li className="article__listItem">zwraca pierwszy element, który spełnia funkcję sprawdzającą</li>
-        </ul>
-        <h4 className="article__subsubsubheader">findIndex</h4>
-        <blockquote className="article__blockquote">
-            <b>const</b> numbers = [-7, 0, 10, -6, 45];<br/><br/>
-            <b>const</b> firstPositiveIndex = numbers.findIndex(number > number > 0); &nbsp;&nbsp;// 2<br/>
-            <b>const</b> first100Index = numbers.findIndex(number === 100); &nbsp;&nbsp;// -1<br/><br/>
-            <b>const</b> persons = [<br/>
-            &nbsp;&nbsp;&#123;name: "Kasia"&#125;,<br/>
-            &nbsp;&nbsp;&#123;name: "Marta"&#125;,<br/>
-            ];<br/><br/>
-            <b>const</b> kasiaIndex = persons.findIndex((&#123; name &#125;) => name === "Kasia");&nbsp;&nbsp;// 0
-        </blockquote>
-        <h4 className="article__subsubsubheader">includes</h4>
-        <blockquote className="article__blockquote">
-            <b>const</b> quests = ["Włodek", "Irmina", "Melodia"];<br/><br/>
-            console.log(guests.includes("Włodek")); &nbsp;&nbsp;// true<br/>
-            console.log(guests.includes("Zenek")); &nbsp;&nbsp;// false
-        </blockquote>
-        <h4 clasName="article__subsubsubheader">some</h4>
-        <blockquote className="article__blockquote">
-            <b>const</b> tasks = [<br/>
-            &nbsp;&nbsp;&#123; content: "Przeczytać książkę", done: false &#125;,<br/>
-            &nbsp;&nbsp;&#123; content: "Zrobić zakupy", done: true &#125;,<br/>
-            ];<br/><br/>
-            <b>const</b> isAnyTaskDone = tasks.some((&#123; done &#125;) => done); &nbsp;&nbsp;// true<br/><br/>
-            <b>const</b> numbers = [1, 3, 5, 7];<br/><br/>
-            <b>const</b> isAnyNumberEven = numbers.some(number => number % 2 === 0); &nbsp;&nbsp;// false
-        </blockquote>
-        <ul className="article__unorderedList">
-            <li className="article__listItem">sprawdza, czy przynajmniej jeden element spełnia funkcję
-                sprawdzającą
-            </li>
-        </ul>
-        <h4 className="article__subsubsubheader">every</h4>
-        <blockquote className="article__blockquote">
-            <b>const</b> tasks = [<br/>
-            &nbsp;&nbsp;&#123; content: "Przeczytać książkę", done: false &#125;,<br/>
-            &nbsp;&nbsp;&#123; content: "Zrobić zakupy", done: true &#125;,<br/>
-            ];<br/><br/>
-            <b>const</b> isEveryTaskDone = task.every((&#123;done&#125;) => done); &nbsp;&nbsp;// false<br/><br/>
-            <b>const</b> numbers = [1, 3, 5, 7];<br/><br/>
-            <b>const</b> isEveryNumberEven = numbers.every(number => number % 2 === 0); &nbsp;&nbsp;// false
-        </blockquote>
-        <ul className="article__unorderedList">
-            <li className="article__listItem">sprawdza, czy wszystkie elementy spełniają funkcję sprawdzającą</li>
-        </ul>
-        <h4 className="article__subsubsubheader">filtrowanie</h4>
-        <blockquote className="article__blockquote">
-            <b>const</b> numbers = [1, 2, 3, 4];<br/><br/>
-            <b>const</b> evenNumbers = numbers.filter(number => number % 2 === 0);<br/><br/>
-            <b>const</b> tasks = [<br/>
-            &nbsp;&nbsp;&#123; content: "Przeczytać książkę", done: false &#125;,<br/>
-            &nbsp;&nbsp;&#123; content: "Zrobić zakupy", done: true &#125;,<br/>
-            ];<br/><br/>
-            <b>const</b> doneTasks = tasks.filter((&#123;done&#125;) => done);
-        </blockquote>
-        <ul className="article__unorderedList">
-            <li className="article__listItem">zwraca nową tablicę, która zawiera elementy, spełniające funkcję
-                sprawdzającą
-            </li>
-        </ul>
-        <h4 className="article__subsubsubheader">Mapowanie / odwzorowanie</h4>
-        <blockquote className="article__blockquote">
-            <b>const</b> numbers = [1, 5, 10];<br/>
-            <b>const</b> doubledNumbers = numbers.map(number => number * 2);<br/><br/>
-            <b>const</b> persons = [<br/>
-            &nbsp;&nbsp;&#123; name: "Kasia", surname: "Pelasia" &#125;,<br/>
-            &nbsp;&nbsp;&#123; name: "Marta", surname: "Karta" &#125;,<br/>
-            ];<br/><br/>
-            <b>const</b> personFirstNames = persons.map((&#123; name &#125;) => name);<br/><br/>
-            <b>const</b> personHTMLTableRows = persons.map((&#123; name, surname &#125;) => `<br/>
-            &lt;tr>&lt;td>$&#123;name&#125;&lt;/td>&lt;td>$&#123;surname&#125;&lt;/td>&lt;/tr><br/>
-            `);
-        </blockquote>
-        <ul className="article__unorderedList">
-            <li className="article__listItem"><b>map</b> zwraca nową tablicę, której elementami są wartości zwrócone
-                przez podaną funkcję dla każdego elementu
-            </li>
-        </ul>
-        <h4 className="article__subsubsubheader">Sortowanie tablic</h4>
-        <blockquote className="article__blockquote">
-            <b>const</b> strings = ["B", "a", 10, 2];<br/><br/>
-            strings.sort();<br/><br/>
-            console.log(strings); &nbsp;&nbsp;// [10, 2, "B", "a"]<br/><br/>
-        </blockquote>
-        <ul className="article__unorderedList">
-            <li className="article__listItem"><b>sort</b> sortuje tablicę i zwraca posortowaną
+                <h4 className="article__subsubsubheader">Wyciąganie fragmentu tablicy</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> seasons = ["wiosna", "lato", "jesień", "zima"];<br/><br/>
+                    <b>const</b> last2seasons = seasons.slice(2); &nbsp;&nbsp;// ["jesień", "zima"]<br/><br/>
+                    <b>const</b> middle2seasons = seasons.slice(1, 3); &nbsp;&nbsp;// ["lato", "jesień"]<br/><br/>
+                    <b>const</b> last3seasons = seasons.slice(-3); &nbsp;&nbsp;// ["lato", "jesień", "zima"]<br/><br/>
+                    <b>const</b> allButLast = seasons.slice(0, -1); &nbsp;&nbsp;// ["wiosna", "lato", "jesień"]
+                </blockquote>
                 <ul className="article__unorderedList">
-                    <li className="article__listItem">
-                        <b>uwaga:</b> modyfikuje tablicę
+                    <li className="article__listItem">tworzy nową tablicę</li>
+                </ul>
+                <h4 className="article__subsubsubheader">indexOf, lastIndexOf</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> numbers = [20, 10, 45, 10];<br/><br/>
+
+                    console.log(numbers.indexOf(10)); &nbsp;&nbsp;// 1<br/>
+                    console.log(numbers.lastIndexOf(10)); &nbsp;&nbsp;// 3<br/>
+                    console.log(numbers.indexOf(5)); &nbsp;&nbsp;// -1<br/>
+                    console.log(numbers.lastIndexOf(5)); &nbsp;&nbsp;// -1<br/>
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">jeżeli index nie został znaleziony, to zwraca -1</li>
+                </ul>
+                <h4 className="article__subsubsubheader">find</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> numbers = [-7, 0, 10, -6, 45];<br/><br/>
+                    <b>const</b> firstPositive = numbers.find(number > number > 0); &nbsp;&nbsp;// 10<br/>
+                    <b>const</b> first100 = numbers.find(number === 100); &nbsp;&nbsp;// undefined<br/><br/>
+                    <b>const</b> persons = [<br/>
+                    &nbsp;&nbsp;&#123;name: "Kasia"&#125;,<br/>
+                    &nbsp;&nbsp;&#123;name: "Marta"&#125;,<br/>
+                    ];<br/><br/>
+                    <b>const</b> chris = persons.find((&#123; name &#153;) => name === "Marta");
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">zwraca pierwszy element, który spełnia funkcję sprawdzającą</li>
+                </ul>
+                <h4 className="article__subsubsubheader">findIndex</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> numbers = [-7, 0, 10, -6, 45];<br/><br/>
+                    <b>const</b> firstPositiveIndex = numbers.findIndex(number > number > 0); &nbsp;&nbsp;// 2<br/>
+                    <b>const</b> first100Index = numbers.findIndex(number === 100); &nbsp;&nbsp;// -1<br/><br/>
+                    <b>const</b> persons = [<br/>
+                    &nbsp;&nbsp;&#123;name: "Kasia"&#125;,<br/>
+                    &nbsp;&nbsp;&#123;name: "Marta"&#125;,<br/>
+                    ];<br/><br/>
+                    <b>const</b> kasiaIndex = persons.findIndex((&#123; name &#125;) => name === "Kasia");&nbsp;&nbsp;//
+                    0
+                </blockquote>
+                <h4 className="article__subsubsubheader">includes</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> quests = ["Włodek", "Irmina", "Melodia"];<br/><br/>
+                    console.log(guests.includes("Włodek")); &nbsp;&nbsp;// true<br/>
+                    console.log(guests.includes("Zenek")); &nbsp;&nbsp;// false
+                </blockquote>
+                <h4 clasName="article__subsubsubheader">some</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> tasks = [<br/>
+                    &nbsp;&nbsp;&#123; content: "Przeczytać książkę", done: false &#125;,<br/>
+                    &nbsp;&nbsp;&#123; content: "Zrobić zakupy", done: true &#125;,<br/>
+                    ];<br/><br/>
+                    <b>const</b> isAnyTaskDone = tasks.some((&#123; done &#125;) => done); &nbsp;&nbsp;// true<br/><br/>
+                    <b>const</b> numbers = [1, 3, 5, 7];<br/><br/>
+                    <b>const</b> isAnyNumberEven = numbers.some(number => number % 2 === 0); &nbsp;&nbsp;// false
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">sprawdza, czy przynajmniej jeden element spełnia funkcję
+                        sprawdzającą
                     </li>
                 </ul>
-                <li className="article__listItem">domyślnie elementy konwertowane są na stringi i porównywane są kody
-                    znaków UTF-16
-                    <ul className="article__unorderedList">
-                        <li className="article__listItem">dlatego to się prawie do niczego nie nadaje</li>
-                    </ul>
-                </li>
-            </li>
-        </ul>
-        <h4 className="article__subsubsubheader">Sortowanie liczb</h4>
-        <blockquote className="article__blockquote">
-            <b>const</b> numbers = [40, 8, 1, 0];<br/><br/>
-            numbers.sort((a, b) => a - b);&nbsp;&nbsp;// [0, 1, 8, 40]<br/>
-            numbers.sort((a, b) => b - a);&nbsp;&nbsp;// [40, 8, 1, 0]
-        </blockquote>
-        <h4 className="article__subsubsubheader">Sortowanie alfabetyczne</h4>
-        <blockquote className="article__blockquote">
-            <b>const</b> surnames = ["Duda", "Dąbrowski"];<br/><br/>
-            surnames.sort((a, b) => a.localCompare(b));&nbsp;&nbsp;// ["Dąbrowski", "Duda"]<br/>
-            surnames.sort((a, b) => b.localCompare(a));&nbsp;&nbsp;// ["Duda", "Dąbrowski"]
-        </blockquote>
-        <h4 className="article__subsubsubheader">Sortowanie obiektów</h4>
-        <blockquote className="article__blockquote">
-            <b>const</b> persons = [<br/>
-            &nbsp;&nbsp;&#123; name: "Kasia", surname: "Pelasia" &#125;,<br/>
-            &nbsp;&nbsp;&#123; name: "Marta", surname: "Karta" &#125;,<br/>
-            ];<br/><br/>
-            <b>const</b> getFullName = (&#123; name, surname &#125;) => `$&#123;name&#125; $&#123;surname&#123;`;<br/><br/>
-            persons.sort((person1, person2) => getFullName(person1).localCompare(getFullName(person2)));<br/>
-            ));
-        </blockquote>
-        <h4 className="article__subsubsubheader">Odwrócenie kolejności elementów</h4>
-        <blockquote className="article__blockquote">
-            <b>const</b> numbers = [4, 5, 6, 8];<br/><br/>
-            numbers.reverse();&nbsp;&nbsp;// [8, 6, 5, 4]
-        </blockquote>
+                <h4 className="article__subsubsubheader">every</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> tasks = [<br/>
+                    &nbsp;&nbsp;&#123; content: "Przeczytać książkę", done: false &#125;,<br/>
+                    &nbsp;&nbsp;&#123; content: "Zrobić zakupy", done: true &#125;,<br/>
+                    ];<br/><br/>
+                    <b>const</b> isEveryTaskDone = task.every((&#123;done&#125;) => done); &nbsp;&nbsp;//
+                    false<br/><br/>
+                    <b>const</b> numbers = [1, 3, 5, 7];<br/><br/>
+                    <b>const</b> isEveryNumberEven = numbers.every(number => number % 2 === 0); &nbsp;&nbsp;// false
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">sprawdza, czy wszystkie elementy spełniają funkcję sprawdzającą
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">filtrowanie</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> numbers = [1, 2, 3, 4];<br/><br/>
+                    <b>const</b> evenNumbers = numbers.filter(number => number % 2 === 0);<br/><br/>
+                    <b>const</b> tasks = [<br/>
+                    &nbsp;&nbsp;&#123; content: "Przeczytać książkę", done: false &#125;,<br/>
+                    &nbsp;&nbsp;&#123; content: "Zrobić zakupy", done: true &#125;,<br/>
+                    ];<br/><br/>
+                    <b>const</b> doneTasks = tasks.filter((&#123;done&#125;) => done);
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">zwraca nową tablicę, która zawiera elementy, spełniające funkcję
+                        sprawdzającą
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">Mapowanie / odwzorowanie</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> numbers = [1, 5, 10];<br/>
+                    <b>const</b> doubledNumbers = numbers.map(number => number * 2);<br/><br/>
+                    <b>const</b> persons = [<br/>
+                    &nbsp;&nbsp;&#123; name: "Kasia", surname: "Pelasia" &#125;,<br/>
+                    &nbsp;&nbsp;&#123; name: "Marta", surname: "Karta" &#125;,<br/>
+                    ];<br/><br/>
+                    <b>const</b> personFirstNames = persons.map((&#123; name &#125;) => name);<br/><br/>
+                    <b>const</b> personHTMLTableRows = persons.map((&#123; name, surname &#125;) => `<br/>
+                    &lt;tr>&lt;td>$&#123;name&#125;&lt;/td>&lt;td>$&#123;surname&#125;&lt;/td>&lt;/tr><br/>
+                    `);
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem"><b>map</b> zwraca nową tablicę, której elementami są wartości
+                        zwrócone
+                        przez podaną funkcję dla każdego elementu
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">Sortowanie tablic</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> strings = ["B", "a", 10, 2];<br/><br/>
+                    strings.sort();<br/><br/>
+                    console.log(strings); &nbsp;&nbsp;// [10, 2, "B", "a"]<br/><br/>
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem"><b>sort</b> sortuje tablicę i zwraca posortowaną
+                        <ul className="article__unorderedList">
+                            <li className="article__listItem">
+                                <b>uwaga:</b> modyfikuje tablicę
+                            </li>
+                        </ul>
+                        <li className="article__listItem">domyślnie elementy konwertowane są na stringi i porównywane są
+                            kody
+                            znaków UTF-16
+                            <ul className="article__unorderedList">
+                                <li className="article__listItem">dlatego to się prawie do niczego nie nadaje</li>
+                            </ul>
+                        </li>
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">Sortowanie liczb</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> numbers = [40, 8, 1, 0];<br/><br/>
+                    numbers.sort((a, b) => a - b);&nbsp;&nbsp;// [0, 1, 8, 40]<br/>
+                    numbers.sort((a, b) => b - a);&nbsp;&nbsp;// [40, 8, 1, 0]
+                </blockquote>
+                <h4 className="article__subsubsubheader">Sortowanie alfabetyczne</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> surnames = ["Duda", "Dąbrowski"];<br/><br/>
+                    surnames.sort((a, b) => a.localCompare(b));&nbsp;&nbsp;// ["Dąbrowski", "Duda"]<br/>
+                    surnames.sort((a, b) => b.localCompare(a));&nbsp;&nbsp;// ["Duda", "Dąbrowski"]
+                </blockquote>
+                <h4 className="article__subsubsubheader">Sortowanie obiektów</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> persons = [<br/>
+                    &nbsp;&nbsp;&#123; name: "Kasia", surname: "Pelasia" &#125;,<br/>
+                    &nbsp;&nbsp;&#123; name: "Marta", surname: "Karta" &#125;,<br/>
+                    ];<br/><br/>
+                    <b>const</b> getFullName = (&#123; name, surname &#125;) =>
+                    `$&#123;name&#125; $&#123;surname&#123;`;<br/><br/>
+                    persons.sort((person1, person2) => getFullName(person1).localCompare(getFullName(person2)));<br/>
+                    ));
+                </blockquote>
+                <h4 className="article__subsubsubheader">Odwrócenie kolejności elementów</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> numbers = [4, 5, 6, 8];<br/><br/>
+                    numbers.reverse();&nbsp;&nbsp;// [8, 6, 5, 4]
+                </blockquote>
             </>
         )
     },
@@ -641,37 +1021,37 @@ export const articlesLink = [
         title: "JavaScript - tablice",
         body: (
             <>
-            <h4 className="article__subsubsubheader">Destrukturyzacja w zagnieżdżonym obiekcie</h4>
-            <blockquote className="article__blockquote">
-                <b>const</b> [number1, number2] = [20, 46, 18];<br/><br/>
-                // ignorujemy drugi element<br/>
-                <b>const</b> [number1, , number3] = [20, 46, 18];<br/><br/>
-                // pozostałe elementy utworzą nową tablicę<br/>
-                <b>const</b> [firstNumber, ...otherNumbers] = [20, 78, 11, 33];
-            </blockquote>
-            <h4 className="article__subsubsubheader">Łączenie tablic</h4>
-            <blockquote className="article__blockquote">
-                <b>const</b> numbers1 = [10, 45];<br/>
-                <b>const</b> numbers2 = [20, 49];<br/><br/>
-                <b>const</b> allNumbers = [...numbers1, ...numbers2];
-            </blockquote>
-            <h4 className="article__subsubsubheader">Klonowanie</h4>
-            <blockquote className="article__blockquote">
-                <b>const</b> numbers = [45, 12, 16];<br/>
-                <b>const</b> numbersCopy = [...number];
-            </blockquote>
-            <h4 className="article__subsubsubheader">Przekazywanie elementów tablicy jako argumenty funkcji</h4>
-            <blockquote className="article__blockquote">
-                <b>const</b> numbers = [12, 18, 19, 44, 64, 81];<br/><br/>
-                <b>const</b> console.log(Math.min(...numbers)); //12
-            </blockquote>
-            <h4 className="article__subsubsubheader">Niezdefiniowana liczba argumentów funkcji</h4>
-            <blockquote className="article__blockquote">
-                <b>const</b> myFunction = (firstParameter, ...otherParameters) => &#123;<br/>
-                &nbsp;&nbsp;console.log(`Pierwszy argument: $&#123;firstParameter&#125;`);<br/>
+                <h4 className="article__subsubsubheader">Destrukturyzacja w zagnieżdżonym obiekcie</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> [number1, number2] = [20, 46, 18];<br/><br/>
+                    // ignorujemy drugi element<br/>
+                    <b>const</b> [number1, , number3] = [20, 46, 18];<br/><br/>
+                    // pozostałe elementy utworzą nową tablicę<br/>
+                    <b>const</b> [firstNumber, ...otherNumbers] = [20, 78, 11, 33];
+                </blockquote>
+                <h4 className="article__subsubsubheader">Łączenie tablic</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> numbers1 = [10, 45];<br/>
+                    <b>const</b> numbers2 = [20, 49];<br/><br/>
+                    <b>const</b> allNumbers = [...numbers1, ...numbers2];
+                </blockquote>
+                <h4 className="article__subsubsubheader">Klonowanie</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> numbers = [45, 12, 16];<br/>
+                    <b>const</b> numbersCopy = [...number];
+                </blockquote>
+                <h4 className="article__subsubsubheader">Przekazywanie elementów tablicy jako argumenty funkcji</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> numbers = [12, 18, 19, 44, 64, 81];<br/><br/>
+                    <b>const</b> console.log(Math.min(...numbers)); //12
+                </blockquote>
+                <h4 className="article__subsubsubheader">Niezdefiniowana liczba argumentów funkcji</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> myFunction = (firstParameter, ...otherParameters) => &#123;<br/>
+                    &nbsp;&nbsp;console.log(`Pierwszy argument: $&#123;firstParameter&#125;`);<br/>
                     &nbsp;&nbsp;console.log(`Liczba pozostałych argumentów: $ &#123;otherParameters.length&#125;`);<br/>
                     &#125;;<br/><br/>
-                myFunction(4, 8, 1, 9, 74, 51);
+                    myFunction(4, 8, 1, 9, 74, 51);
                 </blockquote>
             </>
         )
