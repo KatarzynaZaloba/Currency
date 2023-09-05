@@ -6,99 +6,251 @@ import Null from "../../../images/nullUndefined.jpg";
 
 export const articlesLink = [
     {
+        id: 65,
+        date: "25 lipca 2023 roku",
+        title: "CSS - płynne przejścia, transformacje",
+        body: (
+            <>
+                <h4 className="article__subsubsubheader">transition - najprostszy przykład</h4>
+                <blockquote className="article__blockquote">
+                    .element &#123;<br/>
+                    &nbsp;&nbsp;background: red;<br/>
+                    &nbsp;&nbsp;transition: 1s;<br/>
+                    &#125;<br/>
+                    <br/>
+                    .element:hover &#123;<br/>
+                    &nbsp;&nbsp;background: blue;<br/>
+                    &#125;<br/>
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">płynne przejście między dwiema wartościami</li>
+                </ul>
+                <div className="article__container--transition"></div>
+                <h4 className="article__subsubsubheader">transform: scale</h4>
+                <blockquote className="article__blockquote">
+                    .element &#123;<br/>
+                    &nbsp;&nbsp; transform: scale(1.5);&nbsp;&nbsp;&nbsp;&nbsp;/* scaleX, scaleY */<br/>
+                    &#125;<br/>
+                </blockquote>
+                <div className="article__container--transform"></div>
+                <h4 className="article__subsubsubheader">transform: rotate</h4>
+                <blockquote className="article__blockquote">
+                    .element &#123;<br/>
+                    &nbsp;&nbsp;transform: rotate(60deg);<br/>
+                    &#125;<br/>
+                </blockquote>
+                <div className="article__container--rotated"></div>
+                <h4 className="article__subsubsubheader">transform: translate</h4>
+                <blockquote className="article__blockquote">
+                    .element &#123;<br/>
+                    &nbsp;&nbsp;transform: translateX(100%) translateY(50px);<br/>
+                    &#125;<br/>
+                </blockquote>
+                <div className="article__container--translated"></div>
+                <h4 className="article__subsubsubheader">Kilka transformacji po kolei</h4>
+                <blockquote className="article__blockquote">
+                    .element &#123;<br/>
+                    &nbsp;&nbsp;transform: rotate(90deg) scale(1.5);<br/>
+                    &#125;<br/>
+                </blockquote>
+                <div className="article__container--translatedScale"></div>
+                <h4 className="article__subsubsubheader">transform-origin</h4>
+                <blockquote className="article__blockquote">
+                    .element &#123;<br/>
+                    &nbsp;&nbsp;transform: rotate(90deg);<br/>
+                    &nbsp;&nbsp;transform-origin: right bottom;<br/>
+                    &nbsp;&nbsp;/* transform-origin: 20px 60% */<br/>
+                    &#125;<br/>
+                </blockquote>
+                <div className="article__container--translatedOrigin"></div>
+                <h4 className="article__subsubsubheader">Jak działa transform</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">zmienia kształt i położenie
+                        elementów
+                    </li>
+                    <li className="article__listItem">nakłada transformację po kolei</li>
+                    <li className="article__listItem">nie wpływa na inne elementy</li>
+                </ul>
+                <div className="article__container--transform"></div>
+                <div className="article__container--transform"></div>
+                <div className="article__container--transform"></div>
+                <h4 className="article__subsubsubheader">transition-property</h4>
+                <blockquote className="article__blockquote">
+                    .element &#123;<br/>
+                    &nbsp;&nbsp;transition: background 1s, transform 2s;<br/>
+                    &#125;<br/>
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">warto podać, które właściwości
+                        będą animowane, ponieważ może to
+                        pozytywnie wpłynąć na wydajność
+                    </li>
+                    <li className="article__listItem">kiedy to możliwe, warto animować
+                        transform zamiast np. width, height,
+                        margin itd.
+                    </li>
+                </ul>
+                <div className="article__container--transitionProperty"></div>
+                <h4 className="article__subsubsubheader">transition-timing-function</h4>
+                <blockquote className="article__blockquote">
+                    .element &#123;<br/>
+                    &nbsp;&nbsp;transition: background 1s linear;<br/>
+                    &#125;<br/>
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">określa jak liczone są
+                        wartości pośrednie w trakcie animacji
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">transition-delay</h4>
+                <blockquote className="article__blockquote">
+                    .element &#123;<br/>
+                    &nbsp;&nbsp;transition: background 2s 1s;<br/>
+                    &#125;<br/>
+                </blockquote>
+                <h4 className="article__subsubsubheader">właściwości
+                    oddzielnie</h4>
+                <blockquote className="article__blockquote">
+                    .element &#123;<br/>
+                    &nbsp;&nbsp;transition-property: background, transform;<br/>
+                    &nbsp;&nbsp;transition-duration: 1s 2s;<br/>
+                    &nbsp;&nbsp;transition-delay: 0, 0.5s;<br/>
+                    &nbsp;&nbsp;transition-timing-function: linear;<br/>
+                    &#125;<br/>
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">ale rekomendowane jest
+                        korzystać ze skrótu transition
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">transition nie musi
+                    działać po najechaniu</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">ale na przykład przy
+                        zmianie klasy.
+                    </li>
+                </ul>
+            </>
+        )
+    },
+    // {
+    //     id: 64,
+    //     date: "21 lipca 2023 roku",
+    //     title: "JavaScript - prosta lista zadań",
+    //     body: (
+    //         <>
+    //             <form className="js-form4">
+    //                 <fieldset className="calculator__fieldset">
+    //                     <legend className="calculator__legend">Wpisz zadanie i kliknij "Dodaj zadanie" lub naciśnij
+    //                         ENTER
+    //                     </legend>
+    //                     <div className="calculator__subContainer">
+    //                         <label className="calculator__label">
+    //                             Tu wpisz zadanie
+    //                             <input className="js-newTask js-input">
+    //                         </label>
+    //                     </div>
+    //                 </fieldset>
+    //                 <button>Dodaj zadanie</button>
+    //             </form>
+    //             <ul className="js-tasks article__unorderedList"></ul>
+    //         </>
+    //     )
+    // },
+    {
         id: 63,
         date: "21 lipca 2023 roku",
         title: "JavaScript - wstęp do tablic",
         body: (
             <>
-            <h4 className="article__subsubsubheader">Przykład</h4>
-            <blockquote className="article__blockquote">
-                <b>const <i>products</i></b> = ["jajka", "mleko", "chleb", "bułki", "czekolada"];<br/>
-            </blockquote>
-            <ul className="article__unorderedList">
-                <li className="article__listItem">tablice <i>(ang. arrays)</i> przechowują listę elementów w jednej
-                    zmiennej / stałej
-                </li>
-            </ul>
-            <h4 className="article__subsubsubheader">Jak sprawdzić, czy coś jest tablicą?</h4>
-            <blockquote className="article__blockquote">
-                Array.isArray(products);<br/>
-                products <b>instanceof</b> Array;<br/>
+                <h4 className="article__subsubsubheader">Przykład</h4>
+                <blockquote className="article__blockquote">
+                    <b>const <i>products</i></b> = ["jajka", "mleko", "chleb", "bułki", "czekolada"];<br/>
+                </blockquote>
                 <ul className="article__unorderedList">
-                    <li className="article__listItem">typeof zwraca "object"</li>
+                    <li className="article__listItem">tablice <i>(ang. arrays)</i> przechowują listę elementów w jednej
+                        zmiennej / stałej
+                    </li>
                 </ul>
-            </blockquote>
-            <h4 className="article__subsubsubheader">Elementy tablicy mogą mieć różne typy</h4>
-            <blockquote className="article__blockquote">
-                <b>const</b> array = [5, "tekst", undefined, &#123;name: "Leon"&#125;, [3]];
-            </blockquote>
-            <h4 className="article__subsubsubheader">Dostęp do elementów tablicy</h4>
-            <blockquote className="article__blockquote">
-                <b>const</b> products = ["jajka", "mleko", "chleb", "bułki", "czekolada"];<br/>
-                <b>const</b> secondProduct = products[1];
-                products[2] = "ser";
-            </blockquote>
-            <h4 className="article__subsubsubheader">Długość tablicy</h4>
-            <blockquote className="article__blockquote">
-                <b>const</b> products = ["jajka", "mleko", "chleb", "bułki", "czekolada"];<br/>
-                <b>const</b> productsCount = products.length; // 5
-            </blockquote>
-            <ul className="article__unorderedList">
-                <li className="article__listItem">tak samo jak w stringach</li>
-            </ul>
-            <h4 className="article__subsubsubheader">Konwertowanie tablicy na string</h4>
-            <blockquote className="article__blockquote">
-                <b>const</b> products = ["jajka", "mleko", "chleb", "bułki", "czekolada"];<br/><br/>
-                <b>const</b> productsString = products.join(", "); //możemy wybrać separator<br/>
-                <b>const</b> productsString2 = products.toString(); // zawsze ","
-            </blockquote>
-            <h4 className="article__subsubsubheader">Konwertowanie tekstu na tablicę</h4>
-            <blockquote className="article__blockquote">
-                <b>const</b> productsString = "jajka, mleko, chleb";<br/>
-                <b>const</b> products = productsString.split(", ");
-            </blockquote>
-            <ul className="article__unorderedList">
-                <li className="article__listItem">to jest metoda obiektu <i>String,</i> nie <i>Array</i></li>
-                <li className="article__listItem">nie pomijamy separatora!</li>
-            </ul>
-            <h4 className="article__subsubsubheader">Dodawanie elementów na koniec tablicy</h4>
-            <blockquote className="article__blockquote">
-                <b>const</b> products = ["jajka", "mleko", "chleb", "bułki", "czekolada"];<br/><br/>
-                products.push("drożdże", "Lion");
-            </blockquote>
-            <ul className="article__unorderedList">
-                <li className="article__listItem">dodaje na koniec tablicy</li>
-                <li className="article__listItem">zwraca nową długość tablicy</li>
-            </ul>
-            <h4 className="article__subsubsubheader">Usuwanie ostatniego elementu tablicy</h4>
-            <blockquote className="article__blockquote">
-                <b>const</b> products = ["jajka", "mleko", "chleb", "bułki", "czekolada"];<br/><br/>
-                <b>const</b> removedItem = products.pop();
-            </blockquote>
-            <ul className="article__unorderedList">
-                <li className="article__listItem">zwraca usunięty element</li>
-            </ul>
-            <h4 className="article__subsubsubheader">Dodawanie i usuwanie z początku tablicy</h4>
-            <blockquote className="article__blockquote">
-                <b>const</b> products = ["jajka", "mleko", "chleb", "bułki", "czekolada"];<br/><br/>
-                <b>const</b> newLength = products.unshift("pasta Colgate"); //dodaje na początek<br/>
-                <b>const</b> removedItem = products.shift(); //usuwa z początku<br/>
-            </blockquote>
-            <h4 className="article__subsubsubheader">Usuwanie dowolnego elementu</h4>
-            <blockquote className="article__blockquote">
-                <b>const</b> products = ["jajka", "mleko", "chleb", "bułki", "czekolada"];<br/><br/>
-                products.splice(1, 1);<br/>
-                // usuwa drugi element<br/><br/>
-                products.splice(2, 2, "rajstopy Gatta", "spód do pizzy");<br/>
-                //usuwa 3. i 4. element, dodaje dwa nowe w ich miejsce
-            </blockquote>
-            <h4 className="article__subsubsubheader">forEach</h4>
-            <blockquote className="article__blockquote">
-                <b>const</b> products = ["jajka", "mleko", "chleb", "bułki", "czekolada"];<br/><br/>
-                products.forEach((product, index) => &#123;<br/>
-                &nbsp;&nbsp;console.log(`$&#123;index + 1&#125;.$&#123;product&#125;`);<br/>
-                &#125;);
-            </blockquote>
+                <h4 className="article__subsubsubheader">Jak sprawdzić, czy coś jest tablicą?</h4>
+                <blockquote className="article__blockquote">
+                    Array.isArray(products);<br/>
+                    products <b>instanceof</b> Array;<br/>
+                    <ul className="article__unorderedList">
+                        <li className="article__listItem">typeof zwraca "object"</li>
+                    </ul>
+                </blockquote>
+                <h4 className="article__subsubsubheader">Elementy tablicy mogą mieć różne typy</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> array = [5, "tekst", undefined, &#123;name: "Leon"&#125;, [3]];
+                </blockquote>
+                <h4 className="article__subsubsubheader">Dostęp do elementów tablicy</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> products = ["jajka", "mleko", "chleb", "bułki", "czekolada"];<br/>
+                    <b>const</b> secondProduct = products[1];
+                    products[2] = "ser";
+                </blockquote>
+                <h4 className="article__subsubsubheader">Długość tablicy</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> products = ["jajka", "mleko", "chleb", "bułki", "czekolada"];<br/>
+                    <b>const</b> productsCount = products.length; // 5
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">tak samo jak w stringach</li>
+                </ul>
+                <h4 className="article__subsubsubheader">Konwertowanie tablicy na string</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> products = ["jajka", "mleko", "chleb", "bułki", "czekolada"];<br/><br/>
+                    <b>const</b> productsString = products.join(", "); //możemy wybrać separator<br/>
+                    <b>const</b> productsString2 = products.toString(); // zawsze ","
+                </blockquote>
+                <h4 className="article__subsubsubheader">Konwertowanie tekstu na tablicę</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> productsString = "jajka, mleko, chleb";<br/>
+                    <b>const</b> products = productsString.split(", ");
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">to jest metoda obiektu <i>String,</i> nie <i>Array</i></li>
+                    <li className="article__listItem">nie pomijamy separatora!</li>
+                </ul>
+                <h4 className="article__subsubsubheader">Dodawanie elementów na koniec tablicy</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> products = ["jajka", "mleko", "chleb", "bułki", "czekolada"];<br/><br/>
+                    products.push("drożdże", "Lion");
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">dodaje na koniec tablicy</li>
+                    <li className="article__listItem">zwraca nową długość tablicy</li>
+                </ul>
+                <h4 className="article__subsubsubheader">Usuwanie ostatniego elementu tablicy</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> products = ["jajka", "mleko", "chleb", "bułki", "czekolada"];<br/><br/>
+                    <b>const</b> removedItem = products.pop();
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">zwraca usunięty element</li>
+                </ul>
+                <h4 className="article__subsubsubheader">Dodawanie i usuwanie z początku tablicy</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> products = ["jajka", "mleko", "chleb", "bułki", "czekolada"];<br/><br/>
+                    <b>const</b> newLength = products.unshift("pasta Colgate"); //dodaje na początek<br/>
+                    <b>const</b> removedItem = products.shift(); //usuwa z początku<br/>
+                </blockquote>
+                <h4 className="article__subsubsubheader">Usuwanie dowolnego elementu</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> products = ["jajka", "mleko", "chleb", "bułki", "czekolada"];<br/><br/>
+                    products.splice(1, 1);<br/>
+                    // usuwa drugi element<br/><br/>
+                    products.splice(2, 2, "rajstopy Gatta", "spód do pizzy");<br/>
+                    //usuwa 3. i 4. element, dodaje dwa nowe w ich miejsce
+                </blockquote>
+                <h4 className="article__subsubsubheader">forEach</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> products = ["jajka", "mleko", "chleb", "bułki", "czekolada"];<br/><br/>
+                    products.forEach((product, index) => &#123;<br/>
+                    &nbsp;&nbsp;console.log(`$&#123;index + 1&#125;.$&#123;product&#125;`);<br/>
+                    &#125;);
+                </blockquote>
                 <ul className="article__unorderedList">
                     <li className="article__listItem">iteruje po elementach tablicy</li>
                 </ul>
@@ -109,15 +261,16 @@ export const articlesLink = [
                     &nbsp;&nbsp;console.log(product);<br/>
                     &#125;;
                 </blockquote>
-                    <ul className="article__unorderedList">
+                <ul className="article__unorderedList">
                     <li className="article__listItem">wygodne, jeśli nie potrzebujemy index-u</li>
-                    </ul>
-                    <h4 className="article__subsubsubheader">Przekazywanie tablic do funkcji oraz porównywanie działa tak samo
+                </ul>
+                <h4 className="article__subsubsubheader">Przekazywanie tablic do funkcji oraz porównywanie działa tak
+                    samo
                     jak w przypadku obiektów</h4>
-                    <ul className="article__unorderedList">
+                <ul className="article__unorderedList">
                     <li className="article__listItem">przekazywanie przez referencję</li>
                     <li className="article__listItem">porównywanie dwóch tablic zawsze zwróci <b>false</b></li>
-                    </ul>
+                </ul>
             </>
         )
     },
@@ -134,68 +287,69 @@ export const articlesLink = [
                     &nbsp;&nbsp;surname: "Kowalski",<br/>
                     &nbsp;&nbsp;age: 30,<br/>
                     &nbsp;&nbsp;sayHello: <b>function</b> () &#123;<br/>
-                    &nbsp;&nbsp;&nbsp;&nbsp;console.log(`Cześć! Nazywam się $&#123;<b>this</b>.name&#125; $&#123;<b>this</b>.surname&#125; i
+                    &nbsp;&nbsp;&nbsp;&nbsp;console.log(`Cześć! Nazywam się $&#123;<b>this</b>.name&#125; $&#123;
+                    <b>this</b>.surname&#125; i
                     mam $&#123;<b>this</b>.age&#125; lat.`);<br/>
                 </blockquote>
-                    <ul className="article__unorderedList">
-                        <li className="article__listItem">złożony typ, lepiej opisujący rzeczywistość,</li>
-                        <li className="article__listItem">składa się z pól/właściwości i funkcji/metod</li>
-                    </ul>
-                    <h4 className="article__subsubsubheader">Korzystanie z właściwości i metod obiektu <i>(dot
-                        notation)</i>
-                    </h4>
-                    <blockquote className="article__blockquote">
-                        console.log(person.name);<br/>
-                        console.log(person["age"]);<br/>
-                        person.sayHello();<br/>
-                    </blockquote>
-                    <h4 className="article__subsubsubheader">this</h4>
-                    <ul className="article__unorderedList">
-                        <li className="article__listItem">słowo <i>this</i> odnosi się w naszym przypadku do obiektu,
-                            "wewnątrz
-                            którego" wykonuje się kod
-                        </li>
-                        <li className="article__listItem">funkcje strzałkowe "nie mają swojego <i>this</i>"</li>
-                    </ul>
-                    <h4 className="article__subsubsubheader">Obiekt w obiekcie</h4>
-                    <blockquote className="article__blockquote">
-                        <b>const <i>person</i></b> = &#123;<br/>
-                        &nbsp;&nbsp;name: "Jan",<br/>
-                        &nbsp;&nbsp;surname: "Kowalski",<br/>
-                        &nbsp;&nbsp;parent: &#123;<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;name: "Anna",<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;surname: "Kowalska",<br/>
-                        &nbsp;&nbsp;&#125;,<br/>
-                        &#125;;<br/><br/>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">złożony typ, lepiej opisujący rzeczywistość,</li>
+                    <li className="article__listItem">składa się z pól/właściwości i funkcji/metod</li>
+                </ul>
+                <h4 className="article__subsubsubheader">Korzystanie z właściwości i metod obiektu <i>(dot
+                    notation)</i>
+                </h4>
+                <blockquote className="article__blockquote">
+                    console.log(person.name);<br/>
+                    console.log(person["age"]);<br/>
+                    person.sayHello();<br/>
+                </blockquote>
+                <h4 className="article__subsubsubheader">this</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">słowo <i>this</i> odnosi się w naszym przypadku do obiektu,
+                        "wewnątrz
+                        którego" wykonuje się kod
+                    </li>
+                    <li className="article__listItem">funkcje strzałkowe "nie mają swojego <i>this</i>"</li>
+                </ul>
+                <h4 className="article__subsubsubheader">Obiekt w obiekcie</h4>
+                <blockquote className="article__blockquote">
+                    <b>const <i>person</i></b> = &#123;<br/>
+                    &nbsp;&nbsp;name: "Jan",<br/>
+                    &nbsp;&nbsp;surname: "Kowalski",<br/>
+                    &nbsp;&nbsp;parent: &#123;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;name: "Anna",<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;surname: "Kowalska",<br/>
+                    &nbsp;&nbsp;&#125;,<br/>
+                    &#125;;<br/><br/>
 
-                        console.log(person.parent.name);<br/>
-                        console.log(person["parent"]["surname"]);<br/>
-                    </blockquote>
-                        <h4 className="article__subsubsubheader">Korzystaliśmy już wielokrotnie z wielu metod
-                            obiektów:</h4>
-                        <ul className="article__unorderedList">
-                            <li className="article__listItem">document.querySelector</li>
-                            <li className="article__listItem">Math.min</li>
-                            <li className="article__listItem">String.includes</li>
-                            <li className="article__listItem">itd.</li>
-                        </ul>
-                        <h4 className="article__subsubsubheader">Porównywanie obiektów</h4>
-                        <ul className="article__unorderedList">
-                            <li className="article__listItem">porównanie dwóch obiektów zawsze zwróci <b>false</b></li>
-                            <li className="article__listItem">tylko porównanie tego samego obiektu ze sobą
-                                zwróci <b>true</b></li>
-                        </ul>
-                        <h4 className="article__subsubsubheader">Obiekty do funkcji przekazujemy przez referencję</h4>
-                        <ul className="article__unorderedList">
-                            <li className="article__listItem">funkcja może modyfikować właściwości i metody obiektu
-                                przekazanego w
-                                argumencie
-                            </li>
-                            <li className="article__listItem">obiekt nie jest kopiowany jak typy prymitywne (string,
-                                number, boolean
-                                itd.)
-                            </li>
-                        </ul>
+                    console.log(person.parent.name);<br/>
+                    console.log(person["parent"]["surname"]);<br/>
+                </blockquote>
+                <h4 className="article__subsubsubheader">Korzystaliśmy już wielokrotnie z wielu metod
+                    obiektów:</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">document.querySelector</li>
+                    <li className="article__listItem">Math.min</li>
+                    <li className="article__listItem">String.includes</li>
+                    <li className="article__listItem">itd.</li>
+                </ul>
+                <h4 className="article__subsubsubheader">Porównywanie obiektów</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">porównanie dwóch obiektów zawsze zwróci <b>false</b></li>
+                    <li className="article__listItem">tylko porównanie tego samego obiektu ze sobą
+                        zwróci <b>true</b></li>
+                </ul>
+                <h4 className="article__subsubsubheader">Obiekty do funkcji przekazujemy przez referencję</h4>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">funkcja może modyfikować właściwości i metody obiektu
+                        przekazanego w
+                        argumencie
+                    </li>
+                    <li className="article__listItem">obiekt nie jest kopiowany jak typy prymitywne (string,
+                        number, boolean
+                        itd.)
+                    </li>
+                </ul>
             </>
         )
     },
@@ -218,7 +372,8 @@ export const articlesLink = [
                 <p>Trzymając się też filozofii <i>małych kroków</i> w tym tygodniu wprowadziłam liczenie spożywanych
                     kalorii i ścinanie 200 - 300 kcal na dzień. Od razu złapało mnie jakieś choróbsko, mimo tego, że
                     jestem od rana z gorączką z zatkanym nosem nie przekreśliłam swoich planów i poszłam pobiegać.
-                    Uciszyłam tego małego &#123;wstaw tu słowo&#125; w mojej głowie. Satysfakcja jest niesamowita! Mimo że są to
+                    Uciszyłam tego małego &#123;wstaw tu słowo&#125; w mojej głowie. Satysfakcja jest niesamowita! Mimo
+                    że są to
                     nadal tylko 2,5 km.</p>
                 <p>Jeśli chodzi o programowanie — tak jak pisałam wcześniej, wprowadziłam system naprawczy. Na początku
                     mojej pracy było mi trudno odnaleźć się w środowisku projektu komercyjnego i cały czas czułam, że
