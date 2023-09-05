@@ -6,6 +6,71 @@ import Null from "../../../images/nullUndefined.jpg";
 
 export const articlesLink = [
     {
+        id: 66,
+        date: "25 lipca 2023 roku",
+        title: "JavaScript - obiekty cz. 2",
+        body: (
+            <>
+                <h4 className="article__subsubsubheader">Skrócona notacja: właściwości</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> name = "Kasia";<br/>
+                    <b>const</b> surname = "Pelasia";<br/><br/>
+                    <b>const</b> person = &#123;<br/>
+                    &nbsp;&nbsp;name,<br/>&nbsp;&nbsp;&nbsp;&nbsp;//zamiast name: name<br/>
+                    &nbsp;&nbsp;surname,<br/>&nbsp;&nbsp;&nbsp;&nbsp;//zamiast surname: surname<br/>
+                    &#125;;<br/>
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">warto stosować, jeśli właściwość ma taką samą nazwę jak
+                        zmienna/stała,
+                        której wartość chcemy do tej właściwości przypisać
+                    </li>
+                </ul>
+                <h4 className="article__subsubsubheader">Skrócona notacja: metody</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> person = &#123;<br/>
+                    &nbsp;&nbsp;name: "Kasia",<br/>
+                    &nbsp;&nbsp;sayHello() &#123;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;console.log(`Cześć! Jestem $&#123;this.name&#125;`);<br/>
+                    &nbsp;&nbsp;&#125;<br/>
+                    &#125;;<br/>
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">słowo <b>function</b> niepotrzebne</li>
+                </ul>
+                <h4 className="article__subsubsubheader">Computed Property Names</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> currency = "EUR";<br/><br/>
+                    <b>const</b> exchangeData = &#123;<br/>
+                    &nbsp;&nbsp;PLN: 45,<br/>
+                    &nbsp;&nbsp;[currency]: 200,<br/>
+                    &#125;;<br/>
+                </blockquote>
+                <h4 className="article__subsubsubheader">Destrukturyzacja</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> person = &#123;<br/>
+                    &nbsp;&nbsp;name: "Kasia",<br/>
+                    &nbsp;&nbsp;surname: "Pelasia",<br/>
+                    &nbsp;&nbsp;age: 30,<br/>
+                    &nbsp;&nbsp;gender: "male",<br/>
+                    &#125;;<br/><br/>
+                    <b>const</b> &#123;name, surname, ...rest&#125; = person;<br/>
+                    //rest - obiekt z pozostałymi właściwościami<br/><br/>
+                    <b>const</b> &#123; city = "N/A"&#125; = person;<br/>&nbsp;&nbsp;//domyślna wartość<br/>
+                    <b>const</b> &#123;surname: lastName&#125; = person;<br/>&nbsp;&nbsp;//inna nazwa zmiennej/
+                    stałej<br/><br/>
+                    //obiekt jako argument funkcji<br/>
+                    <b>const</b> getPersonFullName = (&#123;name, surname&#125;) =>
+                    `$&#123;name&#125; $&#123;surname&#125;`;<br/>
+                </blockquote>
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">iteruje po właściwościach obiektu</li>
+                    <li className="article__listItem">kolejność może być różna</li>
+                </ul>
+            </>
+        )
+    },
+    {
         id: 65,
         date: "25 lipca 2023 roku",
         title: "CSS - płynne przejścia, transformacje",
