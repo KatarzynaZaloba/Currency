@@ -17,7 +17,266 @@ import TableContainer from "../../atoms/TableContainer";
 
 export const articlesLink = [
     {
-        id: 73
+        id: 75,
+        date: "7 sierpnia 2023 roku",
+        title: "React - c.d.",
+        body: (
+            <>
+                <SmallestHeader>JSX automatycznie escape-uje HTML-a</SmallestHeader>
+                <Blockquote>
+                    <b>const</b> message = "&lt;strong>coś tam"<br/>
+                    <b>const</b> element = &lt;div&gt;&#123;message&#125;&lt;/div&gt;
+                </Blockquote>
+                <SmallestHeader>React aktualizuje tylko to, co trzeba</SmallestHeader>
+                <Blockquote>
+                    <b>const</b> element1 = &lt;div className="klasa1">Treść&lt;/div>;<br/>
+                    ReactDOM.render(element1, document.getElementById('root'));<br/><br/>
+                    <b>const</b> element2 = &lt;div className="klasa2">Treść&lt;/div>;<br/>
+                    ReactDOM.render(element2, document.getElementById('root'));
+                </Blockquote>
+                <SmallestHeader>Komponenty</SmallestHeader>
+                <Blockquote>
+                    <b>const</b> Hello = (props) => (<br/>
+                    &lt;h1>Cześć &#123;props.name&#125;!&lt;/h1><br/>
+                    );<br/><br/>
+                    <b>const</b> element =
+                    &lt;Hello name="Krzychu"/>
+                    ;<br/>
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>są funkcjami JavaScript (lub klasami)</ListItem>
+                    <ListItem>otrzymują <b>props</b> i zwracają element
+                        React
+                    </ListItem>
+                    <ListItem>atrybuty stają się właściwościami
+                        obiektu <b>props</b></ListItem>
+                    <ListItem>pozwalają podzielić aplikację na odrębne
+                        niezależne części (trochę tak
+                        jak w BEM)
+                    </ListItem>
+                    <ListItem>nazwy komponentów zaczynamy wielką literą</ListItem>
+                </ListUnordered>
+                <SmallestHeader>Komponent nie zmienia przekazanych mu props</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>komponenty na tych samych <b>props</b> powinny
+                        zwracać zawsze to samo
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>Jak renderować warunkowo? if/else</SmallestHeader>
+                <Blockquote>
+                    <b>const</b> Hello = (props) => &#123;<br/>
+                    &nbsp;&nbsp;<b>if</b> (!props.name) &#123;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<b>return</b> (<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1>Cześć nieznajomy!&lt;/h1>;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;);<br/>
+                    &nbsp;&nbsp;&#125;<br/><br/>
+                    &nbsp;&nbsp;<b>return (</b><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1>Cześć &#123;props.name&#125;!&lt;/h1><br/>
+                    &nbsp;&nbsp;);<br/>
+                    &#125;;<br/><br/>
+                    <b>const</b> element = (<br/>
+                    &nbsp;&nbsp;&lt;div><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;Hello name="Krzychu"/&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;Hello/&gt;<br/>
+                    &nbsp;&nbsp;&lt;/div><br/>
+                    );<br/>
+                </Blockquote>
+                <SmallestHeader>Potrójny operator ? :</SmallestHeader>
+                <Blockquote>
+                    <b>const</b> Hello = (props) => (<br/>
+                    &nbsp;&nbsp;<b>return</b> (<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1>Cześć &#123;props.name ? props.name :
+                    'nieznajomy'&#125;!&lt;/h1>;<br/>
+                    &nbsp;&nbsp;);<br/>
+                    );<br/><br/>
+                </Blockquote>
+                <SmallestHeader>Operator OR ||</SmallestHeader>
+                <Blockquote>
+                    <b>const</b> Hello = (props) => (<br/>
+                    &nbsp;&nbsp;<b>return</b> (<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1>Cześć &#123;props.name ||
+                    'nieznajomy'&#125;!&lt;/h1>;<br/>
+                    &nbsp;&nbsp;);<br/>
+                    );<br/><br/>
+                </Blockquote>
+                <SmallestHeader>Operator AND &&</SmallestHeader>
+                <Blockquote>
+                    <b>const</b> Hello = (props) => (<br/>
+                    &nbsp;&nbsp;<b>return</b> (<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;!!props.name && (<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1>Cześć &#123;props.name&#125;!&lt;/h1><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;)<br/><br/>
+                    &nbsp;&nbsp;);<br/>
+                    );<br/><br/>
+                </Blockquote>
+                <p>Operator !! pozwoli przekonwertować wartość na <i>boolean-a</i> bez
+                    możliwości użycia <i>undefined</i>.</p>
+                <SmallestHeader>Komponent może zwrócić null</SmallestHeader>
+                <Blockquote>
+                    <b>const</b> Hello = (props) => (<br/>
+                    &nbsp;&nbsp;<b>return</b> (<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<b>if</b> (!props.name) &#123;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>return null</b>;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&#125;<br/><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<b>return</b> (<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1>Cześć &#123;props.name&#125;!&lt;/h1><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;);<br/>
+                    &nbsp;&nbsp;&#125;<br/>
+                </Blockquote>
+                <SmallestHeader>Tablice w React.js</SmallestHeader>
+                <Blockquote>
+                    <b>const</b> ProductList = props => (<br/>
+                    &nbsp;&nbsp;&lt;ul><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#123;props.products.map(product =>
+                    (<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li>&#123;product&#125;&lt;/li>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;))&#125;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul><br/>
+                    &nbsp;&nbsp;);<br/><br/>
+                    <b>const</b> element = (<br/>
+                    &nbsp;&nbsp;&lt;ProductList
+                    products=&#123;["papier", "mleko", "jajka"]&#125; /><br/>
+                </Blockquote>
+                <SmallestHeader>Key</SmallestHeader>
+                <Blockquote>
+                    <b>const</b> ProductList = props => (<br/>
+                    &nbsp;&nbsp;&lt;ul><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#123;props.products.map(product => (
+                    <br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li
+                    key=&#123;product.id&#125;>&#123;product.name&#125;&lt;/li><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;))&#125;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul><br/>
+                    &nbsp;&nbsp;);<br/><br/>
+                    <b>const</b> products = [<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&#123;id: 1, name: "papier"&#125;,<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&#123;id: 2, name: "mleko"&#125;,<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&#123;id: 3, name: "jajka"&#125;<br/>
+                    ];<br/><br/>
+                    <b>const</b> element = (<br/>
+                    &lt;ProductList products=&#123;products&#125; /><br/>
+                    );
+                </Blockquote>
+                <SmallestHeader>Fragments</SmallestHeader>
+                <Blockquote>
+                    <b>return</b> (<br/>
+                    &nbsp;&nbsp;&lt;React.Fragment><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1>Witaj świecie!&lt;/h1><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2>Co tam słychać!?&lt;/h2><br/>
+                    &nbsp;&nbsp;&lt;React.Fragment><br/>
+                    );
+                </Blockquote>
+            </>
+        )
+    },
+    {
+        id: 74,
+        date: "3 sierpnia 2023 roku",
+        title: "Podsumowanie",
+        body: (
+            <>
+                <p>Nadszedł czas podsumowania, gdzie po raz kolejny pod lupę wezmę swoją naukę
+                    oraz aktywności fizyczne. Jeśli mogę zacząć najpierw od aktywności — udało
+                    mi się
+                    utrzymać bieganie trzy
+                    razy w tygodniu!
+                    Niestety zapomniałam, że filtr aktywności w Garmin-ie nie pozwala mi na
+                    zastosowanie własnych dat,
+                    żeby wyciągnąć analogiczne dane z poprzedniego okresu a gapa ze mnie, że nie
+                    spojrzałam kilka dni
+                    wcześniej.</p>
+                <p>To może podsumujemy przetruchtane kilometry?</p>
+                <TableContainer>
+                    <Table>
+                        <Caption>porównanie liczby przebiegniętych (no, przetruchtanych)
+                            kilometrów w pełnych miesiącach
+                        </Caption>
+                        <Thead>
+                            <Tr>
+                                <Th>
+                                    liczba przebiegniętych (no, przetruchtanych) kilometrów
+                                    czerwiec
+                                    2023
+                                </Th>
+                                <Th>
+                                    liczba przebiegniętych (no, przetruchtanych) kilometrów
+                                    lipiec
+                                    2023
+                                </Th>
+                                <Th>różnica</Th>
+                            </Tr>
+                        </Thead>
+                        <tbody>
+                        <Tr>
+                            <td>0</td>
+                            <td>16,4km</td>
+                            <td>16,4km</td>
+                        </Tr>
+                        </tbody>
+                        <tfoot>
+                        </tfoot>
+                    </Table>
+                </TableContainer>
+                <p>Mój wykładowca Statystyki na moich studiach licencjackich, kiedyś powiedział,
+                    że statystyka to przekłamanie, ponieważ umożliwia manipulowanie danymi w
+                    taki
+                    sposób, aby
+                    pokazać tylko to, co chcemy pokazać. Aby uniknąć przekłamania, będę
+                    porównywała teraz kilometraże
+                    miesięcznie. I jak na razie jest spoko. Z każdym treningiem w każdym
+                    tygodniu ten kilometraż się
+                    minimalnie zwiększa. I tak trzymać!</p>
+                <p>A co z powtarzaniem materiału z kursu programowania?</p>
+                <p>A bardzo dobrze, jestem już w połowie, na ósmym module i powtarzam React-a.
+                    Założenie jest takie, aby
+                    skończyć powtarzać materiał do października. Czas okaże, czy mi się uda.</p>
+                <p>I kolejna dobra wiadomość — z dnia na dzień coraz pewniej pracuję z kodem. I
+                    bardzo się z tego
+                    cieszę! </p>
+            </>
+        )
+    },
+    {
+        id: 73,
+        date: "2 sierpnia 2023 roku",
+        title: "React c.d.",
+        body: (
+            <>
+                <SmallestHeader>Atrybuty w JSX</SmallestHeader>
+                <Blockquote>
+                    <b>const</b> element = (<br/>
+                    &nbsp;&nbsp;&lt;div className="container"><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;button disabled=&#123;true&#125;>Wyłączony
+                    przycisk&lt;/button><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;button disabled>Wyłączony
+                    przycisk&lt;/button><br/>
+                    &nbsp;&nbsp;&lt;/div><br/>
+                    );
+                </Blockquote>
+                <p>Do określenia klasy nie używamy atrybutu <i>class</i> tylko className.
+                    W <i>JSX</i> możemy przekazywać różne typy , nawet <i>boolean-a</i> i tak
+                    jak w załączonym przykładzie wyżej - dodać
+                    wartość <i>true</i> w <i>curly braces</i> do atrybutu <i>disabled</i>.
+                    Oczywiście podkreślić trzeba, że obowiązuje tutaj konwencja <i>camelCase</i>.
+                </p>
+                <SmallestHeader>Atrybuty spread</SmallestHeader>
+                <Blockquote>
+                    <b>const</b> attributes = (<br/>
+                    &nbsp;&nbsp;className: "button",<br/>
+                    &nbsp;&nbsp;disabled: <b>true</b>,<br/>
+                    );<br/><br/>
+                    <b>const</b> element = (<br/>
+                    &nbsp;&nbsp;&lt;button &#123;...attributes&#125;><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Wyłączony przycisk<br/>
+                    &nbsp;&nbsp;&lt;/button><br/>
+                    );
+                </Blockquote>
+            </>
+        )
     },
     {
         id: 72,
