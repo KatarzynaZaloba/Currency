@@ -6,6 +6,278 @@ import Null from "../../../images/nullUndefined.jpg";
 
 export const articlesLink = [
     {
+        id: 69,
+        date: "27 lipca 2023 roku",
+        title: "JavaScript - ćwiczenia z tablicami",
+        body: (
+            <>
+        <h4 className="article__subsubsubheader">Wyciąganie fragmentu tablicy</h4>
+        <blockquote className="article__blockquote">
+            <b>const</b> seasons = ["wiosna", "lato", "jesień", "zima"];<br/><br/>
+            <b>const</b> last2seasons = seasons.slice(2); &nbsp;&nbsp;// ["jesień", "zima"]<br/><br/>
+            <b>const</b> middle2seasons = seasons.slice(1, 3); &nbsp;&nbsp;// ["lato", "jesień"]<br/><br/>
+            <b>const</b> last3seasons = seasons.slice(-3); &nbsp;&nbsp;// ["lato", "jesień", "zima"]<br/><br/>
+            <b>const</b> allButLast = seasons.slice(0, -1); &nbsp;&nbsp;// ["wiosna", "lato", "jesień"]
+        </blockquote>
+        <ul className="article__unorderedList">
+            <li className="article__listItem">tworzy nową tablicę</li>
+        </ul>
+        <h4 className="article__subsubsubheader">indexOf, lastIndexOf</h4>
+        <blockquote className="article__blockquote">
+            <b>const</b> numbers = [20, 10, 45, 10];<br/><br/>
+
+            console.log(numbers.indexOf(10)); &nbsp;&nbsp;// 1<br/>
+            console.log(numbers.lastIndexOf(10)); &nbsp;&nbsp;// 3<br/>
+            console.log(numbers.indexOf(5)); &nbsp;&nbsp;// -1<br/>
+            console.log(numbers.lastIndexOf(5)); &nbsp;&nbsp;// -1<br/>
+        </blockquote>
+        <ul className="article__unorderedList">
+            <li className="article__listItem">jeżeli index nie został znaleziony, to zwraca -1</li>
+        </ul>
+        <h4 className="article__subsubsubheader">find</h4>
+        <blockquote className="article__blockquote">
+            <b>const</b> numbers = [-7, 0, 10, -6, 45];<br/><br/>
+            <b>const</b> firstPositive = numbers.find(number > number > 0); &nbsp;&nbsp;// 10<br/>
+            <b>const</b> first100 = numbers.find(number === 100); &nbsp;&nbsp;// undefined<br/><br/>
+            <b>const</b> persons = [<br/>
+            &nbsp;&nbsp;&#123;name: "Kasia"&#125;,<br/>
+            &nbsp;&nbsp;&#123;name: "Marta"&#125;,<br/>
+            ];<br/><br/>
+            <b>const</b> chris = persons.find((&#123; name &#153;) => name === "Marta");
+        </blockquote>
+        <ul className="article__unorderedList">
+            <li className="article__listItem">zwraca pierwszy element, który spełnia funkcję sprawdzającą</li>
+        </ul>
+        <h4 className="article__subsubsubheader">findIndex</h4>
+        <blockquote className="article__blockquote">
+            <b>const</b> numbers = [-7, 0, 10, -6, 45];<br/><br/>
+            <b>const</b> firstPositiveIndex = numbers.findIndex(number > number > 0); &nbsp;&nbsp;// 2<br/>
+            <b>const</b> first100Index = numbers.findIndex(number === 100); &nbsp;&nbsp;// -1<br/><br/>
+            <b>const</b> persons = [<br/>
+            &nbsp;&nbsp;&#123;name: "Kasia"&#125;,<br/>
+            &nbsp;&nbsp;&#123;name: "Marta"&#125;,<br/>
+            ];<br/><br/>
+            <b>const</b> kasiaIndex = persons.findIndex((&#123; name &#125;) => name === "Kasia");&nbsp;&nbsp;// 0
+        </blockquote>
+        <h4 className="article__subsubsubheader">includes</h4>
+        <blockquote className="article__blockquote">
+            <b>const</b> quests = ["Włodek", "Irmina", "Melodia"];<br/><br/>
+            console.log(guests.includes("Włodek")); &nbsp;&nbsp;// true<br/>
+            console.log(guests.includes("Zenek")); &nbsp;&nbsp;// false
+        </blockquote>
+        <h4 clasName="article__subsubsubheader">some</h4>
+        <blockquote className="article__blockquote">
+            <b>const</b> tasks = [<br/>
+            &nbsp;&nbsp;&#123; content: "Przeczytać książkę", done: false &#125;,<br/>
+            &nbsp;&nbsp;&#123; content: "Zrobić zakupy", done: true &#125;,<br/>
+            ];<br/><br/>
+            <b>const</b> isAnyTaskDone = tasks.some((&#123; done &#125;) => done); &nbsp;&nbsp;// true<br/><br/>
+            <b>const</b> numbers = [1, 3, 5, 7];<br/><br/>
+            <b>const</b> isAnyNumberEven = numbers.some(number => number % 2 === 0); &nbsp;&nbsp;// false
+        </blockquote>
+        <ul className="article__unorderedList">
+            <li className="article__listItem">sprawdza, czy przynajmniej jeden element spełnia funkcję
+                sprawdzającą
+            </li>
+        </ul>
+        <h4 className="article__subsubsubheader">every</h4>
+        <blockquote className="article__blockquote">
+            <b>const</b> tasks = [<br/>
+            &nbsp;&nbsp;&#123; content: "Przeczytać książkę", done: false &#125;,<br/>
+            &nbsp;&nbsp;&#123; content: "Zrobić zakupy", done: true &#125;,<br/>
+            ];<br/><br/>
+            <b>const</b> isEveryTaskDone = task.every((&#123;done&#125;) => done); &nbsp;&nbsp;// false<br/><br/>
+            <b>const</b> numbers = [1, 3, 5, 7];<br/><br/>
+            <b>const</b> isEveryNumberEven = numbers.every(number => number % 2 === 0); &nbsp;&nbsp;// false
+        </blockquote>
+        <ul className="article__unorderedList">
+            <li className="article__listItem">sprawdza, czy wszystkie elementy spełniają funkcję sprawdzającą</li>
+        </ul>
+        <h4 className="article__subsubsubheader">filtrowanie</h4>
+        <blockquote className="article__blockquote">
+            <b>const</b> numbers = [1, 2, 3, 4];<br/><br/>
+            <b>const</b> evenNumbers = numbers.filter(number => number % 2 === 0);<br/><br/>
+            <b>const</b> tasks = [<br/>
+            &nbsp;&nbsp;&#123; content: "Przeczytać książkę", done: false &#125;,<br/>
+            &nbsp;&nbsp;&#123; content: "Zrobić zakupy", done: true &#125;,<br/>
+            ];<br/><br/>
+            <b>const</b> doneTasks = tasks.filter((&#123;done&#125;) => done);
+        </blockquote>
+        <ul className="article__unorderedList">
+            <li className="article__listItem">zwraca nową tablicę, która zawiera elementy, spełniające funkcję
+                sprawdzającą
+            </li>
+        </ul>
+        <h4 className="article__subsubsubheader">Mapowanie / odwzorowanie</h4>
+        <blockquote className="article__blockquote">
+            <b>const</b> numbers = [1, 5, 10];<br/>
+            <b>const</b> doubledNumbers = numbers.map(number => number * 2);<br/><br/>
+            <b>const</b> persons = [<br/>
+            &nbsp;&nbsp;&#123; name: "Kasia", surname: "Pelasia" &#125;,<br/>
+            &nbsp;&nbsp;&#123; name: "Marta", surname: "Karta" &#125;,<br/>
+            ];<br/><br/>
+            <b>const</b> personFirstNames = persons.map((&#123; name &#125;) => name);<br/><br/>
+            <b>const</b> personHTMLTableRows = persons.map((&#123; name, surname &#125;) => `<br/>
+            &lt;tr>&lt;td>$&#123;name&#125;&lt;/td>&lt;td>$&#123;surname&#125;&lt;/td>&lt;/tr><br/>
+            `);
+        </blockquote>
+        <ul className="article__unorderedList">
+            <li className="article__listItem"><b>map</b> zwraca nową tablicę, której elementami są wartości zwrócone
+                przez podaną funkcję dla każdego elementu
+            </li>
+        </ul>
+        <h4 className="article__subsubsubheader">Sortowanie tablic</h4>
+        <blockquote className="article__blockquote">
+            <b>const</b> strings = ["B", "a", 10, 2];<br/><br/>
+            strings.sort();<br/><br/>
+            console.log(strings); &nbsp;&nbsp;// [10, 2, "B", "a"]<br/><br/>
+        </blockquote>
+        <ul className="article__unorderedList">
+            <li className="article__listItem"><b>sort</b> sortuje tablicę i zwraca posortowaną
+                <ul className="article__unorderedList">
+                    <li className="article__listItem">
+                        <b>uwaga:</b> modyfikuje tablicę
+                    </li>
+                </ul>
+                <li className="article__listItem">domyślnie elementy konwertowane są na stringi i porównywane są kody
+                    znaków UTF-16
+                    <ul className="article__unorderedList">
+                        <li className="article__listItem">dlatego to się prawie do niczego nie nadaje</li>
+                    </ul>
+                </li>
+            </li>
+        </ul>
+        <h4 className="article__subsubsubheader">Sortowanie liczb</h4>
+        <blockquote className="article__blockquote">
+            <b>const</b> numbers = [40, 8, 1, 0];<br/><br/>
+            numbers.sort((a, b) => a - b);&nbsp;&nbsp;// [0, 1, 8, 40]<br/>
+            numbers.sort((a, b) => b - a);&nbsp;&nbsp;// [40, 8, 1, 0]
+        </blockquote>
+        <h4 className="article__subsubsubheader">Sortowanie alfabetyczne</h4>
+        <blockquote className="article__blockquote">
+            <b>const</b> surnames = ["Duda", "Dąbrowski"];<br/><br/>
+            surnames.sort((a, b) => a.localCompare(b));&nbsp;&nbsp;// ["Dąbrowski", "Duda"]<br/>
+            surnames.sort((a, b) => b.localCompare(a));&nbsp;&nbsp;// ["Duda", "Dąbrowski"]
+        </blockquote>
+        <h4 className="article__subsubsubheader">Sortowanie obiektów</h4>
+        <blockquote className="article__blockquote">
+            <b>const</b> persons = [<br/>
+            &nbsp;&nbsp;&#123; name: "Kasia", surname: "Pelasia" &#125;,<br/>
+            &nbsp;&nbsp;&#123; name: "Marta", surname: "Karta" &#125;,<br/>
+            ];<br/><br/>
+            <b>const</b> getFullName = (&#123; name, surname &#125;) => `$&#123;name&#125; $&#123;surname&#123;`;<br/><br/>
+            persons.sort((person1, person2) => getFullName(person1).localCompare(getFullName(person2)));<br/>
+            ));
+        </blockquote>
+        <h4 className="article__subsubsubheader">Odwrócenie kolejności elementów</h4>
+        <blockquote className="article__blockquote">
+            <b>const</b> numbers = [4, 5, 6, 8];<br/><br/>
+            numbers.reverse();&nbsp;&nbsp;// [8, 6, 5, 4]
+        </blockquote>
+            </>
+        )
+    },
+    {
+        id: 68,
+        date: "26 lipca 2023 roku",
+        title: "JavaScript - tablice",
+        body: (
+            <>
+            <h4 className="article__subsubsubheader">Destrukturyzacja w zagnieżdżonym obiekcie</h4>
+            <blockquote className="article__blockquote">
+                <b>const</b> [number1, number2] = [20, 46, 18];<br/><br/>
+                // ignorujemy drugi element<br/>
+                <b>const</b> [number1, , number3] = [20, 46, 18];<br/><br/>
+                // pozostałe elementy utworzą nową tablicę<br/>
+                <b>const</b> [firstNumber, ...otherNumbers] = [20, 78, 11, 33];
+            </blockquote>
+            <h4 className="article__subsubsubheader">Łączenie tablic</h4>
+            <blockquote className="article__blockquote">
+                <b>const</b> numbers1 = [10, 45];<br/>
+                <b>const</b> numbers2 = [20, 49];<br/><br/>
+                <b>const</b> allNumbers = [...numbers1, ...numbers2];
+            </blockquote>
+            <h4 className="article__subsubsubheader">Klonowanie</h4>
+            <blockquote className="article__blockquote">
+                <b>const</b> numbers = [45, 12, 16];<br/>
+                <b>const</b> numbersCopy = [...number];
+            </blockquote>
+            <h4 className="article__subsubsubheader">Przekazywanie elementów tablicy jako argumenty funkcji</h4>
+            <blockquote className="article__blockquote">
+                <b>const</b> numbers = [12, 18, 19, 44, 64, 81];<br/><br/>
+                <b>const</b> console.log(Math.min(...numbers)); //12
+            </blockquote>
+            <h4 className="article__subsubsubheader">Niezdefiniowana liczba argumentów funkcji</h4>
+            <blockquote className="article__blockquote">
+                <b>const</b> myFunction = (firstParameter, ...otherParameters) => &#123;<br/>
+                &nbsp;&nbsp;console.log(`Pierwszy argument: $&#123;firstParameter&#125;`);<br/>
+                    &nbsp;&nbsp;console.log(`Liczba pozostałych argumentów: $ &#123;otherParameters.length&#125;`);<br/>
+                    &#125;;<br/><br/>
+                myFunction(4, 8, 1, 9, 74, 51);
+                </blockquote>
+            </>
+        )
+    },
+    {
+        id: 67,
+        date: "26 lipca 2023 roku",
+        title: "JavaScript - obiekty cz. 3",
+        body: (
+            <>
+                <h4 className="article__subsubsubheader">Destrukturyzacja w zagnieżdżonym obiekcie</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> person = &#123;<br/>
+                    &nbsp;&nbsp;name: "Kasia",<br/>
+                    &nbsp;&nbsp;surname: "Pelasia",<br/>
+                    &nbsp;&nbsp;father: &#123;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;name: "Jan",<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;surname: "Pelasia",<br/>
+                    &nbsp;&nbsp;&#125;,<br/>
+                    &#125;;<br/><br/>
+                    <b>const</b> &#123;father: &#123;name: fatherName&#125;&#125; = person;<br/><br/>
+                    console.log(`Imię ojca: $&#123;fatherName&#125;`);<br/>
+                </blockquote>
+                <h4 className="article__subsubsubheader">Łączenie obiektów (spread syntax)</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> personBasicData = &#123;<br/>
+                    &nbsp;&nbsp;name: "Kasia",<br/>
+                    &nbsp;&nbsp;surname: "Pelasia",<br/>
+                    &#125;;<br/><br/>
+                    &nbsp;&nbsp;<b>const</b> personAdditionalData = &#123;<br/>
+                    &nbsp;&nbsp;age: 29,<br/>
+                    &#125;;<br/><br/>
+                    <b>const</b> allPersonData = &#123;<br/>
+                    &nbsp;&nbsp;...personBasicData<br/>
+                    &nbsp;&nbsp;...personAdditionalData<br/>
+                    &#125;;<br/>
+                </blockquote>
+                <h4 className="article__subsubsubheader">Klonowanie (shallow copy - "płytka kopia")</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> person = &#123;<br/>
+                    &nbsp;&nbsp;name: "Kasia",<br/>
+                    &nbsp;&nbsp;surname: "Pelasia",<br/>
+                    &nbsp;&nbsp;father: &#123;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;name: "Jan",<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;surname: "Pelasia",<br/>
+                    &nbsp;&nbsp;&#125;,<br/>
+                    &#125;;<br/><br/>
+                    <b>const</b> personCopy = &#123;...person&#125;;<br/><br/>
+                    console.log(personCopy === person);<br/> &nbsp;&nbsp;//false<br/>
+                    console.log(personCopy.father === person.father);<br/> &nbsp;&nbsp;//true<br/>
+                </blockquote>
+                <h4 className="article__subsubsubheader">for...in</h4>
+                <blockquote className="article__blockquote">
+                    <b>const</b> person = &#123;<br/>
+                    &nbsp;&nbsp;name: "Kasia",<br/>
+                    &nbsp;&nbsp;surname: "Pelasia",<br/>
+                    &#125;;<br/><br/>
+                    <b>for (const</b> propertyName <b>in</b> person) &#123;<br/>
+                    &nbsp;&nbsp;console.log(`$&#123;propertyName&#125;: $&#123;person[propertyName]&#125;`);<br/>
+                </blockquote>
+            </>
+        )
+    },
+    {
         id: 66,
         date: "25 lipca 2023 roku",
         title: "JavaScript - obiekty cz. 2",
