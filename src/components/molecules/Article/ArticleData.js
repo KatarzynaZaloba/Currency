@@ -6,6 +6,56 @@ import Null from "../../../images/nullUndefined.jpg";
 
 export const articlesLink = [
     {
+        id: 59,
+        date: "19 lipca 2023 roku",
+        title: "CSS - Grid c.d.",
+        body: (
+            <>
+            <h4 className="article__subsubsubheader">Skróty</h4>
+            <ul className="article__unorderedList">
+                <li className="article__listItem">Zamiast rozpisywania <i>grid-row-start, grid-row-end,
+                    grid-column-start i grid-column-end</i> możemy użyć skrótu
+                    <ul className="article__unorderedList">
+                        <li className="article__listItem"><i>grid-row:</i> (grid-row start) / (grid-row-end)</li>
+                        <li className="article__listItem"><i>grid-column:</i> (grid-column-start) / (grid-column-end)
+                        </li>
+                    </ul>
+                </li>
+                <blockquote className="article__blockquote">
+                    .container__element &#123;<br/>
+                    &nbsp;&nbsp;grid-row: 2 / span 2;<br/>
+                    &nbsp;&nbsp;grid-column: 3 / -2<br/>
+                    &#125;<br/>
+                </blockquote>
+                </ul>
+                    <ul className="article__unorderedList">
+                        <li className="article__listItem">Natomiast możemy użyć skrótu
+                            <i>grid-area zamiast</i>
+                            <ul className="article__unorderedList">
+                                <li className="article__listItem">
+                                    grid-row-start,
+                                </li>
+                                <li className="article__listItem">
+                                    grid-row-end,
+                                </li>
+                                <li className="article__listItem">
+                                    grid-column-start
+                                </li>
+                                <li className="article__listItem">
+                                    i grid-column-end
+                                </li>
+                            </ul>
+                        </li>
+                        <blockquote className="article__blockquote">
+                            .container__element &#123;<br/>
+                            &nbsp;&nbsp;grid-area: 2 / 3 / span 2 / - 2;<br/>
+                            &#125;<br/>
+                        </blockquote>
+                        </ul>
+            </>
+        )
+    },
+    {
         id: 58,
         date: "18 lipca 2023 roku",
         title: "CSS - Grid",
