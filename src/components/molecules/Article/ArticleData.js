@@ -22,7 +22,11 @@ export const articlesLink = [
         title: "Zrobiłam to!",
         body: (
             <>
-                <p>Przeniosłam bloga na Reacta, a artykuły renderuję z zewnętrznego komponentu</p>
+                <p>Przeniosłam bloga na Reacta, a artykuły renderuję z zewnętrznego komponentu.</p>
+                <p>Mam w planach wprowadzenie kilku wersji bloga przy pomocy <i>GitHub Pages</i>.
+                    Będą mi one szczególnie pomocne przy nauce innych frameworków CSS jak <i>Bulma</i>, <i>Tailwind</i> czy <i>Skeleton</i>.
+                    To, że mam artykuły z zewnętrznego źródła, pozwala mi na jeszcze lepsze rozplanowanie swojej pracy i
+                    manipulowanie stylami bez problemów.</p>
             </>
         )
     },
