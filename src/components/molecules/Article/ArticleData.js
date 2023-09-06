@@ -13,6 +13,7 @@ import Thead from "../../atoms/Thead";
 import Tr from "../../atoms/Tr";
 import Th from "../../atoms/Th";
 import TableContainer from "../../atoms/TableContainer";
+import Q from "../../atoms/Q";
 
 export const articlesLink = [
     {
@@ -455,7 +456,7 @@ export const articlesLink = [
         title: "JavaScript modules",
         body: (
             <>
-                <SmallestHeader>>Named exports</SmallestHeader>
+                <SmallestHeader>Named exports</SmallestHeader>
                 <Blockquote>
                     &#47;&#47; module.js<br/>
                     <b>const</b> myFunction = () => &#123;<br/>
@@ -504,8 +505,8 @@ export const articlesLink = [
                         aplikacji przeznaczoną do deploymentu — tzw. <b>build</b>
                     </ListItem>
                     <ListItem>w tej wersji wszystkie pliki <b>JS</b> i <b>CSS</b> są połączone w
-                        zaledwie kilka zminifikowanych plików, dzięki czemu aplikacja <i><q>na
-                            produkcji</q></i> ładuje
+                        zaledwie kilka zminifikowanych plików, dzięki czemu aplikacja <i><Q>na
+                            produkcji</Q></i> ładuje
                         się i działa szybciej
                     </ListItem>
                 </ListUnordered>
@@ -714,9 +715,9 @@ export const articlesLink = [
                 <p>I jasne, w tym moim punkcie życia, gdy jestem zainteresowana
                     web-developmentem,
                     mam takie <i>coś</i>
-                    w mojej głowie, które <em>mówi</em> mi <q>Dlaczego nie poszłam na studia
+                    w mojej głowie, które <em>mówi</em> mi <Q>Dlaczego nie poszłam na studia
                         informatyczne, gdy miałam
-                        19 lat?</q> Czy żałuję? I tak i nie. Jestem po logistyce i po
+                        19 lat?</Q> Czy żałuję? I tak i nie. Jestem po logistyce i po
                     administracji.
                     Pracowałam jako
                     specjalista ds. importu, specjalista ds. administracyjnych, koordynator
@@ -733,13 +734,13 @@ export const articlesLink = [
                     strach
                     zamienia się w
                     ogromną satysfakcję z podjętych decyzji.</p>
-                <q className="article__quote">Dreams without goals are just dreams and
+                <Q>Dreams without goals are just dreams and
                     ultimately
                     they fuel disappointment.
                     On the road to achieving your dreams, you must apply discipline but more
                     importantly constistency
                     because without commitment you never will start and without constistency you
-                    will never finish</q>
+                    will never finish</Q>
                 <p>- Denzel Washington</p>
             </>
         )
@@ -1276,31 +1277,31 @@ export const articlesLink = [
         title: "JavaScript - ćwiczenia z tablicami",
         body: (
             <>
-                <h4 className="article__subsubsubheader">Wyciąganie fragmentu tablicy</h4>
-                <blockquote className="article__blockquote">
+                <SmallestHeader>Wyciąganie fragmentu tablicy</SmallestHeader>
+                <Blockquote>>
                     <b>const</b> seasons = ["wiosna", "lato", "jesień", "zima"];<br/><br/>
                     <b>const</b> last2seasons = seasons.slice(2); &nbsp;&nbsp;// ["jesień", "zima"]<br/><br/>
                     <b>const</b> middle2seasons = seasons.slice(1, 3); &nbsp;&nbsp;// ["lato", "jesień"]<br/><br/>
                     <b>const</b> last3seasons = seasons.slice(-3); &nbsp;&nbsp;// ["lato", "jesień", "zima"]<br/><br/>
                     <b>const</b> allButLast = seasons.slice(0, -1); &nbsp;&nbsp;// ["wiosna", "lato", "jesień"]
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">tworzy nową tablicę</li>
-                </ul>
-                <h4 className="article__subsubsubheader">indexOf, lastIndexOf</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>tworzy nową tablicę</ListItem>
+                </ListUnordered>
+                <SmallestHeader>indexOf, lastIndexOf</SmallestHeader>
+                <Blockquote>
                     <b>const</b> numbers = [20, 10, 45, 10];<br/><br/>
 
                     console.log(numbers.indexOf(10)); &nbsp;&nbsp;// 1<br/>
                     console.log(numbers.lastIndexOf(10)); &nbsp;&nbsp;// 3<br/>
                     console.log(numbers.indexOf(5)); &nbsp;&nbsp;// -1<br/>
                     console.log(numbers.lastIndexOf(5)); &nbsp;&nbsp;// -1<br/>
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">jeżeli index nie został znaleziony, to zwraca -1</li>
-                </ul>
-                <h4 className="article__subsubsubheader">find</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <ListUnordered>
+                    <ListOrdered>jeżeli index nie został znaleziony, to zwraca -1</ListOrdered>
+                </ListUnordered>
+                <SmallestHeader>find</SmallestHeader>
+                <Blockquote>
                     <b>const</b> numbers = [-7, 0, 10, -6, 45];<br/><br/>
                     <b>const</b> firstPositive = numbers.find(number > number > 0); &nbsp;&nbsp;// 10<br/>
                     <b>const</b> first100 = numbers.find(number === 100); &nbsp;&nbsp;// undefined<br/><br/>
@@ -1309,12 +1310,12 @@ export const articlesLink = [
                     &nbsp;&nbsp;&#123;name: "Marta"&#125;,<br/>
                     ];<br/><br/>
                     <b>const</b> chris = persons.find((&#123; name &#153;) => name === "Marta");
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">zwraca pierwszy element, który spełnia funkcję sprawdzającą</li>
-                </ul>
-                <h4 className="article__subsubsubheader">findIndex</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>zwraca pierwszy element, który spełnia funkcję sprawdzającą</ListItem>
+                </ListUnordered>
+                <SmallestHeader>findIndex</SmallestHeader>
+                <Blockquote>
                     <b>const</b> numbers = [-7, 0, 10, -6, 45];<br/><br/>
                     <b>const</b> firstPositiveIndex = numbers.findIndex(number > number > 0); &nbsp;&nbsp;// 2<br/>
                     <b>const</b> first100Index = numbers.findIndex(number === 100); &nbsp;&nbsp;// -1<br/><br/>
@@ -1324,15 +1325,15 @@ export const articlesLink = [
                     ];<br/><br/>
                     <b>const</b> kasiaIndex = persons.findIndex((&#123; name &#125;) => name === "Kasia");&nbsp;&nbsp;//
                     0
-                </blockquote>
-                <h4 className="article__subsubsubheader">includes</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <SmallestHeader>includes</SmallestHeader>
+                <Blockquote>
                     <b>const</b> quests = ["Włodek", "Irmina", "Melodia"];<br/><br/>
                     console.log(guests.includes("Włodek")); &nbsp;&nbsp;// true<br/>
                     console.log(guests.includes("Zenek")); &nbsp;&nbsp;// false
-                </blockquote>
-                <h4 clasName="article__subsubsubheader">some</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <SmallestHeader>some</SmallestHeader>
+                <Blockquote>
                     <b>const</b> tasks = [<br/>
                     &nbsp;&nbsp;&#123; content: "Przeczytać książkę", done: false &#125;,<br/>
                     &nbsp;&nbsp;&#123; content: "Zrobić zakupy", done: true &#125;,<br/>
@@ -1340,14 +1341,14 @@ export const articlesLink = [
                     <b>const</b> isAnyTaskDone = tasks.some((&#123; done &#125;) => done); &nbsp;&nbsp;// true<br/><br/>
                     <b>const</b> numbers = [1, 3, 5, 7];<br/><br/>
                     <b>const</b> isAnyNumberEven = numbers.some(number => number % 2 === 0); &nbsp;&nbsp;// false
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">sprawdza, czy przynajmniej jeden element spełnia funkcję
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>sprawdza, czy przynajmniej jeden element spełnia funkcję
                         sprawdzającą
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">every</h4>
-                <blockquote className="article__blockquote">
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>every</SmallestHeader>
+                <Blockquote>
                     <b>const</b> tasks = [<br/>
                     &nbsp;&nbsp;&#123; content: "Przeczytać książkę", done: false &#125;,<br/>
                     &nbsp;&nbsp;&#123; content: "Zrobić zakupy", done: true &#125;,<br/>
@@ -1356,13 +1357,13 @@ export const articlesLink = [
                     false<br/><br/>
                     <b>const</b> numbers = [1, 3, 5, 7];<br/><br/>
                     <b>const</b> isEveryNumberEven = numbers.every(number => number % 2 === 0); &nbsp;&nbsp;// false
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">sprawdza, czy wszystkie elementy spełniają funkcję sprawdzającą
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">filtrowanie</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>sprawdza, czy wszystkie elementy spełniają funkcję sprawdzającą
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>filtrowanie</SmallestHeader>
+                <Blockquote>
                     <b>const</b> numbers = [1, 2, 3, 4];<br/><br/>
                     <b>const</b> evenNumbers = numbers.filter(number => number % 2 === 0);<br/><br/>
                     <b>const</b> tasks = [<br/>
@@ -1370,14 +1371,14 @@ export const articlesLink = [
                     &nbsp;&nbsp;&#123; content: "Zrobić zakupy", done: true &#125;,<br/>
                     ];<br/><br/>
                     <b>const</b> doneTasks = tasks.filter((&#123;done&#125;) => done);
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">zwraca nową tablicę, która zawiera elementy, spełniające funkcję
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>zwraca nową tablicę, która zawiera elementy, spełniające funkcję
                         sprawdzającą
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">Mapowanie / odwzorowanie</h4>
-                <blockquote className="article__blockquote">
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>Mapowanie / odwzorowanie</SmallestHeader>
+                <Blockquote>
                     <b>const</b> numbers = [1, 5, 10];<br/>
                     <b>const</b> doubledNumbers = numbers.map(number => number * 2);<br/><br/>
                     <b>const</b> persons = [<br/>
@@ -1388,49 +1389,49 @@ export const articlesLink = [
                     <b>const</b> personHTMLTableRows = persons.map((&#123; name, surname &#125;) => `<br/>
                     &lt;tr>&lt;td>$&#123;name&#125;&lt;/td>&lt;td>$&#123;surname&#125;&lt;/td>&lt;/tr><br/>
                     `);
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem"><b>map</b> zwraca nową tablicę, której elementami są wartości
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem><b>map</b> zwraca nową tablicę, której elementami są wartości
                         zwrócone
                         przez podaną funkcję dla każdego elementu
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">Sortowanie tablic</h4>
-                <blockquote className="article__blockquote">
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>Sortowanie tablic</SmallestHeader>
+                <Blockquote>
                     <b>const</b> strings = ["B", "a", 10, 2];<br/><br/>
                     strings.sort();<br/><br/>
                     console.log(strings); &nbsp;&nbsp;// [10, 2, "B", "a"]<br/><br/>
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem"><b>sort</b> sortuje tablicę i zwraca posortowaną
-                        <ul className="article__unorderedList">
-                            <li className="article__listItem">
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem><b>sort</b> sortuje tablicę i zwraca posortowaną
+                        <ListUnordered>
+                            <ListItem>
                                 <b>uwaga:</b> modyfikuje tablicę
-                            </li>
-                        </ul>
-                        <li className="article__listItem">domyślnie elementy konwertowane są na stringi i porównywane są
+                            </ListItem>
+                        </ListUnordered>
+                        <ListItem>domyślnie elementy konwertowane są na stringi i porównywane są
                             kody
                             znaków UTF-16
-                            <ul className="article__unorderedList">
-                                <li className="article__listItem">dlatego to się prawie do niczego nie nadaje</li>
-                            </ul>
-                        </li>
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">Sortowanie liczb</h4>
-                <blockquote className="article__blockquote">
+                            <ListUnordered>
+                                <ListItem>dlatego to się prawie do niczego nie nadaje</ListItem>
+                            </ListUnordered>
+                        </ListItem>
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>Sortowanie liczb</SmallestHeader>
+                <Blockquote>
                     <b>const</b> numbers = [40, 8, 1, 0];<br/><br/>
                     numbers.sort((a, b) => a - b);&nbsp;&nbsp;// [0, 1, 8, 40]<br/>
                     numbers.sort((a, b) => b - a);&nbsp;&nbsp;// [40, 8, 1, 0]
-                </blockquote>
-                <h4 className="article__subsubsubheader">Sortowanie alfabetyczne</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <SmallestHeader>Sortowanie alfabetyczne</SmallestHeader>
+                <Blockquote>
                     <b>const</b> surnames = ["Duda", "Dąbrowski"];<br/><br/>
                     surnames.sort((a, b) => a.localCompare(b));&nbsp;&nbsp;// ["Dąbrowski", "Duda"]<br/>
                     surnames.sort((a, b) => b.localCompare(a));&nbsp;&nbsp;// ["Duda", "Dąbrowski"]
-                </blockquote>
-                <h4 className="article__subsubsubheader">Sortowanie obiektów</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <SmallestHeader>Sortowanie obiektów</SmallestHeader>
+                <Blockquote>
                     <b>const</b> persons = [<br/>
                     &nbsp;&nbsp;&#123; name: "Kasia", surname: "Pelasia" &#125;,<br/>
                     &nbsp;&nbsp;&#123; name: "Marta", surname: "Karta" &#125;,<br/>
@@ -1439,12 +1440,12 @@ export const articlesLink = [
                     `$&#123;name&#125; $&#123;surname&#123;`;<br/><br/>
                     persons.sort((person1, person2) => getFullName(person1).localCompare(getFullName(person2)));<br/>
                     ));
-                </blockquote>
-                <h4 className="article__subsubsubheader">Odwrócenie kolejności elementów</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <SmallestHeader>Odwrócenie kolejności elementów</SmallestHeader>
+                <Blockquote>
                     <b>const</b> numbers = [4, 5, 6, 8];<br/><br/>
                     numbers.reverse();&nbsp;&nbsp;// [8, 6, 5, 4]
-                </blockquote>
+                </Blockquote>
             </>
         )
     },
@@ -1454,7 +1455,7 @@ export const articlesLink = [
         title: "JavaScript - tablice",
         body: (
             <>
-                <h4 className="article__subsubsubheader">Destrukturyzacja w zagnieżdżonym obiekcie</h4>
+                <SmallestHeader>Destrukturyzacja w zagnieżdżonym obiekcie</SmallestHeader>
                 <blockquote className="article__blockquote">
                     <b>const</b> [number1, number2] = [20, 46, 18];<br/><br/>
                     // ignorujemy drugi element<br/>
@@ -6976,7 +6977,7 @@ export const articlesLink = [
         title: "Zmiany",
         body: (
             <>
-                <q className="article__quote">Szaleństwem jest robić wciąż to samo i oczekiwać różnych rezultatów.</q>
+                <Q>Szaleństwem jest robić wciąż to samo i oczekiwać różnych rezultatów.</Q>
                 <p>
                     Tym cytatem Einsteina podsumowałabym swoje dotychczasowe poczynania. Nadeszły zmiany. Zmiany we
                     mnie, zmiany wokół. Po kursie miałam do wyboru znowu wpaść w błędne koło aplikowania na
@@ -6987,12 +6988,12 @@ export const articlesLink = [
                     Kojarzycie grupy wsparcia dla Juniorów na portalach społecznościowych, na których m.in można
                     poprosić kogoś o ocenę CV? Ktoś skwitował mnie dosyć mocno, ale otworzyło to moje oczy:
                 </p>
-                <q className="article__quote">
+                <Q>
                     3 jeźdźcy junior frontend developera:<br/>
                     - bootcamp<br/>
                     - todo lista<br/>
                     - kalkulator.
-                </q>
+                </Q>
                 <p>
                     Czy to oznacza, że zmarnowałam czas? Niee! Jednak mam wrażenie, że kręcę się w kółko. Moja
                     wewnętrzna motywacja jest silniejsza niż dotychczas! Chcę się rozwijać, dlatego podjęłam decyzję
@@ -7321,7 +7322,7 @@ export const articlesLink = [
                     Razem z P. byliśmy
                     ostatni. Ale satysfakcja była niesamowita!
                 </p>
-                <q className="article__quote">No tak, ale przecież byliście ostatni.</q>
+                <Q>No tak, ale przecież byliście ostatni.</Q>
                 <p>
                     Czy byliśmy pierwsi czy ostatni — nie miało to dla mnie większego znaczenia. No, dobra,
                     gdybym
@@ -7363,7 +7364,7 @@ export const articlesLink = [
                     Wracam do biegania i do przerabiania materiału z kursu jeszcze raz. Tym razem zastosuję
                     przerwy
                     (regenerację) i krótsze dystanse (okresy na naukę) na początek.
-                    <q className="article__quote">Blog o programowaniu? A gdzie tu <em>JavaScript</em>?</q>
+                    <Q>Blog o programowaniu? A gdzie tu <em>JavaScript</em>?</Q>
                     Już spieszę z odpowiedzią - <strong>prowadzę bloga na moim totalnie pierwszym projekcie
                     na
                     początku

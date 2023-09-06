@@ -113,15 +113,6 @@ tr:hover {
   font-weight: 600;
 }
 
-.article__quote {
-  text-align: left;
-  padding: 10px;
-  word-wrap: break-word;
-  max-width: 90%;
-  color: #2a5537;
-  font-weight: 600;
-}
-
 .article__figure {
   background-color: #f5f3f3;
 }
