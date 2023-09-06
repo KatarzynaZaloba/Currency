@@ -5331,33 +5331,33 @@ export const articlesLink = [
                     <b>URL - Uniform Resource Locator (URL)</b>, lub potocznie <i>adres internetowy</i>, posiada
                     następującą składnię:
                 </p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     &#123;protokół&#125;://&#123;host&#125;(:&#123;port&#125;)&#123;ścieżka&#125;(?&#123;parametry&#125;)(#&#123;sekcja&#125;)
-                </blockquote>
-                <blockquote className="article__blockquote">https: &#47;/ domena.pl:8080/ sciezka?
+                </Blockquote>
+                <Blockquote>https: &#47;/ domena.pl:8080/ sciezka?
                     param1=wartosc1&amp;param2=wartosc2 #sekcja
-                </blockquote>
+                </Blockquote>
                 <p>Przejdźmy sobie do krótkiego omówienia elementów składni <i>URL</i>:</p>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem"><b>https - protokół (<i>protocol</i>)</b> - wersja protokołu
+                <ListUnordered>
+                    <ListItem><b>https - protokół (<i>protocol</i>)</b> - wersja protokołu
                         <i>http</i> z szyfrowaniem <i>SSL</i> jest wersją bezpieczną, szyfrowaną, uniemożliwiającą
                         <em>podsłuchanie</em> tego, co wprowadzamy na stronie.
-                    </li>
-                    <li className="article__listItem"><b> domena.pl</b> - zarejestrowana nazwa (domena) lub adres
+                    </ListItem>
+                    <ListItem><b> domena.pl</b> - zarejestrowana nazwa (domena) lub adres
                         <i>IP</i> (host); gdy używamy przeglądarki - używamy domen, a nie adresów <i>IP</i>.
-                    </li>
-                    <li className="article__listItem"><b>8080 port</b> - pod różnymi portami możemy otrzymać różne
+                    </ListItem>
+                    <ListItem><b>8080 port</b> - pod różnymi portami możemy otrzymać różne
                         odpowiedzi z serwera; jeśli nie wpiszemy portu, przeglądarka doda port domyślny. Jeśli mamy
                         protokół <i>http</i>, to możemy być pewni, że przeglądarka dopisze nam port 80. W przypadku
                         protokołu <i>https</i>, przeglądarka dopisze port 443.
-                    </li>
-                    <li className="article__listItem"><b>/sciezka</b> - ścieżka (path), pod jakim folderem dostępny jest
+                    </ListItem>
+                    <ListItem><b>/sciezka</b> - ścieżka (path), pod jakim folderem dostępny jest
                         dany zasób; serwer może na podstawie ścieżki dowolnie operować, co ma zwrócić
-                    </li>
-                    <li className="article__listItem"><b>parametr1=wartosc1&amp;parametr2=wartosc2</b> - parametry /
+                    </ListItem>
+                    <ListItem><b>parametr1=wartosc1&amp;parametr2=wartosc2</b> - parametry /
                         zapytanie (query).
-                    </li>
-                </ul>
+                    </ListItem>
+                </ListUnordered>
                 <p><b>DNS - Domain Name System</b> - dzięki niemu urządzenia mogą powiązać domenę z adresem. Jest to
                     system rozproszony, więc nie ma jednego serwera, który odpowiada na pytanie, która <i>domena</i>, to
                     które <i>IP</i>. To jest jak książka telefoniczna, wpisujemy sobie w przeglądarkę nazwę domeny, ale
@@ -5369,16 +5369,16 @@ export const articlesLink = [
                     lub członków rodziny — zapisujemy je w telefonie pod <i>nazwą</i>. Nie musimy pamiętać wtedy
                     konkretnych numerów telefonów. </p>
                 <p>Aby sprawdzić adres IP, wystarczy:</p>
-                <ol className="article__orderedList">
-                    <li className="article__listItem">użyć <i>DevTools-ów</i> (np. w przeglądarce Chrom),</li>
-                    <li className="article__listItem">wybrać zakładkę <i>Network</i>,</li>
-                    <li className="article__listItem">odświeżyć stronę,</li>
-                    <li className="article__listItem"> wejść na samą górę w zakładce <i>Network</i>,</li>
-                    <li className="article__listItem">kliknąć w wiersz, w którym mamy nazwę domeny, którą obserwujemy,
-                    </li>
-                    <li className="article__listItem">wybrać zakładkę <i>Header</i> i podzakładkę <i>General</i></li>
-                    <li className="article__listItem">w linii "Remote Address" mamy podany adres <i>IP</i> domeny.</li>
-                </ol>
+                <ListOrdered>
+                    <ListItem>użyć <i>DevTools-ów</i> (np. w przeglądarce Chrom),</ListItem>
+                    <ListItem>wybrać zakładkę <i>Network</i>,</ListItem>
+                    <ListItem>odświeżyć stronę,</ListItem>
+                    <ListItem> wejść na samą górę w zakładce <i>Network</i>,</ListItem>
+                    <ListItem>kliknąć w wiersz, w którym mamy nazwę domeny, którą obserwujemy,
+                    </ListItem>
+                    <ListItem>wybrać zakładkę <i>Header</i> i podzakładkę <i>General</i></ListItem>
+                    <ListItem>w linii "Remote Address" mamy podany adres <i>IP</i> domeny.</ListItem>
+                </ListOrdered>
                 <p><b>Protokół HTTP(s)</b> - HyperText Transfer Protocol — działa na zasadzie
                     <i>request-response</i> (żądanie - odpowiedź). Na tej zasadzie odbywa się cała komunikacja
                     między przeglądarką a serwerem. <i>Żądanie</i> i <i>odpowiedź</i> mają nagłówki i treść
