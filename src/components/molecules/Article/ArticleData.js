@@ -6082,18 +6082,18 @@ export const articlesLink = [
         title: "JavaScript - Ternary (operator potrójny)",
         body: (
             <>
-                <blockquote className="article__blockquote">warunek ? jeśliSpełniony() : jeśliNieSpełniony();
-                </blockquote>
+                <Blockquote>warunek ? jeśliSpełniony() : jeśliNieSpełniony();
+                </Blockquote>
                 <p>Jest to krótka i przydatna składnia wtedy, kiedy chcemy sprawdzić prosty warunek — stawiamy warunek,
                     który jeśli jest spełniony, odpalamy funkcję <i>jeśliSpełniony()</i>, a jeśli nie został spełniony,
                     odpalamy funkcję <i>jeśliNieSPełniony()</i></p>
                 <p>Na pewno zaletami takiego typu zapisu są</p>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">krótka i wygodna składnia</li>
-                    <li className="article__listItem">najlepszy w sytuacji, gdy mamy jedną zmienną i warunki typu
+                <ListUnordered>
+                    <ListItem>krótka i wygodna składnia</ListItem>
+                    <ListItem>najlepszy w sytuacji, gdy mamy jedną zmienną i warunki typu
                         "tak/nie".
-                    </li>
-                </ul>
+                    </ListItem>
+                </ListUnordered>
             </>
         )
     },
@@ -6123,7 +6123,7 @@ export const articlesLink = [
                     naprawię poprzednie wpisy z czasem, a na razie pozwoliłam sobie na poprawkę w poniższym elemencie
                     HTML.
                 </p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     <b>switch</b> (wyrażenie) &#123;<br/>
                     &nbsp;&nbsp;<b>case</b> opcja 1:<br/>
                     &nbsp;&nbsp;<b>case</b> opcja 2:<br/>
@@ -6135,7 +6135,7 @@ export const articlesLink = [
                     &nbsp;&nbsp;<b>default</b>:<br/>
                     &nbsp;&nbsp;&nbsp;&nbsp;jeśliNicNiePasujeWykonajTenKod();<br/>
                     &#125;
-                </blockquote>
+                </Blockquote>
                 <p>
                     Konstrukcja switch pozwala na operacje na kilku opcjach naraz bez wchodzenia w
                     stan <i>"ifozy"</i>.
@@ -6143,33 +6143,33 @@ export const articlesLink = [
                     różnych
                     rzeczy. Mamy tutaj:
                 </p>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem"><b>switch</b></li>
-                    <li className="article__listItem"><b>wyrażenie</b> - może tutaj być cokolwiek</li>
-                    <li className="article__listItem"><b>case1 & case2</b> - opcje; tutaj kod wykona się zarówno
+                <ListUnordered>
+                    <ListItem><b>switch</b></ListItem>
+                    <ListItem><b>wyrażenie</b> - może tutaj być cokolwiek</ListItem>
+                    <ListItem><b>case1 & case2</b> - opcje; tutaj kod wykona się zarówno
                         przy opcji1, jak i opcji2
-                    </li>
-                    <li className="article__listItem"><b>break</b> - słowo kluczowe, które jest potrzebne, żeby nie
+                    </ListItem>
+                    <ListItem><b>break</b> - słowo kluczowe, które jest potrzebne, żeby nie
                         wykonał się kolejny kod;
                         umożliwia zakończenie <i>switch</i>-a, po spełnieniu (w tym przypadku) którejś z opcji.
-                    </li>
-                    <li className="article__listItem"><b>case3</b> - opcja trzecia, gdzie mamy jeszcze inny kod do
+                    </ListItem>
+                    <ListItem><b>case3</b> - opcja trzecia, gdzie mamy jeszcze inny kod do
                         wykonania
-                    </li>
-                    <li className="article__listItem"><b>default</b> - blok, w którym wykona się kod, jeżeli żadna z
+                    </ListItem>
+                    <ListItem><b>default</b> - blok, w którym wykona się kod, jeżeli żadna z
                         powyższych opcji nie jest
                         spełniona, czyli jeżeli żadna opcja nie pasuje do tego wyrażenia, które daliśmy w nawiasie
                         po <i>switch</i>; nie jest obowiązkowy, ale pomijajmy go, dopiero jak będziemy 100% pewnie,
                         że
-                        zawarliśmy wszystkie opcje w <i>switch!</i></li>
-                </ul>
+                        zawarliśmy wszystkie opcje w <i>switch!</i></ListItem>
+                </ListUnordered>
                 <p>Kiedy przydaje się switch?</p>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">kiedy byłoby za dużo <i>if else</i></li>
-                    <li className="article__listItem">kiedy mamy kilka opcji w zależności od wartości jednego
+                <ListUnordered>
+                    <ListItem>kiedy byłoby za dużo <i>if else</i></ListItem>
+                    <ListItem>kiedy mamy kilka opcji w zależności od wartości jednego
                         wyrażenia
-                    </li>
-                </ul>
+                    </ListItem>
+                </ListUnordered>
             </>
         )
     },
@@ -6181,7 +6181,7 @@ export const articlesLink = [
             <>
                 <p>Do instrukcji warunkowej <i>if else</i> możemy dodać kolejny blok <i>else if</i>. Służy to do
                     dodania większej ilości warunków, np.</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     <b>if</b> (warunek1) &#123;<br/>
                     &nbsp;&nbsp;wykonajKodNr1();<br/>
                     &#125; <b>else if</b> (warunek2) &#123;<br/>
@@ -6189,7 +6189,7 @@ export const articlesLink = [
                     &#125; <b>else</b> &#123;<br/>
                     &nbsp;&nbsp;wykonajKodNr3();<br/>
                     &#125;
-                </blockquote>
+                </Blockquote>
             </>
         )
     },
@@ -6223,37 +6223,37 @@ export const articlesLink = [
                 <p>Instrukcje warunkowe są niesamowicie przydatne w podejmowaniu decyzji. Podstawową instrukcją
                     warunkową jest na pewno <i>if else:</i>
                 </p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     <b>if</b> (warunek) &#123;<br/>
                     &nbsp;&nbsp;&nbsp;&nbsp;zróbCośJeśliSpełniony();<br/>
                     &#125; <b>else</b> &#123;<br/>
                     &nbsp;&nbsp;&nbsp;&nbsp;zróbCośInnegoJeśliNiespełniony();
-                </blockquote>
+                </Blockquote>
                 <p>Tłumacząc najprościej, powyżej mamy <i>if</i> (jeżeli) warunek zostanie wykonany, wykonaj funkcję
                     (program) zróbCośJeśliSpełniony(); w innym przypadku wykonaj funkcję (program)
                     zróbCośInnegoJeśliNiespełniony().</p>
                 <p>A oto i kilka innych przykładów z <i>if else</i></p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     <b>if</b> (number1 > number2) &#123;<br/>
                     &nbsp;&nbsp;console.log("number1 jest większa.");<br/>
                     &#125;<b> else</b> &#123;<br/>
                     &nbsp;&nbsp;console.log("number1 nie jest większa!");<br/>&#125;
-                </blockquote>
+                </Blockquote>
                 <p>Czyli znowu, jeżeli warunek, w którym number1 jest większa od number2 zostanie spełniony, pokaż w
                     konsoli "number1 jest większa". W przeciwnym przypadku pokaż w konsoli "number1 nie jest
                     większa"</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     <b>if</b> (container.classList.contains("dark"))&#123;<br/>
                     &nbsp;&nbsp;console.log("Jest ustawiony ciemny motyw!"); <br/>
                     &#125;
-                </blockquote>
+                </Blockquote>
                 <p>Jeżeli klasa elementu z nazwą <i>container</i> zawiera klasę "dark", wyświetl na konsoli
                     "Jest
                     ustawiony ciemny motyw!"</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     <b>if</b> (button.innerText === "Zamknij")&#123;<br/>
                     &nbsp;&nbsp;button.innerText === "Otwórz";<br/>&#125;
-                </blockquote>
+                </Blockquote>
                 <p>
                     Jeżeli w przycisku jest tekst "Zamknij", to wpisujemy do przycisku tekst "Otwórz".
                 </p>
