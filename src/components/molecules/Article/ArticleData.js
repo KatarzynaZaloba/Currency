@@ -1458,37 +1458,37 @@ export const articlesLink = [
         body: (
             <>
                 <SmallestHeader>Destrukturyzacja w zagnieżdżonym obiekcie</SmallestHeader>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     <b>const</b> [number1, number2] = [20, 46, 18];<br/><br/>
                     // ignorujemy drugi element<br/>
                     <b>const</b> [number1, , number3] = [20, 46, 18];<br/><br/>
                     // pozostałe elementy utworzą nową tablicę<br/>
                     <b>const</b> [firstNumber, ...otherNumbers] = [20, 78, 11, 33];
-                </blockquote>
-                <h4 className="article__subsubsubheader">Łączenie tablic</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <SmallestHeader>Łączenie tablic</SmallestHeader>
+                <Blockquote>
                     <b>const</b> numbers1 = [10, 45];<br/>
                     <b>const</b> numbers2 = [20, 49];<br/><br/>
                     <b>const</b> allNumbers = [...numbers1, ...numbers2];
-                </blockquote>
-                <h4 className="article__subsubsubheader">Klonowanie</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <SmallestHeader>Klonowanie</SmallestHeader>
+                <Blockquote>
                     <b>const</b> numbers = [45, 12, 16];<br/>
                     <b>const</b> numbersCopy = [...number];
-                </blockquote>
-                <h4 className="article__subsubsubheader">Przekazywanie elementów tablicy jako argumenty funkcji</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <SmallestHeader>Przekazywanie elementów tablicy jako argumenty funkcji</SmallestHeader>
+                <Blockquote>
                     <b>const</b> numbers = [12, 18, 19, 44, 64, 81];<br/><br/>
                     <b>const</b> console.log(Math.min(...numbers)); //12
-                </blockquote>
-                <h4 className="article__subsubsubheader">Niezdefiniowana liczba argumentów funkcji</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <SmallestHeader>Niezdefiniowana liczba argumentów funkcji</SmallestHeader>
+                <Blockquote>
                     <b>const</b> myFunction = (firstParameter, ...otherParameters) => &#123;<br/>
                     &nbsp;&nbsp;console.log(`Pierwszy argument: $&#123;firstParameter&#125;`);<br/>
                     &nbsp;&nbsp;console.log(`Liczba pozostałych argumentów: $ &#123;otherParameters.length&#125;`);<br/>
                     &#125;;<br/><br/>
                     myFunction(4, 8, 1, 9, 74, 51);
-                </blockquote>
+                </Blockquote>
             </>
         )
     },
