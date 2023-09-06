@@ -5390,7 +5390,7 @@ export const articlesLink = [
                     <Table>
                         <Caption>Kody błędów protokołów http</Caption>
                         <Thead>
-                        <tr className="article__tr">
+                        <Tr>
                             <th className="article__th">
                                 kody:
                             </th>
@@ -5403,56 +5403,56 @@ export const articlesLink = [
                             <th className="article__th">
                                 znaczenie / zwrócony zasób
                             </th>
-                        </tr>
+                        </Tr>
                         </Thead>
                         <tbody>
-                        <tr className="article__tr">
+                        <Tr>
                             <td>100</td>
                             <td>informacyjne</td>
                             <td>Continue</td>
                             <td>Kontynuuj – prośba o dalsze wysyłanie zapytania</td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>101</td>
                             <td>informacyjne</td>
                             <td>Switching Protocols</td>
                             <td>Zmiana protokołu</td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>110</td>
                             <td>informacyjne</td>
                             <td>Connection Timed Out</td>
                             <td>Przekroczono czas połączenia. Serwer zbyt długo nie odpowiada</td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>111</td>
                             <td>informacyjne</td>
                             <td>Connection refused</td>
                             <td>Serwer odrzucił połączenie</td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>200</td>
                             <td>Kod powodzenia</td>
                             <td>OK</td>
                             <td>Zawartość żądanego dokumentu (najczęściej zwracany nagłówek odpowiedzi w
                                 komunikacji WWW Internetu)
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>201</td>
                             <td>Kod powodzenia</td>
                             <td>Created</td>
                             <td>Utworzono – wysłany dokument został zapisany na serwerze</td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>202</td>
                             <td>Kod powodzenia</td>
                             <td>Accepted</td>
                             <td>Przyjęto – zapytanie zostało przyjęte do obsłużenia, lecz jego zrealizowanie
                                 jeszcze się nie skończyło
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>203</td>
                             <td>Kod powodzenia</td>
                             <td>Non-Authoritative Information</td>
@@ -5460,24 +5460,24 @@ export const articlesLink = [
                                 odpowiedzi pierwotnego serwera, lecz została utworzona z lokalnych bądź
                                 zewnętrznych kopii
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>204</td>
                             <td>Kod powodzenia</td>
                             <td>No content</td>
                             <td>Brak zawartości – serwer zrealizował zapytanie klienta i nie potrzebuje zwracać
                                 żadnej treści
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>205</td>
                             <td>Kod powodzenia</td>
                             <td>Reset Content</td>
                             <td>Przywróć zawartość – serwer zrealizował zapytanie i klient powinien przywrócić
                                 pierwotny wygląd dokumentu
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>206</td>
                             <td>Kod powodzenia</td>
                             <td>Partial Content</td>
@@ -5485,8 +5485,8 @@ export const articlesLink = [
                                 musi zawierać nagłówek Content-Range informujący o zakresie bajtowym zwróconego
                                 elementu
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>300</td>
                             <td>Kod powodzenia</td>
                             <td>Multiple Choices</td>
@@ -5494,24 +5494,24 @@ export const articlesLink = [
                                 serwer może podać adres zasobu, który pozwala na wybór jednoznacznego zapytania
                                 spośród możliwych
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>301</td>
                             <td>Kod przekierowania</td>
                             <td>Moved Permanently</td>
                             <td>Trwale przeniesiony – żądany zasób zmienił swój URI i w przyszłości zasób
                                 powinien być szukany pod wskazanym nowym adresem
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>302</td>
                             <td>Kod przekierowania</td>
                             <td>Found</td>
                             <td>Znaleziono – żądany zasób jest chwilowo dostępny pod innym adresem, a przyszłe
                                 odwołania do zasobu powinny być kierowane pod adres pierwotny
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>303</td>
                             <td>Kod przekierowania</td>
                             <td>See Other</td>
@@ -5519,8 +5519,8 @@ export const articlesLink = [
                                 powinien się skierować. To jest właściwy sposób przekierowywania w odpowiedzi na
                                 żądanie metodą POST
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>304</td>
                             <td>Kod przekierowania</td>
                             <td>Not Modified</td>
@@ -5528,28 +5528,28 @@ export const articlesLink = [
                                 przekazanego przez klienta (np. data ostatniej wersji zasobu pobranej przez
                                 klienta – pamięć podręczna przeglądarki)
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>305</td>
                             <td>Kod przekierowania</td>
                             <td>Use proxy</td>
                             <td>Użyj serwera proxy – do żądanego zasobu trzeba odwołać się przez serwer proxy
                                 podany w nagłówku Location odpowiedzi
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>306</td>
                             <td>Kod przekierowania</td>
                             <td>Switch proxy</td>
                             <td>Kod nieużywany, aczkolwiek zastrzeżony dla starszych wersji protokołu</td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>307</td>
                             <td>Kod przekierowania</td>
                             <td>Too many redirects</td>
                             <td>Zbyt wiele przekierowań</td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>310</td>
                             <td>Kod przekierowania</td>
                             <td>Temporary Redirect</td>
@@ -5557,8 +5557,8 @@ export const articlesLink = [
                                 URI, odpowiedź powinna zawierać zmieniony adres zasobu, na który klient
                                 zobowiązany jest się przenieść
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>400</td>
                             <td>Kod błędu aplikacji po stronie klienta</td>
                             <td>Bad Request</td>
@@ -5566,70 +5566,70 @@ export const articlesLink = [
                                 nieprawidłowości postrzeganej jako błąd użytkownika (np. błędna składnia
                                 zapytania)
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>401</td>
                             <td>Kod błędu aplikacji po stronie klienta</td>
                             <td>Unauthorized</td>
                             <td>Nieautoryzowany dostęp – żądanie zasobu, który wymaga uwierzytelnienia</td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>402</td>
                             <td>Kod błędu aplikacji po stronie klienta</td>
                             <td>Payment Required</td>
                             <td>Wymagana opłata – odpowiedź zarezerwowana na przyszłość. Google Developers API
                                 korzysta z tego kodu, jeśli dany programista przekroczył dzienny limit zapytań
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>403</td>
                             <td>Kod błędu aplikacji po stronie klienta</td>
                             <td>Forbidden</td>
                             <td>Zabroniony – serwer zrozumiał zapytanie, lecz konfiguracja bezpieczeństwa
                                 zabrania mu zwrócić żądany zasób
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>404</td>
                             <td>Kod błędu aplikacji po stronie klienta</td>
                             <td>Not Found</td>
                             <td>Nie znaleziono – serwer nie odnalazł zasobu według podanego URL ani niczego co
                                 by wskazywało na istnienie takiego zasobu w przeszłości
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>405</td>
                             <td>Kod błędu aplikacji po stronie klienta</td>
                             <td>Method Not Allowed</td>
                             <td>Niedozwolona metoda – metoda zawarta w żądaniu nie jest dozwolona dla wskazanego
                                 zasobu, odpowiedź zawiera też listę dozwolonych metod
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>406</td>
                             <td>Kod błędu aplikacji po stronie klienta</td>
                             <td>Not Acceptable</td>
                             <td>Niedozwolone – zażądany zasób nie jest w stanie zwrócić odpowiedzi mogącej być
                                 obsłużonej przez klienta według informacji podanych w zapytaniu
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>407</td>
                             <td>Kod błędu aplikacji po stronie klienta</td>
                             <td>Proxy Authentication Required</td>
                             <td>Wymagane uwierzytelnienie do serwera pośredniczącego (ang. proxy) – analogicznie
                                 do kodu 401, dotyczy dostępu do serwera proxy
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>408</td>
                             <td>Kod błędu aplikacji po stronie klienta</td>
                             <td>Request Timeout</td>
                             <td>Koniec czasu oczekiwania na żądanie – klient nie przesłał zapytania do serwera w
                                 określonym czasie
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>409</td>
                             <td>Kod błędu aplikacji po stronie klienta</td>
                             <td>Conflict</td>
@@ -5640,8 +5640,8 @@ export const articlesLink = [
                                 umożliwiające klientowi rozwiązanie problemu, jednak nie jest to obowiązkowe
                                 (np. przesłanie 2 razy identycznego dokumentu, kiedy wymagana jest unikalność)
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>410</td>
                             <td>Kod błędu aplikacji po stronie klienta</td>
                             <td>Gone</td>
@@ -5649,8 +5649,8 @@ export const articlesLink = [
                                 jego ewentualny nowy adres URI; klient powinien już więcej nie odwoływać się do
                                 tego zasobu
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>411</td>
                             <td>Kod błędu aplikacji po stronie klienta</td>
                             <td>Length required</td>
@@ -5658,48 +5658,48 @@ export const articlesLink = [
                                 nagłówka Content-Length w zapytaniu; klient może powtórzyć zapytanie dodając doń
                                 poprawny nagłówek długości
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>412</td>
                             <td>Kod błędu aplikacji po stronie klienta</td>
                             <td>Precondition Failed</td>
                             <td>Warunek wstępny nie może być spełniony – serwer nie może spełnić przynajmniej
                                 jednego z warunków zawartych w zapytaniu
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>413</td>
                             <td>Kod błędu aplikacji po stronie klienta</td>
                             <td>Request Entity Too Large</td>
                             <td>Encja zapytania zbyt długa – całkowita długość zapytania jest zbyt długa dla
                                 serwera
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>414</td>
                             <td>Kod błędu aplikacji po stronie klienta</td>
                             <td>Request-URI Too Long</td>
                             <td>Adres URI zapytania zbyt długi – długość zażądanego URI jest większa niż
                                 maksymalna oczekiwana przez serwer
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>415</td>
                             <td>Kod błędu aplikacji po stronie klienta</td>
                             <td>Unsupported Media Type</td>
                             <td>Nieznany sposób żądania – serwer odmawia przyjęcia zapytania, ponieważ jego
                                 składnia jest niezrozumiała dla serwera
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>416</td>
                             <td>Kod błędu aplikacji po stronie klienta</td>
                             <td>Requested Range Not Satisfiable</td>
                             <td>Zakres bajtowy podany w zapytaniu nie do obsłużenia – klient podał w zapytaniu
                                 zakres, który nie może być zastosowany do wskazanego zasobu
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>417</td>
                             <td>Kod błędu aplikacji po stronie klienta</td>
                             <td>Expectation Failed</td>
@@ -5708,89 +5708,89 @@ export const articlesLink = [
                                 serwer proxy – serwer ma dowód, że oczekiwanie nie będzie spełnione przez
                                 następny w łańcuchu serwer realizujący zapytanie
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>418</td>
                             <td>Kod błędu aplikacji po stronie klienta</td>
                             <td>I’m a teapot</td>
                             <td>„Jestem czajnikiem” – tzw. easter egg. Zdefiniowany w 1998. Obecnie nie jest
                                 implementowany do serwerów HTTP, ale znane są takie przypadki
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>421</td>
                             <td>Kod błędu aplikacji po stronie klienta</td>
                             <td>Misdirected Request</td>
                             <td>Zapytanie zostało skierowane do serwera, który nie powinien go otrzymać lub
                                 który nie jest w stanie na nie odpowiedzieć
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>422</td>
                             <td>Kod błędu aplikacji po stronie klienta</td>
                             <td>Unprocessable entity</td>
                             <td> Zapytanie było poprawnie sformułowane, ale było niemożliwe do kontynuowania z
                                 powodu semantycznych błędów
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>423</td>
                             <td>Kod błędu aplikacji po stronie klienta</td>
                             <td>Locked (WebDAV)</td>
                             <td>Próba uzyskania dostępu do zasobu, który jest aktualnie zablokowany</td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>424</td>
                             <td>Kod błędu aplikacji po stronie klienta</td>
                             <td>Failed Dependency (WebDAV)</td>
                             <td>Brak powodzenia żądania, ponieważ jest ono zależne od innego żądania, które
                                 również nie powiodło się
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>425</td>
                             <td>Kod błędu aplikacji po stronie klienta</td>
                             <td>Too Early</td>
                             <td>Serwer nie chce ryzykować przetwarzania żądania, które może zostać powtórzone ze
                                 względu na ryzyko ataku typu Replay
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>426</td>
                             <td>Kod błędu aplikacji po stronie klienta</td>
                             <td>Upgrade Required</td>
                             <td>Serwer odmawia wykonania żądania, używając aktualnego protokołu. Wymagany
                                 protokół dla klienta przekazany jest w nagłówku Upgrade
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>428</td>
                             <td>Kod błędu aplikacji po stronie klienta</td>
                             <td>Precondition Required</td>
                             <td>Brak nagłówka wstępnego, który jest wymagany przez serwer. Żądanie musi być
                                 warunkowe
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>429</td>
                             <td>Kod błędu aplikacji po stronie klienta</td>
                             <td>Too Many Requests</td>
                             <td>Użytkownik wysłał za wiele żądań w danym czasie</td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>429</td>
                             <td>Kod błędu aplikacji po stronie klienta</td>
                             <td>Too Many Requests</td>
                             <td>Użytkownik wysłał za wiele żądań w danym czasie</td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>431</td>
                             <td>Kod błędu aplikacji po stronie klienta</td>
                             <td>Request Header Fields Too Large</td>
                             <td>Serwer odmawia wykonania żądania ze względu na zbyt duże pole lub pola nagłówka
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>451</td>
                             <td>Kod błędu aplikacji po stronie klienta</td>
                             <td>Unavailable For Legal Reasons</td>
@@ -5798,24 +5798,24 @@ export const articlesLink = [
                                 z powodów naruszenia prawa, w tym także z powodu ocenzurowania zawartości przez
                                 władze. Wartość kodu jest nawiązaniem do powieści „451 stopni Fahrenheita”
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>500</td>
                             <td>Kod błędu serwera HTTP</td>
                             <td>Internal Server Error</td>
                             <td>Wewnętrzny błąd serwera – serwer napotkał niespodziewane trudności, które
                                 uniemożliwiły zrealizowanie żądania
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>501</td>
                             <td>Kod błędu serwera HTTP</td>
                             <td>Not Implemented</td>
                             <td>Nie zaimplementowano – serwer nie dysponuje funkcjonalnością wymaganą w
                                 zapytaniu; ten kod jest zwracany, gdy serwer otrzymał nieznany typ zapytania
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>502</td>
                             <td>Kod błędu serwera HTTP</td>
                             <td>Bad Gateway</td>
@@ -5823,16 +5823,16 @@ export const articlesLink = [
                                 niepoprawną odpowiedź od serwera nadrzędnego i nie jest w stanie zrealizować
                                 żądania klienta
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>503</td>
                             <td>Kod błędu serwera HTTP</td>
                             <td>Service Unavailable</td>
                             <td>Usługa niedostępna – serwer nie jest w stanie w danej chwili zrealizować
                                 zapytania klienta ze względu na przeciążenie
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>504</td>
                             <td>Kod błędu serwera HTTP</td>
                             <td>Gateway Timeout</td>
@@ -5840,48 +5840,48 @@ export const articlesLink = [
                                 otrzymał w ustalonym czasie odpowiedzi od wskazanego serwera HTTP, FTP, LDAP
                                 itp. lub serwer DNS jest potrzebny do obsłużenia zapytania
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>505</td>
                             <td>Kod błędu serwera HTTP</td>
                             <td>HTTP Version Not Supported</td>
                             <td>Nieobsługiwana wersja HTTP – serwer nie obsługuje bądź odmawia obsługi wskazanej
                                 przez klienta wersji HTTP
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>506</td>
                             <td>Kod błędu serwera HTTP</td>
                             <td>Variant Also Negotiates</td>
                             <td>Wariant również negocjuje (w wolnym tłumaczeniu)</td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>507</td>
                             <td>Kod błędu serwera HTTP</td>
                             <td>Insufficient Storage (WebDAV)</td>
                             <td>Serwer nie jest w stanie zapisać danych związanych z wykonaniem zapytania</td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>508</td>
                             <td>Kod błędu serwera HTTP</td>
                             <td>Loop Detected (WebDAV)</td>
                             <td>Serwer wykrył nieskończoną pętlę w trakcie przetwarzania zapytania</td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>509</td>
                             <td>Kod błędu serwera HTTP</td>
                             <td>Bandwidth Limit Exceeded</td>
                             <td>Serwer jest tymczasowo niedostępny, ponieważ właściciel strony przekroczył limit
                                 transferu danych.
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>510</td>
                             <td>Kod błędu serwera HTTP</td>
                             <td>Not Extended</td>
                             <td>Brak rozszerzenia HTTP koniecznego do obsługi danego zapytania</td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>511</td>
                             <td>Kod błędu serwera HTTP</td>
                             <td>Network Authentication Required</td>
@@ -5889,7 +5889,7 @@ export const articlesLink = [
                                 wykorzystywane przez pośredników kontrolujących dostęp do sieci (np.: wymaganie
                                 potwierdzenia zasad użytkowania przed udostępnieniem połączenia)
                             </td>
-                        </tr>
+                        </Tr>
                         </tbody>
                         <tfoot>
                         </tfoot>
@@ -5907,21 +5907,21 @@ export const articlesLink = [
                 <p>Poniżej wstawiłam przycisk, podłączony do body i do button. Do buttona dodałam klasę
                     <i>switchButton</i>, a do body dałam klasę <i>body</i>. Jeśli chodzi o kod w JS, wygląda to tak:
                 </p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     let <b>button</b> = document.querySelector(".switchButton");<br/>
                     let <b>body</b> = document.querySelector(".body");<br/>
                     <br/>
                     button.addEventListener("click", () => &#123;<br/>
                     body.classList.add("dark")<br/>
                     &#125;);
-                </blockquote>
+                </Blockquote>
                 <button className="switchButton">Włącz <span className="themeName">ciemny</span> motyw</button>
                 <p>Natomiast w CSS-ach wygląda to tak:</p>
-                <blockquote className="article__blockquote"><b>.dark </b>&#123;<br/>
+                <Blockquote><b>.dark </b>&#123;<br/>
                     &nbsp;&nbsp;color: #eee;<br/>
                     &nbsp;&nbsp;background-color: #222;<br/>
                     &#125;
-                </blockquote>
+                </Blockquote>
                 <p><s>Generalnie spoko działa, jednak musiałabym podpiąć blockquote z ciemnym tekstem, żeby
                     nie
                     znikał
@@ -5931,15 +5931,15 @@ export const articlesLink = [
                     to zrobić, otaczając znacznikiem <i>span</i> konkretne słowo, lub wyrażenie, które
                     chcemy
                     zmienić, np.:</p>
-                <blockquote className="article__blockquote">&lt;button
+                <Blockquote>&lt;button
                     class="switchButton"&gt;Włącz &lt;span
                     class="<b>themeName</b>"&gt;ciemny&lt;/span&gt; motyw&lt;/button&gt;
-                </blockquote>
+                </Blockquote>
                 <p>Natomiast kod w <i>JavaScript</i>, po dodaniu warunku <i>if else</i> oraz zmianie metody
                     z
                     <i>add</i> na <i>toggle</i>będzie wyglądał teraz tak:
                 </p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     let <b>button</b> = document.querySelector(".switchButton");<br/>
                     let <b>body</b> = document.querySelector(".body");<br/>
                     let <b>themeName</b> = document.querySelector(".themeName");<br/>
@@ -5953,13 +5953,13 @@ export const articlesLink = [
                     &nbsp;&nbsp;&nbsp;&nbsp;themeName.innerText = "ciemny";<br/>
                     &nbsp;&nbsp;&#125;<br/>
                     &#125;);
-                </blockquote>
+                </Blockquote>
                 <p>Natomiast używamy dwa razy tej samej operacji, jednak zmienia się jedynie tekst.
                     W tej sytuacji
                     lepiej jest użyć potrójnego operatora <i>ternary</i>. Wyrażenie będzie w ten
                     sposób krótsze,
                     np.: </p>
-                <blockquote className="article__blockquote">let <b>button</b> =
+                <Blockquote>let <b>button</b> =
                     document.querySelector(".switchButton");<br/>
                     let <b>body</b> = document.querySelector(".body");<br/>
                     let <b>themeName</b> = document.querySelector(".themeName");<br/>
@@ -5969,7 +5969,7 @@ export const articlesLink = [
                     &nbsp;&nbsp;themeName.innerText = body.classList.contains("dark") ?
                     "jasny" : "ciemny";<br/>
                     &#125;);
-                </blockquote>
+                </Blockquote>
                 <p>Reasumując, <i>if else</i> przyda nam się, kiedy będziemy chcieli
                     przeprowadzić <em>różne</em>
                     operacje na <em>jednym</em> warunku. Natomiast jeśli chcemy
@@ -5979,15 +5979,15 @@ export const articlesLink = [
                 <p>Dzień tygodnia: <strong className="day">czwartek</strong></p>
                 <p>Mam jeszcze <strong className="howMuch"></strong> czasu na zrobienie
                     pracy domowej.</p>
-                <blockquote className="article__blockquote">Dzień tygodnia: &lt;strong
+                <Blockquote>Dzień tygodnia: &lt;strong
                     class="day">poniedziałek&lt;/span>&lt;/strong>
                     Mam jeszcze &lt;strong class="<b>howMuch</b>">&lt;/strong> czasu na
                     zrobienie pracy domowej.
-                </blockquote>
+                </Blockquote>
                 Po wpisaniu dowolnego dnia tygodnia, pojawi się opcja "dużo", "trochę"
                 lub "mało". Ze strony
                 <i>JavaScript</i>, wygląda to tak:
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     let <b>day</b> = document.querySelector(".day").innerText;<br/>
                     let <b>howMuch</b> = document.querySelector(".howMuch");<br/>
                     <br/>
@@ -5998,11 +5998,11 @@ export const articlesLink = [
                     &#125; <b>else</b> &#123;<br/>
                     &nbsp;&nbsp;howMuch.innerText = "mało";<br/>
                     &#125;
-                </blockquote>
+                </Blockquote>
                 <p>W tym przypadku możemy również użyć potrójnego operatora,
                     ponieważ robię to samo, tyle że z inną
                     wartością. Wyglądałoby to tak: </p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     let <b>day</b> =
                     document.querySelector(".day").innerText;<br/>
                     let <b>howMuch</b> = document.querySelector(".howMuch");<br/><br/>
@@ -6015,11 +6015,11 @@ export const articlesLink = [
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;? "trochę"<br/>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: "mało"<br/>
                     );
-                </blockquote>
+                </Blockquote>
                 <p>Niby spoko pomysł, ale mamy teraz trzypoziomowego potrójnego
                     operatora, co w zasadzie czytelne nie
                     jest. Przyda nam się tutaj <i>switch</i>!</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     let <b>day</b> =
                     document.querySelector(".day").innerText;<br/>
                     let <b>howMuch</b> = document.querySelector(".howMuch");<br/>
@@ -6040,7 +6040,7 @@ export const articlesLink = [
                     &nbsp;&nbsp;&nbsp;&nbsp;howMuch.innerText =
                     "mało";<br/>
                     &#125;
-                </blockquote>
+                </Blockquote>
                 <p>Jedno zadanie, trzy możliwości, a ile
                     radochy! Najbardziej przejrzysty jest
                     tutaj <i>switch</i></p>
@@ -6631,35 +6631,35 @@ export const articlesLink = [
                         </Tr>
                         </Thead>
                         <tbody>
-                        <tr className="article__tr">
+                        <Tr>
                             <td>&lt;br&gt;</td>
                             <td><i>line break</i></td>
                             <td>łamie wiersz w miejscu wskazanym, ale nie należy go używać w celu dodania odstępu
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>&lt;strong&gt;</td>
                             <td><i>strong importance</i></td>
                             <td>używamy, gdy jest coś ważnego/pilnego do przekazania, lub gdy jest to ostrzeżenie
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>&lt;b&gt;</td>
                             <td><i>bring attention to</i></td>
                             <td>używamy, gdy chcemy zwrócić uwagę na jakiś fragment, ale nie jest on ważniejszy od
                                 pozostałej treści, używany rzadziej niż &lt;strong&gt;
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>&lt;em&gt;</td>
                             <td><i>emphasis</i></td>
                             <td>używamy, gdy kładziemy nacisk na jakieś słowo w wyrażeniu</td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>&lt;i&gt;</td>
                             <td><i>idiomatic text</i></td>
                             <td>używamy do pojęć technicznych, słów w obcym języku lub myśli</td>
-                        </tr>
+                        </Tr>
                         </tbody>
                         <tfoot>
 
