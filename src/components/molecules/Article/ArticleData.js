@@ -15,6 +15,7 @@ import Th from "../../atoms/Th";
 import TableContainer from "../../atoms/TableContainer";
 import Q from "../../atoms/Q";
 import Figure from "../../atoms/Figure";
+import Figcaption from "../../atoms/Figcaption";
 
 export const articlesLink = [
     {
@@ -3050,10 +3051,10 @@ export const articlesLink = [
                 <Figure>
                     <img alt="różnica między null i undefined " className="article__image"
                          src={Null}/>
-                    <figcaption className="article__figcaption">
+                    <Figcaption>
                         Różnica między null i undefined<br/>
                         Źródło: https://codecrumbs.com/
-                    </figcaption>
+                    </Figcaption>
                 </Figure>
                 <h4 className="article__subsubsubheader">boolean</h4>
                 <p>Mamy dwie wartości typu boolean: <i>true</i> i <i>false</i> i <i>on</i>
@@ -6111,11 +6112,11 @@ export const articlesLink = [
                 <Figure>
                     <img alt="starówka Sandomierza" className="panorama article__image"
                          src="https://swietokrzyskie.travel/media/cache/original/uploads/5d3814683ddf7.jpg"/>
-                    <figcaption className="article__figcaption">">widok z lotu ptaka na starówkę w
+                    <Figcaption>">widok z lotu ptaka na starówkę w
                         Sandomierzu<br/>źródło: <a
                             href="https://swietokrzyskie.travel/informator_turystyczny/miasta_i_regiony/sandomierz_sandomierz"
                             title="swietokrzyskie.travel">https://swietokrzyskie.travel/informator_turystyczny/miasta_i_regiony/sandomierz_sandomierz</a>
-                    </figcaption>
+                    </Figcaption>
                 </Figure>
                 <p>
                     Zauważyłam też, że mam problem z akapitami w &lt;blockquote&gt; i wszystkie odstępy się zlewają —
@@ -7170,13 +7171,13 @@ export const articlesLink = [
                     <img className="article__image"
                          src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-small.png"
                          alt="grafika przedstawiająca tagi w HTML"/>
-                    <figcaption className="article__figcaption">">Uwaga! Tagi w HTML nie są wrażliwe na zmianę
+                    <Figcaption>">Uwaga! Tagi w HTML nie są wrażliwe na zmianę
                         wysokości
                         liter! Znów przykład z MDN-a —
                         gdy mamy znacznik &lt;title&gt; &lt;/title&gt;, możemy użyć
                         np. &lt;Title&gt; &lt;/Title&gt; czy
                         &lt;TiTlE&gt; &lt;/TiTlE&gt; i nie będzie to miało żadnego znaczenia.
-                    </figcaption>
+                    </Figcaption>
                 </Figure>
                 <p>
                     Dobrze, to teraz wyjaśniając, z czym tu mamy do czynienia:</p>
@@ -7270,7 +7271,7 @@ export const articlesLink = [
                 </p>
                 <Figure>
                     <img alt="schemat pakowania dziecka do szkoły" className="article__image" src={Schema}/>
-                    <figcaption className="article__figcaption">Schemat pakowania dziecka do szkoły</figcaption>
+                    <Figcaption>Schemat pakowania dziecka do szkoły</Figcaption>
                 </Figure>
                 <p>Mamy tutaj następujące elementy:</p>
                 <ul className="list">
@@ -7344,8 +7345,8 @@ export const articlesLink = [
                 <Figure>
                     <img alt="Katarzyna na tle wzniesienia Mogielicy" className="article__image"
                          src={Kate}/>
-                    <figcaption className="article__figcaption"><i>Scarpa Ultra Trail</i> 2022 Mogielica
-                    </figcaption>
+                    <Figcaption><i>Scarpa Ultra Trail</i> 2022 Mogielica
+                    </Figcaption>
                 </Figure>
                 <p>
                     Dlaczego takiej samej metodyki nie zastosowałam przy moich początkach nauki
