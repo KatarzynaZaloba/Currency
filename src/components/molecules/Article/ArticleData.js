@@ -14,6 +14,7 @@ import Tr from "../../atoms/Tr";
 import Th from "../../atoms/Th";
 import TableContainer from "../../atoms/TableContainer";
 import Q from "../../atoms/Q";
+import Figure from "../../atoms/Figure";
 
 export const articlesLink = [
     {
@@ -3046,14 +3047,14 @@ export const articlesLink = [
         title: "JavaScript - boolean, null, undefined",
         body: (
             <>
-                <figure className="article__figure">
+                <Figure>
                     <img alt="różnica między null i undefined " className="article__image"
                          src={Null}/>
                     <figcaption className="article__figcaption">
                         Różnica między null i undefined<br/>
                         Źródło: https://codecrumbs.com/
                     </figcaption>
-                </figure>
+                </Figure>
                 <h4 className="article__subsubsubheader">boolean</h4>
                 <p>Mamy dwie wartości typu boolean: <i>true</i> i <i>false</i> i <i>on</i>
                     <i>off</i>. <i>Boolean</i>
@@ -6107,7 +6108,7 @@ export const articlesLink = [
                     materiałów z kursu <i>Krzyśka Dąbrowskiego</i>. Jeszcze tylko mały obrazek z Sandomierzem i
                     działamy.
                 </p>
-                <figure className="article__figure">
+                <Figure>
                     <img alt="starówka Sandomierza" className="panorama article__image"
                          src="https://swietokrzyskie.travel/media/cache/original/uploads/5d3814683ddf7.jpg"/>
                     <figcaption className="article__figcaption">">widok z lotu ptaka na starówkę w
@@ -6115,7 +6116,7 @@ export const articlesLink = [
                             href="https://swietokrzyskie.travel/informator_turystyczny/miasta_i_regiony/sandomierz_sandomierz"
                             title="swietokrzyskie.travel">https://swietokrzyskie.travel/informator_turystyczny/miasta_i_regiony/sandomierz_sandomierz</a>
                     </figcaption>
-                </figure>
+                </Figure>
                 <p>
                     Zauważyłam też, że mam problem z akapitami w &lt;blockquote&gt; i wszystkie odstępy się zlewają —
                     naprawię poprzednie wpisy z czasem, a na razie pozwoliłam sobie na poprawkę w poniższym elemencie
@@ -7165,7 +7166,7 @@ export const articlesLink = [
                 <p>
                     <b>BTW</b> Właśnie odkryłam jak w HTML umieścić w/w znaczniki tak, aby kod został zignorowany!
                 </p>
-                <figure className="article__figure">
+                <Figure>
                     <img className="article__image"
                          src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-small.png"
                          alt="grafika przedstawiająca tagi w HTML"/>
@@ -7176,7 +7177,7 @@ export const articlesLink = [
                         np. &lt;Title&gt; &lt;/Title&gt; czy
                         &lt;TiTlE&gt; &lt;/TiTlE&gt; i nie będzie to miało żadnego znaczenia.
                     </figcaption>
-                </figure>
+                </Figure>
                 <p>
                     Dobrze, to teraz wyjaśniając, z czym tu mamy do czynienia:</p>
                 <ul className="article__unorderedList">
@@ -7267,10 +7268,10 @@ export const articlesLink = [
                     jakiejś
                     wymyślonej przeze mnie czynności. Daleko nie musiałam szukać.
                 </p>
-                <figure className="article__figure">
+                <Figure>
                     <img alt="schemat pakowania dziecka do szkoły" className="article__image" src={Schema}/>
                     <figcaption className="article__figcaption">Schemat pakowania dziecka do szkoły</figcaption>
-                </figure>
+                </Figure>
                 <p>Mamy tutaj następujące elementy:</p>
                 <ul className="list">
                     <li className="article__listItem">START / KONIEC — początek lub koniec procesu</li>
@@ -7340,12 +7341,12 @@ export const articlesLink = [
                     stawałam
                     się
                     silniejsza, a moja wytrzymałość rosła.</p>
-                <figure className="article__figure">
+                <Figure>
                     <img alt="Katarzyna na tle wzniesienia Mogielicy" className="article__image"
                          src={Kate}/>
                     <figcaption className="article__figcaption"><i>Scarpa Ultra Trail</i> 2022 Mogielica
                     </figcaption>
-                </figure>
+                </Figure>
                 <p>
                     Dlaczego takiej samej metodyki nie zastosowałam przy moich początkach nauki
                     programowania?
