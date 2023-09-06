@@ -3060,14 +3060,14 @@ export const articlesLink = [
                 <p>Mamy dwie wartości typu boolean: <i>true</i> i <i>false</i> i <i>on</i>
                     <i>off</i>. <i>Boolean</i>
                     jest zwracany przez <i>operatory porównania</i>.</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     > let <b>zmienna</b> = true;
-                </blockquote>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <Blockquote>
                     > typeof <b>zmienna</b><br/>
                     &lt;
                     "boolean"
-                </blockquote>
+                </Blockquote>
                 <p>Możemy teraz zmienić tą wartość, ale tylko na <i>false</i>:</p>
                 <blockquote className="article__blockquote">
                     > let <b>zmienna</b> = false<br/>
@@ -6797,46 +6797,46 @@ export const articlesLink = [
                 <p>
                     Co zawierają instrukcje?
                 </p>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem"><i>literały</i> - wartości (np. napisy, liczby) wpisane w kod
+                <ListUnordered>
+                    <ListItem><i>literały</i> - wartości (np. napisy, liczby) wpisane w kod
                         źródłowy,
                         kopiowane do kodu wykonywalnego podczas kompilacji;
-                    </li>
-                    <li className="article__listItem"><i>stałe</i> - symbole (nazwy) reprezentujące ustalone
+                    </ListItem>
+                    <ListItem><i>stałe</i> - symbole (nazwy) reprezentujące ustalone
                         wartości,
                         zastępowane tymi wartościami podczas kompilacji;
-                    </li>
-                    <li className="article__listItem"><i>wyrażenia</i> - zapis obliczeń;</li>
-                    <li className="article__listItem"><i>zmienne lub nazwy zmiennych</i> - symbole reprezentujące
+                    </ListItem>
+                    <ListItem><i>wyrażenia</i> - zapis obliczeń;</ListItem>
+                    <ListItem><i>zmienne lub nazwy zmiennych</i> - symbole reprezentujące
                         wartości,
                         które mogą zmieniać w czasie wykonywania programu;
-                    </li>
-                    <li className="article__listItem"><i>słowa kluczowe</i> - symbole reprezentujące określone
+                    </ListItem>
+                    <ListItem><i>słowa kluczowe</i> - symbole reprezentujące określone
                         działania
                         (np.
                         <i>for, do, while, if, else, return</i>);
-                    </li>
-                    <li className="article__listItem"><i>wywołania funkcji</i> - symbole oznaczające miejsca w
+                    </ListItem>
+                    <ListItem><i>wywołania funkcji</i> - symbole oznaczające miejsca w
                         programie,
                         w
                         których należy wykonać instrukcje wchodzące w skład treści danej funkcji (wyniki wykonania
                         funkcji też "pojawiają się" w tych miejscach);
-                    </li>
-                    <li className="article__listItem"><i>znaki przerwy;</i></li>
-                    <li className="article__listItem"><i>spacje;</i></li>
-                    <li className="article__listItem"><i>tabulacje poziome;</i></li>
-                    <li className="article__listItem">przejścia do następnego wiersza (są pomijane podczas
+                    </ListItem>
+                    <ListItem><i>znaki przerwy;</i></ListItem>
+                    <ListItem><i>spacje;</i></ListItem>
+                    <ListItem><i>tabulacje poziome;</i></ListItem>
+                    <ListItem>przejścia do następnego wiersza (są pomijane podczas
                         kompilacji,
                         tylko
                         istnieją pewne ograniczenia dotyczące miejsc, w których może być umieszczone przejście do
                         następnego wiersza, o ile nie zostanie poprzedzone znakiem "\" (<i>backslash</i>));
-                    </li>
-                    <li className="article__listItem">komentarze, które umieszczamy po symbolu "//" do końca
+                    </ListItem>
+                    <ListItem>komentarze, które umieszczamy po symbolu "//" do końca
                         wiersza,
                         lub
                         między symbolami "/* oraz */" (komentarze są ignorowane przez kompilator).
-                    </li>
-                </ul>
+                    </ListItem>
+                </ListUnordered>
             </>
         ),
     },
@@ -6934,22 +6934,20 @@ export const articlesLink = [
             <>
                 <p>
                     Aby rozwiązać problem przy pomocy programowania, należy najpierw:</p>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">Określić problem (co chcę osiągnąć)</li>
-                    <li className="article__listItem">Wybrać algorytm, czyli metodę poszukiwania rozwiązania (jak będę
-                        to
-                        robić)
-                    </li>
-                    <li className="article__listItem">Tworzyć kod źródłowy, stanowiący reprezentację wybranego algorytmu
+                <ListUnordered>
+                    <ListItem>Określić problem (co chcę osiągnąć)</ListItem>
+                    <ListItem>Wybrać algorytm, czyli metodę poszukiwania rozwiązania (jak będę to robić)
+                    </ListItem>
+                    <ListItem>Tworzyć kod źródłowy, stanowiący reprezentację wybranego algorytmu
                         (kodowanie)
-                    </li>
-                    <li className="article__listItem">Kompilować kod źródłowy, czyli tworzyć kod wykonywalny gotowy do
+                    </ListItem>
+                    <ListItem>Kompilować kod źródłowy, czyli tworzyć kod wykonywalny gotowy do
                         wykonania programu
-                    </li>
-                    <li className="article__listItem">Sprawdzić i testować program. Jeśli znajdę błąd, wrócić do etapu
+                    </ListItem>
+                    <ListItem>Sprawdzić i testować program. Jeśli znajdę błąd, wrócić do etapu
                         tworzenia kodu źródłowego (lub nawet do etapu algorytmu).
-                    </li>
-                </ul>
+                    </ListItem>
+                </ListUnordered>
                 <p>
                     No dobra, ale czym jest algorytm?
                 </p>
@@ -7045,66 +7043,66 @@ export const articlesLink = [
                 <p>
                     Wrzucę tutaj przydatną ściągawkę, co gdy nie chcemy za każdym razem oznaczać np. nawiasów
                     ostrokątnych span-em, a chcemy odwołać się do jakiegoś znacznika. </p>
-                <div className="div-table-overflow">
-                    <table className="article__table">
-                        <caption className="article__caption">
+                <TableContainer>
+                    <Table>
+                        <Caption>
                             Przykłady skrótów literałów w HTML
-                        </caption>
-                        <thead className="article__thead">
-                        <tr className="article__tr">
+                        </Caption>
+                        <Thead>
+                        <Tr>
 
-                            <th className="article__th">
+                            <Th>
                                 literał
-                            </th>
-                            <th className="article__th">
+                            </Th>
+                            <Th>
                                 skrót do użycia literału bez "uruchomienia"
-                            </th>
-                        </tr>
-                        </thead>
+                            </Th>
+                        </Tr>
+                        </Thead>
                         <tbody>
-                        <tr className="article__tr">
+                        <Tr>
                             <td>
                                 &#60;
                             </td>
                             <td>
                                 <xmp>&lt;</xmp>
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>></td>
                             <td>
                                 <xmp>&gt;</xmp>
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>"</td>
                             <td>
                                 <xmp>&quot;</xmp>
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>'</td>
                             <td>
                                 <xmp>&apos;</xmp>
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td>&</td>
                             <td>
                                 <xmp>&amp;</xmp>
                             </td>
-                        </tr>
+                        </Tr>
                         </tbody>
                         <tfoot>
 
                         </tfoot>
-                    </table>
-                </div>
+                    </Table>
+                </TableContainer>
                 <p>
                     Ciekawą sztuczką też do ignorowania kodu jest zastosowanie znacznika otaczającego element</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     &lt;xmp&gt;
-                </blockquote>
+                </Blockquote>
                 <p>Jednak nie jest on wspierany przez wszystkie przeglądarki, więc możliwe, że
                     jeśli
                     oglądasz to na którejś, która tego nie czyta, to masz pewnie zagwostkę, co ja miałam na
@@ -7155,7 +7153,7 @@ export const articlesLink = [
                     poniższy
                     przykład zdania:
                 </p>
-                <blockquote className="article__blockquote">My cat is very grumpy.</blockquote>
+                <Blockquote>My cat is very grumpy.</Blockquote>
                 <p>
                     Nie wiem za bardzo jak przetłumaczyć "stands by itself", ale chodzi tu o sytuację, gdy chcemy,
                     stworzyć nowy akapit z treścią. Do tego celu służy znacznik
@@ -7181,21 +7179,21 @@ export const articlesLink = [
                 </Figure>
                 <p>
                     Dobrze, to teraz wyjaśniając, z czym tu mamy do czynienia:</p>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                <ListUnordered>
+                    <ListItem>
                         The opening tag (znacznik otwierający): Zawiera nazwę elementu, jak w tym przykładzie p od
                         "paragraph". Umieszczony jest przed tekstem i otoczony jest nawiasami ostrokątnymi.
-                    </li>
-                    <li className="article__listItem">The content (treść): Mamy tutaj dosłownie treść, którą chcemy
+                    </ListItem>
+                    <ListItem className="article__listItem">The content (treść): Mamy tutaj dosłownie treść, którą chcemy
                         otoczyć
                         znacznikami HTML
-                    </li>
-                    <li className="article__listItem">The closing tag (znacznik zamykający): Tak samo, jak w
+                    </ListItem>
+                    <ListItem className="article__listItem">The closing tag (znacznik zamykający): Tak samo, jak w
                         przypadku
                         znacznika otwierającego, tyle że umieszczany po treści. Pokazuje gdzie dany element się
                         kończy.
-                    </li>
-                </ul>
+                    </ListItem>
+                </ListUnordered>
             </>
         ),
     },
@@ -7274,12 +7272,12 @@ export const articlesLink = [
                     <Figcaption>Schemat pakowania dziecka do szkoły</Figcaption>
                 </Figure>
                 <p>Mamy tutaj następujące elementy:</p>
-                <ul className="list">
-                    <li className="article__listItem">START / KONIEC — początek lub koniec procesu</li>
-                    <li className="article__listItem">równoległobok - "przygotowanie"</li>
-                    <li className="article__listItem">prostokąt - instrukcja / akcja / operacja</li>
-                    <li className="article__listItem">romb - warunek.</li>
-                </ul>
+                <ListUnordered>
+                    <ListItem>START / KONIEC — początek lub koniec procesu</ListItem>
+                    <ListItem>równoległobok - "przygotowanie"</ListItem>
+                    <ListItem>prostokąt - instrukcja / akcja / operacja</ListItem>
+                    <ListItem>romb - warunek.</ListItem>
+                </ListUnordered>
                 <p>
                     Kto ma dzieci, ten — mam nadzieję — zgodzi się ze mną, że szykowanie latorośli do szkoły to
                     <em>bardzo</em> pochłaniający czas proces. Ale tak, właśnie podeszłam do tego zagadnienia w
