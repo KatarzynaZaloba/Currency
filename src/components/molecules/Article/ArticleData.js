@@ -6291,37 +6291,37 @@ export const articlesLink = [
             <>
                 <p>Metody querySelector używamy do <em>"złapania"</em> elementu <i>HTML</i>, np. wpisując w konsolę
                     (za pomocą <i>DevTools</i>):</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     &gt; <i>document.querySelector</i>("h2");<br/>
                     &lt; &lt;h2&gt;O mnie&lt;/h2&gt;;
-                </blockquote>
+                </Blockquote>
                 <p>Możemy następnie danemu elementowi HTML (albo klasie elementu, lub konkretnemu elementowi HTML
                     (id)), <strong>dodać</strong> klasę: </p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     nazwaKlasyElementuHTML.<i>classList.add</i>("nowaNazwaKlasy");
-                </blockquote>
+                </Blockquote>
                 <p>Możemy <strong>usunąć</strong> klasę elementowi HTML, np.:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     nazwaKlasyElementuHTML.<i>classList.remove</i>("nowaNazwaKlasy");
-                </blockquote>
+                </Blockquote>
                 <p>Możemy <strong>przełączać</strong> klasę elementowi HTML, np.:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     nazwaKlasyElementuHTML.<i>classList.toggle</i>("nowaNazwaKlasy");
-                </blockquote>
+                </Blockquote>
                 <p>Możemy <strong>zmienić</strong> tekst elementowi HTML, np.:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     nazwaKlasyElementuHTML.<i>innerText</i> = "Nowy tekst";
-                </blockquote>
+                </Blockquote>
                 <p>Możemy <strong>zmienić</strong> zawartość HTML elementowi HTML, np.:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     nazwaKlasyElementuHTML.<i>innerHTML</i> = "Nowa treść ze
                     &lt;span&gt; znacznikiem HTML
                     &lt;/span&gt;".;
-                </blockquote>
+                </Blockquote>
                 <p>Możemy <strong>usunąć</strong> element HTML, np.:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     nazwaKlasyElementuHTML.<i>remove()</i>;
-                </blockquote>
+                </Blockquote>
             </>
         )
     },
@@ -6331,9 +6331,9 @@ export const articlesLink = [
         title: "JavaScript - składnia",
         body: (
             <>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     <b>let</b> nazwa = wartość;
-                </blockquote>
+                </Blockquote>
                 <p>Nazwa zmiennej ma znaczenie — inaczej niż w przypadku <i>HTML</i>, w <i>JavaScript</i> różnice
                     liter są ważne, więc przypisując wartość do zmiennej <i>nazwa</i>, nie będzie ona przypisana
                     automatycznie do zmiennych <i>Nazwa</i>, <i>NaZwA</i> itd.
