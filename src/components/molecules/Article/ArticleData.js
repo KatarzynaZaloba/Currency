@@ -5386,10 +5386,10 @@ export const articlesLink = [
                 </p>
                 <p>Analogicznie do poprzedniej instrukcji, gdzie sprawdzaliśmy adres IP, możemy sprawdzić też jak
                     wyglądają <i>nagłówki</i> i <i>ciała</i> dla <i>żądań</i> i <i>odpowiedzi</i>.</p>
-                <div className="div-table-overflow">
-                    <table className="article__table">
-                        <caption className="article__caption">Kody błędów protokołów http</caption>
-                        <thead className="article__thead">
+                <TableContainer>
+                    <Table>
+                        <Caption>Kody błędów protokołów http</Caption>
+                        <Thead>
                         <tr className="article__tr">
                             <th className="article__th">
                                 kody:
@@ -5404,7 +5404,7 @@ export const articlesLink = [
                                 znaczenie / zwrócony zasób
                             </th>
                         </tr>
-                        </thead>
+                        </Thead>
                         <tbody>
                         <tr className="article__tr">
                             <td>100</td>
@@ -5893,8 +5893,8 @@ export const articlesLink = [
                         </tbody>
                         <tfoot>
                         </tfoot>
-                    </table>
-                </div>
+                    </Table>
+                </TableContainer>
             </>
         )
     },
@@ -6359,37 +6359,37 @@ export const articlesLink = [
         body: (
             <>
                 <p><i>JavaScript-a</i> możemy umieścić na stronie na kilka sposobów:</p>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">poprzez zastosowanie znacznika &lt;script&gt; &lt;/script&gt;
+                <ListUnordered>
+                    <ListItem>poprzez zastosowanie znacznika &lt;script&gt; &lt;/script&gt;
                         przed końcowym znacznikiem
                         &lt;/body&gt;, tak aby załadować skrypt, dopiero jak załaduje nam się cała zawartość DOM,
                         np.:
-                    </li>
-                </ul>
-                <blockquote className="article__blockquote">
+                    </ListItem>
+                </ListUnordered>
+                <Blockquote>
                     &lt;script&gt;<br/>console.log("Hello
                     world");<br/>&lt;/script&gt;
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">poprzez odwołanie do pliku z <i>JavaScript-em</i>, przed końcowym
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>poprzez odwołanie do pliku z <i>JavaScript-em</i>, przed końcowym
                         znacznikiem &lt;/body&gt;, tak, aby załadować skrypt dopiero jak załaduje nam się cała zawartość
                         DOM, np.:
-                    </li>
-                </ul>
-                <blockquote className="article__blockquote">
+                    </ListItem>
+                </ListUnordered>
+                <Blockquote>
                     &lt;script src="js/script.js"&gt;&lt;/script&gt;
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">poprzez odwołanie do pliku z <i>JavaScript-em</i> z atrybutem
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>poprzez odwołanie do pliku z <i>JavaScript-em</i> z atrybutem
                         <i>defer</i>
                         i umieszczeniem odwołania
                         przed końcowym znacznikiem &lt;/head&gt;, tak aby załadować skrypt dopiero jak załaduje nam
                         się cała zawartość DOM, np.:
-                    </li>
-                </ul>
-                <blockquote className="article__blockquote">
+                    </ListItem>
+                </ListUnordered>
+                <Blockquote>
                     &lt;script defer src="js/script.js"&gt;&lt;/script&gt;
-                </blockquote>
+                </Blockquote>
             </>
         )
     },
@@ -6441,65 +6441,65 @@ export const articlesLink = [
                     potrzebujemy ani <i>klasy</i> ani <i>id</i> i stylujemy wszystkie dane rodzaje elementu o
                     konkretnej nazwie, używając:
                 </p>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                <ListUnordered>
+                    <ListItem>
                         "zagnieżdżania"
-                    </li>
-                </ul>
-                <blockquote className="article__blockquote">
+                    </ListItem>
+                </ListUnordered>
+                <Blockquote>
                     article header h3 &#123;<br/>
                     &nbsp;&nbsp;text-align: left;<br/>
                     &#125;
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>
                         TYLKO nazwy znacznika
-                    </li>
-                </ul>
-                <blockquote className="article__blockquote">
+                    </ListItem>
+                </ListUnordered>
+                <Blockquote>
                     h3 &#123;<br/>
                     &nbsp;&nbsp;text-align: left;<br/>
                     &#125;<br/>
-                </blockquote>
+                </Blockquote>
                 <p>Aby to lepiej zobrazować, posłużę się tutaj przykładem odwołania po <i>klasie</i></p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     <b>&#46;header</b> &#123;<br/>
                     &nbsp;&nbsp;color&#58; purple;<br/>
                     &#125;
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem"><i>selektor</i> - określa które elementy są ostylowane
-                    </li>
-                    <li className="article__listItem"><i>klamry</i> (brackets)</li>
-                    <li className="article__listItem"><i>nazwa właściwości</i> - czyli jak styl będzie
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem><i>selektor</i> - określa które elementy są ostylowane
+                    </ListItem>
+                    <ListItem><i>klamry</i> (brackets)</ListItem>
+                    <ListItem><i>nazwa właściwości</i> - czyli jak styl będzie
                         zmieniany
-                    </li>
-                    <li className="article__listItem">wartość zmienianej właściwości po dwukropku</li>
-                    <li className="article__listItem"><i>deklaracje</i> - pary właściwość: wartość</li>
-                </ul>
-                <h4 className="article__subsubsubheader">Jakie są sposoby osadzania?</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">osobny link do arkusza styli w oddzielnym pliku</li>
-                </ul>
-                <blockquote className="article__blockquote">&lt;link href="css/style.css"
+                    </ListItem>
+                    <ListItem>wartość zmienianej właściwości po dwukropku</ListItem>
+                    <ListItem><i>deklaracje</i> - pary właściwość: wartość</ListItem>
+                </ListUnordered>
+                <SmallestHeader>Jakie są sposoby osadzania?</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>osobny link do arkusza styli w oddzielnym pliku</ListItem>
+                </ListUnordered>
+                <Blockquote>&lt;link href="css/style.css"
                     rel="stylesheet"&gt;
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">znacznik &lt;style&gt;</li>
-                </ul>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>znacznik &lt;style&gt;</ListItem>
+                </ListUnordered>
+                <Blockquote>
                     &lt;style&gt;<br/>
                     <b>&#46;header</b> &#123;<br/>
                     &nbsp;&nbsp;color&#58; purple;<br/>
                     &#125;<br/>
                     &lt;/style&gt;
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">atrybut style</li>
-                </ul>
-                <blockquote className="article__blockquote">&lt;p style="color:
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>atrybut style</ListItem>
+                </ListUnordered>
+                <Blockquote>&lt;p style="color:
                     red"&gt;Tekst&lt;/p&gt;
-                </blockquote>
+                </Blockquote>
             </>
         )
     },
@@ -6614,22 +6614,22 @@ export const articlesLink = [
                     one
                     używane zgodnie z konwencją.
                 </p>
-                <div className="div-table-overflow">
-                    <table className="article__table">
-                        <caption className="article__caption">przykłady znaczników HTML wraz ze znaczeniem</caption>
-                        <thead className="article__thead">
-                        <tr className="article__tr">
-                            <th className="article__th">
+                <TableContainer>
+                    <Table>
+                        <Caption>przykłady znaczników HTML wraz ze znaczeniem</Caption>
+                        <Thead>
+                        <Tr>
+                            <Th>
                                 symbol
-                            </th>
-                            <th className="article__th">
+                            </Th>
+                            <Th>
                                 nazwa
-                            </th>
-                            <th className="article__th">
+                            </Th>
+                            <Th>
                                 opis
-                            </th>
-                        </tr>
-                        </thead>
+                            </Th>
+                        </Tr>
+                        </Thead>
                         <tbody>
                         <tr className="article__tr">
                             <td>&lt;br&gt;</td>
@@ -6664,8 +6664,8 @@ export const articlesLink = [
                         <tfoot>
 
                         </tfoot>
-                    </table>
-                </div>
+                    </Table>
+                </TableContainer>
             </>
         )
     },
@@ -6675,116 +6675,116 @@ export const articlesLink = [
         title: "Operatory operacji logicznych",
         body: (
             <>
-                <div className="div-table-overflow">
-                    <table className="article__table">
-                        <caption className="article__caption">
+                <TableContainer>
+                    <Table>
+                        <Caption>
                             Przykład operatora
-                        </caption>
-                        <thead className="article__thead">
-                        <tr className="article__tr">
-                            <th className="article__th">
+                        </Caption>
+                        <Thead>
+                        <Tr>
+                            <Th>
                                 symbol
-                            </th>
-                            <th className="article__th">
+                            </Th>
+                            <Th>
                                 Operator
-                            </th>
-                        </tr>
-                        </thead>
+                            </Th>
+                        </Tr>
+                        </Thead>
                         <tbody>
-                        <tr className="article__tr">
+                        <Tr>
                             <td>=</td>
                             <td>Operator przypisania; jeżeli nazwa zmiennej znajduje się po lewej stronie symbolu
                                 przypisania " = ", to otrzymuje ona nową wartość, np.
-                                <blockquote className="article__blockquote">suma = 1; // <i>Odtąd zmienna suma
+                                <Blockquote>suma = 1; // <i>Odtąd zmienna suma
                                     będzie
                                     mieć wartość 1.</i>
-                                </blockquote>
+                                </Blockquote>
                             </td>
-                        </tr>
+                        </Tr>
                         </tbody>
-                    </table>
-                </div>
-                <div className="div-table-overflow">
-                    <table className="article__table">
-                        <caption className="article__caption">
+                    </Table>
+                </TableContainer>
+                <TableContainer>
+                    <Table>
+                        <Caption>
                             Proste typy danych
-                        </caption>
-                        <thead className="article__thead">
-                        <tr className="article__tr">
+                        </Caption>
+                        <Thead>
+                        <Tr>
                             <th className="article__th">
                                 skrót
                             </th>
                             <th className="article__th">
                                 opis
                             </th>
-                        </tr>
-                        </thead>
+                        </Tr>
+                        </Thead>
                         <tbody>
-                        <tr className="article__tr">
+                        <Tr>
                             <td><i>int</i></td>
                             <td> - liczba całkowita
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td><i>float</i></td>
                             <td> - liczba zmiennoprzecinkowa
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td><i>string</i></td>
                             <td> - łańcuch znaków
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td><i>bool</i></td>
                             <td> - typ True/False
                             </td>
-                        </tr>
+                        </Tr>
                         </tbody>
-                    </table>
-                </div>
-                <div className="div-table-overflow">
-                    <table className="article__table">
-                        <caption className="article__caption">
+                    </Table>
+                </TableContainer>
+                <TableContainer>
+                    <Table>
+                        <Caption>
                             Proste operatory
-                        </caption>
-                        <thead className="article__thead">
-                        <tr className="article__tr">
-                            <th className="article__th">
+                        </Caption>
+                        <Thead>
+                        <Tr>
+                            <Th>
                                 rodzaj
-                            </th>
-                            <th className="article__th">
+                            </Th>
+                            <Th>
                                 symbole
-                            </th>
-                        </tr>
-                        </thead>
+                            </Th>
+                        </Tr>
+                        </Thead>
                         <tbody>
-                        <tr className="article__tr">
+                        <Tr>
                             <td><i>bitowe</i></td>
                             <td>(OR, AND)
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td><i>arytmetyczne</i></td>
                             <td>(+ - * /)
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td><i>porównania</i></td>
                             <td>&#40;== &lt; &gt; &#41;
                             </td>
-                        </tr>
-                        <tr className="article__tr">
+                        </Tr>
+                        <Tr>
                             <td><i>logiczne</i></td>
                             <td>(prawda/fałsz)
                             </td>
-                        </tr>
+                        </Tr>
                         </tbody>
                         <tfoot>
 
                         </tfoot>
-                    </table>
-                </div>
+                    </Table>
+                </TableContainer>
             </>
         ),
     },
@@ -7022,7 +7022,7 @@ export const articlesLink = [
                 <p>
                     Hej, czy wiesz, że używając atrybutu "contenteditable" w jakimkolwiek ze znaczników, umożliwisz
                     edycję treści?</p>
-                <blockquote className="article__blockquote">&lt;p&gt; contenteditable&lt;/p&gt;</blockquote>
+                <Blockquote>&lt;p&gt; contenteditable&lt;/p&gt;</Blockquote>
                 <p contentEditable>
                     Spróbuj tutaj coś napisać.</p>
                 <p>
