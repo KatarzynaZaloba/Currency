@@ -108,7 +108,10 @@ tr:hover {
   box-shadow: -6px 11px 91px 0 rgba(122, 132, 99, 1);
 }
 
-
+.tableText__positive {
+  color: #00b894;
+  font-weight: 600;
+}
 
 .article__quote {
   text-align: left;

@@ -1,5 +1,4 @@
 import React from "react";
-import "./style.css";
 import Kate from "../../../images/scarpa.jpg";
 import Schema from "../../../images/schemat.png";
 import Null from "../../../images/nullUndefined.jpg";
@@ -17,6 +16,62 @@ import TableContainer from "../../atoms/TableContainer";
 
 export const articlesLink = [
     {
+        id: 86,
+        date: "06 września 2023 roku",
+        title: "Podsumowanie kolejnego miesiąca",
+        body: (
+            <>
+                <p>Jeżeli miałabym podsumować moją dotychczasową naukę (powtórkę materiału z kursu) to muszę rzec wszem
+                    i wobec, że załapałam bakcyla! Przed pracą stosuję czas kilku godzin na praktykę i powtórkę teorii
+                    na swoich projektach, by po tym czasie przejść do praktycznego zastosowania tego, co powtórzyłam w
+                    projekcie komercyjnym. Czyli lekko podsumowując - jest progres!</p>
+                <p>Druga kwestia, to bieganie. Rodzice dzieci szkolnych zróbcie hałas! Cieszę się również, że moja
+                    latorośl poszła do szkoły, więc będę mogła z rana uskuteczniać poranne przebieżki po lesie.</p>
+                <p>W liczbach wygląda to tak:</p>
+                <TableContainer>
+                    <Table>
+                        <Caption>porównanie liczby przebiegniętych (no, przetruchtanych)
+                            kilometrów w pełnych miesiącach
+                        </Caption>
+                        <Thead>
+                            <Tr>
+                                <Th>
+                                    czerwiec
+                                    2023
+                                </Th>
+                                <Th>
+                                    lipiec
+                                    2023
+                                </Th>
+                                <Th>
+                                    sierpień
+                                    2023
+                                </Th>
+                                <Th>różnica</Th>
+                            </Tr>
+                        </Thead>
+                        <tbody>
+                        <Tr>
+                            <td>0</td>
+                            <td>16,4km</td>
+                            <td>32,5km</td>
+                            <td className="tableText__positive">16,1km</td>
+                        </Tr>
+                        </tbody>
+                        <tfoot>
+                        </tfoot>
+                    </Table>
+                </TableContainer>
+                <p>Jak widać, jest progres, co prawda liczba kilometrów nadal nie odpowiada tej, do której byłam
+                    przyzwyczajona kilka lat temu, ale na wszystko przyjdzie czas.</p>
+                <p>Jeśli chodzi o bloga, to pozostało mi przerobić znaczniki HTML w niektórych miejscach na komponenty
+                    React-owe. Gdy się już tym zajmę, popracuję nad szatą graficzną, wyszukiwarką i dostosowaniem kart
+                    artykułów do przyjemniejszej formy niż aktualnej formy scrollowania.</p>
+                <p>Także czas zakasania rękawów i powrót do pracy! Trzymajcie się ciepło!</p>
+            </>
+        )
+    },
+    {
         id: 85,
         date: "05 września 2023 roku",
         title: "Zrobiłam to!",
@@ -24,7 +79,8 @@ export const articlesLink = [
             <>
                 <p>Przeniosłam bloga na Reacta, a artykuły renderuję z zewnętrznego komponentu.</p>
                 <p>Mam w planach wprowadzenie kilku wersji bloga przy pomocy <i>GitHub Pages</i>.
-                    Będą mi one szczególnie pomocne przy nauce innych frameworków CSS jak <i>Bulma</i>, <i>Tailwind</i> czy <i>Skeleton</i>.
+                    Będą mi one szczególnie pomocne przy nauce innych frameworków CSS
+                    jak <i>Bulma</i>, <i>Tailwind</i> czy <i>Skeleton</i>.
                     To, że mam artykuły z zewnętrznego źródła, pozwala mi na jeszcze lepsze rozplanowanie swojej pracy i
                     manipulowanie stylami bez problemów.</p>
             </>

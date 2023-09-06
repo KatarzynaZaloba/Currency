@@ -7,17 +7,6 @@ import Section from "./components/organisms/Section";
 import Article from "./components/molecules/Article";
 import Container from "./components/atoms/Container";
 import Main from "./components/atoms/Main";
-import Blockquote from "./components/atoms/Blockquote";
-import SmallestHeader from "./components/atoms/SmallestHeader";
-import ListUnordered from "./components/molecules/ListUnordered";
-import ListItem from "./components/atoms/ListItem";
-import ListOrdered from "./components/molecules/ListOrdered";
-import Table from "./components/molecules/Table";
-import Caption from "./components/atoms/Caption";
-import Thead from "./components/atoms/Thead";
-import Tr from "./components/atoms/Tr";
-import Th from "./components/atoms/Th";
-import TableContainer from "./components/atoms/TableContainer";
 import {
     articlesLink
 } from "./components/molecules/Article/ArticleData";
