@@ -16,8 +16,51 @@ import TableContainer from "../../atoms/TableContainer";
 import Q from "../../atoms/Q";
 import Figure from "../../atoms/Figure";
 import Figcaption from "../../atoms/Figcaption";
+import Comment from "../../atoms/Comment/Comment";
 
 export const articlesLink = [
+    {
+        id: 87,
+        date: "07 września 2023 roku",
+        title: "JS - praca z datami i godzinami",
+        body: (
+            <>
+                <SmallestHeader>
+                    Nie ma osobnego typu dla dat - jest obiekt Date
+                </SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
+                        obejmuje i datę i czas
+                    </ListItem>
+                    <ListItem>
+                        ma wiele przydatnych metod, które pozwalają m.in. pobierać lub ustawić fragmenty dat i czasu
+                    </ListItem>
+                    <ListItem>
+                        nie ma żadnej właściwości, tylko metody.
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>
+                    Jak przechowywana jest data?
+                </SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
+                        liczba milisekund, które minęły od <b>północy 1 stycznia 1970 roku</b> (Unix time, timestamp)
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>
+                    Tworzenie obiektu Date
+                </SmallestHeader>
+                <Blockquote>
+                    <b>const</b> myDate = <b>new</b> Date(); <br/>
+                    <Comment text="// aktualna data i godzina"/> <br/><br/>
+                    <b>const</b> myDate = <b>new</b> Date(2023, 8, 7, 12, 05, 16); <br/>
+                    <Comment text="// 7 września 2023 roku, godzina 12:05:16" /><br/><br/>
+                    <b>const</b> myDate = <b>new</b> Date(2025, 1, 15); <br/>
+                    <Comment text="// 15 lutego 2025 roku, godzina 00:00:00" /><br/><br/>
+                </Blockquote>
+            </>
+        )
+    },
     {
         id: 86,
         date: "06 września 2023 roku",
@@ -5077,7 +5120,7 @@ export const articlesLink = [
                     </p>
                 </form>
                 <SmallestHeader>Form - szczegóły</SmallestHeader>
-                    <Blockquote>
+                <Blockquote>
                     &lt;form <b>action</b>="/strona-docelowa" <b>method</b>="post">&lt;/form>
                 </Blockquote>
                 <ListUnordered>
@@ -5126,7 +5169,7 @@ export const articlesLink = [
                 </Blockquote>
                 <label>Imię i nazwisko<input name="name"/></label>
                 <h4 className="article__subsubsubheader">przyciski</h4>
-                    <Blockquote>
+                <Blockquote>
                     &lt;button>Wyślij!&lt;/button><br/><br/>
                     &lt;!-- lub: --><br/><br/>
                     &lt;input type="submit" value="Wyślij!">
@@ -5140,13 +5183,14 @@ export const articlesLink = [
                                 formularza),
                             </ListItem>
                             <ListItem><b>reset</b> - resetuje formularz,</ListItem>
-                            <ListItem className="article__listItem"><b>button</b> - zwykły przycisk, brak domyślnej akcji,
+                            <ListItem className="article__listItem"><b>button</b> - zwykły przycisk, brak domyślnej
+                                akcji,
                             </ListItem>
                         </ListUnordered>
                     </ListItem>
                 </ListUnordered>
                 <SmallestHeader>textarea</SmallestHeader>
-                    <Blockquote>
+                <Blockquote>
                     &lt;textarea name="description">&lt;/textarea>
                 </Blockquote>
                 <p><label>
@@ -5179,7 +5223,7 @@ export const articlesLink = [
                     <input checked name="Kuba Badach" type="checkbox"/>
                 </label>Kuba Badach
 
-    <Blockquote>
+                <Blockquote>
                     &lt;input type="checkbox" name="Kuba Badach" checked>Kuba Badach
                 </Blockquote>
                 <ListUnordered>
@@ -5196,7 +5240,7 @@ export const articlesLink = [
                     <input name="favouriteSinger" type="radio" value="bieber"/>
                 </label> Justin Bieber
 
-    <Blockquote>
+                <Blockquote>
                     &lt;input type="radio" name="favouriteSinger" value="badach" checked> Kuba Badach<br/>
                     &lt;input type="radio" name="favouriteSinger" value="bieber" checked> Justin Bieber
                 </Blockquote>
