@@ -530,8 +530,8 @@ export const articlesLink = [
                                     &nbsp;&nbsp;console.log("Cześć!");<br/>
                                     &#125;;<br/><br/>
                                     button.addEventListener("click", hello);<br/><br/>
-                                    &#47;&#47;później, kiedy to już nie jest
-                                    potrzebne<br/>
+                                    <Comment text="// później, kiedy to już nie jest
+                                    potrzebne" /><br/>
                                     button.removeEventListener("click", hello);
                                 </Blockquote>
                             </ListItem>
@@ -583,7 +583,7 @@ export const articlesLink = [
             <>
                 <SmallestHeader>Named exports</SmallestHeader>
                 <Blockquote>
-                    &#47;&#47; module.js<br/>
+                    <Comment text="// module.js" /><br/>
                     <b>const</b> myFunction = () => &#123;<br/>
                     &nbsp;&nbsp;console.log('hello');<br/>
                     &#125;;<br/><br/>
@@ -592,14 +592,14 @@ export const articlesLink = [
                     <b>export default</b> &#123;<br/>
                     &nbsp;&nbsp;some: "Object",<br/>
                     &#125;;<br/><br/>
-                    &#47;&#47;index.js<br/>
+                    <Comment text="// index.js" /><br/>
                     <b>import</b> module, &#123;myFunction, text &#125; <b>from</b> "./module";
                 </Blockquote>
                 <SmallestHeader>Zmienianie nazwy importów i exportów</SmallestHeader>
                 <Blockquote>
-                    &#47;&#47; zmiana nazwy eksportu<br/>
+                    <Comment text="// zmiana nazwy eksportu" /> <br/>
                     <b>export</b> &#123;myFunction <b> as < /b> anotherFunctionName &#125;;<br/><br/>
-                    &#47;&#47; zmiana nazwy importu<br/>
+                    <Comment text="// zmiana nazwy importu" /><br/>
                     <b>import</b> &#123;text <b>as</b> anotherName &#125;
                     <b>from</b> "./module";
                 </Blockquote>
@@ -1259,7 +1259,7 @@ export const articlesLink = [
                 </Blockquote>
                 <SmallestHeader>JSX</SmallestHeader>
                 <Blockquote>
-                    const element = <h3>Hello world!</h3>;
+                    const element = &lt;h3>Hello world! &lt;/h3>;
                 </Blockquote>
                 <ListUnordered>
                     <ListItem>to nie jest łańcuch znaków, to nie jest <b>HTML</b>, to
@@ -1288,14 +1288,14 @@ export const articlesLink = [
                     <SmallestHeader>Edycja elementu tablicy</SmallestHeader>
                     <Blockquote>
                         <b>const</b> tasks = [<br/>
-                        &nbsp;&nbsp;&#123title: "ugotować obiad", done: false&#125;,<br/>
-                        &nbsp;&nbsp;&#123title: "zrobić pranie", done: true&#125;,<br/>
-                        &nbsp;&nbsp;&#123title: "zrobić zakupy", done: false&#125;,<br/>
+                        &nbsp;&nbsp;&#123;title: "ugotować obiad", done: false&#125;,<br/>
+                        &nbsp;&nbsp;&#123;title: "zrobić pranie", done: true&#125;,<br/>
+                        &nbsp;&nbsp;&#123;title: "zrobić zakupy", done: false&#125;,<br/>
                         ];<br/><br/>
                         <b>const</b> editIndex = 1;<br/><br/>
                         <b>const</b> tasksWithUpdatedItem = [<br/>
                         &nbsp;&nbsp;...tasks.slice(0, editIndex),<br/>
-                        &nbsp;&nbsp;&#123...tasks[editIndex], done: false&#125;,<br/>
+                        &nbsp;&nbsp;&#123;...tasks[editIndex], done: false&#125;,<br/>
                         &nbsp;&nbsp;...tasks.slice(editIndex + 1),<br/>
                         ];
                     </Blockquote>
@@ -1680,43 +1680,43 @@ export const articlesLink = [
         title: "JavaScript - obiekty cz. 2",
         body: (
             <>
-                <h4 className="article__subsubsubheader">Skrócona notacja: właściwości</h4>
-                <blockquote className="article__blockquote">
+                <SmallestHeader>Skrócona notacja: właściwości</SmallestHeader>
+                <Blockquote>
                     <b>const</b> name = "Kasia";<br/>
                     <b>const</b> surname = "Pelasia";<br/><br/>
                     <b>const</b> person = &#123;<br/>
                     &nbsp;&nbsp;name,<br/>&nbsp;&nbsp;&nbsp;&nbsp;//zamiast name: name<br/>
                     &nbsp;&nbsp;surname,<br/>&nbsp;&nbsp;&nbsp;&nbsp;//zamiast surname: surname<br/>
                     &#125;;<br/>
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">warto stosować, jeśli właściwość ma taką samą nazwę jak
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>warto stosować, jeśli właściwość ma taką samą nazwę jak
                         zmienna/stała,
                         której wartość chcemy do tej właściwości przypisać
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">Skrócona notacja: metody</h4>
-                <blockquote className="article__blockquote">
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>Skrócona notacja: metody</SmallestHeader>
+                <Blockquote>
                     <b>const</b> person = &#123;<br/>
                     &nbsp;&nbsp;name: "Kasia",<br/>
                     &nbsp;&nbsp;sayHello() &#123;<br/>
                     &nbsp;&nbsp;&nbsp;&nbsp;console.log(`Cześć! Jestem $&#123;this.name&#125;`);<br/>
                     &nbsp;&nbsp;&#125;<br/>
                     &#125;;<br/>
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">słowo <b>function</b> niepotrzebne</li>
-                </ul>
-                <h4 className="article__subsubsubheader">Computed Property Names</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>słowo <b>function</b> niepotrzebne</ListItem>
+                </ListUnordered>
+                <SmallestHeader>Computed Property Names</SmallestHeader>
+                <Blockquote>
                     <b>const</b> currency = "EUR";<br/><br/>
                     <b>const</b> exchangeData = &#123;<br/>
                     &nbsp;&nbsp;PLN: 45,<br/>
                     &nbsp;&nbsp;[currency]: 200,<br/>
                     &#125;;<br/>
-                </blockquote>
-                <h4 className="article__subsubsubheader">Destrukturyzacja</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <SmallestHeader>Destrukturyzacja</SmallestHeader>
+                <Blockquote>
                     <b>const</b> person = &#123;<br/>
                     &nbsp;&nbsp;name: "Kasia",<br/>
                     &nbsp;&nbsp;surname: "Pelasia",<br/>
@@ -1724,18 +1724,18 @@ export const articlesLink = [
                     &nbsp;&nbsp;gender: "male",<br/>
                     &#125;;<br/><br/>
                     <b>const</b> &#123;name, surname, ...rest&#125; = person;<br/>
-                    //rest - obiekt z pozostałymi właściwościami<br/><br/>
+                    <Comment text="//rest - obiekt z pozostałymi właściwościami" /><br/><br/>
                     <b>const</b> &#123; city = "N/A"&#125; = person;<br/>&nbsp;&nbsp;//domyślna wartość<br/>
                     <b>const</b> &#123;surname: lastName&#125; = person;<br/>&nbsp;&nbsp;//inna nazwa zmiennej/
                     stałej<br/><br/>
-                    //obiekt jako argument funkcji<br/>
+                    <Comment text="//obiekt jako argument funkcji" /><br/>
                     <b>const</b> getPersonFullName = (&#123;name, surname&#125;) =>
                     `$&#123;name&#125; $&#123;surname&#125;`;<br/>
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">iteruje po właściwościach obiektu</li>
-                    <li className="article__listItem">kolejność może być różna</li>
-                </ul>
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>iteruje po właściwościach obiektu</ListItem>
+                    <ListItem>kolejność może być różna</ListItem>
+                </ListUnordered>
             </>
         )
     },
@@ -1746,7 +1746,7 @@ export const articlesLink = [
         body: (
             <>
                 <h4 className="article__subsubsubheader">transition - najprostszy przykład</h4>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     .element &#123;<br/>
                     &nbsp;&nbsp;background: red;<br/>
                     &nbsp;&nbsp;transition: 1s;<br/>
@@ -1755,47 +1755,47 @@ export const articlesLink = [
                     .element:hover &#123;<br/>
                     &nbsp;&nbsp;background: blue;<br/>
                     &#125;<br/>
-                </blockquote>
+                </Blockquote>
                 <ul className="article__unorderedList">
                     <li className="article__listItem">płynne przejście między dwiema wartościami</li>
                 </ul>
                 <div className="article__container--transition"></div>
                 <h4 className="article__subsubsubheader">transform: scale</h4>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     .element &#123;<br/>
                     &nbsp;&nbsp; transform: scale(1.5);&nbsp;&nbsp;&nbsp;&nbsp;/* scaleX, scaleY */<br/>
                     &#125;<br/>
-                </blockquote>
+                </Blockquote>
                 <div className="article__container--transform"></div>
                 <h4 className="article__subsubsubheader">transform: rotate</h4>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     .element &#123;<br/>
                     &nbsp;&nbsp;transform: rotate(60deg);<br/>
                     &#125;<br/>
-                </blockquote>
+                </Blockquote>
                 <div className="article__container--rotated"></div>
                 <h4 className="article__subsubsubheader">transform: translate</h4>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     .element &#123;<br/>
                     &nbsp;&nbsp;transform: translateX(100%) translateY(50px);<br/>
                     &#125;<br/>
-                </blockquote>
+                </Blockquote>
                 <div className="article__container--translated"></div>
                 <h4 className="article__subsubsubheader">Kilka transformacji po kolei</h4>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     .element &#123;<br/>
                     &nbsp;&nbsp;transform: rotate(90deg) scale(1.5);<br/>
                     &#125;<br/>
-                </blockquote>
+                </Blockquote>
                 <div className="article__container--translatedScale"></div>
                 <h4 className="article__subsubsubheader">transform-origin</h4>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     .element &#123;<br/>
                     &nbsp;&nbsp;transform: rotate(90deg);<br/>
                     &nbsp;&nbsp;transform-origin: right bottom;<br/>
                     &nbsp;&nbsp;/* transform-origin: 20px 60% */<br/>
                     &#125;<br/>
-                </blockquote>
+                </Blockquote>
                 <div className="article__container--translatedOrigin"></div>
                 <h4 className="article__subsubsubheader">Jak działa transform</h4>
                 <ul className="article__unorderedList">
@@ -1809,11 +1809,11 @@ export const articlesLink = [
                 <div className="article__container--transform"></div>
                 <div className="article__container--transform"></div>
                 <h4 className="article__subsubsubheader">transition-property</h4>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     .element &#123;<br/>
                     &nbsp;&nbsp;transition: background 1s, transform 2s;<br/>
                     &#125;<br/>
-                </blockquote>
+                </Blockquote>
                 <ul className="article__unorderedList">
                     <li className="article__listItem">warto podać, które właściwości
                         będą animowane, ponieważ może to
@@ -1826,32 +1826,32 @@ export const articlesLink = [
                 </ul>
                 <div className="article__container--transitionProperty"></div>
                 <h4 className="article__subsubsubheader">transition-timing-function</h4>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     .element &#123;<br/>
                     &nbsp;&nbsp;transition: background 1s linear;<br/>
                     &#125;<br/>
-                </blockquote>
+                </Blockquote>
                 <ul className="article__unorderedList">
                     <li className="article__listItem">określa jak liczone są
                         wartości pośrednie w trakcie animacji
                     </li>
                 </ul>
                 <h4 className="article__subsubsubheader">transition-delay</h4>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     .element &#123;<br/>
                     &nbsp;&nbsp;transition: background 2s 1s;<br/>
                     &#125;<br/>
-                </blockquote>
+                </Blockquote>
                 <h4 className="article__subsubsubheader">właściwości
                     oddzielnie</h4>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     .element &#123;<br/>
                     &nbsp;&nbsp;transition-property: background, transform;<br/>
                     &nbsp;&nbsp;transition-duration: 1s 2s;<br/>
                     &nbsp;&nbsp;transition-delay: 0, 0.5s;<br/>
                     &nbsp;&nbsp;transition-timing-function: linear;<br/>
                     &#125;<br/>
-                </blockquote>
+                </Blockquote>
                 <ul className="article__unorderedList">
                     <li className="article__listItem">ale rekomendowane jest
                         korzystać ze skrótu transition
