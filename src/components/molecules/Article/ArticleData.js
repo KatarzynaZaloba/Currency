@@ -54,10 +54,90 @@ export const articlesLink = [
                     <b>const</b> myDate = <b>new</b> Date(); <br/>
                     <Comment text="// aktualna data i godzina"/> <br/><br/>
                     <b>const</b> myDate = <b>new</b> Date(2023, 8, 7, 12, 05, 16); <br/>
-                    <Comment text="// 7 września 2023 roku, godzina 12:05:16" /><br/><br/>
+                    <Comment text="// 7 września 2023 roku, godzina 12:05:16"/><br/><br/>
                     <b>const</b> myDate = <b>new</b> Date(2025, 1, 15); <br/>
-                    <Comment text="// 15 lutego 2025 roku, godzina 00:00:00" /><br/><br/>
+                    <Comment text="// 15 lutego 2025 roku, godzina 00:00:00"/><br/><br/>
                 </Blockquote>
+                <SmallestHeader>
+                    Pobieranie i ustawianie fragmentów daty i czasu
+                </SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
+                        <b>getDate, setDate</b> - dzień miesiąca (1 - 31);
+                    </ListItem>
+                    <ListItem>
+                        <b>getFullYear, setFullYear</b> - pełen rok;
+                    </ListItem>
+                    <ListItem>
+                        <b>getHours, setHours</b> - godziny (0, 23);
+                    </ListItem>
+                    <ListItem>
+                        <b>getMilliseconds, setMilliseconds</b> - milisekundy (0 - 999);
+                    </ListItem>
+                    <ListItem>
+                        <b>getMinutes, setMinutes</b> - minuty (0 - 59);
+                    </ListItem>
+                    <ListItem>
+                        <b>getMonth, setMonth</b> - miesiąc (0 - styczeń, 11 - grudzień);
+                    </ListItem>
+                    <ListItem>
+                        <b>getSeconds, setSeconds</b> - sekundy (0 - 59);
+                    </ListItem>
+                    <ListItem>
+                        <b>getDay</b> (tylko <b>get</b>) - dzień tygodnia (0 - niedziela, 6 - sobota);
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>
+                    getTime, setTime
+                </SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
+                        liczba milisekund od 1 stycznia 1970 UTC
+                    </ListItem>
+                    <ListItem>
+                        <b>getTime</b> - przydaje się np. do porównania dwóch dat (w milisekundach)
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>
+                    Date.now()
+                </SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
+                        aktualna liczba milisekund jakie minęły od północy 1 stycznia 1970 roku
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>
+                   data i czas przechowywane są w standardzie UTC
+                </SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
+                        ale metody takie jak <b>getHours()</b> podadzą nam wartości lokalne
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>
+                    toLocaleString, toLocaleDateString, to LocaleTimeString
+                </SmallestHeader>
+                <Blockquote>
+                    <b>const</b> newDate = <b>new</b> Date();<br/><br/>
+                    console.log(newDate.toLocaleString());<br/>
+                    <Comment text="// 22.07.2020, 17:36:26" /><br/><br/>
+                    console.log(newDate.toLocaleDateString(<br/>
+                    &nbsp;&nbsp;<b>undefined,</b><br/>
+                    &nbsp;&nbsp;&#123; month: "long", weekday: "long", day: "numeric", year: "numeric"<br/>
+                    &#125;,<br/>
+                    ));<br/>
+                    <Comment text="// środa, 22 lipca 2020" /><br/><br/>
+                    console.log(newDate.toLocaleTimeString());<br/>
+                    <Comment text="// 17:36:26" /><br/>
+                </Blockquote>
+                <SmallestHeader>
+                    toISOString()
+                </SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
+                        konwertuje datę do bardzo popularnego formatu <b>ISO 8601</b>
+                    </ListItem>
+                </ListUnordered>
             </>
         )
     },
