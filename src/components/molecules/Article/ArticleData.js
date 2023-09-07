@@ -16,7 +16,7 @@ import TableContainer from "../../atoms/TableContainer";
 import Q from "../../atoms/Q";
 import Figure from "../../atoms/Figure";
 import Figcaption from "../../atoms/Figcaption";
-import Comment from "../../atoms/Comment/Comment";
+import Index from "../../atoms/Comment";
 
 export const articlesLink = [
     {
@@ -52,11 +52,11 @@ export const articlesLink = [
                 </SmallestHeader>
                 <Blockquote>
                     <b>const</b> myDate = <b>new</b> Date(); <br/>
-                    <Comment text="// aktualna data i godzina"/> <br/><br/>
+                    <Index text="// aktualna data i godzina"/> <br/><br/>
                     <b>const</b> myDate = <b>new</b> Date(2023, 8, 7, 12, 05, 16); <br/>
-                    <Comment text="// 7 września 2023 roku, godzina 12:05:16"/><br/><br/>
+                    <Index text="// 7 września 2023 roku, godzina 12:05:16"/><br/><br/>
                     <b>const</b> myDate = <b>new</b> Date(2025, 1, 15); <br/>
-                    <Comment text="// 15 lutego 2025 roku, godzina 00:00:00"/><br/><br/>
+                    <Index text="// 15 lutego 2025 roku, godzina 00:00:00"/><br/><br/>
                 </Blockquote>
                 <SmallestHeader>
                     Pobieranie i ustawianie fragmentów daty i czasu
@@ -120,15 +120,15 @@ export const articlesLink = [
                 <Blockquote>
                     <b>const</b> newDate = <b>new</b> Date();<br/><br/>
                     console.log(newDate.toLocaleString());<br/>
-                    <Comment text="// 22.07.2020, 17:36:26" /><br/><br/>
+                    <Index text="// 22.07.2020, 17:36:26" /><br/><br/>
                     console.log(newDate.toLocaleDateString(<br/>
                     &nbsp;&nbsp;<b>undefined,</b><br/>
                     &nbsp;&nbsp;&#123; month: "long", weekday: "long", day: "numeric", year: "numeric"<br/>
                     &#125;,<br/>
                     ));<br/>
-                    <Comment text="// środa, 22 lipca 2020" /><br/><br/>
+                    <Index text="// środa, 22 lipca 2020" /><br/><br/>
                     console.log(newDate.toLocaleTimeString());<br/>
-                    <Comment text="// 17:36:26" /><br/>
+                    <Index text="// 17:36:26" /><br/>
                 </Blockquote>
                 <SmallestHeader>
                     toISOString()
@@ -530,7 +530,7 @@ export const articlesLink = [
                                     &nbsp;&nbsp;console.log("Cześć!");<br/>
                                     &#125;;<br/><br/>
                                     button.addEventListener("click", hello);<br/><br/>
-                                    <Comment text="// później, kiedy to już nie jest
+                                    <Index text="// później, kiedy to już nie jest
                                     potrzebne" /><br/>
                                     button.removeEventListener("click", hello);
                                 </Blockquote>
@@ -583,7 +583,7 @@ export const articlesLink = [
             <>
                 <SmallestHeader>Named exports</SmallestHeader>
                 <Blockquote>
-                    <Comment text="// module.js" /><br/>
+                    <Index text="// module.js" /><br/>
                     <b>const</b> myFunction = () => &#123;<br/>
                     &nbsp;&nbsp;console.log('hello');<br/>
                     &#125;;<br/><br/>
@@ -592,14 +592,14 @@ export const articlesLink = [
                     <b>export default</b> &#123;<br/>
                     &nbsp;&nbsp;some: "Object",<br/>
                     &#125;;<br/><br/>
-                    <Comment text="// index.js" /><br/>
+                    <Index text="// index.js" /><br/>
                     <b>import</b> module, &#123;myFunction, text &#125; <b>from</b> "./module";
                 </Blockquote>
                 <SmallestHeader>Zmienianie nazwy importów i exportów</SmallestHeader>
                 <Blockquote>
-                    <Comment text="// zmiana nazwy eksportu" /> <br/>
+                    <Index text="// zmiana nazwy eksportu" /> <br/>
                     <b>export</b> &#123;myFunction <b> as < /b> anotherFunctionName &#125;;<br/><br/>
-                    <Comment text="// zmiana nazwy importu" /><br/>
+                    <Index text="// zmiana nazwy importu" /><br/>
                     <b>import</b> &#123;text <b>as</b> anotherName &#125;
                     <b>from</b> "./module";
                 </Blockquote>
@@ -1724,11 +1724,11 @@ export const articlesLink = [
                     &nbsp;&nbsp;gender: "male",<br/>
                     &#125;;<br/><br/>
                     <b>const</b> &#123;name, surname, ...rest&#125; = person;<br/>
-                    <Comment text="//rest - obiekt z pozostałymi właściwościami" /><br/><br/>
+                    <Index text="//rest - obiekt z pozostałymi właściwościami" /><br/><br/>
                     <b>const</b> &#123; city = "N/A"&#125; = person;<br/>&nbsp;&nbsp;//domyślna wartość<br/>
                     <b>const</b> &#123;surname: lastName&#125; = person;<br/>&nbsp;&nbsp;//inna nazwa zmiennej/
                     stałej<br/><br/>
-                    <Comment text="//obiekt jako argument funkcji" /><br/>
+                    <Index text="//obiekt jako argument funkcji" /><br/>
                     <b>const</b> getPersonFullName = (&#123;name, surname&#125;) =>
                     `$&#123;name&#125; $&#123;surname&#125;`;<br/>
                 </Blockquote>
