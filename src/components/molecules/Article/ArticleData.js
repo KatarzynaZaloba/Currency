@@ -1498,8 +1498,8 @@ export const articlesLink = [
         title: "JavaScript - obiekty cz. 3",
         body: (
             <>
-                <h4 className="article__subsubsubheader">Destrukturyzacja w zagnieżdżonym obiekcie</h4>
-                <blockquote className="article__blockquote">
+                <SmallestHeader>Destrukturyzacja w zagnieżdżonym obiekcie</SmallestHeader>
+                <Blockquote>
                     <b>const</b> person = &#123;<br/>
                     &nbsp;&nbsp;name: "Kasia",<br/>
                     &nbsp;&nbsp;surname: "Pelasia",<br/>
@@ -1510,9 +1510,9 @@ export const articlesLink = [
                     &#125;;<br/><br/>
                     <b>const</b> &#123;father: &#123;name: fatherName&#125;&#125; = person;<br/><br/>
                     console.log(`Imię ojca: $&#123;fatherName&#125;`);<br/>
-                </blockquote>
-                <h4 className="article__subsubsubheader">Łączenie obiektów (spread syntax)</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <SmallestHeader>Łączenie obiektów (spread syntax)</SmallestHeader>
+                <Blockquote>
                     <b>const</b> personBasicData = &#123;<br/>
                     &nbsp;&nbsp;name: "Kasia",<br/>
                     &nbsp;&nbsp;surname: "Pelasia",<br/>
@@ -1524,9 +1524,9 @@ export const articlesLink = [
                     &nbsp;&nbsp;...personBasicData<br/>
                     &nbsp;&nbsp;...personAdditionalData<br/>
                     &#125;;<br/>
-                </blockquote>
-                <h4 className="article__subsubsubheader">Klonowanie (shallow copy - "płytka kopia")</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <SmallestHeader>Klonowanie (shallow copy - "płytka kopia")</SmallestHeader>
+                <Blockquote>
                     <b>const</b> person = &#123;<br/>
                     &nbsp;&nbsp;name: "Kasia",<br/>
                     &nbsp;&nbsp;surname: "Pelasia",<br/>
@@ -1538,16 +1538,16 @@ export const articlesLink = [
                     <b>const</b> personCopy = &#123;...person&#125;;<br/><br/>
                     console.log(personCopy === person);<br/> &nbsp;&nbsp;//false<br/>
                     console.log(personCopy.father === person.father);<br/> &nbsp;&nbsp;//true<br/>
-                </blockquote>
-                <h4 className="article__subsubsubheader">for...in</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <SmallestHeader>for...in</SmallestHeader>l>
+                <Blockquote>
                     <b>const</b> person = &#123;<br/>
                     &nbsp;&nbsp;name: "Kasia",<br/>
                     &nbsp;&nbsp;surname: "Pelasia",<br/>
                     &#125;;<br/><br/>
                     <b>for (const</b> propertyName <b>in</b> person) &#123;<br/>
                     &nbsp;&nbsp;console.log(`$&#123;propertyName&#125;: $&#123;person[propertyName]&#125;`);<br/>
-                </blockquote>
+                </Blockquote>
             </>
         )
     },
@@ -5054,7 +5054,7 @@ export const articlesLink = [
                 <p>Formularze są najprostszym sposobem na zebranie i wysłanie informacji o użytkowniku.</p>
                 <p>Kod podstawowego formularza wygląda następująco, a poniżej mamy przykład jak taki formularz może
                     wyglądać.</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     &lt;form><br/>
                     &nbsp;&nbsp;&lt;p><br/>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;label><br/>
@@ -5065,7 +5065,7 @@ export const articlesLink = [
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;button>Wyślij!&lt;/button><br/>
                     &nbsp;&nbsp;&lt;/p><br/>
                     &lt;/form><br/>
-                </blockquote>
+                </Blockquote>
                 <form>
                     <p>
                         <label>
@@ -5076,93 +5076,93 @@ export const articlesLink = [
                         <button>Wyślij!</button>
                     </p>
                 </form>
-                <h4 className="article__subsubsubheader">Form - szczegóły</h4>
-                <blockquote className="article__blockquote">
+                <SmallestHeader>Form - szczegóły</SmallestHeader>
+                    <Blockquote>
                     &lt;form <b>action</b>="/strona-docelowa" <b>method</b>="post">&lt;/form>
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>
                         atrybut <b>action</b> - adres url, pod który zostanie wysłany formularz
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         atrybut <b>method</b> - definiuje, jakiej metody HTTP użyjemy do wysłania formularza
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">Input (text)</h4>
-                <blockquote className="article__blockquote">&lt;input name="myName"></blockquote>
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>Input (text)</SmallestHeader>
+                <Blockquote>&lt;input name="myName"></Blockquote>
                 <p>Atrybuty:</p>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                <ListUnordered>
+                    <ListItem>
                         <b>name</b> - nazwa pola,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         <b>readonly</b> - pole tylko do odczytu,
                         <label>
                             <input readOnly/>
                         </label>
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         <b>disabled</b> - pole wyłączone/ nieaktywne,
                         <label>
                             <input disabled/>
                         </label>
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         <b>placeholder</b> - tekst w przypadku pustej wartości,
                         <label>
                             <input placeholder="Wpisz coś"/>
                         </label>
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         <b>autofocus</b> - skupienie wskaźnika na danym polu input,
-                    </li>
-                </ul>
+                    </ListItem>
+                </ListUnordered>
                 <p><b>label</b> - opisuje pole, ważny pod kątem dostępności</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     &lt;label>Imię i nazwisko&lt;input name="name">&lt;/label><br/><br/>
                     &lt;!-- lub: --><br/><br/>
                     &lt;label for="name">Imię i nazwisko:&lt;/label><br/>
                     &lt;input id="name" name="name"><br/>
-                </blockquote>
+                </Blockquote>
                 <label>Imię i nazwisko<input name="name"/></label>
                 <h4 className="article__subsubsubheader">przyciski</h4>
-                <blockquote className="article__blockquote">
+                    <Blockquote>
                     &lt;button>Wyślij!&lt;/button><br/><br/>
                     &lt;!-- lub: --><br/><br/>
                     &lt;input type="submit" value="Wyślij!">
-                </blockquote>
+                </Blockquote>
                 <button>Wyślij!</button>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                <ListUnordered>
+                    <ListItem>
                         mogą mieć różne funkcje w zależności od atrybutu type:
-                        <ul className="article__unorderedList">
-                            <li className="article__listItem"><b>submit</b> - wysyła formularz (domyślny dla
+                        <ListUnordered>
+                            <ListItem><b>submit</b> - wysyła formularz (domyślny dla
                                 formularza),
-                            </li>
-                            <li className="article__listItem"><b>reset</b> - resetuje formularz,</li>
-                            <li className="article__listItem"><b>button</b> - zwykły przycisk, brak domyślnej akcji,
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">textarea</h4>
-                <blockquote className="article__blockquote">
+                            </ListItem>
+                            <ListItem><b>reset</b> - resetuje formularz,</ListItem>
+                            <ListItem className="article__listItem"><b>button</b> - zwykły przycisk, brak domyślnej akcji,
+                            </ListItem>
+                        </ListUnordered>
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>textarea</SmallestHeader>
+                    <Blockquote>
                     &lt;textarea name="description">&lt;/textarea>
-                </blockquote>
+                </Blockquote>
                 <p><label>
                     <textarea name="description"></textarea>
                 </label></p>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">pole na wiele linii tekstu,</li>
-                    <li className="article__listItem">przyjmuje tylko zwykły niesformatowany tekst,</li>
-                    <li className="article__listItem">domyślna wartość wewnątrz znacznika,</li>
-                    <li className="article__listItem">posiada znacznik zamykający,</li>
-                    <li className="article__listItem">białe znaki mają znaczenie,</li>
-                    <li className="article__listItem">domyślnie da się zmienić rozmiar okna,</li>
-                    <li className="article__listItem">atrybut <b>cols</b> - szerokość w kolumnach,</li>
-                    <li className="article__listItem">atrybut <b>rows</b> - wysokość w wierszach,</li>
-                </ul>
-                <h4 className="article__subsubsubheader">fieldset i legend</h4>
+                <ListUnordered>
+                    <ListItem>pole na wiele linii tekstu,</ListItem>
+                    <ListItem>przyjmuje tylko zwykły niesformatowany tekst,</ListItem>
+                    <ListItem>domyślna wartość wewnątrz znacznika,</ListItem>
+                    <ListItem>posiada znacznik zamykający,</ListItem>
+                    <ListItem>białe znaki mają znaczenie,</ListItem>
+                    <ListItem>domyślnie da się zmienić rozmiar okna,</ListItem>
+                    <ListItem>atrybut <b>cols</b> - szerokość w kolumnach,</ListItem>
+                    <ListItem>atrybut <b>rows</b> - wysokość w wierszach,</ListItem>
+                </ListUnordered>
+                <SmallestHeader>fieldset i legend</SmallestHeader>
                 <fieldset>
                     <legend>Dane osobowe</legend>
                     <p>
@@ -5170,40 +5170,42 @@ export const articlesLink = [
                         </label>
                     </p>
                 </fieldset>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">wygodne rozwiązanie do tworzenia grup pól,</li>
-                    <li className="article__listItem">ważne z punktu widzenia dostępności,</li>
-                </ul>
-                <h4 className="article__subsubsubheader">input / checkbox — pole wyboru</h4>
+                <ListUnordered>
+                    <ListItem>wygodne rozwiązanie do tworzenia grup pól,</ListItem>
+                    <ListItem>ważne z punktu widzenia dostępności,</ListItem>
+                </ListUnordered>
+                <SmallestHeader>input / checkbox — pole wyboru</SmallestHeader>
                 <label>
                     <input checked name="Kuba Badach" type="checkbox"/>
                 </label>Kuba Badach
-                <blockquote className="article__blockquote">
+
+    <Blockquote>
                     &lt;input type="checkbox" name="Kuba Badach" checked>Kuba Badach
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">tak / nie</li>
-                    <li className="article__listItem">atrybut checked — domyślne zaznaczenie,</li>
-                    <li className="article__listItem">wartość jest wysyłana tylko, jeśli pole jest zaznaczone,</li>
-                    <li className="article__listItem">jeśli nie ma value, wysyłana jest wartość "on".</li>
-                </ul>
-                <h4 className="article__subsubsubheader">input / radio — jeden wybór z wielu opcji</h4>
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>tak / nie</ListItem>
+                    <ListItem>atrybut checked — domyślne zaznaczenie,</ListItem>
+                    <ListItem>wartość jest wysyłana tylko, jeśli pole jest zaznaczone,</ListItem>
+                    <ListItem>jeśli nie ma value, wysyłana jest wartość "on".</ListItem>
+                </ListUnordered>
+                <SmallestHeader>input / radio — jeden wybór z wielu opcji</SmallestHeader>
                 <label>
                     <input checked name="favouriteSinger" type="radio" value="badach"/>
                 </label> Kuba Badach
                 <label>
                     <input name="favouriteSinger" type="radio" value="bieber"/>
                 </label> Justin Bieber
-                <blockquote className="article__blockquote">
+
+    <Blockquote>
                     &lt;input type="radio" name="favouriteSinger" value="badach" checked> Kuba Badach<br/>
                     &lt;input type="radio" name="favouriteSinger" value="bieber" checked> Justin Bieber
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">pola z tym samym atrybutem name,</li>
-                    <li className="article__listItem">tylko jedno pole z grupy może być zaznaczone,</li>
-                    <li className="article__listItem">wysyłana jest wartość tylko zaznaczonego pola,</li>
-                    <li className="article__listItem">nie da się odznaczyć pola.</li>
-                </ul>
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>pola z tym samym atrybutem name,</ListItem>
+                    <ListItem>tylko jedno pole z grupy może być zaznaczone,</ListItem>
+                    <ListItem>wysyłana jest wartość tylko zaznaczonego pola,</ListItem>
+                    <ListItem>nie da się odznaczyć pola.</ListItem>
+                </ListUnordered>
                 <h4 className="article__subsubsubheader">select</h4>
                 <label>
                     ulubiony wokalista:
@@ -5212,7 +5214,7 @@ export const articlesLink = [
                         <option selected value="timberlake">Justin Timberlake</option>
                     </select>
                 </label>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     &lt;label><br/>
                     &nbsp;&nbsp;ulubiony wokalista:<br/>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;select name="favouriteSinger"><br/>
@@ -5221,45 +5223,45 @@ export const articlesLink = [
                     &lt;/option><br/>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;/select><br/>
                     &lt;/label>
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">rozwijana lista opcji,</li>
-                    <li className="article__listItem">atrybut selected w option - domyślna wartość,</li>
-                    <li className="article__listItem">zostanie wysłana wartość wybranej opcji,</li>
-                    <li className="article__listItem">atrybut size — liczba widocznych opcji,</li>
-                    <li className="article__listItem">atrybut multiple — wielokrotny wybór.</li>
-                </ul>
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>rozwijana lista opcji,</ListItem>
+                    <ListItem>atrybut selected w option - domyślna wartość,</ListItem>
+                    <ListItem>zostanie wysłana wartość wybranej opcji,</ListItem>
+                    <ListItem>atrybut size — liczba widocznych opcji,</ListItem>
+                    <ListItem>atrybut multiple — wielokrotny wybór.</ListItem>
+                </ListUnordered>
                 <h4 className="article__subsubsubheader">input / file</h4>
                 <label>
                     Załącz swoje CV
                     <input name="cv" type="file"/>
                 </label>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     &lt;label><br/>
                     &nbsp;&nbsp;Załącz swoje CV<br/>
                     &nbsp;&nbsp;&lt;input type="file" name="cv"><br/>
                     &lt;/label>
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">wybór plików,</li>
-                    <li className="article__listItem">atrybut multiple — wiele plików,</li>
-                </ul>
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>wybór plików,</ListItem>
+                    <ListItem>atrybut multiple — wiele plików,</ListItem>
+                </ListUnordered>
                 <h4 className="article__subsubsubheader">input / email</h4>
                 <label>
                     Adres e-mail do kontaktu:
                     <input name="email" type="email"/>
                 </label>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     &lt;label><br/>
                     &nbsp;&nbsp;Adres e-mail do kontaktu:<br/>
                     &nbsp;&nbsp;&lt;input type="email" name="email"><br/>
                     &lt;/label><br/>
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">adres e-mail,</li>
-                    <li className="article__listItem">w bardzo podstawowy sposób sprawdza poprawność,</li>
-                    <li className="article__listItem">przy walidacji można użyć atrybutu pattern.</li>
-                </ul>
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>adres e-mail,</ListItem>
+                    <ListItem>w bardzo podstawowy sposób sprawdza poprawność,</ListItem>
+                    <ListItem>przy walidacji można użyć atrybutu pattern.</ListItem>
+                </ListUnordered>
             </>
         )
     },
@@ -5275,31 +5277,32 @@ export const articlesLink = [
                     wszystko na raz!</p>
                 <p>Konwencja BEM polega na dodaniu nazwy klasy, w której umieszczamy nazwę bloku, w którym jest element,
                     łącznik w postaci znaku "__" z nazwą stylowanego elementu i/lub <i>modyfikator</i>.</p>
-                <blockquote className="article__blockquote">.block__element--modifier</blockquote>
+                <Blockquote>.block__element--modifier</Blockquote>
                 <p>Zgodnie z konwencją BEM, zawsze stylujemy po klasach, nie po znacznikach. Dzielimy tym samym stronę
                     na
                     bloki, które są niezależne i mogą być używane w różnych miejscach. Bloki to najwyższe poziomy
                     stylowania. Wewnątrz każdego z bloków są elementy, które nie są samodzielne. W nazwie klasy zgodnie
                     z konwencją BEM nie zagnieżdżamy elementów. Używamy nazwy klasy zgodnie z powyższym wzorem.</p>
                 <p>Do najważniejszych cech BEM-a niewątpliwie należą:</p>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">pomaga w tworzeniu komponentów wielokrotnego użytku,</li>
-                    <li className="article__listItem">bloki są samodzielne i nie polegają na sobie nawzajem,</li>
-                    <li className="article__listItem">łatwość implementacji — wystarczy trzymać się prostej konwencji
+                <ListUnordered>
+                    <ListItem>pomaga w tworzeniu komponentów wielokrotnego użytku,</ListItem>
+                    <ListItem>bloki są samodzielne i nie polegają na sobie nawzajem,</ListItem>
+                    <ListItem>łatwość implementacji — wystarczy trzymać się prostej konwencji
                         nazywania klas,
-                    </li>
-                    <li className="article__listItem">sprawia, że kod jest łatwiejszy do zrozumienia,</li>
-                    <li className="article__listItem">sprawia, że łatwiej pracować z kodem i go utrzymywać,</li>
-                    <li className="article__listItem">pozwala na swobodne rozrastanie się aplikacji (skalowanie),</li>
-                    <li className="article__listItem">sprawia, że wszyscy developerzy w zespole "mówią tym samym
+                    </ListItem>
+                    <ListItem>sprawia, że kod jest łatwiejszy do zrozumienia,</ListItem>
+                    <ListItem>sprawia, że łatwiej pracować z kodem i go utrzymywać,</ListItem>
+                    <ListItem className="article__listItem">pozwala na swobodne rozrastanie się aplikacji
+                        (skalowanie),</ListItem>
+                    <ListItem>sprawia, że wszyscy developerzy w zespole "mówią tym samym
                         językiem",
-                    </li>
-                    <li className="article__listItem">sprawia, że kod powstaje szybciej,</li>
-                    <li className="article__listItem">sprawia, że powstaje mniej kodu,</li>
-                    <li className="article__listItem">jest bardzo popularny na świecie,</li>
-                    <li className="article__listItem">eliminuje problem nadpisywania się styli (specify),</li>
-                    <li className="article__listItem">pozwala na szybkie wdrożenie nowych osób w zespole.</li>
-                </ul>
+                    </ListItem>
+                    <ListItem>sprawia, że kod powstaje szybciej,</ListItem>
+                    <ListItem>sprawia, że powstaje mniej kodu,</ListItem>
+                    <ListItem>jest bardzo popularny na świecie,</ListItem>
+                    <ListItem>eliminuje problem nadpisywania się styli (specify),</ListItem>
+                    <ListItem>pozwala na szybkie wdrożenie nowych osób w zespole.</ListItem>
+                </ListUnordered>
                 <p>Teoria, teorią, a ja zabieram się do roboty!</p>
             </>
         )
@@ -5390,20 +5393,20 @@ export const articlesLink = [
                     <Table>
                         <Caption>Kody błędów protokołów http</Caption>
                         <Thead>
-                        <Tr>
-                            <th className="article__th">
-                                kody:
-                            </th>
-                            <th className="article__th">
-                                rodzaj odpowiedzi
-                            </th>
-                            <th className="article__th">
-                                opis słowny
-                            </th>
-                            <th className="article__th">
-                                znaczenie / zwrócony zasób
-                            </th>
-                        </Tr>
+                            <Tr>
+                                <th className="article__th">
+                                    kody:
+                                </th>
+                                <th className="article__th">
+                                    rodzaj odpowiedzi
+                                </th>
+                                <th className="article__th">
+                                    opis słowny
+                                </th>
+                                <th className="article__th">
+                                    znaczenie / zwrócony zasób
+                                </th>
+                            </Tr>
                         </Thead>
                         <tbody>
                         <Tr>
@@ -6618,17 +6621,17 @@ export const articlesLink = [
                     <Table>
                         <Caption>przykłady znaczników HTML wraz ze znaczeniem</Caption>
                         <Thead>
-                        <Tr>
-                            <Th>
-                                symbol
-                            </Th>
-                            <Th>
-                                nazwa
-                            </Th>
-                            <Th>
-                                opis
-                            </Th>
-                        </Tr>
+                            <Tr>
+                                <Th>
+                                    symbol
+                                </Th>
+                                <Th>
+                                    nazwa
+                                </Th>
+                                <Th>
+                                    opis
+                                </Th>
+                            </Tr>
                         </Thead>
                         <tbody>
                         <Tr>
@@ -6681,14 +6684,14 @@ export const articlesLink = [
                             Przykład operatora
                         </Caption>
                         <Thead>
-                        <Tr>
-                            <Th>
-                                symbol
-                            </Th>
-                            <Th>
-                                Operator
-                            </Th>
-                        </Tr>
+                            <Tr>
+                                <Th>
+                                    symbol
+                                </Th>
+                                <Th>
+                                    Operator
+                                </Th>
+                            </Tr>
                         </Thead>
                         <tbody>
                         <Tr>
@@ -6710,14 +6713,14 @@ export const articlesLink = [
                             Proste typy danych
                         </Caption>
                         <Thead>
-                        <Tr>
-                            <th className="article__th">
-                                skrót
-                            </th>
-                            <th className="article__th">
-                                opis
-                            </th>
-                        </Tr>
+                            <Tr>
+                                <th className="article__th">
+                                    skrót
+                                </th>
+                                <th className="article__th">
+                                    opis
+                                </th>
+                            </Tr>
                         </Thead>
                         <tbody>
                         <Tr>
@@ -6749,14 +6752,14 @@ export const articlesLink = [
                             Proste operatory
                         </Caption>
                         <Thead>
-                        <Tr>
-                            <Th>
-                                rodzaj
-                            </Th>
-                            <Th>
-                                symbole
-                            </Th>
-                        </Tr>
+                            <Tr>
+                                <Th>
+                                    rodzaj
+                                </Th>
+                                <Th>
+                                    symbole
+                                </Th>
+                            </Tr>
                         </Thead>
                         <tbody>
                         <Tr>
@@ -7049,15 +7052,15 @@ export const articlesLink = [
                             Przykłady skrótów literałów w HTML
                         </Caption>
                         <Thead>
-                        <Tr>
+                            <Tr>
 
-                            <Th>
-                                literał
-                            </Th>
-                            <Th>
-                                skrót do użycia literału bez "uruchomienia"
-                            </Th>
-                        </Tr>
+                                <Th>
+                                    literał
+                                </Th>
+                                <Th>
+                                    skrót do użycia literału bez "uruchomienia"
+                                </Th>
+                            </Tr>
                         </Thead>
                         <tbody>
                         <Tr>
@@ -7184,7 +7187,8 @@ export const articlesLink = [
                         The opening tag (znacznik otwierający): Zawiera nazwę elementu, jak w tym przykładzie p od
                         "paragraph". Umieszczony jest przed tekstem i otoczony jest nawiasami ostrokątnymi.
                     </ListItem>
-                    <ListItem className="article__listItem">The content (treść): Mamy tutaj dosłownie treść, którą chcemy
+                    <ListItem className="article__listItem">The content (treść): Mamy tutaj dosłownie treść, którą
+                        chcemy
                         otoczyć
                         znacznikami HTML
                     </ListItem>
