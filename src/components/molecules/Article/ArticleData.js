@@ -20,6 +20,49 @@ import Comment from "../../atoms/Comment";
 
 export const articlesLink = [
     {
+        id: 90,
+        date: "08 września 2023 roku",
+        title: "JS - storage i ciasteczka",
+        body: (
+            <>
+                <SmallestHeader>
+                    Client-side storage
+                </SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
+                        przechowywanie danych na urządzeniu użytkownika
+                    </ListItem>
+                    <ListItem>
+                        jest na to wiele sposobów
+                    </ListItem>
+                    <ListItem>
+                        w ten sposób możemy przechowywać ograniczoną ilość danych
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>
+                    Co zwykle przechowujemy
+                </SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
+                        ustawienia użytkownika
+                    </ListItem>
+                    <ListItem>
+                        informację o zalogowanym użytkowniku
+                    </ListItem>
+                    <ListItem>
+                       personalizację (np. wybrany motyw)
+                    </ListItem>
+                    <ListItem>
+                        zakupy w koszyku
+                    </ListItem>
+                    <ListItem>
+                        itd.
+                    </ListItem>
+                </ListUnordered>
+            </>
+        )
+    },
+    {
         id: 89,
         date: "08 września 2023 roku",
         title: "JS - zegar czyli setTimeout i setInterval",
@@ -361,7 +404,7 @@ export const articlesLink = [
                     &nbsp;&nbsp;);<br/>
                     &#125;
                 </Blockquote>
-                <SmallestHeader className="article__subsubsubheader">Controlled
+                <SmallestHeader>Controlled
                     components</SmallestHeader>
                 <ListUnordered>
                     <ListItem>
@@ -379,14 +422,14 @@ export const articlesLink = [
                         Zawsze w tej sytuacji potrzebny jest <b>onChange</b>
                     </ListItem>
                 </ListUnordered>
-                <SmallestHeader className="article__subsubsubheader">textarea</SmallestHeader>
+                <SmallestHeader>textarea</SmallestHeader>
                 <Blockquote>
                     <b>return</b> (<br/>
                     &nbsp;&nbsp;&lt;textarea
                     value=&#123;content&#125; onChange=&#123;onContentChange /><br/>
                     );
                 </Blockquote>
-                <SmallestHeader className="article__subsubsubheader">Select</SmallestHeader>
+                <SmallestHeader>Select</SmallestHeader>
                 <Blockquote>
                     <b>function</b> App() &#123;<br/>
                     &nbsp;&nbsp;<b>const</b> [age, setAge] = useState("");<br/><br/>
@@ -410,7 +453,7 @@ export const articlesLink = [
                     &nbsp;&nbsp;&#125;;<br/>
                     &#125;
                 </Blockquote>
-                <SmallestHeader className="article__subsubsubheader">checkbox,
+                <SmallestHeader>checkbox,
                     radio</SmallestHeader>
                 <Blockquote>
                     <b>function</b> App() &#123;<br/>
@@ -436,7 +479,7 @@ export const articlesLink = [
         title: "React - useState",
         body: (
             <>
-                <SmallestHeader className="article__subsubsubheader">Licznik</SmallestHeader>
+                <SmallestHeader>Licznik</SmallestHeader>
                 <Blockquote>
                     <b>import</b> React, &#123;useState&#125; from "react";<br/><br/>
                     <b>function </b> App() &#123;<br/>
@@ -454,7 +497,7 @@ export const articlesLink = [
                     &nbsp;&nbsp;);<br/>
                     &#125;
                 </Blockquote>
-                <SmallestHeader className="article__subsubsubheader">useState</SmallestHeader>
+                <SmallestHeader>useState</SmallestHeader>
                 <ListUnordered>
                     <ListItem>
                         jest to tzw. <b>Hook</b>
@@ -475,7 +518,7 @@ export const articlesLink = [
                         pod warunkiem, że jest to inna wartość
                     </ListItem>
                 </ListUnordered>
-                <SmallestHeader className="article__subsubsubheader">useState możemy wywołać
+                <SmallestHeader>useState możemy wywołać
                     wielokrotnie</SmallestHeader>
                 <Blockquote>
                     <b>const</b> [counter, setCounter] = useState(0);<br/>
@@ -484,7 +527,7 @@ export const articlesLink = [
                     <b>const</b> [task, setTask] = useState(&#123;name: "obejrzeć
                     serial"&#125;);
                 </Blockquote>
-                <SmallestHeader className="article__subsubsubheader">Hooki
+                <SmallestHeader>Hooki
                     wywołujemy:</SmallestHeader>
                 <ListUnordered>
                     <ListItem>
@@ -506,7 +549,7 @@ export const articlesLink = [
         title: "Eventy w React",
         body: (
             <>
-                <SmallestHeader className="article__subsubsubheader">Składnia</SmallestHeader>
+                <SmallestHeader>Składnia</SmallestHeader>
                 <Blockquote>
                     <b>const</b> Button = () => (<br/>
                     &nbsp;&nbsp;&lt;button onClick=&#123;() => console.log("Cześć!")&#125;><br/>
@@ -522,7 +565,7 @@ export const articlesLink = [
                         przekazujemy funkcję, a nie string
                     </ListItem>
                 </ListUnordered>
-                <SmallestHeader className="article__subsubsubheader">Argumenty w event
+                <SmallestHeader>Argumenty w event
                     handler-ach</SmallestHeader>
                 <Blockquote>
                     <b>const</b> products = [<br/>
@@ -1843,7 +1886,7 @@ export const articlesLink = [
         title: "CSS - płynne przejścia, transformacje",
         body: (
             <>
-                <h4 className="article__subsubsubheader">transition - najprostszy przykład</h4>
+                <SmallestHeader>transition - najprostszy przykład</SmallestHeader>
                 <Blockquote>
                     .element &#123;<br/>
                     &nbsp;&nbsp;background: red;<br/>
@@ -1854,39 +1897,39 @@ export const articlesLink = [
                     &nbsp;&nbsp;background: blue;<br/>
                     &#125;<br/>
                 </Blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">płynne przejście między dwiema wartościami</li>
-                </ul>
+                <ListUnordered>
+                    <ListItem>płynne przejście między dwiema wartościami</ListItem>
+                </ListUnordered>
                 <div className="article__container--transition"></div>
-                <h4 className="article__subsubsubheader">transform: scale</h4>
+                <SmallestHeader>transform: scale</SmallestHeader>
                 <Blockquote>
                     .element &#123;<br/>
                     &nbsp;&nbsp; transform: scale(1.5);&nbsp;&nbsp;&nbsp;&nbsp;/* scaleX, scaleY */<br/>
                     &#125;<br/>
                 </Blockquote>
                 <div className="article__container--transform"></div>
-                <h4 className="article__subsubsubheader">transform: rotate</h4>
+                <SmallestHeader>transform: rotate</SmallestHeader>
                 <Blockquote>
                     .element &#123;<br/>
                     &nbsp;&nbsp;transform: rotate(60deg);<br/>
                     &#125;<br/>
                 </Blockquote>
                 <div className="article__container--rotated"></div>
-                <h4 className="article__subsubsubheader">transform: translate</h4>
+                <SmallestHeader>transform: translate</SmallestHeader>
                 <Blockquote>
                     .element &#123;<br/>
                     &nbsp;&nbsp;transform: translateX(100%) translateY(50px);<br/>
                     &#125;<br/>
                 </Blockquote>
                 <div className="article__container--translated"></div>
-                <h4 className="article__subsubsubheader">Kilka transformacji po kolei</h4>
+                <SmallestHeader>Kilka transformacji po kolei</SmallestHeader>
                 <Blockquote>
                     .element &#123;<br/>
                     &nbsp;&nbsp;transform: rotate(90deg) scale(1.5);<br/>
                     &#125;<br/>
                 </Blockquote>
                 <div className="article__container--translatedScale"></div>
-                <h4 className="article__subsubsubheader">transform-origin</h4>
+                <SmallestHeader>transform-origin</SmallestHeader>
                 <Blockquote>
                     .element &#123;<br/>
                     &nbsp;&nbsp;transform: rotate(90deg);<br/>
@@ -1895,53 +1938,53 @@ export const articlesLink = [
                     &#125;<br/>
                 </Blockquote>
                 <div className="article__container--translatedOrigin"></div>
-                <h4 className="article__subsubsubheader">Jak działa transform</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">zmienia kształt i położenie
+                <SmallestHeader>Jak działa transform</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>zmienia kształt i położenie
                         elementów
-                    </li>
-                    <li className="article__listItem">nakłada transformację po kolei</li>
-                    <li className="article__listItem">nie wpływa na inne elementy</li>
-                </ul>
+                    </ListItem>
+                    <ListItem>nakłada transformację po kolei</ListItem>
+                    <ListItem>nie wpływa na inne elementy</ListItem>
+                </ListUnordered>
                 <div className="article__container--transform"></div>
                 <div className="article__container--transform"></div>
                 <div className="article__container--transform"></div>
-                <h4 className="article__subsubsubheader">transition-property</h4>
+                <SmallestHeader>transition-property</SmallestHeader>
                 <Blockquote>
                     .element &#123;<br/>
                     &nbsp;&nbsp;transition: background 1s, transform 2s;<br/>
                     &#125;<br/>
                 </Blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">warto podać, które właściwości
+                <ListUnordered>
+                    <ListItem>warto podać, które właściwości
                         będą animowane, ponieważ może to
                         pozytywnie wpłynąć na wydajność
-                    </li>
-                    <li className="article__listItem">kiedy to możliwe, warto animować
+                    </ListItem>
+                    <ListItem>kiedy to możliwe, warto animować
                         transform zamiast np. width, height,
                         margin itd.
-                    </li>
-                </ul>
+                    </ListItem>
+                </ListUnordered>
                 <div className="article__container--transitionProperty"></div>
-                <h4 className="article__subsubsubheader">transition-timing-function</h4>
+                <SmallestHeader>transition-timing-function</SmallestHeader>
                 <Blockquote>
                     .element &#123;<br/>
                     &nbsp;&nbsp;transition: background 1s linear;<br/>
                     &#125;<br/>
                 </Blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">określa jak liczone są
+                <ListUnordered>
+                    <ListItem>określa jak liczone są
                         wartości pośrednie w trakcie animacji
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">transition-delay</h4>
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>transition-delay</SmallestHeader>
                 <Blockquote>
                     .element &#123;<br/>
                     &nbsp;&nbsp;transition: background 2s 1s;<br/>
                     &#125;<br/>
                 </Blockquote>
-                <h4 className="article__subsubsubheader">właściwości
-                    oddzielnie</h4>
+                <SmallestHeader>właściwości
+                    oddzielnie</SmallestHeader>
                 <Blockquote>
                     .element &#123;<br/>
                     &nbsp;&nbsp;transition-property: background, transform;<br/>
@@ -1950,18 +1993,18 @@ export const articlesLink = [
                     &nbsp;&nbsp;transition-timing-function: linear;<br/>
                     &#125;<br/>
                 </Blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">ale rekomendowane jest
+                <ListUnordered>
+                    <ListItem>ale rekomendowane jest
                         korzystać ze skrótu transition
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">transition nie musi
-                    działać po najechaniu</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">ale na przykład przy
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>transition nie musi
+                    działać po najechaniu</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>ale na przykład przy
                         zmianie klasy.
-                    </li>
-                </ul>
+                    </ListItem>
+                </ListUnordered>
             </>
         )
     },
@@ -1985,7 +2028,7 @@ export const articlesLink = [
     //                 </fieldset>
     //                 <button>Dodaj zadanie</button>
     //             </form>
-    //             <ul className="js-tasks article__unorderedList"></ul>
+    //             <ul className="js-tasks article__unorderedList"></ListUnordered>
     //         </>
     //     )
     // },
@@ -1995,114 +2038,114 @@ export const articlesLink = [
         title: "JavaScript - wstęp do tablic",
         body: (
             <>
-                <h4 className="article__subsubsubheader">Przykład</h4>
-                <blockquote className="article__blockquote">
+                <SmallestHeader>Przykład</SmallestHeader>
+                <Blockquote>
                     <b>const <i>products</i></b> = ["jajka", "mleko", "chleb", "bułki", "czekolada"];<br/>
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">tablice <i>(ang. arrays)</i> przechowują listę elementów w jednej
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>tablice <i>(ang. arrays)</i> przechowują listę elementów w jednej
                         zmiennej / stałej
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">Jak sprawdzić, czy coś jest tablicą?</h4>
-                <blockquote className="article__blockquote">
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>Jak sprawdzić, czy coś jest tablicą?</SmallestHeader>
+                <Blockquote>
                     Array.isArray(products);<br/>
                     products <b>instanceof</b> Array;<br/>
-                    <ul className="article__unorderedList">
-                        <li className="article__listItem">typeof zwraca "object"</li>
-                    </ul>
-                </blockquote>
-                <h4 className="article__subsubsubheader">Elementy tablicy mogą mieć różne typy</h4>
-                <blockquote className="article__blockquote">
+                    <ListUnordered>
+                        <ListItem>typeof zwraca "object"</ListItem>
+                    </ListUnordered>
+                </Blockquote>
+                <SmallestHeader>Elementy tablicy mogą mieć różne typy</SmallestHeader>
+                <Blockquote>
                     <b>const</b> array = [5, "tekst", undefined, &#123;name: "Leon"&#125;, [3]];
-                </blockquote>
-                <h4 className="article__subsubsubheader">Dostęp do elementów tablicy</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <SmallestHeader>Dostęp do elementów tablicy</SmallestHeader>
+                <Blockquote>
                     <b>const</b> products = ["jajka", "mleko", "chleb", "bułki", "czekolada"];<br/>
                     <b>const</b> secondProduct = products[1];
                     products[2] = "ser";
-                </blockquote>
-                <h4 className="article__subsubsubheader">Długość tablicy</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <SmallestHeader>Długość tablicy</SmallestHeader>
+                <Blockquote>
                     <b>const</b> products = ["jajka", "mleko", "chleb", "bułki", "czekolada"];<br/>
                     <b>const</b> productsCount = products.length; // 5
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">tak samo jak w stringach</li>
-                </ul>
-                <h4 className="article__subsubsubheader">Konwertowanie tablicy na string</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>tak samo jak w stringach</ListItem>
+                </ListUnordered>
+                <SmallestHeader>Konwertowanie tablicy na string</SmallestHeader>
+                <Blockquote>
                     <b>const</b> products = ["jajka", "mleko", "chleb", "bułki", "czekolada"];<br/><br/>
                     <b>const</b> productsString = products.join(", "); //możemy wybrać separator<br/>
                     <b>const</b> productsString2 = products.toString(); // zawsze ","
-                </blockquote>
-                <h4 className="article__subsubsubheader">Konwertowanie tekstu na tablicę</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <SmallestHeader>Konwertowanie tekstu na tablicę</SmallestHeader>
+                <Blockquote>
                     <b>const</b> productsString = "jajka, mleko, chleb";<br/>
                     <b>const</b> products = productsString.split(", ");
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">to jest metoda obiektu <i>String,</i> nie <i>Array</i></li>
-                    <li className="article__listItem">nie pomijamy separatora!</li>
-                </ul>
-                <h4 className="article__subsubsubheader">Dodawanie elementów na koniec tablicy</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>to jest metoda obiektu <i>String,</i> nie <i>Array</i></ListItem>
+                    <ListItem>nie pomijamy separatora!</ListItem>
+                </ListUnordered>
+                <SmallestHeader>Dodawanie elementów na koniec tablicy</SmallestHeader>
+                <Blockquote>
                     <b>const</b> products = ["jajka", "mleko", "chleb", "bułki", "czekolada"];<br/><br/>
                     products.push("drożdże", "Lion");
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">dodaje na koniec tablicy</li>
-                    <li className="article__listItem">zwraca nową długość tablicy</li>
-                </ul>
-                <h4 className="article__subsubsubheader">Usuwanie ostatniego elementu tablicy</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>dodaje na koniec tablicy</ListItem>
+                    <ListItem>zwraca nową długość tablicy</ListItem>
+                </ListUnordered>
+                <SmallestHeader>Usuwanie ostatniego elementu tablicy</SmallestHeader>
+                <Blockquote>
                     <b>const</b> products = ["jajka", "mleko", "chleb", "bułki", "czekolada"];<br/><br/>
                     <b>const</b> removedItem = products.pop();
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">zwraca usunięty element</li>
-                </ul>
-                <h4 className="article__subsubsubheader">Dodawanie i usuwanie z początku tablicy</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>zwraca usunięty element</ListItem>
+                </ListUnordered>
+                <SmallestHeader>Dodawanie i usuwanie z początku tablicy</SmallestHeader>
+                <Blockquote>
                     <b>const</b> products = ["jajka", "mleko", "chleb", "bułki", "czekolada"];<br/><br/>
                     <b>const</b> newLength = products.unshift("pasta Colgate"); //dodaje na początek<br/>
                     <b>const</b> removedItem = products.shift(); //usuwa z początku<br/>
-                </blockquote>
-                <h4 className="article__subsubsubheader">Usuwanie dowolnego elementu</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <SmallestHeader>Usuwanie dowolnego elementu</SmallestHeader>
+                <Blockquote>
                     <b>const</b> products = ["jajka", "mleko", "chleb", "bułki", "czekolada"];<br/><br/>
                     products.splice(1, 1);<br/>
                     // usuwa drugi element<br/><br/>
                     products.splice(2, 2, "rajstopy Gatta", "spód do pizzy");<br/>
                     //usuwa 3. i 4. element, dodaje dwa nowe w ich miejsce
-                </blockquote>
-                <h4 className="article__subsubsubheader">forEach</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <SmallestHeader>forEach</SmallestHeader>
+                <Blockquote>
                     <b>const</b> products = ["jajka", "mleko", "chleb", "bułki", "czekolada"];<br/><br/>
                     products.forEach((product, index) => &#123;<br/>
                     &nbsp;&nbsp;console.log(`$&#123;index + 1&#125;.$&#123;product&#125;`);<br/>
                     &#125;);
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">iteruje po elementach tablicy</li>
-                </ul>
-                <h4 className="article__subsubsubheader">for...of</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>iteruje po elementach tablicy</ListItem>
+                </ListUnordered>
+                <SmallestHeader>for...of</SmallestHeader>
+                <Blockquote>
                     <b>const</b> products = ["jajka", "mleko", "chleb", "bułki", "czekolada"];<br/><br/>
                     <b>for</b> (<b>const</b> product <b>of</b> products) &#123;<br/>
                     &nbsp;&nbsp;console.log(product);<br/>
                     &#125;;
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">wygodne, jeśli nie potrzebujemy index-u</li>
-                </ul>
-                <h4 className="article__subsubsubheader">Przekazywanie tablic do funkcji oraz porównywanie działa tak
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>wygodne, jeśli nie potrzebujemy index-u</ListItem>
+                </ListUnordered>
+                <SmallestHeader>Przekazywanie tablic do funkcji oraz porównywanie działa tak
                     samo
-                    jak w przypadku obiektów</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">przekazywanie przez referencję</li>
-                    <li className="article__listItem">porównywanie dwóch tablic zawsze zwróci <b>false</b></li>
-                </ul>
+                    jak w przypadku obiektów</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>przekazywanie przez referencję</ListItem>
+                    <ListItem>porównywanie dwóch tablic zawsze zwróci <b>false</b></ListItem>
+                </ListUnordered>
             </>
         )
     },
@@ -2112,8 +2155,8 @@ export const articlesLink = [
         title: "JavaScript - wstęp do obiektów",
         body: (
             <>
-                <h4 className="article__subsubsubheader">Przykład</h4>
-                <blockquote className="article__blockquote">
+                <SmallestHeader>Przykład</SmallestHeader>
+                <Blockquote>
                     <b>const <i>person</i></b> = &#123;<br/>
                     &nbsp;name: "Jan",<br/>
                     &nbsp;&nbsp;surname: "Kowalski",<br/>
@@ -2122,29 +2165,29 @@ export const articlesLink = [
                     &nbsp;&nbsp;&nbsp;&nbsp;console.log(`Cześć! Nazywam się $&#123;<b>this</b>.name&#125; $&#123;
                     <b>this</b>.surname&#125; i
                     mam $&#123;<b>this</b>.age&#125; lat.`);<br/>
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">złożony typ, lepiej opisujący rzeczywistość,</li>
-                    <li className="article__listItem">składa się z pól/właściwości i funkcji/metod</li>
-                </ul>
-                <h4 className="article__subsubsubheader">Korzystanie z właściwości i metod obiektu <i>(dot
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>złożony typ, lepiej opisujący rzeczywistość,</ListItem>
+                    <ListItem>składa się z pól/właściwości i funkcji/metod</ListItem>
+                </ListUnordered>
+                <SmallestHeader>Korzystanie z właściwości i metod obiektu <i>(dot
                     notation)</i>
-                </h4>
-                <blockquote className="article__blockquote">
+                </SmallestHeader>
+                <Blockquote>
                     console.log(person.name);<br/>
                     console.log(person["age"]);<br/>
                     person.sayHello();<br/>
-                </blockquote>
-                <h4 className="article__subsubsubheader">this</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">słowo <i>this</i> odnosi się w naszym przypadku do obiektu,
+                </Blockquote>
+                <SmallestHeader>this</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>słowo <i>this</i> odnosi się w naszym przypadku do obiektu,
                         "wewnątrz
                         którego" wykonuje się kod
-                    </li>
-                    <li className="article__listItem">funkcje strzałkowe "nie mają swojego <i>this</i>"</li>
-                </ul>
-                <h4 className="article__subsubsubheader">Obiekt w obiekcie</h4>
-                <blockquote className="article__blockquote">
+                    </ListItem>
+                    <ListItem>funkcje strzałkowe "nie mają swojego <i>this</i>"</ListItem>
+                </ListUnordered>
+                <SmallestHeader>Obiekt w obiekcie</SmallestHeader>
+                <Blockquote>
                     <b>const <i>person</i></b> = &#123;<br/>
                     &nbsp;&nbsp;name: "Jan",<br/>
                     &nbsp;&nbsp;surname: "Kowalski",<br/>
@@ -2156,32 +2199,32 @@ export const articlesLink = [
 
                     console.log(person.parent.name);<br/>
                     console.log(person["parent"]["surname"]);<br/>
-                </blockquote>
-                <h4 className="article__subsubsubheader">Korzystaliśmy już wielokrotnie z wielu metod
-                    obiektów:</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">document.querySelector</li>
-                    <li className="article__listItem">Math.min</li>
-                    <li className="article__listItem">String.includes</li>
-                    <li className="article__listItem">itd.</li>
-                </ul>
-                <h4 className="article__subsubsubheader">Porównywanie obiektów</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">porównanie dwóch obiektów zawsze zwróci <b>false</b></li>
-                    <li className="article__listItem">tylko porównanie tego samego obiektu ze sobą
-                        zwróci <b>true</b></li>
-                </ul>
-                <h4 className="article__subsubsubheader">Obiekty do funkcji przekazujemy przez referencję</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">funkcja może modyfikować właściwości i metody obiektu
+                </Blockquote>
+                <SmallestHeader>Korzystaliśmy już wielokrotnie z wielu metod
+                    obiektów:</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>document.querySelector</ListItem>
+                    <ListItem>Math.min</ListItem>
+                    <ListItem>String.includes</ListItem>
+                    <ListItem>itd.</ListItem>
+                </ListUnordered>
+                <SmallestHeader>Porównywanie obiektów</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>porównanie dwóch obiektów zawsze zwróci <b>false</b></ListItem>
+                    <ListItem>tylko porównanie tego samego obiektu ze sobą
+                        zwróci <b>true</b></ListItem>
+                </ListUnordered>
+                <SmallestHeader>Obiekty do funkcji przekazujemy przez referencję</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>funkcja może modyfikować właściwości i metody obiektu
                         przekazanego w
                         argumencie
-                    </li>
-                    <li className="article__listItem">obiekt nie jest kopiowany jak typy prymitywne (string,
+                    </ListItem>
+                    <ListItem>obiekt nie jest kopiowany jak typy prymitywne (string,
                         number, boolean
                         itd.)
-                    </li>
-                </ul>
+                    </ListItem>
+                </ListUnordered>
             </>
         )
     },
@@ -2224,77 +2267,77 @@ export const articlesLink = [
         title: "JavaScript - więcej o funkcjach i zmiennych",
         body: (
             <>
-                <h4 className="article__subsubsubheader">typeof "function"</h4>
+                <SmallestHeader>typeof "function"</SmallestHeader>
                 <p>Najprostszy sposób, aby sprawdzić, czy coś jest funkcją.</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     <b>const <i>myFunction</i></b> = () => &#123;<br/>
                     &nbsp;&nbsp;console.log("something");<br/>
                     &#125;<br/><br/>
 
                     console.log(typeof myFunction === "function");
-                </blockquote>
+                </Blockquote>
                 <p>Jeśli <i>myFunction</i> jest funkcją, to konsola zwróci mi:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     true
-                </blockquote>
-                <h4 className="article__subsubsubheader">Jeśli tworzymy funkcję za pomocą słowa function lub tworzymy
-                    zmienną za pomocą słowa var</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">występuje tzw. <i>hoisting</i>
-                        <ul className="article__unorderedList">
-                            <li className="article__listItem">funkcja lub zmienna jest dostępna w całej funkcji
+                </Blockquote>
+                <SmallestHeader>Jeśli tworzymy funkcję za pomocą słowa function lub tworzymy
+                    zmienną za pomocą słowa var</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>występuje tzw. <i>hoisting</i>
+                        <ListUnordered>
+                            <ListItem>funkcja lub zmienna jest dostępna w całej funkcji
                                 niezależnie
                                 od tego, w której linii została zadeklarowana
-                            </li>
-                        </ul>
-                    </li>
-                    <li className="article__listItem">
+                            </ListItem>
+                        </ListUnordered>
+                    </ListItem>
+                    <ListItem>
                         jeśli deklarujemy poza jakąś funkcją, tworzymy zmienną lub funkcję globalną
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         taka funkcja lub zmienna globalna będzie dostępna jako właściwość obiektu <i>window</i>
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">Zmienne let lub stała const poza blokiem lub funkcją staną się
-                    globalne.</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>Zmienne let lub stała const poza blokiem lub funkcją staną się
+                    globalne.</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         ale nie będzie właściwością obiektu window
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">Ponowna deklaracja var nie jest błędem</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>Ponowna deklaracja var nie jest błędem</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         <b>let</b> i <b>const</b> - tak
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">var i let mogę zadeklarować, a później przypisać wartość</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>var i let mogę zadeklarować, a później przypisać wartość</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         nie mogę tak zrobić z <b>const</b>
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">Można zadeklarować kilka zmiennych po przecinku</h4>
-                <blockquote className="article__blockquote">
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>Można zadeklarować kilka zmiennych po przecinku</SmallestHeader>
+                <Blockquote>
                     <b> let <i>result, amount</i></b> = 10;<br/><br/>
                     <b> const</b><br/>
                     &nbsp;&nbsp;number = 5,<br/>
                     &nbsp;&nbsp;string = "tekst";<br/><br/>
                     <b>var <i>myVariable</i></b>;
-                </blockquote>
-                <h4 className="article__subsubsubheader">Funkcja może posiadać parametry domyślne</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <SmallestHeader>Funkcja może posiadać parametry domyślne</SmallestHeader>
+                <Blockquote>
                     <b>const <i>power</i></b> = (a, b = 1) => a**b;
-                </blockquote>
-                <h4 className="article__subsubsubheader">Funkcja może wywoływać samą siebie</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <SmallestHeader>Funkcja może wywoływać samą siebie</SmallestHeader>
+                <Blockquote>
                     <b>const <i>factorial</i></b> = (number) => &#123;<br/>
                     &nbsp;&nbsp;if (!number) &#123;<br/>
                     &nbsp;&nbsp;&nbsp;&nbsp;return 1;<br/>
                     &nbsp;&nbsp;&#125;<br/><br/>
                     return factorial(number - 1) * number;<br/>
                     &#125;
-                </blockquote>
+                </Blockquote>
                 <p>Nazywa się to <i>rekurencją (ang. recursion)</i></p>
             </>
         )
@@ -2305,48 +2348,48 @@ export const articlesLink = [
         title: "CSS - Grid c.d.",
         body: (
             <>
-                <h4 className="article__subsubsubheader">Skróty</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">Zamiast rozpisywania <i>grid-row-start, grid-row-end,
+                <SmallestHeader>Skróty</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>Zamiast rozpisywania <i>grid-row-start, grid-row-end,
                         grid-column-start i grid-column-end</i> możemy użyć skrótu
-                        <ul className="article__unorderedList">
-                            <li className="article__listItem"><i>grid-row:</i> (grid-row start) / (grid-row-end)</li>
-                            <li className="article__listItem"><i>grid-column:</i> (grid-column-start) /
+                        <ListUnordered>
+                            <ListItem><i>grid-row:</i> (grid-row start) / (grid-row-end)</ListItem>
+                            <ListItem><i>grid-column:</i> (grid-column-start) /
                                 (grid-column-end)
-                            </li>
-                        </ul>
-                    </li>
-                    <blockquote className="article__blockquote">
+                            </ListItem>
+                        </ListUnordered>
+                    </ListItem>
+                    <Blockquote>
                         .container__element &#123;<br/>
                         &nbsp;&nbsp;grid-row: 2 / span 2;<br/>
                         &nbsp;&nbsp;grid-column: 3 / -2<br/>
                         &#125;<br/>
-                    </blockquote>
-                </ul>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">Natomiast możemy użyć skrótu
+                    </Blockquote>
+                </ListUnordered>
+                <ListUnordered>
+                    <ListItem>Natomiast możemy użyć skrótu
                         <i>grid-area zamiast</i>
-                        <ul className="article__unorderedList">
-                            <li className="article__listItem">
+                        <ListUnordered>
+                            <ListItem>
                                 grid-row-start,
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 grid-row-end,
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 grid-column-start
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 i grid-column-end
-                            </li>
-                        </ul>
-                    </li>
-                    <blockquote className="article__blockquote">
+                            </ListItem>
+                        </ListUnordered>
+                    </ListItem>
+                    <Blockquote>
                         .container__element &#123;<br/>
                         &nbsp;&nbsp;grid-area: 2 / 3 / span 2 / - 2;<br/>
                         &#125;<br/>
-                    </blockquote>
-                </ul>
+                    </Blockquote>
+                </ListUnordered>
             </>
         )
     },
@@ -2357,14 +2400,14 @@ export const articlesLink = [
         body: (
             <>
                 <p><i>Grid</i> jest połączeniem tabeli i <i>FLex-a</i>.</p>
-                <h4 className="article__subsubsubheader">Podstawowy przykład</h4>
+                <SmallestHeader>Podstawowy przykład</SmallestHeader>
                 <p>Trzy kolumny - szerokie na 100px, 200px i 300px.</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     .container &#123;<br/>
                     &nbsp;&nbsp;display: grid;<br/>
                     &nbsp;&nbsp;grid-template-columns: 100px 200px 300px<br/>
                     &#125;<br/>
-                </blockquote>
+                </Blockquote>
                 <div className="container--Grid">
                     <div className="container__item--Grid">1</div>
                     <div className="container__item--Grid">2</div>
@@ -2375,30 +2418,30 @@ export const articlesLink = [
                     <div className="container__item--Grid">7</div>
                     <div className="container__item--Grid">8</div>
                 </div>
-                <h4 className="article__subsubsubheader">Jednostka fr</h4>
-                <blockquote className="article__blockquote">
+                <SmallestHeader>Jednostka fr</SmallestHeader>
+                <Blockquote>
                     .container &#123;<br/>
                     &nbsp;&nbsp;display: grid;<br/>
                     &nbsp;&nbsp;grid-template-columns: 100px 1fr 2fr<br/>
                     &#125;<br/>
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">ułamek (fraction) dostępnej przestrzeni
-                    </li>
-                    <li>3 kolumny:
-                        <ul className="article__unorderedList">
-                            <li className="article__listItem">
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>ułamek (fraction) dostępnej przestrzeni
+                    </ListItem>
+                    <ListItem>3 kolumny:
+                        <ListUnordered>
+                            <ListItem>
                                 100px,
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 1/3 dostępnej przestrzeni,
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 2/3 dostępnej przestrzeni,
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                            </ListItem>
+                        </ListUnordered>
+                    </ListItem>
+                </ListUnordered>
                 <div className="container--Grid2">
                     <div className="container__item--Grid2">1</div>
                     <div className="container__item--Grid2">2</div>
@@ -2409,21 +2452,21 @@ export const articlesLink = [
                     <div className="container__item--Grid2">7</div>
                     <div className="container__item--Grid2">8</div>
                 </div>
-                <h4 className="article__subsubsubheader">Repeat</h4>
-                <blockquote className="article__blockquote">
+                <SmallestHeader>Repeat</SmallestHeader>
+                <Blockquote>
                     .container &#123;<br/>
                     &nbsp;&nbsp;display: grid;<br/>
                     &nbsp;&nbsp;grid-template-columns: repeat(3, 1fr);<br/>
                     &#125;<br/>
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>
                         wygodny zapis
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         3 kolumny równiej szerokości
-                    </li>
-                </ul>
+                    </ListItem>
+                </ListUnordered>
                 <div className="container--Grid3">
                     <div className="container__item--Grid3">1</div>
                     <div className="container__item--Grid3">2</div>
@@ -2434,35 +2477,35 @@ export const articlesLink = [
                     <div className="container__item--Grid3">7</div>
                     <div className="container__item--Grid3">8</div>
                 </div>
-                <h4 className="article__subsubsubheader">Bardziej złożony przykład repeat</h4>
-                <blockquote className="article__blockquote">
+                <SmallestHeader>Bardziej złożony przykład repeat</SmallestHeader>
+                <Blockquote>
                     .container &#123;<br/>
                     &nbsp;&nbsp;display: grid;<br/>
                     &nbsp;&nbsp;grid-template-columns: 100px repeat(2, 1fr, 2fr);<br/>
                     &#125;<br/>
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>
                         5 kolumn
-                        <ul className="article__unorderedList">
-                            <li className="article__listItem">
+                        <ListUnordered>
+                            <ListItem>
                                 100px,
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 1/6 dostępnej przestrzeni
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 1/3 dostępnej przestrzeni
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 1/6 dostępnej przestrzeni
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 1/3 dostępnej przestrzeni
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                            </ListItem>
+                        </ListUnordered>
+                    </ListItem>
+                </ListUnordered>
                 <div className="container--Grid4">
                     <div className="container__item--Grid4">1</div>
                     <div className="container__item--Grid4">2</div>
@@ -2473,21 +2516,21 @@ export const articlesLink = [
                     <div className="container__item--Grid4">7</div>
                     <div className="container__item--Grid4">8</div>
                 </div>
-                <h4 className="article__subsubsubheader">Auto-fill</h4>
-                <blockquote className="article__blockquote">
+                <SmallestHeader>Auto-fill</SmallestHeader>
+                <Blockquote>
                     .container &#123;<br/>
                     &nbsp;&nbsp;display: grid;<br/>
                     &nbsp;&nbsp;grid-template-columns: repeat(auto-fill, 200px);<br/>
                     &#125;<br/>
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>
                         kolumny szerokie na 200px,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         tyle, ile się zmieści
-                    </li>
-                </ul>
+                    </ListItem>
+                </ListUnordered>
                 <div className="container--Grid5">
                     <div className="container__item--Grid4">1</div>
                     <div className="container__item--Grid4">2</div>
@@ -2498,18 +2541,18 @@ export const articlesLink = [
                     <div className="container__item--Grid4">7</div>
                     <div className="container__item--Grid4">8</div>
                 </div>
-                <h4 className="article__subsubsubheader">Minmax</h4>
-                <blockquote className="article__blockquote">
+                <SmallestHeader>Minmax</SmallestHeader>
+                <Blockquote>
                     .container &#123;<br/>
                     &nbsp;&nbsp;display: grid;<br/>
                     &nbsp;&nbsp;grid-template-columns: repeat(auto-fill, minmax(200px, 1fr);<br/>
                     &#125;<br/>
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>
                         bardziej elastyczne podejście do szerokości kolumn
-                    </li>
-                </ul>
+                    </ListItem>
+                </ListUnordered>
                 <div className="container--Grid6">
                     <div className="container__item--Grid4">1</div>
                     <div className="container__item--Grid4">2</div>
@@ -2520,29 +2563,29 @@ export const articlesLink = [
                     <div className="container__item--Grid4">7</div>
                     <div className="container__item--Grid4">8</div>
                 </div>
-                <h4 className="article__subsubsubheader">gap</h4>
-                <blockquote className="article__blockquote">
+                <SmallestHeader>gap</SmallestHeader>
+                <Blockquote>
                     .container &#123;<br/>
                     &nbsp;&nbsp;display: grid;<br/>
                     &nbsp;&nbsp;grid-template-columns: repeat(3, 1fr);<br/>
                     &nbsp;&nbsp;grid-gap: 20px 30px;<br/>
                     &#125;<br/>
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>
                         odstęp między wierszami i kolumnami
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         jedna wartość — równe odstępy
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         właściwość <i>gap</i> nie działa w Safari.
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         właściwość <i>gap</i> nie istnieje
                         we <i>Flex-ie</i> poza <i>Mozillą</i>.
-                    </li>
-                </ul>
+                    </ListItem>
+                </ListUnordered>
                 <div className="container--Grid7">
                     <div className="container__item--Grid7">1</div>
                     <div className="container__item--Grid7">2</div>
@@ -2553,17 +2596,17 @@ export const articlesLink = [
                     <div className="container__item--Grid7">7</div>
                     <div className="container__item--Grid7">8</div>
                 </div>
-                <h4 className="article__subsubsubheader">gap - row/column</h4>
+                <SmallestHeader>gap - row/column</SmallestHeader>
                 <p>Możemy też ustawić <i>gap</i> <em>tylko</em> między wierszami
                     lub <em>tylko</em> między kolumnami.
                 </p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     .container &#123;<br/>
                     &nbsp;&nbsp;display: grid;<br/>
                     &nbsp;&nbsp;grid-template-columns: repeat(3, 1fr);<br/>
                     &nbsp;&nbsp;grid-row-gap: 20px;<br/>
                     &#125;<br/>
-                </blockquote>
+                </Blockquote>
                 <div className="container--Grid8">
                     <div className="container__item--Grid7">1</div>
                     <div className="container__item--Grid7">2</div>
@@ -2575,13 +2618,13 @@ export const articlesLink = [
                     <div className="container__item--Grid7">8</div>
                 </div>
                 <p>lub:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     .container &#123;<br/>
                     &nbsp;&nbsp;display: grid;<br/>
                     &nbsp;&nbsp;grid-template-columns: repeat(3, 1fr);<br/>
                     &nbsp;&nbsp;grid-column-gap: 20px;
                     &#125;<br/>
-                </blockquote>
+                </Blockquote>
                 <div className="container--Grid9">
                     <div className="container__item--Grid7">1</div>
                     <div className="container__item--Grid7">2</div>
@@ -2595,21 +2638,21 @@ export const articlesLink = [
                 <p>Podsumowując, nie używamy <i>gap: 20px</i> tylko stosujemy <i>grid-gap:
                     20px</i>, ponieważ pierwsze
                     rozwiązanie nie zadziała nam w przeglądarce <i>Safari</i></p>
-                <h4 className="article__subsubsubheader">grid-template-rows</h4>
-                <blockquote className="article__blockquote">
+                <SmallestHeader>grid-template-rows</SmallestHeader>
+                <Blockquote>
                     .container &#123;<br/>
                     &nbsp;&nbsp;display: grid;<br/>
                     &nbsp;&nbsp;grid-template-rows: repeat(3, 100px 200px);<br/>
                     &#125;<br/>
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>
                         definiujemy wiersze zamiast kolumn,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         możemy definiować i wiersze i kolumny
-                    </li>
-                </ul>
+                    </ListItem>
+                </ListUnordered>
                 <div className="container--Grid10">
                     <div className="container__item--Grid7">1</div>
                     <div className="container__item--Grid7">2</div>
@@ -2620,30 +2663,30 @@ export const articlesLink = [
                     <div className="container__item--Grid7">7</div>
                     <div className="container__item--Grid7">8</div>
                 </div>
-                <h4 className="article__subsubsubheader">grid-auto-rows</h4>
-                <blockquote className="article__blockquote">
+                <SmallestHeader>grid-auto-rows</SmallestHeader>
+                <Blockquote>
                     .container &#123;<br/>
                     &nbsp;&nbsp;display: grid;<br/>
                     &nbsp;&nbsp;grid-template-columns: repeat(2, 1fr);<br/>
                     &nbsp;&nbsp;grid-template-rows: 50px;<br/>
                     &nbsp;&nbsp;grid-auto-rows: 100px 200px;<br/>
                     &#125;<br/>
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>
                         wysokość wierszy dodanych automatycznie
-                        <ul className="article__unorderedList">
-                            <li className="article__listItem">
+                        <ListUnordered>
+                            <ListItem>
                                 czyli tzw. <i>implicit grid</i> (niejawny,
                                 domniemany)
-                            </li>
-                        </ul>
-                    </li>
-                    <li className="article__listItem">
+                            </ListItem>
+                        </ListUnordered>
+                    </ListItem>
+                    <ListItem>
                         domyślnie takie wiersze mają wysokość odpowiadającą
                         treści najwyższego elementu w wierszu
-                    </li>
-                </ul>
+                    </ListItem>
+                </ListUnordered>
                 <div className="container--Grid11">
                     <div className="container__item--Grid7">1</div>
                     <div className="container__item--Grid7">2</div>
@@ -2654,9 +2697,9 @@ export const articlesLink = [
                     <div className="container__item--Grid7">7</div>
                     <div className="container__item--Grid7">8</div>
                 </div>
-                <h4 className="article__subsubsubheader">Zagnieżdżanie
-                    grida</h4>
-                <blockquote className="article__blockquote">
+                <SmallestHeader>Zagnieżdżanie
+                    grida</SmallestHeader>
+                <Blockquote>
                     .container &#123;<br/>
                     &nbsp;&nbsp;display: grid;<br/>
                     &nbsp;&nbsp;grid-template-columns: repeat(2, 1fr);<br/>
@@ -2667,7 +2710,7 @@ export const articlesLink = [
                     &nbsp;&nbsp;grid-template-rows: 100px 200px<br/>
                     &nbsp;&nbsp;grid-gap: 20px;<br/>
                     &#125;<br/>
-                </blockquote>
+                </Blockquote>
                 <div className="container--Grid12">
                     <div className="container__item--Grid12">1</div>
                     <div className="container__item--Grid12">2</div>
@@ -2681,34 +2724,34 @@ export const articlesLink = [
                     <div className="container__item--Grid12">7</div>
                     <div className="container__item--Grid12">8</div>
                 </div>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                <ListUnordered>
+                    <ListItem>
                         dwa zupełnie odrębne gridy ze swoimi
-                        właściwościami - <i>siatka w siatce</i></li>
-                </ul>
-                <h4 className="article__subsubsubheader">Wyrównanie</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                        właściwościami - <i>siatka w siatce</i></ListItem>
+                </ListUnordered>
+                <SmallestHeader>Wyrównanie</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         <b>align-items, justify-items</b>
-                        <ul className="article__unorderedList">
-                            <li className="article__listItem">
+                        <ListUnordered>
+                            <ListItem>
                                 wyrównują w wierszach lub w kolumnach
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 wartości: start | end | center
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 domyślnie elementy się rozciągają
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 <b>align-self i
                                     justify-self</b> pozwalają na inne
                                 wyrównanie dla poszczególnych
                                 elementów
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                            </ListItem>
+                        </ListUnordered>
+                    </ListItem>
+                </ListUnordered>
                 <div className="container--Grid13">
                     <div className="container__item--Grid13">1</div>
                     <div className="container__item--Grid13">2</div>
@@ -2721,31 +2764,31 @@ export const articlesLink = [
                         className="container__item--Grid13 container__item--Grid13last">8
                     </div>
                 </div>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                <ListUnordered>
+                    <ListItem>
                         <b>align-content, justify-content</b>
-                        <ul className="article__unorderedList">
-                            <li className="article__listItem">
+                        <ListUnordered>
+                            <ListItem>
                                 określają rozmieszczenie przestrzeni
                                 między wierszami lub kolumnami
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 wartości: start | end | center | stretch
                                 | space-around | space-between |
                                 space-evenly
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                            </ListItem>
+                        </ListUnordered>
+                    </ListItem>
+                </ListUnordered>
                 <div className="container--Grid14">
                     <div className="container__item--Grid14">1</div>
                     <div className="container__item--Grid14">2</div>
                     <div className="container__item--Grid14">3</div>
                     <div className="container__item--Grid14">4</div>
                 </div>
-                <h4 className="article__subsubsubheader">Zmiana
-                    położenia elementu w <i>Grid-zie</i></h4>
-                <blockquote className="article__blockquote">
+                <SmallestHeader>Zmiana
+                    położenia elementu w <i>Grid-zie</i></SmallestHeader>
+                <Blockquote>
                     .container &#123;<br/>
                     &nbsp;&nbsp;display: grid;<br/>
                     &nbsp;&nbsp;grid-template-columns: repeat(5,
@@ -2759,7 +2802,7 @@ export const articlesLink = [
                     &nbsp;&nbsp;grid-row-start: 1<br/>
                     &nbsp;&nbsp;grid-row-end: 3;<br/>
                     &#125;
-                </blockquote>
+                </Blockquote>
                 <div className="container--Grid15">
                     <div className="container__item--Grid15">1</div>
                     <div className="container__item--Grid15">2</div>
@@ -2773,14 +2816,14 @@ export const articlesLink = [
                     </div>
                 </div>
                 <p>Jeszcze inny przykład z użyciem <i>span</i>.</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     .container__elemenent &#123;<br/>
                     &nbsp;&nbsp;grid-column-start: 3;<br/>
                     &nbsp;&nbsp;grid-column-end: span 3;<br/>
                     &nbsp;&nbsp;grid-row-start: 1<br/>
                     &nbsp;&nbsp;grid-row-end: span 3;<br/>
                     &#125;
-                </blockquote>
+                </Blockquote>
                 <div className="container--Grid15">
                     <div className="container__item--Grid15">1
                     </div>
@@ -2812,7 +2855,7 @@ export const articlesLink = [
                 <p>Media queries to zapytania, które pozwalają na zmianę stylów CSS w zależności od rozmiaru ekranu
                     urządzenia, na którym wyświetlana jest strona. Najczęściej stosuje się do dostosowania wyglądu
                     strony na smartfonach i tabletach.</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     .image &#123;<br/>
                     &nbsp;&nbsp;width: 50%;<br/>
                     &#125;<br/><br/>
@@ -2821,86 +2864,86 @@ export const articlesLink = [
                     &nbsp;&nbsp;&nbsp;&nbsp;width: 100%;<br/>
                     &nbsp;&nbsp;&#125;<br/>
                     &#125;<br/>
-                </blockquote>
+                </Blockquote>
                 <p>Każde z urządzeń <i>zgłasza</i> szerokość ekranu w pixelach.</p>
-                <h4 className="article__subsubsubheader">Mobile-first</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                <SmallestHeader>Mobile-first</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         alternatywna koncepcja projektowania stron internetowych,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         pole na projektowaniu najpierw pod wąskie ekrany, a potem dostosowywaniu pod coraz
                         szersze,
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">Orientation</h4>
-                <blockquote className="article__blockquote">
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>Orientation</SmallestHeader>
+                <Blockquote>
                     <b>@media (orientation: landscape) &#123;</b> /* lub portrait */<br/>
                     &nbsp;&nbsp;.image &#125;<br/>
                     &nbsp;&nbsp;&nbsp;&nbsp;width: 50%;<br/>
                     &nbsp;&nbsp;&#123;<br/>
                     &#125;<br/>
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>
                         inne style w zależności od orientacji urządzenia,
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">Inne "media features"</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>Inne "media features"</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         jest bardzo dużo różnych features,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         najczęściej używamy <b>width</b> i <b>height</b>,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         inne dotyczą np. tego, czy użytkownik używa myszy, jaka jest gęstość pikseli, ile jest
                         kolorów,
                         jakie są proporcje viewport itd.
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">Breakpointy</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>Breakpointy</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         zwykle wybieramy kilka <i>punktów granicznych</i>
-                        <ul className="article__unorderedList">
-                            <li className="article__listItem">
+                        <ListUnordered>
+                            <ListItem>
                                 np.: 768px, 992px, 1200px
-                            </li>
-                        </ul>
-                    </li>
-                    <li className="article__listItem">
+                            </ListItem>
+                        </ListUnordered>
+                    </ListItem>
+                    <ListItem>
                         dzięki temu myślimy o projekcie strony w kilku przedziałach szerokości,
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">Inne style do druku i dla ekranów</h4>
-                <blockquote className="article__blockquote">
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>Inne style do druku i dla ekranów</SmallestHeader>
+                <Blockquote>
                     <b>@media print &#123;<br/></b>
                     & nbsp;&nbsp;.whatever &#123;<br/>
                     &nbsp;&nbsp;&nbsp;&nbsp;...<br/>
                     &nbsp;&nbsp;&#125;<br/>
                     &#125;<br/>
-                </blockquote>
-                <h4 className="article__subsubsubheader">OR</h4>
+                </Blockquote>
+                <SmallestHeader>OR</SmallestHeader>
                 <p>Możemy dodać kilka <b>media queries</b> i w tym celu używamy <b>OR</b></p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     <b>@media</b> (max-width: 767px), (min-width: 1200px) &#123;<br/>
                     &nbsp;&nbsp;.image &#123;<br/>
                     &nbsp;&nbsp;&nbsp;&nbsp;width: 50%;<br/>
                     &nbsp;&nbsp;&#125;<br/>
                     &#125;<br/>
-                </blockquote>
-                <h4 className="article__subsubsubheader">AND</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <SmallestHeader>AND</SmallestHeader>
+                <Blockquote>
                     <b>@media</b> (min-width: 768px) <b>and</b> (max-width: 1199px) &#123;<br/>
                     &nbsp;&nbsp;.image &#123;<br/>
                     &nbsp;&nbsp;&nbsp;&nbsp;width: 50%;<br/>
                     &nbsp;&nbsp;&#125;<br/>
                     &#125;<br/>
-                </blockquote>
-                <h4 className="article__subsubsubheader">Zagnieżdżanie</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <SmallestHeader>Zagnieżdżanie</SmallestHeader>
+                <Blockquote>
                     <b>@media</b> (min-width: 768px) &#123;<br/>
                     &nbsp;&nbsp;<b>@media</b> (max-width: 1199px) &#123;<br/>
                     &nbsp;&nbsp;&nbsp;&nbsp;.image &#123;<br/>
@@ -2908,15 +2951,15 @@ export const articlesLink = [
                     &nbsp;&nbsp;&nbsp;&nbsp;&#125;<br/>
                     &nbsp;&nbsp;&#125;<br/>
                     &#125;<br/>
-                </blockquote>
-                <h4 className="article__subsubsubheader">Nie zawsze potrzebujesz media query!</h4>
+                </Blockquote>
+                <SmallestHeader>Nie zawsze potrzebujesz media query!</SmallestHeader>
                 <p>Zamiast np. sztywno ustawionej <i>width</i> użyjemy <i>max-width</i> i już
                     otrzymamy jakąś
                     responsywność. To samo się tyczy <i>flex-a</i></p>
-                <h4 className="article__subsubsubheader">Pamiętaj o viewport meta tag!</h4>
-                <blockquote className="article__blockquote">
+                <SmallestHeader>Pamiętaj o viewport meta tag!</SmallestHeader>
+                <Blockquote>
                     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
-                </blockquote>
+                </Blockquote>
                 <p>Jeżeli <i>media queries</i> nie działają, to zwykle może to być związane właśnie
                     z niedodaniem tego
                     powyższego znacznika.</p>
@@ -2932,7 +2975,7 @@ export const articlesLink = [
             <>
                 <p>Dziś ćwiczę <i>JavaScript</i> tworząc prosty kalkulator walutowy.</p>
                 <div className="calculator__titleContainer--currency">
-                    <h4 className="calculator__title">Kalkulator walut</h4>
+                    <SmallestHeader className="calculator__title">Kalkulator walut</SmallestHeader>
                 </div>
                 <form className="js-form2">
                     <fieldset className="calculator__fieldset">
@@ -2972,127 +3015,127 @@ export const articlesLink = [
             <>
                 <p>Przeżyjmy to jeszcze raz! Czym jest funkcja?</p>
                 <p>Funkcja to zestaw instrukcji, które ma wykonać dany program.</p>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                <ListUnordered>
+                    <ListItem>
                         może mieć nazwę (mamy też funkcje anonimowe),
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         może przyjmować parametry (argumenty),
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         może zwracać wartość.
-                    </li>
-                </ul>
+                    </ListItem>
+                </ListUnordered>
                 <p>Pora na praktykę.</p>
                 <p>Stwórzmy funkcję, która będzie zwracać liczbę pomnożoną przez 2:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     function double(number) &#123;<br/>
                     &nbsp;&nbsp;return number * 2;<br/>
                     &#125;<br/>
-                </blockquote>
+                </Blockquote>
                 <p>Na razie nic się nie dzieje, ponieważ funkcja została jedynie zadeklarowana. Aby wywołać funkcję,
                     możemy np. użyć <i>console.log</i>:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     function double(number) &#123;<br/>
                     &nbsp;&nbsp;return number * 2;<br/>
                     &#125;<br/><br/>
                     <b>console.log(double(10));<br/></b>
-                </blockquote>
+                </Blockquote>
                 <p>Na Konsoli wypisze mi się:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     20
-                </blockquote>
-                <h4 className="article__subsubsubheader">Składnia</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <SmallestHeader>Składnia</SmallestHeader>
+                <Blockquote>
                     <b>function <i>nazwa</i></b> (parametr1, parametr2) &#123;<br/>
                     &nbsp;&nbsp;// instrukcje<br/>
                     &nbsp;&nbsp;<b>return</b> wartość;<br/>
                     &#125;
-                </blockquote>
+                </Blockquote>
                 <p>W przypadku parametrów typu <i>number, string, undefined, null i boolean</i> wartość
                     zostanie
                     skopiowana do funkcji,</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     <b>function <i>double2</i></b>(number) &#123;<br/>
                     &nbsp;&nbsp;return number * 2;<br/>
                     &#125;<br/><br/>
                     let myNumber = 5;<br/><br/>
                     console.log(double2(myNumber));<br/>
-                </blockquote>
+                </Blockquote>
                 <p>Na konsoli wypisze mi się teraz:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     10
-                </blockquote>
-                <h4 className="article__subsubsubheader">Wywołanie funkcji</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <SmallestHeader>Wywołanie funkcji</SmallestHeader>
+                <Blockquote>
                     let doubled = double(5);
-                </blockquote>
-                <h4 className="article__subsubsubheader">Funkcje strzałkowe - <b>arrow functions</b>
-                </h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <SmallestHeader>Funkcje strzałkowe - <b>arrow functions</b>
+                </SmallestHeader>
+                <Blockquote>
                     let double = number => number * 2;
-                </blockquote>
+                </Blockquote>
                 <p>Funkcja strzałkowa daje nam prostszy, krótszy zapis. Ten zapis: </p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     <b>function <i>double2</i></b>(number) &#123;<br/>
                     &nbsp;&nbsp;return number * 2;<br/>
                     &#125;<br/><br/>
                     let myNumber = 5;<br/><br/>
                     console.log(double2(myNumber));<br/>
-                </blockquote>
+                </Blockquote>
                 <p>Można zamienić na taki zapis:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     <b>let <i>double2</i></b> = (number) => &#123;<br/>
                     &nbsp;&nbsp;return number * 2;<br/>
                     &#125;<br/><br/>
                     let myNumber = 5;<br/><br/>
                     console.log(double2(myNumber));<br/>
-                </blockquote>
+                </Blockquote>
                 <p>Od tego momentu ma znaczenie, czy funkcja, którą chcemy wywołać jest
                     zadeklarowana przed jej
                     wywołaniem. <i>Hoisting (windowanie)</i> tutaj nie zadziała.</p>
                 <p>Możemy jeszcze bardziej ten zapis skrócić:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     <b>let <i>double2</i></b> = number => &#123;<br/>
                     &nbsp;&nbsp;return number * 2;<br/>
                     &#125;<br/><br/>
                     let myNumber = 5;<br/><br/>
                     console.log(double2(myNumber));<br/>
-                </blockquote>
+                </Blockquote>
                 <p>A potem <em>jeszcze bardziej</em> skrócić:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     <b>let <i>double2</i></b> = number => &#123;<br/>
                     &nbsp;&nbsp; number * 2;<br/>
                     &#125;<br/><br/>
                     let myNumber = 5;<br/><br/>
                     console.log(double2(myNumber));<br/>
-                </blockquote>
+                </Blockquote>
                 <p>I <em>jeszcze bardziej</em> skrócić:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     <b>let <i>double2</i></b> = number => number * 2;
                     <br/><br/>
                     let myNumber = 5;<br/><br/>
                     console.log(double2(myNumber));<br/>
-                </blockquote>
+                </Blockquote>
                 <p>W tym przypadku nie musimy używać <i>return</i>, ponieważ funkcja
                     zwraca wartość.</p>
-                <h4 className="article__subsubsubheader">Zasięg zmiennych w funkcji</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                <SmallestHeader>Zasięg zmiennych w funkcji</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         wewnątrz funkcji mamy dostęp do zmiennych zadeklarowanych poza
                         funkcją,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         poza funkcją nie mamy dostępu do zmiennych zadeklarowanych
                         wewnątrz funkcji.
-                    </li>
-                </ul>
+                    </ListItem>
+                </ListUnordered>
                 <p>Brzmi to bardzo skomplikowanie, jednak postaram się przećwiczyć to
                     jeszcze raz, aby mieć 100% jasność
                     o co chodzi.</p>
                 <p>Jeżeli wyżej została zadeklarowana zmienna <b>myNumber</b> to ja mogę
                     jej sobie tutaj użyć.</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     <b>let <i>double2</i></b> = number => &#123;<br/>
                     <b>&nbsp;&nbsp; console.log(`myNumber wynosi $&#123;myNumber&#125;`)</b><br/>
                     &#125;<br/>
@@ -3100,14 +3143,14 @@ export const articlesLink = [
                     &#125;<br/><br/>
                     <b>let myNumber = 5;<br/><br/></b>
                     console.log(double2(myNumber));<br/>
-                </blockquote>
+                </Blockquote>
                 <p> Konsola pokaże mi dzięki temu:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     myNumber wynosi 5
-                </blockquote>
+                </Blockquote>
                 <p>Ale gdybyśmy wewnątrz tej funkcji zadeklarować inną zmienną, to
                     nie będzie jej widać na zewnątrz.</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     function double2(number) &#123;<br/>
                     &nbsp;&nbsp;console.log(`myNumber wynosi $&#123;myNumber&#125;`);<br/>
                     &nbsp;&nbsp;<b>let zmienna = 11;</b><br/>
@@ -3116,29 +3159,29 @@ export const articlesLink = [
                     let myNumber = 5;<br/><br/>
                     console.log(double2(myNumber));<br/>
                     <b>zmienna</b>
-                </blockquote>
+                </Blockquote>
                 <p>Zmienna zadeklarowana funkcji może być obsługiwana jedynie w
                     funkcji. Nigdzie indziej jej nie ma.</p>
-                <h4 className="article__subsubsubheader">let, const, var</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                <SmallestHeader>let, const, var</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         <b>let</b> - zmienna — zasięg blokowy — jeżeli
                         zadeklaruję zmienną przez <i>let</i> w bloku, to
                         ta zmienna nie będzie widoczna poza tym blokiem
-                        <blockquote className="article__blockquote">
+                        <Blockquote>
                             &#123;<br/><br/>
                             <b>let <i>zmienna</i></b> = 5;<br/>
                             console.log(zmienna&#125;;<br/>
                             &#125;<br/>
                             <br/>
                             console.log(zmienna);<br/>
-                        </blockquote>
+                        </Blockquote>
                         <p>W tym przypadku konsola pokaże mi błąd,
                             ponieważ zmienna <b>zmienna</b> jest
                             zadeklarowana w
                             bloku i nie jest widoczna poza nim.</p>
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         <b>const</b> - stała - zasięg blokowy -
                         gdybyśmy zamienili w tym samym
                         przykładzie <i>let</i> na
@@ -3146,7 +3189,7 @@ export const articlesLink = [
                         jak <i>let</i>, ale nie będziemy mogli
                         zmienić
                         wartości tej zmiennej:
-                        <blockquote className="article__blockquote">
+                        <Blockquote>
                             &#123;<br/><br/>
                             <b>const <i>zmienna</i></b> = 5;<br/>
                             <b>zmienna = 6;<br/></b>
@@ -3154,12 +3197,12 @@ export const articlesLink = [
                             &#125;<br/>
                             <br/>
                             console.log(zmienna);<br/>
-                        </blockquote>
+                        </Blockquote>
                         Dostanę wtedy błąd na konsoli
                         mówiący, że nie mogę zmienić
                         wartości stałej.
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         <b>var</b> - zmienna - zasięg
                         funkcyjny. Jeżeli wewnątrz
                         funkcji
@@ -3168,8 +3211,8 @@ export const articlesLink = [
                         środku funkcji, to zmienna nie
                         pokaże się, dopóki nie wywołam
                         funkcji.
-                        <blockquote
-                            className="article__blockquote">
+                        <Blockquote
+                        >
                             <b>function <i>myFunction</i></b>() &#123;
                             <br/>
                             & nbsp;&nbsp;var zmienna
@@ -3177,7 +3220,7 @@ export const articlesLink = [
                             &nbsp;&nbsp;console.log(zmienna);<br/>
                             &#125;<br/>
                             myFunction();<br/>
-                        </blockquote>
+                        </Blockquote>
                         Jeżeli jednak wywołam
                         zmienną
                         w <i>console.log</i> poza
@@ -3187,8 +3230,8 @@ export const articlesLink = [
                         bloku, to wywołanie
                         zmiennej poza blokiem
                         zadziała:
-                        <blockquote
-                            className="article__blockquote">
+                        <Blockquote
+                        >
                             <b>function <i>myFunction</i></b>() &#123;
                             <br/>
                             &#125;<br/>
@@ -3198,11 +3241,11 @@ export const articlesLink = [
                             &nbsp;&nbsp;console.log(zmienna);<br/>
                             &#125;<br/>
                             myFunction();<br/>
-                        </blockquote>
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">Funkcja
-                    anonimowa</h4>
+                        </Blockquote>
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>Funkcja
+                    anonimowa</SmallestHeader>
                 <p><b>Funkcja
                     anonimowa</b> to
                     taka,
@@ -3231,8 +3274,8 @@ export const articlesLink = [
                     innych
                     funkcji.
                 </p>
-                <blockquote
-                    className="article__blockquote">
+                <Blockquote
+                >
                     <b>let <i>double</i></b> =
                     function
                     (number) &#123;
@@ -3241,7 +3284,7 @@ export const articlesLink = [
                     number
                     * 2;<br/>
                     &#125;;<br/>
-                </blockquote>
+                </Blockquote>
                 <p>Powyżej
                     jest
                     pokazany
@@ -3277,7 +3320,7 @@ export const articlesLink = [
                         Źródło: https://codecrumbs.com/
                     </Figcaption>
                 </Figure>
-                <h4 className="article__subsubsubheader">boolean</h4>
+                <SmallestHeader>boolean</SmallestHeader>
                 <p>Mamy dwie wartości typu boolean: <i>true</i> i <i>false</i> i <i>on</i>
                     <i>off</i>. <i>Boolean</i>
                     jest zwracany przez <i>operatory porównania</i>.</p>
@@ -3290,113 +3333,113 @@ export const articlesLink = [
                     "boolean"
                 </Blockquote>
                 <p>Możemy teraz zmienić tą wartość, ale tylko na <i>false</i>:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     > let <b>zmienna</b> = false<br/>
-                </blockquote>
+                </Blockquote>
                 <p>Możemy też <i>pobawić się</i> <i>boolean-em</i> przypisując działanie do jakiejś
                     zmiennej, np.</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     > 10 > 4<br/>
                     &lt; true
-                </blockquote>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <Blockquote>
                     > let <b>czy10JestWiekszeNiz4</b> = 10 > 4<br/>
-                </blockquote>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <Blockquote>
                     > <b>czy10JestWiekszeNiz4</b><br/>
                     &lt; true
-                </blockquote>
-                <h4 className="article__subsubsubheader">wartości <i>falsy</i></h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                </Blockquote>
+                <SmallestHeader>wartości <i>falsy</i></SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         0, -0,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         "" - pusty łańcuch znaków,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         false,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         NaN
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         undefined,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         null,
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">Konwertowanie na boolean</h4>
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>Konwertowanie na boolean</SmallestHeader>
                 <p>Tak jak każdą zmienną możemy sobie konwertować na string, np. za pomocą
                     metody <i>toString</i> albo
                     na liczby za pomocą metody <i>Number</i> tak i możemy przekonwertować na <i>boolean</i>.
                     Możemy to
                     zrobić w następujący sposób:</p>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                <ListUnordered>
+                    <ListItem>
                         !!wartość - <b>logical NOT</b> - operator zaprzeczający
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         Boolean(wartość)
-                    </li>
-                </ul>
-                <blockquote className="article__blockquote">
+                    </ListItem>
+                </ListUnordered>
+                <Blockquote>
                     > let <b>liczba</b> = 5;<br/>
-                </blockquote>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <Blockquote>
                     > let <b>czyLiczba</b> = !!liczba;<br/>
-                </blockquote>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <Blockquote>
                     > <b>czyLiczba</b><br/>
                     &lt; true
-                </blockquote>
-                <h4 className="article__subsubsubheader">Typ null</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                </Blockquote>
+                <SmallestHeader>Typ null</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         let zmienna = null — deklarujemy tylko w taki sposób,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         "celowy brak wartości",,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         jedyna możliwa wartość: null
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         jeżeli chcemy sprawdzić, czy zmienna jest <i>null-em</i>:
-                        <blockquote className="article__blockquote">
+                        <Blockquote>
                             if (zmienna === null)
-                        </blockquote>
-                    </li>
-                    <li className="article__listItem">
+                        </Blockquote>
+                    </ListItem>
+                    <ListItem>
                         <b>uwaga!</b>
-                        <blockquote className="article__blockquote">
+                        <Blockquote>
                             typeof null = "object"
-                        </blockquote>
-                    </li>
-                </ul>
+                        </Blockquote>
+                    </ListItem>
+                </ListUnordered>
                 <p>Używamy tego typu, jeżeli nie ma wartości.</p>
-                <h4 className="article__subsubsubheader">Typ undefined</h4>
-                <blockquote className="article__blockquote">
+                <SmallestHeader>Typ undefined</SmallestHeader>
+                <Blockquote>
                     let <b>zmienna</b>;<br/>
-                </blockquote>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <Blockquote>
                     let <b>zmienna</b> = undefined;
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>
                         "wartość niezdefiniowana"
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         jedyna możliwa wartość: <b>undefined</b>,,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         sprawdzenie, czy zmienna jest <i>undefined</i>:
-                        <blockquote className="article__blockquote">
+                        <Blockquote>
                             if (<b>zmienna</b> === undefined)
-                        </blockquote>
-                    </li>
-                </ul>
+                        </Blockquote>
+                    </ListItem>
+                </ListUnordered>
             </>
         )
     },
@@ -3406,18 +3449,18 @@ export const articlesLink = [
         title: "CSS - Flex c.d.",
         body: (
             <>
-                <h4 className="article__subsubsubheader">align-items</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                <SmallestHeader>align-items</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         określa wyrównanie elementów w osi prostopadłej
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         wartości: flex-start, flex-end, center - "góra", "dół", "środek",
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         domyślnie: stretch.
-                    </li>
-                </ul>
+                    </ListItem>
+                </ListUnordered>
                 <p>Dlaczego w <i>wartościach</i> właściwości mamy <i>flex-start</i> i <i>flex-end</i>? Ponieważ
                     położenie tych elementów jest względne, zależnie od właściwości <i>flex-direction</i>.</p>
                 <div className="article__div--FlexAligned">
@@ -3430,7 +3473,7 @@ export const articlesLink = [
                     </div>
                 </div>
                 <p>Powyższy przykład przedstawia się następująco:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     &lt;div class="article__div--FlexAligned"><br/>
                     &nbsp;&nbsp;&lt;div class="article__div--FlexItemAligned">1<br/>
                     &nbsp;&nbsp;&lt;/div><br/>
@@ -3440,8 +3483,8 @@ export const articlesLink = [
                     &nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores atque autem<br/>
                     &nbsp;&nbsp;&lt;/div><br/>
                     &lt;/div><br/>
-                </blockquote>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <Blockquote>
                     .article__div--FlexAligned &#123;<br/>
                     &nbsp;&nbsp;display: flex;<br/>
                     &nbsp;&nbsp;flex-wrap: wrap;<br/>
@@ -3458,16 +3501,16 @@ export const articlesLink = [
                     &nbsp;&nbsp;color: white;<br/>
                     &nbsp;&nbsp;margin: 10px;<br/>
                     &#125;<br/><br/>
-                </blockquote>
-                <h4 className="article__subsubsubheader">align-self</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                </Blockquote>
+                <SmallestHeader>align-self</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         pozwala ustawić wyrównanie dla pojedynczego elementu
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         wartości takie same jak <i>align-items</i>
-                    </li>
-                </ul>
+                    </ListItem>
+                </ListUnordered>
                 <div className="article__div--FlexAligned">
                     <div className="article__div--FlexItemAligned article__div--FlexItemFirst">1
                     </div>
@@ -3478,7 +3521,7 @@ export const articlesLink = [
                     </div>
                 </div>
                 <p>Natomiast w kodzie przedstawia nam się to tak:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     &lt;div class="article__div--FlexAligned"><br/>
                     &nbsp;&nbsp;&lt;div
                     class="article__div--FlexItemAligned <b>article__div--FlexItemFirst</b>">1<br/>
@@ -3490,35 +3533,35 @@ export const articlesLink = [
                     autem<br/>
                     &nbsp;&nbsp;&lt;/div><br/>
                     &lt;/div><br/>
-                </blockquote>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <Blockquote>
                     .article__div--FlexItemFirst &#123;<br/>
                     &nbsp;&nbsp;<b>align-self: flex-end;</b><br/>
                     &#125;<br/>
-                </blockquote>
-                <h4 className="article__subsubsubheader">justify-content</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                </Blockquote>
+                <SmallestHeader>justify-content</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         wyrównuje elementy w głównej osi,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         wartości: flex-start, flex-end, center - podobnie jak przy <i>align-items</i>
-                        <ul className="article__unorderedList">
-                            <li className="article__listItem">
+                        <ListUnordered>
+                            <ListItem>
                                 <b>space-between</b> - równa przestrzeń między elementami
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 <b>space-around</b> - równa przestrzeń po obu stronach elementów,
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 <b>space-evenly</b> - równa przestrzeń między elementami i przy krawędzi
-                            </li>
-                        </ul>
-                    </li>
-                    <li className="article__listItem">
+                            </ListItem>
+                        </ListUnordered>
+                    </ListItem>
+                    <ListItem>
                         domyślna wartość: <i>flex-start</i>.
-                    </li>
-                </ul>
+                    </ListItem>
+                </ListUnordered>
                 <div className="article__div--FlexContented">
                     <div className="article__div--FlexItem">1
                     </div>
@@ -3527,7 +3570,7 @@ export const articlesLink = [
                     <div className="article__div--FlexItem">3
                     </div>
                 </div>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     .article__div--FlexContented &#123;<br/>
                     &nbsp;&nbsp;display: flex;<br/>
                     &nbsp;&nbsp;flex-wrap: wrap;<br/>
@@ -3536,22 +3579,22 @@ export const articlesLink = [
                     &nbsp;&nbsp;border: 10px solid black;<br/>
                     &nbsp;&nbsp;<b>justify-content: center;</b><br/>
                     &#125;<br/>
-                </blockquote>
-                <h4 className="article__subsubsubheader">order</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                </Blockquote>
+                <SmallestHeader>order</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         pozwala zmienić kolejność elementów,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         domyślnie każdy element ma wartość 0, ale możemy sobie ustawić dowolną liczbę
                         dodatnią lub
                         ujemną,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         jeżeli chcemy, aby któryś z elementów pokazał się przed wszystkimi, stosujemy
                         wartość ujemną
-                    </li>
-                </ul>
+                    </ListItem>
+                </ListUnordered>
                 <div className="article__div--FlexContented">
                     <div className="article__div--FlexItem">1
                     </div>
@@ -3560,12 +3603,12 @@ export const articlesLink = [
                     <div className="article__div--FlexItem article__div--FlexItemLast">3
                     </div>
                 </div>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     .article__div--FlexItemLast &#123;<br/>
                     &nbsp;&nbsp;<b>order: -1;</b><br/>
                     &#125;<br/>
-                </blockquote>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <Blockquote>
                     &lt;div class="article__div--FlexContented"><br/>
                     &nbsp;&nbsp;&lt;div class="article__div--FlexItem">1<br/>
                     &nbsp;&nbsp;&lt;/div><br/>
@@ -3574,64 +3617,64 @@ export const articlesLink = [
                     &nbsp;&nbsp;&lt;div class="article__div--FlexItem <b>article__div--FlexItemLast</b>">3<br/>
                     &nbsp;&nbsp;&lt;/div><br/>
                     &lt;/div>
-                </blockquote>
-                <h4 className="article__subsubsubheader">flex-wrap</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                </Blockquote>
+                <SmallestHeader>flex-wrap</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         określa, czy elementy mogą przechodzić do kolejnego wiersza,
-                        <ul className="article__unorderedList">
-                            <li className="article__listItem">
+                        <ListUnordered>
+                            <ListItem>
                                 jeśli tak, to w jakim kierunku mają się układać,
-                            </li>
-                        </ul>
-                    </li>
-                    <li className="article__listItem">
+                            </ListItem>
+                        </ListUnordered>
+                    </ListItem>
+                    <ListItem>
                         <b>wrap</b> - pozwala na przechodzenie do kolejnego wiersza,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         <b>wrap-reverse</b> - odwrotny kierunek,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         domyślnie <b>nowrap</b>
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">align-content</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>align-content</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         określa rozmieszczenie pustej przestrzeni w osi prostopadłej
-                        <ul className="article__unorderedList">
-                            <li className="article__listItem">
+                        <ListUnordered>
+                            <ListItem>
                                 jeśli jest wiele linii
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">skrót flex-flow</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                            </ListItem>
+                        </ListUnordered>
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>skrót flex-flow</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         flex-direction i flex-wrap w jednym
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         np. column wrap
-                        <blockquote className="article__blockquote">
+                        <Blockquote>
                             .element &#123;<br/>
                             &nbsp;&nbsp;flex-flow: column wrap;<br/>
                             &#125;
-                        </blockquote>
-                    </li>
-                </ul>
+                        </Blockquote>
+                    </ListItem>
+                </ListUnordered>
                 <p>A tutaj można utrwalić swoją wiedzę z <i>Flex-a</i>:</p>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                <ListUnordered>
+                    <ListItem>
                         <a href="https://flexboxfroggy.com/#pl" target="_blank">Flexbox Froggy</a>
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         <a href="https://mastery.games/flexboxzombies" target="_blank">Flexbox Zombies</a>
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         <a href="https://codepen.io/osublake/pen/dMLQJr" target="_blank">CodePen Demo</a>
-                    </li>
-                </ul>
+                    </ListItem>
+                </ListUnordered>
             </>
         )
     },
@@ -3641,11 +3684,11 @@ export const articlesLink = [
         title: "CSS - Flex c.d.",
         body: (
             <>
-                <h4 className="article__subsubsubheader">flex-grow</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                <SmallestHeader>flex-grow</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         określa ile pozostałego miejsca ma zostać przypisane do <i>flex item</i>.
-                        <blockquote className="article__blockquote">
+                        <Blockquote>
                             .element1 &#123;<br/>
                             &nbsp;&nbsp;flex-grow: 1;<br/>
                             &#125;;<br/><br/>
@@ -3655,24 +3698,24 @@ export const articlesLink = [
                             .element3 &#123;<br/>
                             &nbsp;&nbsp;flex-grow: 0;<br/>
                             &#125;<br/>
-                        </blockquote>
-                    </li>
-                    <li className="article__listItem">
+                        </Blockquote>
+                    </ListItem>
+                    <ListItem>
                         domyślnie 0, czyli nie rozciąga się, ale można to zmienić na 1, czyli rozciąga się.
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         działa na zasadzie proporcji, więc jeżeli jeden element ma wartość 1, a drugi 2, to
                         drugi będzie
                         miał dwa razy więcej miejsca. Jeżeli jeden element ma wartość 1, a drugi 0, to drugi nie
                         będzie
                         miał miejsca.
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">flex-shrink</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>flex-shrink</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         określa jak bardzo element może się skurczyć, by zmieścić wszystkie elementy w linii.
-                        <blockquote className="article__blockquote">
+                        <Blockquote>
                             .element1 &#123;<br/>
                             &nbsp;&nbsp;flex-shrink: 1;<br/>
                             &#125;;<br/><br/>
@@ -3682,71 +3725,71 @@ export const articlesLink = [
                             .element3 &#123;<br/>
                             &nbsp;&nbsp;flex-shrink: 0;<br/>
                             &#125;<br/>
-                        </blockquote>
-                    </li>
-                    <li className="article__listItem">gdyby każdy element, miałby wartość 0 w <i>flex-shrink</i>,
+                        </Blockquote>
+                    </ListItem>
+                    <ListItem>gdyby każdy element, miałby wartość 0 w <i>flex-shrink</i>,
                         to
-                        elementy wyjdą z <i>kontenera nadrzędnego</i></li>
-                    <li className="article__listItem">działa na zasadzie proporcji</li>
-                    <li className="article__listItem">wartość domyślna to 1.</li>
-                </ul>
-                <h4 className="article__subsubsubheader">skrót flex</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                        elementy wyjdą z <i>kontenera nadrzędnego</i></ListItem>
+                    <ListItem>działa na zasadzie proporcji</ListItem>
+                    <ListItem>wartość domyślna to 1.</ListItem>
+                </ListUnordered>
+                <SmallestHeader>skrót flex</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         flex-grow, flex-shrink, flex-basis
-                        <ul className="article__unorderedList">
-                            <li className="article__listItem">elementy nie poszerzają się, ale mogą się kurczyć, a ich
+                        <ListUnordered>
+                            <ListItem>elementy nie poszerzają się, ale mogą się kurczyć, a ich
                                 szerokość jest automatyczna:
-                                <blockquote className="article__blockquote">
+                                <Blockquote>
                                     .element1 &#123;<br/>
                                     &nbsp;&nbsp;flex: 0 1 auto;<br/>
                                     &#125;;<br/>
-                                </blockquote>
-                            </li>
-                            <li className="article__listItem">elementy i poszerzają się i się kurczą, ale mogą się
+                                </Blockquote>
+                            </ListItem>
+                            <ListItem>elementy i poszerzają się i się kurczą, ale mogą się
                                 kurczyć, a ich szerokość jest automatyczna (nie będą wystawały poza kontener):
-                                <blockquote className="article__blockquote">
+                                <Blockquote>
                                     .element1 &#123;<br/>
                                     &nbsp;&nbsp;flex: 1 1 auto;<br/>
                                     &#125;;<br/>
-                                </blockquote>
+                                </Blockquote>
                                 zamiast tego zapisu, możemy napisać samo <i>flex: auto</i> i zadziała nam tak samo
-                            </li>
-                            <li className="article__listItem">elementy mają rozmiar zależny od ich treści, ale
+                            </ListItem>
+                            <ListItem>elementy mają rozmiar zależny od ich treści, ale
                                 się ani nie
                                 zwężają, ani nie poszerzają:
-                                <blockquote className="article__blockquote">
+                                <Blockquote>
                                     .element1 &#123;<br/>
                                     & nbsp;&nbsp;flex: 0 0 auto;<br/>
                                     &#125;;<br/>
-                                </blockquote>
+                                </Blockquote>
                                 zamiast tego zapisu, możemy napisać samo <i>flex: none</i> i zadziała nam
                                 tak samo
-                            </li>
-                            <li className="article__listItem">elementy mają identyczną
+                            </ListItem>
+                            <ListItem>elementy mają identyczną
                                 szerokość/wysokość, nie poszerzają
                                 się i się nie kurczą
-                                <blockquote className="article__blockquote">
+                                <Blockquote>
                                     .element1 &#123;<br/>
                                     &nbsp;&nbsp;flex: 1 0 0;<br/>
                                     &#125;;<br/>
-                                </blockquote>
+                                </Blockquote>
                                 zamiast tego zapisu, możemy napisać samo <i>flex: 1</i> i zadziała
                                 nam tak samo
-                            </li>
-                            <li className="article__listItem">elementy mogą się nie mieścić —
+                            </ListItem>
+                            <ListItem>elementy mogą się nie mieścić —
                                 nie pozwalają się skurczyć,
                                 ani poszerzyć, a ich wartość szerokości/wysokości jest ustawiona
                                 na "sztywno".
-                                <blockquote className="article__blockquote">
+                                <Blockquote>
                                     .element1 &#123;<br/>
                                     &nbsp;&nbsp;flex: 0 0 100;<br/>
                                     &#125;;<br/>
-                                </blockquote>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                                </Blockquote>
+                            </ListItem>
+                        </ListUnordered>
+                    </ListItem>
+                </ListUnordered>
             </>
         )
     },
@@ -3756,35 +3799,35 @@ export const articlesLink = [
         title: "CSS - Flex c.d.",
         body: (
             <>
-                <h4 className="article__subsubsubheader">flex-direction</h4>
+                <SmallestHeader>flex-direction</SmallestHeader>
                 <p>Flex layout ma dwie osie: główną i prostopadłą (main i cross). Oś prostopadła to oś pionowa.</p>
                 <p>Wartości dla <b>flex-direction</b>, to:</p>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                <ListUnordered>
+                    <ListItem>
                         row
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         row-reverse,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         column - gdy wpiszemy do właściwości <i>flex-direction</i> wartość <i>column</i>, nasz element
                         będzie zachowywał się, jakby w ogóle <i>Flex-a</i> nie było. Czy aby <em>na pewno</em>? Jeżeli
                         mamy ustawionego <i>Flex-a</i>, to nie zachodzi <i>margin collapsing</i>.
-                        <blockquote className="article__blockquote">
+                        <Blockquote>
                             .container &#123;<br/>
                             &nbsp;&nbsp;display: flex;<br/>
                             &nbsp;&nbsp;<b>flex-direction: column;</b><br/>
                             &#125;;
-                        </blockquote>
-                    </li>
-                    <li className="article__listItem">
+                        </Blockquote>
+                    </ListItem>
+                    <ListItem>
                         column reverse.
-                    </li>
-                </ul>
+                    </ListItem>
+                </ListUnordered>
                 <p>Bardzo fajnym ćwiczeniem będzie, jeśli za pomocą <i>DevTools-ów</i> "złapiesz" <i>div-a</i> z
                     poprzedniego wpisu i dodasz właściwość <i>flex-direction</i> i "pobawisz się" z wartościami, które
                     są też dostępne w tym narzędziu.</p>
-                <h4 className="article__subsubsubheader">flex-basis</h4>
+                <SmallestHeader>flex-basis</SmallestHeader>
                 <p>Gdy ustawimy sobie elementy w <i>kontenerze nadrzędnym</i> jako <i>flex-direction: row</i>, to
                     zauważymy, że szerokość elementów powinna być stała, jednak wysokość będzie się rozciągać na
                     wysokość rodzica. Możemy wyznaczyć stałą szerokość elementów w tym przypadku i do tego posłuży nam
@@ -3807,11 +3850,11 @@ export const articlesLink = [
                 <p><b>Flex</b> to moduł w CSS-ie, który pozwala nam układać elementy w wierszach i kolumnach.</p>
                 <p>Aby dodać <b>Flex-a</b> należy przede wszystkim dodać wartość <i>flex</i> do właściwości
                     <i>display</i>. Nasz (w tym przypadku <i>div</i> zostanie <i>flex-container-em.</i></p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     .container &#123;<br/>
                     &nbsp;&nbsp;<b>display: flex</b>;<br/>
                     &#125;;
-                </blockquote>
+                </Blockquote>
                 <p>Jeżeli chcemy zobaczyć różnicę położenia obiektów przy wyborze <i>Flex-a</i> i bez wybrania
                     <i>Flex-a</i>, to weźmy sobie na przykład 3 <i>divy z poniższymi klasami</i>:</p>
                 <div className="article__div--noFlex">
@@ -3822,7 +3865,7 @@ export const articlesLink = [
                     <div className="article__div--noFlexItem">
                     </div>
                 </div>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     &lt;div class="article__div--noFlex"><br/>
                     &nbsp;&nbsp;&lt;div class="article__div--noFlexItem"><br/>
                     &nbsp;&nbsp;&lt;/div><br/>
@@ -3831,8 +3874,8 @@ export const articlesLink = [
                     &nbsp;&nbsp;&lt;div class="article__div--noFlexItem"><br/>
                     &nbsp;&nbsp;&lt;/div><br/>
                     &lt;/div><br/>
-                </blockquote>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <Blockquote>
                     .article__div--noFlex &#123;<br/>
                     &nbsp;&nbsp;margin: auto;<br/>
                     &nbsp;&nbsp;max-width: 500px;<br/>
@@ -3845,7 +3888,7 @@ export const articlesLink = [
                     &nbsp;&nbsp;color: white;<br/>
                     &nbsp;&nbsp;margin: 10px;<br/>
                     &#125;<br/>
-                </blockquote>
+                </Blockquote>
                 <p>To jest przykład ułożenia kontenerów <i>bez Flex-a</i>. <i>Div</i> jest elementem blokowym,
                     więc
                     będzie zajmował całą szerokość dostępnej powierzchni. Oczywiście troszeczkę udoskonaliłam,
@@ -3869,7 +3912,7 @@ export const articlesLink = [
                     w <i>div-ie</i> nadrzędnym, czyli
                     zgodnie z obraną wartością <i>max-width: 500px</i>. Jeśli chodzi o kod, wygląda to teraz
                     tak:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     .article__div--Flex &#123;<br/>
                     &nbsp;&nbsp;<b>display: flex</b><br/>
                     &nbsp;&nbsp;margin: auto;<br/>
@@ -3883,7 +3926,7 @@ export const articlesLink = [
                     &nbsp;&nbsp;color: white;<br/>
                     &nbsp;&nbsp;margin: 10px;<br/>
                     &#125;<br/>
-                </blockquote>
+                </Blockquote>
                 <p>W sumie, jak już ćwiczę — sprawdzę jak będą zachowywać się elementy
                     w <i>div-ie</i> nadrzędnym, jeśli
                     zwiększę ilość elementów:</p>
@@ -3911,7 +3954,7 @@ export const articlesLink = [
                     zmiany), więc
                     najrozsądniej jest tutaj wpisać kolejną właściwość, jaką
                     jest <i>flex-wrap</i> na <i>wrap;</i></p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     .article__div--Flex &#123;<br/>
                     &nbsp;&nbsp;<b>display: flex<br/>
                     &nbsp;&nbsp;flex-wrap: wrap;</b><br/>
@@ -3919,7 +3962,7 @@ export const articlesLink = [
                     &nbsp;&nbsp;max-width: 500px;<br/>
                     &nbsp;&nbsp;border: 10px solid black;<br/>
                     &#125;<br/><br/>
-                </blockquote>
+                </Blockquote>
             </>
         )
     },
@@ -3929,177 +3972,177 @@ export const articlesLink = [
         title: "CSS - wyrównanie tekstu, dekoracje, wcięcia, wielkość liter, object-fit, object-position, calc",
         body: (
             <>
-                <h4 className="article__subsubsubheader">text-align</h4>
+                <SmallestHeader>text-align</SmallestHeader>
                 <p>Wyrównuje treść wewnątrz elementów blokowych i komórek tabeli</p>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                <ListUnordered>
+                    <ListItem>
                         Wartości właściwości <b>text-align</b>, których używamy:
-                        <ul className="article__unorderedList">
-                            <li className="article__listItem">
+                        <ListUnordered>
+                            <ListItem>
                                 left
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 right
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 center
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 justify
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">text-indent</h4>
+                            </ListItem>
+                        </ListUnordered>
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>text-indent</SmallestHeader>
                 <p><b>text-indent</b> to właściwość, która jest odpowiedzialna za wcięcie teksty w blokowym elemencie (%
                     odnosi się do szerokości bloku).</p>
-                <h4 className="article__subsubsubheader">text-decoration</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                <SmallestHeader>text-decoration</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         określa wygląd linii dekoracyjnych tekstu,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         gdy chcemy usunąć podkreślenie z linku, wpisujemy wartość <b>none</b>,
-                        <blockquote className="article__blockquote">
+                        <Blockquote>
                             .element &#123;<br/>
                             &nbsp;&nbsp;<b>text-decoration:</b> none;<br/>
                             &#125;;
-                        </blockquote>
-                    </li>
-                    <li className="article__listItem">
+                        </Blockquote>
+                    </ListItem>
+                    <ListItem>
                         <b>text-decoration: underline dotted red</b> - trzy wartości w jednej właściwości, spowodują, że
                         tekst zostanie podkreślony kropkowaną czerwoną linią,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         text-decoration-line:
-                        <ul className="article__unorderedList">
-                            <li className="article__listItem">
+                        <ListUnordered>
+                            <ListItem>
                                 <b>underline</b> - podkreślenie,
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 <b>overline</b> - linia nad tekstem,
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 <b>line-through</b> - przekreślenie,
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 kilka po spacji, np <b>underline overline</b>,
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 <b>none</b> - brak podkreślenia,
-                            </li>
-                        </ul>
-                    </li>
-                    <li className="article__listItem">
+                            </ListItem>
+                        </ListUnordered>
+                    </ListItem>
+                    <ListItem>
                         <b>text-decoration-color</b> - określa kolor linii
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         <b>text-decoration-style</b>
-                        <ul className="article__unorderedList">
-                            <li className="article__listItem">
+                        <ListUnordered>
+                            <ListItem>
                                 solid
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 double
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 dotted
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 dashed
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 wavy
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">text-transform</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                            </ListItem>
+                        </ListUnordered>
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>text-transform</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         przydaje się do zamiany wszystkich liter na małe, wielkie lub do zamiany wszystkich pierwszych
                         liter na wielkie;
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         wartości:
-                        <ul className="article__unorderedList">
-                            <li className="article__listItem">
+                        <ListUnordered>
+                            <ListItem>
                                 <b>uppercase</b> - wszystkie litery wielkie,
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 <b>lowercase</b> - wszystkie litery małe,
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 <b>capitalize</b> - pierwsza litera w każdym słowie jest wielka, a reszta liter
                                 pozostaje bez zmian,
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 <b>none</b> - nie zmienia nic,
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">object-fit</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                            </ListItem>
+                        </ListUnordered>
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>object-fit</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         określa, jak skalować np. obrazek, by wpasować się w kontener,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         wartości:
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         <b>cover</b> - wypełnia kontener, ścina boki,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         <b>contain</b> - mieści się w kontenerze, zostawia pustą przestrzeń po bokach,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         <b>fill</b> - wartość domyślna - wypełnia kontener, nie zachowując proporcji,
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">object-position</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>object-position</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         położenie, np. obrazka w kontenerze,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         format taki sam jak przy background-position,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         domyślnie: 50% 50%,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         <b>contain</b> - mieści się w kontenerze, zostawia pustą przestrzeń po bokach,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         <b>fill</b> - wartość domyślna - wypełnia kontener, nie zachowując proporcji,
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">calc</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>calc</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         obliczenia w CSS-ie, kiedy nie chcemy przypisać stałej wartości
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         <b>width: calc(100%-80px);</b>,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         działania
-                        <ul className="article__unorderedList">
-                            <li className="article__listItem">
+                        <ListUnordered>
+                            <ListItem>
                                 +-
-                                <ul className="article__unorderedList">
-                                    <li className="article__listItem">
+                                <ListUnordered>
+                                    <ListItem>
                                         koniecznie ze spacją, inaczej nie zadziała
-                                    </li>
-                                </ul>
-                            </li>
-                            <li className="article__listItem">
+                                    </ListItem>
+                                </ListUnordered>
+                            </ListItem>
+                            <ListItem>
                                 */
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                            </ListItem>
+                        </ListUnordered>
+                    </ListItem>
+                </ListUnordered>
             </>
         )
     },
@@ -4112,122 +4155,122 @@ export const articlesLink = [
                 <p>Za pomocą CSS-a możemy umieścić obrazek w tle wybranego elementu. Do tego użyjemy
                     właściwości <i>background-image</i>.
                 </p>
-                <h4 className="article__subsubsubheader">background-image</h4>
-                <blockquote className="article__blockquote">
+                <SmallestHeader>background-image</SmallestHeader>
+                <Blockquote>
                     .element &#123;<br/>
                     &nbsp;&nbsp;background-image: url(".../images/nazwaObrazka.jpg");<br/>
                     &#125;;
-                </blockquote>
+                </Blockquote>
                 <p>Przechodząc do praktyki, dodaję <i>div-a</i> z klasą <i>"article__div--highlighted"</i>:</p>
                 <div className="article__div--highlighted"></div>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     .article__div--highlighted &#123;<br/>
                     &nbsp;&nbsp;width: 300px;<br/>
                     &nbsp;&nbsp;height: 300px;<br/>
                     &nbsp;&nbsp;background-image: url("../images/pink.png");<br/>
                     &#125;
-                </blockquote>
+                </Blockquote>
                 <p>Jeżeli chcemy, aby wielkość obrazka była dynamicznie zamienialna, dodajemy następujące
                     właściwości:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     .article__div--highlighted &#123;<br/>
                     &nbsp;&nbsp;width: 300px;<br/>
                     <b>&nbsp;&nbsp;resize: both;</b><br/>
                     &nbsp;&nbsp;overflox: auto;<br/>//
-                </blockquote>
+                </Blockquote>
                 <p>Mała uwaga, też przy okazji powtórzenia materiału pewne rzeczy rozjaśnię — warto dodawać
                     ".." przed /
                     (slash-em), ponieważ miejsce ".." stanowi adres, do którego podpięty jest obrazek zaraz
                     po /
                     (slash-u). Jeżeli wpiszemy w to miejsce:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     &nbsp;&nbsp;background-image: url("/images/pink.png");<br/>
-                </blockquote>
+                </Blockquote>
                 <p>to na naszym lokalnym serwerze to nam zadziała, ale korzystając z innej opcji, np.
                     używając
                     DevTools-ów i wchodząc w Styles, a potem klikając na adres obrazka, pojawi nam się błąd
                     z
                     informacją, że pliku nie znaleziono.</p>
-                <h4 className="article__subsubsubheader">background-repeat i jej wartości:</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                <SmallestHeader>background-repeat i jej wartości:</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         <b>no repeat</b> - obrazek w ogóle się nie powtarza,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         <b>space</b> - obrazek powtarza się tyle razy ile się zmieści cały, pusta przestrzeń
                         jest równo
                         rozmieszczona między obrazkami, elementy są wyjustowane i w poziomie i pionie,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         <b>round</b> - obrazki rozciągają się tak, aby nie było żadnej przestrzeni między
                         nimi, skalują
                         się, przez co mogą powstać nieproporcjonalne wartości obrazka,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         <b>repeat</b> - wartość domyślna,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         różne wartości w pionie i poziomie
-                        <ul className="article__unorderedList">
-                            <li className="article__listItem">
+                        <ListUnordered>
+                            <ListItem>
                                 np. <b>no-repeat repeat</b> - obrazek będzie się powtarzał w pionie, ale nie
                                 będzie się
                                 powtarzał w poziomie,
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 <b>space round</b> - space jest w poziomie, a round jest w pionie.
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 <b>repeat-y</b> lub <b>repeat-x</b>- powtarzanie wyłącznie w pionie lub w
                                 poziomie
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">background-position i jej wartości:</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                            </ListItem>
+                        </ListUnordered>
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>background-position i jej wartości:</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         <b>center</b> - obrazek jest na środku niezależnie od rozmiaru elementu,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         <b>top | right | bottom | left</b> - obrazek jest na górze | na prawo | na dole | na
                         lewo —
                         niezależnie od rozmiaru elementu
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         <b>top right | bottom | left</b> - obrazek jest wyrównany do górnego prawego rogu i
                         analogicznie
                         przy wypisywaniu wartości z lewej top | bottom i wartości z prawej left | right etc,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         <b>25% 75%</b> - obrazek ustawiony jest na 25% rozmiaru elementu od lewej i 75%
                         rozmiaru
                         elementu od góry,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         <b>10px 20px</b> - obrazek ustawiony jest na 10px od lewej i 20px od góry,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         <b>right 10% bottom 20%</b> - obrazek ustawiony jest na 10% od prawej i 20% od dołu,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         można ustawić kilka obrazków, aby wyświetlały się jeden w jednym miejscu, a drugi w
                         drugim
                         miejscu używając wartości po przecinku
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">background-size i jej wartości:</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>background-size i jej wartości:</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         <b>100px</b> - szerokość 100px, wysokość automatyczna,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         <b>auto 100px</b> - szerokość automatyczna, wysokość 100px
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         <b>cover</b> - wypełnia element, zachowując proporcje, przycina w pionie lub w
                         poziomie.
-                        <blockquote className="article__blockquote">
+                        <Blockquote>
                             .article__div--highlighted &#123;<br/>
                             &nbsp;&nbsp;width: 300px;<br/>
                             &nbsp;&nbsp;resize: both;<br/>
@@ -4237,27 +4280,27 @@ export const articlesLink = [
                             <b>&nbsp;&nbsp;background-size: cover;<br/>
                                 &nbsp;&nbsp;background-position: center;<br/></b>
                             &#125;
-                        </blockquote>
+                        </Blockquote>
                         <br/>
                         Przy dodaniu <i>background-position: center</i> obrazek będzie zawsze
                         docinany po zewnętrznych
                         krawędziach.
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         <b>contain</b> - wypełnia element, zachowując proporcje, zostawia pustą
                         przestrzeń w pionie lub
                         w poziomie
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">background-attachment i jej
-                    wartości:</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>background-attachment i jej
+                    wartości:</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         określa jak zachowuje się tło przy przewijaniu
-                        <ul className="article__unorderedList">
-                            <li className="article__listItem">
+                        <ListUnordered>
+                            <ListItem>
                                 <b>fixed</b> - w ogóle się nie rusza
-                                <blockquote className="article__blockquote">
+                                <Blockquote>
                                     .article__div--highlighted &#123;<br/>
                                     &nbsp;&nbsp;width: 300px;<br/>
                                     &nbsp;&nbsp;resize: both;<br/>
@@ -4267,35 +4310,35 @@ export const articlesLink = [
                                     &nbsp;&nbsp;background-size: cover;<br/>
                                     &nbsp;&nbsp;background-position: center;<br/>
                                     <b>&nbsp;&nbsp;background-attachment: fixed;<br/></b>
-                                </blockquote>
+                                </Blockquote>
                                 <br/>
-                            </li>
-                            <li>
+                            </ListItem>
+                            <ListItem>
                                 <b>local</b> - "przyklejone" do treści
-                            </li>
-                            <li>
+                            </ListItem>
+                            <ListItem>
                                 <b>scroll</b> - "przyklejone" do elementu, nie przewija
                                 się z treścią
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">skrót
-                    background:</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                            </ListItem>
+                        </ListUnordered>
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>skrót
+                    background:</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         pozwala ustawić 8 właściwości związanych z tłem
                         naraz
 
-                        <blockquote className="article__blockquote">
+                        <Blockquote>
                             .element &#123;<br/>
                             &nbsp;&nbsp;background: center / contain
                             no-repeat url("../images/nazwaObrazka.jpg")
                             #ccc;<br/>
                             &#125;
-                        </blockquote>
-                    </li>
-                </ul>
+                        </Blockquote>
+                    </ListItem>
+                </ListUnordered>
             </>
         )
     },
@@ -4310,36 +4353,36 @@ export const articlesLink = [
                     używając <i>OpenGraph</i>,
                     możemy umieścić szereg informacji dotyczących naszej strony.</p>
                 <p>Dodajemy wtedy konkretne znaczniki <i>&lt;meta></i> do <i>&lt;head></i> strony:</p>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                <ListUnordered>
+                    <ListItem>
                         og:title
-                        <blockquote className="article__blockquote">
+                        <Blockquote>
                             &lt;meta property="og:title" content="The Rock" />
-                        </blockquote>
-                    </li>
-                    <li className="article__listItem">
+                        </Blockquote>
+                    </ListItem>
+                    <ListItem>
                         og:type - np. article, website, book, video, movie etc.
-                        <blockquote className="article__blockquote">
+                        <Blockquote>
                             &lt;meta property="og:type" content="video.movie" />
-                        </blockquote>
-                    </li>
-                    <li className="article__listItem">
+                        </Blockquote>
+                    </ListItem>
+                    <ListItem>
                         og:image
-                        <blockquote className="article__blockquote">
+                        <Blockquote>
                             &lt;meta property="og:image:type" content="image/jpeg" /><br/>
                             &lt;meta property="og:image:width" content="400" /><br/>
                             &lt;meta property="og:image:height" content="300" /><br/>
                             &lt;meta property="og:image:alt" content="A shiny red apple with a bite taken out" /><br/>
-                        </blockquote>
-                    </li>
-                    <li className="article__listItem">
+                        </Blockquote>
+                    </ListItem>
+                    <ListItem>
                         og:url - pełen adres URL.
-                        <blockquote className="article__blockquote">
+                        <Blockquote>
                             &lt;meta property="og:url" content="https://www.imdb.com/title/tt0117500/" />
-                        </blockquote>
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">Sharing Debugger</h4>
+                        </Blockquote>
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>Sharing Debugger</SmallestHeader>
                 <p>Nawiązując do wartości <i>og:image</i>, warto stworzyć taką miniaturkę strony w rozdzielczości 1200px
                     x 1200px i najlepiej ustawić tekst miniaturki w centrum obrazka, ponieważ zależnie od źródła, gdzie
                     link do strony został udostępniony, może wyglądać inaczej. Możemy w tym celu użyć np. w aplikacji
@@ -4352,13 +4395,13 @@ export const articlesLink = [
                                                         target="_blank" title="Sharing Debugger">linkiem.</a></p>
                 <p>Możemy dzięki niemu sprawdzić, w jaki sposób zostanie udostępniona konkretna strona — w tym przypadku
                     udostępniona na Facebooku.</p>
-                <h4 className="article__subsubsubheader">Ikonka strony</h4>
+                <SmallestHeader>Ikonka strony</SmallestHeader>
                 <p>Ikonka strony to nic innego jak ten mały obrazek pokazujący się nam w lewym górnym rogu zakładki
                     strony w przeglądarce. Jakiś czas temu używać trzeba było jedynie ikon w formacie <i>ico</i>,
                     natomiast aktualnie można używać również formatu <i>.png</i> .</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     &lt;link rel="icon" href="icon.png">
-                </blockquote>
+                </Blockquote>
                 <p>Po takim podsumowaniu, zabieram się za dodawanie tagów &lt;meta> .</p>
             </>
         )
@@ -4377,53 +4420,53 @@ export const articlesLink = [
                     dokumentów tekstowych, jak np. dokumentacje techniczne.</p>
                 <p>Konwencja nakazuje, aby plik README pisać właśnie wielkimi literami.</p>
                 <p>Pozwolę sobie na wrzucenie ściągi do Markdown.</p>
-                <h4 className="article__subsubsubheader">Nagłówki</h4>
-                <blockquote className="article__blockquote">
+                <SmallestHeader>Nagłówki</SmallestHeader>
+                <Blockquote>
                     # H1<br/>
                     ## H2<br/>
                     ### H3<br/>
                     #### H4 <br/>
                     ##### H5<br/>
                     ###### H6
-                </blockquote>
-                <h4 className="article__subsubsubheader">Wytłuszczenie i kursywa</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <SmallestHeader>Wytłuszczenie i kursywa</SmallestHeader>
+                <Blockquote>
                     **wytłuszczenie**<br/>
                     *kursywa*<br/>
-                </blockquote>
-                <h4 className="article__subsubsubheader">Listy uporządkowane</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <SmallestHeader>Listy uporządkowane</SmallestHeader>
+                <Blockquote>
                     1. element 1<br/>
                     2. element 2<br/>
-                </blockquote>
-                <h4 className="article__subsubsubheader">Listy nieuporządkowane</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <SmallestHeader>Listy nieuporządkowane</SmallestHeader>
+                <Blockquote>
                     - element 1<br/>
                     - element 2<br/>
-                </blockquote>
-                <h4 className="article__subsubsubheader">Linki</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <SmallestHeader>Linki</SmallestHeader>
+                <Blockquote>
                     [Nazwa hiperłącza](https://adresstronywww.com)
-                </blockquote>
+                </Blockquote>
                 <p>lub:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     https://adresstronywww.com
-                </blockquote>
-                <h4 className="article__subsubsubheader">Obrazki</h4>
-                <blockquote className="article__blockquote">
+                </Blockquote>
+                <SmallestHeader>Obrazki</SmallestHeader>
+                <Blockquote>
                     ![Alternatywny tekst](https://adres-obrazka.com)
-                </blockquote>
-                <h4 className="article__subsubsubheader">Kod</h4>
+                </Blockquote>
+                <SmallestHeader>Kod</SmallestHeader>
                 <p>krótki fragment kodu:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     `kod`
-                </blockquote>
+                </Blockquote>
                 <p>Blok kodu:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     ```nazwaJęzyka<br/>
                     pierwsza linia kodu;<br/>
                     druga linia kodu;<br/>```
-                </blockquote>
+                </Blockquote>
                 <p>Po więcej przykładów odsyłam do dokumentacji <a href="https://www.markdownguide.org/basic-syntax/"
                                                                    target="_blank"
                                                                    title="Dokumentacja Markdown">Markdown</a>
@@ -4480,77 +4523,77 @@ export const articlesLink = [
                     tutaj.</p>
                 <p>Jako, że blog prowadzę w postaci notatek, przede wszystkim wypunktuję, co trzeba "ogarnąć", aby
                     zaprzyjaźnić się z Git-em.</p>
-                <ol className="article__orderedList">
-                    <li className="article__listItem">
+                <ListOrdered>
+                    <ListItem>
                         Przede wszystkich wchodzimy na <a href="https://git-scm.com/"> oficjalną stronę Git-a</a> i
                         pobieramy go do naszej wersji systemowej na komputerze.
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         Uruchamiamy Git Bash. Tworzymy swoją "wizytówkę", podpinając naszą nazwę użytkownika i adres
                         e-mail poprzez wpisanie w oknie Git Bash-a:
-                        <blockquote className="article__blockquote">
+                        <Blockquote>
                             git config --global user.name "NAZWA UŻYTKOWNIKA"
-                        </blockquote>
-                        <blockquote className="article__blockquote">
+                        </Blockquote>
+                        <Blockquote>
                             git config --global user.email "ADRES@EMAIL.COM"
-                        </blockquote>
-                    </li>
-                    <li className="article__listItem">
+                        </Blockquote>
+                    </ListItem>
+                    <ListItem>
                         Inicjalizacja repozytorium — wchodzimy do folderu, w którym mamy projekt i wpisujemy np. za
                         pomocą Terminala w programie do edycji kodu:
-                        <blockquote className="article__blockquote">
+                        <Blockquote>
                             git init
-                        </blockquote>
-                    </li>
-                    <li className="article__listItem">
+                        </Blockquote>
+                    </ListItem>
+                    <ListItem>
                         Pierwszy commit
-                        <blockquote className="article__blockquote">
+                        <Blockquote>
                             git add<br/>
-                        </blockquote>
-                        <blockquote className="article__blockquote">
+                        </Blockquote>
+                        <Blockquote>
                             git commit -m "Initial commit"
-                        </blockquote>
-                    </li>
-                    <li className="article__listItem">
+                        </Blockquote>
+                    </ListItem>
+                    <ListItem>
                         Pokazanie indeksu i obszaru roboczego:
-                        <blockquote className="article__blockquote">
+                        <Blockquote>
                             git status<br/>
-                        </blockquote>
-                    </li>
-                    <li className="article__listItem">
+                        </Blockquote>
+                    </ListItem>
+                    <ListItem>
                         Dodanie wybranych plików do indeksu:
-                        <blockquote className="article__blockquote">
+                        <Blockquote>
                             git add style.css script.js
-                        </blockquote>
-                    </li>
-                    <li className="article__listItem">
+                        </Blockquote>
+                    </ListItem>
+                    <ListItem>
                         Lista commit-ów:
-                        <blockquote className="article__blockquote">
+                        <Blockquote>
                             git log
-                        </blockquote>
-                        <blockquote className="article__blockquote">
+                        </Blockquote>
+                        <Blockquote>
                             git log --pretty=oneline
-                        </blockquote>
-                    </li>
-                    <li className="article__listItem">
+                        </Blockquote>
+                    </ListItem>
+                    <ListItem>
                         Odrzucenie zmian:
-                        <blockquote className="article__blockquote">
+                        <Blockquote>
                             git reset --hard
-                        </blockquote>
-                    </li>
-                    <li className="article__listItem">
+                        </Blockquote>
+                    </ListItem>
+                    <ListItem>
                         Wypchnięcie zmian na serwer
-                        <blockquote className="article__blockquote">
+                        <Blockquote>
                             git push
-                        </blockquote>
-                    </li>
-                    <li className="article__listItem">
+                        </Blockquote>
+                    </ListItem>
+                    <ListItem>
                         Pobranie zmian z serwera
-                        <blockquote className="article__blockquote">
+                        <Blockquote>
                             git pull
-                        </blockquote>
-                    </li>
-                </ol>
+                        </Blockquote>
+                    </ListItem>
+                </ListOrdered>
             </>
         )
     },
@@ -4561,130 +4604,130 @@ export const articlesLink = [
         body: (
             <>
                 <p>JS daje nam wiele sposobów na manipulowanie liczbami.</p>
-                <ol className="article__orderedList">
-                    <li className="article__listItem">
+                <ListOrdered>
+                    <ListItem>
                         <b>Zaokrąglanie</b>
-                        <ul className="article__unorderedList">
-                            <li className="article__listItem">
+                        <ListUnordered>
+                            <ListItem>
                                 Math.round(liczba) - do najbliższej liczby całkowitej,
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 Math.ceil(liczba) - w górę,
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 Math.floor(liczba) - w dół,
-                            </li>
-                        </ul>
-                    </li>
-                    <li className="article__listItem">
+                            </ListItem>
+                        </ListUnordered>
+                    </ListItem>
+                    <ListItem>
                         <b>Konkretna liczba miejsc po przecinku</b>
-                        <ul className="article__unorderedList">
-                            <li className="article__listItem">
+                        <ListUnordered>
+                            <ListItem>
                                 5.12345.toFixed(2) // "5.12",
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 zwraca łańcuch znaków,
-                            </li>
-                        </ul>
-                    </li>
-                    <li className="article__listItem">
+                            </ListItem>
+                        </ListUnordered>
+                    </ListItem>
+                    <ListItem>
                         <b>Pierwiastek kwadratowy</b>
-                        <ul className="article__unorderedList">
-                            <li className="article__listItem">
+                        <ListUnordered>
+                            <ListItem>
                                 Math.sqrt(16) //4
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 Math.sqrt(-1) //NaN
-                            </li>
-                        </ul>
-                    </li>
-                    <li className="article__listItem">
+                            </ListItem>
+                        </ListUnordered>
+                    </ListItem>
+                    <ListItem>
                         <b>Najmniejsza i największa wartość</b>
-                        <ul className="article__unorderedList">
-                            <li className="article__listItem">
+                        <ListUnordered>
+                            <ListItem>
                                 Math.max(1,2,3) //3
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 Math.min(1,2,3) //1
-                            </li>
-                            <li className="article__listItem">
+                            </ListItem>
+                            <ListItem>
                                 Dowolna liczba argumentów
-                            </li>
-                        </ul>
-                    </li>
-                    <li className="article__listItem">
+                            </ListItem>
+                        </ListUnordered>
+                    </ListItem>
+                    <ListItem>
                         <b>Losowa liczba</b>
-                        <ul className="article__unorderedList">
-                            <li className="article__listItem">
+                        <ListUnordered>
+                            <ListItem>
                                 Math.random()
-                                <ul className="article__unorderedList">
-                                    <li className="article__listItem">
+                                <ListUnordered>
+                                    <ListItem>
                                         pseudo-losowa liczba od zera do "prawie 1", np. 0.37961
-                                    </li>
-                                </ul>
-                            </li>
-                            <li className="article__listItem">
+                                    </ListItem>
+                                </ListUnordered>
+                            </ListItem>
+                            <ListItem>
                                 Math.floor(Math.random()*5)
-                                <ul className="article__unorderedList">
-                                    <li className="article__listItem">
+                                <ListUnordered>
+                                    <ListItem>
                                         losowa liczba całkowita od 0 do 4
-                                    </li>
-                                    <li className="article__listItem">
+                                    </ListItem>
+                                    <ListItem>
                                         <b>Symulator rzutu kością:</b> Math.floor(Math.random()*6)+1
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li className="article__listItem">
+                                    </ListItem>
+                                </ListUnordered>
+                            </ListItem>
+                        </ListUnordered>
+                    </ListItem>
+                    <ListItem>
                         <b>Konwertowanie na liczbę</b>
-                        <ul className="article__unorderedList">
-                            <li className="article__listItem">
+                        <ListUnordered>
+                            <ListItem>
                                 Konkatenacja
-                                <blockquote className="article__blockquote">
+                                <Blockquote>
                                     "10" + 0 === "100"
-                                </blockquote>
-                            </li>
-                            <li className="article__listItem">
+                                </Blockquote>
+                            </ListItem>
+                            <ListItem>
                                 Number()
-                                <blockquote className="article__blockquote">
+                                <Blockquote>
                                     Number("5") &nbsp;&nbsp;&nbsp;&nbsp;//5<br/>
                                     Number("2 jabłka") &nbsp;&nbsp;&nbsp;&nbsp;//NaN<br/>
-                                </blockquote>
-                            </li>
-                            <li className="article__listItem">
+                                </Blockquote>
+                            </ListItem>
+                            <ListItem>
                                 + (unary operators)
-                                <blockquote className="article__blockquote">
+                                <Blockquote>
                                     +"5" &nbsp;&nbsp;&nbsp;//5<br/>
                                     +"2 jabłka" &nbsp;&nbsp;&nbsp;&nbsp;//Nan<br/>
-                                </blockquote>
-                            </li>
-                            <li className="article__listItem">
+                                </Blockquote>
+                            </ListItem>
+                            <ListItem>
                                 działania arytmetyczne inne niż dodawanie
-                                <blockquote className="article__blockquote">
+                                <Blockquote>
                                     "5" * 1 &nbsp;&nbsp;&nbsp;&nbsp;//5<br/>
                                     "5" - 3 &nbsp;&nbsp;&nbsp;&nbsp;//2<br/>
                                     "2 jabłka"/2 &nbsp;&nbsp;&nbsp;&nbsp;//NaN
-                                </blockquote>
-                            </li>
-                            <li className="article__listItem">
+                                </Blockquote>
+                            </ListItem>
+                            <ListItem>
                                 parseInt(), parseFloat()
-                                <blockquote className="article__blockquote">
+                                <Blockquote>
                                     parseInt("5") &nbsp;&nbsp;&nbsp;&nbsp;//5<br/>
                                     parseInt("56") &nbsp;&nbsp;&nbsp;&nbsp;//5<br/>
                                     parseInt("2 jabłka") &nbsp;&nbsp;&nbsp;&nbsp;//2<br/>
                                     parseInt("jabłka") &nbsp;&nbsp;&nbsp;&nbsp;/NaN<br/>
                                     parseInt("kurki 3") &nbsp;&nbsp;&nbsp;&nbsp;//NaN<br/>
-                                </blockquote>
-                                <ul className="article__unorderedList">
-                                    <li className="article__listItem">
+                                </Blockquote>
+                                <ListUnordered>
+                                    <ListItem>
                                         parseFloat - analogicznie dla liczb z cyframi po przecinku.
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ol>
+                                    </ListItem>
+                                </ListUnordered>
+                            </ListItem>
+                        </ListUnordered>
+                    </ListItem>
+                </ListOrdered>
             </>
         )
     },
@@ -4698,7 +4741,7 @@ export const articlesLink = [
     //                 użytkownikowi przepięknego interfejsu?</p>
     //             <div className="calculator__container">
     //                 <div className="calculator__titleContainer">
-    //                     <h4 className="calculator__title">Kalkulator BMI</h4>
+    //                     <h4 className="calculator__title">Kalkulator BMI</SmallestHeader>
     //                 </div>
     //                 <form className="js-form">
     //                     <fieldset className="calculator__fieldset">
@@ -4724,7 +4767,7 @@ export const articlesLink = [
     //             </div>
     //             <p>Wygląda lepiej, prawda?</p>
     //             <p>Kod przedstawia się następująco:</p>
-    //             <blockquote className="article__blockquote">
+    //             <blockquote>
     //                 <b>script.js</b><br/><br/>
     //                 let heightElement = document.querySelector(".js-height");<br/>
     //                 let weightElement = document.querySelector(".js-weight");<br/>
@@ -4765,7 +4808,7 @@ export const articlesLink = [
     //                 heightElement.addEventListener("input", () => &#123;<br/>
     //                 console.log(`Aktualny wzrost: $&#123;heightElement.value&#125;`);<br/>
     //                 &#125;);<br/>
-    //             </blockquote>
+    //             </Blockquote>
     //         </>
     //     )
     // },
@@ -4777,7 +4820,7 @@ export const articlesLink = [
             <>
                 <p>Dziś mam do zaprezentowania totalnie podstawowy kalkulator BMI. Kod w JS
                     wygląda następująco:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     let heightElement = document.querySelector(".js-height");<br/>
                     let weightElement = document.querySelector(".js-weight");<br/>
                     let formElement = document.querySelector(".js-form");<br/>
@@ -4792,9 +4835,9 @@ export const articlesLink = [
 
                     &nbsp;&nbsp;bmiElement.innerText = bmi.toFixed(2);<br/>
                     &#125;);
-                </blockquote>
+                </Blockquote>
                 <p>Natomiast w zwykłym HTML-u wygląda to tak:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     &lt;form class="js-form"><br/>
                     &nbsp;&nbsp;&lt;fieldset><br/>
                     &nbsp;&nbsp;&nbsp;&lt;legend>Twoje dane:&lt;/legend><br/>
@@ -4819,7 +4862,7 @@ export const articlesLink = [
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;button>Policz BMI!&lt;/button><br/>
                     &nbsp;&nbsp;&nbsp;&lt;/p><br/>
                     &lt;/form><br/>
-                </blockquote>
+                </Blockquote>
                 <form className="js-form">
                     <fieldset>
                         <legend>Twoje dane:</legend>
@@ -4871,24 +4914,24 @@ export const articlesLink = [
                         <legend>
                             Pole typu radio
                         </legend>
-                        <ul className="article__withoutBulletList">
-                            <li>
+                        <ListUnordered className="article__withoutBulletList">
+                            <ListItem>
                                 <label>
                                     Opcja 1
                                     <input className="js-radio-1" name="radio" type="radio" value="opcja-1"/>
                                 </label>
-                            </li>
-                            <li>
+                            </ListItem>
+                            <ListItem>
                                 <label>
                                     Opcja 2
                                     <input className="js-radio-2" name="radio" type="radio" value="opcja-2"/>
                                 </label>
-                            </li>
-                        </ul>
+                            </ListItem>
+                        </ListUnordered>
                     </fieldset>
                 </form>
                 <p>Kod przedstawia się mniej więcej tak:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     &lt;form action="https//postman-echo.com" method="POST"><br/>
                     &nbsp;&nbsp;&lt;fieldset><br/>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;legend><br/>
@@ -4912,33 +4955,33 @@ export const articlesLink = [
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul><br/>
                     &nbsp;&nbsp;&lt;/fieldset><br/>
                     &lt;/form><br/>
-                </blockquote>
+                </Blockquote>
                 <p>Możemy "złapać" elementy typu radio, poprzez dopisanie klasy i użycie document.querySelector, jak
                     niżej:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     let radioElement1 = document.querySelector(".js-radio-1");<br/>
                     let radioElement2 = document.querySelector(".js-radio-2");<br/>
                     console.log(radioElement1);<br/>
                     console.log(radioElement2);<br/>
-                </blockquote>
+                </Blockquote>
                 <p>Następnie, jeśli chcielibyśmy zaznaczyć jeden element typu radio, używając np. Konsoli w
                     Devtools-ach, wpisujemy w konsolę:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     radioElement1.checked = true;
-                </blockquote>
+                </Blockquote>
                 <p>I tym o to sposobem zaznaczyliśmy interesującą nas opcję!</p>
                 <p>Do przydatnych metod łapania pól na pewno zaliczymy:</p>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                <ListUnordered>
+                    <ListItem>
                         click() - symuluje kliknięcie,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         focus() - ustawia focus,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         blur() - usuwa focus,
-                    </li>
-                </ul>
+                    </ListItem>
+                </ListUnordered>
             </>
         )
     },
@@ -4948,50 +4991,50 @@ export const articlesLink = [
         title: "JavaScript - Formularze",
         body: (
             <>
-                <h4 className="article__subsubsubheader">Przydatne właściwości pól formularza</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                <SmallestHeader>Przydatne właściwości pól formularza</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         value,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         checked dla radio i checkbox,
-                    </li>
-                </ul>
+                    </ListItem>
+                </ListUnordered>
                 <p>Żeby "złapać" input-a i móc nim operować w JS, musimy najpierw dopisać klasę, np.:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     &lt;input class="js-height">
-                </blockquote>
+                </Blockquote>
                 <label>
                     <input className="js-height" value="170"/>
                 </label>
                 <p>Następnie w naszym pliku script.js wpisujemy: </p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     let heightElement = document.querySelector(".js-height");
-                </blockquote>
+                </Blockquote>
                 <p>Następnie w script.js wpisujemy:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     console.log(heightElement);
-                </blockquote>
+                </Blockquote>
                 <p>Następnie w konsoli wpisujemy:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     heightElement.value;
-                </blockquote>
+                </Blockquote>
                 <p>Pojawi się tym samym wartość (string) wprowadzona do input-a. Żeby pokazać w konsoli liczbę, nie
                     string należy wpisać:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     +heightElement.value;
-                </blockquote>
+                </Blockquote>
                 <p>Aby zmienić wartość w inpucie, możemy wpisać do konsoli:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     heightElement.value = "192";
-                </blockquote>
+                </Blockquote>
                 <p>Gdy dodamy value "na wejściu" przez HTML, to będzie to inne value niż to wprowadzone w JS. Przy
                     wpisaniu value w JS, wartość w oknie dodana w HTML zostanie nadpisana, natomiast wartość atrybutu
                     value już nie.</p>
                 <p>Żeby to sprawdzić, po ustawieniu w HTML value = "170", wpisujemy w konsolę:</p>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     let heightElement = document.querySelector(".js-height");
-                </blockquote>
+                </Blockquote>
                 <p>Następnie wpiszemy heightElement.value, pokaże "170", ale jak zmienimy w inpucie na "180", to
                     value w HTML będzie nadal "170".</p>
             </>
@@ -5004,66 +5047,66 @@ export const articlesLink = [
         body: (
             <>
                 <p>Zanim formularz zostanie wysłany, musi zostać zwalidowany.</p>
-                <h4 className="article__subsubsubheader">atrybuty dotyczące walidacji</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                <SmallestHeader>atrybuty dotyczące walidacji</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         <b>required</b> - pole nie może być puste,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         <b>minlength</b> i <b>maxlength</b> - minimalna i maksymalna liczba znaków dla tekstowych
                         pól,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         <b>min</b> lub <b>max</b> - minimalna lub maksymalna wartość dla pól liczbowych i dat/czasu,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         <b>type</b> - np. e-mail czy liczba,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         <b>pattern</b> - wyrażenie regularne (regular expression).
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">pattern</h4>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>pattern</SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
                         wyrażenie regularne,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         czyli wzór-kombinacje znaków,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         idealne do walidacji,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         type - np. e-mail czy liczba,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         przykłady:
-                        <ul className="article__unorderedList">
-                            <li className="article__listItem">https?
-                                <ul className="article__unorderedList">
-                                    <li className="article__listItem">http lub https,</li>
-                                </ul>
-                            </li>
-                            <li className="article__listItem">[0-9]{2} - [0-9]{3},
-                                <ul className="article__unorderedList">
-                                    <li className="article__listItem">kod pocztowy — dwie cyfry, myślnik, 3 cyfry,</li>
-                                </ul>
-                            </li>
-                            <li className="article__listItem">(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8},
-                                <ul className="article__unorderedList">
-                                    <li className="article__listItem">co najmniej 8 znaków, przynajmniej jedna mała
+                        <ListUnordered>
+                            <ListItem>https?
+                                <ListUnordered>
+                                    <ListItem>http lub https,</ListItem>
+                                </ListUnordered>
+                            </ListItem>
+                            <ListItem>[0-9]{2} - [0-9]{3},
+                                <ListUnordered>
+                                    <ListItem>kod pocztowy — dwie cyfry, myślnik, 3 cyfry,</ListItem>
+                                </ListUnordered>
+                            </ListItem>
+                            <ListItem>(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8},
+                                <ListUnordered>
+                                    <ListItem>co najmniej 8 znaków, przynajmniej jedna mała
                                         litera, jedna wielka i jedna cyfra.
-                                    </li>
-                                    <li className="article__listItem">narzędzie do tłumaczenia pattern-ów: regex.com
-                                    </li>
-                                </ul>
-                            </li>
-                            <li className="article__listItem">pattern nie zastępuje required.
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                                    </ListItem>
+                                    <ListItem>narzędzie do tłumaczenia pattern-ów: regex.com
+                                    </ListItem>
+                                </ListUnordered>
+                            </ListItem>
+                            <ListItem>pattern nie zastępuje required.
+                            </ListItem>
+                        </ListUnordered>
+                    </ListItem>
+                </ListUnordered>
             </>
         )
     },
@@ -5073,103 +5116,103 @@ export const articlesLink = [
         title: "HTML - formularze c.d",
         body: (
             <>
-                <h4 className="article__subsubsubheader">input / password - hasło</h4>
+                <SmallestHeader>input / password - hasło</SmallestHeader>
                 <label>
                     Podaj swoje hasło:
                     <input name="password" type="password"/>
                 </label>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     &lt;label><br/>
                     &nbsp;&nbsp;&lt;Podaj swoje hasło:<br/>
                     &nbsp;&nbsp;&lt;input type="password" name="password"><br/>
                     &lt;/label><br/>
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>
                         ukrywa wpisywane znaki, natomiast jesteśmy w stanie podejrzeć hasło, wpisując w konsolę
                         $0.value,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         hasło jest wysyłane <i>plaintext-em</i>, jeśli połączenie nie jest szyfrowane.
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">input / number</h4>
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>input / number</SmallestHeader>
                 <label>
                     Twój wzrost:
                     <input name="height" type="number"/>
                 </label>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     &lt;label><br/>
                     &nbsp;&nbsp;&lt;Twój wzrost<br/>
                     &nbsp;&nbsp;&lt;input type="number" name="number"><br/>
                     &lt;/label><br/>
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>
                         pole liczbowe,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         atrybut step (step="any") (step="0,02") określa skalę co ile ma wzrastać wartość,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         atrybuty min i max określają minimalną i maksymalną wartość,
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">input / range</h4>
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>input / range</SmallestHeader>
                 <label>
                     Maksymalna cena:
                     <input max="2000" min="1000" name="maxPrice" step="100" type="range"/>
                 </label>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     &lt;label><br/>
                     &nbsp;&nbsp;&lt;Maksymalna cena:<br/>
                     &nbsp;&nbsp;&lt;input type="range" name="maxPrice" min="1000" max="2000" step="100"><br/>
                     &lt;/label><br/>
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>
                         inny sposób na wpisanie liczby,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         warto ustawić min, max i step,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         nie pokazuje liczby.
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">input / tel</h4>
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>input / tel</SmallestHeader>
                 <label>
                     Numer telefonu:
                     <input name="tel" type="tel"/>
                 </label>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     &lt;label><br/>
                     &nbsp;&nbsp;&lt;Numer telefonu:<br/>
                     &nbsp;&nbsp;&lt;input type="tel" name="tel"><br/>
                     &lt;/label><br/>
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>
                         numer telefonu,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         można wpisać cokolwiek,
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">input / url</h4>
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>input / url</SmallestHeader>
                 <label>
                     Adres Twojej strony internetowej:
                     <input name="website" type="url"/>
                 </label>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                <ListUnordered>
+                    <ListItem>
                         adres URL,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         sprawdza poprawność,
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">autocomplete box</h4>
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>autocomplete box</SmallestHeader>
                 <label>
                     Marka samochodu:
                     <input list="carBrands" name="carBrand"/>
@@ -5180,7 +5223,7 @@ export const articlesLink = [
                         <option>Tesla</option>
                     </datalist>
                 </label>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     label><br/>
                     &nbsp;&nbsp;&lt;Marka samochodu:<br/>
                     &nbsp;&nbsp;&lt;input name="carBrand" list="carBrands"><br/>
@@ -5190,79 +5233,79 @@ export const articlesLink = [
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;option>Tesla&lt;/option><br/>
                     &nbsp;&nbsp;&lt;/datalist><br/>
                     &lt;/label><br/>
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>
                         input z sugerowanymi opcjami (dropdown),
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">input / hidden</h4>
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>input / hidden</SmallestHeader>
                 <input name="something" type="hidden" value="something"/>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     &lt;input type="hidden" name="something" value="something"><br/>
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>
                         pole niewidoczne dla użytkownika, ale widoczne dla developera,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         niemożliwe do edycji, ale wysyłane,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         powinien mieć atrybuty name i value.
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">input / color</h4>
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>input / color</SmallestHeader>
                 <label>
                     <input name="color" type="color" value="#ccc"/>
                 </label>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     &lt;input name="color" type="color" type="color" value="#ccc"><br/>
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>
                         wybór koloru,
-                    </li>
-                    <li className="article__listItem">
+                    </ListItem>
+                    <ListItem>
                         wartość zawsze w formacie 6-znakowego hexa.
-                    </li>
-                </ul>
-                <h4 className="article__subsubsubheader">input / data i czas</h4>
+                    </ListItem>
+                </ListUnordered>
+                <SmallestHeader>input / data i czas</SmallestHeader>
                 <label>
                     <input name="date" type="date"/>
                 </label>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     &lt;input name="date" type="date"><br/>
-                </blockquote>
+                </Blockquote>
                 <label>
                     <input name="dateAndTime" type="datetime-local"/>
                 </label>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     &lt;input name="dateAndTime" type="datetime-local"><br/>
-                </blockquote>
+                </Blockquote>
                 <label>
                     <input name="time" type="time"/>
                 </label>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     &lt;input name="time" type="time"><br/>
-                </blockquote>
+                </Blockquote>
                 <label>
                     <input name="week" type="week"/>
                 </label>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     &lt;input name="week" type="week"><br/>
-                </blockquote>
+                </Blockquote>
                 <label>
                     <input name="month" type="month"/>
                 </label>
-                <blockquote className="article__blockquote">
+                <Blockquote>
                     &lt;input name="month" type="month"><br/>
-                </blockquote>
-                <ul className="article__unorderedList">
-                    <li className="article__listItem">
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>
                         słabo wspierane.
-                    </li>
-                </ul>
+                    </ListItem>
+                </ListUnordered>
             </>
         )
     },
@@ -5346,7 +5389,7 @@ export const articlesLink = [
                     &lt;input id="name" name="name"><br/>
                 </Blockquote>
                 <label>Imię i nazwisko<input name="name"/></label>
-                <h4 className="article__subsubsubheader">przyciski</h4>
+                <SmallestHeader>przyciski</SmallestHeader>
                 <Blockquote>
                     &lt;button>Wyślij!&lt;/button><br/><br/>
                     &lt;!-- lub: --><br/><br/>
@@ -5361,7 +5404,7 @@ export const articlesLink = [
                                 formularza),
                             </ListItem>
                             <ListItem><b>reset</b> - resetuje formularz,</ListItem>
-                            <ListItem className="article__listItem"><b>button</b> - zwykły przycisk, brak domyślnej
+                            <ListItem><b>button</b> - zwykły przycisk, brak domyślnej
                                 akcji,
                             </ListItem>
                         </ListUnordered>
@@ -5428,7 +5471,7 @@ export const articlesLink = [
                     <ListItem>wysyłana jest wartość tylko zaznaczonego pola,</ListItem>
                     <ListItem>nie da się odznaczyć pola.</ListItem>
                 </ListUnordered>
-                <h4 className="article__subsubsubheader">select</h4>
+                <SmallestHeader>select</SmallestHeader>
                 <label>
                     ulubiony wokalista:
                     <select name="favouriteSinger">
@@ -5453,7 +5496,7 @@ export const articlesLink = [
                     <ListItem>atrybut size — liczba widocznych opcji,</ListItem>
                     <ListItem>atrybut multiple — wielokrotny wybór.</ListItem>
                 </ListUnordered>
-                <h4 className="article__subsubsubheader">input / file</h4>
+                <SmallestHeader>input / file</SmallestHeader>
                 <label>
                     Załącz swoje CV
                     <input name="cv" type="file"/>
@@ -5468,7 +5511,7 @@ export const articlesLink = [
                     <ListItem>wybór plików,</ListItem>
                     <ListItem>atrybut multiple — wiele plików,</ListItem>
                 </ListUnordered>
-                <h4 className="article__subsubsubheader">input / email</h4>
+                <SmallestHeader>input / email</SmallestHeader>
                 <label>
                     Adres e-mail do kontaktu:
                     <input name="email" type="email"/>
@@ -5514,7 +5557,7 @@ export const articlesLink = [
                     </ListItem>
                     <ListItem>sprawia, że kod jest łatwiejszy do zrozumienia,</ListItem>
                     <ListItem>sprawia, że łatwiej pracować z kodem i go utrzymywać,</ListItem>
-                    <ListItem className="article__listItem">pozwala na swobodne rozrastanie się aplikacji
+                    <ListItem>pozwala na swobodne rozrastanie się aplikacji
                         (skalowanie),</ListItem>
                     <ListItem>sprawia, że wszyscy developerzy w zespole "mówią tym samym
                         językiem",
@@ -6499,11 +6542,11 @@ export const articlesLink = [
     //     title: "JavaScript - ćwiczenie z przyciskiem (addEventListener)",
     //     body: (
     //         <>
-    //             <blockquote className="article__blockquote">
+    //             <blockquote>
     //                 button.addEventListener("click", () =>&#123;<br/>
     //                 &nbsp;&nbsp;naglowek.remove();
     //                 <br/>&#125;);&lt;br>
-    //             </blockquote>
+    //             </Blockquote>
     //             <button className="button">Usuń nagłówek</button>
     //         </>
     //     )
@@ -6567,11 +6610,8 @@ export const articlesLink = [
                 <p>Nazwa zmiennej jak najbardziej może zawierać cyfry, ale nie mogą one być na pierwszym miejscu.
                 </p>
                 <p>Jest kilka słów wbudowanych do <i>JavaScript-a</i>, których nie możemy użyć do nazwania zmiennej, np.
-                    <i>var</i>, <i>let</i>, <i>function</i> itd. <a href="https://mothereff.in/js-variables"
-                                                                    target="_blank"
-                                                                    title="JavaScript variable name validator">Przydatna
-                        stronka, do
-                        sprawdzenia, czy nazwa, której chcesz użyć, nie jest zajęta</a>.
+                    <i>var</i>, <i>let</i>, <i>function</i> itd. <a href="https://mothereff.in/js-variables" target="_blank" title="JavaScript variable name validator">Przydatna
+                        stronka, do sprawdzenia, czy nazwa, której chcesz użyć, nie jest zajęta</a>.
                 </p>
                 <p>Przy nazywaniu zmiennych używamy konwencji <i>camelCase</i> oraz liter alfabetu łacińskiego..</p>
             </>
@@ -6757,10 +6797,8 @@ export const articlesLink = [
                     najgorzej radzi sobie <i>IE</i>. Na kursie dowiedziałam się, że warto sprawdzać kompatybilność
                     <i>CSS</i> z różnymi wersjami różnych przeglądarek. Przydatne linki do sprawdzenia są <a
                     href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"
-                    title="MDN, a jakże">TU</a> i <a href="https://caniuse.com/" target="_blank"
-                                                     title="CanIUse">TU</a>. Natomiast muszę jeszcze dokładniej
-                    poczytać, o co chodzi z tym <a
-                    href="https://www.w3.org/TR/css-2020/" target="_blank"
+                    title="MDN, a jakże">TU</a> i <a href="https://caniuse.com/" target="_blank" title="CanIUse">TU</a>. Natomiast muszę jeszcze dokładniej
+                    poczytać, o co chodzi z tym <a href="https://www.w3.org/TR/css-2020/" target="_blank"
                     title="Strona W3C o CSS Snapshot 2020">CSS Snapshot 2020.</a> I wypadałoby mi odwiedzić też
                     i <a href="https://www.w3.org/Style/CSS/" target="_blank"
                          title="Ironicznie brzydka strona o CSS">TĄ</a> stronę, by zapoznać się z dokumentacją.
@@ -7409,12 +7447,12 @@ export const articlesLink = [
                         The opening tag (znacznik otwierający): Zawiera nazwę elementu, jak w tym przykładzie p od
                         "paragraph". Umieszczony jest przed tekstem i otoczony jest nawiasami ostrokątnymi.
                     </ListItem>
-                    <ListItem className="article__listItem">The content (treść): Mamy tutaj dosłownie treść, którą
+                    <ListItem>The content (treść): Mamy tutaj dosłownie treść, którą
                         chcemy
                         otoczyć
                         znacznikami HTML
                     </ListItem>
-                    <ListItem className="article__listItem">The closing tag (znacznik zamykający): Tak samo, jak w
+                    <ListItem>The closing tag (znacznik zamykający): Tak samo, jak w
                         przypadku
                         znacznika otwierającego, tyle że umieszczany po treści. Pokazuje gdzie dany element się
                         kończy.
