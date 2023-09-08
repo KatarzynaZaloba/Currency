@@ -20,6 +20,20 @@ import Index from "../../atoms/Comment";
 
 export const articlesLink = [
     {
+        id: 88,
+        date: "08 września 2023 roku",
+        title: "Nowy feature",
+        body: (
+            <>
+                <p>Wprowadziłam wczoraj wieczorem nowy feature - prowizoryczną wyszukiwarkę artykułów. Mam takie zadanie
+                    w pracy, stworzyć wyszukiwarkę po kilku podstronach, więc musiałam to przećwiczyć.
+                    Dlaczego <Q>prowizoryczną</Q>? Jeszcze nie do końca działa tak jakbym tego chciała, ale z czasem to
+                    poprawię. Bardzo przyjemne jest to, że mogę się uczyć nie tylko przy moim projekcie bloga ale i
+                    projekcie komercyjnym i utrwalać wzajemnie nabyte umiejętności. Tymczasem wracam do nauki.</p>
+            </>
+        )
+    },
+    {
         id: 87,
         date: "07 września 2023 roku",
         title: "JS - praca z datami i godzinami",
@@ -107,7 +121,7 @@ export const articlesLink = [
                     </ListItem>
                 </ListUnordered>
                 <SmallestHeader>
-                   data i czas przechowywane są w standardzie UTC
+                    data i czas przechowywane są w standardzie UTC
                 </SmallestHeader>
                 <ListUnordered>
                     <ListItem>
@@ -120,15 +134,15 @@ export const articlesLink = [
                 <Blockquote>
                     <b>const</b> newDate = <b>new</b> Date();<br/><br/>
                     console.log(newDate.toLocaleString());<br/>
-                    <Index text="// 22.07.2020, 17:36:26" /><br/><br/>
+                    <Index text="// 22.07.2020, 17:36:26"/><br/><br/>
                     console.log(newDate.toLocaleDateString(<br/>
                     &nbsp;&nbsp;<b>undefined,</b><br/>
                     &nbsp;&nbsp;&#123; month: "long", weekday: "long", day: "numeric", year: "numeric"<br/>
                     &#125;,<br/>
                     ));<br/>
-                    <Index text="// środa, 22 lipca 2020" /><br/><br/>
+                    <Index text="// środa, 22 lipca 2020"/><br/><br/>
                     console.log(newDate.toLocaleTimeString());<br/>
-                    <Index text="// 17:36:26" /><br/>
+                    <Index text="// 17:36:26"/><br/>
                 </Blockquote>
                 <SmallestHeader>
                     toISOString()
@@ -531,7 +545,7 @@ export const articlesLink = [
                                     &#125;;<br/><br/>
                                     button.addEventListener("click", hello);<br/><br/>
                                     <Index text="// później, kiedy to już nie jest
-                                    potrzebne" /><br/>
+                                    potrzebne"/><br/>
                                     button.removeEventListener("click", hello);
                                 </Blockquote>
                             </ListItem>
@@ -583,7 +597,7 @@ export const articlesLink = [
             <>
                 <SmallestHeader>Named exports</SmallestHeader>
                 <Blockquote>
-                    <Index text="// module.js" /><br/>
+                    <Index text="// module.js"/><br/>
                     <b>const</b> myFunction = () => &#123;<br/>
                     &nbsp;&nbsp;console.log('hello');<br/>
                     &#125;;<br/><br/>
@@ -592,14 +606,14 @@ export const articlesLink = [
                     <b>export default</b> &#123;<br/>
                     &nbsp;&nbsp;some: "Object",<br/>
                     &#125;;<br/><br/>
-                    <Index text="// index.js" /><br/>
+                    <Index text="// index.js"/><br/>
                     <b>import</b> module, &#123;myFunction, text &#125; <b>from</b> "./module";
                 </Blockquote>
                 <SmallestHeader>Zmienianie nazwy importów i exportów</SmallestHeader>
                 <Blockquote>
-                    <Index text="// zmiana nazwy eksportu" /> <br/>
+                    <Index text="// zmiana nazwy eksportu"/> <br/>
                     <b>export</b> &#123;myFunction <b> as < /b> anotherFunctionName &#125;;<br/><br/>
-                    <Index text="// zmiana nazwy importu" /><br/>
+                    <Index text="// zmiana nazwy importu"/><br/>
                     <b>import</b> &#123;text <b>as</b> anotherName &#125;
                     <b>from</b> "./module";
                 </Blockquote>
@@ -1724,11 +1738,11 @@ export const articlesLink = [
                     &nbsp;&nbsp;gender: "male",<br/>
                     &#125;;<br/><br/>
                     <b>const</b> &#123;name, surname, ...rest&#125; = person;<br/>
-                    <Index text="//rest - obiekt z pozostałymi właściwościami" /><br/><br/>
+                    <Index text="//rest - obiekt z pozostałymi właściwościami"/><br/><br/>
                     <b>const</b> &#123; city = "N/A"&#125; = person;<br/>&nbsp;&nbsp;//domyślna wartość<br/>
                     <b>const</b> &#123;surname: lastName&#125; = person;<br/>&nbsp;&nbsp;//inna nazwa zmiennej/
                     stałej<br/><br/>
-                    <Index text="//obiekt jako argument funkcji" /><br/>
+                    <Index text="//obiekt jako argument funkcji"/><br/>
                     <b>const</b> getPersonFullName = (&#123;name, surname&#125;) =>
                     `$&#123;name&#125; $&#123;surname&#125;`;<br/>
                 </Blockquote>
