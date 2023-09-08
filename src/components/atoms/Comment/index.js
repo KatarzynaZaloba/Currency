@@ -1,10 +1,10 @@
 import React from 'react';
 import "./style.css";
 
-const Index = ({ text }) => {
+const Comment = ({ text }) => {
     return (
-        <span className="article__blockquoteComment">{text}</span>
+        <span className="article__blockquoteComment">// {text}</span>
     )
 }
 
-export default Index;
+export default Comment;
