@@ -10,7 +10,6 @@ import Main from "./components/atoms/Main";
 import {
     articlesLink
 } from "./components/molecules/Article/ArticleData";
-import ArticleCard from "./components/molecules/ArticleCard";
 
 function App() {
     const [searchTerm, setSearchTerm] = useState("");
