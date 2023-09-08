@@ -1,11 +1,10 @@
 import React from "react";
-import "./style.css";
 import ArticleHeader from "../../atoms/ArticleHeader";
 
 const Article = ({date, title, body}) => {
 
     return (
-        <article>
+        <article className="pt-2 pb-6 m-auto">
             <ArticleHeader
                 date={date}
                 title={title}

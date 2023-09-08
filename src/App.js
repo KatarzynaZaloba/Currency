@@ -44,10 +44,6 @@ function App() {
                     subtitle=""
                     body={
                         <>
-                            {/*<div className="articleCard__Wrapper">*/}
-                            {/*<ArticleCard />*/}
-                            {/*<ArticleCard />*/}
-                            {/*</div>*/}
                             {filteredArticles.map((article) => (
                                 <Article
                                     key={article.id}

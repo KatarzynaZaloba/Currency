@@ -1,11 +1,12 @@
 import React from 'react';
-import "./style.css";
 
 const Figure = ({ children }) => {
     return (
-        <figure className="article__figure">
+        <div className="flex justify-center bg-emerald-50 py-4 m-4">
+        <figure className="m-auto text-center w-1/1 md:w-1/2 p-4">
             {children}
         </figure>
+        </div>
     )
 }
 

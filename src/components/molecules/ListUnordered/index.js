@@ -1,9 +1,8 @@
 import React from 'react';
-import './style.css';
 
 const ListUnordered = ({children}) => {
     return (
-        <ul className="article__unorderedList">
+        <ul className="list-disc marker:text-emerald-400 leading-8 p-1.5 text-left ml-2.5">
             {children}
         </ul>
     );

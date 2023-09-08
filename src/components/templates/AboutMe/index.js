@@ -8,7 +8,13 @@ const AboutMe = () => {
         <Section
             title="O mnie"
             extraHeaderContent={
-                <img className="article__image section__aboutMePortrait" src={Logo} alt="Katarzyna Żałoba"/>
+                <>
+                    <div className="flex justify-center items-center py-4 md:py-6">
+                        <img className="rounded-full w-1/5 md:w-1/6" src={Logo}
+                             alt="Katarzyna Żałoba"/>
+                    </div>
+                </>
+
             }
             body={
                 <>
@@ -17,7 +23,8 @@ const AboutMe = () => {
                         Bardzo miło mi będzie zaprosić cię do zgłębienia reszty strony.
                     </p>
                     <p>
-                        W wolnych chwilach uwielbiam truchtać po lesie. Zawodowo zajmowałam się ochroną danych osobowych, wszelkiego rodzaju wsparciem technicznym
+                        W wolnych chwilach uwielbiam truchtać po lesie. Zawodowo zajmowałam się ochroną danych
+                        osobowych, wszelkiego rodzaju wsparciem technicznym
                         (helpdesk), miniserwisem sprzętów IT i układaniem procesów i instrukcji.</p>
                     <p>
                         Od dziecka marzyłam o programowaniu. Dopiero po swoich trzydziestych urodzinach

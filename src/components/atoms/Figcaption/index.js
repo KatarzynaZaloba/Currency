@@ -1,9 +1,8 @@
 import React from 'react';
-import "./style.css";
 
 const Figcaption = ({ children }) => {
     return (
-        <figcaption className="article__figcaption">
+        <figcaption className="py-2 text-sm">
             {children}
         </figcaption>
     )

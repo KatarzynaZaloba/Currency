@@ -1,9 +1,8 @@
 import React from 'react';
-import './style.css';
 
 const SmallestHeader = ({ children }) => {
     return (
-        <h4 className="article__subsubsubheader">{children}</h4>
+        <h4 className="text-emerald-700 text-left text-lg py-4 font-semibold">{children}</h4>
     );
 };
 

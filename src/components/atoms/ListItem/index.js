@@ -1,9 +1,8 @@
 import React from 'react';
-import './style.css';
 
 const ListItem = ({children}) => {
     return (
-        <li className="article__listItem">
+        <li className="ml-4">
             {children}
         </li>
     );
