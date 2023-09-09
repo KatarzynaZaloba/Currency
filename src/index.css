@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    html {
+        font-family: Work Sa, system-ui, sans-serif;
+    }
+}
+
 html {
     box-sizing: border-box;
 }
@@ -12,7 +18,7 @@ html {
 
 body {
     color: #333333;
-    font-family: 'Montserrat', sans-serif;
+    //font-family: 'Montserrat', sans-serif;
     margin: 0;
 }
 

@@ -10,6 +10,10 @@ import Main from "./components/atoms/Main";
 import {
     articlesLink
 } from "./components/molecules/Article/ArticleData";
+import NavBarTitle from "./components/atoms/NavBarTitle";
+import SearchBar from "./components/molecules/SearchBar";
+import SwitchButton from "./components/molecules/SwitchButton";
+import NavBar from "./components/organisms/NavBar";
 
 function App() {
     const [searchTerm, setSearchTerm] = useState("");
@@ -24,17 +28,17 @@ function App() {
 
     return (
         <div>
-            <nav className="navigation">
-                <input
-                    className="navigation__search"
-                    type="text"
-                    placeholder="Szukaj artykułu..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                />
-            </nav>
+            {/*<nav className="navigation">*/}
+            {/*    <input*/}
+            {/*        className="navigation__search"*/}
+            {/*        type="text"*/}
+            {/*        placeholder="Szukaj artykułu..."*/}
+            {/*        value={searchTerm}*/}
+            {/*        onChange={(e) => setSearchTerm(e.target.value)}*/}
+            {/*    />*/}
+            {/*</nav>*/}
             <Container>
-
+<NavBar />
                 <Main>
                     <AboutMe/>
                 </Main>
