@@ -14,6 +14,11 @@ import NavBarTitle from "./components/atoms/NavBarTitle";
 import SearchBar from "./components/molecules/SearchBar";
 import SwitchButton from "./components/molecules/SwitchButton";
 import NavBar from "./components/organisms/NavBar";
+import FooterSectionTitle from "./components/atoms/FooterSectionTitle";
+import FooterSectionUndertitle from "./components/atoms/FooterSectionUndertitle";
+import FooterSectionParagraph from "./components/atoms/FooterSectionParagraph";
+import FooterContactTitle from "./components/atoms/FooterContactTitle";
+import HomePageHeader from "./components/molecules/HomePageHeader";
 
 function App() {
     const [searchTerm, setSearchTerm] = useState("");
@@ -38,30 +43,31 @@ function App() {
             {/*    />*/}
             {/*</nav>*/}
             <Container>
-<NavBar />
-                <Main>
-                    <AboutMe/>
-                </Main>
+                <NavBar/>
+                <HomePageHeader />
+                {/*<Main>*/}
+                {/*    <AboutMe/>*/}
+                {/*</Main>*/}
 
-                <Section
-                    title="Blog"
-                    subtitle=""
-                    body={
-                        <>
-                            {filteredArticles.map((article) => (
-                                <Article
-                                    key={article.id}
-                                    date={article.date}
-                                    title={article.title}
-                                    body={article.body}
-                                />
-                            ))}
+                {/*<Section*/}
+                {/*    title="Blog"*/}
+                {/*    subtitle=""*/}
+                {/*    body={*/}
+                {/*        <>*/}
+                {/*            /!*{filteredArticles.map((article) => (*!/*/}
+                {/*            /!*    <Article*!/*/}
+                {/*            /!*        key={article.id}*!/*/}
+                {/*            /!*        date={article.date}*!/*/}
+                {/*            /!*        title={article.title}*!/*/}
+                {/*            /!*        body={article.body}*!/*/}
+                {/*            /!*    />*!/*/}
+                {/*            /!*))}*!/*/}
 
-                        </>
-                    }
-                />
+                {/*        </>*/}
+                {/*    }*/}
+                {/*/>*/}
             </Container>
-            <Footer title="2023 Katarzyna Żałoba"/>
+            <Footer />
         </div>
     );
 }
