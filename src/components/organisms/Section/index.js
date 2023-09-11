@@ -1,10 +1,11 @@
 import React from "react";
 import "./style.css";
+import SectionTitle from "../../atoms/SectionTitle";
 
 const Section = ({title, body, extraHeaderContent}) => {
     return (
         <section className="">
-            <h2 className="text-center text-emerald-700 font-semibold text-2xl md:text-3xl pt-4 md:pt-6">{title}</h2>
+            <SectionTitle title={title}/>
             {extraHeaderContent}
             {body}
         </section>

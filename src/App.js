@@ -21,9 +21,11 @@ import FooterContactTitle from "./components/atoms/FooterContactTitle";
 import HomePageHeader from "./components/molecules/HomePageHeader";
 import SectionTitle from "./components/atoms/SectionTitle";
 import OneArticleCard from "./components/organisms/OneArticleCard";
+import Button from "./components/atoms/Button";
 
 function App() {
     const [searchTerm, setSearchTerm] = useState("");
+    const [numberOfPosts, setNumberOfPosts] = useState(6);
     const sortedArticles = [...articlesLink].sort((a, b) => b.id - a.id);
     const filteredArticles = sortedArticles.filter(
         article =>
@@ -31,52 +33,37 @@ function App() {
             (typeof article.body === 'string' && article.body.toLowerCase().includes(searchTerm.toLowerCase())) ||
             (typeof article.date === 'string' && article.date.toLowerCase().includes(searchTerm.toLowerCase()))
     );
-
+    const articlesToDisplay = filteredArticles.slice(0, numberOfPosts);
 
     return (
         <div>
-            {/*<nav className="navigation">*/}
-            {/*    <input*/}
-            {/*        className="navigation__search"*/}
-            {/*        type="text"*/}
-            {/*        placeholder="Szukaj artykułu..."*/}
-            {/*        value={searchTerm}*/}
-            {/*        onChange={(e) => setSearchTerm(e.target.value)}*/}
-            {/*    />*/}
-            {/*</nav>*/}
             <Container>
                 <NavBar/>
                 <HomePageHeader/>
-                <SectionTitle title="Ostatnie posty"/>
-                <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
-                    <OneArticleCard/>
-                    <OneArticleCard/>
-                    <OneArticleCard/>
-                    <OneArticleCard/>
-                    <OneArticleCard/>
-                    <OneArticleCard/>
-                </div>
-                {/*<Main>*/}
-                {/*    <AboutMe/>*/}
-                {/*</Main>*/}
-
-                {/*<Section*/}
-                {/*    title="Blog"*/}
-                {/*    subtitle=""*/}
-                {/*    body={*/}
-                {/*        <>*/}
-                {/*            /!*{filteredArticles.map((article) => (*!/*/}
-                {/*            /!*    <Article*!/*/}
-                {/*            /!*        key={article.id}*!/*/}
-                {/*            /!*        date={article.date}*!/*/}
-                {/*            /!*        title={article.title}*!/*/}
-                {/*            /!*        body={article.body}*!/*/}
-                {/*            /!*    />*!/*/}
-                {/*            /!*))}*!/*/}
-
-                {/*        </>*/}
-                {/*    }*/}
-                {/*/>*/}
+                <Section
+                    title="Ostatnie posty"
+                    subtitle=""
+                    body={
+                        <>
+                        <div className="grid md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1">
+                            {articlesToDisplay.map((article) => (
+                                <OneArticleCard
+                                    key={article.id}
+                                    date={article.date}
+                                    title={article.title}
+                                    body={article.body}
+                                />
+                            ))}
+                        </div>
+                            <div className="flex justify-center items-center my-6">
+                                <Button text="Zobacz więcej" onClick={() => {
+                                    setNumberOfPosts(numberOfPosts + 6);
+                                    console.log("Kliknięto przycisk, nowa liczba postów to:", numberOfPosts + 6);
+                                }} />
+                            </div>
+                        </>
+                    }
+                />
             </Container>
             <Footer/>
         </div>
