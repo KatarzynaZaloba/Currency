@@ -5,7 +5,7 @@ import Logo from "../../../images/kate.jpg";
 
 const HomePageHeader = () => {
     return (
-        <div className="relative">
+        <div className="mb-4 relative">
             <img src={homePageHeader} className="" alt="logo"/>
             <div className="bg-white max-w-[518px] absolute rounded-lg -bottom-10 left-10 p-8 z-10 drop-shadow-2xl">
                 <span className="homePageTitle bg-blue-700 text-white text-sm py-0 px-1 rounded-md justify-center">Technology</span>

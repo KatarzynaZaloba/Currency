@@ -19,6 +19,8 @@ import FooterSectionUndertitle from "./components/atoms/FooterSectionUndertitle"
 import FooterSectionParagraph from "./components/atoms/FooterSectionParagraph";
 import FooterContactTitle from "./components/atoms/FooterContactTitle";
 import HomePageHeader from "./components/molecules/HomePageHeader";
+import SectionTitle from "./components/atoms/SectionTitle";
+import OneArticleCard from "./components/organisms/OneArticleCard";
 
 function App() {
     const [searchTerm, setSearchTerm] = useState("");
@@ -44,7 +46,16 @@ function App() {
             {/*</nav>*/}
             <Container>
                 <NavBar/>
-                <HomePageHeader />
+                <HomePageHeader/>
+                <SectionTitle title="Ostatnie posty"/>
+                <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+                    <OneArticleCard/>
+                    <OneArticleCard/>
+                    <OneArticleCard/>
+                    <OneArticleCard/>
+                    <OneArticleCard/>
+                    <OneArticleCard/>
+                </div>
                 {/*<Main>*/}
                 {/*    <AboutMe/>*/}
                 {/*</Main>*/}
@@ -67,7 +78,7 @@ function App() {
                 {/*    }*/}
                 {/*/>*/}
             </Container>
-            <Footer />
+            <Footer/>
         </div>
     );
 }
