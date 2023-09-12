@@ -26,9 +26,11 @@ export const articlesLink = [
         body: (
             <>
                 <p>
-                Jak zapewne niektórzy z Was zauważą, wygląd bloga zmienił sie diametralnie. Jeszcze nie mam wszystkich
-                funkcjonalności, stanów i moja <q>prowizoryczna</q> baza artykułów tez wymaga przerobienia, jednak
-                chciałam pochwalić się progresem. Poza tym korci mnie, by wrócić do nauki, a gdzie mam to utrwalać jak nie tutaj?
+                    Jak zapewne niektórzy z Was zauważą, wygląd bloga zmienił sie diametralnie. Jeszcze nie mam
+                    wszystkich
+                    funkcjonalności, stanów i moja <q>prowizoryczna</q> baza artykułów tez wymaga przerobienia, jednak
+                    chciałam pochwalić się progresem. Poza tym korci mnie, by wrócić do nauki, a gdzie mam to utrwalać
+                    jak nie tutaj?
                 </p>
             </>
         )
@@ -85,6 +87,48 @@ export const articlesLink = [
                         itd.
                     </ListItem>
                 </ListUnordered>
+                <SmallestHeader>
+                    localStorage
+                </SmallestHeader>
+                <ListUnordered>
+                    <ListItem>
+                        posiada bardzo prostą składnię
+                    </ListItem>
+                    <ListItem>
+                        przydaje się do prostych danych
+                    </ListItem>
+                    <ListItem>
+                        przechowuje dane na stałe
+                    </ListItem>
+                </ListUnordered>
+                <p>Natomiast jak zapisać coś takiego do <b>localStorage</b>? Do tego służy metoda <b>setItem</b>:</p>
+                <Blockquote>
+                    localStorage.setItem("theme", "dark");
+                </Blockquote>
+                <p>aby odczytać <b>localStorage</b>, używamy metody <b>getItem</b>:</p>
+                <Blockquote>
+                    <b>const</b> theme = localStorage.getItem("theme");
+                </Blockquote>
+                <ListUnordered>
+                    <ListItem>jeżeli pod podanym kluczem nie będzie żadnej wartości to po prostu zwróci nam
+                        to <i>nulla</i></ListItem>
+                </ListUnordered>
+                <p>Aby usunąć wartość z <b>localStorage</b>, użyjemy metody <b>removeItem</b>:</p>
+                <Blockquote>
+                    localStorage.removeItem("theme");
+                </Blockquote>
+                <p>Powstaje pytanie, co w przypadku, gdy chcemy przechować jakiś inny typ niż <i>string</i>, coś, co jest
+                    złożone, jak np. obiekt czy tablice? W tym przypadku możemy użyć metody <b>JSON.stringify</b>, która
+                    konwertuje naszą wartość do tzw. formatu <i>JSON</i>.</p>
+                <Blockquote>
+                    <b>const</b> configuration = &#123;<br/>
+                    &nbsp;&nbsp;theme: "dark",<br/>
+                    &nbsp;&nbsp;language: "pl",<br/>
+                    &#125;;<br/><br/>
+                    localStorage.setItem("configuration", JSON.stringify(configuration));<br/><br/>
+                    <Comment text="odczyt"/><br/>
+                    <b>const</b> configuration2 = JSON.parse(localStorage.getItem("configuration"));
+                </Blockquote>
             </>
         )
     },

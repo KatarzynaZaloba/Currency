@@ -3,7 +3,7 @@ import './index.css';
 
 const NavBarTitle = ({ title }) => {
     return (
-        <div className="text-work-sans text-base font-normal leading-6 text-">
+        <div className="hover:animate-bounce text-work-sans text-base font-normal leading-6 text-">
             {title}
         </div>
     )

@@ -12,7 +12,7 @@ const OneArticleCard = ({picture, tag, title, avatar, authorName, date}) => {
                 {/*<span className="my-2 text-work-sans rounded-md bg-blue-100 text-indigo-500 text-sm p-1 font-medium">*/}
                 {/*    Technology*/}
                 {/*</span>*/}
-                <h3 className="mb-1 mt-2 text-work-sans font-semibold text-2xl">{title}</h3>
+                <h3 className="mb-1 mt-2 text-work-sans font-semibold text-2xl ease-out duration-300 hover:animate-bounce hover:text-indigo-500 active:text-indigo-400 visited:text-indigo-900">{title}</h3>
                 </div>
                 <div className="px-4 pb-4 flex justify-start items-center">
                     <img src={Logo} className="rounded-full w-[36px] mr-2" alt="logo"/>
