@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <footer className="bg-zinc-100 m-auto px-5 md:pb-10 pb-5 md:px-40">
             <div className="py-4 grid grid-cols-4 gap-4">
-                <div className="py-4 lg:col-span-2 col-span-4">
+                <div className="pt-4 lg:col-span-2 col-span-4">
                     <div className="break-words">
                         <FooterSectionTitle title="O projekcie"/>
                         <FooterSectionParagraph
