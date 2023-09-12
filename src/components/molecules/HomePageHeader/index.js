@@ -8,7 +8,7 @@ const HomePageHeader = ({newestArticle}) => {
         <div className="mb-4 relative">
             <img src={homePageHeader} className="" alt="logo"/>
             <div className="bg-white max-w-[518px] absolute rounded-lg -bottom-10 left-10 p-8 z-10 drop-shadow-2xl">
-                <span className="homePageTitle bg-blue-700 text-white text-sm py-0 px-1 rounded-md justify-center">Technology</span>
+                {/*<span className="homePageTitle bg-blue-700 text-white text-sm py-0 px-1 rounded-md justify-center">Technology</span>*/}
                 <h2 className="homePageTitle text-3xl font-semibold leading-10">{newestArticle.title}</h2>
                 <div className="flex justify-start items-center">
                     <img src={Logo} className="rounded-full w-[36px] mr-2" alt="logo"/>

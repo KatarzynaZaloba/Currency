@@ -21,63 +21,8 @@ body {
     margin: 0;
 }
 
-
-a {
-    color: #2a5537;
-    text-decoration: none;
-}
-
-a:link {
-    color: #39744a;
-}
-
-a:visited {
-    color: #203f29;
-}
-
-a:focus {
-    outline: 2px solid currentColor;
-}
-
-a:hover {
-    color: #3c7c4f;
-}
-
-a:active {
-    color: #4ea368;
-}
-
 .panorama {
     width: 100%;
-}
-
-.article__figcaption {
-    font-size: 12px;
-    word-wrap: break-word;
-}
-
-.article__table {
-    border-collapse: collapse;
-    border: 1px solid black;
-    margin: 10px auto;
-    overflow-x: auto;
-    color: #333333;
-    width: 100%;
-    text-align: center
-}
-
-thead, tbody, tr, td, th, tfoot {
-    border: 1px solid black;
-    padding: 10px;
-    background-color: #f5f3f3;
-    word-wrap: break-word;
-}
-
-tr:hover {
-    filter: brightness(105%);
-    -webkit-box-shadow: -6px 11px 91px 0 rgba(122, 132, 99, 1);
-    -moz-box-shadow: -6px 11px 91px 0 rgba(122, 132, 99, 1);
-    box-shadow: -6px 11px 91px 0 rgba(122, 132, 99, 1);
 }
 
 .tableText__positive {
@@ -90,28 +35,6 @@ tr:hover {
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
-}
-
-.navigation {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    background-image: linear-gradient(to bottom, rgba(42, 85, 55, 0.45), #ffffff);
-    padding: 40px;
-    color: #ffffff;
-    margin: auto;
-}
-
-.navigation__search {
-    width: 319px;
-    border-radius: 5px;
-    height: 34px;
-    padding: 5px;
-}
-
-.dark {
-    color: #eee;
-    background-color: #222;
 }
 
 .article__withoutBulletList {

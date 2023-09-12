@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {Link} from "react-router-dom";
 import '../../App.css';
 import '../../index.css';
 import Footer from "../../components/molecules/Footer";
@@ -41,8 +42,10 @@ function HomePage() {
         <>
         <Container>
             <NavBar/>
+            <Link to={`/article/${newestArticle.id}`} key={newestArticle.id}>
             <HomePageHeader
                 newestArticle={newestArticle}/>
+            </Link>
             <Section
                 title="Ostatnie posty"
                 subtitle=""
@@ -50,12 +53,14 @@ function HomePage() {
                     <>
                         <div className="grid md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1">
                             {articlesToDisplay.map((article) => (
+                                <Link to={`/article/${article.id}`} key={article.id}>
                                 <OneArticleCard
                                     key={article.id}
                                     date={article.date}
                                     title={article.title}
                                     body={article.body}
                                 />
+                                </Link>
                             ))}
                         </div>
                         <div className="flex justify-center items-center my-6">
@@ -68,7 +73,7 @@ function HomePage() {
                 }
             />
         </Container>
-    <Footer/>
+            <Footer/>
     </>
 );
 }

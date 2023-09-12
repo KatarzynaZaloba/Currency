@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import "./style.css";
 import FooterSectionTitle from "../../atoms/FooterSectionTitle";
 import FooterSectionParagraph from "../../atoms/FooterSectionParagraph";
@@ -9,14 +10,14 @@ const Footer = () => {
         <footer className="bg-zinc-100 m-auto px-5 md:pb-10 pb-5 md:px-40">
             <div className="grid grid-cols-4 gap-4">
                 <div className="col-span-2">
-                    <div className="break-all">
-                        <FooterSectionTitle title="About"/>
+                    <div className="break-words">
+                        <FooterSectionTitle title="O projekcie"/>
                         <FooterSectionParagraph
-                            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"/>
+                            text="Jest to blog, który powstawał na przełomie kilku miesięcy. Piszę w nim o bieganiu oraz powtarzam i utrwalam materiał dotyczący web-developmentu. Chętnie wspomogę Cię także w Twoim projekcie!"/>
                     </div>
                     <div>
-                        <FooterSectionTitle title="Email: info@jstemplate.net"/>
-                        <FooterSectionTitle title="Phone: 880 123 456 789"/>
+                        <Link tonClick={() => window.location = 'mailto:kzalobafrontend@gmail.com'}><FooterSectionTitle title="Email: kzalobafrontend@gmail.com"/></Link>
+                        {/*<FooterSectionTitle title="Phone: 880 123 456 789"/>*/}
                     </div>
                 </div>
                 <div>
