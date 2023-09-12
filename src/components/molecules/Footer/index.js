@@ -42,7 +42,7 @@ const Footer = () => {
             </div>
             <div className="flex justify-between items-center border-t-2 py-4">
                 <div className="flex justify-center items-center">
-                    <p className="font-sm pr-2">UX UI Design:</p>
+                    <p className="text-work-sans font-sm pr-2 p-0">UI Design:</p>
                     <a href="https://www.jstemplate.net/" className="text-zinc-900 font-semibold">JS Template</a>
                 </div>
                 {/*<div className="flex justify-end items-center">*/}

@@ -2,7 +2,7 @@ import React from 'react';
 
 const ListUnordered = ({children}) => {
     return (
-        <ul className="list-disc marker:text-emerald-400 leading-8 p-1.5 text-left ml-2.5">
+        <ul className="list-disc marker:text-zinc-400 leading-8 text-left ml-2.5 py-6">
             {children}
         </ul>
     );

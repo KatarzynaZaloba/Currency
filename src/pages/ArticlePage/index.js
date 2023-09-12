@@ -28,8 +28,8 @@ const ArticlePage = () => {
                 </h3>
                     <div className="flex justify-start items-center pb-4">
                         <img src={Logo} className="rounded-full w-[36px] mr-2" alt="logo"/>
-                        <p className="text-xs text-zinc-700 font-medium mr-2">Katarzyna Żałoba</p>
-                        <p className="text-xs text-zinc-700">{article.date}</p>
+                        <p className="text-xs text-zinc-700 font-medium mr-2 text-work-sans">Katarzyna Żałoba</p>
+                        <p className="text-xs text-zinc-700 text-work-sans">{article.date}</p>
                     </div>
                 <div className="pb-6">
                 <img src={homePageHeader} className="" alt="logo"/>

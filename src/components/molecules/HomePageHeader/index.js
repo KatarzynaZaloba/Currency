@@ -12,8 +12,8 @@ const HomePageHeader = ({newestArticle}) => {
                 <h2 className="homePageTitle text-3xl font-semibold leading-10">{newestArticle.title}</h2>
                 <div className="flex justify-start items-center">
                     <img src={Logo} className="rounded-full w-[36px] mr-2" alt="logo"/>
-                    <p className="text-xs text-zinc-700 font-medium mr-2">Katarzyna Żałoba</p>
-                    <p className="text-xs text-zinc-700">{newestArticle.date}</p>
+                    <p className="text-xs text-zinc-700 font-medium mr-2 text-work-sans p-0">Katarzyna Żałoba</p>
+                    <p className="text-xs text-zinc-700 text-work-sans p-0">{newestArticle.date}</p>
                 </div>
             </div>
         </div>
