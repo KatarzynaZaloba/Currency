@@ -20,6 +20,20 @@ import Comment from "../../atoms/Comment";
 
 export const articlesLink = [
     {
+        id: 92,
+        date: "12 września 2023 roku",
+        title: "Po wprowadzeniu Tailwind",
+        body: (
+            <>
+                <p>
+                Jak zapewne niektórzy z Was zauważą, wygląd bloga zmienił sie diametralnie. Jeszcze nie mam wszystkich
+                funkcjonalności, stanów i moja <q>prowizoryczna</q> baza artykułów tez wymaga przerobienia, jednak
+                chciałam pochwalić się progresem. Poza tym korci mnie, by wrócić do nauki, a gdzie mam to utrwalać jak nie tutaj?
+                </p>
+            </>
+        )
+    },
+    {
         id: 91,
         date: "09 września 2023 roku",
         title: "Tailwind i nowa szata bloga",
