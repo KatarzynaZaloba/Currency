@@ -14,7 +14,7 @@ const OneArticleCard = ({picture, tag, title, avatar, authorName, date}) => {
                 {/*</span>*/}
                 <h3 className="mb-1 mt-2 text-work-sans font-semibold text-2xl">{title}</h3>
                 </div>
-                <div className="px-4 pb-4 flex justify-start items-center">
+                <div className="px-4 pb-4 flex justify-start items-end">
                     {/*<img src={Logo} className="rounded-full w-[36px] mr-2" alt="logo"/>*/}
                     {/*<p className="text-xs text-zinc-700 font-medium mr-2 text-work-sans p-0">Katarzyna Żałoba</p>*/}
                     <p className="text-xs text-zinc-700 text-work-sans p-0">{date}</p>
