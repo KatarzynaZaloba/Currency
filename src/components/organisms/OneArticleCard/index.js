@@ -7,12 +7,14 @@ const OneArticleCard = ({picture, tag, title, avatar, authorName, date}) => {
     return (
         <>
             <div className="border-2 rounded-md m-2 transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
-                <img src={Image} className="p-2"/>
+                <div className="p-2 rounded-md">
+                    <img src={picture ? picture : Image} className="rounded-md" />
+                </div>
                 <div className="py-2 px-4 text-left">
-                {/*<span className="my-2 text-work-sans rounded-md bg-blue-100 text-indigo-500 text-sm p-1 font-medium">*/}
-                {/*    Technology*/}
-                {/*</span>*/}
-                <h3 className="mb-1 mt-2 text-work-sans font-semibold text-2xl">{title}</h3>
+                    {/*<span className="my-2 text-work-sans rounded-md bg-blue-100 text-indigo-500 text-sm p-1 font-medium">*/}
+                    {/*    Technology*/}
+                    {/*</span>*/}
+                    <h3 className="mb-1 mt-2 text-work-sans font-semibold text-2xl">{title}</h3>
                 </div>
                 <div className="px-4 pb-4 flex justify-start items-end">
                     {/*<img src={Logo} className="rounded-full w-[36px] mr-2" alt="logo"/>*/}
@@ -24,4 +26,4 @@ const OneArticleCard = ({picture, tag, title, avatar, authorName, date}) => {
     )
 }
 
-export default OneArticleCard
+export default OneArticleCard;

@@ -32,7 +32,7 @@ const ArticlePage = () => {
                         <p className="text-xs text-zinc-700 text-work-sans p-0">{article.date}</p>
                     </div>
                 <div className="pb-6">
-                <img src={homePageHeader} className="" alt="logo"/>
+                <img src={article.img} className="" alt="logo"/>
                 </div>
                 <div className="pb-10">
                 {article.body}

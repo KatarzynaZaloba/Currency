@@ -26,7 +26,7 @@ import Button from "../../components/atoms/Button";
 
 function HomePage() {
     const [searchTerm, setSearchTerm] = useState("");
-    const [numberOfPosts, setNumberOfPosts] = useState(6);
+    const [numberOfPosts, setNumberOfPosts] = useState(7);
 
     const handleSearch = (newSearchTerm) => {
         setSearchTerm(newSearchTerm);
@@ -40,7 +40,7 @@ function HomePage() {
             (typeof article.body === 'string' && article.body.toLowerCase().includes(searchTerm.toLowerCase())) ||
             (typeof article.date === 'string' && article.date.toLowerCase().includes(searchTerm.toLowerCase()))
     );
-    const articlesToDisplay = filteredArticles.slice(0, numberOfPosts);
+    const articlesToDisplay = filteredArticles.slice(1, numberOfPosts);
 
     return (
         <>
@@ -66,6 +66,7 @@ function HomePage() {
                                     date={article.date}
                                     title={article.title}
                                     body={article.body}
+                                    picture={article.img}
                                 />
                                 </Link>
                             ))}

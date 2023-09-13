@@ -32,8 +32,11 @@ export const articlesLink = [
                     chciałam pochwalić się progresem. Poza tym korci mnie, by wrócić do nauki, a gdzie mam to utrwalać
                     jak nie tutaj?
                 </p>
+                <p>Photo by <a href="https://unsplash.com/@vorosbenisop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Benjamin Voros</a> on <a href="https://unsplash.com/photos/phIFdC6lA4E?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                </p>
             </>
-        )
+        ),
+        img: "https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
     },
     {
         id: 91,
@@ -44,8 +47,11 @@ export const articlesLink = [
                 <p>Wczoraj wieczorem zaczęłam przerabiać szatę graficzną bloga. Zdecydowałam się na framework
                     CSS <b>Tailwind</b>. Czyli znowu - chwila przerwy, po której wracam z zupełnie nowym wyglądem!
                 </p>
+                <p>Photo by <a href="https://unsplash.com/@doctype?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Aleks Dorohovich</a> on <a href="https://unsplash.com/photos/nJdwUHmaY8A?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                </p>
             </>
-        )
+        ),
+        img: "https://images.unsplash.com/3/doctype-hi-res.jpg?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2065&q=80"
     },
     {
         id: 90,
@@ -129,8 +135,11 @@ export const articlesLink = [
                     <Comment text="odczyt"/><br/>
                     <b>const</b> configuration2 = JSON.parse(localStorage.getItem("configuration"));
                 </Blockquote>
+                <p>Photo by <a href="https://unsplash.com/@starvingartistfoodphotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Christina Branco</a> on <a href="https://unsplash.com/photos/7P-wc2Z2Ujs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                </p>
             </>
-        )
+        ),
+        img: "https://images.unsplash.com/photo-1548365328-8c6db3220e4c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
     },
     {
         id: 89,
@@ -213,8 +222,11 @@ export const articlesLink = [
                     &#125;;<br/><br/>
                     count();
                 </Blockquote>
+                <p>Photo by <a href="https://unsplash.com/@insungyoon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">insung yoon</a> on <a href="https://unsplash.com/photos/w2JtIQQXoRU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                </p>
             </>
-        )
+        ),
+        img: "https://images.unsplash.com/photo-1541480601022-2308c0f02487?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
     },
     {
         id: 88,
@@ -227,8 +239,11 @@ export const articlesLink = [
                     Dlaczego <Q>prowizoryczną</Q>? Jeszcze nie do końca działa tak jakbym tego chciała, ale z czasem to
                     poprawię. Bardzo przyjemne jest to, że mogę się uczyć nie tylko przy moim projekcie bloga ale i
                     projekcie komercyjnym i utrwalać wzajemnie nabyte umiejętności. Tymczasem wracam do nauki.</p>
+                <p>Photo by <a href="https://unsplash.com/@laughayette?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Marten Newhall</a> on <a href="https://unsplash.com/photos/uAFjFsMS3YY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                </p>
             </>
-        )
+        ),
+        img: "https://images.unsplash.com/photo-1490127252417-7c393f993ee4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
     },
     {
         id: 87,
@@ -349,8 +364,11 @@ export const articlesLink = [
                         konwertuje datę do bardzo popularnego formatu <b>ISO 8601</b>
                     </ListItem>
                 </ListUnordered>
+                <p>Photo by <a href="https://unsplash.com/@towfiqu999999?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Towfiqu barbhuiya</a> on <a href="https://unsplash.com/photos/jOeh3Lv88xA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                </p>
             </>
-        )
+        ),
+        img: "https://images.unsplash.com/photo-1624969862293-b749659ccc4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
     },
     {
         id: 86,
@@ -405,8 +423,11 @@ export const articlesLink = [
                     React-owe. Gdy się już tym zajmę, popracuję nad szatą graficzną, wyszukiwarką i dostosowaniem kart
                     artykułów do przyjemniejszej formy niż aktualnej formy scrollowania.</p>
                 <p>Także czas zakasania rękawów i powrót do pracy! Trzymajcie się ciepło!</p>
+                <p>Photo by <a href="https://unsplash.com/@brookelark?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Brooke Lark</a> on <a href="https://unsplash.com/photos/nMffL1zjbw4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                </p>
             </>
-        )
+        ),
+        img: "https://images.unsplash.com/photo-1484981138541-3d074aa97716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
     },
     {
         id: 85,
@@ -3517,15 +3538,10 @@ export const articlesLink = [
     },
     {
         id: 53,
-        date
-:
-"13 lipca 2023 roku",
-    title
-:
-"CSS - Flex c.d.",
-    body
-:
-(
+        date: "13 lipca 2023 roku",
+        title: "CSS - Flex c.d.",
+        body:
+            (
     <>
         <SmallestHeader>align-items</SmallestHeader>
         <ListUnordered>
@@ -3760,15 +3776,10 @@ export const articlesLink = [
 ,
 {
     id: 52,
-        date
-:
-    "12 lipca 2023 roku",
-        title
-:
-    "CSS - Flex c.d.",
-        body
-:
-    (
+    date: "12 lipca 2023 roku",
+    title: "CSS - Flex c.d.",
+    body:
+        (
         <>
             <SmallestHeader>flex-grow</SmallestHeader>
             <ListUnordered>
@@ -3882,15 +3893,10 @@ export const articlesLink = [
 ,
 {
     id: 51,
-        date
-:
-    "11 lipca 2023",
-        title
-:
-    "CSS - Flex c.d.",
-        body
-:
-    (
+    date: "11 lipca 2023",
+    title: "CSS - Flex c.d.",
+    body:
+        (
         <>
             <SmallestHeader>flex-direction</SmallestHeader>
             <p>Flex layout ma dwie osie: główną i prostopadłą (main i cross). Oś prostopadła to oś pionowa.</p>
@@ -3937,15 +3943,9 @@ export const articlesLink = [
 ,
 {
     id: 50,
-        date
-:
-    "09 lipca 2023 roku",
-        title
-:
-    "CSS - Flex",
-        body
-:
-    (
+    date: "09 lipca 2023 roku",
+    title: "CSS - Flex",
+    body: (
         <>
             <p><b>Flex</b> to moduł w CSS-ie, który pozwala nam układać elementy w wierszach i kolumnach.</p>
             <p>Aby dodać <b>Flex-a</b> należy przede wszystkim dodać wartość <i>flex</i> do właściwości
@@ -4069,15 +4069,10 @@ export const articlesLink = [
 ,
 {
     id: 49,
-        date
-:
-    "09 lipca 2023 roku",
-        title
-:
-    "CSS - wyrównanie tekstu, dekoracje, wcięcia, wielkość liter, object-fit, object-position, calc",
-        body
-:
-    (
+    date: "09 lipca 2023 roku",
+    title: "CSS - wyrównanie tekstu, dekoracje, wcięcia, wielkość liter, object-fit, object-position, calc",
+    body:
+        (
         <>
             <SmallestHeader>text-align</SmallestHeader>
             <p>Wyrównuje treść wewnątrz elementów blokowych i komórek tabeli</p>
@@ -4256,14 +4251,9 @@ export const articlesLink = [
 ,
 {
     id: 48,
-        date
-:
-    "08 lipca 2023 roku",
-        title
-:
-    "CSS - obraz w tle",
-        body
-:
+    date: "08 lipca 2023 roku",
+    title: "CSS - obraz w tle",
+    body:
     (
         <>
             <p>Za pomocą CSS-a możemy umieścić obrazek w tle wybranego elementu. Do tego użyjemy
@@ -4459,14 +4449,9 @@ export const articlesLink = [
 ,
 {
     id: 47,
-        date
-:
-    "06 lipca 2023 roku",
-        title
-:
-    "OpenGraph i ikonka strony",
-        body
-:
+    date: "06 lipca 2023 roku",
+    title: "OpenGraph i ikonka strony",
+    body:
     (
         <>
             <p>OpenGraph to protokół, który pozwala lepiej opisywać strony internetowe. Przydaje się do tego, aby
@@ -4530,14 +4515,9 @@ export const articlesLink = [
 ,
 {
     id: 46,
-        date
-:
-    "05 lipca 2023 roku",
-        title
-:
-    "README i Markdown",
-        body
-:
+    date: "05 lipca 2023 roku",
+    title: "README i Markdown",
+    body:
     (
         <>
             <p>Przy okazji tej powtórki z lekcji, ogarnę moje README, bo widzę, że od momentu "przebranżowienia"
@@ -4606,14 +4586,9 @@ export const articlesLink = [
 ,
 {
     id: 45,
-        date
-:
-    "04 lipca 2023 roku",
-        title
-:
-    "Żółw programistyczny",
-        body
-:
+    date: "04 lipca 2023 roku",
+    title: "Żółw programistyczny",
+    body:
     (
         <>
             <p>Mam nieodparte wrażenie, że powtórka materiału z kursu idzie mi strasznie wolno, jednak dzisiaj
@@ -4646,14 +4621,9 @@ export const articlesLink = [
 ,
 {
     id: 44,
-        date
-:
-    "04 lipca 2023 roku",
-        title
-:
-    "Git - rozproszony system kontroli wersji",
-        body
-:
+    date: "04 lipca 2023 roku",
+    title: "Git - rozproszony system kontroli wersji",
+    body:
     (
         <>
             <p>Szukając trochę informacji na temat czym jest rozproszony system kontroli wersji, natknęłam się na
@@ -4742,14 +4712,9 @@ export const articlesLink = [
 ,
 {
     id: 43,
-        date
-:
-    "03 lipca 2023 roku",
-        title
-:
-    "JavaScript - Podstawowa matematyka",
-        body
-:
+    date: "03 lipca 2023 roku",
+    title: "JavaScript - Podstawowa matematyka",
+    body:
     (
         <>
             <p>JS daje nam wiele sposobów na manipulowanie liczbami.</p>
@@ -4964,14 +4929,9 @@ export const articlesLink = [
 // },
 {
     id: 41,
-        date
-:
-    "29 czerwca 2023 roku",
-        title
-:
-    "JavaScript - formularze c.d.",
-        body
-:
+    date: "29 czerwca 2023 roku",
+    title:    "JavaScript - formularze c.d.",
+    body:
     (
         <>
             <p>Dziś mam do zaprezentowania totalnie podstawowy kalkulator BMI. Kod w JS
@@ -5048,14 +5008,9 @@ export const articlesLink = [
 ,
 {
     id: 40,
-        date
-:
-    "28 czerwca 2023 roku",
-        title
-:
-    "Webstorm",
-        body
-:
+    date:    "28 czerwca 2023 roku",
+    title:    "Webstorm",
+    body:
     (
         <>
             <p>Dziś zaczęłam korzystać z WebStorm-a. Odpaliłam bloga... i wykazało 492 błędy! Dziś poświęcę czas na
@@ -5066,14 +5021,9 @@ export const articlesLink = [
 ,
 {
     id: 39,
-        date
-:
-    "27 czerwca 2023 roku",
-        title
-:
-    "JavaScript - Formularze c.d.",
-        body
-:
+        date:    "27 czerwca 2023 roku",
+        title:    "JavaScript - Formularze c.d.",
+        body:
     (
         <>
             <p>Kontynuując ćwiczenia z formularzami, wracam do JavaScript-a. Później mamy przykładowe pole
@@ -5158,14 +5108,9 @@ export const articlesLink = [
 ,
 {
     id: 38,
-        date
-:
-    "24 czerwca 2023 roku",
-        title
-:
-    "JavaScript - Formularze",
-        body
-:
+        date:    "24 czerwca 2023 roku",
+        title:    "JavaScript - Formularze",
+        body:
     (
         <>
             <SmallestHeader>Przydatne właściwości pól formularza</SmallestHeader>
@@ -5220,14 +5165,9 @@ export const articlesLink = [
 ,
 {
     id: 37,
-        date
-:
-    "22 czerwca 2023 roku",
-        title
-:
-    "HTML - walidacja formularzy",
-        body
-:
+        date:    "22 czerwca 2023 roku",
+        title:    "HTML - walidacja formularzy",
+        body:
     (
         <>
             <p>Zanim formularz zostanie wysłany, musi zostać zwalidowany.</p>
@@ -5297,14 +5237,9 @@ export const articlesLink = [
 ,
 {
     id: 36,
-        date
-:
-    "21 czerwca 2023 roku",
-        title
-:
-    "HTML - formularze c.d",
-        body
-:
+        date:    "21 czerwca 2023 roku",
+        title:    "HTML - formularze c.d",
+        body:
     (
         <>
             <SmallestHeader>input / password - hasło</SmallestHeader>
@@ -5503,14 +5438,9 @@ export const articlesLink = [
 ,
 {
     id: 35,
-        date
-:
-    "18 czerwca 2023 roku",
-        title
-:
-    "HTML - formularze",
-        body
-:
+        date:    "18 czerwca 2023 roku",
+        title:    "HTML - formularze",
+        body:
     (
         <>
             <p>Formularze są najprostszym sposobem na zebranie i wysłanie informacji o użytkowniku.</p>
@@ -5731,14 +5661,9 @@ export const articlesLink = [
 ,
 {
     id: 34,
-        date
-:
-    "16 czerwca 2023 roku",
-        title
-:
-    "CSS - konwencja BEM",
-        body
-:
+        date:    "16 czerwca 2023 roku",
+        title:    "CSS - konwencja BEM",
+        body:
     (
         <>
             <p>Bardzo się cieszę, że mogę znowu udoskonalić bloga o tym razem znaczniki z klasami w zgodzie z
@@ -5780,15 +5705,9 @@ export const articlesLink = [
 ,
 {
     id: 33,
-        date
-:
-    "15 czerwca 2023 roku",
-        title
-:
-    "CSS - powtórzenie z pseudo klas i stylowania tabel, list i linków",
-        body
-:
-    (
+        date:    "15 czerwca 2023 roku",
+        title:    "CSS - powtórzenie z pseudo klas i stylowania tabel, list i linków",
+        body:    (
         <>
             <p>Dziś będzie krótko. Pozwólcie, że wrócę do spisania notatek w późniejszym czasie, gdy już czas na
                 to pozwoli. Na ten moment przejdę do zadań praktycznych i odpicuję stronę zgodnie z powtórką z
@@ -5799,14 +5718,9 @@ export const articlesLink = [
 ,
 {
     id: 32,
-        date
-:
-    "14 czerwca 2023 roku",
-        title
-:
-    "Jak działa Internet?",
-        body
-:
+        date:    "14 czerwca 2023 roku",
+        title:    "Jak działa Internet?",
+        body:
     (
         <>
             <p>
@@ -6388,14 +6302,9 @@ export const articlesLink = [
 ,
 {
     id: 31,
-        date
-:
-    "13 czerwca 2023 roku",
-        title
-:
-    "JavaScript - if/else vs ternary vs switch",
-        body
-:
+        date:    "13 czerwca 2023 roku",
+        title:    "JavaScript - if/else vs ternary vs switch",
+        body:
     (
         <>
             <p>Poniżej wstawiłam przycisk, podłączony do body i do button. Do buttona dodałam klasę
@@ -6544,14 +6453,9 @@ export const articlesLink = [
 ,
 {
     id: 30,
-        date
-:
-    "13 czerwca 2023 roku",
-        title
-:
-    "A gdybyś tak...",
-        body
-:
+        date:    "13 czerwca 2023 roku",
+        title:    "A gdybyś tak...",
+        body:
     (
         <>
             <p>... już dziś wiedział, że za rok będziesz mistrzem w jakiejś dziedzinie. Poddałbyś się?</p>
@@ -6580,14 +6484,9 @@ export const articlesLink = [
 ,
 {
     id: 29,
-        date
-:
-    "8 czerwca 2023 roku",
-        title
-:
-    "JavaScript - Ternary (operator potrójny)",
-        body
-:
+        date:    "8 czerwca 2023 roku",
+        title:    "JavaScript - Ternary (operator potrójny)",
+        body:
     (
         <>
             <Blockquote>warunek ? jeśliSpełniony() : jeśliNieSpełniony();
@@ -6608,14 +6507,9 @@ export const articlesLink = [
 ,
 {
     id: 28,
-        date
-:
-    "8 czerwca 2023 roku",
-        title
-:
-    "Sandomierz & JavaScript - Switch",
-        body
-:
+        date:    "8 czerwca 2023 roku",
+        title:    "Sandomierz & JavaScript - Switch",
+        body:
     (
         <>
             <p>
@@ -6691,14 +6585,9 @@ export const articlesLink = [
 ,
 {
     id: 27,
-        date
-:
-    "7 czerwca 2023 roku",
-        title
-:
-    "JavaScript - else if - ćwiczenie",
-        body
-:
+        date:    "7 czerwca 2023 roku",
+        title:    "JavaScript - else if - ćwiczenie",
+        body:
     (
         <>
             <p>Do instrukcji warunkowej <i>if else</i> możemy dodać kolejny blok <i>else if</i>. Służy to do
@@ -6730,14 +6619,9 @@ export const articlesLink = [
 // },
 {
     id: 26,
-        date
-:
-    "6 czerwca 2023 roku",
-        title
-:
-    "JavaScript - if else",
-        body
-:
+        date:    "6 czerwca 2023 roku",
+        title:    "JavaScript - if else",
+        body:
     (
         <>
             <p>
@@ -6815,14 +6699,9 @@ export const articlesLink = [
 // },
 {
     id: 24,
-        date
-:
-    "4 czerwca 2023 roku",
-        title
-:
-    "JavaScript - document.querySelector()",
-        body
-:
+        date:    "4 czerwca 2023 roku",
+        title:    "JavaScript - document.querySelector()",
+        body:
     (
         <>
             <p>Metody querySelector używamy do <em>"złapania"</em> elementu <i>HTML</i>, np. wpisując w konsolę
@@ -6864,14 +6743,9 @@ export const articlesLink = [
 ,
 {
     id: 23,
-        date
-:
-    "4 czerwca 2023 roku",
-        title
-:
-    "JavaScript - składnia",
-        body
-:
+        date:    "4 czerwca 2023 roku",
+        title:    "JavaScript - składnia",
+        body:
     (
         <>
             <Blockquote>
@@ -6896,14 +6770,9 @@ export const articlesLink = [
 ,
 {
     id: 22,
-        date
-:
-    "4 czerwca 2023 roku",
-        title
-:
-    "JavaScript - sposoby osadzania",
-        body
-:
+        date:    "4 czerwca 2023 roku",
+        title:    "JavaScript - sposoby osadzania",
+        body:
     (
         <>
             <p><i>JavaScript-a</i> możemy umieścić na stronie na kilka sposobów:</p>
@@ -6944,14 +6813,9 @@ export const articlesLink = [
 ,
 {
     id: 21,
-        date
-:
-    "4 czerwca 2023 roku",
-        title
-:
-    "Porządki z CSS-ami",
-        body
-:
+        date:    "4 czerwca 2023 roku",
+        title:    "Porządki z CSS-ami",
+        body:
     (
         <>
             <p>Tak jak podejrzewałam — powtarzając wiedzę z kursu i pochłaniając materiały dydaktyczne z Uczelni
@@ -6969,14 +6833,9 @@ export const articlesLink = [
 ,
 {
     id: 20,
-        date
-:
-    "1 czerwca 2023 roku",
-        title
-:
-    "HTML - znaczniki span i div",
-        body
-:
+        date:    "1 czerwca 2023 roku",
+        title:    "HTML - znaczniki span i div",
+        body:
     (
         <>
             <p>
@@ -6991,14 +6850,9 @@ export const articlesLink = [
 ,
 {
     id: 19,
-        date
-:
-    "1 czerwca 2023 roku",
-        title
-:
-    "CSS - podstawy",
-        body
-:
+        date:    "1 czerwca 2023 roku",
+        title:    "CSS - podstawy",
+        body:
     (
         <>
             <p>
@@ -7075,14 +6929,9 @@ export const articlesLink = [
 ,
 {
     id: 18,
-        date
-:
-    "1 czerwca 2023 roku",
-        title
-:
-    "Odkopałam pierwszą lekcję o CSS",
-        body
-:
+        date:    "1 czerwca 2023 roku",
+        title:    "Odkopałam pierwszą lekcję o CSS",
+        body:
     (
         <>
             <p>
@@ -7125,14 +6974,9 @@ export const articlesLink = [
 ,
 {
     id: 17,
-        date
-:
-    "31 maja 2023 roku",
-        title
-:
-    "HTML - Semantyczność",
-        body
-:
+        date:    "31 maja 2023 roku",
+        title:    "HTML - Semantyczność",
+        body:
     (
         <>
             <p>
@@ -7161,14 +7005,9 @@ export const articlesLink = [
 ,
 {
     id: 16,
-        date
-:
-    "30 maja 2023 roku",
-        title
-:
-    "HTML - elementy liniowe, elementy blokowe i elementy liniowo-blokowe",
-        body
-:
+        date:    "30 maja 2023 roku",
+        title:    "HTML - elementy liniowe, elementy blokowe i elementy liniowo-blokowe",
+        body:
     (
         <>
             <p>
@@ -7195,14 +7034,9 @@ export const articlesLink = [
 ,
 {
     id: 15,
-        date
-:
-    "30 maja 2023 roku",
-        title
-:
-    "HTML - utrwalenie różnic między kilkoma znacznikami",
-        body
-:
+        date:    "30 maja 2023 roku",
+        title:    "HTML - utrwalenie różnic między kilkoma znacznikami",
+        body:
     (
         <>
             <p>
@@ -7269,14 +7103,9 @@ export const articlesLink = [
 ,
 {
     id: 14,
-        date
-:
-    "30 maja 2023 roku",
-        title
-:
-    "Operatory operacji logicznych",
-        body
-:
+        date:    "30 maja 2023 roku",
+        title:    "Operatory operacji logicznych",
+        body:
     (
         <>
             <TableContainer>
@@ -7395,14 +7224,9 @@ export const articlesLink = [
 ,
 {
     id: 13,
-        date
-:
-    "30 maja 2023 roku",
-        title
-:
-    "Instrukcja",
-        body
-:
+        date:    "30 maja 2023 roku",
+        title:    "Instrukcja",
+        body:
     (
         <>
             <p>
@@ -7454,14 +7278,9 @@ export const articlesLink = [
 ,
 {
     id: 12,
-        date
-:
-    "30 maja 2023 roku",
-        title
-:
-    "Funkcja",
-        body
-:
+        date:    "30 maja 2023 roku",
+        title:    "Funkcja",
+        body:
     (
         <>
             <p>
@@ -7493,14 +7312,9 @@ export const articlesLink = [
 ,
 {
     id: 11,
-        date
-:
-    "30 maja 2023 roku",
-        title
-:
-    "Wsparcie i hejterzy",
-        body
-:
+        date:    "30 maja 2023 roku",
+        title:    "Wsparcie i hejterzy",
+        body:
     (
         <>
             <p>
@@ -7554,14 +7368,9 @@ export const articlesLink = [
 ,
 {
     id: 10,
-        date
-:
-    "29 maja 2023 roku",
-        title
-:
-    "Podstawy języka programowania",
-        body
-:
+        date:    "29 maja 2023 roku",
+        title:    "Podstawy języka programowania",
+        body:
     (
         <>
             <p>
@@ -7606,14 +7415,9 @@ export const articlesLink = [
 ,
 {
     id: 9,
-        date
-:
-    "29 maja 2023 roku",
-        title
-:
-    "Zmiany",
-        body
-:
+        date:    "29 maja 2023 roku",
+        title:    "Zmiany",
+        body:
     (
         <>
             <Q>Szaleństwem jest robić wciąż to samo i oczekiwać różnych rezultatów.</Q>
@@ -7655,14 +7459,9 @@ export const articlesLink = [
 ,
 {
     id: 8,
-        date
-:
-    "29 maja 2023 roku",
-        title
-:
-    "HTML - atrybut contenteditable",
-        body
-:
+        date:    "29 maja 2023 roku",
+        title:    "HTML - atrybut contenteditable",
+        body:
     (
         <>
             <p>
@@ -7683,14 +7482,9 @@ export const articlesLink = [
 ,
 {
     id: 7,
-        date
-:
-    "28 maja 2023 roku",
-        title
-:
-    "HTML - znaki specjalne w odwołaniu do jednostek",
-        body
-:
+        date:    "28 maja 2023 roku",
+        title:    "HTML - znaki specjalne w odwołaniu do jednostek",
+        body:
     (
         <>
             <p>
@@ -7767,14 +7561,9 @@ export const articlesLink = [
 ,
 {
     id: 6,
-        date
-:
-    "28 maja 2023 roku",
-        title
-:
-    "HTML - Input disabled",
-        body
-:
+        date:    "28 maja 2023 roku",
+        title:    "HTML - Input disabled",
+        body:
     (
         <>
             <p>
@@ -7805,14 +7594,9 @@ export const articlesLink = [
 ,
 {
     id: 5,
-        date
-:
-    "27 maja 2023 roku",
-        title
-:
-    "HTML - paragraph",
-        body
-:
+        date:    "27 maja 2023 roku",
+        title:    "HTML - paragraph",
+        body:
     (
         <>
             <p>
@@ -7868,14 +7652,9 @@ export const articlesLink = [
 ,
 {
     id: 4,
-        date
-:
-    "27 maja 2023 roku",
-        title
-:
-    "HTML, czyli przeżyjmy to jeszcze raz",
-        body
-:
+        date:    "27 maja 2023 roku",
+        title:    "HTML, czyli przeżyjmy to jeszcze raz",
+        body:
     (
         <>
             <p>
@@ -7914,14 +7693,9 @@ export const articlesLink = [
 ,
 {
     id: 3,
-        date
-:
-    "27 maja 2023 roku",
-        title
-:
-    "Początki początków, czyli algorytmy i schematy blokowe",
-        body
-:
+        date:    "27 maja 2023 roku",
+        title:    "Początki początków, czyli algorytmy i schematy blokowe",
+        body:
     (
         <>
             <p>
@@ -7986,14 +7760,9 @@ export const articlesLink = [
 ,
 {
     id: 2,
-        date
-:
-    "26 maja 2023 roku",
-        title
-:
-    "Bieganie, czyli powrót na swój tor",
-        body
-:
+        date:    "26 maja 2023 roku",
+        title:    "Bieganie, czyli powrót na swój tor",
+        body:
     (
         <>
             <p>
@@ -8075,14 +7844,9 @@ export const articlesLink = [
 ,
 {
     id: 1,
-        date
-:
-    "25 maja 2023 roku",
-        title
-:
-    "Pierwsza rozmowa techniczna",
-        body
-:
+        date: "25 maja 2023 roku",
+        title: "Pierwsza rozmowa techniczna",
+        body:
     (
         <>
             <p>
