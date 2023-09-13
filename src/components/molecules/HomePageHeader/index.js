@@ -6,8 +6,8 @@ import Logo from "../../../images/kate.jpg";
 const HomePageHeader = ({newestArticle}) => {
     return (
         <div className="mb-4 relative">
-            <img src={homePageHeader} className="" alt="logo"/>
-            <div className="bg-white max-w-[518px] absolute rounded-lg -bottom-10 left-10 p-8 z-10 drop-shadow-2xl">
+            <img src={homePageHeader} className="rounded-md" alt="logo"/>
+            <div className="bg-white max-w-[518px] absolute rounded-lg -bottom-10 left-10 p-8 z-10 drop-shadow-xl transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
                 {/*<span className="homePageTitle bg-blue-700 text-white text-sm py-0 px-1 rounded-md justify-center">Technology</span>*/}
                 <h2 className="homePageTitle hover:animate-pulse text-3xl font-semibold leading-10 ease-in duration-300 hover:text-indigo-500 active:text-indigo-400 visited:text-indigo-900">{newestArticle.title}</h2>
                 <div className="flex justify-start items-center">

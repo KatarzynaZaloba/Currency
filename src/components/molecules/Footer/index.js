@@ -15,7 +15,7 @@ const Footer = () => {
                         <FooterSectionParagraph
                             text="Jest to blog, który powstawał na przełomie kilku miesięcy. Piszę w nim o bieganiu oraz powtarzam i utrwalam materiał dotyczący web-developmentu. Chętnie wspomogę Cię także w Twoim projekcie!"/>
                     </div>
-                    <div className="flex justify-start items-center pt-4 transition ease-in-out delay-150 text-zinc-700 hover:-translate-x-1 hover:scale-105 hover:text-indigo-500 duration-30">
+                    <div className="flex justify-start items-center pt-4">
                         <Link tonClick={() => window.location = 'mailto:kzalobafrontend@gmail.com'}><FooterSectionTitle title="kzalobafrontend@gmail.com"/></Link>
                         {/*<FooterSectionTitle title="Phone: 880 123 456 789"/>*/}
                     </div>
@@ -43,7 +43,7 @@ const Footer = () => {
             <div className="flex justify-between items-center border-t-2 py-4">
                 <div className="flex justify-center items-center">
                     <p className="text-work-sans font-sm pr-2 p-0">UI Design:</p>
-                    <a href="https://www.jstemplate.net/" className="text-zinc-900 font-semibold transition ease-in-out delay-150 text-zinc-700 hover:-translate-y-1 hover:scale-105 hover:text-indigo-500 duration-30">JS Template</a>
+                    <a href="https://www.jstemplate.net/" className="text-zinc-900 font-semibold hover:text-indigo-500 duration-30">JS Template</a>
                 </div>
                 {/*<div className="flex justify-end items-center">*/}
                 {/*    <FooterSectionUndertitle title="Polityka prywatności"/>*/}
