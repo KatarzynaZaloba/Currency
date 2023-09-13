@@ -28,6 +28,10 @@ function HomePage() {
     const [searchTerm, setSearchTerm] = useState("");
     const [numberOfPosts, setNumberOfPosts] = useState(6);
 
+    const handleSearch = (newSearchTerm) => {
+        setSearchTerm(newSearchTerm);
+    };
+
     const sortedArticles = [...articlesLink].sort((a, b) => b.id - a.id);
     const newestArticle = sortedArticles[0];
     const filteredArticles = sortedArticles.filter(
@@ -41,7 +45,10 @@ function HomePage() {
     return (
         <>
         <Container>
-            <NavBar/>
+            <NavBar
+            searchTerm={searchTerm}
+            onSearch={handleSearch}
+            />
             <Link to={`/article/${newestArticle.id}`} key={newestArticle.id}>
             <HomePageHeader
                 newestArticle={newestArticle}/>
