@@ -33,6 +33,13 @@ p, li, table {
     padding-bottom: 20px;
 }
 
+@media (max-width: 798px) {
+    p, li, table {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
 .tableText__positive {
     color: #00b894;
     font-weight: 600;

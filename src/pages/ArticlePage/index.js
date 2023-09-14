@@ -23,7 +23,7 @@ const ArticlePage = () => {
         <>
             <Container>
                 <NavBar/>
-                <h3 className="text-work-sans text-4xl font-semibold leading-10 self-stretch pb-4">
+                <h3 className="text-work-sans md:text-4xl text-2xl font-semibold md:leading-10 leading-7 self-stretch pb-4">
                     {article.title}
                 </h3>
                     <div className="flex justify-start items-center pb-4">
@@ -32,7 +32,7 @@ const ArticlePage = () => {
                         <p className="text-xs text-zinc-700 text-work-sans p-0">{article.date}</p>
                     </div>
                 <div className="pb-6">
-                <img src={article.img} className="" alt="logo"/>
+                <img src={article.img} className="rounded-md" alt="logo"/>
                 </div>
                 <div className="pb-10">
                 {article.body}
