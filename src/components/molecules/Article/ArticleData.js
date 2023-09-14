@@ -441,8 +441,11 @@ export const articlesLink = [
                     jak <i>Bulma</i>, <i>Tailwind</i> czy <i>Skeleton</i>.
                     To, że mam artykuły z zewnętrznego źródła, pozwala mi na jeszcze lepsze rozplanowanie swojej pracy i
                     manipulowanie stylami bez problemów.</p>
+                <p>Photo by <a href="https://unsplash.com/@joeel56?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Nicole Wolf</a> on <a href="https://unsplash.com/photos/CZ9AjMGKIFI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                </p>
             </>
-        )
+        ),
+        img: "https://images.unsplash.com/photo-1549082984-1323b94df9a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
     },
     {
         id: 84,
@@ -452,8 +455,10 @@ export const articlesLink = [
             <>
                 <p>Zdecydowałam się w końcu na przeniesienie bloga na Reacta. Wracam niebawem!</p>
                 <p>Stara wersja bloga <a href="https://katarzynazaloba.github.io/blog-old/">TUTAJ</a></p>
+                <p>https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2021&q=80</p>
             </>
-        )
+        ),
+        img: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2021&q=80"
     },
     {
         id: 83,
@@ -561,8 +566,11 @@ export const articlesLink = [
                     &nbsp;&nbsp;);<br/>
                     &#125;
                 </Blockquote>
+                <p>Photo by <a href="https://unsplash.com/@homajob?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Scott Graham</a> on <a href="https://unsplash.com/photos/5fNmWej4tAA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                </p>
             </>
-        )
+        ),
+        img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
     },
     {
         id: 82,
@@ -631,8 +639,10 @@ export const articlesLink = [
                         zawsze w tej samej kolejności
                     </ListItem>
                 </ListUnordered>
+                <p>https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8UmVhY3R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60</p>
             </>
-        )
+        ),
+        img: "https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
     },
     {
         id: 81,
@@ -675,8 +685,11 @@ export const articlesLink = [
                     &nbsp;&nbsp;&lt;/ul><br/>
                     );
                 </Blockquote>
+                <p>Photo by <a href="https://unsplash.com/@lautaroandreani?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Lautaro Andreani</a> on <a href="https://unsplash.com/photos/xkBaqlcqeb4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                </p>
             </>
-        )
+        ),
+        img: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
     },
     {
         id: 80,
@@ -804,8 +817,11 @@ export const articlesLink = [
                         </ListItem>
                     </ListItem>
                 </ListUnordered>
+                <p>Photo by <a href="https://unsplash.com/@afgprogrammer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mohammad Rahmani</a> on <a href="https://unsplash.com/photos/oXlXu2qukGE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                </p>
             </>
-        )
+        ),
+        img: "https://images.unsplash.com/photo-1607706189992-eae578626c86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
     },
     {
         id: 79,
@@ -7450,11 +7466,11 @@ export const articlesLink = [
                 Trzymajcie klawiatury! Nadchodzę!
             </p>
             <p>
-            </p>
-            <p>
+                Photo by <a href="https://unsplash.com/@rossfindon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ross Findon</a> on <a href="https://unsplash.com/photos/mG28olYFgHI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
             </p>
         </>
     ),
+    img: "https://images.unsplash.com/photo-1499244571948-7ccddb3583f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80"
 }
 ,
 {
@@ -7476,8 +7492,11 @@ export const articlesLink = [
                 każdej strony, zedytować jej treść i przesłać print-screen-a osobie, którą chcesz wkręcić. Nie
                 znam
                 innego zastosowania tego atrybutu...</p>
+            <p>Photo by <a href="https://unsplash.com/@lucianosa76?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">luciano de sa</a> on <a href="https://unsplash.com/photos/ObwMZBdEWdI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            </p>
         </>
     ),
+    img: "https://images.unsplash.com/photo-1515253564590-b7ec416b06be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
 }
 ,
 {
@@ -7555,8 +7574,11 @@ export const articlesLink = [
                 oglądasz to na którejś, która tego nie czyta, to masz pewnie zagwostkę, co ja miałam na
                 myśli...
             </p>
+            <p>Photo by <a href="https://unsplash.com/@goran_ivos?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Goran Ivos</a> on <a href="https://unsplash.com/photos/idmvPhF8t4E?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            </p>
         </>
-    )
+    ),
+    img: "https://images.unsplash.com/photo-1508739826987-b79cd8b7da12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1973&q=80"
 }
 ,
 {
@@ -7588,8 +7610,11 @@ export const articlesLink = [
             </label>
             <p>
                 Jak nazwa wskazuje, widzimy wtedy input-a, do którego nie da się nic wpisać.</p>
+            <p>Photo by <a href="https://unsplash.com/@jodaarba?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jose Aragones</a> on <a href="https://unsplash.com/photos/81QkOoPGahY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            </p>
         </>
-    )
+    ),
+    img: "https://images.unsplash.com/photo-1523537444585-432d2bacc10d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
 }
 ,
 {
@@ -7646,8 +7671,11 @@ export const articlesLink = [
                     kończy.
                 </ListItem>
             </ListUnordered>
+            <p>Photo by <a href="https://unsplash.com/@leiadakrozjhen?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Leiada Krozjhen</a> on <a href="https://unsplash.com/photos/7UxQUl3mdnw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            </p>
         </>
     ),
+    img: "https://images.unsplash.com/photo-1670109944124-d0772802a518?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1862&q=80"
 }
 ,
 {
@@ -7686,9 +7714,11 @@ export const articlesLink = [
             <p>
                 Ja tymczasem zabieram się do lektury dokumentacji i wrócę z przykładami.
             </p>
+            <p>Photo by <a href="https://unsplash.com/@florianolv?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Florian Olivo</a> on <a href="https://unsplash.com/photos/4hbJ-eymZ1o?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            </p>
         </>
     ),
-
+    img: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
 }
 ,
 {
@@ -7754,8 +7784,11 @@ export const articlesLink = [
                 <strong> Blog ma być żywym organizmem, przykładem postępu w mojej powtórce nauki HTML, CSS i
                     JS.</strong>
             </p>
+            <p>Photo by <a href="https://unsplash.com/@alpridephoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Андрей Сизов</a> on <a href="https://unsplash.com/photos/nuz3rK5iiKg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            </p>
         </>
     ),
+    img: "https://images.unsplash.com/photo-1642952469120-eed4b65104be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
 }
 ,
 {
@@ -7838,8 +7871,11 @@ export const articlesLink = [
             <p>
                 Trzymacie się ciepło i nie wątpcie w siebie!
             </p>
+            <p>Photo by <a href="https://unsplash.com/@brianericksonco?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Brian Erickson</a> on <a href="https://unsplash.com/photos/d3YOebhmzkw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            </p>
         </>
     ),
+    img: "https://images.unsplash.com/photo-1511389969857-eb54b420278b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80"
 }
 ,
 {
@@ -7951,8 +7987,11 @@ export const articlesLink = [
                 Natomiast dzięki temu doświadczeniu wiem, co chcę robić. <strong>Chcę zostać zawodowym
                 <i>Frontend</i>-owcem!</strong>
             </p>
+            <p>Photo by <a href="https://unsplash.com/@kobuagency?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">KOBU Agency</a> on <a href="https://unsplash.com/photos/7okkFhxrxNw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            </p>
         </>
     ),
+    img: "https://images.unsplash.com/photo-1527689368864-3a821dbccc34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
 }
 ,
 ]
