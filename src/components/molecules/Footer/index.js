@@ -8,14 +8,14 @@ import FooterSectionUndertitle from "../../atoms/FooterSectionUndertitle";
 const Footer = () => {
     return (
         <footer className="bg-zinc-100 m-auto px-5 md:pb-10 pb-5 md:px-40">
-            <div className="py-4 grid grid-cols-4 gap-4">
-                <div className="pt-4 lg:col-span-2 col-span-4">
+            <div className="max-w-4xl m-auto px-5 py-4 grid grid-cols-4 gap-4">
+                <div className="lg:col-span-2 col-span-4">
                     <div className="break-words">
                         <FooterSectionTitle title="O projekcie"/>
                         <FooterSectionParagraph
                             text="Jest to blog, który powstawał na przełomie kilku miesięcy. Piszę w nim o bieganiu oraz powtarzam i utrwalam materiał dotyczący web-developmentu. Chętnie wspomogę Cię także w Twoim projekcie!"/>
                     </div>
-                    <div className="flex justify-start items-center pt-4">
+                    <div className="flex justify-start items-center">
                         <Link tonClick={() => window.location = 'mailto:kzalobafrontend@gmail.com'}><FooterSectionTitle title="kzalobafrontend@gmail.com"/></Link>
                         {/*<FooterSectionTitle title="Phone: 880 123 456 789"/>*/}
                     </div>
@@ -40,9 +40,9 @@ const Footer = () => {
                 {/*    <FooterSectionUndertitle title="Lifestyle"/>*/}
                 {/*</div>*/}
             </div>
-            <div className="flex justify-between items-center border-t-2 py-4">
+            <div className="max-w-4xl m-auto px-5 md:pb-10 pb-5 flex justify-between items-center border-t-2 py-4">
                 <div className="flex justify-center items-center">
-                    <p className="text-work-sans font-sm pr-2 p-0">UI Design:</p>
+                    <FooterSectionParagraph text="UI Design:"></FooterSectionParagraph>
                     <a href="https://www.jstemplate.net/" className="text-zinc-900 font-semibold hover:text-indigo-500 duration-30">JS Template</a>
                 </div>
                 {/*<div className="flex justify-end items-center">*/}
