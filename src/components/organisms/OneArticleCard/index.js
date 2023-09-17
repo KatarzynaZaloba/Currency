@@ -6,7 +6,7 @@ import Logo from "../../../images/kate.jpg";
 const OneArticleCard = ({picture, tag, title, avatar, authorName, date}) => {
     return (
         <>
-            <div className="border-2 rounded-md m-2 transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
+            <div className=" sm:h-[350px] md:h-[350px] overflow-hidden border-2 rounded-md m-2 transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
                 <div className="p-2 rounded-md">
                     <img src={picture ? picture : Image} className="rounded-md" />
                 </div>
