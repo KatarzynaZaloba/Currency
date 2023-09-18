@@ -9,7 +9,8 @@ import homePageHeader from "../../images/homePageHeader.png";
 
 const ArticlePage = () => {
     const {id} = useParams(); // Uzyskaj identyfikator z parametrów URL
-    const article = articlesLink.find(article => article.id.toString() === id); // Znajdź artykuł na podstawie identyfikatora
+    const article = articlesLink.find(article => article.id.toString() === id);
+    const tags = article.tag.split(", ").map(tag => tag.trim());
 
     if (!article) {
         return (
@@ -26,6 +27,16 @@ const ArticlePage = () => {
                 <h3 className="text-work-sans md:text-4xl text-2xl font-semibold md:leading-10 leading-7 self-stretch pb-4">
                     {article.title}
                 </h3>
+                <div className="mb-3">
+                {tags && (
+                    tags.map((tag, index) => (
+                        <span key={index}
+                              className="homePageTitle bg-blue-700 text-white text-sm py-0 px-1 my-3 rounded-md justify-center mr-1">
+                            {tag}
+                        </span>
+                    ))
+                )}
+                </div>
                     <div className="flex justify-start items-center pb-4">
                         <img src={Logo} className="rounded-full w-[36px] mr-2" alt="logo"/>
                         <p className="text-xs text-zinc-700 font-medium mr-2 text-work-sans p-0">Katarzyna Żałoba</p>

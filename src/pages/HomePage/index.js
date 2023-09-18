@@ -62,6 +62,7 @@ function HomePage() {
                             {articlesToDisplay.map((article) => (
                                 <Link to={`/article/${article.id}`} key={article.id}>
                                 <OneArticleCard
+                                    tag={article.tag}
                                     key={article.id}
                                     date={article.date}
                                     title={article.title}

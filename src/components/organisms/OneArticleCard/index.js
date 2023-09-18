@@ -11,9 +11,11 @@ const OneArticleCard = ({picture, tag, title, avatar, authorName, date}) => {
                     <img src={picture ? picture : Image} className="rounded-md" />
                 </div>
                 <div className="py-2 px-4 text-left">
-                    {/*<span className="my-2 text-work-sans rounded-md bg-blue-100 text-indigo-500 text-sm p-1 font-medium">*/}
-                    {/*    Technology*/}
-                    {/*</span>*/}
+                    {tag && (
+                        <span className="my-2 text-work-sans rounded-md bg-blue-100 text-indigo-500 text-sm p-1 font-medium">
+                            {tag}
+                        </span>
+                    )}
                     <h3 className="mb-1 mt-2 text-work-sans font-semibold text-2xl">{title}</h3>
                 </div>
                 <div className="px-4 pb-4 flex justify-start items-end">
