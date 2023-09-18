@@ -3,7 +3,7 @@ import './style.css';
 
 const ListOrdered = ({ children }) => {
     return (
-        <ol className="article__orderedList">
+        <ol className="list-decimal">
             {children}
         </ol>
     )

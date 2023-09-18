@@ -21,6 +21,164 @@ import Excercise1 from "../../organisms/Excercise1";
 
 export const articlesLink = [
         {
+            id: 94,
+            date: "18 września 2023 roku",
+            title: "Algorytmy i struktury danych",
+            body: (
+                <>
+                    <SmallestHeader>
+                        Pojęcie algorytmu
+                    </SmallestHeader>
+                    <p>Przytaczamy trzy definicje <b>algorytmów</b>, są to:</p>
+                    <ListUnordered>
+                        <ListItem>
+                            skończony ciąg, sekwencja reguł, które aplikuje się na skończonej liczbie danych, pozwalający
+                            rozwiązywać zbliżone do siebie klasy programów
+                        </ListItem>
+                        <ListItem>
+                            zespół reguł charakterystycznych dla pewnych obliczeń lub czynności informatycznych
+                        </ListItem>
+                        <ListItem>
+                            zestaw instrukcji opisujących, jak wykonać pewne zadanie.
+                        </ListItem>
+                    </ListUnordered>
+                    <p>Oczywiście dzięki szerokiemu pojęciu algorytmy mają nie tylko zastosowanie w informatyce.
+                        Termin <b> algorytm</b> pochodzi prawdopodobnie od postaci perskiego uczonego Muhammada ibn Musa
+                        al-Chuwarizmiego, który skonstruował reguły dokładnie opisujące kolejne kroki i zasady wykonywania
+                        operacji arytmetycznych na liczbach dziesiętnych.</p>
+                    <p>Samo słowo <b>algorytm</b> łączymy z greckim matematykiem Euklidesem, który przedstawił algorytm na
+                        obliczenie NWD (<i>największego wspólnego dzielnika dwóch liczb a i b</i>):</p>
+                    <Blockquote>
+                        dane wejściowe: a i b. zmienne pomocnicze: c.res<br/><br/>
+                        dopóki a>0 wykonuj:<br/>
+                        &nbsp;&nbsp;podstaw za c resztę z dzielenia przez b:<br/>
+                        &nbsp;&nbsp;podstaw za b liczbę a:<br/>
+                        &nbsp;&nbsp;podstaw za a liczbę c:<br/>
+                        &nbsp;&nbsp;podstaw za res liczbę b:<br/>
+                        rezultat: res.
+                    </Blockquote>
+                    <p>Nie jest to 1:1 sposób Euklidesa, ale to tylko pokazuje, że nie ma jednego sposobu na wykonanie
+                        jednego głównego zadania i każdy zapis będzie prawidłowy, dopóki wynik końcowy pozostanie ten
+                        sam, np:</p>
+                    <Blockquote>
+                        NWD (dane wejściowe: a i b) &#123; <br/>
+                        &nbsp;&nbsp;jeśli b równa się zero. to<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;rezultat: a<br/>
+                        &nbsp;&nbsp;w przeciwnym wypadku<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;rezultat: NWD(b. reszta z dzielenia a przez b)<br/>
+                        &#125;
+                    </Blockquote>
+                    <SmallestHeader>
+                        Istota algorytmu
+                    </SmallestHeader>
+                    <p>Algorytmy towarzyszą nam na codzień. Często spotykam się z porównaniem algorytmu do książki
+                        kucharskiej, w której również mamy instrukcje wykonywania zadań, np. upieczenia tortu. W obu
+                        przypadkach może dojść do niedomówień i nieporozumień, jeżeli nie będziemy mieli do czynienia z
+                        instrukcjami dokładnymi i precyzyjnymi. W przypadku programowania istotne są dokładne parametry
+                        takie jak np. ilość czasu. Brak precyzyjnych parametrów spowodować może każdorazowo inne dane na
+                        wyjściu.</p>
+                    <p><i>Algorytm informatyczny</i> przedstawia się następująco:</p>
+                    <ListOrdered>
+                        <ListItem>
+                            Dane wejściowe
+                            <ListUnordered>
+                                &#123;warunki&#125;
+                            </ListUnordered>
+                            <ListUnordered>
+                                &#123;struktury danych&#125;
+                            </ListUnordered>
+                        </ListItem>
+                        <ListItem>
+                            Procedura obliczeniowa
+                        </ListItem>
+                        <ListItem>
+                            Dane wyjściowe
+                            <ListUnordered>
+                                &#123;poprawność&#125;
+                            </ListUnordered>
+                            <ListUnordered>
+                                &#123;struktury danych&#125;
+                            </ListUnordered>
+                        </ListItem>
+                    </ListOrdered>
+                    <p>Proces realizacji algorytmu można wspomóc poprzez odpowiednie modelowanie za pomocą:</p>
+                    <ListUnordered>
+                        <ListItem><b>struktur danych</b>, które pozwalają na przechowywanie oraz obsługę przetwarzanych
+                            przez algorytm danych (np. list czy tablic)
+                        </ListItem>
+                        <ListItem><b>warunków wejściowych</b>, które mają na celu doprecyzowanie działania algorytmu, np.
+                            poprzez eliminację danych, które nie powinny być obsługiwane za pomocą danego algorytmu
+                        </ListItem>
+                        <ListItem><b>poprawności algorytmu</b>, który powinien być:
+                            <ListUnordered>
+                                <ListItem>
+                                    <b>skończony</b> - czyli wynik algorytmu musi być w pewnym momencie
+                                    dostarczony
+                                </ListItem>
+                                <ListItem>
+                                    <b>deterministyczny</b> - ponieważ często oczekujemy, że wynik działania algorytmu
+                                    będzie jednoznacznie określony za pomocą parametrów początkowych. Algorytm może być
+                                    niedeterministyczny, ale poprawny np. jeśli wprowadzimy czynnik losowości lub
+                                    zastosujemy przetwarzanie równoległe,
+                                </ListItem>
+                                <ListItem>
+                                    <b>efektywny</b> - będzie wykonywał swoje zadanie w możliwie najkrótszym czasie i
+                                    wykorzysta w tym celu jak najmniej zasobów pamięci,
+                                </ListItem>
+                            </ListUnordered>
+                        </ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>
+                        Rozwiązywanie problemów za pomocą algorytmów
+                    </SmallestHeader>
+                    <p>Przed wyborem odpowiedniego algorytmu, powinniśmy określić kontekst, w jakim będzie wykorzystywany.
+                        Jeśli algorytm będzie przeznaczony do użytku domowego, czy też jednorazowej prezentacji to przede
+                        wszystkim będziemy brali pod uwagę <b>prostotę algorytmu</b>. W przypadku, gdy algorytm będzie
+                        używany do np. pisania aplikacji biznesowej, to przede wszystkim brane pod uwagę będą dane wyjściowe
+                        a nie sam wygląd algorytmu.</p>
+                    <p>Finalny algorytm powinien być poprawny, spełniać założenia projektu i spełniać potrzeby użytkowników.
+                        Prostota i estetyka tez są ważne, ale w tym drugim przypadku najważniejsze to dostarczenie
+                        działającego produktu. W przeciwnym razie, może to spowodować wyeliminowanie
+                        danego <i>software-house-u</i> z rynku</p>
+                    <p>Do kryteriów oceny programów należą:</p>
+                    <ListUnordered>
+                        <ListItem>
+                            szybkość przetwarzania informacji i wykonywania funkcji programu
+                        </ListItem>
+                        <ListItem>
+                            czytelność i adekwatność symboli graficznych do funkcji
+                        </ListItem>
+                        <ListItem>
+                            kontrola nad danym oprogramowaniem
+                        </ListItem>
+                        <ListItem>
+                            czytelność informacji i jasność komunikatów
+                        </ListItem>
+                        <ListItem>
+                            możliwość wyszukiwania rozwiązań problemu i występowanie pomocy
+                        </ListItem>
+                        <ListItem>
+                           częstość występowania błędów oraz klarowność komunikatów o błędach
+                        </ListItem>
+                        <ListItem>
+                            plastyczność i przejrzystość interfejsu
+                        </ListItem>
+                        <ListItem>
+                            łatwość nauki i komunikacji z programem
+                        </ListItem>
+                    </ListUnordered>
+                    <p>Photo by <a
+                        href="https://unsplash.com/@googledeepmind?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Google
+                        DeepMind</a> on <a
+                        href="https://unsplash.com/photos/37x7-sBhwf8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    </p>
+                </>
+            ),
+            tag: "algorytmy",
+            img:
+                "https://images.unsplash.com/photo-1665690399457-58110a2dbdac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80"
+        },
+        {
             id: 93,
             date: "18 września 2023 roku",
             title: "React - useEffect - efekty uboczne",
@@ -3766,412 +3924,409 @@ export const articlesLink = [
             id: 53,
             date: "13 lipca 2023 roku",
             title: "CSS - Flex c.d.",
-            body:
-                (
-                    <>
-                        <SmallestHeader>align-items</SmallestHeader>
-                        <ListUnordered>
-                            <ListItem>
-                                określa wyrównanie elementów w osi prostopadłej
-                            </ListItem>
-                            <ListItem>
-                                wartości: flex-start, flex-end, center - "góra", "dół", "środek",
-                            </ListItem>
-                            <ListItem>
-                                domyślnie: stretch.
-                            </ListItem>
-                        </ListUnordered>
-                        <p>Dlaczego w <i>wartościach</i> właściwości mamy <i>flex-start</i> i <i>flex-end</i>? Ponieważ
-                            położenie tych elementów jest względne, zależnie od właściwości <i>flex-direction</i>.</p>
-                        <div className="article__div--FlexAligned">
-                            <div className="article__div--FlexItemAligned">1
-                            </div>
-                            <div className="article__div--FlexItemAligned">2
-                            </div>
-                            <div className="article__div--FlexItemAligned">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores atque autem
-                            </div>
+            body: (
+                <>
+                    <SmallestHeader>align-items</SmallestHeader>
+                    <ListUnordered>
+                        <ListItem>
+                            określa wyrównanie elementów w osi prostopadłej
+                        </ListItem>
+                        <ListItem>
+                            wartości: flex-start, flex-end, center - "góra", "dół", "środek",
+                        </ListItem>
+                        <ListItem>
+                            domyślnie: stretch.
+                        </ListItem>
+                    </ListUnordered>
+                    <p>Dlaczego w <i>wartościach</i> właściwości mamy <i>flex-start</i> i <i>flex-end</i>? Ponieważ
+                        położenie tych elementów jest względne, zależnie od właściwości <i>flex-direction</i>.</p>
+                    <div className="article__div--FlexAligned">
+                        <div className="article__div--FlexItemAligned">1
                         </div>
-                        <p>Powyższy przykład przedstawia się następująco:</p>
-                        <Blockquote>
-                            &lt;div class="article__div--FlexAligned"><br/>
-                            &nbsp;&nbsp;&lt;div class="article__div--FlexItemAligned">1<br/>
-                            &nbsp;&nbsp;&lt;/div><br/>
-                            &nbsp;&nbsp;&lt;div class="article__div--FlexItemAligned">2<br/>
-                            &nbsp;&nbsp;&lt;/div><br/>
-                            &nbsp;&nbsp;&lt;div class="article__div--FlexItemAligned"><br/>
-                            &nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores atque
-                            autem<br/>
-                            &nbsp;&nbsp;&lt;/div><br/>
-                            &lt;/div><br/>
-                        </Blockquote>
-                        <Blockquote>
-                            .article__div--FlexAligned &#123;<br/>
-                            &nbsp;&nbsp;display: flex;<br/>
-                            &nbsp;&nbsp;flex-wrap: wrap;<br/>
-                            &nbsp;&nbsp;margin: auto;<br/>
-                            &nbsp;&nbsp;max-width: 500px;<br/>
-                            &nbsp;&nbsp;border: 10px solid black;<br/>
-                            &nbsp;&nbsp;<b>align-items: center;</b><br/>
-                            &nbsp;&nbsp;flex-direction: column;<br/>
-                            &#125;<br/><br/>
+                        <div className="article__div--FlexItemAligned">2
+                        </div>
+                        <div className="article__div--FlexItemAligned">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores atque autem
+                        </div>
+                    </div>
+                    <p>Powyższy przykład przedstawia się następująco:</p>
+                    <Blockquote>
+                        &lt;div class="article__div--FlexAligned"><br/>
+                        &nbsp;&nbsp;&lt;div class="article__div--FlexItemAligned">1<br/>
+                        &nbsp;&nbsp;&lt;/div><br/>
+                        &nbsp;&nbsp;&lt;div class="article__div--FlexItemAligned">2<br/>
+                        &nbsp;&nbsp;&lt;/div><br/>
+                        &nbsp;&nbsp;&lt;div class="article__div--FlexItemAligned"><br/>
+                        &nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores atque
+                        autem<br/>
+                        &nbsp;&nbsp;&lt;/div><br/>
+                        &lt;/div><br/>
+                    </Blockquote>
+                    <Blockquote>
+                        .article__div--FlexAligned &#123;<br/>
+                        &nbsp;&nbsp;display: flex;<br/>
+                        &nbsp;&nbsp;flex-wrap: wrap;<br/>
+                        &nbsp;&nbsp;margin: auto;<br/>
+                        &nbsp;&nbsp;max-width: 500px;<br/>
+                        &nbsp;&nbsp;border: 10px solid black;<br/>
+                        &nbsp;&nbsp;<b>align-items: center;</b><br/>
+                        &nbsp;&nbsp;flex-direction: column;<br/>
+                        &#125;<br/><br/>
 
-                            .article__div--FlexItemAligned &#123;<br/>
-                            &nbsp;&nbsp;padding: 20px;<br/>
-                            &nbsp;&nbsp;background: #39744a;<br/>
-                            &nbsp;&nbsp;color: white;<br/>
-                            &nbsp;&nbsp;margin: 10px;<br/>
-                            &#125;<br/><br/>
-                        </Blockquote>
-                        <SmallestHeader>align-self</SmallestHeader>
-                        <ListUnordered>
-                            <ListItem>
-                                pozwala ustawić wyrównanie dla pojedynczego elementu
-                            </ListItem>
-                            <ListItem>
-                                wartości takie same jak <i>align-items</i>
-                            </ListItem>
-                        </ListUnordered>
-                        <div className="article__div--FlexAligned">
-                            <div className="article__div--FlexItemAligned article__div--FlexItemFirst">1
-                            </div>
-                            <div className="article__div--FlexItemAligned">2
-                            </div>
-                            <div className="article__div--FlexItemAligned">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores atque autem
-                            </div>
+                        .article__div--FlexItemAligned &#123;<br/>
+                        &nbsp;&nbsp;padding: 20px;<br/>
+                        &nbsp;&nbsp;background: #39744a;<br/>
+                        &nbsp;&nbsp;color: white;<br/>
+                        &nbsp;&nbsp;margin: 10px;<br/>
+                        &#125;<br/><br/>
+                    </Blockquote>
+                    <SmallestHeader>align-self</SmallestHeader>
+                    <ListUnordered>
+                        <ListItem>
+                            pozwala ustawić wyrównanie dla pojedynczego elementu
+                        </ListItem>
+                        <ListItem>
+                            wartości takie same jak <i>align-items</i>
+                        </ListItem>
+                    </ListUnordered>
+                    <div className="article__div--FlexAligned">
+                        <div className="article__div--FlexItemAligned article__div--FlexItemFirst">1
                         </div>
-                        <p>Natomiast w kodzie przedstawia nam się to tak:</p>
-                        <Blockquote>
-                            &lt;div class="article__div--FlexAligned"><br/>
-                            &nbsp;&nbsp;&lt;div
-                            class="article__div--FlexItemAligned <b>article__div--FlexItemFirst</b>">1<br/>
-                            &nbsp;&nbsp;&lt;/div><br/>
-                            &nbsp;&nbsp;&lt;div class="article__div--FlexItemAligned">2<br/>
-                            &nbsp;&nbsp;&lt;/div><br/>
-                            &nbsp;&nbsp;&lt;div class="article__div--FlexItemAligned"><br/>
-                            &nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores atque
-                            autem<br/>
-                            &nbsp;&nbsp;&lt;/div><br/>
-                            &lt;/div><br/>
-                        </Blockquote>
-                        <Blockquote>
-                            .article__div--FlexItemFirst &#123;<br/>
-                            &nbsp;&nbsp;<b>align-self: flex-end;</b><br/>
-                            &#125;<br/>
-                        </Blockquote>
-                        <SmallestHeader>justify-content</SmallestHeader>
-                        <ListUnordered>
-                            <ListItem>
-                                wyrównuje elementy w głównej osi,
-                            </ListItem>
-                            <ListItem>
-                                wartości: flex-start, flex-end, center - podobnie jak przy <i>align-items</i>
-                                <ListUnordered>
-                                    <ListItem>
-                                        <b>space-between</b> - równa przestrzeń między elementami
-                                    </ListItem>
-                                    <ListItem>
-                                        <b>space-around</b> - równa przestrzeń po obu stronach elementów,
-                                    </ListItem>
-                                    <ListItem>
-                                        <b>space-evenly</b> - równa przestrzeń między elementami i przy krawędzi
-                                    </ListItem>
-                                </ListUnordered>
-                            </ListItem>
-                            <ListItem>
-                                domyślna wartość: <i>flex-start</i>.
-                            </ListItem>
-                        </ListUnordered>
-                        <div className="article__div--FlexContented">
-                            <div className="article__div--FlexItem">1
-                            </div>
-                            <div className="article__div--FlexItem">2
-                            </div>
-                            <div className="article__div--FlexItem">3
-                            </div>
+                        <div className="article__div--FlexItemAligned">2
                         </div>
-                        <Blockquote>
-                            .article__div--FlexContented &#123;<br/>
-                            &nbsp;&nbsp;display: flex;<br/>
-                            &nbsp;&nbsp;flex-wrap: wrap;<br/>
-                            &nbsp;&nbsp;margin: auto;<br/>
-                            &nbsp;&nbsp;max-width: 500px;<br/>
-                            &nbsp;&nbsp;border: 10px solid black;<br/>
-                            &nbsp;&nbsp;<b>justify-content: center;</b><br/>
-                            &#125;<br/>
-                        </Blockquote>
-                        <SmallestHeader>order</SmallestHeader>
-                        <ListUnordered>
-                            <ListItem>
-                                pozwala zmienić kolejność elementów,
-                            </ListItem>
-                            <ListItem>
-                                domyślnie każdy element ma wartość 0, ale możemy sobie ustawić dowolną liczbę
-                                dodatnią lub
-                                ujemną,
-                            </ListItem>
-                            <ListItem>
-                                jeżeli chcemy, aby któryś z elementów pokazał się przed wszystkimi, stosujemy
-                                wartość ujemną
-                            </ListItem>
-                        </ListUnordered>
-                        <div className="article__div--FlexContented">
-                            <div className="article__div--FlexItem">1
-                            </div>
-                            <div className="article__div--FlexItem">2
-                            </div>
-                            <div className="article__div--FlexItem article__div--FlexItemLast">3
-                            </div>
+                        <div className="article__div--FlexItemAligned">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores atque autem
                         </div>
-                        <Blockquote>
-                            .article__div--FlexItemLast &#123;<br/>
-                            &nbsp;&nbsp;<b>order: -1;</b><br/>
-                            &#125;<br/>
-                        </Blockquote>
-                        <Blockquote>
-                            &lt;div class="article__div--FlexContented"><br/>
-                            &nbsp;&nbsp;&lt;div class="article__div--FlexItem">1<br/>
-                            &nbsp;&nbsp;&lt;/div><br/>
-                            &nbsp;&nbsp;&lt;div class="article__div--FlexItem">2<br/>
-                            &nbsp;&nbsp;&lt;/div><br/>
-                            &nbsp;&nbsp;&lt;div class="article__div--FlexItem <b>article__div--FlexItemLast</b>">3<br/>
-                            &nbsp;&nbsp;&lt;/div><br/>
-                            &lt;/div>
-                        </Blockquote>
-                        <SmallestHeader>flex-wrap</SmallestHeader>
-                        <ListUnordered>
-                            <ListItem>
-                                określa, czy elementy mogą przechodzić do kolejnego wiersza,
-                                <ListUnordered>
-                                    <ListItem>
-                                        jeśli tak, to w jakim kierunku mają się układać,
-                                    </ListItem>
-                                </ListUnordered>
-                            </ListItem>
-                            <ListItem>
-                                <b>wrap</b> - pozwala na przechodzenie do kolejnego wiersza,
-                            </ListItem>
-                            <ListItem>
-                                <b>wrap-reverse</b> - odwrotny kierunek,
-                            </ListItem>
-                            <ListItem>
-                                domyślnie <b>nowrap</b>
-                            </ListItem>
-                        </ListUnordered>
-                        <SmallestHeader>align-content</SmallestHeader>
-                        <ListUnordered>
-                            <ListItem>
-                                określa rozmieszczenie pustej przestrzeni w osi prostopadłej
-                                <ListUnordered>
-                                    <ListItem>
-                                        jeśli jest wiele linii
-                                    </ListItem>
-                                </ListUnordered>
-                            </ListItem>
-                        </ListUnordered>
-                        <SmallestHeader>skrót flex-flow</SmallestHeader>
-                        <ListUnordered>
-                            <ListItem>
-                                flex-direction i flex-wrap w jednym
-                            </ListItem>
-                            <ListItem>
-                                np. column wrap
-                                <Blockquote>
-                                    .element &#123;<br/>
-                                    &nbsp;&nbsp;flex-flow: column wrap;<br/>
-                                    &#125;
-                                </Blockquote>
-                            </ListItem>
-                        </ListUnordered>
-                        <p>A tutaj można utrwalić swoją wiedzę z <i>Flex-a</i>:</p>
-                        <ListUnordered>
-                            <ListItem>
-                                <a href="https://flexboxfroggy.com/#pl" target="_blank">Flexbox Froggy</a>
-                            </ListItem>
-                            <ListItem>
-                                <a href="https://mastery.games/flexboxzombies" target="_blank">Flexbox Zombies</a>
-                            </ListItem>
-                            <ListItem>
-                                <a href="https://codepen.io/osublake/pen/dMLQJr" target="_blank">CodePen Demo</a>
-                            </ListItem>
-                        </ListUnordered>
-                    </>
-                )
+                    </div>
+                    <p>Natomiast w kodzie przedstawia nam się to tak:</p>
+                    <Blockquote>
+                        &lt;div class="article__div--FlexAligned"><br/>
+                        &nbsp;&nbsp;&lt;div
+                        class="article__div--FlexItemAligned <b>article__div--FlexItemFirst</b>">1<br/>
+                        &nbsp;&nbsp;&lt;/div><br/>
+                        &nbsp;&nbsp;&lt;div class="article__div--FlexItemAligned">2<br/>
+                        &nbsp;&nbsp;&lt;/div><br/>
+                        &nbsp;&nbsp;&lt;div class="article__div--FlexItemAligned"><br/>
+                        &nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores atque
+                        autem<br/>
+                        &nbsp;&nbsp;&lt;/div><br/>
+                        &lt;/div><br/>
+                    </Blockquote>
+                    <Blockquote>
+                        .article__div--FlexItemFirst &#123;<br/>
+                        &nbsp;&nbsp;<b>align-self: flex-end;</b><br/>
+                        &#125;<br/>
+                    </Blockquote>
+                    <SmallestHeader>justify-content</SmallestHeader>
+                    <ListUnordered>
+                        <ListItem>
+                            wyrównuje elementy w głównej osi,
+                        </ListItem>
+                        <ListItem>
+                            wartości: flex-start, flex-end, center - podobnie jak przy <i>align-items</i>
+                            <ListUnordered>
+                                <ListItem>
+                                    <b>space-between</b> - równa przestrzeń między elementami
+                                </ListItem>
+                                <ListItem>
+                                    <b>space-around</b> - równa przestrzeń po obu stronach elementów,
+                                </ListItem>
+                                <ListItem>
+                                    <b>space-evenly</b> - równa przestrzeń między elementami i przy krawędzi
+                                </ListItem>
+                            </ListUnordered>
+                        </ListItem>
+                        <ListItem>
+                            domyślna wartość: <i>flex-start</i>.
+                        </ListItem>
+                    </ListUnordered>
+                    <div className="article__div--FlexContented">
+                        <div className="article__div--FlexItem">1
+                        </div>
+                        <div className="article__div--FlexItem">2
+                        </div>
+                        <div className="article__div--FlexItem">3
+                        </div>
+                    </div>
+                    <Blockquote>
+                        .article__div--FlexContented &#123;<br/>
+                        &nbsp;&nbsp;display: flex;<br/>
+                        &nbsp;&nbsp;flex-wrap: wrap;<br/>
+                        &nbsp;&nbsp;margin: auto;<br/>
+                        &nbsp;&nbsp;max-width: 500px;<br/>
+                        &nbsp;&nbsp;border: 10px solid black;<br/>
+                        &nbsp;&nbsp;<b>justify-content: center;</b><br/>
+                        &#125;<br/>
+                    </Blockquote>
+                    <SmallestHeader>order</SmallestHeader>
+                    <ListUnordered>
+                        <ListItem>
+                            pozwala zmienić kolejność elementów,
+                        </ListItem>
+                        <ListItem>
+                            domyślnie każdy element ma wartość 0, ale możemy sobie ustawić dowolną liczbę
+                            dodatnią lub
+                            ujemną,
+                        </ListItem>
+                        <ListItem>
+                            jeżeli chcemy, aby któryś z elementów pokazał się przed wszystkimi, stosujemy
+                            wartość ujemną
+                        </ListItem>
+                    </ListUnordered>
+                    <div className="article__div--FlexContented">
+                        <div className="article__div--FlexItem">1
+                        </div>
+                        <div className="article__div--FlexItem">2
+                        </div>
+                        <div className="article__div--FlexItem article__div--FlexItemLast">3
+                        </div>
+                    </div>
+                    <Blockquote>
+                        .article__div--FlexItemLast &#123;<br/>
+                        &nbsp;&nbsp;<b>order: -1;</b><br/>
+                        &#125;<br/>
+                    </Blockquote>
+                    <Blockquote>
+                        &lt;div class="article__div--FlexContented"><br/>
+                        &nbsp;&nbsp;&lt;div class="article__div--FlexItem">1<br/>
+                        &nbsp;&nbsp;&lt;/div><br/>
+                        &nbsp;&nbsp;&lt;div class="article__div--FlexItem">2<br/>
+                        &nbsp;&nbsp;&lt;/div><br/>
+                        &nbsp;&nbsp;&lt;div class="article__div--FlexItem <b>article__div--FlexItemLast</b>">3<br/>
+                        &nbsp;&nbsp;&lt;/div><br/>
+                        &lt;/div>
+                    </Blockquote>
+                    <SmallestHeader>flex-wrap</SmallestHeader>
+                    <ListUnordered>
+                        <ListItem>
+                            określa, czy elementy mogą przechodzić do kolejnego wiersza,
+                            <ListUnordered>
+                                <ListItem>
+                                    jeśli tak, to w jakim kierunku mają się układać,
+                                </ListItem>
+                            </ListUnordered>
+                        </ListItem>
+                        <ListItem>
+                            <b>wrap</b> - pozwala na przechodzenie do kolejnego wiersza,
+                        </ListItem>
+                        <ListItem>
+                            <b>wrap-reverse</b> - odwrotny kierunek,
+                        </ListItem>
+                        <ListItem>
+                            domyślnie <b>nowrap</b>
+                        </ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>align-content</SmallestHeader>
+                    <ListUnordered>
+                        <ListItem>
+                            określa rozmieszczenie pustej przestrzeni w osi prostopadłej
+                            <ListUnordered>
+                                <ListItem>
+                                    jeśli jest wiele linii
+                                </ListItem>
+                            </ListUnordered>
+                        </ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>skrót flex-flow</SmallestHeader>
+                    <ListUnordered>
+                        <ListItem>
+                            flex-direction i flex-wrap w jednym
+                        </ListItem>
+                        <ListItem>
+                            np. column wrap
+                            <Blockquote>
+                                .element &#123;<br/>
+                                &nbsp;&nbsp;flex-flow: column wrap;<br/>
+                                &#125;
+                            </Blockquote>
+                        </ListItem>
+                    </ListUnordered>
+                    <p>A tutaj można utrwalić swoją wiedzę z <i>Flex-a</i>:</p>
+                    <ListUnordered>
+                        <ListItem>
+                            <a href="https://flexboxfroggy.com/#pl" target="_blank">Flexbox Froggy</a>
+                        </ListItem>
+                        <ListItem>
+                            <a href="https://mastery.games/flexboxzombies" target="_blank">Flexbox Zombies</a>
+                        </ListItem>
+                        <ListItem>
+                            <a href="https://codepen.io/osublake/pen/dMLQJr" target="_blank">CodePen Demo</a>
+                        </ListItem>
+                    </ListUnordered>
+                </>
+            )
         }
         ,
         {
             id: 52,
             date: "12 lipca 2023 roku",
             title: "CSS - Flex c.d.",
-            body:
-                (
-                    <>
-                        <SmallestHeader>flex-grow</SmallestHeader>
-                        <ListUnordered>
-                            <ListItem>
-                                określa ile pozostałego miejsca ma zostać przypisane do <i>flex item</i>.
-                                <Blockquote>
-                                    .element1 &#123;<br/>
-                                    &nbsp;&nbsp;flex-grow: 1;<br/>
-                                    &#125;;<br/><br/>
-                                    .element2 &#123;<br/>
-                                    &nbsp;&nbsp;flex-grow: 2;<br/>
-                                    &#125;<br/><br/>
-                                    .element3 &#123;<br/>
-                                    &nbsp;&nbsp;flex-grow: 0;<br/>
-                                    &#125;<br/>
-                                </Blockquote>
-                            </ListItem>
-                            <ListItem>
-                                domyślnie 0, czyli nie rozciąga się, ale można to zmienić na 1, czyli rozciąga się.
-                            </ListItem>
-                            <ListItem>
-                                działa na zasadzie proporcji, więc jeżeli jeden element ma wartość 1, a drugi 2, to
-                                drugi będzie
-                                miał dwa razy więcej miejsca. Jeżeli jeden element ma wartość 1, a drugi 0, to drugi nie
-                                będzie
-                                miał miejsca.
-                            </ListItem>
-                        </ListUnordered>
-                        <SmallestHeader>flex-shrink</SmallestHeader>
-                        <ListUnordered>
-                            <ListItem>
-                                określa jak bardzo element może się skurczyć, by zmieścić wszystkie elementy w linii.
-                                <Blockquote>
-                                    .element1 &#123;<br/>
-                                    &nbsp;&nbsp;flex-shrink: 1;<br/>
-                                    &#125;;<br/><br/>
-                                    .element2 &#123;<br/>
-                                    &nbsp;&nbsp;flex-shrink: 2;<br/>
-                                    &#125;<br/><br/>
-                                    .element3 &#123;<br/>
-                                    &nbsp;&nbsp;flex-shrink: 0;<br/>
-                                    &#125;<br/>
-                                </Blockquote>
-                            </ListItem>
-                            <ListItem>gdyby każdy element, miałby wartość 0 w <i>flex-shrink</i>,
-                                to
-                                elementy wyjdą z <i>kontenera nadrzędnego</i></ListItem>
-                            <ListItem>działa na zasadzie proporcji</ListItem>
-                            <ListItem>wartość domyślna to 1.</ListItem>
-                        </ListUnordered>
-                        <SmallestHeader>skrót flex</SmallestHeader>
-                        <ListUnordered>
-                            <ListItem>
-                                flex-grow, flex-shrink, flex-basis
-                                <ListUnordered>
-                                    <ListItem>elementy nie poszerzają się, ale mogą się kurczyć, a ich
-                                        szerokość jest automatyczna:
-                                        <Blockquote>
-                                            .element1 &#123;<br/>
-                                            &nbsp;&nbsp;flex: 0 1 auto;<br/>
-                                            &#125;;<br/>
-                                        </Blockquote>
-                                    </ListItem>
-                                    <ListItem>elementy i poszerzają się i się kurczą, ale mogą się
-                                        kurczyć, a ich szerokość jest automatyczna (nie będą wystawały poza kontener):
-                                        <Blockquote>
-                                            .element1 &#123;<br/>
-                                            &nbsp;&nbsp;flex: 1 1 auto;<br/>
-                                            &#125;;<br/>
-                                        </Blockquote>
-                                        zamiast tego zapisu, możemy napisać samo <i>flex: auto</i> i zadziała nam tak samo
-                                    </ListItem>
-                                    <ListItem>elementy mają rozmiar zależny od ich treści, ale
-                                        się ani nie
-                                        zwężają, ani nie poszerzają:
-                                        <Blockquote>
-                                            .element1 &#123;<br/>
-                                            & nbsp;&nbsp;flex: 0 0 auto;<br/>
-                                            &#125;;<br/>
-                                        </Blockquote>
-                                        zamiast tego zapisu, możemy napisać samo <i>flex: none</i> i zadziała nam
-                                        tak samo
-                                    </ListItem>
-                                    <ListItem>elementy mają identyczną
-                                        szerokość/wysokość, nie poszerzają
-                                        się i się nie kurczą
-                                        <Blockquote>
-                                            .element1 &#123;<br/>
-                                            &nbsp;&nbsp;flex: 1 0 0;<br/>
-                                            &#125;;<br/>
-                                        </Blockquote>
-                                        zamiast tego zapisu, możemy napisać samo <i>flex: 1</i> i zadziała
-                                        nam tak samo
-                                    </ListItem>
-                                    <ListItem>elementy mogą się nie mieścić —
-                                        nie pozwalają się skurczyć,
-                                        ani poszerzyć, a ich wartość szerokości/wysokości jest ustawiona
-                                        na "sztywno".
-                                        <Blockquote>
-                                            .element1 &#123;<br/>
-                                            &nbsp;&nbsp;flex: 0 0 100;<br/>
-                                            &#125;;<br/>
-                                        </Blockquote>
-                                    </ListItem>
-                                </ListUnordered>
-                            </ListItem>
-                        </ListUnordered>
-                    </>
-                )
+            body: (
+                <>
+                    <SmallestHeader>flex-grow</SmallestHeader>
+                    <ListUnordered>
+                        <ListItem>
+                            określa ile pozostałego miejsca ma zostać przypisane do <i>flex item</i>.
+                            <Blockquote>
+                                .element1 &#123;<br/>
+                                &nbsp;&nbsp;flex-grow: 1;<br/>
+                                &#125;;<br/><br/>
+                                .element2 &#123;<br/>
+                                &nbsp;&nbsp;flex-grow: 2;<br/>
+                                &#125;<br/><br/>
+                                .element3 &#123;<br/>
+                                &nbsp;&nbsp;flex-grow: 0;<br/>
+                                &#125;<br/>
+                            </Blockquote>
+                        </ListItem>
+                        <ListItem>
+                            domyślnie 0, czyli nie rozciąga się, ale można to zmienić na 1, czyli rozciąga się.
+                        </ListItem>
+                        <ListItem>
+                            działa na zasadzie proporcji, więc jeżeli jeden element ma wartość 1, a drugi 2, to
+                            drugi będzie
+                            miał dwa razy więcej miejsca. Jeżeli jeden element ma wartość 1, a drugi 0, to drugi nie
+                            będzie
+                            miał miejsca.
+                        </ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>flex-shrink</SmallestHeader>
+                    <ListUnordered>
+                        <ListItem>
+                            określa jak bardzo element może się skurczyć, by zmieścić wszystkie elementy w linii.
+                            <Blockquote>
+                                .element1 &#123;<br/>
+                                &nbsp;&nbsp;flex-shrink: 1;<br/>
+                                &#125;;<br/><br/>
+                                .element2 &#123;<br/>
+                                &nbsp;&nbsp;flex-shrink: 2;<br/>
+                                &#125;<br/><br/>
+                                .element3 &#123;<br/>
+                                &nbsp;&nbsp;flex-shrink: 0;<br/>
+                                &#125;<br/>
+                            </Blockquote>
+                        </ListItem>
+                        <ListItem>gdyby każdy element, miałby wartość 0 w <i>flex-shrink</i>,
+                            to
+                            elementy wyjdą z <i>kontenera nadrzędnego</i></ListItem>
+                        <ListItem>działa na zasadzie proporcji</ListItem>
+                        <ListItem>wartość domyślna to 1.</ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>skrót flex</SmallestHeader>
+                    <ListUnordered>
+                        <ListItem>
+                            flex-grow, flex-shrink, flex-basis
+                            <ListUnordered>
+                                <ListItem>elementy nie poszerzają się, ale mogą się kurczyć, a ich
+                                    szerokość jest automatyczna:
+                                    <Blockquote>
+                                        .element1 &#123;<br/>
+                                        &nbsp;&nbsp;flex: 0 1 auto;<br/>
+                                        &#125;;<br/>
+                                    </Blockquote>
+                                </ListItem>
+                                <ListItem>elementy i poszerzają się i się kurczą, ale mogą się
+                                    kurczyć, a ich szerokość jest automatyczna (nie będą wystawały poza kontener):
+                                    <Blockquote>
+                                        .element1 &#123;<br/>
+                                        &nbsp;&nbsp;flex: 1 1 auto;<br/>
+                                        &#125;;<br/>
+                                    </Blockquote>
+                                    zamiast tego zapisu, możemy napisać samo <i>flex: auto</i> i zadziała nam tak samo
+                                </ListItem>
+                                <ListItem>elementy mają rozmiar zależny od ich treści, ale
+                                    się ani nie
+                                    zwężają, ani nie poszerzają:
+                                    <Blockquote>
+                                        .element1 &#123;<br/>
+                                        & nbsp;&nbsp;flex: 0 0 auto;<br/>
+                                        &#125;;<br/>
+                                    </Blockquote>
+                                    zamiast tego zapisu, możemy napisać samo <i>flex: none</i> i zadziała nam
+                                    tak samo
+                                </ListItem>
+                                <ListItem>elementy mają identyczną
+                                    szerokość/wysokość, nie poszerzają
+                                    się i się nie kurczą
+                                    <Blockquote>
+                                        .element1 &#123;<br/>
+                                        &nbsp;&nbsp;flex: 1 0 0;<br/>
+                                        &#125;;<br/>
+                                    </Blockquote>
+                                    zamiast tego zapisu, możemy napisać samo <i>flex: 1</i> i zadziała
+                                    nam tak samo
+                                </ListItem>
+                                <ListItem>elementy mogą się nie mieścić —
+                                    nie pozwalają się skurczyć,
+                                    ani poszerzyć, a ich wartość szerokości/wysokości jest ustawiona
+                                    na "sztywno".
+                                    <Blockquote>
+                                        .element1 &#123;<br/>
+                                        &nbsp;&nbsp;flex: 0 0 100;<br/>
+                                        &#125;;<br/>
+                                    </Blockquote>
+                                </ListItem>
+                            </ListUnordered>
+                        </ListItem>
+                    </ListUnordered>
+                </>
+            )
         }
         ,
         {
             id: 51,
             date: "11 lipca 2023",
             title: "CSS - Flex c.d.",
-            body:
-                (
-                    <>
-                        <SmallestHeader>flex-direction</SmallestHeader>
-                        <p>Flex layout ma dwie osie: główną i prostopadłą (main i cross). Oś prostopadła to oś pionowa.</p>
-                        <p>Wartości dla <b>flex-direction</b>, to:</p>
-                        <ListUnordered>
-                            <ListItem>
-                                row
-                            </ListItem>
-                            <ListItem>
-                                row-reverse,
-                            </ListItem>
-                            <ListItem>
-                                column - gdy wpiszemy do właściwości <i>flex-direction</i> wartość <i>column</i>, nasz
-                                element
-                                będzie zachowywał się, jakby w ogóle <i>Flex-a</i> nie było. Czy aby <em>na pewno</em>?
-                                Jeżeli
-                                mamy ustawionego <i>Flex-a</i>, to nie zachodzi <i>margin collapsing</i>.
-                                <Blockquote>
-                                    .container &#123;<br/>
-                                    &nbsp;&nbsp;display: flex;<br/>
-                                    &nbsp;&nbsp;<b>flex-direction: column;</b><br/>
-                                    &#125;;
-                                </Blockquote>
-                            </ListItem>
-                            <ListItem>
-                                column reverse.
-                            </ListItem>
-                        </ListUnordered>
-                        <p>Bardzo fajnym ćwiczeniem będzie, jeśli za pomocą <i>DevTools-ów</i> "złapiesz" <i>div-a</i> z
-                            poprzedniego wpisu i dodasz właściwość <i>flex-direction</i> i "pobawisz się" z wartościami,
-                            które
-                            są też dostępne w tym narzędziu.</p>
-                        <SmallestHeader>flex-basis</SmallestHeader>
-                        <p>Gdy ustawimy sobie elementy w <i>kontenerze nadrzędnym</i> jako <i>flex-direction: row</i>, to
-                            zauważymy, że szerokość elementów powinna być stała, jednak wysokość będzie się rozciągać na
-                            wysokość rodzica. Możemy wyznaczyć stałą szerokość elementów w tym przypadku i do tego posłuży
-                            nam
-                            właśnie <i>flex-basis</i>. Jeżeli ustawiliśmy <i>flex-direction: column</i>,
-                            to <i>flex-basis</i>
-                            będzie się odnosił do wysokości elementów, a nie szerokości. Oczywiście nie możemy powiększać
-                            szerokości/ wysokości elementów w nieskończoność — możemy je ustawić maksymalnie tak, aby nie
-                            przekroczyć dostępnej szerokości lub wysokości narzuconej przez rodzica.
-                            Właściwości <i>width</i> i
-                            <i>height</i> również zadziałają, jednak wygodniej jest stosować <i>flex-basis</i>, ponieważ nie
-                            musimy wtedy pilnować czy mamy ustawiony <i>flex direction</i> na <i>row</i>,
-                            czy <i>column</i> i
-                            przede wszystkim <i>flex-basis</i> ma wyższy priorytet.</p>
-                    </>
-                )
+            body: (
+                <>
+                    <SmallestHeader>flex-direction</SmallestHeader>
+                    <p>Flex layout ma dwie osie: główną i prostopadłą (main i cross). Oś prostopadła to oś pionowa.</p>
+                    <p>Wartości dla <b>flex-direction</b>, to:</p>
+                    <ListUnordered>
+                        <ListItem>
+                            row
+                        </ListItem>
+                        <ListItem>
+                            row-reverse,
+                        </ListItem>
+                        <ListItem>
+                            column - gdy wpiszemy do właściwości <i>flex-direction</i> wartość <i>column</i>, nasz
+                            element
+                            będzie zachowywał się, jakby w ogóle <i>Flex-a</i> nie było. Czy aby <em>na pewno</em>?
+                            Jeżeli
+                            mamy ustawionego <i>Flex-a</i>, to nie zachodzi <i>margin collapsing</i>.
+                            <Blockquote>
+                                .container &#123;<br/>
+                                &nbsp;&nbsp;display: flex;<br/>
+                                &nbsp;&nbsp;<b>flex-direction: column;</b><br/>
+                                &#125;;
+                            </Blockquote>
+                        </ListItem>
+                        <ListItem>
+                            column reverse.
+                        </ListItem>
+                    </ListUnordered>
+                    <p>Bardzo fajnym ćwiczeniem będzie, jeśli za pomocą <i>DevTools-ów</i> "złapiesz" <i>div-a</i> z
+                        poprzedniego wpisu i dodasz właściwość <i>flex-direction</i> i "pobawisz się" z wartościami,
+                        które
+                        są też dostępne w tym narzędziu.</p>
+                    <SmallestHeader>flex-basis</SmallestHeader>
+                    <p>Gdy ustawimy sobie elementy w <i>kontenerze nadrzędnym</i> jako <i>flex-direction: row</i>, to
+                        zauważymy, że szerokość elementów powinna być stała, jednak wysokość będzie się rozciągać na
+                        wysokość rodzica. Możemy wyznaczyć stałą szerokość elementów w tym przypadku i do tego posłuży
+                        nam
+                        właśnie <i>flex-basis</i>. Jeżeli ustawiliśmy <i>flex-direction: column</i>,
+                        to <i>flex-basis</i>
+                        będzie się odnosił do wysokości elementów, a nie szerokości. Oczywiście nie możemy powiększać
+                        szerokości/ wysokości elementów w nieskończoność — możemy je ustawić maksymalnie tak, aby nie
+                        przekroczyć dostępnej szerokości lub wysokości narzuconej przez rodzica.
+                        Właściwości <i>width</i> i
+                        <i>height</i> również zadziałają, jednak wygodniej jest stosować <i>flex-basis</i>, ponieważ nie
+                        musimy wtedy pilnować czy mamy ustawiony <i>flex direction</i> na <i>row</i>,
+                        czy <i>column</i> i
+                        przede wszystkim <i>flex-basis</i> ma wyższy priorytet.</p>
+                </>
+            )
         }
         ,
         {
@@ -4304,801 +4459,794 @@ export const articlesLink = [
             id: 49,
             date: "09 lipca 2023 roku",
             title: "CSS - wyrównanie tekstu, dekoracje, wcięcia, wielkość liter, object-fit, object-position, calc",
-            body:
-                (
-                    <>
-                        <SmallestHeader>text-align</SmallestHeader>
-                        <p>Wyrównuje treść wewnątrz elementów blokowych i komórek tabeli</p>
-                        <ListUnordered>
-                            <ListItem>
-                                Wartości właściwości <b>text-align</b>, których używamy:
-                                <ListUnordered>
-                                    <ListItem>
-                                        left
-                                    </ListItem>
-                                    <ListItem>
-                                        right
-                                    </ListItem>
-                                    <ListItem>
-                                        center
-                                    </ListItem>
-                                    <ListItem>
-                                        justify
-                                    </ListItem>
-                                </ListUnordered>
-                            </ListItem>
-                        </ListUnordered>
-                        <SmallestHeader>text-indent</SmallestHeader>
-                        <p><b>text-indent</b> to właściwość, która jest odpowiedzialna za wcięcie teksty w blokowym
-                            elemencie (%
-                            odnosi się do szerokości bloku).</p>
-                        <SmallestHeader>text-decoration</SmallestHeader>
-                        <ListUnordered>
-                            <ListItem>
-                                określa wygląd linii dekoracyjnych tekstu,
-                            </ListItem>
-                            <ListItem>
-                                gdy chcemy usunąć podkreślenie z linku, wpisujemy wartość <b>none</b>,
-                                <Blockquote>
-                                    .element &#123;<br/>
-                                    &nbsp;&nbsp;<b>text-decoration:</b> none;<br/>
-                                    &#125;;
-                                </Blockquote>
-                            </ListItem>
-                            <ListItem>
-                                <b>text-decoration: underline dotted red</b> - trzy wartości w jednej właściwości,
-                                spowodują, że
-                                tekst zostanie podkreślony kropkowaną czerwoną linią,
-                            </ListItem>
-                            <ListItem>
-                                text-decoration-line:
-                                <ListUnordered>
-                                    <ListItem>
-                                        <b>underline</b> - podkreślenie,
-                                    </ListItem>
-                                    <ListItem>
-                                        <b>overline</b> - linia nad tekstem,
-                                    </ListItem>
-                                    <ListItem>
-                                        <b>line-through</b> - przekreślenie,
-                                    </ListItem>
-                                    <ListItem>
-                                        kilka po spacji, np <b>underline overline</b>,
-                                    </ListItem>
-                                    <ListItem>
-                                        <b>none</b> - brak podkreślenia,
-                                    </ListItem>
-                                </ListUnordered>
-                            </ListItem>
-                            <ListItem>
-                                <b>text-decoration-color</b> - określa kolor linii
-                            </ListItem>
-                            <ListItem>
-                                <b>text-decoration-style</b>
-                                <ListUnordered>
-                                    <ListItem>
-                                        solid
-                                    </ListItem>
-                                    <ListItem>
-                                        double
-                                    </ListItem>
-                                    <ListItem>
-                                        dotted
-                                    </ListItem>
-                                    <ListItem>
-                                        dashed
-                                    </ListItem>
-                                    <ListItem>
-                                        wavy
-                                    </ListItem>
-                                </ListUnordered>
-                            </ListItem>
-                        </ListUnordered>
-                        <SmallestHeader>text-transform</SmallestHeader>
-                        <ListUnordered>
-                            <ListItem>
-                                przydaje się do zamiany wszystkich liter na małe, wielkie lub do zamiany wszystkich
-                                pierwszych
-                                liter na wielkie;
-                            </ListItem>
-                            <ListItem>
-                                wartości:
-                                <ListUnordered>
-                                    <ListItem>
-                                        <b>uppercase</b> - wszystkie litery wielkie,
-                                    </ListItem>
-                                    <ListItem>
-                                        <b>lowercase</b> - wszystkie litery małe,
-                                    </ListItem>
-                                    <ListItem>
-                                        <b>capitalize</b> - pierwsza litera w każdym słowie jest wielka, a reszta liter
-                                        pozostaje bez zmian,
-                                    </ListItem>
-                                    <ListItem>
-                                        <b>none</b> - nie zmienia nic,
-                                    </ListItem>
-                                </ListUnordered>
-                            </ListItem>
-                        </ListUnordered>
-                        <SmallestHeader>object-fit</SmallestHeader>
-                        <ListUnordered>
-                            <ListItem>
-                                określa, jak skalować np. obrazek, by wpasować się w kontener,
-                            </ListItem>
-                            <ListItem>
-                                wartości:
-                            </ListItem>
-                            <ListItem>
-                                <b>cover</b> - wypełnia kontener, ścina boki,
-                            </ListItem>
-                            <ListItem>
-                                <b>contain</b> - mieści się w kontenerze, zostawia pustą przestrzeń po bokach,
-                            </ListItem>
-                            <ListItem>
-                                <b>fill</b> - wartość domyślna - wypełnia kontener, nie zachowując proporcji,
-                            </ListItem>
-                        </ListUnordered>
-                        <SmallestHeader>object-position</SmallestHeader>
-                        <ListUnordered>
-                            <ListItem>
-                                położenie, np. obrazka w kontenerze,
-                            </ListItem>
-                            <ListItem>
-                                format taki sam jak przy background-position,
-                            </ListItem>
-                            <ListItem>
-                                domyślnie: 50% 50%,
-                            </ListItem>
-                            <ListItem>
-                                <b>contain</b> - mieści się w kontenerze, zostawia pustą przestrzeń po bokach,
-                            </ListItem>
-                            <ListItem>
-                                <b>fill</b> - wartość domyślna - wypełnia kontener, nie zachowując proporcji,
-                            </ListItem>
-                        </ListUnordered>
-                        <SmallestHeader>calc</SmallestHeader>
-                        <ListUnordered>
-                            <ListItem>
-                                obliczenia w CSS-ie, kiedy nie chcemy przypisać stałej wartości
-                            </ListItem>
-                            <ListItem>
-                                <b>width: calc(100%-80px);</b>,
-                            </ListItem>
-                            <ListItem>
-                                działania
-                                <ListUnordered>
-                                    <ListItem>
-                                        +-
-                                        <ListUnordered>
-                                            <ListItem>
-                                                koniecznie ze spacją, inaczej nie zadziała
-                                            </ListItem>
-                                        </ListUnordered>
-                                    </ListItem>
-                                    <ListItem>
-                                        */
-                                    </ListItem>
-                                </ListUnordered>
-                            </ListItem>
-                        </ListUnordered>
-                    </>
-                )
+            body: (
+                <>
+                    <SmallestHeader>text-align</SmallestHeader>
+                    <p>Wyrównuje treść wewnątrz elementów blokowych i komórek tabeli</p>
+                    <ListUnordered>
+                        <ListItem>
+                            Wartości właściwości <b>text-align</b>, których używamy:
+                            <ListUnordered>
+                                <ListItem>
+                                    left
+                                </ListItem>
+                                <ListItem>
+                                    right
+                                </ListItem>
+                                <ListItem>
+                                    center
+                                </ListItem>
+                                <ListItem>
+                                    justify
+                                </ListItem>
+                            </ListUnordered>
+                        </ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>text-indent</SmallestHeader>
+                    <p><b>text-indent</b> to właściwość, która jest odpowiedzialna za wcięcie teksty w blokowym
+                        elemencie (%
+                        odnosi się do szerokości bloku).</p>
+                    <SmallestHeader>text-decoration</SmallestHeader>
+                    <ListUnordered>
+                        <ListItem>
+                            określa wygląd linii dekoracyjnych tekstu,
+                        </ListItem>
+                        <ListItem>
+                            gdy chcemy usunąć podkreślenie z linku, wpisujemy wartość <b>none</b>,
+                            <Blockquote>
+                                .element &#123;<br/>
+                                &nbsp;&nbsp;<b>text-decoration:</b> none;<br/>
+                                &#125;;
+                            </Blockquote>
+                        </ListItem>
+                        <ListItem>
+                            <b>text-decoration: underline dotted red</b> - trzy wartości w jednej właściwości,
+                            spowodują, że
+                            tekst zostanie podkreślony kropkowaną czerwoną linią,
+                        </ListItem>
+                        <ListItem>
+                            text-decoration-line:
+                            <ListUnordered>
+                                <ListItem>
+                                    <b>underline</b> - podkreślenie,
+                                </ListItem>
+                                <ListItem>
+                                    <b>overline</b> - linia nad tekstem,
+                                </ListItem>
+                                <ListItem>
+                                    <b>line-through</b> - przekreślenie,
+                                </ListItem>
+                                <ListItem>
+                                    kilka po spacji, np <b>underline overline</b>,
+                                </ListItem>
+                                <ListItem>
+                                    <b>none</b> - brak podkreślenia,
+                                </ListItem>
+                            </ListUnordered>
+                        </ListItem>
+                        <ListItem>
+                            <b>text-decoration-color</b> - określa kolor linii
+                        </ListItem>
+                        <ListItem>
+                            <b>text-decoration-style</b>
+                            <ListUnordered>
+                                <ListItem>
+                                    solid
+                                </ListItem>
+                                <ListItem>
+                                    double
+                                </ListItem>
+                                <ListItem>
+                                    dotted
+                                </ListItem>
+                                <ListItem>
+                                    dashed
+                                </ListItem>
+                                <ListItem>
+                                    wavy
+                                </ListItem>
+                            </ListUnordered>
+                        </ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>text-transform</SmallestHeader>
+                    <ListUnordered>
+                        <ListItem>
+                            przydaje się do zamiany wszystkich liter na małe, wielkie lub do zamiany wszystkich
+                            pierwszych
+                            liter na wielkie;
+                        </ListItem>
+                        <ListItem>
+                            wartości:
+                            <ListUnordered>
+                                <ListItem>
+                                    <b>uppercase</b> - wszystkie litery wielkie,
+                                </ListItem>
+                                <ListItem>
+                                    <b>lowercase</b> - wszystkie litery małe,
+                                </ListItem>
+                                <ListItem>
+                                    <b>capitalize</b> - pierwsza litera w każdym słowie jest wielka, a reszta liter
+                                    pozostaje bez zmian,
+                                </ListItem>
+                                <ListItem>
+                                    <b>none</b> - nie zmienia nic,
+                                </ListItem>
+                            </ListUnordered>
+                        </ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>object-fit</SmallestHeader>
+                    <ListUnordered>
+                        <ListItem>
+                            określa, jak skalować np. obrazek, by wpasować się w kontener,
+                        </ListItem>
+                        <ListItem>
+                            wartości:
+                        </ListItem>
+                        <ListItem>
+                            <b>cover</b> - wypełnia kontener, ścina boki,
+                        </ListItem>
+                        <ListItem>
+                            <b>contain</b> - mieści się w kontenerze, zostawia pustą przestrzeń po bokach,
+                        </ListItem>
+                        <ListItem>
+                            <b>fill</b> - wartość domyślna - wypełnia kontener, nie zachowując proporcji,
+                        </ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>object-position</SmallestHeader>
+                    <ListUnordered>
+                        <ListItem>
+                            położenie, np. obrazka w kontenerze,
+                        </ListItem>
+                        <ListItem>
+                            format taki sam jak przy background-position,
+                        </ListItem>
+                        <ListItem>
+                            domyślnie: 50% 50%,
+                        </ListItem>
+                        <ListItem>
+                            <b>contain</b> - mieści się w kontenerze, zostawia pustą przestrzeń po bokach,
+                        </ListItem>
+                        <ListItem>
+                            <b>fill</b> - wartość domyślna - wypełnia kontener, nie zachowując proporcji,
+                        </ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>calc</SmallestHeader>
+                    <ListUnordered>
+                        <ListItem>
+                            obliczenia w CSS-ie, kiedy nie chcemy przypisać stałej wartości
+                        </ListItem>
+                        <ListItem>
+                            <b>width: calc(100%-80px);</b>,
+                        </ListItem>
+                        <ListItem>
+                            działania
+                            <ListUnordered>
+                                <ListItem>
+                                    +-
+                                    <ListUnordered>
+                                        <ListItem>
+                                            koniecznie ze spacją, inaczej nie zadziała
+                                        </ListItem>
+                                    </ListUnordered>
+                                </ListItem>
+                                <ListItem>
+                                    */
+                                </ListItem>
+                            </ListUnordered>
+                        </ListItem>
+                    </ListUnordered>
+                </>
+            )
         }
         ,
         {
             id: 48,
             date: "08 lipca 2023 roku",
             title: "CSS - obraz w tle",
-            body:
-                (
-                    <>
-                        <p>Za pomocą CSS-a możemy umieścić obrazek w tle wybranego elementu. Do tego użyjemy
-                            właściwości <i>background-image</i>.
-                        </p>
-                        <SmallestHeader>background-image</SmallestHeader>
-                        <Blockquote>
-                            .element &#123;<br/>
-                            &nbsp;&nbsp;background-image: url(".../images/nazwaObrazka.jpg");<br/>
-                            &#125;;
-                        </Blockquote>
-                        <p>Przechodząc do praktyki, dodaję <i>div-a</i> z klasą <i>"article__div--highlighted"</i>:</p>
-                        <div className="article__div--highlighted"></div>
-                        <Blockquote>
-                            .article__div--highlighted &#123;<br/>
-                            &nbsp;&nbsp;width: 300px;<br/>
-                            &nbsp;&nbsp;height: 300px;<br/>
-                            &nbsp;&nbsp;background-image: url("../images/pink.png");<br/>
-                            &#125;
-                        </Blockquote>
-                        <p>Jeżeli chcemy, aby wielkość obrazka była dynamicznie zamienialna, dodajemy następujące
-                            właściwości:</p>
-                        <Blockquote>
-                            .article__div--highlighted &#123;<br/>
-                            &nbsp;&nbsp;width: 300px;<br/>
-                            <b>&nbsp;&nbsp;resize: both;</b><br/>
-                            &nbsp;&nbsp;overflox: auto;<br/>//
-                        </Blockquote>
-                        <p>Mała uwaga, też przy okazji powtórzenia materiału pewne rzeczy rozjaśnię — warto dodawać
-                            ".." przed /
-                            (slash-em), ponieważ miejsce ".." stanowi adres, do którego podpięty jest obrazek zaraz
-                            po /
-                            (slash-u). Jeżeli wpiszemy w to miejsce:</p>
-                        <Blockquote>
-                            &nbsp;&nbsp;background-image: url("/images/pink.png");<br/>
-                        </Blockquote>
-                        <p>to na naszym lokalnym serwerze to nam zadziała, ale korzystając z innej opcji, np.
-                            używając
-                            DevTools-ów i wchodząc w Styles, a potem klikając na adres obrazka, pojawi nam się błąd
-                            z
-                            informacją, że pliku nie znaleziono.</p>
-                        <SmallestHeader>background-repeat i jej wartości:</SmallestHeader>
-                        <ListUnordered>
-                            <ListItem>
-                                <b>no repeat</b> - obrazek w ogóle się nie powtarza,
-                            </ListItem>
-                            <ListItem>
-                                <b>space</b> - obrazek powtarza się tyle razy ile się zmieści cały, pusta przestrzeń
-                                jest równo
-                                rozmieszczona między obrazkami, elementy są wyjustowane i w poziomie i pionie,
-                            </ListItem>
-                            <ListItem>
-                                <b>round</b> - obrazki rozciągają się tak, aby nie było żadnej przestrzeni między
-                                nimi, skalują
-                                się, przez co mogą powstać nieproporcjonalne wartości obrazka,
-                            </ListItem>
-                            <ListItem>
-                                <b>repeat</b> - wartość domyślna,
-                            </ListItem>
-                            <ListItem>
-                                różne wartości w pionie i poziomie
-                                <ListUnordered>
-                                    <ListItem>
-                                        np. <b>no-repeat repeat</b> - obrazek będzie się powtarzał w pionie, ale nie
-                                        będzie się
-                                        powtarzał w poziomie,
-                                    </ListItem>
-                                    <ListItem>
-                                        <b>space round</b> - space jest w poziomie, a round jest w pionie.
-                                    </ListItem>
-                                    <ListItem>
-                                        <b>repeat-y</b> lub <b>repeat-x</b>- powtarzanie wyłącznie w pionie lub w
-                                        poziomie
-                                    </ListItem>
-                                </ListUnordered>
-                            </ListItem>
-                        </ListUnordered>
-                        <SmallestHeader>background-position i jej wartości:</SmallestHeader>
-                        <ListUnordered>
-                            <ListItem>
-                                <b>center</b> - obrazek jest na środku niezależnie od rozmiaru elementu,
-                            </ListItem>
-                            <ListItem>
-                                <b>top | right | bottom | left</b> - obrazek jest na górze | na prawo | na dole | na
-                                lewo —
-                                niezależnie od rozmiaru elementu
-                            </ListItem>
-                            <ListItem>
-                                <b>top right | bottom | left</b> - obrazek jest wyrównany do górnego prawego rogu i
-                                analogicznie
-                                przy wypisywaniu wartości z lewej top | bottom i wartości z prawej left | right etc,
-                            </ListItem>
-                            <ListItem>
-                                <b>25% 75%</b> - obrazek ustawiony jest na 25% rozmiaru elementu od lewej i 75%
-                                rozmiaru
-                                elementu od góry,
-                            </ListItem>
-                            <ListItem>
-                                <b>10px 20px</b> - obrazek ustawiony jest na 10px od lewej i 20px od góry,
-                            </ListItem>
-                            <ListItem>
-                                <b>right 10% bottom 20%</b> - obrazek ustawiony jest na 10% od prawej i 20% od dołu,
-                            </ListItem>
-                            <ListItem>
-                                można ustawić kilka obrazków, aby wyświetlały się jeden w jednym miejscu, a drugi w
-                                drugim
-                                miejscu używając wartości po przecinku
-                            </ListItem>
-                        </ListUnordered>
-                        <SmallestHeader>background-size i jej wartości:</SmallestHeader>
-                        <ListUnordered>
-                            <ListItem>
-                                <b>100px</b> - szerokość 100px, wysokość automatyczna,
-                            </ListItem>
-                            <ListItem>
-                                <b>auto 100px</b> - szerokość automatyczna, wysokość 100px
-                            </ListItem>
-                            <ListItem>
-                                <b>cover</b> - wypełnia element, zachowując proporcje, przycina w pionie lub w
-                                poziomie.
-                                <Blockquote>
-                                    .article__div--highlighted &#123;<br/>
-                                    &nbsp;&nbsp;width: 300px;<br/>
-                                    &nbsp;&nbsp;resize: both;<br/>
-                                    &nbsp;&nbsp;overflox: auto;<br/>
-                                    &nbsp;&nbsp;height: 300px;<br/>
-                                    &nbsp;&nbsp;background-image: url("../images/pink.png");<br/>
-                                    <b>&nbsp;&nbsp;background-size: cover;<br/>
-                                        &nbsp;&nbsp;background-position: center;<br/></b>
-                                    &#125;
-                                </Blockquote>
-                                <br/>
-                                Przy dodaniu <i>background-position: center</i> obrazek będzie zawsze
-                                docinany po zewnętrznych
-                                krawędziach.
-                            </ListItem>
-                            <ListItem>
-                                <b>contain</b> - wypełnia element, zachowując proporcje, zostawia pustą
-                                przestrzeń w pionie lub
-                                w poziomie
-                            </ListItem>
-                        </ListUnordered>
-                        <SmallestHeader>background-attachment i jej
-                            wartości:</SmallestHeader>
-                        <ListUnordered>
-                            <ListItem>
-                                określa jak zachowuje się tło przy przewijaniu
-                                <ListUnordered>
-                                    <ListItem>
-                                        <b>fixed</b> - w ogóle się nie rusza
-                                        <Blockquote>
-                                            .article__div--highlighted &#123;<br/>
-                                            &nbsp;&nbsp;width: 300px;<br/>
-                                            &nbsp;&nbsp;resize: both;<br/>
-                                            &nbsp;&nbsp;overflox: auto;<br/>
-                                            &nbsp;&nbsp;height: 300px;<br/>
-                                            &nbsp;&nbsp;background-image: url("../images/pink.png");<br/>
-                                            &nbsp;&nbsp;background-size: cover;<br/>
-                                            &nbsp;&nbsp;background-position: center;<br/>
-                                            <b>&nbsp;&nbsp;background-attachment: fixed;<br/></b>
-                                        </Blockquote>
-                                        <br/>
-                                    </ListItem>
-                                    <ListItem>
-                                        <b>local</b> - "przyklejone" do treści
-                                    </ListItem>
-                                    <ListItem>
-                                        <b>scroll</b> - "przyklejone" do elementu, nie przewija
-                                        się z treścią
-                                    </ListItem>
-                                </ListUnordered>
-                            </ListItem>
-                        </ListUnordered>
-                        <SmallestHeader>skrót
-                            background:</SmallestHeader>
-                        <ListUnordered>
-                            <ListItem>
-                                pozwala ustawić 8 właściwości związanych z tłem
-                                naraz
+            body: (
+                <>
+                    <p>Za pomocą CSS-a możemy umieścić obrazek w tle wybranego elementu. Do tego użyjemy
+                        właściwości <i>background-image</i>.
+                    </p>
+                    <SmallestHeader>background-image</SmallestHeader>
+                    <Blockquote>
+                        .element &#123;<br/>
+                        &nbsp;&nbsp;background-image: url(".../images/nazwaObrazka.jpg");<br/>
+                        &#125;;
+                    </Blockquote>
+                    <p>Przechodząc do praktyki, dodaję <i>div-a</i> z klasą <i>"article__div--highlighted"</i>:</p>
+                    <div className="article__div--highlighted"></div>
+                    <Blockquote>
+                        .article__div--highlighted &#123;<br/>
+                        &nbsp;&nbsp;width: 300px;<br/>
+                        &nbsp;&nbsp;height: 300px;<br/>
+                        &nbsp;&nbsp;background-image: url("../images/pink.png");<br/>
+                        &#125;
+                    </Blockquote>
+                    <p>Jeżeli chcemy, aby wielkość obrazka była dynamicznie zamienialna, dodajemy następujące
+                        właściwości:</p>
+                    <Blockquote>
+                        .article__div--highlighted &#123;<br/>
+                        &nbsp;&nbsp;width: 300px;<br/>
+                        <b>&nbsp;&nbsp;resize: both;</b><br/>
+                        &nbsp;&nbsp;overflox: auto;<br/>//
+                    </Blockquote>
+                    <p>Mała uwaga, też przy okazji powtórzenia materiału pewne rzeczy rozjaśnię — warto dodawać
+                        ".." przed /
+                        (slash-em), ponieważ miejsce ".." stanowi adres, do którego podpięty jest obrazek zaraz
+                        po /
+                        (slash-u). Jeżeli wpiszemy w to miejsce:</p>
+                    <Blockquote>
+                        &nbsp;&nbsp;background-image: url("/images/pink.png");<br/>
+                    </Blockquote>
+                    <p>to na naszym lokalnym serwerze to nam zadziała, ale korzystając z innej opcji, np.
+                        używając
+                        DevTools-ów i wchodząc w Styles, a potem klikając na adres obrazka, pojawi nam się błąd
+                        z
+                        informacją, że pliku nie znaleziono.</p>
+                    <SmallestHeader>background-repeat i jej wartości:</SmallestHeader>
+                    <ListUnordered>
+                        <ListItem>
+                            <b>no repeat</b> - obrazek w ogóle się nie powtarza,
+                        </ListItem>
+                        <ListItem>
+                            <b>space</b> - obrazek powtarza się tyle razy ile się zmieści cały, pusta przestrzeń
+                            jest równo
+                            rozmieszczona między obrazkami, elementy są wyjustowane i w poziomie i pionie,
+                        </ListItem>
+                        <ListItem>
+                            <b>round</b> - obrazki rozciągają się tak, aby nie było żadnej przestrzeni między
+                            nimi, skalują
+                            się, przez co mogą powstać nieproporcjonalne wartości obrazka,
+                        </ListItem>
+                        <ListItem>
+                            <b>repeat</b> - wartość domyślna,
+                        </ListItem>
+                        <ListItem>
+                            różne wartości w pionie i poziomie
+                            <ListUnordered>
+                                <ListItem>
+                                    np. <b>no-repeat repeat</b> - obrazek będzie się powtarzał w pionie, ale nie
+                                    będzie się
+                                    powtarzał w poziomie,
+                                </ListItem>
+                                <ListItem>
+                                    <b>space round</b> - space jest w poziomie, a round jest w pionie.
+                                </ListItem>
+                                <ListItem>
+                                    <b>repeat-y</b> lub <b>repeat-x</b>- powtarzanie wyłącznie w pionie lub w
+                                    poziomie
+                                </ListItem>
+                            </ListUnordered>
+                        </ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>background-position i jej wartości:</SmallestHeader>
+                    <ListUnordered>
+                        <ListItem>
+                            <b>center</b> - obrazek jest na środku niezależnie od rozmiaru elementu,
+                        </ListItem>
+                        <ListItem>
+                            <b>top | right | bottom | left</b> - obrazek jest na górze | na prawo | na dole | na
+                            lewo —
+                            niezależnie od rozmiaru elementu
+                        </ListItem>
+                        <ListItem>
+                            <b>top right | bottom | left</b> - obrazek jest wyrównany do górnego prawego rogu i
+                            analogicznie
+                            przy wypisywaniu wartości z lewej top | bottom i wartości z prawej left | right etc,
+                        </ListItem>
+                        <ListItem>
+                            <b>25% 75%</b> - obrazek ustawiony jest na 25% rozmiaru elementu od lewej i 75%
+                            rozmiaru
+                            elementu od góry,
+                        </ListItem>
+                        <ListItem>
+                            <b>10px 20px</b> - obrazek ustawiony jest na 10px od lewej i 20px od góry,
+                        </ListItem>
+                        <ListItem>
+                            <b>right 10% bottom 20%</b> - obrazek ustawiony jest na 10% od prawej i 20% od dołu,
+                        </ListItem>
+                        <ListItem>
+                            można ustawić kilka obrazków, aby wyświetlały się jeden w jednym miejscu, a drugi w
+                            drugim
+                            miejscu używając wartości po przecinku
+                        </ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>background-size i jej wartości:</SmallestHeader>
+                    <ListUnordered>
+                        <ListItem>
+                            <b>100px</b> - szerokość 100px, wysokość automatyczna,
+                        </ListItem>
+                        <ListItem>
+                            <b>auto 100px</b> - szerokość automatyczna, wysokość 100px
+                        </ListItem>
+                        <ListItem>
+                            <b>cover</b> - wypełnia element, zachowując proporcje, przycina w pionie lub w
+                            poziomie.
+                            <Blockquote>
+                                .article__div--highlighted &#123;<br/>
+                                &nbsp;&nbsp;width: 300px;<br/>
+                                &nbsp;&nbsp;resize: both;<br/>
+                                &nbsp;&nbsp;overflox: auto;<br/>
+                                &nbsp;&nbsp;height: 300px;<br/>
+                                &nbsp;&nbsp;background-image: url("../images/pink.png");<br/>
+                                <b>&nbsp;&nbsp;background-size: cover;<br/>
+                                    &nbsp;&nbsp;background-position: center;<br/></b>
+                                &#125;
+                            </Blockquote>
+                            <br/>
+                            Przy dodaniu <i>background-position: center</i> obrazek będzie zawsze
+                            docinany po zewnętrznych
+                            krawędziach.
+                        </ListItem>
+                        <ListItem>
+                            <b>contain</b> - wypełnia element, zachowując proporcje, zostawia pustą
+                            przestrzeń w pionie lub
+                            w poziomie
+                        </ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>background-attachment i jej
+                        wartości:</SmallestHeader>
+                    <ListUnordered>
+                        <ListItem>
+                            określa jak zachowuje się tło przy przewijaniu
+                            <ListUnordered>
+                                <ListItem>
+                                    <b>fixed</b> - w ogóle się nie rusza
+                                    <Blockquote>
+                                        .article__div--highlighted &#123;<br/>
+                                        &nbsp;&nbsp;width: 300px;<br/>
+                                        &nbsp;&nbsp;resize: both;<br/>
+                                        &nbsp;&nbsp;overflox: auto;<br/>
+                                        &nbsp;&nbsp;height: 300px;<br/>
+                                        &nbsp;&nbsp;background-image: url("../images/pink.png");<br/>
+                                        &nbsp;&nbsp;background-size: cover;<br/>
+                                        &nbsp;&nbsp;background-position: center;<br/>
+                                        <b>&nbsp;&nbsp;background-attachment: fixed;<br/></b>
+                                    </Blockquote>
+                                    <br/>
+                                </ListItem>
+                                <ListItem>
+                                    <b>local</b> - "przyklejone" do treści
+                                </ListItem>
+                                <ListItem>
+                                    <b>scroll</b> - "przyklejone" do elementu, nie przewija
+                                    się z treścią
+                                </ListItem>
+                            </ListUnordered>
+                        </ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>skrót
+                        background:</SmallestHeader>
+                    <ListUnordered>
+                        <ListItem>
+                            pozwala ustawić 8 właściwości związanych z tłem
+                            naraz
 
-                                <Blockquote>
-                                    .element &#123;<br/>
-                                    &nbsp;&nbsp;background: center / contain
-                                    no-repeat url("../images/nazwaObrazka.jpg")
-                                    #ccc;<br/>
-                                    &#125;
-                                </Blockquote>
-                            </ListItem>
-                        </ListUnordered>
-                    </>
-                )
+                            <Blockquote>
+                                .element &#123;<br/>
+                                &nbsp;&nbsp;background: center / contain
+                                no-repeat url("../images/nazwaObrazka.jpg")
+                                #ccc;<br/>
+                                &#125;
+                            </Blockquote>
+                        </ListItem>
+                    </ListUnordered>
+                </>
+            )
         }
         ,
         {
             id: 47,
             date: "06 lipca 2023 roku",
             title: "OpenGraph i ikonka strony",
-            body:
-                (
-                    <>
-                        <p>OpenGraph to protokół, który pozwala lepiej opisywać strony internetowe. Przydaje się do tego,
-                            aby
-                            kontrolować m.in. jak wygląda miniaturka do naszej strony (np. og:image). Poza tym
-                            używając <i>OpenGraph</i>,
-                            możemy umieścić szereg informacji dotyczących naszej strony.</p>
-                        <p>Dodajemy wtedy konkretne znaczniki <i>&lt;meta></i> do <i>&lt;head></i> strony:</p>
-                        <ListUnordered>
-                            <ListItem>
-                                og:title
-                                <Blockquote>
-                                    &lt;meta property="og:title" content="The Rock" />
-                                </Blockquote>
-                            </ListItem>
-                            <ListItem>
-                                og:type - np. article, website, book, video, movie etc.
-                                <Blockquote>
-                                    &lt;meta property="og:type" content="video.movie" />
-                                </Blockquote>
-                            </ListItem>
-                            <ListItem>
-                                og:image
-                                <Blockquote>
-                                    &lt;meta property="og:image:type" content="image/jpeg" /><br/>
-                                    &lt;meta property="og:image:width" content="400" /><br/>
-                                    &lt;meta property="og:image:height" content="300" /><br/>
-                                    &lt;meta property="og:image:alt" content="A shiny red apple with a bite taken out"
-                                    /><br/>
-                                </Blockquote>
-                            </ListItem>
-                            <ListItem>
-                                og:url - pełen adres URL.
-                                <Blockquote>
-                                    &lt;meta property="og:url" content="https://www.imdb.com/title/tt0117500/" />
-                                </Blockquote>
-                            </ListItem>
-                        </ListUnordered>
-                        <SmallestHeader>Sharing Debugger</SmallestHeader>
-                        <p>Nawiązując do wartości <i>og:image</i>, warto stworzyć taką miniaturkę strony w rozdzielczości
-                            1200px
-                            x 1200px i najlepiej ustawić tekst miniaturki w centrum obrazka, ponieważ zależnie od źródła,
-                            gdzie
-                            link do strony został udostępniony, może wyglądać inaczej. Możemy w tym celu użyć np. w
-                            aplikacji
-                            <i>Canva</i> i zapisać w formacie <i>.png</i>.</p>
-                        <p>Warto oczywiście używać statycznych grafik umieszczonych w kodzie źródłowym strony.</p>
-                        <p><i>Sharing Debugger</i> jest to narzędzie od <i>Meta</i>, w którym możemy sprawdzić
-                            protokół <i>OpenGraph</i>
-                            interesującej nas strony.</p>
-                        <p>Narzędzie to znajduje się pod tym <a href="https://developers.facebook.com/tools/debug/"
-                                                                target="_blank" title="Sharing Debugger">linkiem.</a></p>
-                        <p>Możemy dzięki niemu sprawdzić, w jaki sposób zostanie udostępniona konkretna strona — w tym
-                            przypadku
-                            udostępniona na Facebooku.</p>
-                        <SmallestHeader>Ikonka strony</SmallestHeader>
-                        <p>Ikonka strony to nic innego jak ten mały obrazek pokazujący się nam w lewym górnym rogu zakładki
-                            strony w przeglądarce. Jakiś czas temu używać trzeba było jedynie ikon w formacie <i>ico</i>,
-                            natomiast aktualnie można używać również formatu <i>.png</i> .</p>
-                        <Blockquote>
-                            &lt;link rel="icon" href="icon.png">
-                        </Blockquote>
-                        <p>Po takim podsumowaniu, zabieram się za dodawanie tagów &lt;meta> .</p>
-                    </>
-                )
+            body: (
+                <>
+                    <p>OpenGraph to protokół, który pozwala lepiej opisywać strony internetowe. Przydaje się do tego,
+                        aby
+                        kontrolować m.in. jak wygląda miniaturka do naszej strony (np. og:image). Poza tym
+                        używając <i>OpenGraph</i>,
+                        możemy umieścić szereg informacji dotyczących naszej strony.</p>
+                    <p>Dodajemy wtedy konkretne znaczniki <i>&lt;meta></i> do <i>&lt;head></i> strony:</p>
+                    <ListUnordered>
+                        <ListItem>
+                            og:title
+                            <Blockquote>
+                                &lt;meta property="og:title" content="The Rock" />
+                            </Blockquote>
+                        </ListItem>
+                        <ListItem>
+                            og:type - np. article, website, book, video, movie etc.
+                            <Blockquote>
+                                &lt;meta property="og:type" content="video.movie" />
+                            </Blockquote>
+                        </ListItem>
+                        <ListItem>
+                            og:image
+                            <Blockquote>
+                                &lt;meta property="og:image:type" content="image/jpeg" /><br/>
+                                &lt;meta property="og:image:width" content="400" /><br/>
+                                &lt;meta property="og:image:height" content="300" /><br/>
+                                &lt;meta property="og:image:alt" content="A shiny red apple with a bite taken out"
+                                /><br/>
+                            </Blockquote>
+                        </ListItem>
+                        <ListItem>
+                            og:url - pełen adres URL.
+                            <Blockquote>
+                                &lt;meta property="og:url" content="https://www.imdb.com/title/tt0117500/" />
+                            </Blockquote>
+                        </ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>Sharing Debugger</SmallestHeader>
+                    <p>Nawiązując do wartości <i>og:image</i>, warto stworzyć taką miniaturkę strony w rozdzielczości
+                        1200px
+                        x 1200px i najlepiej ustawić tekst miniaturki w centrum obrazka, ponieważ zależnie od źródła,
+                        gdzie
+                        link do strony został udostępniony, może wyglądać inaczej. Możemy w tym celu użyć np. w
+                        aplikacji
+                        <i>Canva</i> i zapisać w formacie <i>.png</i>.</p>
+                    <p>Warto oczywiście używać statycznych grafik umieszczonych w kodzie źródłowym strony.</p>
+                    <p><i>Sharing Debugger</i> jest to narzędzie od <i>Meta</i>, w którym możemy sprawdzić
+                        protokół <i>OpenGraph</i>
+                        interesującej nas strony.</p>
+                    <p>Narzędzie to znajduje się pod tym <a href="https://developers.facebook.com/tools/debug/"
+                                                            target="_blank" title="Sharing Debugger">linkiem.</a></p>
+                    <p>Możemy dzięki niemu sprawdzić, w jaki sposób zostanie udostępniona konkretna strona — w tym
+                        przypadku
+                        udostępniona na Facebooku.</p>
+                    <SmallestHeader>Ikonka strony</SmallestHeader>
+                    <p>Ikonka strony to nic innego jak ten mały obrazek pokazujący się nam w lewym górnym rogu zakładki
+                        strony w przeglądarce. Jakiś czas temu używać trzeba było jedynie ikon w formacie <i>ico</i>,
+                        natomiast aktualnie można używać również formatu <i>.png</i> .</p>
+                    <Blockquote>
+                        &lt;link rel="icon" href="icon.png">
+                    </Blockquote>
+                    <p>Po takim podsumowaniu, zabieram się za dodawanie tagów &lt;meta> .</p>
+                </>
+            )
         }
         ,
         {
             id: 46,
             date: "05 lipca 2023 roku",
             title: "README i Markdown",
-            body:
-                (
-                    <>
-                        <p>Przy okazji tej powtórki z lekcji, ogarnę moje README, bo widzę, że od momentu "przebranżowienia"
-                            bloga ze starego projektu homepage, nie dokonałam zmiany w tym pliku.</p>
-                        <p>Cóż to jest README?</p>
-                        <p>README to plik napisany w języku znaczników, jakim jest Markdown.</p>
-                        <p>Markdown powstał w 2004 roku dzięki John-owi Gruber-owi i pozwala dodać formatowanie do prostych
-                            dokumentów tekstowych, jak np. dokumentacje techniczne.</p>
-                        <p>Konwencja nakazuje, aby plik README pisać właśnie wielkimi literami.</p>
-                        <p>Pozwolę sobie na wrzucenie ściągi do Markdown.</p>
-                        <SmallestHeader>Nagłówki</SmallestHeader>
-                        <Blockquote>
-                            # H1<br/>
-                            ## H2<br/>
-                            ### H3<br/>
-                            #### H4 <br/>
-                            ##### H5<br/>
-                            ###### H6
-                        </Blockquote>
-                        <SmallestHeader>Wytłuszczenie i kursywa</SmallestHeader>
-                        <Blockquote>
-                            **wytłuszczenie**<br/>
-                            *kursywa*<br/>
-                        </Blockquote>
-                        <SmallestHeader>Listy uporządkowane</SmallestHeader>
-                        <Blockquote>
-                            1. element 1<br/>
-                            2. element 2<br/>
-                        </Blockquote>
-                        <SmallestHeader>Listy nieuporządkowane</SmallestHeader>
-                        <Blockquote>
-                            - element 1<br/>
-                            - element 2<br/>
-                        </Blockquote>
-                        <SmallestHeader>Linki</SmallestHeader>
-                        <Blockquote>
-                            [Nazwa hiperłącza](https://adresstronywww.com)
-                        </Blockquote>
-                        <p>lub:</p>
-                        <Blockquote>
-                            https://adresstronywww.com
-                        </Blockquote>
-                        <SmallestHeader>Obrazki</SmallestHeader>
-                        <Blockquote>
-                            ![Alternatywny tekst](https://adres-obrazka.com)
-                        </Blockquote>
-                        <SmallestHeader>Kod</SmallestHeader>
-                        <p>krótki fragment kodu:</p>
-                        <Blockquote>
-                            `kod`
-                        </Blockquote>
-                        <p>Blok kodu:</p>
-                        <Blockquote>
-                            ```nazwaJęzyka<br/>
-                            pierwsza linia kodu;<br/>
-                            druga linia kodu;<br/>```
-                        </Blockquote>
-                        <p>Po więcej przykładów odsyłam do dokumentacji <a
-                            href="https://www.markdownguide.org/basic-syntax/"
-                            target="_blank"
-                            title="Dokumentacja Markdown">Markdown</a>
-                        </p>
-                        <p>Po krótkim powtórzeniu, zabieram się za edycję README.md!</p>
-                    </>
-                )
+            body: (
+                <>
+                    <p>Przy okazji tej powtórki z lekcji, ogarnę moje README, bo widzę, że od momentu "przebranżowienia"
+                        bloga ze starego projektu homepage, nie dokonałam zmiany w tym pliku.</p>
+                    <p>Cóż to jest README?</p>
+                    <p>README to plik napisany w języku znaczników, jakim jest Markdown.</p>
+                    <p>Markdown powstał w 2004 roku dzięki John-owi Gruber-owi i pozwala dodać formatowanie do prostych
+                        dokumentów tekstowych, jak np. dokumentacje techniczne.</p>
+                    <p>Konwencja nakazuje, aby plik README pisać właśnie wielkimi literami.</p>
+                    <p>Pozwolę sobie na wrzucenie ściągi do Markdown.</p>
+                    <SmallestHeader>Nagłówki</SmallestHeader>
+                    <Blockquote>
+                        # H1<br/>
+                        ## H2<br/>
+                        ### H3<br/>
+                        #### H4 <br/>
+                        ##### H5<br/>
+                        ###### H6
+                    </Blockquote>
+                    <SmallestHeader>Wytłuszczenie i kursywa</SmallestHeader>
+                    <Blockquote>
+                        **wytłuszczenie**<br/>
+                        *kursywa*<br/>
+                    </Blockquote>
+                    <SmallestHeader>Listy uporządkowane</SmallestHeader>
+                    <Blockquote>
+                        1. element 1<br/>
+                        2. element 2<br/>
+                    </Blockquote>
+                    <SmallestHeader>Listy nieuporządkowane</SmallestHeader>
+                    <Blockquote>
+                        - element 1<br/>
+                        - element 2<br/>
+                    </Blockquote>
+                    <SmallestHeader>Linki</SmallestHeader>
+                    <Blockquote>
+                        [Nazwa hiperłącza](https://adresstronywww.com)
+                    </Blockquote>
+                    <p>lub:</p>
+                    <Blockquote>
+                        https://adresstronywww.com
+                    </Blockquote>
+                    <SmallestHeader>Obrazki</SmallestHeader>
+                    <Blockquote>
+                        ![Alternatywny tekst](https://adres-obrazka.com)
+                    </Blockquote>
+                    <SmallestHeader>Kod</SmallestHeader>
+                    <p>krótki fragment kodu:</p>
+                    <Blockquote>
+                        `kod`
+                    </Blockquote>
+                    <p>Blok kodu:</p>
+                    <Blockquote>
+                        ```nazwaJęzyka<br/>
+                        pierwsza linia kodu;<br/>
+                        druga linia kodu;<br/>```
+                    </Blockquote>
+                    <p>Po więcej przykładów odsyłam do dokumentacji <a
+                        href="https://www.markdownguide.org/basic-syntax/"
+                        target="_blank"
+                        title="Dokumentacja Markdown">Markdown</a>
+                    </p>
+                    <p>Po krótkim powtórzeniu, zabieram się za edycję README.md!</p>
+                </>
+            )
         }
         ,
         {
             id: 45,
             date: "04 lipca 2023 roku",
             title: "Żółw programistyczny",
-            body:
-                (
-                    <>
-                        <p>Mam nieodparte wrażenie, że powtórka materiału z kursu idzie mi strasznie wolno, jednak dzisiaj
-                            okazało się, że obrałam powolną, lecz słuszną drogę! Jeżeli ktoś z Was zastanawia się nad
-                            wprowadzeniem takiej formy utrwalania wiedzy — gorąco zachęcam! Już mówię dlaczego.</p>
-                        <p>Wcześniej tworzyłam odręczne notatki po każdej lekcji. Błędem prowadzenia odręcznych notatek jest
-                            niewątpliwie to, że treść pisaną piszemy... długopisem (albo rysikiem jak w moim przypadku).
-                            Gdybym
-                            miała tę wiedzę, co dziś — prowadziłabym notatki w blogu. Dlaczego? Mając do dyspozycji kod, z
-                            którym pracujesz, ćwiczysz wiedzę, praktykujesz ją. A jak wiemy — praktyka czyni mistrza!</p>
-                        <p>Zanim przejdę do powtórki materiału o README i Markdown, jeszcze po krótce przedstawię moje błędy
-                            podczas nauki, tak abyś Ty — jeśli to czytasz i dopiero zaczynasz — uniknął moich błędów na
-                            początku
-                            tejże fascynującej drogi.</p>
-                        <p>W grudniu 2022 roku postanowiłam przebranżowić się i wreszcie zacząć programować. Trafiłam tak na
-                            kurs <a href="https://youcode.pl/" target="_blank"
-                                    title="strona kursu Frontend Developer od Podstaw od YouCode">YouCode</a>.
-                            Jednak wewnętrzna motywacja sprawiła, że zaczęłam szukać materiałów z innych źródeł jak np. <a
-                                href="https://www.freecodecamp.org/" target="_blank"
-                                title="strona freeCodeCamp">freeCodeCamp</a>
-                            czy mini-kursy <a href="https://codenga.pl/" target="_blank" title="strona Codenga">Codenga.</a>
-                        </p>
-                        <p>Popełniłam pierwszy błąd - "latałam" po materiałach i stronach, przez to nie skupiłam się od
-                            dechy do
-                            dechy na kursie. Jeśli jesteś na tej drodze — pamiętaj o pierwszej ważnej zasadzie - <b>Jedno
-                                źródło
-                                nauki na raz!</b></p>
-                        <p>Miałam ostatnio przyjemność brać w rozmowach rekrutacyjnych i w porównaniu do mojego fiasco z
-                            końca
-                            maja — czułam się pewniej i faktycznie mogłam podzielić się przyswojoną wiedzą i przede
-                            wszystkim
-                            <b>rozumiałam to, o czym mówię</b>.</p>
-                        <p>Dlatego zachęcam do utrwalania wiedzy tym sposobem!</p>
-                    </>
-                )
+            body: (
+                <>
+                    <p>Mam nieodparte wrażenie, że powtórka materiału z kursu idzie mi strasznie wolno, jednak dzisiaj
+                        okazało się, że obrałam powolną, lecz słuszną drogę! Jeżeli ktoś z Was zastanawia się nad
+                        wprowadzeniem takiej formy utrwalania wiedzy — gorąco zachęcam! Już mówię dlaczego.</p>
+                    <p>Wcześniej tworzyłam odręczne notatki po każdej lekcji. Błędem prowadzenia odręcznych notatek jest
+                        niewątpliwie to, że treść pisaną piszemy... długopisem (albo rysikiem jak w moim przypadku).
+                        Gdybym
+                        miała tę wiedzę, co dziś — prowadziłabym notatki w blogu. Dlaczego? Mając do dyspozycji kod, z
+                        którym pracujesz, ćwiczysz wiedzę, praktykujesz ją. A jak wiemy — praktyka czyni mistrza!</p>
+                    <p>Zanim przejdę do powtórki materiału o README i Markdown, jeszcze po krótce przedstawię moje błędy
+                        podczas nauki, tak abyś Ty — jeśli to czytasz i dopiero zaczynasz — uniknął moich błędów na
+                        początku
+                        tejże fascynującej drogi.</p>
+                    <p>W grudniu 2022 roku postanowiłam przebranżowić się i wreszcie zacząć programować. Trafiłam tak na
+                        kurs <a href="https://youcode.pl/" target="_blank"
+                                title="strona kursu Frontend Developer od Podstaw od YouCode">YouCode</a>.
+                        Jednak wewnętrzna motywacja sprawiła, że zaczęłam szukać materiałów z innych źródeł jak np. <a
+                            href="https://www.freecodecamp.org/" target="_blank"
+                            title="strona freeCodeCamp">freeCodeCamp</a>
+                        czy mini-kursy <a href="https://codenga.pl/" target="_blank" title="strona Codenga">Codenga.</a>
+                    </p>
+                    <p>Popełniłam pierwszy błąd - "latałam" po materiałach i stronach, przez to nie skupiłam się od
+                        dechy do
+                        dechy na kursie. Jeśli jesteś na tej drodze — pamiętaj o pierwszej ważnej zasadzie - <b>Jedno
+                            źródło
+                            nauki na raz!</b></p>
+                    <p>Miałam ostatnio przyjemność brać w rozmowach rekrutacyjnych i w porównaniu do mojego fiasco z
+                        końca
+                        maja — czułam się pewniej i faktycznie mogłam podzielić się przyswojoną wiedzą i przede
+                        wszystkim
+                        <b>rozumiałam to, o czym mówię</b>.</p>
+                    <p>Dlatego zachęcam do utrwalania wiedzy tym sposobem!</p>
+                </>
+            )
         }
         ,
         {
             id: 44,
             date: "04 lipca 2023 roku",
             title: "Git - rozproszony system kontroli wersji",
-            body:
-                (
-                    <>
-                        <p>Szukając trochę informacji na temat czym jest rozproszony system kontroli wersji, natknęłam się
-                            na
-                            książkę o tym samym tytule Włodzimierza Gajdy. W dobie materiałów dostępnych online ciężko
-                            znaleźć
-                            sprawdzone materiały papierowe, ponieważ aktualizacja informacji zawartych w materiałach
-                            papierowych
-                            jest kosztowna, pracochłonna i nie każde wydawnictwo podejmuje się tego procesu. Z drugiej
-                            strony
-                            tez możemy natknąć się na nieaktualizowanie materiały w sieci. </p>
-                        <p>Po powtórzeniu materiału z mojego kursu, chciałabym wgryźć się w temat związany z Git-em bardziej
-                            niż
-                            tutaj.</p>
-                        <p>Jako, że blog prowadzę w postaci notatek, przede wszystkim wypunktuję, co trzeba "ogarnąć", aby
-                            zaprzyjaźnić się z Git-em.</p>
-                        <ListOrdered>
-                            <ListItem>
-                                Przede wszystkich wchodzimy na <a href="https://git-scm.com/"> oficjalną stronę Git-a</a> i
-                                pobieramy go do naszej wersji systemowej na komputerze.
-                            </ListItem>
-                            <ListItem>
-                                Uruchamiamy Git Bash. Tworzymy swoją "wizytówkę", podpinając naszą nazwę użytkownika i adres
-                                e-mail poprzez wpisanie w oknie Git Bash-a:
-                                <Blockquote>
-                                    git config --global user.name "NAZWA UŻYTKOWNIKA"
-                                </Blockquote>
-                                <Blockquote>
-                                    git config --global user.email "ADRES@EMAIL.COM"
-                                </Blockquote>
-                            </ListItem>
-                            <ListItem>
-                                Inicjalizacja repozytorium — wchodzimy do folderu, w którym mamy projekt i wpisujemy np. za
-                                pomocą Terminala w programie do edycji kodu:
-                                <Blockquote>
-                                    git init
-                                </Blockquote>
-                            </ListItem>
-                            <ListItem>
-                                Pierwszy commit
-                                <Blockquote>
-                                    git add<br/>
-                                </Blockquote>
-                                <Blockquote>
-                                    git commit -m "Initial commit"
-                                </Blockquote>
-                            </ListItem>
-                            <ListItem>
-                                Pokazanie indeksu i obszaru roboczego:
-                                <Blockquote>
-                                    git status<br/>
-                                </Blockquote>
-                            </ListItem>
-                            <ListItem>
-                                Dodanie wybranych plików do indeksu:
-                                <Blockquote>
-                                    git add style.css script.js
-                                </Blockquote>
-                            </ListItem>
-                            <ListItem>
-                                Lista commit-ów:
-                                <Blockquote>
-                                    git log
-                                </Blockquote>
-                                <Blockquote>
-                                    git log --pretty=oneline
-                                </Blockquote>
-                            </ListItem>
-                            <ListItem>
-                                Odrzucenie zmian:
-                                <Blockquote>
-                                    git reset --hard
-                                </Blockquote>
-                            </ListItem>
-                            <ListItem>
-                                Wypchnięcie zmian na serwer
-                                <Blockquote>
-                                    git push
-                                </Blockquote>
-                            </ListItem>
-                            <ListItem>
-                                Pobranie zmian z serwera
-                                <Blockquote>
-                                    git pull
-                                </Blockquote>
-                            </ListItem>
-                        </ListOrdered>
-                    </>
-                )
+            body: (
+                <>
+                    <p>Szukając trochę informacji na temat czym jest rozproszony system kontroli wersji, natknęłam się
+                        na
+                        książkę o tym samym tytule Włodzimierza Gajdy. W dobie materiałów dostępnych online ciężko
+                        znaleźć
+                        sprawdzone materiały papierowe, ponieważ aktualizacja informacji zawartych w materiałach
+                        papierowych
+                        jest kosztowna, pracochłonna i nie każde wydawnictwo podejmuje się tego procesu. Z drugiej
+                        strony
+                        tez możemy natknąć się na nieaktualizowanie materiały w sieci. </p>
+                    <p>Po powtórzeniu materiału z mojego kursu, chciałabym wgryźć się w temat związany z Git-em bardziej
+                        niż
+                        tutaj.</p>
+                    <p>Jako, że blog prowadzę w postaci notatek, przede wszystkim wypunktuję, co trzeba "ogarnąć", aby
+                        zaprzyjaźnić się z Git-em.</p>
+                    <ListOrdered>
+                        <ListItem>
+                            Przede wszystkich wchodzimy na <a href="https://git-scm.com/"> oficjalną stronę Git-a</a> i
+                            pobieramy go do naszej wersji systemowej na komputerze.
+                        </ListItem>
+                        <ListItem>
+                            Uruchamiamy Git Bash. Tworzymy swoją "wizytówkę", podpinając naszą nazwę użytkownika i adres
+                            e-mail poprzez wpisanie w oknie Git Bash-a:
+                            <Blockquote>
+                                git config --global user.name "NAZWA UŻYTKOWNIKA"
+                            </Blockquote>
+                            <Blockquote>
+                                git config --global user.email "ADRES@EMAIL.COM"
+                            </Blockquote>
+                        </ListItem>
+                        <ListItem>
+                            Inicjalizacja repozytorium — wchodzimy do folderu, w którym mamy projekt i wpisujemy np. za
+                            pomocą Terminala w programie do edycji kodu:
+                            <Blockquote>
+                                git init
+                            </Blockquote>
+                        </ListItem>
+                        <ListItem>
+                            Pierwszy commit
+                            <Blockquote>
+                                git add<br/>
+                            </Blockquote>
+                            <Blockquote>
+                                git commit -m "Initial commit"
+                            </Blockquote>
+                        </ListItem>
+                        <ListItem>
+                            Pokazanie indeksu i obszaru roboczego:
+                            <Blockquote>
+                                git status<br/>
+                            </Blockquote>
+                        </ListItem>
+                        <ListItem>
+                            Dodanie wybranych plików do indeksu:
+                            <Blockquote>
+                                git add style.css script.js
+                            </Blockquote>
+                        </ListItem>
+                        <ListItem>
+                            Lista commit-ów:
+                            <Blockquote>
+                                git log
+                            </Blockquote>
+                            <Blockquote>
+                                git log --pretty=oneline
+                            </Blockquote>
+                        </ListItem>
+                        <ListItem>
+                            Odrzucenie zmian:
+                            <Blockquote>
+                                git reset --hard
+                            </Blockquote>
+                        </ListItem>
+                        <ListItem>
+                            Wypchnięcie zmian na serwer
+                            <Blockquote>
+                                git push
+                            </Blockquote>
+                        </ListItem>
+                        <ListItem>
+                            Pobranie zmian z serwera
+                            <Blockquote>
+                                git pull
+                            </Blockquote>
+                        </ListItem>
+                    </ListOrdered>
+                </>
+            )
         }
         ,
         {
             id: 43,
             date: "03 lipca 2023 roku",
             title: "JavaScript - Podstawowa matematyka",
-            body:
-                (
-                    <>
-                        <p>JS daje nam wiele sposobów na manipulowanie liczbami.</p>
-                        <ListOrdered>
-                            <ListItem>
-                                <b>Zaokrąglanie</b>
-                                <ListUnordered>
-                                    <ListItem>
-                                        Math.round(liczba) - do najbliższej liczby całkowitej,
-                                    </ListItem>
-                                    <ListItem>
-                                        Math.ceil(liczba) - w górę,
-                                    </ListItem>
-                                    <ListItem>
-                                        Math.floor(liczba) - w dół,
-                                    </ListItem>
-                                </ListUnordered>
-                            </ListItem>
-                            <ListItem>
-                                <b>Konkretna liczba miejsc po przecinku</b>
-                                <ListUnordered>
-                                    <ListItem>
-                                        5.12345.toFixed(2) // "5.12",
-                                    </ListItem>
-                                    <ListItem>
-                                        zwraca łańcuch znaków,
-                                    </ListItem>
-                                </ListUnordered>
-                            </ListItem>
-                            <ListItem>
-                                <b>Pierwiastek kwadratowy</b>
-                                <ListUnordered>
-                                    <ListItem>
-                                        Math.sqrt(16) //4
-                                    </ListItem>
-                                    <ListItem>
-                                        Math.sqrt(-1) //NaN
-                                    </ListItem>
-                                </ListUnordered>
-                            </ListItem>
-                            <ListItem>
-                                <b>Najmniejsza i największa wartość</b>
-                                <ListUnordered>
-                                    <ListItem>
-                                        Math.max(1,2,3) //3
-                                    </ListItem>
-                                    <ListItem>
-                                        Math.min(1,2,3) //1
-                                    </ListItem>
-                                    <ListItem>
-                                        Dowolna liczba argumentów
-                                    </ListItem>
-                                </ListUnordered>
-                            </ListItem>
-                            <ListItem>
-                                <b>Losowa liczba</b>
-                                <ListUnordered>
-                                    <ListItem>
-                                        Math.random()
-                                        <ListUnordered>
-                                            <ListItem>
-                                                pseudo-losowa liczba od zera do "prawie 1", np. 0.37961
-                                            </ListItem>
-                                        </ListUnordered>
-                                    </ListItem>
-                                    <ListItem>
-                                        Math.floor(Math.random()*5)
-                                        <ListUnordered>
-                                            <ListItem>
-                                                losowa liczba całkowita od 0 do 4
-                                            </ListItem>
-                                            <ListItem>
-                                                <b>Symulator rzutu kością:</b> Math.floor(Math.random()*6)+1
-                                            </ListItem>
-                                        </ListUnordered>
-                                    </ListItem>
-                                </ListUnordered>
-                            </ListItem>
-                            <ListItem>
-                                <b>Konwertowanie na liczbę</b>
-                                <ListUnordered>
-                                    <ListItem>
-                                        Konkatenacja
-                                        <Blockquote>
-                                            "10" + 0 === "100"
-                                        </Blockquote>
-                                    </ListItem>
-                                    <ListItem>
-                                        Number()
-                                        <Blockquote>
-                                            Number("5") &nbsp;&nbsp;&nbsp;&nbsp;//5<br/>
-                                            Number("2 jabłka") &nbsp;&nbsp;&nbsp;&nbsp;//NaN<br/>
-                                        </Blockquote>
-                                    </ListItem>
-                                    <ListItem>
-                                        + (unary operators)
-                                        <Blockquote>
-                                            +"5" &nbsp;&nbsp;&nbsp;//5<br/>
-                                            +"2 jabłka" &nbsp;&nbsp;&nbsp;&nbsp;//Nan<br/>
-                                        </Blockquote>
-                                    </ListItem>
-                                    <ListItem>
-                                        działania arytmetyczne inne niż dodawanie
-                                        <Blockquote>
-                                            "5" * 1 &nbsp;&nbsp;&nbsp;&nbsp;//5<br/>
-                                            "5" - 3 &nbsp;&nbsp;&nbsp;&nbsp;//2<br/>
-                                            "2 jabłka"/2 &nbsp;&nbsp;&nbsp;&nbsp;//NaN
-                                        </Blockquote>
-                                    </ListItem>
-                                    <ListItem>
-                                        parseInt(), parseFloat()
-                                        <Blockquote>
-                                            parseInt("5") &nbsp;&nbsp;&nbsp;&nbsp;//5<br/>
-                                            parseInt("56") &nbsp;&nbsp;&nbsp;&nbsp;//5<br/>
-                                            parseInt("2 jabłka") &nbsp;&nbsp;&nbsp;&nbsp;//2<br/>
-                                            parseInt("jabłka") &nbsp;&nbsp;&nbsp;&nbsp;/NaN<br/>
-                                            parseInt("kurki 3") &nbsp;&nbsp;&nbsp;&nbsp;//NaN<br/>
-                                        </Blockquote>
-                                        <ListUnordered>
-                                            <ListItem>
-                                                parseFloat - analogicznie dla liczb z cyframi po przecinku.
-                                            </ListItem>
-                                        </ListUnordered>
-                                    </ListItem>
-                                </ListUnordered>
-                            </ListItem>
-                        </ListOrdered>
-                    </>
-                )
+            body: (
+                <>
+                    <p>JS daje nam wiele sposobów na manipulowanie liczbami.</p>
+                    <ListOrdered>
+                        <ListItem>
+                            <b>Zaokrąglanie</b>
+                            <ListUnordered>
+                                <ListItem>
+                                    Math.round(liczba) - do najbliższej liczby całkowitej,
+                                </ListItem>
+                                <ListItem>
+                                    Math.ceil(liczba) - w górę,
+                                </ListItem>
+                                <ListItem>
+                                    Math.floor(liczba) - w dół,
+                                </ListItem>
+                            </ListUnordered>
+                        </ListItem>
+                        <ListItem>
+                            <b>Konkretna liczba miejsc po przecinku</b>
+                            <ListUnordered>
+                                <ListItem>
+                                    5.12345.toFixed(2) // "5.12",
+                                </ListItem>
+                                <ListItem>
+                                    zwraca łańcuch znaków,
+                                </ListItem>
+                            </ListUnordered>
+                        </ListItem>
+                        <ListItem>
+                            <b>Pierwiastek kwadratowy</b>
+                            <ListUnordered>
+                                <ListItem>
+                                    Math.sqrt(16) //4
+                                </ListItem>
+                                <ListItem>
+                                    Math.sqrt(-1) //NaN
+                                </ListItem>
+                            </ListUnordered>
+                        </ListItem>
+                        <ListItem>
+                            <b>Najmniejsza i największa wartość</b>
+                            <ListUnordered>
+                                <ListItem>
+                                    Math.max(1,2,3) //3
+                                </ListItem>
+                                <ListItem>
+                                    Math.min(1,2,3) //1
+                                </ListItem>
+                                <ListItem>
+                                    Dowolna liczba argumentów
+                                </ListItem>
+                            </ListUnordered>
+                        </ListItem>
+                        <ListItem>
+                            <b>Losowa liczba</b>
+                            <ListUnordered>
+                                <ListItem>
+                                    Math.random()
+                                    <ListUnordered>
+                                        <ListItem>
+                                            pseudo-losowa liczba od zera do "prawie 1", np. 0.37961
+                                        </ListItem>
+                                    </ListUnordered>
+                                </ListItem>
+                                <ListItem>
+                                    Math.floor(Math.random()*5)
+                                    <ListUnordered>
+                                        <ListItem>
+                                            losowa liczba całkowita od 0 do 4
+                                        </ListItem>
+                                        <ListItem>
+                                            <b>Symulator rzutu kością:</b> Math.floor(Math.random()*6)+1
+                                        </ListItem>
+                                    </ListUnordered>
+                                </ListItem>
+                            </ListUnordered>
+                        </ListItem>
+                        <ListItem>
+                            <b>Konwertowanie na liczbę</b>
+                            <ListUnordered>
+                                <ListItem>
+                                    Konkatenacja
+                                    <Blockquote>
+                                        "10" + 0 === "100"
+                                    </Blockquote>
+                                </ListItem>
+                                <ListItem>
+                                    Number()
+                                    <Blockquote>
+                                        Number("5") &nbsp;&nbsp;&nbsp;&nbsp;//5<br/>
+                                        Number("2 jabłka") &nbsp;&nbsp;&nbsp;&nbsp;//NaN<br/>
+                                    </Blockquote>
+                                </ListItem>
+                                <ListItem>
+                                    + (unary operators)
+                                    <Blockquote>
+                                        +"5" &nbsp;&nbsp;&nbsp;//5<br/>
+                                        +"2 jabłka" &nbsp;&nbsp;&nbsp;&nbsp;//Nan<br/>
+                                    </Blockquote>
+                                </ListItem>
+                                <ListItem>
+                                    działania arytmetyczne inne niż dodawanie
+                                    <Blockquote>
+                                        "5" * 1 &nbsp;&nbsp;&nbsp;&nbsp;//5<br/>
+                                        "5" - 3 &nbsp;&nbsp;&nbsp;&nbsp;//2<br/>
+                                        "2 jabłka"/2 &nbsp;&nbsp;&nbsp;&nbsp;//NaN
+                                    </Blockquote>
+                                </ListItem>
+                                <ListItem>
+                                    parseInt(), parseFloat()
+                                    <Blockquote>
+                                        parseInt("5") &nbsp;&nbsp;&nbsp;&nbsp;//5<br/>
+                                        parseInt("56") &nbsp;&nbsp;&nbsp;&nbsp;//5<br/>
+                                        parseInt("2 jabłka") &nbsp;&nbsp;&nbsp;&nbsp;//2<br/>
+                                        parseInt("jabłka") &nbsp;&nbsp;&nbsp;&nbsp;/NaN<br/>
+                                        parseInt("kurki 3") &nbsp;&nbsp;&nbsp;&nbsp;//NaN<br/>
+                                    </Blockquote>
+                                    <ListUnordered>
+                                        <ListItem>
+                                            parseFloat - analogicznie dla liczb z cyframi po przecinku.
+                                        </ListItem>
+                                    </ListUnordered>
+                                </ListItem>
+                            </ListUnordered>
+                        </ListItem>
+                    </ListOrdered>
+                </>
+            )
         }
         ,
 // {
@@ -5186,782 +5334,774 @@ export const articlesLink = [
             id: 41,
             date: "29 czerwca 2023 roku",
             title: "JavaScript - formularze c.d.",
-            body:
-                (
-                    <>
-                        <p>Dziś mam do zaprezentowania totalnie podstawowy kalkulator BMI. Kod w JS
-                            wygląda następująco:</p>
-                        <Blockquote>
-                            let heightElement = document.querySelector(".js-height");<br/>
-                            let weightElement = document.querySelector(".js-weight");<br/>
-                            let formElement = document.querySelector(".js-form");<br/>
-                            let bmiElement = document.querySelector(".js-bmi");<br/><br/>
+            body: (
+                <>
+                    <p>Dziś mam do zaprezentowania totalnie podstawowy kalkulator BMI. Kod w JS
+                        wygląda następująco:</p>
+                    <Blockquote>
+                        let heightElement = document.querySelector(".js-height");<br/>
+                        let weightElement = document.querySelector(".js-weight");<br/>
+                        let formElement = document.querySelector(".js-form");<br/>
+                        let bmiElement = document.querySelector(".js-bmi");<br/><br/>
 
-                            formElement.addEventListener("submit", (event) => &#123;<br/>
-                            &nbsp;&nbsp;event.preventDefault();<br/><br/>
+                        formElement.addEventListener("submit", (event) => &#123;<br/>
+                        &nbsp;&nbsp;event.preventDefault();<br/><br/>
 
-                            &nbsp;&nbsp;let height = heightElement.value;<br/>
-                            &nbsp;&nbsp;let weight = weightElement.value;<br/>
-                            &nbsp;&nbsp;let bmi = weight / ((height / 100) ** 2);<br/><br/>
+                        &nbsp;&nbsp;let height = heightElement.value;<br/>
+                        &nbsp;&nbsp;let weight = weightElement.value;<br/>
+                        &nbsp;&nbsp;let bmi = weight / ((height / 100) ** 2);<br/><br/>
 
-                            &nbsp;&nbsp;bmiElement.innerText = bmi.toFixed(2);<br/>
-                            &#125;);
-                        </Blockquote>
-                        <p>Natomiast w zwykłym HTML-u wygląda to tak:</p>
-                        <Blockquote>
-                            &lt;form class="js-form"><br/>
-                            &nbsp;&nbsp;&lt;fieldset><br/>
-                            &nbsp;&nbsp;&nbsp;&lt;legend>Twoje dane:&lt;/legend><br/>
-                            &nbsp;&nbsp;&nbsp;&lt;p><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Twój wzrost:<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input class="js-height" required
-                            type="number" min="1"
-                            step="any"><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label><br/>
-                            &nbsp;&nbsp;&nbsp;&lt;/p><br/>
-                            &nbsp;&nbsp;&nbsp;&lt;p><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Twoja waga:<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input class="js-weight" required
-                            type="number" min="1"
-                            step="any"><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label><br/>
-                            &nbsp;&nbsp;&nbsp;&lt;/p><br/>
-                            &nbsp;&nbsp;&lt;/fieldset><br/>
-                            &nbsp;&nbsp;&nbsp;&lt;p><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;button>Policz BMI!&lt;/button><br/>
-                            &nbsp;&nbsp;&nbsp;&lt;/p><br/>
-                            &lt;/form><br/>
-                        </Blockquote>
-                        <form className="js-form">
-                            <fieldset>
-                                <legend>Twoje dane:</legend>
-                                <p>
-                                    <label>
-                                        Twój wzrost:
-                                        <input className="js-height" required type="number" min="1"
-                                               step="any"/>
-                                    </label>
-                                </p>
-                                <p>
-                                    <label>
-                                        Twoja waga:
-                                        <input className="js-weight" required type="number" min="1"
-                                               step="any"/>
-                                    </label>
-                                </p>
-                            </fieldset>
+                        &nbsp;&nbsp;bmiElement.innerText = bmi.toFixed(2);<br/>
+                        &#125;);
+                    </Blockquote>
+                    <p>Natomiast w zwykłym HTML-u wygląda to tak:</p>
+                    <Blockquote>
+                        &lt;form class="js-form"><br/>
+                        &nbsp;&nbsp;&lt;fieldset><br/>
+                        &nbsp;&nbsp;&nbsp;&lt;legend>Twoje dane:&lt;/legend><br/>
+                        &nbsp;&nbsp;&nbsp;&lt;p><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;label><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Twój wzrost:<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input class="js-height" required
+                        type="number" min="1"
+                        step="any"><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label><br/>
+                        &nbsp;&nbsp;&nbsp;&lt;/p><br/>
+                        &nbsp;&nbsp;&nbsp;&lt;p><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;label><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Twoja waga:<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input class="js-weight" required
+                        type="number" min="1"
+                        step="any"><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label><br/>
+                        &nbsp;&nbsp;&nbsp;&lt;/p><br/>
+                        &nbsp;&nbsp;&lt;/fieldset><br/>
+                        &nbsp;&nbsp;&nbsp;&lt;p><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;button>Policz BMI!&lt;/button><br/>
+                        &nbsp;&nbsp;&nbsp;&lt;/p><br/>
+                        &lt;/form><br/>
+                    </Blockquote>
+                    <form className="js-form">
+                        <fieldset>
+                            <legend>Twoje dane:</legend>
                             <p>
-                                <button>Policz BMI!</button>
+                                <label>
+                                    Twój wzrost:
+                                    <input className="js-height" required type="number" min="1"
+                                           step="any"/>
+                                </label>
                             </p>
-                        </form>
-                        <p>Twoje BMI wynosi: <strong className="js-bmi">N/A</strong></p>
-                    </>
-                )
+                            <p>
+                                <label>
+                                    Twoja waga:
+                                    <input className="js-weight" required type="number" min="1"
+                                           step="any"/>
+                                </label>
+                            </p>
+                        </fieldset>
+                        <p>
+                            <button>Policz BMI!</button>
+                        </p>
+                    </form>
+                    <p>Twoje BMI wynosi: <strong className="js-bmi">N/A</strong></p>
+                </>
+            )
         }
         ,
         {
             id: 40,
             date: "28 czerwca 2023 roku",
             title: "Webstorm",
-            body:
-                (
-                    <>
-                        <p>Dziś zaczęłam korzystać z WebStorm-a. Odpaliłam bloga... i wykazało 492 błędy! Dziś poświęcę czas
-                            na
-                            korektę kodu. Do nauki wrócę jutro.</p>
-                    </>
-                )
+            body: (
+                <>
+                    <p>Dziś zaczęłam korzystać z WebStorm-a. Odpaliłam bloga... i wykazało 492 błędy! Dziś poświęcę czas
+                        na
+                        korektę kodu. Do nauki wrócę jutro.</p>
+                </>
+            )
         }
         ,
         {
             id: 39,
             date: "27 czerwca 2023 roku",
             title: "JavaScript - Formularze c.d.",
-            body:
-                (
-                    <>
-                        <p>Kontynuując ćwiczenia z formularzami, wracam do JavaScript-a. Później mamy przykładowe pole
-                            radio.</p>
-                        <form action=" "
-                              method="POST">
-                            <fieldset>
-                                <legend>
-                                    Pole typu radio
-                                </legend>
-                                <ListUnordered className="article__withoutBulletList">
-                                    <ListItem>
-                                        <label>
-                                            Opcja 1
-                                            <input className="js-radio-1" name="radio" type="radio" value="opcja-1"/>
-                                        </label>
-                                    </ListItem>
-                                    <ListItem>
-                                        <label>
-                                            Opcja 2
-                                            <input className="js-radio-2" name="radio" type="radio" value="opcja-2"/>
-                                        </label>
-                                    </ListItem>
-                                </ListUnordered>
-                            </fieldset>
-                        </form>
-                        <p>Kod przedstawia się mniej więcej tak:</p>
-                        <Blockquote>
-                            &lt;form action="https//postman-echo.com" method="POST"><br/>
-                            &nbsp;&nbsp;&lt;fieldset><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;legend><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pole typu radio<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/legend><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul class="article__withoutBulletList"><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Opcja 1<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" value="opcja-1" name="radio"
-                            class="js-radio-1"><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Opcja 2<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" value="opcja-2" name="radio"
-                            class="js-radio-2"><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul><br/>
-                            &nbsp;&nbsp;&lt;/fieldset><br/>
-                            &lt;/form><br/>
-                        </Blockquote>
-                        <p>Możemy "złapać" elementy typu radio, poprzez dopisanie klasy i użycie document.querySelector, jak
-                            niżej:</p>
-                        <Blockquote>
-                            let radioElement1 = document.querySelector(".js-radio-1");<br/>
-                            let radioElement2 = document.querySelector(".js-radio-2");<br/>
-                            console.log(radioElement1);<br/>
-                            console.log(radioElement2);<br/>
-                        </Blockquote>
-                        <p>Następnie, jeśli chcielibyśmy zaznaczyć jeden element typu radio, używając np. Konsoli w
-                            Devtools-ach, wpisujemy w konsolę:</p>
-                        <Blockquote>
-                            radioElement1.checked = true;
-                        </Blockquote>
-                        <p>I tym o to sposobem zaznaczyliśmy interesującą nas opcję!</p>
-                        <p>Do przydatnych metod łapania pól na pewno zaliczymy:</p>
-                        <ListUnordered>
-                            <ListItem>
-                                click() - symuluje kliknięcie,
-                            </ListItem>
-                            <ListItem>
-                                focus() - ustawia focus,
-                            </ListItem>
-                            <ListItem>
-                                blur() - usuwa focus,
-                            </ListItem>
-                        </ListUnordered>
-                    </>
-                )
+            body: (
+                <>
+                    <p>Kontynuując ćwiczenia z formularzami, wracam do JavaScript-a. Później mamy przykładowe pole
+                        radio.</p>
+                    <form action=" "
+                          method="POST">
+                        <fieldset>
+                            <legend>
+                                Pole typu radio
+                            </legend>
+                            <ListUnordered className="article__withoutBulletList">
+                                <ListItem>
+                                    <label>
+                                        Opcja 1
+                                        <input className="js-radio-1" name="radio" type="radio" value="opcja-1"/>
+                                    </label>
+                                </ListItem>
+                                <ListItem>
+                                    <label>
+                                        Opcja 2
+                                        <input className="js-radio-2" name="radio" type="radio" value="opcja-2"/>
+                                    </label>
+                                </ListItem>
+                            </ListUnordered>
+                        </fieldset>
+                    </form>
+                    <p>Kod przedstawia się mniej więcej tak:</p>
+                    <Blockquote>
+                        &lt;form action="https//postman-echo.com" method="POST"><br/>
+                        &nbsp;&nbsp;&lt;fieldset><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;legend><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pole typu radio<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/legend><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul class="article__withoutBulletList"><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Opcja 1<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" value="opcja-1" name="radio"
+                        class="js-radio-1"><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Opcja 2<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" value="opcja-2" name="radio"
+                        class="js-radio-2"><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul><br/>
+                        &nbsp;&nbsp;&lt;/fieldset><br/>
+                        &lt;/form><br/>
+                    </Blockquote>
+                    <p>Możemy "złapać" elementy typu radio, poprzez dopisanie klasy i użycie document.querySelector, jak
+                        niżej:</p>
+                    <Blockquote>
+                        let radioElement1 = document.querySelector(".js-radio-1");<br/>
+                        let radioElement2 = document.querySelector(".js-radio-2");<br/>
+                        console.log(radioElement1);<br/>
+                        console.log(radioElement2);<br/>
+                    </Blockquote>
+                    <p>Następnie, jeśli chcielibyśmy zaznaczyć jeden element typu radio, używając np. Konsoli w
+                        Devtools-ach, wpisujemy w konsolę:</p>
+                    <Blockquote>
+                        radioElement1.checked = true;
+                    </Blockquote>
+                    <p>I tym o to sposobem zaznaczyliśmy interesującą nas opcję!</p>
+                    <p>Do przydatnych metod łapania pól na pewno zaliczymy:</p>
+                    <ListUnordered>
+                        <ListItem>
+                            click() - symuluje kliknięcie,
+                        </ListItem>
+                        <ListItem>
+                            focus() - ustawia focus,
+                        </ListItem>
+                        <ListItem>
+                            blur() - usuwa focus,
+                        </ListItem>
+                    </ListUnordered>
+                </>
+            )
         }
         ,
         {
             id: 38,
             date: "24 czerwca 2023 roku",
             title: "JavaScript - Formularze",
-            body:
-                (
-                    <>
-                        <SmallestHeader>Przydatne właściwości pól formularza</SmallestHeader>
-                        <ListUnordered>
-                            <ListItem>
-                                value,
-                            </ListItem>
-                            <ListItem>
-                                checked dla radio i checkbox,
-                            </ListItem>
-                        </ListUnordered>
-                        <p>Żeby "złapać" input-a i móc nim operować w JS, musimy najpierw dopisać klasę, np.:</p>
-                        <Blockquote>
-                            &lt;input class="js-height">
-                        </Blockquote>
-                        <label>
-                            <input className="js-height" value="170"/>
-                        </label>
-                        <p>Następnie w naszym pliku script.js wpisujemy: </p>
-                        <Blockquote>
-                            let heightElement = document.querySelector(".js-height");
-                        </Blockquote>
-                        <p>Następnie w script.js wpisujemy:</p>
-                        <Blockquote>
-                            console.log(heightElement);
-                        </Blockquote>
-                        <p>Następnie w konsoli wpisujemy:</p>
-                        <Blockquote>
-                            heightElement.value;
-                        </Blockquote>
-                        <p>Pojawi się tym samym wartość (string) wprowadzona do input-a. Żeby pokazać w konsoli liczbę, nie
-                            string należy wpisać:</p>
-                        <Blockquote>
-                            +heightElement.value;
-                        </Blockquote>
-                        <p>Aby zmienić wartość w inpucie, możemy wpisać do konsoli:</p>
-                        <Blockquote>
-                            heightElement.value = "192";
-                        </Blockquote>
-                        <p>Gdy dodamy value "na wejściu" przez HTML, to będzie to inne value niż to wprowadzone w JS. Przy
-                            wpisaniu value w JS, wartość w oknie dodana w HTML zostanie nadpisana, natomiast wartość
-                            atrybutu
-                            value już nie.</p>
-                        <p>Żeby to sprawdzić, po ustawieniu w HTML value = "170", wpisujemy w konsolę:</p>
-                        <Blockquote>
-                            let heightElement = document.querySelector(".js-height");
-                        </Blockquote>
-                        <p>Następnie wpiszemy heightElement.value, pokaże "170", ale jak zmienimy w inpucie na "180", to
-                            value w HTML będzie nadal "170".</p>
-                    </>
-                )
+            body: (
+                <>
+                    <SmallestHeader>Przydatne właściwości pól formularza</SmallestHeader>
+                    <ListUnordered>
+                        <ListItem>
+                            value,
+                        </ListItem>
+                        <ListItem>
+                            checked dla radio i checkbox,
+                        </ListItem>
+                    </ListUnordered>
+                    <p>Żeby "złapać" input-a i móc nim operować w JS, musimy najpierw dopisać klasę, np.:</p>
+                    <Blockquote>
+                        &lt;input class="js-height">
+                    </Blockquote>
+                    <label>
+                        <input className="js-height" value="170"/>
+                    </label>
+                    <p>Następnie w naszym pliku script.js wpisujemy: </p>
+                    <Blockquote>
+                        let heightElement = document.querySelector(".js-height");
+                    </Blockquote>
+                    <p>Następnie w script.js wpisujemy:</p>
+                    <Blockquote>
+                        console.log(heightElement);
+                    </Blockquote>
+                    <p>Następnie w konsoli wpisujemy:</p>
+                    <Blockquote>
+                        heightElement.value;
+                    </Blockquote>
+                    <p>Pojawi się tym samym wartość (string) wprowadzona do input-a. Żeby pokazać w konsoli liczbę, nie
+                        string należy wpisać:</p>
+                    <Blockquote>
+                        +heightElement.value;
+                    </Blockquote>
+                    <p>Aby zmienić wartość w inpucie, możemy wpisać do konsoli:</p>
+                    <Blockquote>
+                        heightElement.value = "192";
+                    </Blockquote>
+                    <p>Gdy dodamy value "na wejściu" przez HTML, to będzie to inne value niż to wprowadzone w JS. Przy
+                        wpisaniu value w JS, wartość w oknie dodana w HTML zostanie nadpisana, natomiast wartość
+                        atrybutu
+                        value już nie.</p>
+                    <p>Żeby to sprawdzić, po ustawieniu w HTML value = "170", wpisujemy w konsolę:</p>
+                    <Blockquote>
+                        let heightElement = document.querySelector(".js-height");
+                    </Blockquote>
+                    <p>Następnie wpiszemy heightElement.value, pokaże "170", ale jak zmienimy w inpucie na "180", to
+                        value w HTML będzie nadal "170".</p>
+                </>
+            )
         }
         ,
         {
             id: 37,
             date: "22 czerwca 2023 roku",
             title: "HTML - walidacja formularzy",
-            body:
-                (
-                    <>
-                        <p>Zanim formularz zostanie wysłany, musi zostać zwalidowany.</p>
-                        <SmallestHeader>atrybuty dotyczące walidacji</SmallestHeader>
-                        <ListUnordered>
-                            <ListItem>
-                                <b>required</b> - pole nie może być puste,
-                            </ListItem>
-                            <ListItem>
-                                <b>minlength</b> i <b>maxlength</b> - minimalna i maksymalna liczba znaków dla tekstowych
-                                pól,
-                            </ListItem>
-                            <ListItem>
-                                <b>min</b> lub <b>max</b> - minimalna lub maksymalna wartość dla pól liczbowych i dat/czasu,
-                            </ListItem>
-                            <ListItem>
-                                <b>type</b> - np. e-mail czy liczba,
-                            </ListItem>
-                            <ListItem>
-                                <b>pattern</b> - wyrażenie regularne (regular expression).
-                            </ListItem>
-                        </ListUnordered>
-                        <SmallestHeader>pattern</SmallestHeader>
-                        <ListUnordered>
-                            <ListItem>
-                                wyrażenie regularne,
-                            </ListItem>
-                            <ListItem>
-                                czyli wzór-kombinacje znaków,
-                            </ListItem>
-                            <ListItem>
-                                idealne do walidacji,
-                            </ListItem>
-                            <ListItem>
-                                type - np. e-mail czy liczba,
-                            </ListItem>
-                            <ListItem>
-                                przykłady:
-                                <ListUnordered>
-                                    <ListItem>https?
-                                        <ListUnordered>
-                                            <ListItem>http lub https,</ListItem>
-                                        </ListUnordered>
-                                    </ListItem>
-                                    <ListItem>[0-9]{2} - [0-9]{3},
-                                        <ListUnordered>
-                                            <ListItem>kod pocztowy — dwie cyfry, myślnik, 3 cyfry,</ListItem>
-                                        </ListUnordered>
-                                    </ListItem>
-                                    <ListItem>(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8},
-                                        <ListUnordered>
-                                            <ListItem>co najmniej 8 znaków, przynajmniej jedna mała
-                                                litera, jedna wielka i jedna cyfra.
-                                            </ListItem>
-                                            <ListItem>narzędzie do tłumaczenia pattern-ów: regex.com
-                                            </ListItem>
-                                        </ListUnordered>
-                                    </ListItem>
-                                    <ListItem>pattern nie zastępuje required.
-                                    </ListItem>
-                                </ListUnordered>
-                            </ListItem>
-                        </ListUnordered>
-                    </>
-                )
+            body: (
+                <>
+                    <p>Zanim formularz zostanie wysłany, musi zostać zwalidowany.</p>
+                    <SmallestHeader>atrybuty dotyczące walidacji</SmallestHeader>
+                    <ListUnordered>
+                        <ListItem>
+                            <b>required</b> - pole nie może być puste,
+                        </ListItem>
+                        <ListItem>
+                            <b>minlength</b> i <b>maxlength</b> - minimalna i maksymalna liczba znaków dla tekstowych
+                            pól,
+                        </ListItem>
+                        <ListItem>
+                            <b>min</b> lub <b>max</b> - minimalna lub maksymalna wartość dla pól liczbowych i dat/czasu,
+                        </ListItem>
+                        <ListItem>
+                            <b>type</b> - np. e-mail czy liczba,
+                        </ListItem>
+                        <ListItem>
+                            <b>pattern</b> - wyrażenie regularne (regular expression).
+                        </ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>pattern</SmallestHeader>
+                    <ListUnordered>
+                        <ListItem>
+                            wyrażenie regularne,
+                        </ListItem>
+                        <ListItem>
+                            czyli wzór-kombinacje znaków,
+                        </ListItem>
+                        <ListItem>
+                            idealne do walidacji,
+                        </ListItem>
+                        <ListItem>
+                            type - np. e-mail czy liczba,
+                        </ListItem>
+                        <ListItem>
+                            przykłady:
+                            <ListUnordered>
+                                <ListItem>https?
+                                    <ListUnordered>
+                                        <ListItem>http lub https,</ListItem>
+                                    </ListUnordered>
+                                </ListItem>
+                                <ListItem>[0-9]{2} - [0-9]{3},
+                                    <ListUnordered>
+                                        <ListItem>kod pocztowy — dwie cyfry, myślnik, 3 cyfry,</ListItem>
+                                    </ListUnordered>
+                                </ListItem>
+                                <ListItem>(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8},
+                                    <ListUnordered>
+                                        <ListItem>co najmniej 8 znaków, przynajmniej jedna mała
+                                            litera, jedna wielka i jedna cyfra.
+                                        </ListItem>
+                                        <ListItem>narzędzie do tłumaczenia pattern-ów: regex.com
+                                        </ListItem>
+                                    </ListUnordered>
+                                </ListItem>
+                                <ListItem>pattern nie zastępuje required.
+                                </ListItem>
+                            </ListUnordered>
+                        </ListItem>
+                    </ListUnordered>
+                </>
+            )
         }
         ,
         {
             id: 36,
             date: "21 czerwca 2023 roku",
             title: "HTML - formularze c.d",
-            body:
-                (
-                    <>
-                        <SmallestHeader>input / password - hasło</SmallestHeader>
-                        <label>
-                            Podaj swoje hasło:
-                            <input name="password" type="password"/>
-                        </label>
-                        <Blockquote>
-                            &lt;label><br/>
-                            &nbsp;&nbsp;&lt;Podaj swoje hasło:<br/>
-                            &nbsp;&nbsp;&lt;input type="password" name="password"><br/>
-                            &lt;/label><br/>
-                        </Blockquote>
-                        <ListUnordered>
-                            <ListItem>
-                                ukrywa wpisywane znaki, natomiast jesteśmy w stanie podejrzeć hasło, wpisując w konsolę
-                                $0.value,
-                            </ListItem>
-                            <ListItem>
-                                hasło jest wysyłane <i>plaintext-em</i>, jeśli połączenie nie jest szyfrowane.
-                            </ListItem>
-                        </ListUnordered>
-                        <SmallestHeader>input / number</SmallestHeader>
-                        <label>
-                            Twój wzrost:
-                            <input name="height" type="number"/>
-                        </label>
-                        <Blockquote>
-                            &lt;label><br/>
-                            &nbsp;&nbsp;&lt;Twój wzrost<br/>
-                            &nbsp;&nbsp;&lt;input type="number" name="number"><br/>
-                            &lt;/label><br/>
-                        </Blockquote>
-                        <ListUnordered>
-                            <ListItem>
-                                pole liczbowe,
-                            </ListItem>
-                            <ListItem>
-                                atrybut step (step="any") (step="0,02") określa skalę co ile ma wzrastać wartość,
-                            </ListItem>
-                            <ListItem>
-                                atrybuty min i max określają minimalną i maksymalną wartość,
-                            </ListItem>
-                        </ListUnordered>
-                        <SmallestHeader>input / range</SmallestHeader>
-                        <label>
-                            Maksymalna cena:
-                            <input max="2000" min="1000" name="maxPrice" step="100" type="range"/>
-                        </label>
-                        <Blockquote>
-                            &lt;label><br/>
-                            &nbsp;&nbsp;&lt;Maksymalna cena:<br/>
-                            &nbsp;&nbsp;&lt;input type="range" name="maxPrice" min="1000" max="2000" step="100"><br/>
-                            &lt;/label><br/>
-                        </Blockquote>
-                        <ListUnordered>
-                            <ListItem>
-                                inny sposób na wpisanie liczby,
-                            </ListItem>
-                            <ListItem>
-                                warto ustawić min, max i step,
-                            </ListItem>
-                            <ListItem>
-                                nie pokazuje liczby.
-                            </ListItem>
-                        </ListUnordered>
-                        <SmallestHeader>input / tel</SmallestHeader>
-                        <label>
-                            Numer telefonu:
-                            <input name="tel" type="tel"/>
-                        </label>
-                        <Blockquote>
-                            &lt;label><br/>
-                            &nbsp;&nbsp;&lt;Numer telefonu:<br/>
-                            &nbsp;&nbsp;&lt;input type="tel" name="tel"><br/>
-                            &lt;/label><br/>
-                        </Blockquote>
-                        <ListUnordered>
-                            <ListItem>
-                                numer telefonu,
-                            </ListItem>
-                            <ListItem>
-                                można wpisać cokolwiek,
-                            </ListItem>
-                        </ListUnordered>
-                        <SmallestHeader>input / url</SmallestHeader>
-                        <label>
-                            Adres Twojej strony internetowej:
-                            <input name="website" type="url"/>
-                        </label>
-                        <ListUnordered>
-                            <ListItem>
-                                adres URL,
-                            </ListItem>
-                            <ListItem>
-                                sprawdza poprawność,
-                            </ListItem>
-                        </ListUnordered>
-                        <SmallestHeader>autocomplete box</SmallestHeader>
-                        <label>
-                            Marka samochodu:
-                            <input list="carBrands" name="carBrand"/>
-                            <datalist id="carBrands">
-                                <option>Audi</option>
-                                <option>BMW</option>
-                                &lt;
-                                <option>Tesla</option>
-                            </datalist>
-                        </label>
-                        <Blockquote>
-                            label><br/>
-                            &nbsp;&nbsp;&lt;Marka samochodu:<br/>
-                            &nbsp;&nbsp;&lt;input name="carBrand" list="carBrands"><br/>
-                            &nbsp;&nbsp;&lt;datalist id="carBrands"><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;option>Audi&lt;/option><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;option>BMW&lt;/option><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;option>Tesla&lt;/option><br/>
-                            &nbsp;&nbsp;&lt;/datalist><br/>
-                            &lt;/label><br/>
-                        </Blockquote>
-                        <ListUnordered>
-                            <ListItem>
-                                input z sugerowanymi opcjami (dropdown),
-                            </ListItem>
-                        </ListUnordered>
-                        <SmallestHeader>input / hidden</SmallestHeader>
-                        <input name="something" type="hidden" value="something"/>
-                        <Blockquote>
-                            &lt;input type="hidden" name="something" value="something"><br/>
-                        </Blockquote>
-                        <ListUnordered>
-                            <ListItem>
-                                pole niewidoczne dla użytkownika, ale widoczne dla developera,
-                            </ListItem>
-                            <ListItem>
-                                niemożliwe do edycji, ale wysyłane,
-                            </ListItem>
-                            <ListItem>
-                                powinien mieć atrybuty name i value.
-                            </ListItem>
-                        </ListUnordered>
-                        <SmallestHeader>input / color</SmallestHeader>
-                        <label>
-                            <input name="color" type="color" value="#ccc"/>
-                        </label>
-                        <Blockquote>
-                            &lt;input name="color" type="color" type="color" value="#ccc"><br/>
-                        </Blockquote>
-                        <ListUnordered>
-                            <ListItem>
-                                wybór koloru,
-                            </ListItem>
-                            <ListItem>
-                                wartość zawsze w formacie 6-znakowego hexa.
-                            </ListItem>
-                        </ListUnordered>
-                        <SmallestHeader>input / data i czas</SmallestHeader>
-                        <label>
-                            <input name="date" type="date"/>
-                        </label>
-                        <Blockquote>
-                            &lt;input name="date" type="date"><br/>
-                        </Blockquote>
-                        <label>
-                            <input name="dateAndTime" type="datetime-local"/>
-                        </label>
-                        <Blockquote>
-                            &lt;input name="dateAndTime" type="datetime-local"><br/>
-                        </Blockquote>
-                        <label>
-                            <input name="time" type="time"/>
-                        </label>
-                        <Blockquote>
-                            &lt;input name="time" type="time"><br/>
-                        </Blockquote>
-                        <label>
-                            <input name="week" type="week"/>
-                        </label>
-                        <Blockquote>
-                            &lt;input name="week" type="week"><br/>
-                        </Blockquote>
-                        <label>
-                            <input name="month" type="month"/>
-                        </label>
-                        <Blockquote>
-                            &lt;input name="month" type="month"><br/>
-                        </Blockquote>
-                        <ListUnordered>
-                            <ListItem>
-                                słabo wspierane.
-                            </ListItem>
-                        </ListUnordered>
-                    </>
-                )
+            body: (
+                <>
+                    <SmallestHeader>input / password - hasło</SmallestHeader>
+                    <label>
+                        Podaj swoje hasło:
+                        <input name="password" type="password"/>
+                    </label>
+                    <Blockquote>
+                        &lt;label><br/>
+                        &nbsp;&nbsp;&lt;Podaj swoje hasło:<br/>
+                        &nbsp;&nbsp;&lt;input type="password" name="password"><br/>
+                        &lt;/label><br/>
+                    </Blockquote>
+                    <ListUnordered>
+                        <ListItem>
+                            ukrywa wpisywane znaki, natomiast jesteśmy w stanie podejrzeć hasło, wpisując w konsolę
+                            $0.value,
+                        </ListItem>
+                        <ListItem>
+                            hasło jest wysyłane <i>plaintext-em</i>, jeśli połączenie nie jest szyfrowane.
+                        </ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>input / number</SmallestHeader>
+                    <label>
+                        Twój wzrost:
+                        <input name="height" type="number"/>
+                    </label>
+                    <Blockquote>
+                        &lt;label><br/>
+                        &nbsp;&nbsp;&lt;Twój wzrost<br/>
+                        &nbsp;&nbsp;&lt;input type="number" name="number"><br/>
+                        &lt;/label><br/>
+                    </Blockquote>
+                    <ListUnordered>
+                        <ListItem>
+                            pole liczbowe,
+                        </ListItem>
+                        <ListItem>
+                            atrybut step (step="any") (step="0,02") określa skalę co ile ma wzrastać wartość,
+                        </ListItem>
+                        <ListItem>
+                            atrybuty min i max określają minimalną i maksymalną wartość,
+                        </ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>input / range</SmallestHeader>
+                    <label>
+                        Maksymalna cena:
+                        <input max="2000" min="1000" name="maxPrice" step="100" type="range"/>
+                    </label>
+                    <Blockquote>
+                        &lt;label><br/>
+                        &nbsp;&nbsp;&lt;Maksymalna cena:<br/>
+                        &nbsp;&nbsp;&lt;input type="range" name="maxPrice" min="1000" max="2000" step="100"><br/>
+                        &lt;/label><br/>
+                    </Blockquote>
+                    <ListUnordered>
+                        <ListItem>
+                            inny sposób na wpisanie liczby,
+                        </ListItem>
+                        <ListItem>
+                            warto ustawić min, max i step,
+                        </ListItem>
+                        <ListItem>
+                            nie pokazuje liczby.
+                        </ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>input / tel</SmallestHeader>
+                    <label>
+                        Numer telefonu:
+                        <input name="tel" type="tel"/>
+                    </label>
+                    <Blockquote>
+                        &lt;label><br/>
+                        &nbsp;&nbsp;&lt;Numer telefonu:<br/>
+                        &nbsp;&nbsp;&lt;input type="tel" name="tel"><br/>
+                        &lt;/label><br/>
+                    </Blockquote>
+                    <ListUnordered>
+                        <ListItem>
+                            numer telefonu,
+                        </ListItem>
+                        <ListItem>
+                            można wpisać cokolwiek,
+                        </ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>input / url</SmallestHeader>
+                    <label>
+                        Adres Twojej strony internetowej:
+                        <input name="website" type="url"/>
+                    </label>
+                    <ListUnordered>
+                        <ListItem>
+                            adres URL,
+                        </ListItem>
+                        <ListItem>
+                            sprawdza poprawność,
+                        </ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>autocomplete box</SmallestHeader>
+                    <label>
+                        Marka samochodu:
+                        <input list="carBrands" name="carBrand"/>
+                        <datalist id="carBrands">
+                            <option>Audi</option>
+                            <option>BMW</option>
+                            &lt;
+                            <option>Tesla</option>
+                        </datalist>
+                    </label>
+                    <Blockquote>
+                        label><br/>
+                        &nbsp;&nbsp;&lt;Marka samochodu:<br/>
+                        &nbsp;&nbsp;&lt;input name="carBrand" list="carBrands"><br/>
+                        &nbsp;&nbsp;&lt;datalist id="carBrands"><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;option>Audi&lt;/option><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;option>BMW&lt;/option><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;option>Tesla&lt;/option><br/>
+                        &nbsp;&nbsp;&lt;/datalist><br/>
+                        &lt;/label><br/>
+                    </Blockquote>
+                    <ListUnordered>
+                        <ListItem>
+                            input z sugerowanymi opcjami (dropdown),
+                        </ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>input / hidden</SmallestHeader>
+                    <input name="something" type="hidden" value="something"/>
+                    <Blockquote>
+                        &lt;input type="hidden" name="something" value="something"><br/>
+                    </Blockquote>
+                    <ListUnordered>
+                        <ListItem>
+                            pole niewidoczne dla użytkownika, ale widoczne dla developera,
+                        </ListItem>
+                        <ListItem>
+                            niemożliwe do edycji, ale wysyłane,
+                        </ListItem>
+                        <ListItem>
+                            powinien mieć atrybuty name i value.
+                        </ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>input / color</SmallestHeader>
+                    <label>
+                        <input name="color" type="color" value="#ccc"/>
+                    </label>
+                    <Blockquote>
+                        &lt;input name="color" type="color" type="color" value="#ccc"><br/>
+                    </Blockquote>
+                    <ListUnordered>
+                        <ListItem>
+                            wybór koloru,
+                        </ListItem>
+                        <ListItem>
+                            wartość zawsze w formacie 6-znakowego hexa.
+                        </ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>input / data i czas</SmallestHeader>
+                    <label>
+                        <input name="date" type="date"/>
+                    </label>
+                    <Blockquote>
+                        &lt;input name="date" type="date"><br/>
+                    </Blockquote>
+                    <label>
+                        <input name="dateAndTime" type="datetime-local"/>
+                    </label>
+                    <Blockquote>
+                        &lt;input name="dateAndTime" type="datetime-local"><br/>
+                    </Blockquote>
+                    <label>
+                        <input name="time" type="time"/>
+                    </label>
+                    <Blockquote>
+                        &lt;input name="time" type="time"><br/>
+                    </Blockquote>
+                    <label>
+                        <input name="week" type="week"/>
+                    </label>
+                    <Blockquote>
+                        &lt;input name="week" type="week"><br/>
+                    </Blockquote>
+                    <label>
+                        <input name="month" type="month"/>
+                    </label>
+                    <Blockquote>
+                        &lt;input name="month" type="month"><br/>
+                    </Blockquote>
+                    <ListUnordered>
+                        <ListItem>
+                            słabo wspierane.
+                        </ListItem>
+                    </ListUnordered>
+                </>
+            )
         }
         ,
         {
             id: 35,
             date: "18 czerwca 2023 roku",
             title: "HTML - formularze",
-            body:
-                (
-                    <>
-                        <p>Formularze są najprostszym sposobem na zebranie i wysłanie informacji o użytkowniku.</p>
-                        <p>Kod podstawowego formularza wygląda następująco, a poniżej mamy przykład jak taki formularz może
-                            wyglądać.</p>
-                        <Blockquote>
-                            &lt;form><br/>
-                            &nbsp;&nbsp;&lt;p><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Imię i nazwisko &lt;input name="name"><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label><br/>
-                            &nbsp;&nbsp;&lt;/p><br/>
-                            &nbsp;&nbsp;&lt;p><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;button>Wyślij!&lt;/button><br/>
-                            &nbsp;&nbsp;&lt;/p><br/>
-                            &lt;/form><br/>
-                        </Blockquote>
-                        <form>
-                            <p>
-                                <label>
-                                    Imię i nazwisko <input name="name"/>
-                                </label>
-                            </p>
-                            <p>
-                                <button>Wyślij!</button>
-                            </p>
-                        </form>
-                        <SmallestHeader>Form - szczegóły</SmallestHeader>
-                        <Blockquote>
-                            &lt;form <b>action</b>="/strona-docelowa" <b>method</b>="post">&lt;/form>
-                        </Blockquote>
-                        <ListUnordered>
-                            <ListItem>
-                                atrybut <b>action</b> - adres url, pod który zostanie wysłany formularz
-                            </ListItem>
-                            <ListItem>
-                                atrybut <b>method</b> - definiuje, jakiej metody HTTP użyjemy do wysłania formularza
-                            </ListItem>
-                        </ListUnordered>
-                        <SmallestHeader>Input (text)</SmallestHeader>
-                        <Blockquote>&lt;input name="myName"></Blockquote>
-                        <p>Atrybuty:</p>
-                        <ListUnordered>
-                            <ListItem>
-                                <b>name</b> - nazwa pola,
-                            </ListItem>
-                            <ListItem>
-                                <b>readonly</b> - pole tylko do odczytu,
-                                <label>
-                                    <input readOnly/>
-                                </label>
-                            </ListItem>
-                            <ListItem>
-                                <b>disabled</b> - pole wyłączone/ nieaktywne,
-                                <label>
-                                    <input disabled/>
-                                </label>
-                            </ListItem>
-                            <ListItem>
-                                <b>placeholder</b> - tekst w przypadku pustej wartości,
-                                <label>
-                                    <input placeholder="Wpisz coś"/>
-                                </label>
-                            </ListItem>
-                            <ListItem>
-                                <b>autofocus</b> - skupienie wskaźnika na danym polu input,
-                            </ListItem>
-                        </ListUnordered>
-                        <p><b>label</b> - opisuje pole, ważny pod kątem dostępności</p>
-                        <Blockquote>
-                            &lt;label>Imię i nazwisko&lt;input name="name">&lt;/label><br/><br/>
-                            &lt;!-- lub: --><br/><br/>
-                            &lt;label for="name">Imię i nazwisko:&lt;/label><br/>
-                            &lt;input id="name" name="name"><br/>
-                        </Blockquote>
-                        <label>Imię i nazwisko<input name="name"/></label>
-                        <SmallestHeader>przyciski</SmallestHeader>
-                        <Blockquote>
-                            &lt;button>Wyślij!&lt;/button><br/><br/>
-                            &lt;!-- lub: --><br/><br/>
-                            &lt;input type="submit" value="Wyślij!">
-                        </Blockquote>
-                        <button>Wyślij!</button>
-                        <ListUnordered>
-                            <ListItem>
-                                mogą mieć różne funkcje w zależności od atrybutu type:
-                                <ListUnordered>
-                                    <ListItem><b>submit</b> - wysyła formularz (domyślny dla
-                                        formularza),
-                                    </ListItem>
-                                    <ListItem><b>reset</b> - resetuje formularz,</ListItem>
-                                    <ListItem><b>button</b> - zwykły przycisk, brak domyślnej
-                                        akcji,
-                                    </ListItem>
-                                </ListUnordered>
-                            </ListItem>
-                        </ListUnordered>
-                        <SmallestHeader>textarea</SmallestHeader>
-                        <Blockquote>
-                            &lt;textarea name="description">&lt;/textarea>
-                        </Blockquote>
-                        <p><label>
-                            <textarea name="description"></textarea>
-                        </label></p>
-                        <ListUnordered>
-                            <ListItem>pole na wiele linii tekstu,</ListItem>
-                            <ListItem>przyjmuje tylko zwykły niesformatowany tekst,</ListItem>
-                            <ListItem>domyślna wartość wewnątrz znacznika,</ListItem>
-                            <ListItem>posiada znacznik zamykający,</ListItem>
-                            <ListItem>białe znaki mają znaczenie,</ListItem>
-                            <ListItem>domyślnie da się zmienić rozmiar okna,</ListItem>
-                            <ListItem>atrybut <b>cols</b> - szerokość w kolumnach,</ListItem>
-                            <ListItem>atrybut <b>rows</b> - wysokość w wierszach,</ListItem>
-                        </ListUnordered>
-                        <SmallestHeader>fieldset i legend</SmallestHeader>
-                        <fieldset>
-                            <legend>Dane osobowe</legend>
-                            <p>
-                                <label>Imię: <input name="firstName"/>
-                                </label>
-                            </p>
-                        </fieldset>
-                        <ListUnordered>
-                            <ListItem>wygodne rozwiązanie do tworzenia grup pól,</ListItem>
-                            <ListItem>ważne z punktu widzenia dostępności,</ListItem>
-                        </ListUnordered>
-                        <SmallestHeader>input / checkbox — pole wyboru</SmallestHeader>
-                        <label>
-                            <input checked name="Kuba Badach" type="checkbox"/>
-                        </label>Kuba Badach
+            body: (
+                <>
+                    <p>Formularze są najprostszym sposobem na zebranie i wysłanie informacji o użytkowniku.</p>
+                    <p>Kod podstawowego formularza wygląda następująco, a poniżej mamy przykład jak taki formularz może
+                        wyglądać.</p>
+                    <Blockquote>
+                        &lt;form><br/>
+                        &nbsp;&nbsp;&lt;p><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;label><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Imię i nazwisko &lt;input name="name"><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label><br/>
+                        &nbsp;&nbsp;&lt;/p><br/>
+                        &nbsp;&nbsp;&lt;p><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;button>Wyślij!&lt;/button><br/>
+                        &nbsp;&nbsp;&lt;/p><br/>
+                        &lt;/form><br/>
+                    </Blockquote>
+                    <form>
+                        <p>
+                            <label>
+                                Imię i nazwisko <input name="name"/>
+                            </label>
+                        </p>
+                        <p>
+                            <button>Wyślij!</button>
+                        </p>
+                    </form>
+                    <SmallestHeader>Form - szczegóły</SmallestHeader>
+                    <Blockquote>
+                        &lt;form <b>action</b>="/strona-docelowa" <b>method</b>="post">&lt;/form>
+                    </Blockquote>
+                    <ListUnordered>
+                        <ListItem>
+                            atrybut <b>action</b> - adres url, pod który zostanie wysłany formularz
+                        </ListItem>
+                        <ListItem>
+                            atrybut <b>method</b> - definiuje, jakiej metody HTTP użyjemy do wysłania formularza
+                        </ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>Input (text)</SmallestHeader>
+                    <Blockquote>&lt;input name="myName"></Blockquote>
+                    <p>Atrybuty:</p>
+                    <ListUnordered>
+                        <ListItem>
+                            <b>name</b> - nazwa pola,
+                        </ListItem>
+                        <ListItem>
+                            <b>readonly</b> - pole tylko do odczytu,
+                            <label>
+                                <input readOnly/>
+                            </label>
+                        </ListItem>
+                        <ListItem>
+                            <b>disabled</b> - pole wyłączone/ nieaktywne,
+                            <label>
+                                <input disabled/>
+                            </label>
+                        </ListItem>
+                        <ListItem>
+                            <b>placeholder</b> - tekst w przypadku pustej wartości,
+                            <label>
+                                <input placeholder="Wpisz coś"/>
+                            </label>
+                        </ListItem>
+                        <ListItem>
+                            <b>autofocus</b> - skupienie wskaźnika na danym polu input,
+                        </ListItem>
+                    </ListUnordered>
+                    <p><b>label</b> - opisuje pole, ważny pod kątem dostępności</p>
+                    <Blockquote>
+                        &lt;label>Imię i nazwisko&lt;input name="name">&lt;/label><br/><br/>
+                        &lt;!-- lub: --><br/><br/>
+                        &lt;label for="name">Imię i nazwisko:&lt;/label><br/>
+                        &lt;input id="name" name="name"><br/>
+                    </Blockquote>
+                    <label>Imię i nazwisko<input name="name"/></label>
+                    <SmallestHeader>przyciski</SmallestHeader>
+                    <Blockquote>
+                        &lt;button>Wyślij!&lt;/button><br/><br/>
+                        &lt;!-- lub: --><br/><br/>
+                        &lt;input type="submit" value="Wyślij!">
+                    </Blockquote>
+                    <button>Wyślij!</button>
+                    <ListUnordered>
+                        <ListItem>
+                            mogą mieć różne funkcje w zależności od atrybutu type:
+                            <ListUnordered>
+                                <ListItem><b>submit</b> - wysyła formularz (domyślny dla
+                                    formularza),
+                                </ListItem>
+                                <ListItem><b>reset</b> - resetuje formularz,</ListItem>
+                                <ListItem><b>button</b> - zwykły przycisk, brak domyślnej
+                                    akcji,
+                                </ListItem>
+                            </ListUnordered>
+                        </ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>textarea</SmallestHeader>
+                    <Blockquote>
+                        &lt;textarea name="description">&lt;/textarea>
+                    </Blockquote>
+                    <p><label>
+                        <textarea name="description"></textarea>
+                    </label></p>
+                    <ListUnordered>
+                        <ListItem>pole na wiele linii tekstu,</ListItem>
+                        <ListItem>przyjmuje tylko zwykły niesformatowany tekst,</ListItem>
+                        <ListItem>domyślna wartość wewnątrz znacznika,</ListItem>
+                        <ListItem>posiada znacznik zamykający,</ListItem>
+                        <ListItem>białe znaki mają znaczenie,</ListItem>
+                        <ListItem>domyślnie da się zmienić rozmiar okna,</ListItem>
+                        <ListItem>atrybut <b>cols</b> - szerokość w kolumnach,</ListItem>
+                        <ListItem>atrybut <b>rows</b> - wysokość w wierszach,</ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>fieldset i legend</SmallestHeader>
+                    <fieldset>
+                        <legend>Dane osobowe</legend>
+                        <p>
+                            <label>Imię: <input name="firstName"/>
+                            </label>
+                        </p>
+                    </fieldset>
+                    <ListUnordered>
+                        <ListItem>wygodne rozwiązanie do tworzenia grup pól,</ListItem>
+                        <ListItem>ważne z punktu widzenia dostępności,</ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>input / checkbox — pole wyboru</SmallestHeader>
+                    <label>
+                        <input checked name="Kuba Badach" type="checkbox"/>
+                    </label>Kuba Badach
 
-                        <Blockquote>
-                            &lt;input type="checkbox" name="Kuba Badach" checked>Kuba Badach
-                        </Blockquote>
-                        <ListUnordered>
-                            <ListItem>tak / nie</ListItem>
-                            <ListItem>atrybut checked — domyślne zaznaczenie,</ListItem>
-                            <ListItem>wartość jest wysyłana tylko, jeśli pole jest zaznaczone,</ListItem>
-                            <ListItem>jeśli nie ma value, wysyłana jest wartość "on".</ListItem>
-                        </ListUnordered>
-                        <SmallestHeader>input / radio — jeden wybór z wielu opcji</SmallestHeader>
-                        <label>
-                            <input checked name="favouriteSinger" type="radio" value="badach"/>
-                        </label> Kuba Badach
-                        <label>
-                            <input name="favouriteSinger" type="radio" value="bieber"/>
-                        </label> Justin Bieber
+                    <Blockquote>
+                        &lt;input type="checkbox" name="Kuba Badach" checked>Kuba Badach
+                    </Blockquote>
+                    <ListUnordered>
+                        <ListItem>tak / nie</ListItem>
+                        <ListItem>atrybut checked — domyślne zaznaczenie,</ListItem>
+                        <ListItem>wartość jest wysyłana tylko, jeśli pole jest zaznaczone,</ListItem>
+                        <ListItem>jeśli nie ma value, wysyłana jest wartość "on".</ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>input / radio — jeden wybór z wielu opcji</SmallestHeader>
+                    <label>
+                        <input checked name="favouriteSinger" type="radio" value="badach"/>
+                    </label> Kuba Badach
+                    <label>
+                        <input name="favouriteSinger" type="radio" value="bieber"/>
+                    </label> Justin Bieber
 
-                        <Blockquote>
-                            &lt;input type="radio" name="favouriteSinger" value="badach" checked> Kuba Badach<br/>
-                            &lt;input type="radio" name="favouriteSinger" value="bieber" checked> Justin Bieber
-                        </Blockquote>
-                        <ListUnordered>
-                            <ListItem>pola z tym samym atrybutem name,</ListItem>
-                            <ListItem>tylko jedno pole z grupy może być zaznaczone,</ListItem>
-                            <ListItem>wysyłana jest wartość tylko zaznaczonego pola,</ListItem>
-                            <ListItem>nie da się odznaczyć pola.</ListItem>
-                        </ListUnordered>
-                        <SmallestHeader>select</SmallestHeader>
-                        <label>
-                            ulubiony wokalista:
-                            <select name="favouriteSinger">
-                                <option value="badach">Kuba Badach</option>
-                                <option selected value="timberlake">Justin Timberlake</option>
-                            </select>
-                        </label>
-                        <Blockquote>
-                            &lt;label><br/>
-                            &nbsp;&nbsp;ulubiony wokalista:<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;select name="favouriteSinger"><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="badach">Kuba Badach&lt;/option><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="timberlake" selected>Justin Timberlake
-                            &lt;/option><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/select><br/>
-                            &lt;/label>
-                        </Blockquote>
-                        <ListUnordered>
-                            <ListItem>rozwijana lista opcji,</ListItem>
-                            <ListItem>atrybut selected w option - domyślna wartość,</ListItem>
-                            <ListItem>zostanie wysłana wartość wybranej opcji,</ListItem>
-                            <ListItem>atrybut size — liczba widocznych opcji,</ListItem>
-                            <ListItem>atrybut multiple — wielokrotny wybór.</ListItem>
-                        </ListUnordered>
-                        <SmallestHeader>input / file</SmallestHeader>
-                        <label>
-                            Załącz swoje CV
-                            <input name="cv" type="file"/>
-                        </label>
-                        <Blockquote>
-                            &lt;label><br/>
-                            &nbsp;&nbsp;Załącz swoje CV<br/>
-                            &nbsp;&nbsp;&lt;input type="file" name="cv"><br/>
-                            &lt;/label>
-                        </Blockquote>
-                        <ListUnordered>
-                            <ListItem>wybór plików,</ListItem>
-                            <ListItem>atrybut multiple — wiele plików,</ListItem>
-                        </ListUnordered>
-                        <SmallestHeader>input / email</SmallestHeader>
-                        <label>
-                            Adres e-mail do kontaktu:
-                            <input name="email" type="email"/>
-                        </label>
-                        <Blockquote>
-                            &lt;label><br/>
-                            &nbsp;&nbsp;Adres e-mail do kontaktu:<br/>
-                            &nbsp;&nbsp;&lt;input type="email" name="email"><br/>
-                            &lt;/label><br/>
-                        </Blockquote>
-                        <ListUnordered>
-                            <ListItem>adres e-mail,</ListItem>
-                            <ListItem>w bardzo podstawowy sposób sprawdza poprawność,</ListItem>
-                            <ListItem>przy walidacji można użyć atrybutu pattern.</ListItem>
-                        </ListUnordered>
-                    </>
-                )
+                    <Blockquote>
+                        &lt;input type="radio" name="favouriteSinger" value="badach" checked> Kuba Badach<br/>
+                        &lt;input type="radio" name="favouriteSinger" value="bieber" checked> Justin Bieber
+                    </Blockquote>
+                    <ListUnordered>
+                        <ListItem>pola z tym samym atrybutem name,</ListItem>
+                        <ListItem>tylko jedno pole z grupy może być zaznaczone,</ListItem>
+                        <ListItem>wysyłana jest wartość tylko zaznaczonego pola,</ListItem>
+                        <ListItem>nie da się odznaczyć pola.</ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>select</SmallestHeader>
+                    <label>
+                        ulubiony wokalista:
+                        <select name="favouriteSinger">
+                            <option value="badach">Kuba Badach</option>
+                            <option selected value="timberlake">Justin Timberlake</option>
+                        </select>
+                    </label>
+                    <Blockquote>
+                        &lt;label><br/>
+                        &nbsp;&nbsp;ulubiony wokalista:<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;select name="favouriteSinger"><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="badach">Kuba Badach&lt;/option><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="timberlake" selected>Justin Timberlake
+                        &lt;/option><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/select><br/>
+                        &lt;/label>
+                    </Blockquote>
+                    <ListUnordered>
+                        <ListItem>rozwijana lista opcji,</ListItem>
+                        <ListItem>atrybut selected w option - domyślna wartość,</ListItem>
+                        <ListItem>zostanie wysłana wartość wybranej opcji,</ListItem>
+                        <ListItem>atrybut size — liczba widocznych opcji,</ListItem>
+                        <ListItem>atrybut multiple — wielokrotny wybór.</ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>input / file</SmallestHeader>
+                    <label>
+                        Załącz swoje CV
+                        <input name="cv" type="file"/>
+                    </label>
+                    <Blockquote>
+                        &lt;label><br/>
+                        &nbsp;&nbsp;Załącz swoje CV<br/>
+                        &nbsp;&nbsp;&lt;input type="file" name="cv"><br/>
+                        &lt;/label>
+                    </Blockquote>
+                    <ListUnordered>
+                        <ListItem>wybór plików,</ListItem>
+                        <ListItem>atrybut multiple — wiele plików,</ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>input / email</SmallestHeader>
+                    <label>
+                        Adres e-mail do kontaktu:
+                        <input name="email" type="email"/>
+                    </label>
+                    <Blockquote>
+                        &lt;label><br/>
+                        &nbsp;&nbsp;Adres e-mail do kontaktu:<br/>
+                        &nbsp;&nbsp;&lt;input type="email" name="email"><br/>
+                        &lt;/label><br/>
+                    </Blockquote>
+                    <ListUnordered>
+                        <ListItem>adres e-mail,</ListItem>
+                        <ListItem>w bardzo podstawowy sposób sprawdza poprawność,</ListItem>
+                        <ListItem>przy walidacji można użyć atrybutu pattern.</ListItem>
+                    </ListUnordered>
+                </>
+            )
         }
         ,
         {
             id: 34,
             date: "16 czerwca 2023 roku",
             title: "CSS - konwencja BEM",
-            body:
-                (
-                    <>
-                        <p>Bardzo się cieszę, że mogę znowu udoskonalić bloga o tym razem znaczniki z klasami w zgodzie z
-                            konwencją BEM. Nie mogę się doczekać, kiedy powtórzę <i>React-a</i> i przeniosę strukturę plików
-                            —
-                            ale nie
-                            wszystko na raz!</p>
-                        <p>Konwencja BEM polega na dodaniu nazwy klasy, w której umieszczamy nazwę bloku, w którym jest
-                            element,
-                            łącznik w postaci znaku "__" z nazwą stylowanego elementu i/lub <i>modyfikator</i>.</p>
-                        <Blockquote>.block__element--modifier</Blockquote>
-                        <p>Zgodnie z konwencją BEM, zawsze stylujemy po klasach, nie po znacznikach. Dzielimy tym samym
-                            stronę
-                            na
-                            bloki, które są niezależne i mogą być używane w różnych miejscach. Bloki to najwyższe poziomy
-                            stylowania. Wewnątrz każdego z bloków są elementy, które nie są samodzielne. W nazwie klasy
-                            zgodnie
-                            z konwencją BEM nie zagnieżdżamy elementów. Używamy nazwy klasy zgodnie z powyższym wzorem.</p>
-                        <p>Do najważniejszych cech BEM-a niewątpliwie należą:</p>
-                        <ListUnordered>
-                            <ListItem>pomaga w tworzeniu komponentów wielokrotnego użytku,</ListItem>
-                            <ListItem>bloki są samodzielne i nie polegają na sobie nawzajem,</ListItem>
-                            <ListItem>łatwość implementacji — wystarczy trzymać się prostej konwencji
-                                nazywania klas,
-                            </ListItem>
-                            <ListItem>sprawia, że kod jest łatwiejszy do zrozumienia,</ListItem>
-                            <ListItem>sprawia, że łatwiej pracować z kodem i go utrzymywać,</ListItem>
-                            <ListItem>pozwala na swobodne rozrastanie się aplikacji
-                                (skalowanie),</ListItem>
-                            <ListItem>sprawia, że wszyscy developerzy w zespole "mówią tym samym
-                                językiem",
-                            </ListItem>
-                            <ListItem>sprawia, że kod powstaje szybciej,</ListItem>
-                            <ListItem>sprawia, że powstaje mniej kodu,</ListItem>
-                            <ListItem>jest bardzo popularny na świecie,</ListItem>
-                            <ListItem>eliminuje problem nadpisywania się styli (specify),</ListItem>
-                            <ListItem>pozwala na szybkie wdrożenie nowych osób w zespole.</ListItem>
-                        </ListUnordered>
-                        <p>Teoria, teorią, a ja zabieram się do roboty!</p>
-                    </>
-                )
+            body: (
+                <>
+                    <p>Bardzo się cieszę, że mogę znowu udoskonalić bloga o tym razem znaczniki z klasami w zgodzie z
+                        konwencją BEM. Nie mogę się doczekać, kiedy powtórzę <i>React-a</i> i przeniosę strukturę plików
+                        —
+                        ale nie
+                        wszystko na raz!</p>
+                    <p>Konwencja BEM polega na dodaniu nazwy klasy, w której umieszczamy nazwę bloku, w którym jest
+                        element,
+                        łącznik w postaci znaku "__" z nazwą stylowanego elementu i/lub <i>modyfikator</i>.</p>
+                    <Blockquote>.block__element--modifier</Blockquote>
+                    <p>Zgodnie z konwencją BEM, zawsze stylujemy po klasach, nie po znacznikach. Dzielimy tym samym
+                        stronę
+                        na
+                        bloki, które są niezależne i mogą być używane w różnych miejscach. Bloki to najwyższe poziomy
+                        stylowania. Wewnątrz każdego z bloków są elementy, które nie są samodzielne. W nazwie klasy
+                        zgodnie
+                        z konwencją BEM nie zagnieżdżamy elementów. Używamy nazwy klasy zgodnie z powyższym wzorem.</p>
+                    <p>Do najważniejszych cech BEM-a niewątpliwie należą:</p>
+                    <ListUnordered>
+                        <ListItem>pomaga w tworzeniu komponentów wielokrotnego użytku,</ListItem>
+                        <ListItem>bloki są samodzielne i nie polegają na sobie nawzajem,</ListItem>
+                        <ListItem>łatwość implementacji — wystarczy trzymać się prostej konwencji
+                            nazywania klas,
+                        </ListItem>
+                        <ListItem>sprawia, że kod jest łatwiejszy do zrozumienia,</ListItem>
+                        <ListItem>sprawia, że łatwiej pracować z kodem i go utrzymywać,</ListItem>
+                        <ListItem>pozwala na swobodne rozrastanie się aplikacji
+                            (skalowanie),</ListItem>
+                        <ListItem>sprawia, że wszyscy developerzy w zespole "mówią tym samym
+                            językiem",
+                        </ListItem>
+                        <ListItem>sprawia, że kod powstaje szybciej,</ListItem>
+                        <ListItem>sprawia, że powstaje mniej kodu,</ListItem>
+                        <ListItem>jest bardzo popularny na świecie,</ListItem>
+                        <ListItem>eliminuje problem nadpisywania się styli (specify),</ListItem>
+                        <ListItem>pozwala na szybkie wdrożenie nowych osób w zespole.</ListItem>
+                    </ListUnordered>
+                    <p>Teoria, teorią, a ja zabieram się do roboty!</p>
+                </>
+            )
         }
         ,
         {
@@ -5981,903 +6121,897 @@ export const articlesLink = [
             id: 32,
             date: "14 czerwca 2023 roku",
             title: "Jak działa Internet?",
-            body:
-                (
-                    <>
-                        <p>
-                            <b>Internet</b> to globalna sieć połączonych ze sobą urządzeń; urządzenia komunikują się między
-                            sobą
-                            za pomocą protokołu <i>TCP / IP</i>. Każde urządzenie ma przypisany swój adres <i>IP</i>.
-                            Internet
-                            <em>nie</em> może się zepsuć, dopóki urządzenia mogą się so tej sieci podpiąć.
-                        </p>
-                        <p>
-                            <b>URL - Uniform Resource Locator (URL)</b>, lub potocznie <i>adres internetowy</i>, posiada
-                            następującą składnię:
-                        </p>
-                        <Blockquote>
-                            &#123;protokół&#125;://&#123;host&#125;(:&#123;port&#125;)&#123;ścieżka&#125;(?&#123;parametry&#125;)(#&#123;sekcja&#125;)
-                        </Blockquote>
-                        <Blockquote>https: &#47;/ domena.pl:8080/ sciezka?
-                            param1=wartosc1&amp;param2=wartosc2 #sekcja
-                        </Blockquote>
-                        <p>Przejdźmy sobie do krótkiego omówienia elementów składni <i>URL</i>:</p>
-                        <ListUnordered>
-                            <ListItem><b>https - protokół (<i>protocol</i>)</b> - wersja protokołu
-                                <i>http</i> z szyfrowaniem <i>SSL</i> jest wersją bezpieczną, szyfrowaną, uniemożliwiającą
-                                <em>podsłuchanie</em> tego, co wprowadzamy na stronie.
-                            </ListItem>
-                            <ListItem><b> domena.pl</b> - zarejestrowana nazwa (domena) lub adres
-                                <i>IP</i> (host); gdy używamy przeglądarki - używamy domen, a nie adresów <i>IP</i>.
-                            </ListItem>
-                            <ListItem><b>8080 port</b> - pod różnymi portami możemy otrzymać różne
-                                odpowiedzi z serwera; jeśli nie wpiszemy portu, przeglądarka doda port domyślny. Jeśli mamy
-                                protokół <i>http</i>, to możemy być pewni, że przeglądarka dopisze nam port 80. W przypadku
-                                protokołu <i>https</i>, przeglądarka dopisze port 443.
-                            </ListItem>
-                            <ListItem><b>/sciezka</b> - ścieżka (path), pod jakim folderem dostępny jest
-                                dany zasób; serwer może na podstawie ścieżki dowolnie operować, co ma zwrócić
-                            </ListItem>
-                            <ListItem><b>parametr1=wartosc1&amp;parametr2=wartosc2</b> - parametry /
-                                zapytanie (query).
-                            </ListItem>
-                        </ListUnordered>
-                        <p><b>DNS - Domain Name System</b> - dzięki niemu urządzenia mogą powiązać domenę z adresem. Jest to
-                            system rozproszony, więc nie ma jednego serwera, który odpowiada na pytanie, która <i>domena</i>,
-                            to
-                            które <i>IP</i>. To jest jak książka telefoniczna, wpisujemy sobie w przeglądarkę nazwę domeny,
-                            ale
-                            przeglądarka potrzebuje adresu <i>IP</i>, żeby połączyć nas z danym serwerem i
-                            właśnie <i>DNS</i>
-                            tłumaczy nazwy domen na odpowiadające im adresy <i>IP</i>.</p>
-                        <p>Adres <i>IP</i> to jest synonim miejsca zamieszkania. Musimy go znać, żeby się połączyć z danym
-                            urządzeniem i dzięki temu systemowi, nie musimy pamiętać adresów <i>IP</i> i tylko wystarczy, że
-                            pamiętamy nazwę domeny. Sytuacja jest analogiczna w przypadku zapisywania numeru telefonu
-                            przyjaciół
-                            lub członków rodziny — zapisujemy je w telefonie pod <i>nazwą</i>. Nie musimy pamiętać wtedy
-                            konkretnych numerów telefonów. </p>
-                        <p>Aby sprawdzić adres IP, wystarczy:</p>
-                        <ListOrdered>
-                            <ListItem>użyć <i>DevTools-ów</i> (np. w przeglądarce Chrom),</ListItem>
-                            <ListItem>wybrać zakładkę <i>Network</i>,</ListItem>
-                            <ListItem>odświeżyć stronę,</ListItem>
-                            <ListItem> wejść na samą górę w zakładce <i>Network</i>,</ListItem>
-                            <ListItem>kliknąć w wiersz, w którym mamy nazwę domeny, którą obserwujemy,
-                            </ListItem>
-                            <ListItem>wybrać zakładkę <i>Header</i> i podzakładkę <i>General</i></ListItem>
-                            <ListItem>w linii "Remote Address" mamy podany adres <i>IP</i> domeny.</ListItem>
-                        </ListOrdered>
-                        <p><b>Protokół HTTP(s)</b> - HyperText Transfer Protocol — działa na zasadzie
-                            <i>request-response</i> (żądanie - odpowiedź). Na tej zasadzie odbywa się cała komunikacja
-                            między przeglądarką a serwerem. <i>Żądanie</i> i <i>odpowiedź</i> mają nagłówki i treść
-                            (ciało/body).
-                        </p>
-                        <p>Analogicznie do poprzedniej instrukcji, gdzie sprawdzaliśmy adres IP, możemy sprawdzić też jak
-                            wyglądają <i>nagłówki</i> i <i>ciała</i> dla <i>żądań</i> i <i>odpowiedzi</i>.</p>
-                        <TableContainer>
-                            <Table>
-                                <Caption>Kody błędów protokołów http</Caption>
-                                <Thead>
-                                    <Tr>
-                                        <th className="article__th">
-                                            kody:
-                                        </th>
-                                        <th className="article__th">
-                                            rodzaj odpowiedzi
-                                        </th>
-                                        <th className="article__th">
-                                            opis słowny
-                                        </th>
-                                        <th className="article__th">
-                                            znaczenie / zwrócony zasób
-                                        </th>
-                                    </Tr>
-                                </Thead>
-                                <tbody>
+            body: (
+                <>
+                    <p>
+                        <b>Internet</b> to globalna sieć połączonych ze sobą urządzeń; urządzenia komunikują się między
+                        sobą
+                        za pomocą protokołu <i>TCP / IP</i>. Każde urządzenie ma przypisany swój adres <i>IP</i>.
+                        Internet
+                        <em>nie</em> może się zepsuć, dopóki urządzenia mogą się so tej sieci podpiąć.
+                    </p>
+                    <p>
+                        <b>URL - Uniform Resource Locator (URL)</b>, lub potocznie <i>adres internetowy</i>, posiada
+                        następującą składnię:
+                    </p>
+                    <Blockquote>
+                        &#123;protokół&#125;://&#123;host&#125;(:&#123;port&#125;)&#123;ścieżka&#125;(?&#123;parametry&#125;)(#&#123;sekcja&#125;)
+                    </Blockquote>
+                    <Blockquote>https: &#47;/ domena.pl:8080/ sciezka?
+                        param1=wartosc1&amp;param2=wartosc2 #sekcja
+                    </Blockquote>
+                    <p>Przejdźmy sobie do krótkiego omówienia elementów składni <i>URL</i>:</p>
+                    <ListUnordered>
+                        <ListItem><b>https - protokół (<i>protocol</i>)</b> - wersja protokołu
+                            <i>http</i> z szyfrowaniem <i>SSL</i> jest wersją bezpieczną, szyfrowaną, uniemożliwiającą
+                            <em>podsłuchanie</em> tego, co wprowadzamy na stronie.
+                        </ListItem>
+                        <ListItem><b> domena.pl</b> - zarejestrowana nazwa (domena) lub adres
+                            <i>IP</i> (host); gdy używamy przeglądarki - używamy domen, a nie adresów <i>IP</i>.
+                        </ListItem>
+                        <ListItem><b>8080 port</b> - pod różnymi portami możemy otrzymać różne
+                            odpowiedzi z serwera; jeśli nie wpiszemy portu, przeglądarka doda port domyślny. Jeśli mamy
+                            protokół <i>http</i>, to możemy być pewni, że przeglądarka dopisze nam port 80. W przypadku
+                            protokołu <i>https</i>, przeglądarka dopisze port 443.
+                        </ListItem>
+                        <ListItem><b>/sciezka</b> - ścieżka (path), pod jakim folderem dostępny jest
+                            dany zasób; serwer może na podstawie ścieżki dowolnie operować, co ma zwrócić
+                        </ListItem>
+                        <ListItem><b>parametr1=wartosc1&amp;parametr2=wartosc2</b> - parametry /
+                            zapytanie (query).
+                        </ListItem>
+                    </ListUnordered>
+                    <p><b>DNS - Domain Name System</b> - dzięki niemu urządzenia mogą powiązać domenę z adresem. Jest to
+                        system rozproszony, więc nie ma jednego serwera, który odpowiada na pytanie, która <i>domena</i>,
+                        to
+                        które <i>IP</i>. To jest jak książka telefoniczna, wpisujemy sobie w przeglądarkę nazwę domeny,
+                        ale
+                        przeglądarka potrzebuje adresu <i>IP</i>, żeby połączyć nas z danym serwerem i
+                        właśnie <i>DNS</i>
+                        tłumaczy nazwy domen na odpowiadające im adresy <i>IP</i>.</p>
+                    <p>Adres <i>IP</i> to jest synonim miejsca zamieszkania. Musimy go znać, żeby się połączyć z danym
+                        urządzeniem i dzięki temu systemowi, nie musimy pamiętać adresów <i>IP</i> i tylko wystarczy, że
+                        pamiętamy nazwę domeny. Sytuacja jest analogiczna w przypadku zapisywania numeru telefonu
+                        przyjaciół
+                        lub członków rodziny — zapisujemy je w telefonie pod <i>nazwą</i>. Nie musimy pamiętać wtedy
+                        konkretnych numerów telefonów. </p>
+                    <p>Aby sprawdzić adres IP, wystarczy:</p>
+                    <ListOrdered>
+                        <ListItem>użyć <i>DevTools-ów</i> (np. w przeglądarce Chrom),</ListItem>
+                        <ListItem>wybrać zakładkę <i>Network</i>,</ListItem>
+                        <ListItem>odświeżyć stronę,</ListItem>
+                        <ListItem> wejść na samą górę w zakładce <i>Network</i>,</ListItem>
+                        <ListItem>kliknąć w wiersz, w którym mamy nazwę domeny, którą obserwujemy,
+                        </ListItem>
+                        <ListItem>wybrać zakładkę <i>Header</i> i podzakładkę <i>General</i></ListItem>
+                        <ListItem>w linii "Remote Address" mamy podany adres <i>IP</i> domeny.</ListItem>
+                    </ListOrdered>
+                    <p><b>Protokół HTTP(s)</b> - HyperText Transfer Protocol — działa na zasadzie
+                        <i>request-response</i> (żądanie - odpowiedź). Na tej zasadzie odbywa się cała komunikacja
+                        między przeglądarką a serwerem. <i>Żądanie</i> i <i>odpowiedź</i> mają nagłówki i treść
+                        (ciało/body).
+                    </p>
+                    <p>Analogicznie do poprzedniej instrukcji, gdzie sprawdzaliśmy adres IP, możemy sprawdzić też jak
+                        wyglądają <i>nagłówki</i> i <i>ciała</i> dla <i>żądań</i> i <i>odpowiedzi</i>.</p>
+                    <TableContainer>
+                        <Table>
+                            <Caption>Kody błędów protokołów http</Caption>
+                            <Thead>
                                 <Tr>
-                                    <td>100</td>
-                                    <td>informacyjne</td>
-                                    <td>Continue</td>
-                                    <td>Kontynuuj – prośba o dalsze wysyłanie zapytania</td>
+                                    <th className="article__th">
+                                        kody:
+                                    </th>
+                                    <th className="article__th">
+                                        rodzaj odpowiedzi
+                                    </th>
+                                    <th className="article__th">
+                                        opis słowny
+                                    </th>
+                                    <th className="article__th">
+                                        znaczenie / zwrócony zasób
+                                    </th>
                                 </Tr>
-                                <Tr>
-                                    <td>101</td>
-                                    <td>informacyjne</td>
-                                    <td>Switching Protocols</td>
-                                    <td>Zmiana protokołu</td>
-                                </Tr>
-                                <Tr>
-                                    <td>110</td>
-                                    <td>informacyjne</td>
-                                    <td>Connection Timed Out</td>
-                                    <td>Przekroczono czas połączenia. Serwer zbyt długo nie odpowiada</td>
-                                </Tr>
-                                <Tr>
-                                    <td>111</td>
-                                    <td>informacyjne</td>
-                                    <td>Connection refused</td>
-                                    <td>Serwer odrzucił połączenie</td>
-                                </Tr>
-                                <Tr>
-                                    <td>200</td>
-                                    <td>Kod powodzenia</td>
-                                    <td>OK</td>
-                                    <td>Zawartość żądanego dokumentu (najczęściej zwracany nagłówek odpowiedzi w
-                                        komunikacji WWW Internetu)
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>201</td>
-                                    <td>Kod powodzenia</td>
-                                    <td>Created</td>
-                                    <td>Utworzono – wysłany dokument został zapisany na serwerze</td>
-                                </Tr>
-                                <Tr>
-                                    <td>202</td>
-                                    <td>Kod powodzenia</td>
-                                    <td>Accepted</td>
-                                    <td>Przyjęto – zapytanie zostało przyjęte do obsłużenia, lecz jego zrealizowanie
-                                        jeszcze się nie skończyło
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>203</td>
-                                    <td>Kod powodzenia</td>
-                                    <td>Non-Authoritative Information</td>
-                                    <td>Informacja nieautorytatywna – zwrócona informacja nie odpowiada dokładnie
-                                        odpowiedzi pierwotnego serwera, lecz została utworzona z lokalnych bądź
-                                        zewnętrznych kopii
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>204</td>
-                                    <td>Kod powodzenia</td>
-                                    <td>No content</td>
-                                    <td>Brak zawartości – serwer zrealizował zapytanie klienta i nie potrzebuje zwracać
-                                        żadnej treści
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>205</td>
-                                    <td>Kod powodzenia</td>
-                                    <td>Reset Content</td>
-                                    <td>Przywróć zawartość – serwer zrealizował zapytanie i klient powinien przywrócić
-                                        pierwotny wygląd dokumentu
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>206</td>
-                                    <td>Kod powodzenia</td>
-                                    <td>Partial Content</td>
-                                    <td>Część zawartości – serwer zrealizował tylko część zapytania typu GET, odpowiedź
-                                        musi zawierać nagłówek Content-Range informujący o zakresie bajtowym zwróconego
-                                        elementu
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>300</td>
-                                    <td>Kod powodzenia</td>
-                                    <td>Multiple Choices</td>
-                                    <td>Wiele możliwości – istnieje więcej niż jeden sposób obsłużenia danego zapytania,
-                                        serwer może podać adres zasobu, który pozwala na wybór jednoznacznego zapytania
-                                        spośród możliwych
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>301</td>
-                                    <td>Kod przekierowania</td>
-                                    <td>Moved Permanently</td>
-                                    <td>Trwale przeniesiony – żądany zasób zmienił swój URI i w przyszłości zasób
-                                        powinien być szukany pod wskazanym nowym adresem
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>302</td>
-                                    <td>Kod przekierowania</td>
-                                    <td>Found</td>
-                                    <td>Znaleziono – żądany zasób jest chwilowo dostępny pod innym adresem, a przyszłe
-                                        odwołania do zasobu powinny być kierowane pod adres pierwotny
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>303</td>
-                                    <td>Kod przekierowania</td>
-                                    <td>See Other</td>
-                                    <td>Zobacz inne – odpowiedź na żądanie znajduje się pod innym URI i tam klient
-                                        powinien się skierować. To jest właściwy sposób przekierowywania w odpowiedzi na
-                                        żądanie metodą POST
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>304</td>
-                                    <td>Kod przekierowania</td>
-                                    <td>Not Modified</td>
-                                    <td>Nie zmieniono – zawartość zasobu nie podległa zmianie według warunku
-                                        przekazanego przez klienta (np. data ostatniej wersji zasobu pobranej przez
-                                        klienta – pamięć podręczna przeglądarki)
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>305</td>
-                                    <td>Kod przekierowania</td>
-                                    <td>Use proxy</td>
-                                    <td>Użyj serwera proxy – do żądanego zasobu trzeba odwołać się przez serwer proxy
-                                        podany w nagłówku Location odpowiedzi
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>306</td>
-                                    <td>Kod przekierowania</td>
-                                    <td>Switch proxy</td>
-                                    <td>Kod nieużywany, aczkolwiek zastrzeżony dla starszych wersji protokołu</td>
-                                </Tr>
-                                <Tr>
-                                    <td>307</td>
-                                    <td>Kod przekierowania</td>
-                                    <td>Too many redirects</td>
-                                    <td>Zbyt wiele przekierowań</td>
-                                </Tr>
-                                <Tr>
-                                    <td>310</td>
-                                    <td>Kod przekierowania</td>
-                                    <td>Temporary Redirect</td>
-                                    <td>Tymczasowe przekierowanie – żądany zasób znajduje się chwilowo pod innym adresem
-                                        URI, odpowiedź powinna zawierać zmieniony adres zasobu, na który klient
-                                        zobowiązany jest się przenieść
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>400</td>
-                                    <td>Kod błędu aplikacji po stronie klienta</td>
-                                    <td>Bad Request</td>
-                                    <td>Nieprawidłowe zapytanie – żądanie nie może być obsłużone przez serwer z powodu
-                                        nieprawidłowości postrzeganej jako błąd użytkownika (np. błędna składnia
-                                        zapytania)
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>401</td>
-                                    <td>Kod błędu aplikacji po stronie klienta</td>
-                                    <td>Unauthorized</td>
-                                    <td>Nieautoryzowany dostęp – żądanie zasobu, który wymaga uwierzytelnienia</td>
-                                </Tr>
-                                <Tr>
-                                    <td>402</td>
-                                    <td>Kod błędu aplikacji po stronie klienta</td>
-                                    <td>Payment Required</td>
-                                    <td>Wymagana opłata – odpowiedź zarezerwowana na przyszłość. Google Developers API
-                                        korzysta z tego kodu, jeśli dany programista przekroczył dzienny limit zapytań
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>403</td>
-                                    <td>Kod błędu aplikacji po stronie klienta</td>
-                                    <td>Forbidden</td>
-                                    <td>Zabroniony – serwer zrozumiał zapytanie, lecz konfiguracja bezpieczeństwa
-                                        zabrania mu zwrócić żądany zasób
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>404</td>
-                                    <td>Kod błędu aplikacji po stronie klienta</td>
-                                    <td>Not Found</td>
-                                    <td>Nie znaleziono – serwer nie odnalazł zasobu według podanego URL ani niczego co
-                                        by wskazywało na istnienie takiego zasobu w przeszłości
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>405</td>
-                                    <td>Kod błędu aplikacji po stronie klienta</td>
-                                    <td>Method Not Allowed</td>
-                                    <td>Niedozwolona metoda – metoda zawarta w żądaniu nie jest dozwolona dla wskazanego
-                                        zasobu, odpowiedź zawiera też listę dozwolonych metod
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>406</td>
-                                    <td>Kod błędu aplikacji po stronie klienta</td>
-                                    <td>Not Acceptable</td>
-                                    <td>Niedozwolone – zażądany zasób nie jest w stanie zwrócić odpowiedzi mogącej być
-                                        obsłużonej przez klienta według informacji podanych w zapytaniu
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>407</td>
-                                    <td>Kod błędu aplikacji po stronie klienta</td>
-                                    <td>Proxy Authentication Required</td>
-                                    <td>Wymagane uwierzytelnienie do serwera pośredniczącego (ang. proxy) – analogicznie
-                                        do kodu 401, dotyczy dostępu do serwera proxy
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>408</td>
-                                    <td>Kod błędu aplikacji po stronie klienta</td>
-                                    <td>Request Timeout</td>
-                                    <td>Koniec czasu oczekiwania na żądanie – klient nie przesłał zapytania do serwera w
-                                        określonym czasie
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>409</td>
-                                    <td>Kod błędu aplikacji po stronie klienta</td>
-                                    <td>Conflict</td>
-                                    <td>Konflikt – żądanie nie może być zrealizowane, ponieważ występuje konflikt z
-                                        obecnym statusem zasobu, ten kod odpowiedzi jest zwracany tylko w przypadku
-                                        podejrzewania przez serwer, że klient może znaleźć przyczyny błędu i przesłać
-                                        ponownie prawidłowe zapytanie. Odpowiedź serwera powinna zawierać informację
-                                        umożliwiające klientowi rozwiązanie problemu, jednak nie jest to obowiązkowe
-                                        (np. przesłanie 2 razy identycznego dokumentu, kiedy wymagana jest unikalność)
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>410</td>
-                                    <td>Kod błędu aplikacji po stronie klienta</td>
-                                    <td>Gone</td>
-                                    <td>Zniknął (usunięto) – zażądany zasób nie jest dłużej dostępny i nieznany jest
-                                        jego ewentualny nowy adres URI; klient powinien już więcej nie odwoływać się do
-                                        tego zasobu
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>411</td>
-                                    <td>Kod błędu aplikacji po stronie klienta</td>
-                                    <td>Length required</td>
-                                    <td>Wymagana długość – serwer odmawia zrealizowania zapytania ze względu na brak
-                                        nagłówka Content-Length w zapytaniu; klient może powtórzyć zapytanie dodając doń
-                                        poprawny nagłówek długości
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>412</td>
-                                    <td>Kod błędu aplikacji po stronie klienta</td>
-                                    <td>Precondition Failed</td>
-                                    <td>Warunek wstępny nie może być spełniony – serwer nie może spełnić przynajmniej
-                                        jednego z warunków zawartych w zapytaniu
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>413</td>
-                                    <td>Kod błędu aplikacji po stronie klienta</td>
-                                    <td>Request Entity Too Large</td>
-                                    <td>Encja zapytania zbyt długa – całkowita długość zapytania jest zbyt długa dla
-                                        serwera
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>414</td>
-                                    <td>Kod błędu aplikacji po stronie klienta</td>
-                                    <td>Request-URI Too Long</td>
-                                    <td>Adres URI zapytania zbyt długi – długość zażądanego URI jest większa niż
-                                        maksymalna oczekiwana przez serwer
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>415</td>
-                                    <td>Kod błędu aplikacji po stronie klienta</td>
-                                    <td>Unsupported Media Type</td>
-                                    <td>Nieznany sposób żądania – serwer odmawia przyjęcia zapytania, ponieważ jego
-                                        składnia jest niezrozumiała dla serwera
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>416</td>
-                                    <td>Kod błędu aplikacji po stronie klienta</td>
-                                    <td>Requested Range Not Satisfiable</td>
-                                    <td>Zakres bajtowy podany w zapytaniu nie do obsłużenia – klient podał w zapytaniu
-                                        zakres, który nie może być zastosowany do wskazanego zasobu
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>417</td>
-                                    <td>Kod błędu aplikacji po stronie klienta</td>
-                                    <td>Expectation Failed</td>
-                                    <td>Oczekiwana wartość nie do zwrócenia – oczekiwanie podane w nagłówku Expect
-                                        żądania nie może być spełnione przez serwer lub – jeśli zapytanie realizuje
-                                        serwer proxy – serwer ma dowód, że oczekiwanie nie będzie spełnione przez
-                                        następny w łańcuchu serwer realizujący zapytanie
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>418</td>
-                                    <td>Kod błędu aplikacji po stronie klienta</td>
-                                    <td>I’m a teapot</td>
-                                    <td>„Jestem czajnikiem” – tzw. easter egg. Zdefiniowany w 1998. Obecnie nie jest
-                                        implementowany do serwerów HTTP, ale znane są takie przypadki
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>421</td>
-                                    <td>Kod błędu aplikacji po stronie klienta</td>
-                                    <td>Misdirected Request</td>
-                                    <td>Zapytanie zostało skierowane do serwera, który nie powinien go otrzymać lub
-                                        który nie jest w stanie na nie odpowiedzieć
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>422</td>
-                                    <td>Kod błędu aplikacji po stronie klienta</td>
-                                    <td>Unprocessable entity</td>
-                                    <td> Zapytanie było poprawnie sformułowane, ale było niemożliwe do kontynuowania z
-                                        powodu semantycznych błędów
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>423</td>
-                                    <td>Kod błędu aplikacji po stronie klienta</td>
-                                    <td>Locked (WebDAV)</td>
-                                    <td>Próba uzyskania dostępu do zasobu, który jest aktualnie zablokowany</td>
-                                </Tr>
-                                <Tr>
-                                    <td>424</td>
-                                    <td>Kod błędu aplikacji po stronie klienta</td>
-                                    <td>Failed Dependency (WebDAV)</td>
-                                    <td>Brak powodzenia żądania, ponieważ jest ono zależne od innego żądania, które
-                                        również nie powiodło się
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>425</td>
-                                    <td>Kod błędu aplikacji po stronie klienta</td>
-                                    <td>Too Early</td>
-                                    <td>Serwer nie chce ryzykować przetwarzania żądania, które może zostać powtórzone ze
-                                        względu na ryzyko ataku typu Replay
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>426</td>
-                                    <td>Kod błędu aplikacji po stronie klienta</td>
-                                    <td>Upgrade Required</td>
-                                    <td>Serwer odmawia wykonania żądania, używając aktualnego protokołu. Wymagany
-                                        protokół dla klienta przekazany jest w nagłówku Upgrade
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>428</td>
-                                    <td>Kod błędu aplikacji po stronie klienta</td>
-                                    <td>Precondition Required</td>
-                                    <td>Brak nagłówka wstępnego, który jest wymagany przez serwer. Żądanie musi być
-                                        warunkowe
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>429</td>
-                                    <td>Kod błędu aplikacji po stronie klienta</td>
-                                    <td>Too Many Requests</td>
-                                    <td>Użytkownik wysłał za wiele żądań w danym czasie</td>
-                                </Tr>
-                                <Tr>
-                                    <td>429</td>
-                                    <td>Kod błędu aplikacji po stronie klienta</td>
-                                    <td>Too Many Requests</td>
-                                    <td>Użytkownik wysłał za wiele żądań w danym czasie</td>
-                                </Tr>
-                                <Tr>
-                                    <td>431</td>
-                                    <td>Kod błędu aplikacji po stronie klienta</td>
-                                    <td>Request Header Fields Too Large</td>
-                                    <td>Serwer odmawia wykonania żądania ze względu na zbyt duże pole lub pola nagłówka
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>451</td>
-                                    <td>Kod błędu aplikacji po stronie klienta</td>
-                                    <td>Unavailable For Legal Reasons</td>
-                                    <td>Zawartość niedostępna z powodów prawnych – strona lub zasób zostały zablokowane
-                                        z powodów naruszenia prawa, w tym także z powodu ocenzurowania zawartości przez
-                                        władze. Wartość kodu jest nawiązaniem do powieści „451 stopni Fahrenheita”
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>500</td>
-                                    <td>Kod błędu serwera HTTP</td>
-                                    <td>Internal Server Error</td>
-                                    <td>Wewnętrzny błąd serwera – serwer napotkał niespodziewane trudności, które
-                                        uniemożliwiły zrealizowanie żądania
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>501</td>
-                                    <td>Kod błędu serwera HTTP</td>
-                                    <td>Not Implemented</td>
-                                    <td>Nie zaimplementowano – serwer nie dysponuje funkcjonalnością wymaganą w
-                                        zapytaniu; ten kod jest zwracany, gdy serwer otrzymał nieznany typ zapytania
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>502</td>
-                                    <td>Kod błędu serwera HTTP</td>
-                                    <td>Bad Gateway</td>
-                                    <td>Błąd bramy – serwer – spełniający funkcję bramy lub pośrednika – otrzymał
-                                        niepoprawną odpowiedź od serwera nadrzędnego i nie jest w stanie zrealizować
-                                        żądania klienta
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>503</td>
-                                    <td>Kod błędu serwera HTTP</td>
-                                    <td>Service Unavailable</td>
-                                    <td>Usługa niedostępna – serwer nie jest w stanie w danej chwili zrealizować
-                                        zapytania klienta ze względu na przeciążenie
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>504</td>
-                                    <td>Kod błędu serwera HTTP</td>
-                                    <td>Gateway Timeout</td>
-                                    <td>Przekroczony czas bramy – serwer – spełniający funkcję bramy lub pośrednika – nie
-                                        otrzymał w ustalonym czasie odpowiedzi od wskazanego serwera HTTP, FTP, LDAP
-                                        itp. lub serwer DNS jest potrzebny do obsłużenia zapytania
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>505</td>
-                                    <td>Kod błędu serwera HTTP</td>
-                                    <td>HTTP Version Not Supported</td>
-                                    <td>Nieobsługiwana wersja HTTP – serwer nie obsługuje bądź odmawia obsługi wskazanej
-                                        przez klienta wersji HTTP
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>506</td>
-                                    <td>Kod błędu serwera HTTP</td>
-                                    <td>Variant Also Negotiates</td>
-                                    <td>Wariant również negocjuje (w wolnym tłumaczeniu)</td>
-                                </Tr>
-                                <Tr>
-                                    <td>507</td>
-                                    <td>Kod błędu serwera HTTP</td>
-                                    <td>Insufficient Storage (WebDAV)</td>
-                                    <td>Serwer nie jest w stanie zapisać danych związanych z wykonaniem zapytania</td>
-                                </Tr>
-                                <Tr>
-                                    <td>508</td>
-                                    <td>Kod błędu serwera HTTP</td>
-                                    <td>Loop Detected (WebDAV)</td>
-                                    <td>Serwer wykrył nieskończoną pętlę w trakcie przetwarzania zapytania</td>
-                                </Tr>
-                                <Tr>
-                                    <td>509</td>
-                                    <td>Kod błędu serwera HTTP</td>
-                                    <td>Bandwidth Limit Exceeded</td>
-                                    <td>Serwer jest tymczasowo niedostępny, ponieważ właściciel strony przekroczył limit
-                                        transferu danych.
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>510</td>
-                                    <td>Kod błędu serwera HTTP</td>
-                                    <td>Not Extended</td>
-                                    <td>Brak rozszerzenia HTTP koniecznego do obsługi danego zapytania</td>
-                                </Tr>
-                                <Tr>
-                                    <td>511</td>
-                                    <td>Kod błędu serwera HTTP</td>
-                                    <td>Network Authentication Required</td>
-                                    <td>Wymagane uwierzytelnienie przed otrzymaniem dostępu do sieci. W zamyśle
-                                        wykorzystywane przez pośredników kontrolujących dostęp do sieci (np.: wymaganie
-                                        potwierdzenia zasad użytkowania przed udostępnieniem połączenia)
-                                    </td>
-                                </Tr>
-                                </tbody>
-                                <tfoot>
-                                </tfoot>
-                            </Table>
-                        </TableContainer>
-                    </>
-                )
+                            </Thead>
+                            <tbody>
+                            <Tr>
+                                <td>100</td>
+                                <td>informacyjne</td>
+                                <td>Continue</td>
+                                <td>Kontynuuj – prośba o dalsze wysyłanie zapytania</td>
+                            </Tr>
+                            <Tr>
+                                <td>101</td>
+                                <td>informacyjne</td>
+                                <td>Switching Protocols</td>
+                                <td>Zmiana protokołu</td>
+                            </Tr>
+                            <Tr>
+                                <td>110</td>
+                                <td>informacyjne</td>
+                                <td>Connection Timed Out</td>
+                                <td>Przekroczono czas połączenia. Serwer zbyt długo nie odpowiada</td>
+                            </Tr>
+                            <Tr>
+                                <td>111</td>
+                                <td>informacyjne</td>
+                                <td>Connection refused</td>
+                                <td>Serwer odrzucił połączenie</td>
+                            </Tr>
+                            <Tr>
+                                <td>200</td>
+                                <td>Kod powodzenia</td>
+                                <td>OK</td>
+                                <td>Zawartość żądanego dokumentu (najczęściej zwracany nagłówek odpowiedzi w
+                                    komunikacji WWW Internetu)
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>201</td>
+                                <td>Kod powodzenia</td>
+                                <td>Created</td>
+                                <td>Utworzono – wysłany dokument został zapisany na serwerze</td>
+                            </Tr>
+                            <Tr>
+                                <td>202</td>
+                                <td>Kod powodzenia</td>
+                                <td>Accepted</td>
+                                <td>Przyjęto – zapytanie zostało przyjęte do obsłużenia, lecz jego zrealizowanie
+                                    jeszcze się nie skończyło
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>203</td>
+                                <td>Kod powodzenia</td>
+                                <td>Non-Authoritative Information</td>
+                                <td>Informacja nieautorytatywna – zwrócona informacja nie odpowiada dokładnie
+                                    odpowiedzi pierwotnego serwera, lecz została utworzona z lokalnych bądź
+                                    zewnętrznych kopii
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>204</td>
+                                <td>Kod powodzenia</td>
+                                <td>No content</td>
+                                <td>Brak zawartości – serwer zrealizował zapytanie klienta i nie potrzebuje zwracać
+                                    żadnej treści
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>205</td>
+                                <td>Kod powodzenia</td>
+                                <td>Reset Content</td>
+                                <td>Przywróć zawartość – serwer zrealizował zapytanie i klient powinien przywrócić
+                                    pierwotny wygląd dokumentu
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>206</td>
+                                <td>Kod powodzenia</td>
+                                <td>Partial Content</td>
+                                <td>Część zawartości – serwer zrealizował tylko część zapytania typu GET, odpowiedź
+                                    musi zawierać nagłówek Content-Range informujący o zakresie bajtowym zwróconego
+                                    elementu
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>300</td>
+                                <td>Kod powodzenia</td>
+                                <td>Multiple Choices</td>
+                                <td>Wiele możliwości – istnieje więcej niż jeden sposób obsłużenia danego zapytania,
+                                    serwer może podać adres zasobu, który pozwala na wybór jednoznacznego zapytania
+                                    spośród możliwych
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>301</td>
+                                <td>Kod przekierowania</td>
+                                <td>Moved Permanently</td>
+                                <td>Trwale przeniesiony – żądany zasób zmienił swój URI i w przyszłości zasób
+                                    powinien być szukany pod wskazanym nowym adresem
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>302</td>
+                                <td>Kod przekierowania</td>
+                                <td>Found</td>
+                                <td>Znaleziono – żądany zasób jest chwilowo dostępny pod innym adresem, a przyszłe
+                                    odwołania do zasobu powinny być kierowane pod adres pierwotny
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>303</td>
+                                <td>Kod przekierowania</td>
+                                <td>See Other</td>
+                                <td>Zobacz inne – odpowiedź na żądanie znajduje się pod innym URI i tam klient
+                                    powinien się skierować. To jest właściwy sposób przekierowywania w odpowiedzi na
+                                    żądanie metodą POST
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>304</td>
+                                <td>Kod przekierowania</td>
+                                <td>Not Modified</td>
+                                <td>Nie zmieniono – zawartość zasobu nie podległa zmianie według warunku
+                                    przekazanego przez klienta (np. data ostatniej wersji zasobu pobranej przez
+                                    klienta – pamięć podręczna przeglądarki)
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>305</td>
+                                <td>Kod przekierowania</td>
+                                <td>Use proxy</td>
+                                <td>Użyj serwera proxy – do żądanego zasobu trzeba odwołać się przez serwer proxy
+                                    podany w nagłówku Location odpowiedzi
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>306</td>
+                                <td>Kod przekierowania</td>
+                                <td>Switch proxy</td>
+                                <td>Kod nieużywany, aczkolwiek zastrzeżony dla starszych wersji protokołu</td>
+                            </Tr>
+                            <Tr>
+                                <td>307</td>
+                                <td>Kod przekierowania</td>
+                                <td>Too many redirects</td>
+                                <td>Zbyt wiele przekierowań</td>
+                            </Tr>
+                            <Tr>
+                                <td>310</td>
+                                <td>Kod przekierowania</td>
+                                <td>Temporary Redirect</td>
+                                <td>Tymczasowe przekierowanie – żądany zasób znajduje się chwilowo pod innym adresem
+                                    URI, odpowiedź powinna zawierać zmieniony adres zasobu, na który klient
+                                    zobowiązany jest się przenieść
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>400</td>
+                                <td>Kod błędu aplikacji po stronie klienta</td>
+                                <td>Bad Request</td>
+                                <td>Nieprawidłowe zapytanie – żądanie nie może być obsłużone przez serwer z powodu
+                                    nieprawidłowości postrzeganej jako błąd użytkownika (np. błędna składnia
+                                    zapytania)
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>401</td>
+                                <td>Kod błędu aplikacji po stronie klienta</td>
+                                <td>Unauthorized</td>
+                                <td>Nieautoryzowany dostęp – żądanie zasobu, który wymaga uwierzytelnienia</td>
+                            </Tr>
+                            <Tr>
+                                <td>402</td>
+                                <td>Kod błędu aplikacji po stronie klienta</td>
+                                <td>Payment Required</td>
+                                <td>Wymagana opłata – odpowiedź zarezerwowana na przyszłość. Google Developers API
+                                    korzysta z tego kodu, jeśli dany programista przekroczył dzienny limit zapytań
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>403</td>
+                                <td>Kod błędu aplikacji po stronie klienta</td>
+                                <td>Forbidden</td>
+                                <td>Zabroniony – serwer zrozumiał zapytanie, lecz konfiguracja bezpieczeństwa
+                                    zabrania mu zwrócić żądany zasób
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>404</td>
+                                <td>Kod błędu aplikacji po stronie klienta</td>
+                                <td>Not Found</td>
+                                <td>Nie znaleziono – serwer nie odnalazł zasobu według podanego URL ani niczego co
+                                    by wskazywało na istnienie takiego zasobu w przeszłości
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>405</td>
+                                <td>Kod błędu aplikacji po stronie klienta</td>
+                                <td>Method Not Allowed</td>
+                                <td>Niedozwolona metoda – metoda zawarta w żądaniu nie jest dozwolona dla wskazanego
+                                    zasobu, odpowiedź zawiera też listę dozwolonych metod
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>406</td>
+                                <td>Kod błędu aplikacji po stronie klienta</td>
+                                <td>Not Acceptable</td>
+                                <td>Niedozwolone – zażądany zasób nie jest w stanie zwrócić odpowiedzi mogącej być
+                                    obsłużonej przez klienta według informacji podanych w zapytaniu
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>407</td>
+                                <td>Kod błędu aplikacji po stronie klienta</td>
+                                <td>Proxy Authentication Required</td>
+                                <td>Wymagane uwierzytelnienie do serwera pośredniczącego (ang. proxy) – analogicznie
+                                    do kodu 401, dotyczy dostępu do serwera proxy
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>408</td>
+                                <td>Kod błędu aplikacji po stronie klienta</td>
+                                <td>Request Timeout</td>
+                                <td>Koniec czasu oczekiwania na żądanie – klient nie przesłał zapytania do serwera w
+                                    określonym czasie
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>409</td>
+                                <td>Kod błędu aplikacji po stronie klienta</td>
+                                <td>Conflict</td>
+                                <td>Konflikt – żądanie nie może być zrealizowane, ponieważ występuje konflikt z
+                                    obecnym statusem zasobu, ten kod odpowiedzi jest zwracany tylko w przypadku
+                                    podejrzewania przez serwer, że klient może znaleźć przyczyny błędu i przesłać
+                                    ponownie prawidłowe zapytanie. Odpowiedź serwera powinna zawierać informację
+                                    umożliwiające klientowi rozwiązanie problemu, jednak nie jest to obowiązkowe
+                                    (np. przesłanie 2 razy identycznego dokumentu, kiedy wymagana jest unikalność)
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>410</td>
+                                <td>Kod błędu aplikacji po stronie klienta</td>
+                                <td>Gone</td>
+                                <td>Zniknął (usunięto) – zażądany zasób nie jest dłużej dostępny i nieznany jest
+                                    jego ewentualny nowy adres URI; klient powinien już więcej nie odwoływać się do
+                                    tego zasobu
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>411</td>
+                                <td>Kod błędu aplikacji po stronie klienta</td>
+                                <td>Length required</td>
+                                <td>Wymagana długość – serwer odmawia zrealizowania zapytania ze względu na brak
+                                    nagłówka Content-Length w zapytaniu; klient może powtórzyć zapytanie dodając doń
+                                    poprawny nagłówek długości
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>412</td>
+                                <td>Kod błędu aplikacji po stronie klienta</td>
+                                <td>Precondition Failed</td>
+                                <td>Warunek wstępny nie może być spełniony – serwer nie może spełnić przynajmniej
+                                    jednego z warunków zawartych w zapytaniu
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>413</td>
+                                <td>Kod błędu aplikacji po stronie klienta</td>
+                                <td>Request Entity Too Large</td>
+                                <td>Encja zapytania zbyt długa – całkowita długość zapytania jest zbyt długa dla
+                                    serwera
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>414</td>
+                                <td>Kod błędu aplikacji po stronie klienta</td>
+                                <td>Request-URI Too Long</td>
+                                <td>Adres URI zapytania zbyt długi – długość zażądanego URI jest większa niż
+                                    maksymalna oczekiwana przez serwer
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>415</td>
+                                <td>Kod błędu aplikacji po stronie klienta</td>
+                                <td>Unsupported Media Type</td>
+                                <td>Nieznany sposób żądania – serwer odmawia przyjęcia zapytania, ponieważ jego
+                                    składnia jest niezrozumiała dla serwera
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>416</td>
+                                <td>Kod błędu aplikacji po stronie klienta</td>
+                                <td>Requested Range Not Satisfiable</td>
+                                <td>Zakres bajtowy podany w zapytaniu nie do obsłużenia – klient podał w zapytaniu
+                                    zakres, który nie może być zastosowany do wskazanego zasobu
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>417</td>
+                                <td>Kod błędu aplikacji po stronie klienta</td>
+                                <td>Expectation Failed</td>
+                                <td>Oczekiwana wartość nie do zwrócenia – oczekiwanie podane w nagłówku Expect
+                                    żądania nie może być spełnione przez serwer lub – jeśli zapytanie realizuje
+                                    serwer proxy – serwer ma dowód, że oczekiwanie nie będzie spełnione przez
+                                    następny w łańcuchu serwer realizujący zapytanie
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>418</td>
+                                <td>Kod błędu aplikacji po stronie klienta</td>
+                                <td>I’m a teapot</td>
+                                <td>„Jestem czajnikiem” – tzw. easter egg. Zdefiniowany w 1998. Obecnie nie jest
+                                    implementowany do serwerów HTTP, ale znane są takie przypadki
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>421</td>
+                                <td>Kod błędu aplikacji po stronie klienta</td>
+                                <td>Misdirected Request</td>
+                                <td>Zapytanie zostało skierowane do serwera, który nie powinien go otrzymać lub
+                                    który nie jest w stanie na nie odpowiedzieć
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>422</td>
+                                <td>Kod błędu aplikacji po stronie klienta</td>
+                                <td>Unprocessable entity</td>
+                                <td> Zapytanie było poprawnie sformułowane, ale było niemożliwe do kontynuowania z
+                                    powodu semantycznych błędów
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>423</td>
+                                <td>Kod błędu aplikacji po stronie klienta</td>
+                                <td>Locked (WebDAV)</td>
+                                <td>Próba uzyskania dostępu do zasobu, który jest aktualnie zablokowany</td>
+                            </Tr>
+                            <Tr>
+                                <td>424</td>
+                                <td>Kod błędu aplikacji po stronie klienta</td>
+                                <td>Failed Dependency (WebDAV)</td>
+                                <td>Brak powodzenia żądania, ponieważ jest ono zależne od innego żądania, które
+                                    również nie powiodło się
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>425</td>
+                                <td>Kod błędu aplikacji po stronie klienta</td>
+                                <td>Too Early</td>
+                                <td>Serwer nie chce ryzykować przetwarzania żądania, które może zostać powtórzone ze
+                                    względu na ryzyko ataku typu Replay
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>426</td>
+                                <td>Kod błędu aplikacji po stronie klienta</td>
+                                <td>Upgrade Required</td>
+                                <td>Serwer odmawia wykonania żądania, używając aktualnego protokołu. Wymagany
+                                    protokół dla klienta przekazany jest w nagłówku Upgrade
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>428</td>
+                                <td>Kod błędu aplikacji po stronie klienta</td>
+                                <td>Precondition Required</td>
+                                <td>Brak nagłówka wstępnego, który jest wymagany przez serwer. Żądanie musi być
+                                    warunkowe
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>429</td>
+                                <td>Kod błędu aplikacji po stronie klienta</td>
+                                <td>Too Many Requests</td>
+                                <td>Użytkownik wysłał za wiele żądań w danym czasie</td>
+                            </Tr>
+                            <Tr>
+                                <td>429</td>
+                                <td>Kod błędu aplikacji po stronie klienta</td>
+                                <td>Too Many Requests</td>
+                                <td>Użytkownik wysłał za wiele żądań w danym czasie</td>
+                            </Tr>
+                            <Tr>
+                                <td>431</td>
+                                <td>Kod błędu aplikacji po stronie klienta</td>
+                                <td>Request Header Fields Too Large</td>
+                                <td>Serwer odmawia wykonania żądania ze względu na zbyt duże pole lub pola nagłówka
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>451</td>
+                                <td>Kod błędu aplikacji po stronie klienta</td>
+                                <td>Unavailable For Legal Reasons</td>
+                                <td>Zawartość niedostępna z powodów prawnych – strona lub zasób zostały zablokowane
+                                    z powodów naruszenia prawa, w tym także z powodu ocenzurowania zawartości przez
+                                    władze. Wartość kodu jest nawiązaniem do powieści „451 stopni Fahrenheita”
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>500</td>
+                                <td>Kod błędu serwera HTTP</td>
+                                <td>Internal Server Error</td>
+                                <td>Wewnętrzny błąd serwera – serwer napotkał niespodziewane trudności, które
+                                    uniemożliwiły zrealizowanie żądania
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>501</td>
+                                <td>Kod błędu serwera HTTP</td>
+                                <td>Not Implemented</td>
+                                <td>Nie zaimplementowano – serwer nie dysponuje funkcjonalnością wymaganą w
+                                    zapytaniu; ten kod jest zwracany, gdy serwer otrzymał nieznany typ zapytania
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>502</td>
+                                <td>Kod błędu serwera HTTP</td>
+                                <td>Bad Gateway</td>
+                                <td>Błąd bramy – serwer – spełniający funkcję bramy lub pośrednika – otrzymał
+                                    niepoprawną odpowiedź od serwera nadrzędnego i nie jest w stanie zrealizować
+                                    żądania klienta
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>503</td>
+                                <td>Kod błędu serwera HTTP</td>
+                                <td>Service Unavailable</td>
+                                <td>Usługa niedostępna – serwer nie jest w stanie w danej chwili zrealizować
+                                    zapytania klienta ze względu na przeciążenie
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>504</td>
+                                <td>Kod błędu serwera HTTP</td>
+                                <td>Gateway Timeout</td>
+                                <td>Przekroczony czas bramy – serwer – spełniający funkcję bramy lub pośrednika – nie
+                                    otrzymał w ustalonym czasie odpowiedzi od wskazanego serwera HTTP, FTP, LDAP
+                                    itp. lub serwer DNS jest potrzebny do obsłużenia zapytania
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>505</td>
+                                <td>Kod błędu serwera HTTP</td>
+                                <td>HTTP Version Not Supported</td>
+                                <td>Nieobsługiwana wersja HTTP – serwer nie obsługuje bądź odmawia obsługi wskazanej
+                                    przez klienta wersji HTTP
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>506</td>
+                                <td>Kod błędu serwera HTTP</td>
+                                <td>Variant Also Negotiates</td>
+                                <td>Wariant również negocjuje (w wolnym tłumaczeniu)</td>
+                            </Tr>
+                            <Tr>
+                                <td>507</td>
+                                <td>Kod błędu serwera HTTP</td>
+                                <td>Insufficient Storage (WebDAV)</td>
+                                <td>Serwer nie jest w stanie zapisać danych związanych z wykonaniem zapytania</td>
+                            </Tr>
+                            <Tr>
+                                <td>508</td>
+                                <td>Kod błędu serwera HTTP</td>
+                                <td>Loop Detected (WebDAV)</td>
+                                <td>Serwer wykrył nieskończoną pętlę w trakcie przetwarzania zapytania</td>
+                            </Tr>
+                            <Tr>
+                                <td>509</td>
+                                <td>Kod błędu serwera HTTP</td>
+                                <td>Bandwidth Limit Exceeded</td>
+                                <td>Serwer jest tymczasowo niedostępny, ponieważ właściciel strony przekroczył limit
+                                    transferu danych.
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>510</td>
+                                <td>Kod błędu serwera HTTP</td>
+                                <td>Not Extended</td>
+                                <td>Brak rozszerzenia HTTP koniecznego do obsługi danego zapytania</td>
+                            </Tr>
+                            <Tr>
+                                <td>511</td>
+                                <td>Kod błędu serwera HTTP</td>
+                                <td>Network Authentication Required</td>
+                                <td>Wymagane uwierzytelnienie przed otrzymaniem dostępu do sieci. W zamyśle
+                                    wykorzystywane przez pośredników kontrolujących dostęp do sieci (np.: wymaganie
+                                    potwierdzenia zasad użytkowania przed udostępnieniem połączenia)
+                                </td>
+                            </Tr>
+                            </tbody>
+                            <tfoot>
+                            </tfoot>
+                        </Table>
+                    </TableContainer>
+                </>
+            )
         }
         ,
         {
             id: 31,
             date: "13 czerwca 2023 roku",
             title: "JavaScript - if/else vs ternary vs switch",
-            body:
-                (
-                    <>
-                        <p>Poniżej wstawiłam przycisk, podłączony do body i do button. Do buttona dodałam klasę
-                            <i>switchButton</i>, a do body dałam klasę <i>body</i>. Jeśli chodzi o kod w JS, wygląda to tak:
-                        </p>
-                        <Blockquote>
-                            let <b>button</b> = document.querySelector(".switchButton");<br/>
-                            let <b>body</b> = document.querySelector(".body");<br/>
-                            <br/>
-                            button.addEventListener("click", () => &#123;<br/>
-                            body.classList.add("dark")<br/>
-                            &#125;);
-                        </Blockquote>
-                        <button className="switchButton">Włącz <span className="themeName">ciemny</span> motyw</button>
-                        <p>Natomiast w CSS-ach wygląda to tak:</p>
-                        <Blockquote><b>.dark </b>&#123;<br/>
-                            &nbsp;&nbsp;color: #eee;<br/>
-                            &nbsp;&nbsp;background-color: #222;<br/>
-                            &#125;
-                        </Blockquote>
-                        <p><s>Generalnie spoko działa, jednak musiałabym podpiąć blockquote z ciemnym tekstem, żeby
-                            nie
-                            znikał
-                            tekst po kliknięciu.</s> - zrobione. K.</p>
-                        <p>Co dalej? Wypadałoby, aby po wybraniu ciemnego motywu, zmieniała się nazwa na przycisku.
-                            Możemy
-                            to zrobić, otaczając znacznikiem <i>span</i> konkretne słowo, lub wyrażenie, które
-                            chcemy
-                            zmienić, np.:</p>
-                        <Blockquote>&lt;button
-                            class="switchButton"&gt;Włącz &lt;span
-                            class="<b>themeName</b>"&gt;ciemny&lt;/span&gt; motyw&lt;/button&gt;
-                        </Blockquote>
-                        <p>Natomiast kod w <i>JavaScript</i>, po dodaniu warunku <i>if else</i> oraz zmianie metody
-                            z
-                            <i>add</i> na <i>toggle</i>będzie wyglądał teraz tak:
-                        </p>
-                        <Blockquote>
-                            let <b>button</b> = document.querySelector(".switchButton");<br/>
-                            let <b>body</b> = document.querySelector(".body");<br/>
-                            let <b>themeName</b> = document.querySelector(".themeName");<br/>
-                            <br/>
-                            button.addEventListener("click", () => &#123;<br/>
-                            &nbsp;&nbsp;body.classList.toggle("dark");<br/>
+            body: (
+                <>
+                    <p>Poniżej wstawiłam przycisk, podłączony do body i do button. Do buttona dodałam klasę
+                        <i>switchButton</i>, a do body dałam klasę <i>body</i>. Jeśli chodzi o kod w JS, wygląda to tak:
+                    </p>
+                    <Blockquote>
+                        let <b>button</b> = document.querySelector(".switchButton");<br/>
+                        let <b>body</b> = document.querySelector(".body");<br/>
+                        <br/>
+                        button.addEventListener("click", () => &#123;<br/>
+                        body.classList.add("dark")<br/>
+                        &#125;);
+                    </Blockquote>
+                    <button className="switchButton">Włącz <span className="themeName">ciemny</span> motyw</button>
+                    <p>Natomiast w CSS-ach wygląda to tak:</p>
+                    <Blockquote><b>.dark </b>&#123;<br/>
+                        &nbsp;&nbsp;color: #eee;<br/>
+                        &nbsp;&nbsp;background-color: #222;<br/>
+                        &#125;
+                    </Blockquote>
+                    <p><s>Generalnie spoko działa, jednak musiałabym podpiąć blockquote z ciemnym tekstem, żeby
+                        nie
+                        znikał
+                        tekst po kliknięciu.</s> - zrobione. K.</p>
+                    <p>Co dalej? Wypadałoby, aby po wybraniu ciemnego motywu, zmieniała się nazwa na przycisku.
+                        Możemy
+                        to zrobić, otaczając znacznikiem <i>span</i> konkretne słowo, lub wyrażenie, które
+                        chcemy
+                        zmienić, np.:</p>
+                    <Blockquote>&lt;button
+                        class="switchButton"&gt;Włącz &lt;span
+                        class="<b>themeName</b>"&gt;ciemny&lt;/span&gt; motyw&lt;/button&gt;
+                    </Blockquote>
+                    <p>Natomiast kod w <i>JavaScript</i>, po dodaniu warunku <i>if else</i> oraz zmianie metody
+                        z
+                        <i>add</i> na <i>toggle</i>będzie wyglądał teraz tak:
+                    </p>
+                    <Blockquote>
+                        let <b>button</b> = document.querySelector(".switchButton");<br/>
+                        let <b>body</b> = document.querySelector(".body");<br/>
+                        let <b>themeName</b> = document.querySelector(".themeName");<br/>
+                        <br/>
+                        button.addEventListener("click", () => &#123;<br/>
+                        &nbsp;&nbsp;body.classList.toggle("dark");<br/>
 
-                            &nbsp;&nbsp;<b>if</b> (body.classList.contains("dark")) &#123;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;themeName.innerText = "jasny";<br/>
-                            &nbsp;&nbsp;&#125; <b>else </b>&#123;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;themeName.innerText = "ciemny";<br/>
-                            &nbsp;&nbsp;&#125;<br/>
-                            &#125;);
-                        </Blockquote>
-                        <p>Natomiast używamy dwa razy tej samej operacji, jednak zmienia się jedynie tekst.
-                            W tej sytuacji
-                            lepiej jest użyć potrójnego operatora <i>ternary</i>. Wyrażenie będzie w ten
-                            sposób krótsze,
-                            np.: </p>
-                        <Blockquote>let <b>button</b> =
-                            document.querySelector(".switchButton");<br/>
-                            let <b>body</b> = document.querySelector(".body");<br/>
-                            let <b>themeName</b> = document.querySelector(".themeName");<br/>
-                            <br/>
-                            button.addEventListener("click", () => &#123;<br/>
-                            &nbsp;&nbsp;body.classList.toggle("dark");<br/>
-                            &nbsp;&nbsp;themeName.innerText = body.classList.contains("dark") ?
-                            "jasny" : "ciemny";<br/>
-                            &#125;);
-                        </Blockquote>
-                        <p>Reasumując, <i>if else</i> przyda nam się, kiedy będziemy chcieli
-                            przeprowadzić <em>różne</em>
-                            operacje na <em>jednym</em> warunku. Natomiast jeśli chcemy
-                            przeprowadzić jedną akcję na różnych
-                            wartościach, wtedy używamy <i>ternary</i>.</p>
-                        <p>Pora na kolejny przykład.</p>
-                        <p>Dzień tygodnia: <strong className="day">czwartek</strong></p>
-                        <p>Mam jeszcze <strong className="howMuch"></strong> czasu na zrobienie
-                            pracy domowej.</p>
-                        <Blockquote>Dzień tygodnia: &lt;strong
-                            class="day">poniedziałek&lt;/span>&lt;/strong>
-                            Mam jeszcze &lt;strong class="<b>howMuch</b>">&lt;/strong> czasu na
-                            zrobienie pracy domowej.
-                        </Blockquote>
-                        Po wpisaniu dowolnego dnia tygodnia, pojawi się opcja "dużo", "trochę"
-                        lub "mało". Ze strony
-                        <i>JavaScript</i>, wygląda to tak:
-                        <Blockquote>
-                            let <b>day</b> = document.querySelector(".day").innerText;<br/>
-                            let <b>howMuch</b> = document.querySelector(".howMuch");<br/>
-                            <br/>
-                            <b>if</b> (day === "poniedziałek" || day === "wtorek") &#123;<br/>
-                            &nbsp;&nbsp;howMuch.innerText = "dużo";<br/>
-                            &#125; <b>else if</b> (day === "środa" || day === "czwartek") &#123;<br/>
-                            &nbsp;&nbsp;howMuch.innerText = "trochę";<br/>
-                            &#125; <b>else</b> &#123;<br/>
-                            &nbsp;&nbsp;howMuch.innerText = "mało";<br/>
-                            &#125;
-                        </Blockquote>
-                        <p>W tym przypadku możemy również użyć potrójnego operatora,
-                            ponieważ robię to samo, tyle że z inną
-                            wartością. Wyglądałoby to tak: </p>
-                        <Blockquote>
-                            let <b>day</b> =
-                            document.querySelector(".day").innerText;<br/>
-                            let <b>howMuch</b> = document.querySelector(".howMuch");<br/><br/>
-                            howMuch.innerText = (day === "poniedziałek" || day ===
-                            "wtorek")<br/>
-                            &nbsp;&nbsp;? "dużo"<br/>
-                            &nbsp;&nbsp;: (<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;(day === "środa" || day ===
-                            "czwartek")<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;? "trochę"<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: "mało"<br/>
-                            );
-                        </Blockquote>
-                        <p>Niby spoko pomysł, ale mamy teraz trzypoziomowego potrójnego
-                            operatora, co w zasadzie czytelne nie
-                            jest. Przyda nam się tutaj <i>switch</i>!</p>
-                        <Blockquote>
-                            let <b>day</b> =
-                            document.querySelector(".day").innerText;<br/>
-                            let <b>howMuch</b> = document.querySelector(".howMuch");<br/>
-                            <br/>
-                            switch (day) &#123;<br/>
-                            & nbsp;&nbsp;<b>case "poniedziałek":</b><br/>
-                            &nbsp;&nbsp;<b>case "wtorek":</b><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;howMuch.innerText = "dużo";<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<b>break;</b><br/>
-                            <br/>
-                            &nbsp;&nbsp;<b>case "środa":</b><br/>
-                            &nbsp;&nbsp;<b>case "czwartek":</b><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;howMuch.innerText =
-                            "trochę";<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<b>break;</b><br/>
-                            <br/>
-                            &nbsp;&nbsp;<b>default:</b><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;howMuch.innerText =
-                            "mało";<br/>
-                            &#125;
-                        </Blockquote>
-                        <p>Jedno zadanie, trzy możliwości, a ile
-                            radochy! Najbardziej przejrzysty jest
-                            tutaj <i>switch</i></p>
-                    </>
-                )
+                        &nbsp;&nbsp;<b>if</b> (body.classList.contains("dark")) &#123;<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;themeName.innerText = "jasny";<br/>
+                        &nbsp;&nbsp;&#125; <b>else </b>&#123;<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;themeName.innerText = "ciemny";<br/>
+                        &nbsp;&nbsp;&#125;<br/>
+                        &#125;);
+                    </Blockquote>
+                    <p>Natomiast używamy dwa razy tej samej operacji, jednak zmienia się jedynie tekst.
+                        W tej sytuacji
+                        lepiej jest użyć potrójnego operatora <i>ternary</i>. Wyrażenie będzie w ten
+                        sposób krótsze,
+                        np.: </p>
+                    <Blockquote>let <b>button</b> =
+                        document.querySelector(".switchButton");<br/>
+                        let <b>body</b> = document.querySelector(".body");<br/>
+                        let <b>themeName</b> = document.querySelector(".themeName");<br/>
+                        <br/>
+                        button.addEventListener("click", () => &#123;<br/>
+                        &nbsp;&nbsp;body.classList.toggle("dark");<br/>
+                        &nbsp;&nbsp;themeName.innerText = body.classList.contains("dark") ?
+                        "jasny" : "ciemny";<br/>
+                        &#125;);
+                    </Blockquote>
+                    <p>Reasumując, <i>if else</i> przyda nam się, kiedy będziemy chcieli
+                        przeprowadzić <em>różne</em>
+                        operacje na <em>jednym</em> warunku. Natomiast jeśli chcemy
+                        przeprowadzić jedną akcję na różnych
+                        wartościach, wtedy używamy <i>ternary</i>.</p>
+                    <p>Pora na kolejny przykład.</p>
+                    <p>Dzień tygodnia: <strong className="day">czwartek</strong></p>
+                    <p>Mam jeszcze <strong className="howMuch"></strong> czasu na zrobienie
+                        pracy domowej.</p>
+                    <Blockquote>Dzień tygodnia: &lt;strong
+                        class="day">poniedziałek&lt;/span>&lt;/strong>
+                        Mam jeszcze &lt;strong class="<b>howMuch</b>">&lt;/strong> czasu na
+                        zrobienie pracy domowej.
+                    </Blockquote>
+                    Po wpisaniu dowolnego dnia tygodnia, pojawi się opcja "dużo", "trochę"
+                    lub "mało". Ze strony
+                    <i>JavaScript</i>, wygląda to tak:
+                    <Blockquote>
+                        let <b>day</b> = document.querySelector(".day").innerText;<br/>
+                        let <b>howMuch</b> = document.querySelector(".howMuch");<br/>
+                        <br/>
+                        <b>if</b> (day === "poniedziałek" || day === "wtorek") &#123;<br/>
+                        &nbsp;&nbsp;howMuch.innerText = "dużo";<br/>
+                        &#125; <b>else if</b> (day === "środa" || day === "czwartek") &#123;<br/>
+                        &nbsp;&nbsp;howMuch.innerText = "trochę";<br/>
+                        &#125; <b>else</b> &#123;<br/>
+                        &nbsp;&nbsp;howMuch.innerText = "mało";<br/>
+                        &#125;
+                    </Blockquote>
+                    <p>W tym przypadku możemy również użyć potrójnego operatora,
+                        ponieważ robię to samo, tyle że z inną
+                        wartością. Wyglądałoby to tak: </p>
+                    <Blockquote>
+                        let <b>day</b> =
+                        document.querySelector(".day").innerText;<br/>
+                        let <b>howMuch</b> = document.querySelector(".howMuch");<br/><br/>
+                        howMuch.innerText = (day === "poniedziałek" || day ===
+                        "wtorek")<br/>
+                        &nbsp;&nbsp;? "dużo"<br/>
+                        &nbsp;&nbsp;: (<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;(day === "środa" || day ===
+                        "czwartek")<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;? "trochę"<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: "mało"<br/>
+                        );
+                    </Blockquote>
+                    <p>Niby spoko pomysł, ale mamy teraz trzypoziomowego potrójnego
+                        operatora, co w zasadzie czytelne nie
+                        jest. Przyda nam się tutaj <i>switch</i>!</p>
+                    <Blockquote>
+                        let <b>day</b> =
+                        document.querySelector(".day").innerText;<br/>
+                        let <b>howMuch</b> = document.querySelector(".howMuch");<br/>
+                        <br/>
+                        switch (day) &#123;<br/>
+                        & nbsp;&nbsp;<b>case "poniedziałek":</b><br/>
+                        &nbsp;&nbsp;<b>case "wtorek":</b><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;howMuch.innerText = "dużo";<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<b>break;</b><br/>
+                        <br/>
+                        &nbsp;&nbsp;<b>case "środa":</b><br/>
+                        &nbsp;&nbsp;<b>case "czwartek":</b><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;howMuch.innerText =
+                        "trochę";<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<b>break;</b><br/>
+                        <br/>
+                        &nbsp;&nbsp;<b>default:</b><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;howMuch.innerText =
+                        "mało";<br/>
+                        &#125;
+                    </Blockquote>
+                    <p>Jedno zadanie, trzy możliwości, a ile
+                        radochy! Najbardziej przejrzysty jest
+                        tutaj <i>switch</i></p>
+                </>
+            )
         }
         ,
         {
             id: 30,
             date: "13 czerwca 2023 roku",
             title: "A gdybyś tak...",
-            body:
-                (
-                    <>
-                        <p>... już dziś wiedział, że za rok będziesz mistrzem w jakiejś dziedzinie. Poddałbyś się?</p>
-                        <p>W sytuacjach kryzysowych, przypominam sobie tę frazę. Ma swoją moc. No właśnie, gdybyśmy z góry
-                            wiedzieli, że w przyszłości wszystko się ułoży, balibyśmy się przyszłości?</p>
-                        <p>Czy warto się bać przyszłości? I tak i nie. Z jednej strony, gdybyśmy z góry wiedzieli, że w
-                            przyszłości osiągniemy swoje cele, spoczęlibyśmy na "laurach", nie robiąc nic, bo przecież i tak
-                            będzie wszystko ok. Z drugiej strony, gdybyśmy bali się przyszłości, bez wiedzy co nas czeka,
-                            stalibyśmy w miejscu i również nie robilibyśmy nic.</p>
-                        <p>Preferuję inne podejście — obierz cel, działaj, a wtedy na pewno Ci się uda!</p>
-                        <p>Życie to sinusoida — raz na górze, raz w dołku, ale pewni jesteśmy jednego — będąc na górze,
-                            zejdziemy do doliny, a będąc w dole, zaczniemy się wspinać do góry. Nie wiem, czy potrzebujesz
-                            tych
-                            słów. Może jesteś teraz w kryzysie, może chcesz zrezygnować, ale jeśli mogę Ci coś poradzić —
-                            nie
-                            poddawaj się!</p>
-                        <p>Jest 21:33. Jestem po pracy w dwóch miejscach. Padam na twarz. Normalnie o tej godzinie
-                            położyłabym
-                            się spać. Jednak postanowiłam działać i się uczyć. Dlaczego? Bo wiem, że będzie dobrze,
-                            <em>jeśli</em> będę działać.</p>
-                        <p>Tak więc powracam do powtórki mojego kursu programowania.</p>
-                        <img alt="Nigdy nie lekceważ potęgi małych kroków"
-                             className="article__image"
-                             src="https://scontent.fpoz4-1.fna.fbcdn.net/v/t1.6435-9/195448370_4005096606272698_2037275807942576100_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=_ZntUwXTkdEAX_JsaPK&_nc_ht=scontent.fpoz4-1.fna&oh=00_AfBWsLmeh-BowoYlGFB-BdAYGn0q84PTylwtyMyB8UnmeQ&oe=64B0299E"
-                             title="Nigdy nie lekceważ potęgi małych kroków"/>
-                    </>
-                )
+            body: (
+                <>
+                    <p>... już dziś wiedział, że za rok będziesz mistrzem w jakiejś dziedzinie. Poddałbyś się?</p>
+                    <p>W sytuacjach kryzysowych, przypominam sobie tę frazę. Ma swoją moc. No właśnie, gdybyśmy z góry
+                        wiedzieli, że w przyszłości wszystko się ułoży, balibyśmy się przyszłości?</p>
+                    <p>Czy warto się bać przyszłości? I tak i nie. Z jednej strony, gdybyśmy z góry wiedzieli, że w
+                        przyszłości osiągniemy swoje cele, spoczęlibyśmy na "laurach", nie robiąc nic, bo przecież i tak
+                        będzie wszystko ok. Z drugiej strony, gdybyśmy bali się przyszłości, bez wiedzy co nas czeka,
+                        stalibyśmy w miejscu i również nie robilibyśmy nic.</p>
+                    <p>Preferuję inne podejście — obierz cel, działaj, a wtedy na pewno Ci się uda!</p>
+                    <p>Życie to sinusoida — raz na górze, raz w dołku, ale pewni jesteśmy jednego — będąc na górze,
+                        zejdziemy do doliny, a będąc w dole, zaczniemy się wspinać do góry. Nie wiem, czy potrzebujesz
+                        tych
+                        słów. Może jesteś teraz w kryzysie, może chcesz zrezygnować, ale jeśli mogę Ci coś poradzić —
+                        nie
+                        poddawaj się!</p>
+                    <p>Jest 21:33. Jestem po pracy w dwóch miejscach. Padam na twarz. Normalnie o tej godzinie
+                        położyłabym
+                        się spać. Jednak postanowiłam działać i się uczyć. Dlaczego? Bo wiem, że będzie dobrze,
+                        <em>jeśli</em> będę działać.</p>
+                    <p>Tak więc powracam do powtórki mojego kursu programowania.</p>
+                    <img alt="Nigdy nie lekceważ potęgi małych kroków"
+                         className="article__image"
+                         src="https://scontent.fpoz4-1.fna.fbcdn.net/v/t1.6435-9/195448370_4005096606272698_2037275807942576100_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=_ZntUwXTkdEAX_JsaPK&_nc_ht=scontent.fpoz4-1.fna&oh=00_AfBWsLmeh-BowoYlGFB-BdAYGn0q84PTylwtyMyB8UnmeQ&oe=64B0299E"
+                         title="Nigdy nie lekceważ potęgi małych kroków"/>
+                </>
+            )
         }
         ,
         {
             id: 29,
             date: "8 czerwca 2023 roku",
             title: "JavaScript - Ternary (operator potrójny)",
-            body:
-                (
-                    <>
-                        <Blockquote>warunek ? jeśliSpełniony() : jeśliNieSpełniony();
-                        </Blockquote>
-                        <p>Jest to krótka i przydatna składnia wtedy, kiedy chcemy sprawdzić prosty warunek — stawiamy
-                            warunek,
-                            który jeśli jest spełniony, odpalamy funkcję <i>jeśliSpełniony()</i>, a jeśli nie został
-                            spełniony,
-                            odpalamy funkcję <i>jeśliNieSPełniony()</i></p>
-                        <p>Na pewno zaletami takiego typu zapisu są</p>
-                        <ListUnordered>
-                            <ListItem>krótka i wygodna składnia</ListItem>
-                            <ListItem>najlepszy w sytuacji, gdy mamy jedną zmienną i warunki typu
-                                "tak/nie".
-                            </ListItem>
-                        </ListUnordered>
-                    </>
-                )
+            body: (
+                <>
+                    <Blockquote>warunek ? jeśliSpełniony() : jeśliNieSpełniony();
+                    </Blockquote>
+                    <p>Jest to krótka i przydatna składnia wtedy, kiedy chcemy sprawdzić prosty warunek — stawiamy
+                        warunek,
+                        który jeśli jest spełniony, odpalamy funkcję <i>jeśliSpełniony()</i>, a jeśli nie został
+                        spełniony,
+                        odpalamy funkcję <i>jeśliNieSPełniony()</i></p>
+                    <p>Na pewno zaletami takiego typu zapisu są</p>
+                    <ListUnordered>
+                        <ListItem>krótka i wygodna składnia</ListItem>
+                        <ListItem>najlepszy w sytuacji, gdy mamy jedną zmienną i warunki typu
+                            "tak/nie".
+                        </ListItem>
+                    </ListUnordered>
+                </>
+            )
         }
         ,
         {
             id: 28,
             date: "8 czerwca 2023 roku",
             title: "Sandomierz & JavaScript - Switch",
-            body:
-                (
-                    <>
-                        <p>
-                            Dziś zawędrowałam do <i>miasta ojca Mateusza</i>. Mam tym samym niezwykłą sposobność zmiany
-                            środowiska i może częściowe wytchnienie. Jednak mimo urlopu nie zatrzymuje się i wracam do
-                            powtórki
-                            materiałów z kursu <i>Krzyśka Dąbrowskiego</i>. Jeszcze tylko mały obrazek z Sandomierzem i
-                            działamy.
-                        </p>
-                        <Figure>
-                            <img alt="starówka Sandomierza" className="panorama article__image"
-                                 src="https://swietokrzyskie.travel/media/cache/original/uploads/5d3814683ddf7.jpg"/>
-                            <Figcaption>">widok z lotu ptaka na starówkę w
-                                Sandomierzu<br/>źródło: <a
-                                    href="https://swietokrzyskie.travel/informator_turystyczny/miasta_i_regiony/sandomierz_sandomierz"
-                                    title="swietokrzyskie.travel">https://swietokrzyskie.travel/informator_turystyczny/miasta_i_regiony/sandomierz_sandomierz</a>
-                            </Figcaption>
-                        </Figure>
-                        <p>
-                            Zauważyłam też, że mam problem z akapitami w &lt;blockquote&gt; i wszystkie odstępy się zlewają
-                            —
-                            naprawię poprzednie wpisy z czasem, a na razie pozwoliłam sobie na poprawkę w poniższym
-                            elemencie
-                            HTML.
-                        </p>
-                        <Blockquote>
-                            <b>switch</b> (wyrażenie) &#123;<br/>
-                            &nbsp;&nbsp;<b>case</b> opcja 1:<br/>
-                            &nbsp;&nbsp;<b>case</b> opcja 2:<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;wykonajTenKod();<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>break</b>;<br/><br/>
-                            &nbsp;&nbsp;<b>case</b> opcja 3:<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;zamiastTegoWykonajTenKod();<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>break</b>;<br/><br/>
-                            &nbsp;&nbsp;<b>default</b>:<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;jeśliNicNiePasujeWykonajTenKod();<br/>
-                            &#125;
-                        </Blockquote>
-                        <p>
-                            Konstrukcja switch pozwala na operacje na kilku opcjach naraz bez wchodzenia w
-                            stan <i>"ifozy"</i>.
-                            Pomoże nam uprościć sprawę, jeśli chcemy w zależności od jakiegoś wyrażenia, zrobić kilka
-                            różnych
-                            rzeczy. Mamy tutaj:
-                        </p>
-                        <ListUnordered>
-                            <ListItem><b>switch</b></ListItem>
-                            <ListItem><b>wyrażenie</b> - może tutaj być cokolwiek</ListItem>
-                            <ListItem><b>case1 & case2</b> - opcje; tutaj kod wykona się zarówno
-                                przy opcji1, jak i opcji2
-                            </ListItem>
-                            <ListItem><b>break</b> - słowo kluczowe, które jest potrzebne, żeby nie
-                                wykonał się kolejny kod;
-                                umożliwia zakończenie <i>switch</i>-a, po spełnieniu (w tym przypadku) którejś z opcji.
-                            </ListItem>
-                            <ListItem><b>case3</b> - opcja trzecia, gdzie mamy jeszcze inny kod do
-                                wykonania
-                            </ListItem>
-                            <ListItem><b>default</b> - blok, w którym wykona się kod, jeżeli żadna z
-                                powyższych opcji nie jest
-                                spełniona, czyli jeżeli żadna opcja nie pasuje do tego wyrażenia, które daliśmy w nawiasie
-                                po <i>switch</i>; nie jest obowiązkowy, ale pomijajmy go, dopiero jak będziemy 100% pewnie,
-                                że
-                                zawarliśmy wszystkie opcje w <i>switch!</i></ListItem>
-                        </ListUnordered>
-                        <p>Kiedy przydaje się switch?</p>
-                        <ListUnordered>
-                            <ListItem>kiedy byłoby za dużo <i>if else</i></ListItem>
-                            <ListItem>kiedy mamy kilka opcji w zależności od wartości jednego
-                                wyrażenia
-                            </ListItem>
-                        </ListUnordered>
-                    </>
-                )
+            body: (
+                <>
+                    <p>
+                        Dziś zawędrowałam do <i>miasta ojca Mateusza</i>. Mam tym samym niezwykłą sposobność zmiany
+                        środowiska i może częściowe wytchnienie. Jednak mimo urlopu nie zatrzymuje się i wracam do
+                        powtórki
+                        materiałów z kursu <i>Krzyśka Dąbrowskiego</i>. Jeszcze tylko mały obrazek z Sandomierzem i
+                        działamy.
+                    </p>
+                    <Figure>
+                        <img alt="starówka Sandomierza" className="panorama article__image"
+                             src="https://swietokrzyskie.travel/media/cache/original/uploads/5d3814683ddf7.jpg"/>
+                        <Figcaption>">widok z lotu ptaka na starówkę w
+                            Sandomierzu<br/>źródło: <a
+                                href="https://swietokrzyskie.travel/informator_turystyczny/miasta_i_regiony/sandomierz_sandomierz"
+                                title="swietokrzyskie.travel">https://swietokrzyskie.travel/informator_turystyczny/miasta_i_regiony/sandomierz_sandomierz</a>
+                        </Figcaption>
+                    </Figure>
+                    <p>
+                        Zauważyłam też, że mam problem z akapitami w &lt;blockquote&gt; i wszystkie odstępy się zlewają
+                        —
+                        naprawię poprzednie wpisy z czasem, a na razie pozwoliłam sobie na poprawkę w poniższym
+                        elemencie
+                        HTML.
+                    </p>
+                    <Blockquote>
+                        <b>switch</b> (wyrażenie) &#123;<br/>
+                        &nbsp;&nbsp;<b>case</b> opcja 1:<br/>
+                        &nbsp;&nbsp;<b>case</b> opcja 2:<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;wykonajTenKod();<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>break</b>;<br/><br/>
+                        &nbsp;&nbsp;<b>case</b> opcja 3:<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;zamiastTegoWykonajTenKod();<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>break</b>;<br/><br/>
+                        &nbsp;&nbsp;<b>default</b>:<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;jeśliNicNiePasujeWykonajTenKod();<br/>
+                        &#125;
+                    </Blockquote>
+                    <p>
+                        Konstrukcja switch pozwala na operacje na kilku opcjach naraz bez wchodzenia w
+                        stan <i>"ifozy"</i>.
+                        Pomoże nam uprościć sprawę, jeśli chcemy w zależności od jakiegoś wyrażenia, zrobić kilka
+                        różnych
+                        rzeczy. Mamy tutaj:
+                    </p>
+                    <ListUnordered>
+                        <ListItem><b>switch</b></ListItem>
+                        <ListItem><b>wyrażenie</b> - może tutaj być cokolwiek</ListItem>
+                        <ListItem><b>case1 & case2</b> - opcje; tutaj kod wykona się zarówno
+                            przy opcji1, jak i opcji2
+                        </ListItem>
+                        <ListItem><b>break</b> - słowo kluczowe, które jest potrzebne, żeby nie
+                            wykonał się kolejny kod;
+                            umożliwia zakończenie <i>switch</i>-a, po spełnieniu (w tym przypadku) którejś z opcji.
+                        </ListItem>
+                        <ListItem><b>case3</b> - opcja trzecia, gdzie mamy jeszcze inny kod do
+                            wykonania
+                        </ListItem>
+                        <ListItem><b>default</b> - blok, w którym wykona się kod, jeżeli żadna z
+                            powyższych opcji nie jest
+                            spełniona, czyli jeżeli żadna opcja nie pasuje do tego wyrażenia, które daliśmy w nawiasie
+                            po <i>switch</i>; nie jest obowiązkowy, ale pomijajmy go, dopiero jak będziemy 100% pewnie,
+                            że
+                            zawarliśmy wszystkie opcje w <i>switch!</i></ListItem>
+                    </ListUnordered>
+                    <p>Kiedy przydaje się switch?</p>
+                    <ListUnordered>
+                        <ListItem>kiedy byłoby za dużo <i>if else</i></ListItem>
+                        <ListItem>kiedy mamy kilka opcji w zależności od wartości jednego
+                            wyrażenia
+                        </ListItem>
+                    </ListUnordered>
+                </>
+            )
         }
         ,
         {
             id: 27,
             date: "7 czerwca 2023 roku",
             title: "JavaScript - else if - ćwiczenie",
-            body:
-                (
-                    <>
-                        <p>Do instrukcji warunkowej <i>if else</i> możemy dodać kolejny blok <i>else if</i>. Służy to do
-                            dodania większej ilości warunków, np.</p>
-                        <Blockquote>
-                            <b>if</b> (warunek1) &#123;<br/>
-                            &nbsp;&nbsp;wykonajKodNr1();<br/>
-                            &#125; <b>else if</b> (warunek2) &#123;<br/>
-                            &nbsp;&nbsp;wykonajKodNr2();<br/>
-                            &#125; <b>else</b> &#123;<br/>
-                            &nbsp;&nbsp;wykonajKodNr3();<br/>
-                            &#125;
-                        </Blockquote>
-                    </>
-                )
+            body: (
+                <>
+                    <p>Do instrukcji warunkowej <i>if else</i> możemy dodać kolejny blok <i>else if</i>. Służy to do
+                        dodania większej ilości warunków, np.</p>
+                    <Blockquote>
+                        <b>if</b> (warunek1) &#123;<br/>
+                        &nbsp;&nbsp;wykonajKodNr1();<br/>
+                        &#125; <b>else if</b> (warunek2) &#123;<br/>
+                        &nbsp;&nbsp;wykonajKodNr2();<br/>
+                        &#125; <b>else</b> &#123;<br/>
+                        &nbsp;&nbsp;wykonajKodNr3();<br/>
+                        &#125;
+                    </Blockquote>
+                </>
+            )
         }
         ,
 // {
@@ -6896,65 +7030,64 @@ export const articlesLink = [
             id: 26,
             date: "6 czerwca 2023 roku",
             title: "JavaScript - if else",
-            body:
-                (
-                    <>
-                        <p>
-                            Zanim przejdę do powtórzenia materiału, ogłoszę wszem wobec, że zostałam obdarzona <em>mega
-                        </em>zaufaniem i otrzymałam swoją drugą szansę w postaci pracy!
-                        </p>
-                        <p>Na razie ogrom informacji trochę mnie przytłacza, jednak głęboko wierzę, że się wyrobię z czasem.
-                        </p>
-                        <p>Niestety muszę na moment opuścić <i>HTML</i> i <i>CSS</i>, żeby wgryźć się jeszcze raz z
-                            <i>JavaScript</i>-em.
-                        </p>
-                        <p>Instrukcje warunkowe są niesamowicie przydatne w podejmowaniu decyzji. Podstawową instrukcją
-                            warunkową jest na pewno <i>if else:</i>
-                        </p>
-                        <Blockquote>
-                            <b>if</b> (warunek) &#123;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;zróbCośJeśliSpełniony();<br/>
-                            &#125; <b>else</b> &#123;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;zróbCośInnegoJeśliNiespełniony();
-                        </Blockquote>
-                        <p>Tłumacząc najprościej, powyżej mamy <i>if</i> (jeżeli) warunek zostanie wykonany, wykonaj funkcję
-                            (program) zróbCośJeśliSpełniony(); w innym przypadku wykonaj funkcję (program)
-                            zróbCośInnegoJeśliNiespełniony().</p>
-                        <p>A oto i kilka innych przykładów z <i>if else</i></p>
-                        <Blockquote>
-                            <b>if</b> (number1 > number2) &#123;<br/>
-                            &nbsp;&nbsp;console.log("number1 jest większa.");<br/>
-                            &#125;<b> else</b> &#123;<br/>
-                            &nbsp;&nbsp;console.log("number1 nie jest większa!");<br/>&#125;
-                        </Blockquote>
-                        <p>Czyli znowu, jeżeli warunek, w którym number1 jest większa od number2 zostanie spełniony, pokaż w
-                            konsoli "number1 jest większa". W przeciwnym przypadku pokaż w konsoli "number1 nie jest
-                            większa"</p>
-                        <Blockquote>
-                            <b>if</b> (container.classList.contains("dark"))&#123;<br/>
-                            &nbsp;&nbsp;console.log("Jest ustawiony ciemny motyw!"); <br/>
-                            &#125;
-                        </Blockquote>
-                        <p>Jeżeli klasa elementu z nazwą <i>container</i> zawiera klasę "dark", wyświetl na konsoli
-                            "Jest
-                            ustawiony ciemny motyw!"</p>
-                        <Blockquote>
-                            <b>if</b> (button.innerText === "Zamknij")&#123;<br/>
-                            &nbsp;&nbsp;button.innerText === "Otwórz";<br/>&#125;
-                        </Blockquote>
-                        <p>
-                            Jeżeli w przycisku jest tekst "Zamknij", to wpisujemy do przycisku tekst "Otwórz".
-                        </p>
-                        <p>
-                            Należy pamiętać, że <i>else</i> nie jest obowiązkowy, natomiast kod w
-                            bloku <i>if</i> wykona się
-                            zawsze, niezależnie od warunku.
-                        </p>
-                        <p>
-                            Klamry nie zawsze są wymagane, ale lepiej <b>ich nie pomijać</b>
-                        </p>
-                    </>
-                ),
+            body: (
+                <>
+                    <p>
+                        Zanim przejdę do powtórzenia materiału, ogłoszę wszem wobec, że zostałam obdarzona <em>mega
+                    </em>zaufaniem i otrzymałam swoją drugą szansę w postaci pracy!
+                    </p>
+                    <p>Na razie ogrom informacji trochę mnie przytłacza, jednak głęboko wierzę, że się wyrobię z czasem.
+                    </p>
+                    <p>Niestety muszę na moment opuścić <i>HTML</i> i <i>CSS</i>, żeby wgryźć się jeszcze raz z
+                        <i>JavaScript</i>-em.
+                    </p>
+                    <p>Instrukcje warunkowe są niesamowicie przydatne w podejmowaniu decyzji. Podstawową instrukcją
+                        warunkową jest na pewno <i>if else:</i>
+                    </p>
+                    <Blockquote>
+                        <b>if</b> (warunek) &#123;<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;zróbCośJeśliSpełniony();<br/>
+                        &#125; <b>else</b> &#123;<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;zróbCośInnegoJeśliNiespełniony();
+                    </Blockquote>
+                    <p>Tłumacząc najprościej, powyżej mamy <i>if</i> (jeżeli) warunek zostanie wykonany, wykonaj funkcję
+                        (program) zróbCośJeśliSpełniony(); w innym przypadku wykonaj funkcję (program)
+                        zróbCośInnegoJeśliNiespełniony().</p>
+                    <p>A oto i kilka innych przykładów z <i>if else</i></p>
+                    <Blockquote>
+                        <b>if</b> (number1 > number2) &#123;<br/>
+                        &nbsp;&nbsp;console.log("number1 jest większa.");<br/>
+                        &#125;<b> else</b> &#123;<br/>
+                        &nbsp;&nbsp;console.log("number1 nie jest większa!");<br/>&#125;
+                    </Blockquote>
+                    <p>Czyli znowu, jeżeli warunek, w którym number1 jest większa od number2 zostanie spełniony, pokaż w
+                        konsoli "number1 jest większa". W przeciwnym przypadku pokaż w konsoli "number1 nie jest
+                        większa"</p>
+                    <Blockquote>
+                        <b>if</b> (container.classList.contains("dark"))&#123;<br/>
+                        &nbsp;&nbsp;console.log("Jest ustawiony ciemny motyw!"); <br/>
+                        &#125;
+                    </Blockquote>
+                    <p>Jeżeli klasa elementu z nazwą <i>container</i> zawiera klasę "dark", wyświetl na konsoli
+                        "Jest
+                        ustawiony ciemny motyw!"</p>
+                    <Blockquote>
+                        <b>if</b> (button.innerText === "Zamknij")&#123;<br/>
+                        &nbsp;&nbsp;button.innerText === "Otwórz";<br/>&#125;
+                    </Blockquote>
+                    <p>
+                        Jeżeli w przycisku jest tekst "Zamknij", to wpisujemy do przycisku tekst "Otwórz".
+                    </p>
+                    <p>
+                        Należy pamiętać, że <i>else</i> nie jest obowiązkowy, natomiast kod w
+                        bloku <i>if</i> wykona się
+                        zawsze, niezależnie od warunku.
+                    </p>
+                    <p>
+                        Klamry nie zawsze są wymagane, ale lepiej <b>ich nie pomijać</b>
+                    </p>
+                </>
+            ),
         }
         ,
 // {
@@ -6976,675 +7109,661 @@ export const articlesLink = [
             id: 24,
             date: "4 czerwca 2023 roku",
             title: "JavaScript - document.querySelector()",
-            body:
-                (
-                    <>
-                        <p>Metody querySelector używamy do <em>"złapania"</em> elementu <i>HTML</i>, np. wpisując w konsolę
-                            (za pomocą <i>DevTools</i>):</p>
-                        <Blockquote>
-                            &gt; <i>document.querySelector</i>("h2");<br/>
-                            &lt; &lt;h2&gt;O mnie&lt;/h2&gt;;
-                        </Blockquote>
-                        <p>Możemy następnie danemu elementowi HTML (albo klasie elementu, lub konkretnemu elementowi HTML
-                            (id)), <strong>dodać</strong> klasę: </p>
-                        <Blockquote>
-                            nazwaKlasyElementuHTML.<i>classList.add</i>("nowaNazwaKlasy");
-                        </Blockquote>
-                        <p>Możemy <strong>usunąć</strong> klasę elementowi HTML, np.:</p>
-                        <Blockquote>
-                            nazwaKlasyElementuHTML.<i>classList.remove</i>("nowaNazwaKlasy");
-                        </Blockquote>
-                        <p>Możemy <strong>przełączać</strong> klasę elementowi HTML, np.:</p>
-                        <Blockquote>
-                            nazwaKlasyElementuHTML.<i>classList.toggle</i>("nowaNazwaKlasy");
-                        </Blockquote>
-                        <p>Możemy <strong>zmienić</strong> tekst elementowi HTML, np.:</p>
-                        <Blockquote>
-                            nazwaKlasyElementuHTML.<i>innerText</i> = "Nowy tekst";
-                        </Blockquote>
-                        <p>Możemy <strong>zmienić</strong> zawartość HTML elementowi HTML, np.:</p>
-                        <Blockquote>
-                            nazwaKlasyElementuHTML.<i>innerHTML</i> = "Nowa treść ze
-                            &lt;span&gt; znacznikiem HTML
-                            &lt;/span&gt;".;
-                        </Blockquote>
-                        <p>Możemy <strong>usunąć</strong> element HTML, np.:</p>
-                        <Blockquote>
-                            nazwaKlasyElementuHTML.<i>remove()</i>;
-                        </Blockquote>
-                    </>
-                )
+            body: (
+                <>
+                    <p>Metody querySelector używamy do <em>"złapania"</em> elementu <i>HTML</i>, np. wpisując w konsolę
+                        (za pomocą <i>DevTools</i>):</p>
+                    <Blockquote>
+                        &gt; <i>document.querySelector</i>("h2");<br/>
+                        &lt; &lt;h2&gt;O mnie&lt;/h2&gt;;
+                    </Blockquote>
+                    <p>Możemy następnie danemu elementowi HTML (albo klasie elementu, lub konkretnemu elementowi HTML
+                        (id)), <strong>dodać</strong> klasę: </p>
+                    <Blockquote>
+                        nazwaKlasyElementuHTML.<i>classList.add</i>("nowaNazwaKlasy");
+                    </Blockquote>
+                    <p>Możemy <strong>usunąć</strong> klasę elementowi HTML, np.:</p>
+                    <Blockquote>
+                        nazwaKlasyElementuHTML.<i>classList.remove</i>("nowaNazwaKlasy");
+                    </Blockquote>
+                    <p>Możemy <strong>przełączać</strong> klasę elementowi HTML, np.:</p>
+                    <Blockquote>
+                        nazwaKlasyElementuHTML.<i>classList.toggle</i>("nowaNazwaKlasy");
+                    </Blockquote>
+                    <p>Możemy <strong>zmienić</strong> tekst elementowi HTML, np.:</p>
+                    <Blockquote>
+                        nazwaKlasyElementuHTML.<i>innerText</i> = "Nowy tekst";
+                    </Blockquote>
+                    <p>Możemy <strong>zmienić</strong> zawartość HTML elementowi HTML, np.:</p>
+                    <Blockquote>
+                        nazwaKlasyElementuHTML.<i>innerHTML</i> = "Nowa treść ze
+                        &lt;span&gt; znacznikiem HTML
+                        &lt;/span&gt;".;
+                    </Blockquote>
+                    <p>Możemy <strong>usunąć</strong> element HTML, np.:</p>
+                    <Blockquote>
+                        nazwaKlasyElementuHTML.<i>remove()</i>;
+                    </Blockquote>
+                </>
+            )
         }
         ,
         {
             id: 23,
             date: "4 czerwca 2023 roku",
             title: "JavaScript - składnia",
-            body:
-                (
-                    <>
-                        <Blockquote>
-                            <b>let</b> nazwa = wartość;
-                        </Blockquote>
-                        <p>Nazwa zmiennej ma znaczenie — inaczej niż w przypadku <i>HTML</i>, w <i>JavaScript</i> różnice
-                            liter są ważne, więc przypisując wartość do zmiennej <i>nazwa</i>, nie będzie ona przypisana
-                            automatycznie do zmiennych <i>Nazwa</i>, <i>NaZwA</i> itd.
-                        </p>
-                        <p>Nazwa zmiennej musi zaczynać się od litery, "_" (ang. <i>underscore</i>) lub "$".</p>
-                        <p>Nazwa zmiennej jak najbardziej może zawierać cyfry, ale nie mogą one być na pierwszym miejscu.
-                        </p>
-                        <p>Jest kilka słów wbudowanych do <i>JavaScript-a</i>, których nie możemy użyć do nazwania zmiennej,
-                            np.
-                            <i>var</i>, <i>let</i>, <i>function</i> itd. <a href="https://mothereff.in/js-variables"
-                                                                            target="_blank"
-                                                                            title="JavaScript variable name validator">Przydatna
-                                stronka, do sprawdzenia, czy nazwa, której chcesz użyć, nie jest zajęta</a>.
-                        </p>
-                        <p>Przy nazywaniu zmiennych używamy konwencji <i>camelCase</i> oraz liter alfabetu łacińskiego..</p>
-                    </>
-                )
+            body: (
+                <>
+                    <Blockquote>
+                        <b>let</b> nazwa = wartość;
+                    </Blockquote>
+                    <p>Nazwa zmiennej ma znaczenie — inaczej niż w przypadku <i>HTML</i>, w <i>JavaScript</i> różnice
+                        liter są ważne, więc przypisując wartość do zmiennej <i>nazwa</i>, nie będzie ona przypisana
+                        automatycznie do zmiennych <i>Nazwa</i>, <i>NaZwA</i> itd.
+                    </p>
+                    <p>Nazwa zmiennej musi zaczynać się od litery, "_" (ang. <i>underscore</i>) lub "$".</p>
+                    <p>Nazwa zmiennej jak najbardziej może zawierać cyfry, ale nie mogą one być na pierwszym miejscu.
+                    </p>
+                    <p>Jest kilka słów wbudowanych do <i>JavaScript-a</i>, których nie możemy użyć do nazwania zmiennej,
+                        np.
+                        <i>var</i>, <i>let</i>, <i>function</i> itd. <a href="https://mothereff.in/js-variables"
+                                                                        target="_blank"
+                                                                        title="JavaScript variable name validator">Przydatna
+                            stronka, do sprawdzenia, czy nazwa, której chcesz użyć, nie jest zajęta</a>.
+                    </p>
+                    <p>Przy nazywaniu zmiennych używamy konwencji <i>camelCase</i> oraz liter alfabetu łacińskiego..</p>
+                </>
+            )
         }
         ,
         {
             id: 22,
             date: "4 czerwca 2023 roku",
             title: "JavaScript - sposoby osadzania",
-            body:
-                (
-                    <>
-                        <p><i>JavaScript-a</i> możemy umieścić na stronie na kilka sposobów:</p>
-                        <ListUnordered>
-                            <ListItem>poprzez zastosowanie znacznika &lt;script&gt; &lt;/script&gt;
-                                przed końcowym znacznikiem
-                                &lt;/body&gt;, tak aby załadować skrypt, dopiero jak załaduje nam się cała zawartość DOM,
-                                np.:
-                            </ListItem>
-                        </ListUnordered>
-                        <Blockquote>
-                            &lt;script&gt;<br/>console.log("Hello
-                            world");<br/>&lt;/script&gt;
-                        </Blockquote>
-                        <ListUnordered>
-                            <ListItem>poprzez odwołanie do pliku z <i>JavaScript-em</i>, przed końcowym
-                                znacznikiem &lt;/body&gt;, tak, aby załadować skrypt dopiero jak załaduje nam się cała
-                                zawartość
-                                DOM, np.:
-                            </ListItem>
-                        </ListUnordered>
-                        <Blockquote>
-                            &lt;script src="js/script.js"&gt;&lt;/script&gt;
-                        </Blockquote>
-                        <ListUnordered>
-                            <ListItem>poprzez odwołanie do pliku z <i>JavaScript-em</i> z atrybutem
-                                <i>defer</i>
-                                i umieszczeniem odwołania
-                                przed końcowym znacznikiem &lt;/head&gt;, tak aby załadować skrypt dopiero jak załaduje nam
-                                się cała zawartość DOM, np.:
-                            </ListItem>
-                        </ListUnordered>
-                        <Blockquote>
-                            &lt;script defer src="js/script.js"&gt;&lt;/script&gt;
-                        </Blockquote>
-                    </>
-                )
+            body: (
+                <>
+                    <p><i>JavaScript-a</i> możemy umieścić na stronie na kilka sposobów:</p>
+                    <ListUnordered>
+                        <ListItem>poprzez zastosowanie znacznika &lt;script&gt; &lt;/script&gt;
+                            przed końcowym znacznikiem
+                            &lt;/body&gt;, tak aby załadować skrypt, dopiero jak załaduje nam się cała zawartość DOM,
+                            np.:
+                        </ListItem>
+                    </ListUnordered>
+                    <Blockquote>
+                        &lt;script&gt;<br/>console.log("Hello
+                        world");<br/>&lt;/script&gt;
+                    </Blockquote>
+                    <ListUnordered>
+                        <ListItem>poprzez odwołanie do pliku z <i>JavaScript-em</i>, przed końcowym
+                            znacznikiem &lt;/body&gt;, tak, aby załadować skrypt dopiero jak załaduje nam się cała
+                            zawartość
+                            DOM, np.:
+                        </ListItem>
+                    </ListUnordered>
+                    <Blockquote>
+                        &lt;script src="js/script.js"&gt;&lt;/script&gt;
+                    </Blockquote>
+                    <ListUnordered>
+                        <ListItem>poprzez odwołanie do pliku z <i>JavaScript-em</i> z atrybutem
+                            <i>defer</i>
+                            i umieszczeniem odwołania
+                            przed końcowym znacznikiem &lt;/head&gt;, tak aby załadować skrypt dopiero jak załaduje nam
+                            się cała zawartość DOM, np.:
+                        </ListItem>
+                    </ListUnordered>
+                    <Blockquote>
+                        &lt;script defer src="js/script.js"&gt;&lt;/script&gt;
+                    </Blockquote>
+                </>
+            )
         }
         ,
         {
             id: 21,
             date: "4 czerwca 2023 roku",
             title: "Porządki z CSS-ami",
-            body:
-                (
-                    <>
-                        <p>Tak jak podejrzewałam — powtarzając wiedzę z kursu i pochłaniając materiały dydaktyczne z Uczelni
-                            spowodowałam, że patrzę innym spojrzeniem na to, co już poznałam i jeszcze lepiej zaczynam
-                            rozumieć co z czym się łączy.</p>
-                        <p>Minusem tego trybu nauki jest niewątpliwie pracochłonność, ale koniec końców efektem
-                            jest specjalista, który <em>rozumie</em> co robi.</p>
-                        <p>Zrobiłam porządek z blogiem — pousuwałam na razie <i>JavaScript</i>, wyczyściłam <i>klasy</i> i
-                            ostylowałam stronę po <i>elementach</i> - dużo prościej i krócej zarazem. Gdy wpadnie mi
-                            oczywiście kwestia dodawania elementów, które powinny być inne od pozostałych — wrócę do
-                            stylowania po <i>klasach</i> i po <i>id.</i></p>
-                    </>
-                )
+            body: (
+                <>
+                    <p>Tak jak podejrzewałam — powtarzając wiedzę z kursu i pochłaniając materiały dydaktyczne z Uczelni
+                        spowodowałam, że patrzę innym spojrzeniem na to, co już poznałam i jeszcze lepiej zaczynam
+                        rozumieć co z czym się łączy.</p>
+                    <p>Minusem tego trybu nauki jest niewątpliwie pracochłonność, ale koniec końców efektem
+                        jest specjalista, który <em>rozumie</em> co robi.</p>
+                    <p>Zrobiłam porządek z blogiem — pousuwałam na razie <i>JavaScript</i>, wyczyściłam <i>klasy</i> i
+                        ostylowałam stronę po <i>elementach</i> - dużo prościej i krócej zarazem. Gdy wpadnie mi
+                        oczywiście kwestia dodawania elementów, które powinny być inne od pozostałych — wrócę do
+                        stylowania po <i>klasach</i> i po <i>id.</i></p>
+                </>
+            )
         }
         ,
         {
             id: 20,
             date: "1 czerwca 2023 roku",
             title: "HTML - znaczniki span i div",
-            body:
-                (
-                    <>
-                        <p>
-                            Powyższe znaczniki nie mają znaczenia semantycznego. Służą zwykle do osadzania długich treści w
-                            <i>elementach liniowych</i> (&lt;div&gt;) i do osadzania fragmentów tekstu w <i>elementach
-                            blokowych</i> (&lt;span&gt;). Są pożyteczne ze względu na <em>łapanie</em> elementów w
-                            <i>JavaScript</i>.
-                        </p>
-                    </>
-                )
+            body: (
+                <>
+                    <p>
+                        Powyższe znaczniki nie mają znaczenia semantycznego. Służą zwykle do osadzania długich treści w
+                        <i>elementach liniowych</i> (&lt;div&gt;) i do osadzania fragmentów tekstu w <i>elementach
+                        blokowych</i> (&lt;span&gt;). Są pożyteczne ze względu na <em>łapanie</em> elementów w
+                        <i>JavaScript</i>.
+                    </p>
+                </>
+            )
         }
         ,
         {
             id: 19,
             date: "1 czerwca 2023 roku",
             title: "CSS - podstawy",
-            body:
-                (
-                    <>
-                        <p>
-                            Pora na przećwiczenie podstawowych zagadnień ze składni. Odwołanie do elementu <i>HTML</i> może
-                            być poprzez <i>id</i>, <i>klasę</i> lub poprzez <i>nazwę elementu</i>. Gdy odwołujemy się do
-                            <i>klasy</i>, w miejscu selektora wpisujemy "." (kropkę) i nazwę <i>klasy</i>; gdy odwołujemy
-                            się do konkretnego <em>jedynego</em> elementu <i>HTML</i>, używamy "#" (hashtaga) i nazwy
-                            nadanego <i>id</i>. Są jeszcze dwie opcje stylowania elementów <i>HTML</i>, gdzie nie
-                            potrzebujemy ani <i>klasy</i> ani <i>id</i> i stylujemy wszystkie dane rodzaje elementu o
-                            konkretnej nazwie, używając:
-                        </p>
-                        <ListUnordered>
-                            <ListItem>
-                                "zagnieżdżania"
-                            </ListItem>
-                        </ListUnordered>
-                        <Blockquote>
-                            article header h3 &#123;<br/>
-                            &nbsp;&nbsp;text-align: left;<br/>
-                            &#125;
-                        </Blockquote>
-                        <ListUnordered>
-                            <ListItem>
-                                TYLKO nazwy znacznika
-                            </ListItem>
-                        </ListUnordered>
-                        <Blockquote>
-                            h3 &#123;<br/>
-                            &nbsp;&nbsp;text-align: left;<br/>
-                            &#125;<br/>
-                        </Blockquote>
-                        <p>Aby to lepiej zobrazować, posłużę się tutaj przykładem odwołania po <i>klasie</i></p>
-                        <Blockquote>
-                            <b>&#46;header</b> &#123;<br/>
-                            &nbsp;&nbsp;color&#58; purple;<br/>
-                            &#125;
-                        </Blockquote>
-                        <ListUnordered>
-                            <ListItem><i>selektor</i> - określa które elementy są ostylowane
-                            </ListItem>
-                            <ListItem><i>klamry</i> (brackets)</ListItem>
-                            <ListItem><i>nazwa właściwości</i> - czyli jak styl będzie
-                                zmieniany
-                            </ListItem>
-                            <ListItem>wartość zmienianej właściwości po dwukropku</ListItem>
-                            <ListItem><i>deklaracje</i> - pary właściwość: wartość</ListItem>
-                        </ListUnordered>
-                        <SmallestHeader>Jakie są sposoby osadzania?</SmallestHeader>
-                        <ListUnordered>
-                            <ListItem>osobny link do arkusza styli w oddzielnym pliku</ListItem>
-                        </ListUnordered>
-                        <Blockquote>&lt;link href="css/style.css"
-                            rel="stylesheet"&gt;
-                        </Blockquote>
-                        <ListUnordered>
-                            <ListItem>znacznik &lt;style&gt;</ListItem>
-                        </ListUnordered>
-                        <Blockquote>
-                            &lt;style&gt;<br/>
-                            <b>&#46;header</b> &#123;<br/>
-                            &nbsp;&nbsp;color&#58; purple;<br/>
-                            &#125;<br/>
-                            &lt;/style&gt;
-                        </Blockquote>
-                        <ListUnordered>
-                            <ListItem>atrybut style</ListItem>
-                        </ListUnordered>
-                        <Blockquote>&lt;p style="color:
-                            red"&gt;Tekst&lt;/p&gt;
-                        </Blockquote>
-                    </>
-                )
+            body: (
+                <>
+                    <p>
+                        Pora na przećwiczenie podstawowych zagadnień ze składni. Odwołanie do elementu <i>HTML</i> może
+                        być poprzez <i>id</i>, <i>klasę</i> lub poprzez <i>nazwę elementu</i>. Gdy odwołujemy się do
+                        <i>klasy</i>, w miejscu selektora wpisujemy "." (kropkę) i nazwę <i>klasy</i>; gdy odwołujemy
+                        się do konkretnego <em>jedynego</em> elementu <i>HTML</i>, używamy "#" (hashtaga) i nazwy
+                        nadanego <i>id</i>. Są jeszcze dwie opcje stylowania elementów <i>HTML</i>, gdzie nie
+                        potrzebujemy ani <i>klasy</i> ani <i>id</i> i stylujemy wszystkie dane rodzaje elementu o
+                        konkretnej nazwie, używając:
+                    </p>
+                    <ListUnordered>
+                        <ListItem>
+                            "zagnieżdżania"
+                        </ListItem>
+                    </ListUnordered>
+                    <Blockquote>
+                        article header h3 &#123;<br/>
+                        &nbsp;&nbsp;text-align: left;<br/>
+                        &#125;
+                    </Blockquote>
+                    <ListUnordered>
+                        <ListItem>
+                            TYLKO nazwy znacznika
+                        </ListItem>
+                    </ListUnordered>
+                    <Blockquote>
+                        h3 &#123;<br/>
+                        &nbsp;&nbsp;text-align: left;<br/>
+                        &#125;<br/>
+                    </Blockquote>
+                    <p>Aby to lepiej zobrazować, posłużę się tutaj przykładem odwołania po <i>klasie</i></p>
+                    <Blockquote>
+                        <b>&#46;header</b> &#123;<br/>
+                        &nbsp;&nbsp;color&#58; purple;<br/>
+                        &#125;
+                    </Blockquote>
+                    <ListUnordered>
+                        <ListItem><i>selektor</i> - określa które elementy są ostylowane
+                        </ListItem>
+                        <ListItem><i>klamry</i> (brackets)</ListItem>
+                        <ListItem><i>nazwa właściwości</i> - czyli jak styl będzie
+                            zmieniany
+                        </ListItem>
+                        <ListItem>wartość zmienianej właściwości po dwukropku</ListItem>
+                        <ListItem><i>deklaracje</i> - pary właściwość: wartość</ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>Jakie są sposoby osadzania?</SmallestHeader>
+                    <ListUnordered>
+                        <ListItem>osobny link do arkusza styli w oddzielnym pliku</ListItem>
+                    </ListUnordered>
+                    <Blockquote>&lt;link href="css/style.css"
+                        rel="stylesheet"&gt;
+                    </Blockquote>
+                    <ListUnordered>
+                        <ListItem>znacznik &lt;style&gt;</ListItem>
+                    </ListUnordered>
+                    <Blockquote>
+                        &lt;style&gt;<br/>
+                        <b>&#46;header</b> &#123;<br/>
+                        &nbsp;&nbsp;color&#58; purple;<br/>
+                        &#125;<br/>
+                        &lt;/style&gt;
+                    </Blockquote>
+                    <ListUnordered>
+                        <ListItem>atrybut style</ListItem>
+                    </ListUnordered>
+                    <Blockquote>&lt;p style="color:
+                        red"&gt;Tekst&lt;/p&gt;
+                    </Blockquote>
+                </>
+            )
         }
         ,
         {
             id: 18,
             date: "1 czerwca 2023 roku",
             title: "Odkopałam pierwszą lekcję o CSS",
-            body:
-                (
-                    <>
-                        <p>
-                            Coraz bardziej się cieszę na powtórki materiałów, ponieważ z każdą powtórką będę mogła
-                            zaktualizować bloga o nowe funkcje. I chociaż korci mnie, by od razu zrobić porządek z
-                            <i>CSS</i> i <i>JS</i> na mojej stronie, to czekam cierpliwie na ten moment aż przejdę do
-                            powtórki z lekcji właściwych tym tematom.
-                        </p>
-                        <p>
-                            Naukę podzieliłam sobie na część z kursu <i>YouCode - Frontend Developer od podstaw</i> i na
-                            materiały z Uczelni na temat <i>Frontend-u</i>. Powiem szczerze, że wybrałam dobry moment, bo
-                            jedne materiały uzupełniają drugie i na odwrót. W programie nauki mam wykłady z zaawansowanego
-                            <i>HTML</i> i <i>CSS</i> - dla mnie super sprawa!
-                        </p>
-                        <p>
-                            Tak więc <i>CSS</i> - <i>Cascading Style Sheets</i>, czyli kaskadowe arkusze stylów to język
-                            arkusza stylów używanego do ... stylowania znaczników <i>HTML</i>. (Chyba muszę poszukać
-                            synonimów słowa styl).
-                        </p>
-                        <p>
-                            <i>CSS</i> to oddzielna warstwa strony, która jest odpowiedzialna za to, jak wyglądają elementy
-                            w
-                            <i>HTML</i>. I każda przeglądarka może mieć swoją interpretację <i>CSS</i>, a już w ogóle
-                            najgorzej radzi sobie <i>IE</i>. Na kursie dowiedziałam się, że warto sprawdzać kompatybilność
-                            <i>CSS</i> z różnymi wersjami różnych przeglądarek. Przydatne linki do sprawdzenia są <a
-                            href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"
-                            title="MDN, a jakże">TU</a> i <a href="https://caniuse.com/" target="_blank"
-                                                             title="CanIUse">TU</a>.
-                            Natomiast muszę jeszcze dokładniej
-                            poczytać, o co chodzi z tym <a href="https://www.w3.org/TR/css-2020/" target="_blank"
-                                                           title="Strona W3C o CSS Snapshot 2020">CSS Snapshot 2020.</a> I
-                            wypadałoby mi odwiedzić też
-                            i <a href="https://www.w3.org/Style/CSS/" target="_blank"
-                                 title="Ironicznie brzydka strona o CSS">TĄ</a> stronę, by zapoznać się z dokumentacją.
-                        </p>
-                        <p>
-                            Będę jeszcze wałkować temat związany z <i>CSS</i>, więc rozsiądźcie się wygodnie.
-                        </p>
-                    </>
-                )
+            body: (
+                <>
+                    <p>
+                        Coraz bardziej się cieszę na powtórki materiałów, ponieważ z każdą powtórką będę mogła
+                        zaktualizować bloga o nowe funkcje. I chociaż korci mnie, by od razu zrobić porządek z
+                        <i>CSS</i> i <i>JS</i> na mojej stronie, to czekam cierpliwie na ten moment aż przejdę do
+                        powtórki z lekcji właściwych tym tematom.
+                    </p>
+                    <p>
+                        Naukę podzieliłam sobie na część z kursu <i>YouCode - Frontend Developer od podstaw</i> i na
+                        materiały z Uczelni na temat <i>Frontend-u</i>. Powiem szczerze, że wybrałam dobry moment, bo
+                        jedne materiały uzupełniają drugie i na odwrót. W programie nauki mam wykłady z zaawansowanego
+                        <i>HTML</i> i <i>CSS</i> - dla mnie super sprawa!
+                    </p>
+                    <p>
+                        Tak więc <i>CSS</i> - <i>Cascading Style Sheets</i>, czyli kaskadowe arkusze stylów to język
+                        arkusza stylów używanego do ... stylowania znaczników <i>HTML</i>. (Chyba muszę poszukać
+                        synonimów słowa styl).
+                    </p>
+                    <p>
+                        <i>CSS</i> to oddzielna warstwa strony, która jest odpowiedzialna za to, jak wyglądają elementy
+                        w
+                        <i>HTML</i>. I każda przeglądarka może mieć swoją interpretację <i>CSS</i>, a już w ogóle
+                        najgorzej radzi sobie <i>IE</i>. Na kursie dowiedziałam się, że warto sprawdzać kompatybilność
+                        <i>CSS</i> z różnymi wersjami różnych przeglądarek. Przydatne linki do sprawdzenia są <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"
+                        title="MDN, a jakże">TU</a> i <a href="https://caniuse.com/" target="_blank"
+                                                         title="CanIUse">TU</a>.
+                        Natomiast muszę jeszcze dokładniej
+                        poczytać, o co chodzi z tym <a href="https://www.w3.org/TR/css-2020/" target="_blank"
+                                                       title="Strona W3C o CSS Snapshot 2020">CSS Snapshot 2020.</a> I
+                        wypadałoby mi odwiedzić też
+                        i <a href="https://www.w3.org/Style/CSS/" target="_blank"
+                             title="Ironicznie brzydka strona o CSS">TĄ</a> stronę, by zapoznać się z dokumentacją.
+                    </p>
+                    <p>
+                        Będę jeszcze wałkować temat związany z <i>CSS</i>, więc rozsiądźcie się wygodnie.
+                    </p>
+                </>
+            )
         }
         ,
         {
             id: 17,
             date: "31 maja 2023 roku",
             title: "HTML - Semantyczność",
-            body:
-                (
-                    <>
-                        <p>
-                            Dziś wsłuchiwałam się w wykład Tomasza Kanieckiego dotyczącego znaczników w HTML5. Łapię się na
-                            tym, że często zapominam o semantyczności, czyli o stosowaniu znaczników zgodnie z
-                            przeznaczeniem, aby m.in. umożliwić przeglądanie strony osobom z czytnikami ekranów.
-                        </p>
-                        <p>
-                            Od razu po przykładach z wykładu, przystąpiłam do edycji kodu mojego bloga. Dodałam znaczniki
-                            takie jak &lt;article&gt;, &lt;header&gt;, &lt;figure&gt; i &lt;figcaption&gt;. Z czasem pewnie
-                            je ostyluję w CSS-ie, ale nie wyprzedzam faktów. Preferuję jednak naukę powolną, ale opartą na
-                            praktyce. Zauważyłam, że ta metodologia nauki sprawia, że więcej przyswajam i zapamiętuję. Mamy
-                            progres!
-                        </p>
-                        <p>
-                            Jeśli śledzicie repozytorium bloga na<i> GitHub-ie</i>, to zauważycie, w których miejscach co
-                            nieco
-                            poprawiłam.
-                        </p>
-                        <p>
-                            Mam nadzieję, że w przyszłości moje aplikacje webowe będą dostępne dla osób również z
-                            niepełnosprawnościami.
-                        </p>
-                    </>
-                )
+            body: (
+                <>
+                    <p>
+                        Dziś wsłuchiwałam się w wykład Tomasza Kanieckiego dotyczącego znaczników w HTML5. Łapię się na
+                        tym, że często zapominam o semantyczności, czyli o stosowaniu znaczników zgodnie z
+                        przeznaczeniem, aby m.in. umożliwić przeglądanie strony osobom z czytnikami ekranów.
+                    </p>
+                    <p>
+                        Od razu po przykładach z wykładu, przystąpiłam do edycji kodu mojego bloga. Dodałam znaczniki
+                        takie jak &lt;article&gt;, &lt;header&gt;, &lt;figure&gt; i &lt;figcaption&gt;. Z czasem pewnie
+                        je ostyluję w CSS-ie, ale nie wyprzedzam faktów. Preferuję jednak naukę powolną, ale opartą na
+                        praktyce. Zauważyłam, że ta metodologia nauki sprawia, że więcej przyswajam i zapamiętuję. Mamy
+                        progres!
+                    </p>
+                    <p>
+                        Jeśli śledzicie repozytorium bloga na<i> GitHub-ie</i>, to zauważycie, w których miejscach co
+                        nieco
+                        poprawiłam.
+                    </p>
+                    <p>
+                        Mam nadzieję, że w przyszłości moje aplikacje webowe będą dostępne dla osób również z
+                        niepełnosprawnościami.
+                    </p>
+                </>
+            )
         }
         ,
         {
             id: 16,
             date: "30 maja 2023 roku",
             title: "HTML - elementy liniowe, elementy blokowe i elementy liniowo-blokowe",
-            body:
-                (
-                    <>
-                        <p>
-                            <i>Elementami blokowymi</i> są znaczniki, w których zawierany jest tekst ciągiem, np. &lt;p&gt;
-                            czy &lt;h1&gt;, &lt;h2&gt; itd.
-                        </p>
-                        <p>
-                            <i>Elementy blokowe</i> zajmują całą dostępną szerokość (można to zobaczyć w
-                            <i>DevTools-ach</i>).
-                        </p>
-                        <p>
-                            Natomiast <i>elementy liniowe</i> to znaczniki typu np. &lt;strong&gt; czy &lt;em&gt; i zajmują
-                            tyle miejsca, ile potrzebują dla swojej treści.
-                        </p>
-                        <p>
-                            Ciekawostka jest tutaj <i>textarea</i>, który jest elementem liniowo-blokowym.
-                        </p>
-                        <p>
-                            Nie układamy elementów <i>blokowych</i> w <i>liniowych</i>.
-                        </p>
-                    </>
-                )
+            body: (
+                <>
+                    <p>
+                        <i>Elementami blokowymi</i> są znaczniki, w których zawierany jest tekst ciągiem, np. &lt;p&gt;
+                        czy &lt;h1&gt;, &lt;h2&gt; itd.
+                    </p>
+                    <p>
+                        <i>Elementy blokowe</i> zajmują całą dostępną szerokość (można to zobaczyć w
+                        <i>DevTools-ach</i>).
+                    </p>
+                    <p>
+                        Natomiast <i>elementy liniowe</i> to znaczniki typu np. &lt;strong&gt; czy &lt;em&gt; i zajmują
+                        tyle miejsca, ile potrzebują dla swojej treści.
+                    </p>
+                    <p>
+                        Ciekawostka jest tutaj <i>textarea</i>, który jest elementem liniowo-blokowym.
+                    </p>
+                    <p>
+                        Nie układamy elementów <i>blokowych</i> w <i>liniowych</i>.
+                    </p>
+                </>
+            )
         }
         ,
         {
             id: 15,
             date: "30 maja 2023 roku",
             title: "HTML - utrwalenie różnic między kilkoma znacznikami",
-            body:
-                (
-                    <>
-                        <p>
-                            Oto kilka znaczników <i>HTML</i>, których gwoli powtórzenia uzupełnię w poniższej tabeli. Po
-                            umieszczeniu przejrzę tą całą moją dotychczasową treść i zmienię w/w znaczniki tak, aby były
-                            one
-                            używane zgodnie z konwencją.
-                        </p>
-                        <TableContainer>
-                            <Table>
-                                <Caption>przykłady znaczników HTML wraz ze znaczeniem</Caption>
-                                <Thead>
-                                    <Tr>
-                                        <Th>
-                                            symbol
-                                        </Th>
-                                        <Th>
-                                            nazwa
-                                        </Th>
-                                        <Th>
-                                            opis
-                                        </Th>
-                                    </Tr>
-                                </Thead>
-                                <tbody>
+            body: (
+                <>
+                    <p>
+                        Oto kilka znaczników <i>HTML</i>, których gwoli powtórzenia uzupełnię w poniższej tabeli. Po
+                        umieszczeniu przejrzę tą całą moją dotychczasową treść i zmienię w/w znaczniki tak, aby były
+                        one
+                        używane zgodnie z konwencją.
+                    </p>
+                    <TableContainer>
+                        <Table>
+                            <Caption>przykłady znaczników HTML wraz ze znaczeniem</Caption>
+                            <Thead>
                                 <Tr>
-                                    <td>&lt;br&gt;</td>
-                                    <td><i>line break</i></td>
-                                    <td>łamie wiersz w miejscu wskazanym, ale nie należy go używać w celu dodania odstępu
-                                    </td>
+                                    <Th>
+                                        symbol
+                                    </Th>
+                                    <Th>
+                                        nazwa
+                                    </Th>
+                                    <Th>
+                                        opis
+                                    </Th>
                                 </Tr>
-                                <Tr>
-                                    <td>&lt;strong&gt;</td>
-                                    <td><i>strong importance</i></td>
-                                    <td>używamy, gdy jest coś ważnego/pilnego do przekazania, lub gdy jest to ostrzeżenie
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>&lt;b&gt;</td>
-                                    <td><i>bring attention to</i></td>
-                                    <td>używamy, gdy chcemy zwrócić uwagę na jakiś fragment, ale nie jest on ważniejszy od
-                                        pozostałej treści, używany rzadziej niż &lt;strong&gt;
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>&lt;em&gt;</td>
-                                    <td><i>emphasis</i></td>
-                                    <td>używamy, gdy kładziemy nacisk na jakieś słowo w wyrażeniu</td>
-                                </Tr>
-                                <Tr>
-                                    <td>&lt;i&gt;</td>
-                                    <td><i>idiomatic text</i></td>
-                                    <td>używamy do pojęć technicznych, słów w obcym języku lub myśli</td>
-                                </Tr>
-                                </tbody>
-                                <tfoot>
+                            </Thead>
+                            <tbody>
+                            <Tr>
+                                <td>&lt;br&gt;</td>
+                                <td><i>line break</i></td>
+                                <td>łamie wiersz w miejscu wskazanym, ale nie należy go używać w celu dodania odstępu
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>&lt;strong&gt;</td>
+                                <td><i>strong importance</i></td>
+                                <td>używamy, gdy jest coś ważnego/pilnego do przekazania, lub gdy jest to ostrzeżenie
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>&lt;b&gt;</td>
+                                <td><i>bring attention to</i></td>
+                                <td>używamy, gdy chcemy zwrócić uwagę na jakiś fragment, ale nie jest on ważniejszy od
+                                    pozostałej treści, używany rzadziej niż &lt;strong&gt;
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>&lt;em&gt;</td>
+                                <td><i>emphasis</i></td>
+                                <td>używamy, gdy kładziemy nacisk na jakieś słowo w wyrażeniu</td>
+                            </Tr>
+                            <Tr>
+                                <td>&lt;i&gt;</td>
+                                <td><i>idiomatic text</i></td>
+                                <td>używamy do pojęć technicznych, słów w obcym języku lub myśli</td>
+                            </Tr>
+                            </tbody>
+                            <tfoot>
 
-                                </tfoot>
-                            </Table>
-                        </TableContainer>
-                    </>
-                )
+                            </tfoot>
+                        </Table>
+                    </TableContainer>
+                </>
+            )
         }
         ,
         {
             id: 14,
             date: "30 maja 2023 roku",
             title: "Operatory operacji logicznych",
-            body:
-                (
-                    <>
-                        <TableContainer>
-                            <Table>
-                                <Caption>
-                                    Przykład operatora
-                                </Caption>
-                                <Thead>
-                                    <Tr>
-                                        <Th>
-                                            symbol
-                                        </Th>
-                                        <Th>
-                                            Operator
-                                        </Th>
-                                    </Tr>
-                                </Thead>
-                                <tbody>
+            body: (
+                <>
+                    <TableContainer>
+                        <Table>
+                            <Caption>
+                                Przykład operatora
+                            </Caption>
+                            <Thead>
                                 <Tr>
-                                    <td>=</td>
-                                    <td>Operator przypisania; jeżeli nazwa zmiennej znajduje się po lewej stronie symbolu
-                                        przypisania " = ", to otrzymuje ona nową wartość, np.
-                                        <Blockquote>suma = 1; // <i>Odtąd zmienna suma
-                                            będzie
-                                            mieć wartość 1.</i>
-                                        </Blockquote>
-                                    </td>
+                                    <Th>
+                                        symbol
+                                    </Th>
+                                    <Th>
+                                        Operator
+                                    </Th>
                                 </Tr>
-                                </tbody>
-                            </Table>
-                        </TableContainer>
-                        <TableContainer>
-                            <Table>
-                                <Caption>
-                                    Proste typy danych
-                                </Caption>
-                                <Thead>
-                                    <Tr>
-                                        <th className="article__th">
-                                            skrót
-                                        </th>
-                                        <th className="article__th">
-                                            opis
-                                        </th>
-                                    </Tr>
-                                </Thead>
-                                <tbody>
+                            </Thead>
+                            <tbody>
+                            <Tr>
+                                <td>=</td>
+                                <td>Operator przypisania; jeżeli nazwa zmiennej znajduje się po lewej stronie symbolu
+                                    przypisania " = ", to otrzymuje ona nową wartość, np.
+                                    <Blockquote>suma = 1; // <i>Odtąd zmienna suma
+                                        będzie
+                                        mieć wartość 1.</i>
+                                    </Blockquote>
+                                </td>
+                            </Tr>
+                            </tbody>
+                        </Table>
+                    </TableContainer>
+                    <TableContainer>
+                        <Table>
+                            <Caption>
+                                Proste typy danych
+                            </Caption>
+                            <Thead>
                                 <Tr>
-                                    <td><i>int</i></td>
-                                    <td> - liczba całkowita
-                                    </td>
+                                    <th className="article__th">
+                                        skrót
+                                    </th>
+                                    <th className="article__th">
+                                        opis
+                                    </th>
                                 </Tr>
+                            </Thead>
+                            <tbody>
+                            <Tr>
+                                <td><i>int</i></td>
+                                <td> - liczba całkowita
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td><i>float</i></td>
+                                <td> - liczba zmiennoprzecinkowa
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td><i>string</i></td>
+                                <td> - łańcuch znaków
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td><i>bool</i></td>
+                                <td> - typ True/False
+                                </td>
+                            </Tr>
+                            </tbody>
+                        </Table>
+                    </TableContainer>
+                    <TableContainer>
+                        <Table>
+                            <Caption>
+                                Proste operatory
+                            </Caption>
+                            <Thead>
                                 <Tr>
-                                    <td><i>float</i></td>
-                                    <td> - liczba zmiennoprzecinkowa
-                                    </td>
+                                    <Th>
+                                        rodzaj
+                                    </Th>
+                                    <Th>
+                                        symbole
+                                    </Th>
                                 </Tr>
-                                <Tr>
-                                    <td><i>string</i></td>
-                                    <td> - łańcuch znaków
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td><i>bool</i></td>
-                                    <td> - typ True/False
-                                    </td>
-                                </Tr>
-                                </tbody>
-                            </Table>
-                        </TableContainer>
-                        <TableContainer>
-                            <Table>
-                                <Caption>
-                                    Proste operatory
-                                </Caption>
-                                <Thead>
-                                    <Tr>
-                                        <Th>
-                                            rodzaj
-                                        </Th>
-                                        <Th>
-                                            symbole
-                                        </Th>
-                                    </Tr>
-                                </Thead>
-                                <tbody>
-                                <Tr>
-                                    <td><i>bitowe</i></td>
-                                    <td>(OR, AND)
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td><i>arytmetyczne</i></td>
-                                    <td>(+ - * /)
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td><i>porównania</i></td>
-                                    <td>&#40;== &lt; &gt; &#41;
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td><i>logiczne</i></td>
-                                    <td>(prawda/fałsz)
-                                    </td>
-                                </Tr>
-                                </tbody>
-                                <tfoot>
+                            </Thead>
+                            <tbody>
+                            <Tr>
+                                <td><i>bitowe</i></td>
+                                <td>(OR, AND)
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td><i>arytmetyczne</i></td>
+                                <td>(+ - * /)
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td><i>porównania</i></td>
+                                <td>&#40;== &lt; &gt; &#41;
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td><i>logiczne</i></td>
+                                <td>(prawda/fałsz)
+                                </td>
+                            </Tr>
+                            </tbody>
+                            <tfoot>
 
-                                </tfoot>
-                            </Table>
-                        </TableContainer>
-                    </>
-                ),
+                            </tfoot>
+                        </Table>
+                    </TableContainer>
+                </>
+            ),
         }
         ,
         {
             id: 13,
             date: "30 maja 2023 roku",
             title: "Instrukcja",
-            body:
-                (
-                    <>
-                        <p>
-                            Co zawierają instrukcje?
-                        </p>
-                        <ListUnordered>
-                            <ListItem><i>literały</i> - wartości (np. napisy, liczby) wpisane w kod
-                                źródłowy,
-                                kopiowane do kodu wykonywalnego podczas kompilacji;
-                            </ListItem>
-                            <ListItem><i>stałe</i> - symbole (nazwy) reprezentujące ustalone
-                                wartości,
-                                zastępowane tymi wartościami podczas kompilacji;
-                            </ListItem>
-                            <ListItem><i>wyrażenia</i> - zapis obliczeń;</ListItem>
-                            <ListItem><i>zmienne lub nazwy zmiennych</i> - symbole reprezentujące
-                                wartości,
-                                które mogą zmieniać w czasie wykonywania programu;
-                            </ListItem>
-                            <ListItem><i>słowa kluczowe</i> - symbole reprezentujące określone
-                                działania
-                                (np.
-                                <i>for, do, while, if, else, return</i>);
-                            </ListItem>
-                            <ListItem><i>wywołania funkcji</i> - symbole oznaczające miejsca w
-                                programie,
-                                w
-                                których należy wykonać instrukcje wchodzące w skład treści danej funkcji (wyniki wykonania
-                                funkcji też "pojawiają się" w tych miejscach);
-                            </ListItem>
-                            <ListItem><i>znaki przerwy;</i></ListItem>
-                            <ListItem><i>spacje;</i></ListItem>
-                            <ListItem><i>tabulacje poziome;</i></ListItem>
-                            <ListItem>przejścia do następnego wiersza (są pomijane podczas
-                                kompilacji,
-                                tylko
-                                istnieją pewne ograniczenia dotyczące miejsc, w których może być umieszczone przejście do
-                                następnego wiersza, o ile nie zostanie poprzedzone znakiem "\" (<i>backslash</i>));
-                            </ListItem>
-                            <ListItem>komentarze, które umieszczamy po symbolu "//" do końca
-                                wiersza,
-                                lub
-                                między symbolami "/* oraz */" (komentarze są ignorowane przez kompilator).
-                            </ListItem>
-                        </ListUnordered>
-                    </>
-                ),
+            body: (
+                <>
+                    <p>
+                        Co zawierają instrukcje?
+                    </p>
+                    <ListUnordered>
+                        <ListItem><i>literały</i> - wartości (np. napisy, liczby) wpisane w kod
+                            źródłowy,
+                            kopiowane do kodu wykonywalnego podczas kompilacji;
+                        </ListItem>
+                        <ListItem><i>stałe</i> - symbole (nazwy) reprezentujące ustalone
+                            wartości,
+                            zastępowane tymi wartościami podczas kompilacji;
+                        </ListItem>
+                        <ListItem><i>wyrażenia</i> - zapis obliczeń;</ListItem>
+                        <ListItem><i>zmienne lub nazwy zmiennych</i> - symbole reprezentujące
+                            wartości,
+                            które mogą zmieniać w czasie wykonywania programu;
+                        </ListItem>
+                        <ListItem><i>słowa kluczowe</i> - symbole reprezentujące określone
+                            działania
+                            (np.
+                            <i>for, do, while, if, else, return</i>);
+                        </ListItem>
+                        <ListItem><i>wywołania funkcji</i> - symbole oznaczające miejsca w
+                            programie,
+                            w
+                            których należy wykonać instrukcje wchodzące w skład treści danej funkcji (wyniki wykonania
+                            funkcji też "pojawiają się" w tych miejscach);
+                        </ListItem>
+                        <ListItem><i>znaki przerwy;</i></ListItem>
+                        <ListItem><i>spacje;</i></ListItem>
+                        <ListItem><i>tabulacje poziome;</i></ListItem>
+                        <ListItem>przejścia do następnego wiersza (są pomijane podczas
+                            kompilacji,
+                            tylko
+                            istnieją pewne ograniczenia dotyczące miejsc, w których może być umieszczone przejście do
+                            następnego wiersza, o ile nie zostanie poprzedzone znakiem "\" (<i>backslash</i>));
+                        </ListItem>
+                        <ListItem>komentarze, które umieszczamy po symbolu "//" do końca
+                            wiersza,
+                            lub
+                            między symbolami "/* oraz */" (komentarze są ignorowane przez kompilator).
+                        </ListItem>
+                    </ListUnordered>
+                </>
+            ),
         }
         ,
         {
             id: 12,
             date: "30 maja 2023 roku",
             title: "Funkcja",
-            body:
-                (
-                    <>
-                        <p>
-                            Po dniu w biurze, ogarnięciu kilku kilometrów i spełnieniu kilku obowiązków domowych, powracam
-                            teraz
-                            do swoich materiałów z Uczelni. Czymże jest funkcja?
-                        </p>
-                        <p>
-                            <i>Funkcja</i> to wyróżniona część <i>kodu źródłowego</i>, stanowiąca odrębną całość, składająca
-                            się
-                            z treści oraz nagłówka.
-                        </p>
-                        <p>
-                            <i>Treść funkcji</i> to blok, którego sposób wykonywania w ogóle zależy od pewnej liczby
-                            wartości,
-                            zwanych <i>parametrami</i> lub <i>argumentami funkcji</i>, pochodzących z innych części programu
-                            i
-                            kończy się wygenerowaniem <i>wyniku</i>, przeznaczonego do wykorzystania w innych częściach
-                            programu.
-                        </p>
-                        <p>
-                            <i>Nagłówek funkcji</i> to część definicji funkcji określająca typ danych dla wyniku, nazwę
-                            funkcji
-                            oraz listę jej argumentów.
-                        </p>
-                    </>
-                ),
+            body: (
+                <>
+                    <p>
+                        Po dniu w biurze, ogarnięciu kilku kilometrów i spełnieniu kilku obowiązków domowych, powracam
+                        teraz
+                        do swoich materiałów z Uczelni. Czymże jest funkcja?
+                    </p>
+                    <p>
+                        <i>Funkcja</i> to wyróżniona część <i>kodu źródłowego</i>, stanowiąca odrębną całość, składająca
+                        się
+                        z treści oraz nagłówka.
+                    </p>
+                    <p>
+                        <i>Treść funkcji</i> to blok, którego sposób wykonywania w ogóle zależy od pewnej liczby
+                        wartości,
+                        zwanych <i>parametrami</i> lub <i>argumentami funkcji</i>, pochodzących z innych części programu
+                        i
+                        kończy się wygenerowaniem <i>wyniku</i>, przeznaczonego do wykorzystania w innych częściach
+                        programu.
+                    </p>
+                    <p>
+                        <i>Nagłówek funkcji</i> to część definicji funkcji określająca typ danych dla wyniku, nazwę
+                        funkcji
+                        oraz listę jej argumentów.
+                    </p>
+                </>
+            ),
         }
         ,
         {
             id: 11,
             date: "30 maja 2023 roku",
             title: "Wsparcie i hejterzy",
-            body:
-                (
-                    <>
-                        <p>
-                            Czy słyszeliście o wszelkiego rodzaju grupach juniorów w <i>IT</i> szukających na portalach
-                            społecznościowych stażu lub pierwszej pracy? Mogłabym określić część tej społeczności jako
-                            zgrupowanie <em>sfrustrowanych</em> hejterów, którym się nie udało (lub nie udaje) i których
-                            zadaniem jest <em>zniechęcać i przyczepiać</em> się do każdego, kto określi, że szuka stażu.
-                        </p>
-                        <p>
-                            Można przeczytać tam, że teraz, żeby wejść do <i>Frontend-u</i> to jest za późno, albo że <i>>po
-                            co
-                            próbujesz skoro i tak się nie dostaniesz</i>. A nie daj borze zielony, jak wrzucisz tam info
-                            o
-                            sobie i swój pierwszy draft CV (<i>który może być kogoś pierwszym w życiu</i>)! Od razu
-                            przeczytasz,
-                            że ten angielski to <em>nie taki</em>, a tutaj same oklepane projekty, a jeszcze tam klauzula
-                            informacyjna i zgoda na przetwarzanie jest niepotrzebna (!)...
-                        </p>
-                        <p>
-                            Też stałam się ofiarą zmasowanego hejtu pod jednym z moich postów. I nie było mi z tym
-                            przyjemnie,
-                            oj nie! Pokazałam nawet je P.: <i>"Popatrz, ja się chyba nie nadaję..."</i>, na co on swoim
-                            spokojnym głosem odpowiedział <i>"Nie słuchaj frustratów. Nie daj się zniechęcić. Przecież
-                            wiesz, że
-                            to jest Twój konik!"</i>.
-                        </p>
-                        <p>
-                            P. miał rację. Jeszcze nigdy nie czułam takiej pasji w tym, co robię. No dobra, może oprócz
-                            chwil,
-                            gdy robiłam zestawy tzw. "skrętek" (<i>RJ45</i>). Olałam temat. Negatywne komentarze nie
-                            przestały
-                            się wysypywać. Jeden komentarz był o charakterze pozytywnym, gdzie życzono mi powodzenia.
-                        </p>
-                        <p>
-                            Dostałam po jakimś czasie i wiadomość prywatną od mojej imienniczki. Napisała mi wiele ciepłych
-                            słów
-                            i opowiedziała trochę o sobie. Jeszcze nie zaczęła programować, ale o tym marzy. Pomyślałam o
-                            sobie
-                            sprzed 6ciu miesięcy — pamiętam dokładnie to uczucie towarzyszące ekscytacji, gdy mogłam sobie
-                            pozwolić na pójście na kurs i zacząć tę przygodę!
-                        </p>
-                        <p>
-                            Jednak są normalni ludzie na tym świecie!
-                        </p>
-                        <p>
-                            <strong>Nigdy w siebie nie wątp!</strong>
-                        </p>
-                    </>
-                ),
+            body: (
+                <>
+                    <p>
+                        Czy słyszeliście o wszelkiego rodzaju grupach juniorów w <i>IT</i> szukających na portalach
+                        społecznościowych stażu lub pierwszej pracy? Mogłabym określić część tej społeczności jako
+                        zgrupowanie <em>sfrustrowanych</em> hejterów, którym się nie udało (lub nie udaje) i których
+                        zadaniem jest <em>zniechęcać i przyczepiać</em> się do każdego, kto określi, że szuka stażu.
+                    </p>
+                    <p>
+                        Można przeczytać tam, że teraz, żeby wejść do <i>Frontend-u</i> to jest za późno, albo że <i>>po
+                        co
+                        próbujesz skoro i tak się nie dostaniesz</i>. A nie daj borze zielony, jak wrzucisz tam info
+                        o
+                        sobie i swój pierwszy draft CV (<i>który może być kogoś pierwszym w życiu</i>)! Od razu
+                        przeczytasz,
+                        że ten angielski to <em>nie taki</em>, a tutaj same oklepane projekty, a jeszcze tam klauzula
+                        informacyjna i zgoda na przetwarzanie jest niepotrzebna (!)...
+                    </p>
+                    <p>
+                        Też stałam się ofiarą zmasowanego hejtu pod jednym z moich postów. I nie było mi z tym
+                        przyjemnie,
+                        oj nie! Pokazałam nawet je P.: <i>"Popatrz, ja się chyba nie nadaję..."</i>, na co on swoim
+                        spokojnym głosem odpowiedział <i>"Nie słuchaj frustratów. Nie daj się zniechęcić. Przecież
+                        wiesz, że
+                        to jest Twój konik!"</i>.
+                    </p>
+                    <p>
+                        P. miał rację. Jeszcze nigdy nie czułam takiej pasji w tym, co robię. No dobra, może oprócz
+                        chwil,
+                        gdy robiłam zestawy tzw. "skrętek" (<i>RJ45</i>). Olałam temat. Negatywne komentarze nie
+                        przestały
+                        się wysypywać. Jeden komentarz był o charakterze pozytywnym, gdzie życzono mi powodzenia.
+                    </p>
+                    <p>
+                        Dostałam po jakimś czasie i wiadomość prywatną od mojej imienniczki. Napisała mi wiele ciepłych
+                        słów
+                        i opowiedziała trochę o sobie. Jeszcze nie zaczęła programować, ale o tym marzy. Pomyślałam o
+                        sobie
+                        sprzed 6ciu miesięcy — pamiętam dokładnie to uczucie towarzyszące ekscytacji, gdy mogłam sobie
+                        pozwolić na pójście na kurs i zacząć tę przygodę!
+                    </p>
+                    <p>
+                        Jednak są normalni ludzie na tym świecie!
+                    </p>
+                    <p>
+                        <strong>Nigdy w siebie nie wątp!</strong>
+                    </p>
+                </>
+            ),
         }
         ,
         {
@@ -7698,46 +7817,45 @@ export const articlesLink = [
             id: 9,
             date: "29 maja 2023 roku",
             title: "Zmiany",
-            body:
-                (
-                    <>
-                        <Q>Szaleństwem jest robić wciąż to samo i oczekiwać różnych rezultatów.</Q>
-                        <p>
-                            Tym cytatem Einsteina podsumowałabym swoje dotychczasowe poczynania. Nadeszły zmiany. Zmiany we
-                            mnie, zmiany wokół. Po kursie miałam do wyboru znowu wpaść w błędne koło aplikowania na
-                            stanowisko
-                            Frontend-owca, gdy moim jedynym sprzymierzeńcem w tej bitwie był React.
-                        </p>
-                        <p>
-                            Kojarzycie grupy wsparcia dla Juniorów na portalach społecznościowych, na których m.in można
-                            poprosić kogoś o ocenę CV? Ktoś skwitował mnie dosyć mocno, ale otworzyło to moje oczy:
-                        </p>
-                        <Q>
-                            3 jeźdźcy junior frontend developera:<br/>
-                            - bootcamp<br/>
-                            - todo lista<br/>
-                            - kalkulator.
-                        </Q>
-                        <p>
-                            Czy to oznacza, że zmarnowałam czas? Niee! Jednak mam wrażenie, że kręcę się w kółko. Moja
-                            wewnętrzna motywacja jest silniejsza niż dotychczas! Chcę się rozwijać, dlatego podjęłam decyzję
-                            o
-                            podjęciu studiów podyplomowych, tym razem Frontend-owca w Angular-ze. Na pewno wiedza, którą
-                            aktualnie
-                            zdobyłam, pomoże mi merytorycznie poskładać w całość. A projekty, no cóż... Pozwoli mi też na
-                            rozbudowanie portfolio pod okiem wykładowcy.
-                        </p>
-                        <p>
-                            Trzymajcie klawiatury! Nadchodzę!
-                        </p>
-                        <p>
-                            Photo by <a
-                            href="https://unsplash.com/@rossfindon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ross
-                            Findon</a> on <a
-                            href="https://unsplash.com/photos/mG28olYFgHI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-                        </p>
-                    </>
-                ),
+            body: (
+                <>
+                    <Q>Szaleństwem jest robić wciąż to samo i oczekiwać różnych rezultatów.</Q>
+                    <p>
+                        Tym cytatem Einsteina podsumowałabym swoje dotychczasowe poczynania. Nadeszły zmiany. Zmiany we
+                        mnie, zmiany wokół. Po kursie miałam do wyboru znowu wpaść w błędne koło aplikowania na
+                        stanowisko
+                        Frontend-owca, gdy moim jedynym sprzymierzeńcem w tej bitwie był React.
+                    </p>
+                    <p>
+                        Kojarzycie grupy wsparcia dla Juniorów na portalach społecznościowych, na których m.in można
+                        poprosić kogoś o ocenę CV? Ktoś skwitował mnie dosyć mocno, ale otworzyło to moje oczy:
+                    </p>
+                    <Q>
+                        3 jeźdźcy junior frontend developera:<br/>
+                        - bootcamp<br/>
+                        - todo lista<br/>
+                        - kalkulator.
+                    </Q>
+                    <p>
+                        Czy to oznacza, że zmarnowałam czas? Niee! Jednak mam wrażenie, że kręcę się w kółko. Moja
+                        wewnętrzna motywacja jest silniejsza niż dotychczas! Chcę się rozwijać, dlatego podjęłam decyzję
+                        o
+                        podjęciu studiów podyplomowych, tym razem Frontend-owca w Angular-ze. Na pewno wiedza, którą
+                        aktualnie
+                        zdobyłam, pomoże mi merytorycznie poskładać w całość. A projekty, no cóż... Pozwoli mi też na
+                        rozbudowanie portfolio pod okiem wykładowcy.
+                    </p>
+                    <p>
+                        Trzymajcie klawiatury! Nadchodzę!
+                    </p>
+                    <p>
+                        Photo by <a
+                        href="https://unsplash.com/@rossfindon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ross
+                        Findon</a> on <a
+                        href="https://unsplash.com/photos/mG28olYFgHI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    </p>
+                </>
+            ),
             img: "https://images.unsplash.com/photo-1499244571948-7ccddb3583f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80"
         }
         ,
@@ -7745,29 +7863,28 @@ export const articlesLink = [
             id: 8,
             date: "29 maja 2023 roku",
             title: "HTML - atrybut contenteditable",
-            body:
-                (
-                    <>
-                        <p>
-                            Hej, czy wiesz, że używając atrybutu "contenteditable" w jakimkolwiek ze znaczników, umożliwisz
-                            edycję treści?</p>
-                        <Blockquote>&lt;p&gt; contenteditable&lt;/p&gt;</Blockquote>
-                        <p contentEditable>
-                            Spróbuj tutaj coś napisać.</p>
-                        <p>
-                            Dzięki tej funkcji, przy użyciu Devtool-sów, możesz dodać atrybut "contenteditable" do
-                            znaczników
-                            z
-                            każdej strony, zedytować jej treść i przesłać print-screen-a osobie, którą chcesz wkręcić. Nie
-                            znam
-                            innego zastosowania tego atrybutu...</p>
-                        <p>Photo by <a
-                            href="https://unsplash.com/@lucianosa76?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">luciano
-                            de sa</a> on <a
-                            href="https://unsplash.com/photos/ObwMZBdEWdI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-                        </p>
-                    </>
-                ),
+            body: (
+                <>
+                    <p>
+                        Hej, czy wiesz, że używając atrybutu "contenteditable" w jakimkolwiek ze znaczników, umożliwisz
+                        edycję treści?</p>
+                    <Blockquote>&lt;p&gt; contenteditable&lt;/p&gt;</Blockquote>
+                    <p contentEditable>
+                        Spróbuj tutaj coś napisać.</p>
+                    <p>
+                        Dzięki tej funkcji, przy użyciu Devtool-sów, możesz dodać atrybut "contenteditable" do
+                        znaczników
+                        z
+                        każdej strony, zedytować jej treść i przesłać print-screen-a osobie, którą chcesz wkręcić. Nie
+                        znam
+                        innego zastosowania tego atrybutu...</p>
+                    <p>Photo by <a
+                        href="https://unsplash.com/@lucianosa76?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">luciano
+                        de sa</a> on <a
+                        href="https://unsplash.com/photos/ObwMZBdEWdI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    </p>
+                </>
+            ),
             img: "https://images.unsplash.com/photo-1515253564590-b7ec416b06be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
         }
         ,
@@ -7775,84 +7892,83 @@ export const articlesLink = [
             id: 7,
             date: "28 maja 2023 roku",
             title: "HTML - znaki specjalne w odwołaniu do jednostek",
-            body:
-                (
-                    <>
-                        <p>
-                            Wrzucę tutaj przydatną ściągawkę, co gdy nie chcemy za każdym razem oznaczać np. nawiasów
-                            ostrokątnych span-em, a chcemy odwołać się do jakiegoś znacznika. </p>
-                        <TableContainer>
-                            <Table>
-                                <Caption>
-                                    Przykłady skrótów literałów w HTML
-                                </Caption>
-                                <Thead>
-                                    <Tr>
+            body: (
+                <>
+                    <p>
+                        Wrzucę tutaj przydatną ściągawkę, co gdy nie chcemy za każdym razem oznaczać np. nawiasów
+                        ostrokątnych span-em, a chcemy odwołać się do jakiegoś znacznika. </p>
+                    <TableContainer>
+                        <Table>
+                            <Caption>
+                                Przykłady skrótów literałów w HTML
+                            </Caption>
+                            <Thead>
+                                <Tr>
 
-                                        <Th>
-                                            literał
-                                        </Th>
-                                        <Th>
-                                            skrót do użycia literału bez "uruchomienia"
-                                        </Th>
-                                    </Tr>
-                                </Thead>
-                                <tbody>
-                                <Tr>
-                                    <td>
-                                        &#60;
-                                    </td>
-                                    <td>
-                                        <xmp>&lt;</xmp>
-                                    </td>
+                                    <Th>
+                                        literał
+                                    </Th>
+                                    <Th>
+                                        skrót do użycia literału bez "uruchomienia"
+                                    </Th>
                                 </Tr>
-                                <Tr>
-                                    <td>></td>
-                                    <td>
-                                        <xmp>&gt;</xmp>
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>"</td>
-                                    <td>
-                                        <xmp>&quot;</xmp>
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>'</td>
-                                    <td>
-                                        <xmp>&apos;</xmp>
-                                    </td>
-                                </Tr>
-                                <Tr>
-                                    <td>&</td>
-                                    <td>
-                                        <xmp>&amp;</xmp>
-                                    </td>
-                                </Tr>
-                                </tbody>
-                                <tfoot>
+                            </Thead>
+                            <tbody>
+                            <Tr>
+                                <td>
+                                    &#60;
+                                </td>
+                                <td>
+                                    <xmp>&lt;</xmp>
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>></td>
+                                <td>
+                                    <xmp>&gt;</xmp>
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>"</td>
+                                <td>
+                                    <xmp>&quot;</xmp>
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>'</td>
+                                <td>
+                                    <xmp>&apos;</xmp>
+                                </td>
+                            </Tr>
+                            <Tr>
+                                <td>&</td>
+                                <td>
+                                    <xmp>&amp;</xmp>
+                                </td>
+                            </Tr>
+                            </tbody>
+                            <tfoot>
 
-                                </tfoot>
-                            </Table>
-                        </TableContainer>
-                        <p>
-                            Ciekawą sztuczką też do ignorowania kodu jest zastosowanie znacznika otaczającego element</p>
-                        <Blockquote>
-                            &lt;xmp&gt;
-                        </Blockquote>
-                        <p>Jednak nie jest on wspierany przez wszystkie przeglądarki, więc możliwe, że
-                            jeśli
-                            oglądasz to na którejś, która tego nie czyta, to masz pewnie zagwostkę, co ja miałam na
-                            myśli...
-                        </p>
-                        <p>Photo by <a
-                            href="https://unsplash.com/@goran_ivos?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Goran
-                            Ivos</a> on <a
-                            href="https://unsplash.com/photos/idmvPhF8t4E?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-                        </p>
-                    </>
-                ),
+                            </tfoot>
+                        </Table>
+                    </TableContainer>
+                    <p>
+                        Ciekawą sztuczką też do ignorowania kodu jest zastosowanie znacznika otaczającego element</p>
+                    <Blockquote>
+                        &lt;xmp&gt;
+                    </Blockquote>
+                    <p>Jednak nie jest on wspierany przez wszystkie przeglądarki, więc możliwe, że
+                        jeśli
+                        oglądasz to na którejś, która tego nie czyta, to masz pewnie zagwostkę, co ja miałam na
+                        myśli...
+                    </p>
+                    <p>Photo by <a
+                        href="https://unsplash.com/@goran_ivos?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Goran
+                        Ivos</a> on <a
+                        href="https://unsplash.com/photos/idmvPhF8t4E?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    </p>
+                </>
+            ),
             img: "https://images.unsplash.com/photo-1508739826987-b79cd8b7da12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1973&q=80"
         }
         ,
@@ -7860,38 +7976,37 @@ export const articlesLink = [
             id: 6,
             date: "28 maja 2023 roku",
             title: "HTML - Input disabled",
-            body:
-                (
-                    <>
-                        <p>
-                            Witam ponownie! </p>
-                        <p>
-                            Wiecie, że dziś mija 4. rocznica, od kiedy W3C i WHATWG się dogadały? </p>
-                        <p>
-                            Powolutku, małymi krokami udoskonalam to, co zapisane. Jeszcze raz przypomnę, cała wizja tego
-                            bloga
-                            polega na zastosowaniu powtórzenia z kursu programowania. Tak jak poprzednio wrzuciłam teorię z
-                            przykładem z MDN-a, tak teraz bardziej się będę skupiała na praktyce. Oczywiście może to
-                            oznaczać, że
-                            nagle niż gruchy ni z pietruchy pojawi się tutaj jakiś losowy element, np. input.</p>
-                        <label>
-                            <input/>
-                        </label>
-                        <p>
-                            Powyżej mamy przykład input-a bez atrybutów. Co jednak stanie się, gdy dodam atrybut "disabled"?
-                        </p>
-                        <label>
-                            <input disabled/>
-                        </label>
-                        <p>
-                            Jak nazwa wskazuje, widzimy wtedy input-a, do którego nie da się nic wpisać.</p>
-                        <p>Photo by <a
-                            href="https://unsplash.com/@jodaarba?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jose
-                            Aragones</a> on <a
-                            href="https://unsplash.com/photos/81QkOoPGahY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-                        </p>
-                    </>
-                ),
+            body: (
+                <>
+                    <p>
+                        Witam ponownie! </p>
+                    <p>
+                        Wiecie, że dziś mija 4. rocznica, od kiedy W3C i WHATWG się dogadały? </p>
+                    <p>
+                        Powolutku, małymi krokami udoskonalam to, co zapisane. Jeszcze raz przypomnę, cała wizja tego
+                        bloga
+                        polega na zastosowaniu powtórzenia z kursu programowania. Tak jak poprzednio wrzuciłam teorię z
+                        przykładem z MDN-a, tak teraz bardziej się będę skupiała na praktyce. Oczywiście może to
+                        oznaczać, że
+                        nagle niż gruchy ni z pietruchy pojawi się tutaj jakiś losowy element, np. input.</p>
+                    <label>
+                        <input/>
+                    </label>
+                    <p>
+                        Powyżej mamy przykład input-a bez atrybutów. Co jednak stanie się, gdy dodam atrybut "disabled"?
+                    </p>
+                    <label>
+                        <input disabled/>
+                    </label>
+                    <p>
+                        Jak nazwa wskazuje, widzimy wtedy input-a, do którego nie da się nic wpisać.</p>
+                    <p>Photo by <a
+                        href="https://unsplash.com/@jodaarba?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jose
+                        Aragones</a> on <a
+                        href="https://unsplash.com/photos/81QkOoPGahY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    </p>
+                </>
+            ),
             img: "https://images.unsplash.com/photo-1523537444585-432d2bacc10d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
         }
         ,
@@ -7899,63 +8014,62 @@ export const articlesLink = [
             id: 5,
             date: "27 maja 2023 roku",
             title: "HTML - paragraph",
-            body:
-                (
-                    <>
-                        <p>
-                            Będę teraz bazować na przykładach z MDN-a i przekładać to na swój prosty rozum. Mamy sobie
-                            poniższy
-                            przykład zdania:
-                        </p>
-                        <Blockquote>My cat is very grumpy.</Blockquote>
-                        <p>
-                            Nie wiem za bardzo jak przetłumaczyć "stands by itself", ale chodzi tu o sytuację, gdy chcemy,
-                            stworzyć nowy akapit z treścią. Do tego celu służy znacznik
-                            &lt;p&gt;&lt;/p&gt;.
-                        </p>
-                        <p>
-                            &lt;p&gt;My cat is very grumpy.&lt;/p&gt;
-                        </p>
-                        <p>
-                            <b>BTW</b> Właśnie odkryłam jak w HTML umieścić w/w znaczniki tak, aby kod został zignorowany!
-                        </p>
-                        <Figure>
-                            <img className="article__image"
-                                 src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-small.png"
-                                 alt="grafika przedstawiająca tagi w HTML"/>
-                            <Figcaption>">Uwaga! Tagi w HTML nie są wrażliwe na zmianę
-                                wysokości
-                                liter! Znów przykład z MDN-a —
-                                gdy mamy znacznik &lt;title&gt; &lt;/title&gt;, możemy użyć
-                                np. &lt;Title&gt; &lt;/Title&gt; czy
-                                &lt;TiTlE&gt; &lt;/TiTlE&gt; i nie będzie to miało żadnego znaczenia.
-                            </Figcaption>
-                        </Figure>
-                        <p>
-                            Dobrze, to teraz wyjaśniając, z czym tu mamy do czynienia:</p>
-                        <ListUnordered>
-                            <ListItem>
-                                The opening tag (znacznik otwierający): Zawiera nazwę elementu, jak w tym przykładzie p od
-                                "paragraph". Umieszczony jest przed tekstem i otoczony jest nawiasami ostrokątnymi.
-                            </ListItem>
-                            <ListItem>The content (treść): Mamy tutaj dosłownie treść, którą
-                                chcemy
-                                otoczyć
-                                znacznikami HTML
-                            </ListItem>
-                            <ListItem>The closing tag (znacznik zamykający): Tak samo, jak w
-                                przypadku
-                                znacznika otwierającego, tyle że umieszczany po treści. Pokazuje gdzie dany element się
-                                kończy.
-                            </ListItem>
-                        </ListUnordered>
-                        <p>Photo by <a
-                            href="https://unsplash.com/@leiadakrozjhen?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Leiada
-                            Krozjhen</a> on <a
-                            href="https://unsplash.com/photos/7UxQUl3mdnw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-                        </p>
-                    </>
-                ),
+            body: (
+                <>
+                    <p>
+                        Będę teraz bazować na przykładach z MDN-a i przekładać to na swój prosty rozum. Mamy sobie
+                        poniższy
+                        przykład zdania:
+                    </p>
+                    <Blockquote>My cat is very grumpy.</Blockquote>
+                    <p>
+                        Nie wiem za bardzo jak przetłumaczyć "stands by itself", ale chodzi tu o sytuację, gdy chcemy,
+                        stworzyć nowy akapit z treścią. Do tego celu służy znacznik
+                        &lt;p&gt;&lt;/p&gt;.
+                    </p>
+                    <p>
+                        &lt;p&gt;My cat is very grumpy.&lt;/p&gt;
+                    </p>
+                    <p>
+                        <b>BTW</b> Właśnie odkryłam jak w HTML umieścić w/w znaczniki tak, aby kod został zignorowany!
+                    </p>
+                    <Figure>
+                        <img className="article__image"
+                             src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-small.png"
+                             alt="grafika przedstawiająca tagi w HTML"/>
+                        <Figcaption>">Uwaga! Tagi w HTML nie są wrażliwe na zmianę
+                            wysokości
+                            liter! Znów przykład z MDN-a —
+                            gdy mamy znacznik &lt;title&gt; &lt;/title&gt;, możemy użyć
+                            np. &lt;Title&gt; &lt;/Title&gt; czy
+                            &lt;TiTlE&gt; &lt;/TiTlE&gt; i nie będzie to miało żadnego znaczenia.
+                        </Figcaption>
+                    </Figure>
+                    <p>
+                        Dobrze, to teraz wyjaśniając, z czym tu mamy do czynienia:</p>
+                    <ListUnordered>
+                        <ListItem>
+                            The opening tag (znacznik otwierający): Zawiera nazwę elementu, jak w tym przykładzie p od
+                            "paragraph". Umieszczony jest przed tekstem i otoczony jest nawiasami ostrokątnymi.
+                        </ListItem>
+                        <ListItem>The content (treść): Mamy tutaj dosłownie treść, którą
+                            chcemy
+                            otoczyć
+                            znacznikami HTML
+                        </ListItem>
+                        <ListItem>The closing tag (znacznik zamykający): Tak samo, jak w
+                            przypadku
+                            znacznika otwierającego, tyle że umieszczany po treści. Pokazuje gdzie dany element się
+                            kończy.
+                        </ListItem>
+                    </ListUnordered>
+                    <p>Photo by <a
+                        href="https://unsplash.com/@leiadakrozjhen?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Leiada
+                        Krozjhen</a> on <a
+                        href="https://unsplash.com/photos/7UxQUl3mdnw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    </p>
+                </>
+            ),
             img: "https://images.unsplash.com/photo-1670109944124-d0772802a518?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1862&q=80"
         }
         ,
@@ -7963,45 +8077,44 @@ export const articlesLink = [
             id: 4,
             date: "27 maja 2023 roku",
             title: "HTML, czyli przeżyjmy to jeszcze raz",
-            body:
-                (
-                    <>
-                        <p>
-                            HTML, czyli <i>HyperText Markup Language</i>jest to język znaczników, który ma za zadanie opisać
-                            strukturę strony, opakować treść w znaczniki i utworzyć różnego typu elementy na stronie.
-                            Przeglądarka następnie parsuje kod HTML i renderuje utworzone tam elementy.</p>
-                        <p>
-                            HTML <em>nie jest</em> językiem programowania!</p>
-                        <p>
-                            <strong>W 1993 roku powstał pierwszy szkic dokumentu w <i>HTML-u</i>.</strong>
-                        </p>
-                        <p>
-                            Aktualnie mamy wersję <i>HTML5</i>, jednak nie czekamy na nowszą wersję. Ta wersja jest
-                            udoskonalana
-                            od <b>28 maja 2019</b> roku przez już dwie współpracujące ze sobą organizacje <i>W3C</i> i
-                            <i>WHATWG.</i>
-                        </p>
-                        <p>
-                            Po więcej teorii odsyłam do
-                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"
-                               title="HTML na MDNie"><i>MDNa</i></a>
-                            lub <a href="https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer"
-                                   target="_blank" title="MDN - ścieżka Frontend-owca">TU</a>
-                            lub do stron wyżej wymienionych organizacji
-                            <a href="https://www.w3.org/" target="_blank" title="W3C">W3C</a>
-                            i <a href="https://html.spec.whatwg.org/multipage/" target="_blank"
-                                 title="WHATWG"><i>WHATWG</i></a>.
-                        </p>
-                        <p>
-                            Ja tymczasem zabieram się do lektury dokumentacji i wrócę z przykładami.
-                        </p>
-                        <p>Photo by <a
-                            href="https://unsplash.com/@florianolv?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Florian
-                            Olivo</a> on <a
-                            href="https://unsplash.com/photos/4hbJ-eymZ1o?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-                        </p>
-                    </>
-                ),
+            body: (
+                <>
+                    <p>
+                        HTML, czyli <i>HyperText Markup Language</i>jest to język znaczników, który ma za zadanie opisać
+                        strukturę strony, opakować treść w znaczniki i utworzyć różnego typu elementy na stronie.
+                        Przeglądarka następnie parsuje kod HTML i renderuje utworzone tam elementy.</p>
+                    <p>
+                        HTML <em>nie jest</em> językiem programowania!</p>
+                    <p>
+                        <strong>W 1993 roku powstał pierwszy szkic dokumentu w <i>HTML-u</i>.</strong>
+                    </p>
+                    <p>
+                        Aktualnie mamy wersję <i>HTML5</i>, jednak nie czekamy na nowszą wersję. Ta wersja jest
+                        udoskonalana
+                        od <b>28 maja 2019</b> roku przez już dwie współpracujące ze sobą organizacje <i>W3C</i> i
+                        <i>WHATWG.</i>
+                    </p>
+                    <p>
+                        Po więcej teorii odsyłam do
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"
+                           title="HTML na MDNie"><i>MDNa</i></a>
+                        lub <a href="https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer"
+                               target="_blank" title="MDN - ścieżka Frontend-owca">TU</a>
+                        lub do stron wyżej wymienionych organizacji
+                        <a href="https://www.w3.org/" target="_blank" title="W3C">W3C</a>
+                        i <a href="https://html.spec.whatwg.org/multipage/" target="_blank"
+                             title="WHATWG"><i>WHATWG</i></a>.
+                    </p>
+                    <p>
+                        Ja tymczasem zabieram się do lektury dokumentacji i wrócę z przykładami.
+                    </p>
+                    <p>Photo by <a
+                        href="https://unsplash.com/@florianolv?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Florian
+                        Olivo</a> on <a
+                        href="https://unsplash.com/photos/4hbJ-eymZ1o?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    </p>
+                </>
+            ),
             img: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
         }
         ,
@@ -8009,72 +8122,71 @@ export const articlesLink = [
             id: 3,
             date: "27 maja 2023 roku",
             title: "Początki początków, czyli algorytmy i schematy blokowe",
-            body:
-                (
-                    <>
-                        <p>
-                            Jeszcze za czasów moich studiów logistycznych, byłam uczona czym są procesy zachodzące w
-                            organizacji
-                            i jak je sukcesywnie opisywać i usprawniać. Temat dosyć ciekawy, zważywszy na fakt, że można
-                            pisemną
-                            notatkę czy instrukcję zawierającą informacje o przepływie informacji zamienić w coś prostszego
-                            —
-                            właśnie w schemat blokowy. Los chciał, że wtedy zdobytą wiedzę, mogłam użyć w pełni
-                            profesjonalnie
-                            dopiero u mojego aktualnego pracodawcy.
-                        </p>
-                        <p>
-                            Czy są algorytmy? To spis operacji w danym procesie, nierzadko zawierających warunki. Algorytmy
-                            stosujemy używając schematów blokowych w opisie przepływu czynności lub właśnie używając kodu i
-                            np.
-                            instrukcji warunkowych tak, aby sprawić, że dana aplikacja zadziała w ten, a nie inny sposób.
-                        </p>
-                        <p>
-                            Gdy zobaczyłam ten pierwszy temat właśnie w zawartości mojego kursu programowania, niezmiernie
-                            się
-                            ucieszyłam. Wspaniale bowiem jest, gdy uczymy się nowych rzeczy i nawiązujemy do analogii z
-                            doświadczenia. Pamiętam, jak moja pierwszą pracą domową było wrzucenie schematu blokowego
-                            jakiejś
-                            wymyślonej przeze mnie czynności. Daleko nie musiałam szukać.
-                        </p>
-                        <Figure>
-                            <img alt="schemat pakowania dziecka do szkoły" className="article__image" src={Schema}/>
-                            <Figcaption>Schemat pakowania dziecka do szkoły</Figcaption>
-                        </Figure>
-                        <p>Mamy tutaj następujące elementy:</p>
-                        <ListUnordered>
-                            <ListItem>START / KONIEC — początek lub koniec procesu</ListItem>
-                            <ListItem>równoległobok - "przygotowanie"</ListItem>
-                            <ListItem>prostokąt - instrukcja / akcja / operacja</ListItem>
-                            <ListItem>romb - warunek.</ListItem>
-                        </ListUnordered>
-                        <p>
-                            Kto ma dzieci, ten — mam nadzieję — zgodzi się ze mną, że szykowanie latorośli do szkoły to
-                            <em>bardzo</em> pochłaniający czas proces. Ale tak, właśnie podeszłam do tego zagadnienia w
-                            ten
-                            sposób. W organizacjach schematy procesów i przepływu informacji wyglądają podobnie. Czy w
-                            programowaniu również? Jeśli tak, to jesteśmy w DOMu! (taki żarcik).
-                        </p>
-                        <p>
-                            <b>PS.</b><s>Widzę, że mimo poprawnego ustawienia importu do obrazków, jakimś cudem nie
-                            pojawiają
-                            się one po wrzuceniu strony na GitHub pages. Mało tego, wyrównanie do lewej listy na local-u
-                            działa, a na GitHub pages już nie. Mam ot praktyczny przykład problemu, który możemy
-                            rozwiązać
-                            na dniach.</s>Już działa!
-                        </p>
-                        <p>
-                            <b>PS2.</b> Zaczyna mnie razić wygląd bloga (pewnie Ciebie też), ale jeszcze raz podkreślam
-                            <strong> Blog ma być żywym organizmem, przykładem postępu w mojej powtórce nauki HTML, CSS i
-                                JS.</strong>
-                        </p>
-                        <p>Photo by <a
-                            href="https://unsplash.com/@alpridephoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Андрей
-                            Сизов</a> on <a
-                            href="https://unsplash.com/photos/nuz3rK5iiKg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-                        </p>
-                    </>
-                ),
+            body: (
+                <>
+                    <p>
+                        Jeszcze za czasów moich studiów logistycznych, byłam uczona czym są procesy zachodzące w
+                        organizacji
+                        i jak je sukcesywnie opisywać i usprawniać. Temat dosyć ciekawy, zważywszy na fakt, że można
+                        pisemną
+                        notatkę czy instrukcję zawierającą informacje o przepływie informacji zamienić w coś prostszego
+                        —
+                        właśnie w schemat blokowy. Los chciał, że wtedy zdobytą wiedzę, mogłam użyć w pełni
+                        profesjonalnie
+                        dopiero u mojego aktualnego pracodawcy.
+                    </p>
+                    <p>
+                        Czy są algorytmy? To spis operacji w danym procesie, nierzadko zawierających warunki. Algorytmy
+                        stosujemy używając schematów blokowych w opisie przepływu czynności lub właśnie używając kodu i
+                        np.
+                        instrukcji warunkowych tak, aby sprawić, że dana aplikacja zadziała w ten, a nie inny sposób.
+                    </p>
+                    <p>
+                        Gdy zobaczyłam ten pierwszy temat właśnie w zawartości mojego kursu programowania, niezmiernie
+                        się
+                        ucieszyłam. Wspaniale bowiem jest, gdy uczymy się nowych rzeczy i nawiązujemy do analogii z
+                        doświadczenia. Pamiętam, jak moja pierwszą pracą domową było wrzucenie schematu blokowego
+                        jakiejś
+                        wymyślonej przeze mnie czynności. Daleko nie musiałam szukać.
+                    </p>
+                    <Figure>
+                        <img alt="schemat pakowania dziecka do szkoły" className="article__image" src={Schema}/>
+                        <Figcaption>Schemat pakowania dziecka do szkoły</Figcaption>
+                    </Figure>
+                    <p>Mamy tutaj następujące elementy:</p>
+                    <ListUnordered>
+                        <ListItem>START / KONIEC — początek lub koniec procesu</ListItem>
+                        <ListItem>równoległobok - "przygotowanie"</ListItem>
+                        <ListItem>prostokąt - instrukcja / akcja / operacja</ListItem>
+                        <ListItem>romb - warunek.</ListItem>
+                    </ListUnordered>
+                    <p>
+                        Kto ma dzieci, ten — mam nadzieję — zgodzi się ze mną, że szykowanie latorośli do szkoły to
+                        <em>bardzo</em> pochłaniający czas proces. Ale tak, właśnie podeszłam do tego zagadnienia w
+                        ten
+                        sposób. W organizacjach schematy procesów i przepływu informacji wyglądają podobnie. Czy w
+                        programowaniu również? Jeśli tak, to jesteśmy w DOMu! (taki żarcik).
+                    </p>
+                    <p>
+                        <b>PS.</b><s>Widzę, że mimo poprawnego ustawienia importu do obrazków, jakimś cudem nie
+                        pojawiają
+                        się one po wrzuceniu strony na GitHub pages. Mało tego, wyrównanie do lewej listy na local-u
+                        działa, a na GitHub pages już nie. Mam ot praktyczny przykład problemu, który możemy
+                        rozwiązać
+                        na dniach.</s>Już działa!
+                    </p>
+                    <p>
+                        <b>PS2.</b> Zaczyna mnie razić wygląd bloga (pewnie Ciebie też), ale jeszcze raz podkreślam
+                        <strong> Blog ma być żywym organizmem, przykładem postępu w mojej powtórce nauki HTML, CSS i
+                            JS.</strong>
+                    </p>
+                    <p>Photo by <a
+                        href="https://unsplash.com/@alpridephoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Андрей
+                        Сизов</a> on <a
+                        href="https://unsplash.com/photos/nuz3rK5iiKg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    </p>
+                </>
+            ),
             img: "https://images.unsplash.com/photo-1642952469120-eed4b65104be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
         }
         ,
@@ -8082,89 +8194,88 @@ export const articlesLink = [
             id: 2,
             date: "26 maja 2023 roku",
             title: "Bieganie, czyli powrót na swój tor",
-            body:
-                (
-                    <>
-                        <p>
-                            Nastał czas refleksji dotyczącej mojej <s>ostatniej</s> ogólnej aktywności fizycznej.
-                            Jeszcze
-                            rok
-                            temu, dokładnie 14 maja 2022, spełniłam swoje marzenie o wzięciu udziału w biegu górskim
-                            na
-                            <i>SCARPA
-                                Ultra Trail</i>. Zadanie było to niełatwe, bo musieliśmy pokonać stromy odcinek 600
-                            m różnicy
-                            między
-                            poziomami. Dla amatora, takiego jak ja, pokonanie 10 km biegnąc po wzniesieniu było mega
-                            wyzwaniem.
-                            Razem z P. byliśmy
-                            ostatni. Ale satysfakcja była niesamowita!
-                        </p>
-                        <Q>No tak, ale przecież byliście ostatni.</Q>
-                        <p>
-                            Czy byliśmy pierwsi czy ostatni — nie miało to dla mnie większego znaczenia. No, dobra,
-                            gdybym
-                            żyła
-                            z nagród w zawodach i ze sponsoringu partnerów - <em>wtedy</em> miałoby to dla mnie
-                            ogromne
-                            znaczenie! Ale
-                            dopóki jestem amatorem, cieszę się taką drobnostką, bo pamiętam jak to było na początku.
-                        </p>
-                        <p>
-                            Początek to moment budowania bazy — pamiętam jak nie potrafiłam przebiec nawet pełnej
-                            minuty.
-                            Jednak
-                            z każdym treningiem, każdym kilometrem i każdą <em>właściwie</em> spędzoną regeneracją
-                            stawałam
-                            się
-                            silniejsza, a moja wytrzymałość rosła.</p>
-                        <Figure>
-                            <img alt="Katarzyna na tle wzniesienia Mogielicy" className="article__image"
-                                 src={Kate}/>
-                            <Figcaption><i>Scarpa Ultra Trail</i> 2022 Mogielica
-                            </Figcaption>
-                        </Figure>
-                        <p>
-                            Dlaczego takiej samej metodyki nie zastosowałam przy moich początkach nauki
-                            programowania?
-                            Dlaczego
-                            dopiero teraz dotarło do mnie, że mózg również potrzebuje regeneracji i jak w przypadku
-                            intensywnych
-                            treningów mięśnie doprowadzi się do zakwaszenia, tak i tutaj dojdzie do <i>przeładowania
-                            informacji</i>?
-                        </p>
-                        <p>
-                            Błąd nowicjusza — tak bym to skomentowała. Przychylniej patrzę teraz na swoje błędy i na
-                            ich
-                            podstawie wyciągam wnioski.
-                        </p>
-                        <p>
-                            Wracam do biegania i do przerabiania materiału z kursu jeszcze raz. Tym razem zastosuję
-                            przerwy
-                            (regenerację) i krótsze dystanse (okresy na naukę) na początek.
-                            <Q>Blog o programowaniu? A gdzie tu <em>JavaScript</em>?</Q>
-                            Już spieszę z odpowiedzią - <strong>prowadzę bloga na moim totalnie pierwszym projekcie
-                            na
-                            początku
-                            mojej
-                            ścieżki. Z każdą powtórzoną wiedzą zamierzam udoskonalać bloga, tak aby był żywym
-                            tworem,
-                            pokazującym moją naukę również poprzez praktykę. A że nie samym programowaniem człowiek
-                            żyje
-                            —
-                            na
-                            pewno będę tutaj przemycała historie z mojego doświadczenia z bieganiem</strong>.
-                        </p>
-                        <p>
-                            Trzymacie się ciepło i nie wątpcie w siebie!
-                        </p>
-                        <p>Photo by <a
-                            href="https://unsplash.com/@brianericksonco?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Brian
-                            Erickson</a> on <a
-                            href="https://unsplash.com/photos/d3YOebhmzkw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-                        </p>
-                    </>
-                ),
+            body: (
+                <>
+                    <p>
+                        Nastał czas refleksji dotyczącej mojej <s>ostatniej</s> ogólnej aktywności fizycznej.
+                        Jeszcze
+                        rok
+                        temu, dokładnie 14 maja 2022, spełniłam swoje marzenie o wzięciu udziału w biegu górskim
+                        na
+                        <i>SCARPA
+                            Ultra Trail</i>. Zadanie było to niełatwe, bo musieliśmy pokonać stromy odcinek 600
+                        m różnicy
+                        między
+                        poziomami. Dla amatora, takiego jak ja, pokonanie 10 km biegnąc po wzniesieniu było mega
+                        wyzwaniem.
+                        Razem z P. byliśmy
+                        ostatni. Ale satysfakcja była niesamowita!
+                    </p>
+                    <Q>No tak, ale przecież byliście ostatni.</Q>
+                    <p>
+                        Czy byliśmy pierwsi czy ostatni — nie miało to dla mnie większego znaczenia. No, dobra,
+                        gdybym
+                        żyła
+                        z nagród w zawodach i ze sponsoringu partnerów - <em>wtedy</em> miałoby to dla mnie
+                        ogromne
+                        znaczenie! Ale
+                        dopóki jestem amatorem, cieszę się taką drobnostką, bo pamiętam jak to było na początku.
+                    </p>
+                    <p>
+                        Początek to moment budowania bazy — pamiętam jak nie potrafiłam przebiec nawet pełnej
+                        minuty.
+                        Jednak
+                        z każdym treningiem, każdym kilometrem i każdą <em>właściwie</em> spędzoną regeneracją
+                        stawałam
+                        się
+                        silniejsza, a moja wytrzymałość rosła.</p>
+                    <Figure>
+                        <img alt="Katarzyna na tle wzniesienia Mogielicy" className="article__image"
+                             src={Kate}/>
+                        <Figcaption><i>Scarpa Ultra Trail</i> 2022 Mogielica
+                        </Figcaption>
+                    </Figure>
+                    <p>
+                        Dlaczego takiej samej metodyki nie zastosowałam przy moich początkach nauki
+                        programowania?
+                        Dlaczego
+                        dopiero teraz dotarło do mnie, że mózg również potrzebuje regeneracji i jak w przypadku
+                        intensywnych
+                        treningów mięśnie doprowadzi się do zakwaszenia, tak i tutaj dojdzie do <i>przeładowania
+                        informacji</i>?
+                    </p>
+                    <p>
+                        Błąd nowicjusza — tak bym to skomentowała. Przychylniej patrzę teraz na swoje błędy i na
+                        ich
+                        podstawie wyciągam wnioski.
+                    </p>
+                    <p>
+                        Wracam do biegania i do przerabiania materiału z kursu jeszcze raz. Tym razem zastosuję
+                        przerwy
+                        (regenerację) i krótsze dystanse (okresy na naukę) na początek.
+                        <Q>Blog o programowaniu? A gdzie tu <em>JavaScript</em>?</Q>
+                        Już spieszę z odpowiedzią - <strong>prowadzę bloga na moim totalnie pierwszym projekcie
+                        na
+                        początku
+                        mojej
+                        ścieżki. Z każdą powtórzoną wiedzą zamierzam udoskonalać bloga, tak aby był żywym
+                        tworem,
+                        pokazującym moją naukę również poprzez praktykę. A że nie samym programowaniem człowiek
+                        żyje
+                        —
+                        na
+                        pewno będę tutaj przemycała historie z mojego doświadczenia z bieganiem</strong>.
+                    </p>
+                    <p>
+                        Trzymacie się ciepło i nie wątpcie w siebie!
+                    </p>
+                    <p>Photo by <a
+                        href="https://unsplash.com/@brianericksonco?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Brian
+                        Erickson</a> on <a
+                        href="https://unsplash.com/photos/d3YOebhmzkw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    </p>
+                </>
+            ),
             img: "https://images.unsplash.com/photo-1511389969857-eb54b420278b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80"
         }
         ,
@@ -8172,120 +8283,118 @@ export const articlesLink = [
             id: 1,
             date: "25 maja 2023 roku",
             title: "Pierwsza rozmowa techniczna",
-            body:
-                (
-                    <>
-                        <p>
-                            Zapamiętam ten dzień na dobre. Wczoraj miałam swoją pierwszą rozmowę techniczną. Moje
-                            zawodowe
-                            zboczenie jako m.in. Inspektora Ochrony Danych zobowiązuje mnie również do
-                            przypomnienia, że
-                            dziś mija 5 lat od wprowadzenia <i>RODO</i> w Polsce. Ale to w ramach ciekawostki.
-                            Przecież
-                            tutaj będę
-                            pisać o
-                            swojej przygodzie z programowaniem.</p>
-                        <p>
-                            Wracając do tej rozmowy technicznej. Nie wiem, czy nadal pamiętacie to uczucie albo, czy
-                            rozmowa
-                            techniczna jest także przed Wami jak przede mną była owego wczorajszego dnia, ale to
-                            czas, gdy
-                            wątpliwości są poddawane Twoje umiejętności i na pewno wiara w siebie. I rozmowa
-                            techniczna nie
-                            ma na celu oczywiście pokazania czego kandydat nie umie (a nie umiałam sporo!), ale
-                            zwrócenie
-                            uwagi na
-                            to, z czego należy się jeszcze dokształcić.
-                        </p>
-                        <p>
-                            Piszę to akurat na moim pierwszym projekcie z kursu <i>"YouCode - Frontend Developer od
-                            podstaw"</i>
-                            z taką nostalgią jednak, ponieważ pamiętam, jaka ekscytacja towarzyszyła mi przy oddaniu
-                            tejże
-                            mojej <b>pierwszej</b> pracy domowej. Mimo że była nieidealna - <i>CSS</i> porozrzucane
-                            oddzielnie i
-                            znaczniki też jakoś z konwencją <i>BEM</i> mało co miały związane, to jednak złapałam
-                            się na
-                            tym, że to
-                            uczucie do mnie wróciło.
-                        </p>
-                        <p>
-                            Dzień po takiej <em>małej katastrofie</em>, ze świeżym umysłem zasiadłam do podsumowania
-                            mojej
-                            ścieżki,
-                            którą obrałam w grudniu 2022 roku. Dlaczego "małej katastrofie"? Dlatego, że podeszłam
-                            totalnie
-                            źle
-                            do zadania rekrutacyjnego, którego wykonanie otworzyło mi drzwi do rozmowy technicznej,
-                            na
-                            której
-                            omawiane były metody z tegoż, że zadania. Dlaczego źle, zapytacie? Ponieważ tak skupiłam
-                            się na
-                            wykonaniu zadania, że wyłączyłam myślenie, uporczywie szukając rozwiązania, które
-                            mogłoby mi
-                            pomóc,
-                            implementując je i nie rozumiejąc jego specyfiki.
-                        </p>
-                        <p>
-                            (Czytając poprzedni akapit, dochodzę do wniosku, że używam strasznie długich zdań. Może
-                            się
-                            wyrobię,
-                            ponieważ praktyka czyni mistrza).
-                        </p>
-                        <p>
-                            Dostałam na pewno nauczkę, a jako że <b>uczę się na błędach</b>, postanowiłam jeszcze
-                            raz wrócić
-                            do
-                            kursu.
-                            Słyszeliście o <i>syndromie oszusta</i>? Wczoraj uświadomiłam sobie, na czym on polega.
-                            A
-                            słyszeliście też o
-                            zjawisku <i>przeładowania treści</i> lub <i>nadmiaru informacji</i> w mózgu? Jest to
-                            raczej
-                            przypadłość
-                            nowicjuszy, takich jak ja, którzy napędzani wewnętrzną motywacją zdobywania nauki,
-                            pochłaniają
-                            wiedzę
-                            hurtowymi ilościami, by potem... ta wiedza zniknęła! Skąd to wiem? Dowiedziałam się o
-                            tym
-                            zjawisku
-                            dosyć niedawno, po ukończeniu kursu i oczywiście przepracowaniu każdego z modułów.
-                            Miałam
-                            momenty,
-                            że moduły tygodniowe pochłaniałam podczas <em></em>jednego dnia. Bardzo niezdrowo i
-                            bardzo bez
-                            sensu
-                            zważywszy na fakt, że nie pamiętam części materiału z tego okresu. Brzmi znajomo?
-                        </p>
-                        <p>
-                            Szukałam teorii wszędzie — na kursie, na <i>Codenga</i>, na <i>youtube</i>,
-                            na <i>freeCodeCamp</i>
-                            (bardzo
-                            fajna
-                            strona - polecam!), ale zapomniałam o jednym — o codziennej praktyce. Jak to się mówi
-                            mądry
-                            Polak po
-                            szkodzie — tak ze swojej strony mogę tylko podpowiedzieć, żeby jednak nie składać
-                            wypowiedzenia,
-                            jeśli nie ma się planu B. Możliwe, że moim wczorajszym popisem przekreśliłam swoje
-                            szanse na
-                            pracę w
-                            naprawdę super firmie. Czeka mnie teraz miesiąc na wypowiedzeniu — miesiąc niepewności
-                            co dalej.
-                        </p>
-                        <p>
-                            Natomiast dzięki temu doświadczeniu wiem, co chcę robić. <strong>Chcę zostać zawodowym
-                            <i>Frontend</i>-owcem!</strong>
-                        </p>
-                        <p>Photo by <a
-                            href="https://unsplash.com/@kobuagency?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">KOBU
-                            Agency</a> on <a
-                            href="https://unsplash.com/photos/7okkFhxrxNw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-                        </p>
-                    </>
-                ),
+            body: (
+                <>
+                    <p>
+                        Zapamiętam ten dzień na dobre. Wczoraj miałam swoją pierwszą rozmowę techniczną. Moje
+                        zawodowe
+                        zboczenie jako m.in. Inspektora Ochrony Danych zobowiązuje mnie również do
+                        przypomnienia, że
+                        dziś mija 5 lat od wprowadzenia <i>RODO</i> w Polsce. Ale to w ramach ciekawostki.
+                        Przecież
+                        tutaj będę
+                        pisać o
+                        swojej przygodzie z programowaniem.</p>
+                    <p>
+                        Wracając do tej rozmowy technicznej. Nie wiem, czy nadal pamiętacie to uczucie albo, czy
+                        rozmowa
+                        techniczna jest także przed Wami jak przede mną była owego wczorajszego dnia, ale to
+                        czas, gdy
+                        wątpliwości są poddawane Twoje umiejętności i na pewno wiara w siebie. I rozmowa
+                        techniczna nie
+                        ma na celu oczywiście pokazania czego kandydat nie umie (a nie umiałam sporo!), ale
+                        zwrócenie
+                        uwagi na
+                        to, z czego należy się jeszcze dokształcić.
+                    </p>
+                    <p>
+                        Piszę to akurat na moim pierwszym projekcie z kursu <i>"YouCode - Frontend Developer od
+                        podstaw"</i>
+                        z taką nostalgią jednak, ponieważ pamiętam, jaka ekscytacja towarzyszyła mi przy oddaniu
+                        tejże
+                        mojej <b>pierwszej</b> pracy domowej. Mimo że była nieidealna - <i>CSS</i> porozrzucane
+                        oddzielnie i
+                        znaczniki też jakoś z konwencją <i>BEM</i> mało co miały związane, to jednak złapałam
+                        się na
+                        tym, że to
+                        uczucie do mnie wróciło.
+                    </p>
+                    <p>
+                        Dzień po takiej <em>małej katastrofie</em>, ze świeżym umysłem zasiadłam do podsumowania
+                        mojej
+                        ścieżki,
+                        którą obrałam w grudniu 2022 roku. Dlaczego "małej katastrofie"? Dlatego, że podeszłam
+                        totalnie
+                        źle
+                        do zadania rekrutacyjnego, którego wykonanie otworzyło mi drzwi do rozmowy technicznej,
+                        na
+                        której
+                        omawiane były metody z tegoż, że zadania. Dlaczego źle, zapytacie? Ponieważ tak skupiłam
+                        się na
+                        wykonaniu zadania, że wyłączyłam myślenie, uporczywie szukając rozwiązania, które
+                        mogłoby mi
+                        pomóc,
+                        implementując je i nie rozumiejąc jego specyfiki.
+                    </p>
+                    <p>
+                        (Czytając poprzedni akapit, dochodzę do wniosku, że używam strasznie długich zdań. Może
+                        się
+                        wyrobię,
+                        ponieważ praktyka czyni mistrza).
+                    </p>
+                    <p>
+                        Dostałam na pewno nauczkę, a jako że <b>uczę się na błędach</b>, postanowiłam jeszcze
+                        raz wrócić
+                        do
+                        kursu.
+                        Słyszeliście o <i>syndromie oszusta</i>? Wczoraj uświadomiłam sobie, na czym on polega.
+                        A
+                        słyszeliście też o
+                        zjawisku <i>przeładowania treści</i> lub <i>nadmiaru informacji</i> w mózgu? Jest to
+                        raczej
+                        przypadłość
+                        nowicjuszy, takich jak ja, którzy napędzani wewnętrzną motywacją zdobywania nauki,
+                        pochłaniają
+                        wiedzę
+                        hurtowymi ilościami, by potem... ta wiedza zniknęła! Skąd to wiem? Dowiedziałam się o
+                        tym
+                        zjawisku
+                        dosyć niedawno, po ukończeniu kursu i oczywiście przepracowaniu każdego z modułów.
+                        Miałam
+                        momenty,
+                        że moduły tygodniowe pochłaniałam podczas <em></em>jednego dnia. Bardzo niezdrowo i
+                        bardzo bez
+                        sensu
+                        zważywszy na fakt, że nie pamiętam części materiału z tego okresu. Brzmi znajomo?
+                    </p>
+                    <p>
+                        Szukałam teorii wszędzie — na kursie, na <i>Codenga</i>, na <i>youtube</i>,
+                        na <i>freeCodeCamp</i>
+                        (bardzo
+                        fajna
+                        strona - polecam!), ale zapomniałam o jednym — o codziennej praktyce. Jak to się mówi
+                        mądry
+                        Polak po
+                        szkodzie — tak ze swojej strony mogę tylko podpowiedzieć, żeby jednak nie składać
+                        wypowiedzenia,
+                        jeśli nie ma się planu B. Możliwe, że moim wczorajszym popisem przekreśliłam swoje
+                        szanse na
+                        pracę w
+                        naprawdę super firmie. Czeka mnie teraz miesiąc na wypowiedzeniu — miesiąc niepewności
+                        co dalej.
+                    </p>
+                    <p>
+                        Natomiast dzięki temu doświadczeniu wiem, co chcę robić. <strong>Chcę zostać zawodowym
+                        <i>Frontend</i>-owcem!</strong>
+                    </p>
+                    <p>Photo by <a
+                        href="https://unsplash.com/@kobuagency?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">KOBU
+                        Agency</a> on <a
+                        href="https://unsplash.com/photos/7okkFhxrxNw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    </p>
+                </>
+            ),
             img: "https://images.unsplash.com/photo-1527689368864-3a821dbccc34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
         }
-        ,
     ]
 ;
