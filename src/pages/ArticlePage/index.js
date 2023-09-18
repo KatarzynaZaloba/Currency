@@ -31,7 +31,7 @@ const ArticlePage = () => {
                 {tags && (
                     tags.map((tag, index) => (
                         <span key={index}
-                              className="homePageTitle bg-blue-700 text-white text-sm py-0 px-1 my-3 rounded-md justify-center mr-1">
+                              className="homePageTitle bg-gradient-to-r from-emerald-700 to-green-700 text-white text-sm py-0 px-1 my-3 rounded-md justify-center mr-1">
                             {tag}
                         </span>
                     ))

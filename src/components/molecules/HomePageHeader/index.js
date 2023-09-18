@@ -13,11 +13,12 @@ const HomePageHeader = ({newestArticle}) => {
                 {tags && (
                     tags.map((tag, index) => (
                         <span key={index}
-                              className="homePageTitle bg-blue-700 text-white text-sm py-0 px-1 rounded-md justify-center mr-1">
+                              className="homePageTitle bg-gradient-to-r from-emerald-700 to-green-700 text-white text-sm py-0 px-1 rounded-md justify-center mr-1">
                             {tag}
                         </span>
                     ))
                 )}
+                <span className="bg-rose-500 text-white rounded-md px-1">New</span>
                 <h2 className="homePageTitle md:text-3xl text-xl font-semibold md:leading-10 leading-relaxed ease-in duration-300 active:text-indigo-400 visited:text-indigo-900">{newestArticle.title}</h2>
                 <div className="flex justify-start items-center">
                     <img src={Logo} className="rounded-full md:w-[36px] mr-2 md:inline hidden" alt="logo"/>
