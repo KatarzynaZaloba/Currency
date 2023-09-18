@@ -17,8 +17,129 @@ import Q from "../../atoms/Q";
 import Figure from "../../atoms/Figure";
 import Figcaption from "../../atoms/Figcaption";
 import Comment from "../../atoms/Comment";
+import Excercise1 from "../../organisms/Excercise1";
 
 export const articlesLink = [
+        {
+            id: 93,
+            date: "18 września 2023 roku",
+            title: "React - useEffect - efekty uboczne",
+            body: (
+                <>
+                    <p>Materiały pochodzą z kursu <i>YouCode - Frontend Developer od podstaw</i>.</p>
+                    <SmallestHeader>Do czego jest potrzebny Effect Hook?</SmallestHeader>
+                    <p>Używamy <b>Effect Hook-ów</b> do zarządzania tak zwanymi <i>side effect-ami</i>.</p>
+                    <SmallestHeader>Przykłady <i>side-effect-ów</i></SmallestHeader>
+                    <ListUnordered>
+                        <ListItem>
+                            pobranie danych z serwera po pierwszym wyrenderowaniu komponentu
+                        </ListItem>
+                        <ListItem>
+                            pobranie nowych danych przy nowych propsach (np. przy filtrowaniu lub paginacji)
+                        </ListItem>
+                        <ListItem>
+                            ręczna zmiana czegoś w drzewie <b>DOM</b>
+                        </ListItem>
+                        <ListItem>
+                            aktualizowanie tytułu strony
+                        </ListItem>
+                        <ListItem>
+                            logowanie czegoś po każdym renderze
+                        </ListItem>
+                        <ListItem>
+                            zapis do <b>localStorage</b>
+                        </ListItem>
+                        <ListItem>
+                            i wiele innych.
+                        </ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>Funkcja renderująca nie powinna powodować żadnych efektów ubocznych, dlatego
+                        potrzebujemy useEffect.</SmallestHeader>
+                    <Blockquote>
+                        <b>const</b> [count, setCount] = useState(0);<br/><br/>
+                        useEffect(() => &#123;<br/>
+                        &nbsp;&nbsp;document.title = `Kliknięto $&#123;count&#125; razy`;<br/>
+                        &#125;);<br/><br/>
+                        <b>return</b> (<br/>
+                        &nbsp;&nbsp;&lt;&gt;<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kliknięto $&#123;count&#125; razy<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;button onClick=&#123;() => setCount(count + 1)&#125;&gt;<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kliknij mnie<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;<br/>
+                        &nbsp;&nbsp;&lt;/&gt;<br/>
+                    </Blockquote>
+                    <Excercise1/>
+                    <p>W powyższym przykładzie kliknięcie w przycisk spowoduje zmianę tytułu strony jak i nazwy przycisku.
+                        Moglibyśmy aktualizować sobie nazwę przycisku bez użycia useEffect, ale prawidło jest to robić w
+                        taki izolowany sposób, jaki dostarcza nam właśnie <b>useEffect.</b></p>
+                    <SmallestHeader>
+                        Jak działa useEffect?
+                    </SmallestHeader>
+                    <p>Dodając efekt, mówimy <b>React-owi</b>, że ma coś do zrobienia po aktualizacji <b>DOM</b>-u. React
+                        zapamiętuje przekazaną przez nas funkcję i w odpowiednim momencie ją wywołuje. Dzięki temu, że
+                        dodajemy efekt wewnątrz komponentu, mamy dostęp do <b>props</b> i do wewnętrznego <b>stanu</b>.
+                        Ostatnią rzeczą, o której warto wspomnieć jest to, że domyślnie każdy efekt wywołuje się po
+                        każdym <b>renderze</b>. Możemy to zmienić.</p>
+                    <SmallestHeader>
+                        Optymalizacja wydajności
+                    </SmallestHeader>
+                    <Blockquote>
+                        useEffect(() => &#123;<br/>
+                        &nbsp;&nbsp;console.log(`Imię i nazwisko: $&#123;name&#125; $&#123;surname&#125;`);<br/>
+                        &#125;, [name, surname]);
+                    </Blockquote>
+                    <p>Możemy poprawić wydajność poprzez zastosowanie tablicy zależności i dodanie w niej właściwości, po
+                        zmianie której nastąpi ponowne wyrenderowanie strony. Dzięki temu, dopóki dana właściwość nie zmieni
+                        wartości, nie dojdzie do ponownego przeładowania strony. Wartości danych właściwości są
+                        porównywane <i>płytko</i> i trzeba tutaj pamiętać o <i>immutability</i>, czyli jeżeli w jednej z
+                        tych właściwości jest obiekt, i ktoś zrobi <i>push-a</i> pod ten obiekt, nie oznacza, że React
+                        wykryje moment do zastosowania efektu ubocznego. </p>
+                    <p>Należy umieścić wszystkie wartości, od których
+                        zależy efekt. Jeżeli tego nie zrobimy - efekt będzie widział tylko stare wartości.</p>
+                    <SmallestHeader>
+                        Jeśli efekt ma zostać wywołany tylko raz, to przekazujemy pustą tablicę zależności.
+                    </SmallestHeader>
+                    <Blockquote>
+                        useEffect(() => &#123;<br/>
+                        &nbsp;&nbsp;setInterval(() => &#123;<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;setCount(count => count + 1);<br/>
+                        &nbsp;&nbsp;&#125;, 1000);<br/>
+                        &#125;, []);
+                    </Blockquote>
+                    <p>Dajemy tym samym znać <i>React</i>-owi, że ten efekt nie zależy od żadnej właściwości,
+                        więc <i>React</i> wywołuje go tylko raz.</p>
+                    <SmallestHeader>
+                        Sprzątanie
+                    </SmallestHeader>
+                    <p>Niektóre efekty wymagają <q>posprzątania</q>. W poniższym przykładzie,
+                        zastosowanie <i>setInterval</i> wymaga wyczyszczenia. Nasz efekt może nam zwrócić funkcje, która nam
+                        posprząta. <i>React</i> nam tą funkcję wywoła, kiedy komponent zostanie odmontowany lub przed
+                        kolejnym wywołaniem efektu.</p>
+                    <Blockquote>
+                        useEffect(() => &#123;<br/>
+                        &nbsp;&nbsp;<b>const</b> intervalId = setInterval(() => &#123;<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;setCount(count => count + 1);<br/>
+                        &nbsp;&nbsp;&#125;, 1000);<br/><br/>
+                        &nbsp;&nbsp;<b>return</b> () => &#123;<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;clearInterval(intervalId);<br/>
+                        &nbsp;&nbsp;&#125;;<br/>
+                        &#125;, []);
+                    </Blockquote>
+                    <SmallestHeader>
+                        W jednym komponencie możemy dodać kilka różnych efektów, a nawet jest to rekomendowane.
+                    </SmallestHeader>
+                    <p>Photo by <a
+                        href="https://unsplash.com/@6heinz3r?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Gabriel
+                        Heinzer</a> on <a
+                        href="https://unsplash.com/photos/g5jpH62pwes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    </p>
+                </>
+            ),
+            tag: "react, javascript",
+            img: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+        },
         {
             id: 92,
             date: "12 września 2023 roku",
@@ -531,7 +652,11 @@ export const articlesLink = [
                 <>
                     <p>Zdecydowałam się w końcu na przeniesienie bloga na Reacta. Wracam niebawem!</p>
                     <p>Stara wersja bloga <a href="https://katarzynazaloba.github.io/blog-old/">TUTAJ</a></p>
-                    <p>https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2021&q=80</p>
+                    <p>Photo by <a
+                        href="https://unsplash.com/@dinoreichmuth?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Dino
+                        Reichmuth</a> on <a
+                        href="https://unsplash.com/photos/A5rCN8626Ck?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    </p>
                 </>
             ),
             img: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2021&q=80"
