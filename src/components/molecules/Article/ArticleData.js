@@ -18,8 +18,180 @@ import Figure from "../../atoms/Figure";
 import Figcaption from "../../atoms/Figcaption";
 import Comment from "../../atoms/Comment";
 import Excercise1 from "../../organisms/Excercise1";
+import UnderSmallestHeader from "../../atoms/UnderSmallestHeader";
 
 export const articlesLink = [
+        {
+            id: 95,
+            date: "19 września 2023 roku",
+            title: "Algorytmy i struktury danych - ciąg dalszy",
+            body: (
+                <>
+                    <SmallestHeader>
+                        Rozwiązywanie problemów za pomocą algorytmów - ciąg dalszy
+                    </SmallestHeader>
+                    <p>W kwestii wyboru algorytmu, istotnym aspektem jest <b>złożoność obliczeniowa algorytmów</b>. Aby
+                        odpowiednio wybrać algorytm poprzez wzięcie pod uwagę tego aspektu , należy odpowiedzieć sobie na
+                        pytanie:
+                        w przypadku dwóch programów, które wykonują to samo zadanie, ale są wykonane za pomocą odmiennych
+                        metod - <b>który z nich jest efektywniejszy?</b></p>
+                    <p> Aby poprawnie skonstruować algorytm, należy:</p>
+                    <ListOrdered>
+                        <ListItem>
+                            sformułować zadania i cel - należy ustalić jaki dokładnie problem ma rozwiązywać dany algorytm
+                        </ListItem>
+                        <ListItem>
+                            zdefiniować dane wejściowe - głownie dotyczy to typu danych (czy są to liczby rzeczywiste,
+                            całkowite czy może ciągi znaków?)
+                        </ListItem>
+                        <ListItem>
+                            określić wynik (danych wyjściowych) oraz sposobu jego prezentacji
+                        </ListItem>
+                        <ListItem>
+                            wybrać metodę wykonania zadania (jeśli istnieje kilka możliwości, warto wybrać możliwie
+                            najefektywniejszą metodę)
+                        </ListItem>
+                        <ListItem>
+                            rozpisać algorytm zgodnie z wybraną metodą
+                        </ListItem>
+                        <ListItem>
+                            przeanalizować poprawność rozwiązania
+                        </ListItem>
+                        <ListItem>
+                            przeprowadzić testy dla różnych danych (jest to istotne ze względu na to, że algorytm powinien
+                            być uniwersalny i działać prawidłowo dla wszystkich danych danego typu)
+                        </ListItem>
+                        <ListItem>
+                            ocenić skuteczność algorytmu (między innymi jego szybkość i poziom skomplikowania).
+                        </ListItem>
+                    </ListOrdered>
+                    <SmallestHeader>
+                        Rekurencja
+                    </SmallestHeader>
+                    <p><b>Rekurencja</b> oznacza <b>odwoływanie się (na przykład funkcji) do samej siebie</b>. W ogólnym
+                        rozumieniu i użyciu rekurencji chodzi o to, aby rozłożyć problem na coraz mniejsze fragmenty tak,
+                        żeby rozwiązanie było stosunkowo łatwe. </p>
+                    <p>Popularną analogią jest <i>matrioszka</i>, czyli rosyjska drewniana zabawka w postaci wydrążonych w
+                        środku lalek - mniejsza znajduje się w większej, aż finalnie pojawia się ostatnia lalka,
+                        najmniejsza,
+                        która nie nie jest wydrążona i nie może pomieścić w sobie następnej. Ów zabawkę możemy rozkładać do
+                        chwili, w której natrafimy na ostateczny element, z którym możemy pracować. Rozbrajamy problem
+                        kawałek po kawałku.</p>
+                    <p>Kolejną dosyć trafną analogią <i>rekurencji</i> jest przykład wydawania polecenia pozbierania zabawek
+                        w kierunku dziecka. Dajmy na to trzylatek - nie podejdzie do problemu całościowo, nie weźmie
+                        wszystkich zabawek i wrzuci je naraz do pudełka, ale podejdzie po jedną zabawkę, odłoży ją i tak do
+                        momentu, aż upora się z zadaniem.. albo skończy mu się zapas koncentracji :). Ciało funkcji (już
+                        pomijając kwestie koncentracji dziecka) pozostało to samo - podnieść zabawki z podłogi i umieścić w
+                        pudełku, jednak wykonanie zostało rozbite na <i>n</i> pomniejszych zadań.</p>
+                    <p>Ostatni przykład obrazujący rekurencję będzie opierał się na definicji <i>ciągu Fibonacciego</i>, w
+                        przypadku której funkcja jest zdefiniowana poprzez odwołanie się w definicji do niej samej:</p>
+                    <Figure>
+                        <Figcaption>
+                            <img
+                                src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ea9dac862682a4bca20322cdf6e62a3924a00732"
+                                alt="ciąg Fibonacciego"/>
+                        </Figcaption>
+                    </Figure>
+                    <p>Istotnym jest, że każda definicja rekurencyjna wymaga co najmniej jednego przypadku bazowego (to
+                        znaczy nie rekurencyjnego), ponieważ w innym razie nie zostanie nigdy zakończona (błąd logiczny -
+                        rekurencja nieskończona). W przypadku powyższej definicji wartościami bazowymi są wartości 0 i
+                        1.</p>
+                    <p>Wynik dla <i>fib(4)</i> osiągamy w sposób następujący:</p>
+                    <Blockquote>
+                        fib(4) = fib(3) + fib(2) = (fib(2) + fib(1)) + (fib(1) + fib(0))<br/>
+                        = ((fib(1) + fib(0) + fib(1)) + (fib(1) + fib(0)) <br/>
+                        = ((1 + 0) + 1) + (1 + 0) = 2 + 1 = 3<br/>
+                    </Blockquote>
+                    <SmallestHeader>
+                        Techniki projektowania algorytmów
+                    </SmallestHeader>
+                    <UnderSmallestHeader>
+                        Dziel i zwyciężaj
+                    </UnderSmallestHeader>
+                    <p>Technika <b>dziel i zwyciężaj</b> opiera się na rekurencyjnym dzieleniu zagadnienia na dwa mniejsze
+                        podproblemy, co prowadzi do stosunkowo efektywniejszego rozwiązania problemu. W powyższej technice
+                        podproblemy - zgodnie z zasadą rekurencyjności - stanowią mniejsze kopie głównego zagadnienia.
+                        Oficjalnie wykorzystano ją w 1960 roku i reasumując polega na dzieleniu problemu do momentu, w
+                        którym podproblemy można bezpośrednio rozwiązać.</p>
+                    <UnderSmallestHeader>
+                        Programowanie dynamiczne
+                    </UnderSmallestHeader>
+                    <p><b>Programowanie dynamiczne</b> jest stosowane zwykle w celu rozwiązywania problemów
+                        optymalizacyjnych i
+                        stanowi alternatywę w przypadku niektórych zagadnień, które były zwykle rozwiązywane metodami
+                        zachłannymi. Trzeba wspomnieć też, że stanowi ulepszenie metody <i>dziel i zwyciężaj</i> o ile w
+                        mniejszych podproblemach wielokrotnie wykonywane są te same obliczenia.</p>
+                    <p>Do zasad <b>programowania dynamicznego</b> zaliczamy:</p>
+                    <ListUnordered>
+                        <ListItem>
+                            wprowadzenie pomocniczej tablicy, która jest wykorzystywana w kolejnych krokach, do
+                            zapamiętywania wyników poszczególnych obliczeń
+                        </ListItem>
+                        <ListItem>
+                            wykonywanie obliczenia dla każdego podproblemu tylko raz, oraz zapamiętanie wyników. W ten
+                            sposób unikamy wielokrotnego wykonywania tych samych obliczeń.
+                        </ListItem>
+                    </ListUnordered>
+                    <p>Przykładowe zastosowanie programowania dynamicznego:</p>
+                    <ListUnordered>
+                        <ListItem>
+                            algorytm <i>Floyda-Warshalla</i>, czyli znajdywanie najkrótszych ścieżek pomiędzy wszystkimi
+                            wierzchołkami grafu
+                        </ListItem>
+                        <ListItem>
+                            automaty, np. kawowe, przy wydawaniu reszty tak, aby monet było jak najmniej
+                        </ListItem>
+                    </ListUnordered>
+                    <UnderSmallestHeader>
+                        Metoda zachłanna
+                    </UnderSmallestHeader>
+                    <p>W przypadku <b>metody zachłannej</b> dany algorytm na każdym kroku każdorazowo dokonuje najlepszego z
+                        możliwych wyborów. Oczywiście robi to w celu efektywnego uzyskania końcowego rozwiązania. Jeśli
+                        chodzi o decyzje optymalne, to podejmowane są jedynie lokalnie. Cechą szczególną jest to, że każde
+                        kolejne działanie wynika ze wcześniej podjętych decyzji. Zdarza się również, że ostatecznie
+                        podejście okazuje się nieoptymalne (nie zawsze znajdujemy pełne rozwiązanie, dużo częściej jest to
+                        rozwiązanie przybliżone).</p>
+                    <p>Przykładem <b>metody zachłannej</b> może być <q>zapełnienie plecaka</q>. Przy założeniu, że
+                        mamy <i>n</i> przedmiotów oraz plecak o określonej zawartości. Chcemy wybrać określoną liczbę
+                        przedmiotów tak, aby zmieściły się w plecaków i przy okazji chcemy zostawić wolną przestrzeń o jak
+                        najmniejszej wielkości. W przypadku wyżej wymienionej metody pakowanie plecaka zaczyna się od
+                        najmniejszych przedmiotów i każdorazowo podejmuje się decyzję o tym, jaki przedmiot powinien być
+                        następny. Jak już napisałam wcześniej - nie każdy wynik jest optymalny (tak by było w przypadku
+                        plecaka o pojemności 3 litrów, do którego chcielibyśmy włożyć cztery przedmioty o objętościach 1l,
+                        1l, 1,5l i 1,5l).</p>
+                    <p>Przykłady <b>algorytmów zachłannych:</b></p>
+                    <ListUnordered>
+                        <ListItem>
+                            algorytm <i>Dijkstry</i>, czyli znajdowanie najkrótszej ścieżki w grafie pomiędzy wybranymi
+                            wierzchołkami (przy nieujemnych wagach krawędzi)
+                        </ListItem>
+                        <ListItem>
+                            algorytm <i>Kruskala</i>, czyli wyznaczanie minilanego drzewa rozpinającego dla grafu
+                            nieskierowanego
+                            ważonego (przy założeniu, że jest on spójny). Oznacza to, że algorytm znajduje drzewo, które
+                            zwiera wszystkie wierzchołki grafu, a waga krawędzi będzie możliwie najniższa.
+                        </ListItem>
+                    </ListUnordered>
+                    <UnderSmallestHeader>
+                        Metoda kolejnych tranformacji
+                    </UnderSmallestHeader>
+                    <p>W przypadku konstruowania algorytmu za pomocą <b>metody kolejnych transformacji</b> rozpoczyna się od
+                        stworzenia prostego, chociaż często mało efektywnego algorytmu. Kolejnym krokiem jest wykonanie
+                        prostej transformacji (lub kilku kolejnych) w celu przeistoczenia algorytmu początkowego w docelowy
+                        (coś w podobie <i>metody kolejnych przybliżeń</i> w matematyce). Przy przekształcaniu algorytmu
+                        usuwane sią zbędne elementy algorytmu, albo dodawane nowe.
+                    </p>
+                    <p></p>
+                    <p>Photo by <a
+                        href="https://unsplash.com/@alinnnaaaa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alina
+                        Grubnyak</a> on <a
+                        href="https://unsplash.com/photos/ZiQkhI7417A?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    </p>
+                </>
+            ),
+            tag: "algorytmy",
+            img: "https://images.unsplash.com/photo-1545987796-200677ee1011?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        },
         {
             id: 94,
             date: "18 września 2023 roku",
@@ -158,7 +330,7 @@ export const articlesLink = [
                             możliwość wyszukiwania rozwiązań problemu i występowanie pomocy
                         </ListItem>
                         <ListItem>
-                           częstość występowania błędów oraz klarowność komunikatów o błędach
+                            częstość występowania błędów oraz klarowność komunikatów o błędach
                         </ListItem>
                         <ListItem>
                             plastyczność i przejrzystość interfejsu
