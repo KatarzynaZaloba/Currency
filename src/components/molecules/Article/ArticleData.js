@@ -22,9 +22,82 @@ import UnderSmallestHeader from "../../atoms/UnderSmallestHeader";
 
 export const articlesLink = [
         {
+            id: 96,
+            date: "20 września 2023 roku",
+            title: "Algorytmy i struktury danych - część trzecia",
+            body: (
+                <>
+                    <SmallestHeader>
+                        Sposoby badania poprawności algorytmów
+                    </SmallestHeader>
+                    <p>Napisanie programu, wprowadzenie go do komputera, skompilowanie i uruchomienie nie są równoznaczne z
+                        tym, że będzie ów program pracował prawidłowo. O ile w przypadku małych aplikacji (na własny użytek)
+                        nie jest to istotne, ponieważ jeśli ktoś ucierpi to tylko my, to w przypadku komercjalizacji
+                        programu pojawia się pewien szkopuł, ponieważ za ewentualne szkody poniesione przez użytkowników
+                        odpowiedzialny zawsze będzie twórca.</p>
+                    <p>Błędy zawsze się zdarzają i będą się zdarzać, nawet w przypadku produktów wydawanych przez wielkie
+                        koncerny programistyczne. Często dopiero po kilku miesiącach od premiery wydawane są wersje
+                        pozbawione wcześniej niezauważalnych błędów. Niedopracowany produkt końcowy może pojawić się z kilku
+                        przyczyn - np. gdy chcemy wyprzedzić konkurencję, albo z powodu niedostatniego przetestowania
+                        programu.</p>
+                    <p>Temat unikania błędów w programach jest bardzo istotnym zagadnieniem i stanowi podstawę wielu
+                        poważnych badań naukowych. Wytwarzanie produktu to proces wieloetapowy. Programista tworzy kod, ale
+                        przed tym pojawia się pomysł i wstępny projekt. Na tym etapie warto już sobie odpowiedzieć na
+                        pytanie - czy dany program będzie zawsze działał poprawnie, nawet po uwzględnieniu każdej
+                        konfiguracji danych wejściowych?</p>
+                    <p>Znalezienie odpowiedzi na to pytanie nie jest proste, szczególnie w przypadku badania skomplikowanych
+                        procedur. Nawet pozornie krótkie i proste w zapisie programy mogą generować mnóstwo potencjalnych
+                        sytuacji, które nie zostaną wykluczone podczas ręcznego testowania programu. Testowanie automatyczne
+                        aplikacji często opiera się o dowody natury matematycznej.</p>
+                    <p>Warto tutaj wspomnieć o <i>metodzie Floyda, czyli o metodzie niezmienników</i>. W przypadku
+                        określonego algorytmu należy wziąć pod uwagę kluczowe punkty, takie jak momenty inicjalizacji
+                        zmiennych, którymi będzie operować procedura, tak zwana pętla główna, czy testy zakończenia
+                        algorytmu. W każdym z takich punktów można określić niezmienniki, czyli zawsze prawdziwe warunki.
+                        Wynik testu automatycznego można uprościć do samego stwierdzenia zachowania prawdziwości określonych
+                        niezmienników dla dowolnych danych wejściowych. </p>
+                    <p>Metody stosowane w testach automatycznych:</p>
+                    <ListUnordered>
+                        <ListItem>
+                            <b>formalne udowodnienie</b> (np. za pomocą indukcji matematycznej) <b>zachowania niezmienników
+                            dla dowolnych danych wejściowych</b>
+                        </ListItem>
+                        <ListItem>
+                            <b>sprawdzenie stanu punktów kontrolnych za pomocą debuggera</b> (możemy w ten sposób odczytać
+                            wartości istotnych zmiennych i sprawdzić, czy zachowują się poprawnie dla określonych danych
+                            wejściowych)
+                        </ListItem>
+                    </ListUnordered>
+                    <p>Twierdzi się, że każdy program, który został zbudowany za pomocą tych metod jest z zasady poprawny,
+                        jeżeli po drodze nie został popełniony błąd. Algorytm może zostać wygenerowany dopiero po jego
+                        poprawnym zapisaniu zgodnie z poniższymi punktami:</p>
+                    <ListOrdered>
+                        <ListItem>
+                            &#123;warunki wstępne&#125;
+                        </ListItem>
+                        <ListItem>
+                            poszukiwany program
+                        </ListItem>
+                        <ListItem>
+                            &#123;warunki końcowe&#125;
+                        </ListItem>
+                    </ListOrdered>
+                    <p>Jeszcze tak słowem podsumowania, zanim przejdę do następnego tematu - jeżeli istnieje możliwość
+                        zastosowania ciągu instrukcji powodujących bezpośrednie przejście z warunków wstępnych do warunków
+                        końcowych - formalny dowód poprawności jest tutaj niepotrzebny.</p>
+                    <p>Photo by <a
+                        href="https://unsplash.com/@mikofilm?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mike
+                        Kononov</a> on <a
+                        href="https://unsplash.com/photos/lFv0V3_2H6s?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    </p>
+                </>
+            ),
+            tag: "algorytmy",
+            img: "https://images.unsplash.com/photo-1480944657103-7fed22359e1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80"
+        },
+        {
             id: 95,
             date: "19 września 2023 roku",
-            title: "Algorytmy i struktury danych - ciąg dalszy",
+            title: "Algorytmy i struktury danych - część druga",
             body: (
                 <>
                     <SmallestHeader>
