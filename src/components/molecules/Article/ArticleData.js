@@ -2,6 +2,8 @@ import React from "react";
 import Kate from "../../../images/scarpa.jpg";
 import Schema from "../../../images/schemat.png";
 import Null from "../../../images/nullUndefined.jpg";
+import Filo from "../../../images/filo.png";
+import Tree from "../../../images/tree.png";
 import Blockquote from "../../atoms/Blockquote";
 import SmallestHeader from "../../atoms/SmallestHeader";
 import ListUnordered from "../../molecules/ListUnordered";
@@ -21,6 +23,206 @@ import Excercise1 from "../../organisms/Excercise1";
 import UnderSmallestHeader from "../../atoms/UnderSmallestHeader";
 
 export const articlesLink = [
+        {
+            id: 97,
+            date: "21 września 2023 roku",
+            title: "Algorytmy i struktury danych - część czwarta",
+            body: (
+                <>
+                    <SmallestHeader>
+                        Struktury danych
+                    </SmallestHeader>
+                    <p>
+                        Każdy język programowania wykorzystuje określone <b>typy danych</b>. Typy danych to po prostu
+                        sposoby przechowywania danych w pamięci komputera i stanowią tak zwane elementy bazowe. Przykładami
+                        takich typów mogą być tak zwane <i>listy</i>, <i>grafy</i> czy <i>drzewa binarne</i>.
+                    </p>
+                    <p><b>Listy</b> pozwalają na tworzenie elastycznych baz danych. <b>Drzewa binarne</b> mogą służyć do
+                        analizy wyrażeń arytmetycznych, natomiast <b>grafy</b> ułatwiają rozwiązywanie zagadnień związanych
+                        z zakresu sztucznej inteligencji.</p>
+                    <p>Podczas rozwiązywania danego problemu (niekoniecznie rozwiązywanego przy pomocy komputera) dokonujemy
+                        wyboru abstrakcyjnego modelu rzeczywistości, który ma reprezentować daną rzeczywistą sytuację -
+                        właśnie podczas definiowania zbioru danych.</p>
+                    <p>Każdy rodzaj zbioru danych charakteryzuje się odmiennymi strukturami wewnętrznymi (ułożeniem danych)
+                        oraz odmiennymi sposobami zapisu i dostępu. Wybór rodzaju zbioru danych powinien być podejmowany w
+                        oparciu o rodzaj rozwiązywanego problemu (przewidywanych operacji, jakie będą wykonywane) oraz
+                        oczywiście dostępnych możliwości obliczeniowych komputera.</p>
+                    <p><b>Podstawowe struktury danych</b> reprezentują wycinek rzeczywistości. Zwykle mamy wtedy do
+                        czynienia z podstawowymi strukturami lub ich pochodnymi takimi jak:</p>
+                    <ListUnordered>
+                        <ListItem>
+                            <b>tablica</b> - jest to struktura jednorodna składająca się z wielu elementów ułożonych jeden
+                            po drugim. Pozwala na swobodne odwoływanie się do jej składowych za pomocą indeksów.
+                        </ListItem>
+                        <ListItem>
+                            <b>rekord</b> - jest to struktura niejednorodna, która zawiera wiele elementów różnego typu, do
+                            których odwołujemy się za pomocą ich nazwy. Stanowi podstawę przy tworzeniu typów złożonych,
+                            które składają się z elementów dowolnego typu, np. bazy danych zawierają rekordy, które z kolei
+                            zapisywane są w tabelach w kolejnych wierszach.
+                        </ListItem>
+                        <ListItem>
+                            <b>tabela</b> - jest to struktura niejednorodna, która składa się z wierszy i kolumn. Elementy
+                            zapisane w różnych kolumnach nie muszą zawierać danych tego samego typu. W przypadku baz danych
+                            tabele w kolumnach mogą zawierać unikalne klucze umożliwiające powiązanie wielu różnych rekordów
+                            oraz optymalizację relacyjnych baz danych.
+                        </ListItem>
+                        <ListItem>
+                            <b>zbiór</b> - jest to struktura jednorodna elementów zgrupowanych w jedną całość.
+                        </ListItem>
+                        <ListItem>
+                            <b>plik sekwencyjny</b> - jest to struktura niejednorodna, która składa się z rekordów
+                            odczytywanych przez komputer od początku do końca i możliwe jest jego stałe rozbudowywanie
+                            poprzez dopisywanie kolejnej porcji danych. Można za jego pomocą dokonywać wielu operacji:
+                            zapisu, odczytu, dołączania czy przechodzenia do kolejnych elementów aż do momentu osiągnięcia
+                            znaku końca w pliku.
+                        </ListItem>
+                        <ListItem>
+                            <b>string</b> - jest to struktura jednorodna ciąggu znaków składających się z sekwencji typu
+                            znakowego. Teksty (<i>stringi</i>) są szczególnie istotne ze względu na to, że służą do
+                            komunikacji między użytkownikiem, a komputerem.
+                        </ListItem>
+                        <ListItem>
+                            <b>lista (pojedyncza lub podwójnie wiązana)</b> - jest to struktura jednorodna elementów, które
+                            są ze sobą powiązane, a każdy element zna jedynie swojego następnika (rzadziej również
+                            poprzednika). Są używane w sytuacjach, w których nie można przewidzieć jakie będzie
+                            zapotrzebowanie na pamięć.
+                        </ListItem>
+                        <ListItem>
+                            <b>kolejka FIFO</b> - <i>(first in first out)</i> - jest to dynamiczna struktura jednorodna,
+                            która umożliwia dodawanie elementów na końcu ciągu i odbieranie elementów z początku. Pierwszy
+                            dodany do kolejki element zostanie z niej wyjęty jako pierwszy, ponieważ elementy są wstawiane
+                            na koniec kolejki, a usuwane są na jej początku. Nie ma w tym przypadku
+                            możliwości <q>wyjęcia</q> obiektu, który nie znajduje się na przedzie kolejki.
+                            <Figure>
+                                <img src="https://www.algorytm.edu.pl/images/kolejka.png" alt="przykład kolejki FIFO"/>
+                                <Figcaption>
+                                    grafika pochodzi ze strony <a
+                                    href="https://www.algorytm.edu.pl/struktury-danych/kolejka-fifo.html">algorytm.edu.pl</a>
+                                </Figcaption>
+                            </Figure>
+                        </ListItem>
+                        <ListItem>
+                            <b>stos FILO</b> - <i>(first in last out)</i> - jest to dynamiczna struktura jednorodna, która
+                            umożliwia dodawanie i odbieranie elementów tylko z końca ciągu (pierwszy włożony do stosu
+                            element można odebrać jako ostatni). Oznacza to, że kolejne elementy dokładane są na wierzch
+                            stosu i tylko stamtąd mogą zostać zabrane.
+                            <Figure>
+                                <img src={Filo} alt="przykład kolejki FILO"/>
+                                <Figcaption>
+                                    grafika pochodzi z materiałów wykładowych <i>Wyższej Szkoły Kształcenia Zawodowego</i> i
+                                    jest częścią studiów podyplomowych na kierunku <i>Frontend Developer</i>
+                                </Figcaption>
+                            </Figure>
+                        </ListItem>
+                        <ListItem>
+                            <b>drzewo (binarne, pozycyjne, rozpinające, turniejowe)</b> - jest to struktura jednorodna,
+                            która zawiera elementy ułożone hierarchicznie: każdy węzeł drzewa jest rodzicem dla węzłów
+                            wywodzących się z niego, a węzły posiadające rodzica nazywamy jego dziećmi. Struktura
+                            przedstawia się następująco:
+                            <ListUnordered>
+                                <ListItem>
+                                    wierzchołek główny (<i>root</i>) to korzeń i nie posiada przodka (rodzica),
+                                </ListItem>
+                                <ListItem>
+                                    wewnętrzne wierzchołki (węzły) połączone są krawędziami i mogą posiadać:
+                                    <ListUnordered>
+                                        <ListItem>
+                                            poprzedników (czyli przodków, rodzice (parent) są bezpośrednimi poprzednikami)
+                                        </ListItem>
+                                        <ListItem>
+                                            następników (czyli potomków, dzieci (<i>child</i>) są bezpośrednimi
+                                            następnikami, a każdy wierzchołek może posiadać dowolną liczbę dzieci)
+                                        </ListItem>
+                                        <ListItem>
+                                            liście (<i>leaf</i>) (czyli nie posiadają już następników)
+                                            <Figure>
+                                                <img src={Tree} alt="przykład drzewa"/>
+                                                <Figcaption>
+                                                    grafika pochodzi z materiałów wykładowych <i>Wyższej Szkoły Kształcenia
+                                                    Zawodowego</i> i
+                                                    jest częścią studiów podyplomowych na kierunku <i>Frontend Developer</i>
+                                                </Figcaption>
+                                            </Figure>
+                                        </ListItem>
+                                    </ListUnordered>
+                                </ListItem>
+                            </ListUnordered>
+                        </ListItem>
+                        <ListItem>
+                            <b>graf (cykliczne, acykliczne, planarne, skierowane i nieskierowane)</b> - składa się z
+                            wierzchołków i łączących je krawędzi
+                            <Figure>
+                                <img src="http://student.krk.pl/026-Ciosek-Grybow/images/grafSkierowany.gif"
+                                     alt="przykład grafu"/>
+                                <Figcaption>
+                                    grafika pochodzi ze strony <a
+                                    href="http://student.krk.pl/026-Ciosek-Grybow/rodzaje.html">student.krk.pl</a>
+                                </Figcaption>
+                            </Figure>
+                        </ListItem>
+                        <ListItem>
+                            <b>dynamiczne struktury danych</b> - w ich przypadku charakterystyczna jest zmienność struktur w
+                            czasie procesu obliczeniowego. Takie zmiany mogą dotyczyć ich rozmiarów (to znaczy ilości
+                            zajętej pamięci). Jest to pewne ograniczenie, ponieważ kompilator nie może wstępnie przydzielić
+                            określonych zasobów pamięci podczas translacji kodu, ponieważ ten parametr może ulec zmianie w
+                            trakcie wykonywania programu.
+                        </ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>
+                        Zapisy algorytmów
+                    </SmallestHeader>
+                    <UnderSmallestHeader>
+                        Schemat blokowy
+                    </UnderSmallestHeader>
+                    <p>Schemat blokowy należy do najłatwiejszych sposobów zapisu algorytmów. Zapisujemy go w postaci
+                        diagramu
+                        przy pomocy uniwersalnych figur geometrycznych i strzałek. Dodatkowo kolejne elementy zapisywane są
+                        za pomocą słów lub konkretnych elementów wybranego języka programowania.</p>
+                    <p>Istnieją cztery podstawowe elementy, z których korzysta się przy tworzeniu schematów blokowych:</p>
+                    <ListUnordered>
+                        <ListItem>
+                            <b>bloki startowe i bloki końcowe</b> - zwykle są to prostokąty z zaokrąglonymi rogami lub
+                            owale, które sygnalizują początek lub koniec algorytmu. Bardzo istotne jest to, że w każdym
+                            przypadku algorytm będzie miał jeden węzeł początkowy, ale może mieć wiele różnych końców
+                        </ListItem>
+                        <ListItem>
+                            <b>bloki warunkowe</b> - w postaci rombów, które symbolizują zapis instrukcji wyboru (czyli w
+                            przypadku większości języków dotyczy to frazy <i>if</i>)
+                        </ListItem>
+                        <ListItem>
+                            <b>bloki wykonawcze</b> - zazwyczaj w postaci prostokątów. Bloki wykonawcze powinny zawierać
+                            praktycznie wszystkie operacje oprócz instrukcji wyboru
+                        </ListItem>
+                        <ListItem>
+                            <b>strzałki</b> - łączą pozostałe elementy i nadają kierunek przepływu sterowania
+                        </ListItem>
+                    </ListUnordered>
+                    <UnderSmallestHeader>
+                        Pseudokod
+                    </UnderSmallestHeader>
+                    <p>Pseudokod jest najłatwiejszym sposobem na zapisanie algorytmu. Korzysta z funkcji i pętli, ale nie
+                        uwzględnia szczegółów implementacyjnych danego języka. W przypadku pseudokodu nie pojawiają sie
+                        składniowe elementy języka (takie jak średniki czy nawiasy), ani charakterystyczne sposoby
+                        inicjalizowania danych.</p>
+                    <p>Pseudokod w porównaniu do kodu zapisanego w konkretnym języku będzie zapisem uniwersalnym dzięki
+                        czemu możliwe jest jego przełożenie na praktycznie każdy język programowania.</p>
+                    <UnderSmallestHeader>
+                        Lista kroków
+                    </UnderSmallestHeader>
+                    <p>Algorytm może zostać przedstawiony w bardziej podstawowej wersji jaką jest lista kroków, które
+                        powinny być wypunktowane od rozpoczęcia do zakończenia algorytmu.</p>
+                    <p>Jest to sposób prosty, ale też trzeba zaznaczyć, że najtrudniej jest znaleźć potencjalne błędy (nie
+                        widać przepływu sterowania, jeżeli mamy do czynienia z kilkoma blokami).</p>
+                    <p>Photo by <a
+                        href="https://unsplash.com/@sortino?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Joshua
+                        Sortino</a> on <a
+                        href="https://unsplash.com/photos/LqKhnDzSF-8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    </p>
+                </>
+            ),
+            tag: "algorytmy",
+            img: "https://images.unsplash.com/photo-1488229297570-58520851e868?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+        },
         {
             id: 96,
             date: "20 września 2023 roku",
