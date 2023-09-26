@@ -1,15 +1,29 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./style.css";
 import Image from "../../../images/React.jpeg";
 
-const OneArticleCard = ({picture, tag, title, avatar, authorName, date}) => {
+const OneArticleCard = ({picture, tag, title, avatar, authorName, date, onLoad}) => {
+    // console.log("OneArticleCard is rendering");
     const tags = tag ? tag.split(", ").map(tag => tag.trim()) : [];
+    // const [isImageLoading, setIsImageLoading] = useState(true);
+
+    // const handleImageLoad = () => {
+    //     setIsImageLoading(false);
+    // };
+
     return (
         <>
             <div
                 className=" sm:h-[350px] md:h-[350px] overflow-hidden border-2 rounded-md m-2 transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
                 <div className="p-2 rounded-md">
-                    <img src={picture ? picture : Image} className="rounded-md"/>
+                    {/*{isImageLoading && <div>Ładowanie...</div>} /!* Pokaż spinner lub inny komponent podczas ładowania obrazka *!/*/}
+                    <img src={picture ? picture : Image}
+                         alt={title}
+                         className="object-contain rounded-md"
+                         //onLoad={onLoad}
+                         // onLoad={() => console.log('Obrazek załadowany!')}
+                         // style={isImageLoading ? { display: 'none' } : {}}
+                    />
                 </div>
                 <div className="py-2 px-4 text-left">
                     {tags && (

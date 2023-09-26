@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Link} from "react-router-dom";
 import '../../App.css';
 import '../../index.css';
@@ -25,12 +25,16 @@ import OneArticleCard from "../../components/organisms/OneArticleCard";
 import Button from "../../components/atoms/Button";
 
 function HomePage() {
+    console.log("HomePage is rendering");
     const [searchTerm, setSearchTerm] = useState("");
     const [numberOfPosts, setNumberOfPosts] = useState(7);
+    // const [isLoading, setIsLoading] = useState(true);
+    // const [loadedImages, setLoadedImages] = useState({});
 
     const handleSearch = (newSearchTerm) => {
         setSearchTerm(newSearchTerm);
     };
+
 
     const sortedArticles = [...articlesLink].sort((a, b) => b.id - a.id);
     const newestArticle = sortedArticles[0];
@@ -42,49 +46,71 @@ function HomePage() {
     );
     const articlesToDisplay = filteredArticles.slice(1, numberOfPosts);
 
+    // useEffect(() => {
+    //     const timer = setTimeout(() => setIsLoading(false), 3000);
+    //     return () => clearTimeout(timer);
+    // }, []);
+    //
+    // const handleImageLoad = (id) => {
+    //     console.log("Image Loaded", id);
+    //     setLoadedImages((prev) => ({...prev, [id]: true}));
+    // };
+    //
+    // const allImagesLoaded = articlesToDisplay.every(
+    //     (article) => loadedImages[article.id] !== undefined
+    // );
+
     return (
         <>
-        <Container>
-            <NavBar
-            searchTerm={searchTerm}
-            onSearch={handleSearch}
-            />
-            <Link to={`/article/${newestArticle.id}`} key={newestArticle.id}>
-            <HomePageHeader
-                newestArticle={newestArticle}/>
-            </Link>
-            <Section
-                title="Ostatnie posty"
-                subtitle=""
-                body={
-                    <>
-                        <div className="grid md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1">
-                            {articlesToDisplay.map((article) => (
-                                <Link to={`/article/${article.id}`} key={article.id}>
-                                <OneArticleCard
-                                    tag={article.tag}
-                                    key={article.id}
-                                    date={article.date}
-                                    title={article.title}
-                                    body={article.body}
-                                    picture={article.img}
-                                />
-                                </Link>
-                            ))}
-                        </div>
-                        <div className="flex justify-center items-center my-6">
-                            <Button text="Zobacz więcej" onClick={() => {
-                                setNumberOfPosts(numberOfPosts + 6);
-                                console.log("Kliknięto przycisk, nowa liczba postów to:", numberOfPosts + 6);
-                            }} />
-                        </div>
-                    </>
-                }
-            />
-        </Container>
+            {/*{!allImagesLoaded ? (*/}
+            {/*    <div className="flex justify-center items-center min-h-screen">*/}
+            {/*        <div className="animate-spin rounded-full h-32 w-32 border-t-4 border-b-4 border-blue-500"></div>*/}
+            {/*    </div>*/}
+            {/*) : (*/}
+                <Container>
+                    <NavBar
+                        searchTerm={searchTerm}
+                        onSearch={handleSearch}
+                    />
+                    <Link to={`/article/${newestArticle.id}`} key={newestArticle.id}>
+                        <HomePageHeader
+                            newestArticle={newestArticle}/>
+                    </Link>
+                    <Section
+                        title="Ostatnie posty"
+                        subtitle=""
+                        body={
+                            <>
+                                <div className="grid md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1">
+                                    {articlesToDisplay.map((article) => (
+                                        <Link to={`/article/${article.id}`} key={article.id}>
+                                            <OneArticleCard
+                                                tag={article.tag}
+                                                key={article.id}
+                                                date={article.date}
+                                                title={article.title}
+                                                body={article.body}
+                                                picture={article.img}
+                                                // onLoad={() => handleImageLoad(article.id)}
+                                            />
+                                        </Link>
+                                    ))}
+                                </div>
+                                <div className="flex justify-center items-center my-6">
+                                    <Button text="Zobacz więcej" onClick={() => {
+                                        setNumberOfPosts(numberOfPosts + 6);
+                                    }}/>
+                                </div>
+                            </>
+                        }
+                    />
+                </Container>
+            )
+{/*}*/}
             <Footer/>
-    </>
-);
+            )
+        </>
+    );
 }
 
 export default HomePage;

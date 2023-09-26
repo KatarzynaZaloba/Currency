@@ -24,6 +24,52 @@ import UnderSmallestHeader from "../../atoms/UnderSmallestHeader";
 
 export const articlesLink = [
         {
+            id: 98,
+            date: "26 września 2023 roku",
+            title: "Trochę więcej o npm-ie",
+            body: (
+                <>
+                    <SmallestHeader>node package manager</SmallestHeader>
+                    <p>npm to skrót od <i>node package manager</i>, który pozwala na zarządzanie zależnościami w projekcie.
+                        Dzięki niemu bardzo łatwo jesteśmy w stanie określić jakich paczek potrzebuje nasz projekt, ponieważ
+                        są one wylistowane wewnątrz <i>package.json</i> w <i>dependencies</i>. Typowa aplikacja ma takich
+                        paczek mnóstwo. Te zależności mają swoje zależności itd. Poza tym <i>npm</i> pozwala nam na łatwe
+                        aktualizowanie paczek (pojedynczo albo wszystkie). <i>npm</i> składa się ze strony internetowej
+                        (<i>npmjs.com</i>),
+                        klienta (minikomend) oraz rejestru (baza, w której jest ponad milion paczek). Każda paczka
+                        na <i>npm-ie</i> ma swój plik <i>package.json</i> z metadanymi, które opisują daną paczkę.
+                    </p>
+                    <SmallestHeader>package.json</SmallestHeader>
+                    <p>Tak jak wyżej sobie omówiliśmy, zawiera w sobie metadane na temat np. naszej aplikacji. Jest tam
+                        nazwa, wersja naszej aplikacji, opis, adres, skrypt npm itd. Zawiera też swoją listę zależności.</p>
+                    <SmallestHeader>użycie paczki bez instalacji</SmallestHeader>
+                    <p>Możemy użyć paczki bez jej wcześniejszej aplikacji, np.:</p>
+                    <Blockquote>
+                        npx create-react-app my-app
+                    </Blockquote>
+                    <SmallestHeader>Inicjalizacja package.json</SmallestHeader>
+                    <p>Jeżeli nie mamy <i>package.json</i>, po wpisaniu tej komendy inicjalizujemy go po odpowiedzeniu na kilka pytań:</p>
+                    <Blockquote>
+                        npm init <br/><br/>
+                        <Comment text="domyślne wartości"/><br/>
+                        npm init -y
+                    </Blockquote>
+                    <SmallestHeader>Instalacja paczki w projekcie</SmallestHeader>
+                    <p>Jeżeli chcielibyśmy zainstalować jakąś paczkę w projekcie to możemy po prostu wpisać poniższą komendę do terminala:</p>
+                    <Blockquote>
+                        npm install nazwa_paczki
+                    </Blockquote>
+                    <p>Photo by <a
+                        href="https://unsplash.com/@pinjasaur?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Paul
+                        Esch-Laurent</a> on <a
+                        href="https://unsplash.com/photos/oZMUrWFHOB4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    </p>
+                </>
+            ),
+            tag: "npm",
+            img: "https://images.unsplash.com/photo-1543966888-7c1dc482a810?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1812&q=80"
+        },
+        {
             id: 97,
             date: "21 września 2023 roku",
             title: "Algorytmy i struktury danych - część czwarta",

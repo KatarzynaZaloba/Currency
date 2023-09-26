@@ -16,7 +16,7 @@ const Footer = () => {
                             text="Jest to blog, który powstawał na przełomie kilku miesięcy. Piszę w nim o bieganiu oraz powtarzam i utrwalam materiał dotyczący web-developmentu. Chętnie wspomogę Cię także w Twoim projekcie!"/>
                     </div>
                     <div className="flex justify-start items-center">
-                        <Link tonClick={() => window.location = 'mailto:kzalobafrontend@gmail.com'}><FooterSectionTitle title="kzalobafrontend@gmail.com"/></Link>
+                        <Link to="" onClick={() => window.location = 'mailto:kzalobafrontend@gmail.com'}><FooterSectionTitle title="kzalobafrontend@gmail.com"/></Link>
                         {/*<FooterSectionTitle title="Phone: 880 123 456 789"/>*/}
                     </div>
                 </div>

@@ -4,6 +4,7 @@ import homePageHeader from "../../../images/homePageHeader.png";
 import Logo from "../../../images/kate.jpg";
 
 const HomePageHeader = ({newestArticle}) => {
+
     const tags = newestArticle.tag.split(", ").map(tag => tag.trim());
     return (
         <div className="mb-4 relative">
