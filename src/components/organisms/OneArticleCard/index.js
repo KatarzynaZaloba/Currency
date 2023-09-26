@@ -14,7 +14,7 @@ const OneArticleCard = ({picture, tag, title, avatar, authorName, date, onLoad})
     return (
         <>
             <div
-                className=" sm:h-[350px] md:h-[350px] overflow-hidden border-2 rounded-md m-2 transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
+                className="min-h-[400px] lg:min-h-[500px] overflow-hidden border-2 rounded-md m-2 transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
                 <div className="p-2 rounded-md">
                     {/*{isImageLoading && <div>Ładowanie...</div>} /!* Pokaż spinner lub inny komponent podczas ładowania obrazka *!/*/}
                     <img src={picture ? picture : Image}
@@ -25,12 +25,12 @@ const OneArticleCard = ({picture, tag, title, avatar, authorName, date, onLoad})
                          // style={isImageLoading ? { display: 'none' } : {}}
                     />
                 </div>
-                <div className="py-2 px-4 text-left">
+                <div className="py-2 px-4 text-left justify-center">
                     {tags && (
                         tags.map((tag, index) => (
                             <span
                                 key={index}
-                                className="my-2 text-work-sans rounded-md bg-emerald-100 text-emerald-500 text-sm p-1 mr-1 font-medium">
+                                className="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10 mr-2">
                             {tag}
                         </span>
                         ))

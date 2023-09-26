@@ -7,9 +7,9 @@ import FooterSectionUndertitle from "../../atoms/FooterSectionUndertitle";
 
 const Footer = () => {
     return (
-        <footer className="bg-zinc-100 m-auto px-5 md:pb-10 pb-5 md:px-40">
-            <div className="max-w-4xl m-auto px-5 py-4 grid grid-cols-4 gap-4">
-                <div className="lg:col-span-2 col-span-4">
+        <footer className="bg-zinc-100 m-auto px-5 md:pb-10 pb-5">
+            <div className="max-w-fit m-auto px-5 md:px-20 lg:px-40 py-4 grid grid-cols-1 gap-1">
+                <div className="col-auto">
                     <div className="break-words">
                         <FooterSectionTitle title="O projekcie"/>
                         <FooterSectionParagraph
@@ -40,8 +40,8 @@ const Footer = () => {
                 {/*    <FooterSectionUndertitle title="Lifestyle"/>*/}
                 {/*</div>*/}
             </div>
-            <div className="max-w-4xl m-auto px-5 md:pb-10 pb-5 flex justify-between items-center border-t-2 py-4">
-                <div className="flex justify-center items-center">
+            <div className="max-w-fit m-auto px-5 md:px-20 md:pb-10 pb-5 flex justify-between items-center border-t-2 py-4">
+                <div className="flex justify-start items-center">
                     <FooterSectionParagraph text="UI Design:"></FooterSectionParagraph>
                     <a href="https://www.jstemplate.net/" className="text-zinc-900 font-semibold hover:text-indigo-500 duration-30">JS Template</a>
                 </div>
