@@ -7,6 +7,7 @@ import Footer from "../../components/molecules/Footer";
 import Logo from "../../images/kate.jpg";
 import homePageHeader from "../../images/homePageHeader.png";
 import Date from "../../components/atoms/Date";
+import TagBadge from "../../components/atoms/TagBadge";
 
 const ArticlePage = () => {
     const {id} = useParams(); // Uzyskaj identyfikator z parametrów URL
@@ -31,10 +32,7 @@ const ArticlePage = () => {
                 <div className="mb-3">
                 {tags && (
                     tags.map((tag, index) => (
-                        <span key={index}
-                              className="homePageTitle bg-gradient-to-r from-emerald-700 to-green-700 text-white text-sm py-0 px-1 my-3 rounded-md justify-center mr-1">
-                            {tag}
-                        </span>
+                        <TagBadge tag={tag} key={index}/>
                     ))
                 )}
                 </div>

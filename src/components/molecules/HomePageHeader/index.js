@@ -14,6 +14,7 @@ const HomePageHeader = ({newestArticle}) => {
                 className="bg-white md:max-w-[518px] max-w-auto absolute rounded-lg -bottom-10 md:left-10 left-5 md:p-8 p-4 z-10 drop-shadow-xl transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
                 {tags && (
                     tags.map((tag, index) => (
+
                         <span key={index}
                               className="homePageTitle inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10 mr-2">
                             {tag}
