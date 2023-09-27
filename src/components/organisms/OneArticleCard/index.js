@@ -21,7 +21,7 @@ const OneArticleCard = ({picture, tag, title, avatar, authorName, date, onLoad})
                     {/*{isImageLoading && <div>Ładowanie...</div>} /!* Pokaż spinner lub inny komponent podczas ładowania obrazka *!/*/}
                     <img src={picture ? picture : Image}
                          alt={title}
-                         className="object-contain rounded-md"
+                         className="object-fill rounded-md aspect-[5/3]"
                          //onLoad={onLoad}
                          // onLoad={() => console.log('Obrazek załadowany!')}
                          // style={isImageLoading ? { display: 'none' } : {}}

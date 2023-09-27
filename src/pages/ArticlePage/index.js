@@ -8,6 +8,7 @@ import Logo from "../../images/kate.jpg";
 import homePageHeader from "../../images/homePageHeader.png";
 import Date from "../../components/atoms/Date";
 import TagBadge from "../../components/atoms/TagBadge";
+import AuthorName from "../../components/atoms/AuthorName";
 
 const ArticlePage = () => {
     const {id} = useParams(); // Uzyskaj identyfikator z parametrów URL
@@ -38,11 +39,11 @@ const ArticlePage = () => {
                 </div>
                     <div className="flex justify-start items-center pb-4">
                         <img src={Logo} className="rounded-full w-[36px] mr-2" alt="logo"/>
-                        <p className="text-xs text-zinc-700 font-medium mr-2 text-work-sans p-0">Katarzyna Żałoba</p>
+                        <AuthorName />
                         <Date date={article.date}/>
                     </div>
                 <div className="pb-6">
-                <img src={article.img} className="rounded-md" alt="logo"/>
+                <img src={article.img} className="object-fill rounded-md aspect-[5/3]" alt="logo"/>
                 </div>
                 <div className="pb-10">
                 {article.body}

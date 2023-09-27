@@ -24,9 +24,37 @@ import UnderSmallestHeader from "../../atoms/UnderSmallestHeader";
 
 export const articlesLink = [
         {
+            id: 99,
+            date: "27 września 2023 roku",
+            title: "React - useRef",
+            body: (
+                <>
+                    <SmallestHeader>useRef</SmallestHeader>
+                    <Blockquote>
+                        <b>const</b> ref = useRef(initialValue);<br/>
+                        console.log(ref.current);<br/>
+                    </Blockquote>
+                    <p>W React <b>useRef</b> jest <i>hookiem</i>, który pozwala na dostęp do elementów DOM lub do wartości w
+                        trakcie renderowania. Zwraca zawsze ten sam obiekt z właściwością <b>current</b>. W pierwszym
+                        argumencie przekazujemy początkową wartość dla <b>current</b>. Przydaje się kiedy chcemy
+                        przechowywać jakąś wartość, ale <b>nie chcemy, by jej zmiana powodowała ponowny render</b>. Jeżeli
+                        interesuje nas zmiana powodująca ponowny render, to używamy wtedy oczywiście <b>useState</b>.
+                        Dokumentacja Reacta mówi o tym, że <b>useRef</b> jest pudełkiem, w którym możemy przechowywać różne
+                        właściwości w <b>current</b>.</p>
+                    <p>Photo by <a
+                        href="https://unsplash.com/@joshuaryanphoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Joshua
+                        Reddekopp</a> on <a
+                        href="https://unsplash.com/photos/SyYmXSDnJ54?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    </p>
+                </>
+            ),
+            tag: "react",
+            img: "https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        },
+        {
             id: 98,
             date: "26 września 2023 roku",
-            title: "Trochę więcej o npm-ie",
+            title: "Trochę więcej o node package manager (npm)",
             body: (
                 <>
                     <SmallestHeader>node package manager</SmallestHeader>
@@ -77,7 +105,8 @@ export const articlesLink = [
                         paczek i odwrotnie. Najbezpieczniej jest właśnie w takiej sytuacji użyć powyższej komendy.</p>
                     <SmallestHeader>Instalacja na podstawie package.json / package-lock.json</SmallestHeader>
                     <p>Gdy pobieramy repozytorium np. z <i>GitHub-a</i> i lokalnie nie mamy zainstalowanych paczek, które są
-                        potrzebne do odpalenia projektu, wystarczy, że wpiszemy komendę <i>npm install</i> i wszystkie potrzebne paczki zostaną zainstalowane:</p>
+                        potrzebne do odpalenia projektu, wystarczy, że wpiszemy komendę <i>npm install</i> i wszystkie
+                        potrzebne paczki zostaną zainstalowane:</p>
                     <Blockquote>
                         npm install
                     </Blockquote>
