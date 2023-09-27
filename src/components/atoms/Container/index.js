@@ -3,7 +3,7 @@ import './style.css';
 
 const Container = ({ children }) => {
     return (
-        <div className="max-w-fit m-auto px-5 md:px-20 lg:px-40 md:pb-10 pb-5">
+        <div className="max-w-fit m-auto px-5 md:px-20 lg:px-40 xl:px-60 md:pb-10 pb-5">
             {children}
         </div>
     )

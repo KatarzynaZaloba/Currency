@@ -6,6 +6,7 @@ import {articlesLink} from "../../components/molecules/Article/ArticleData";
 import Footer from "../../components/molecules/Footer";
 import Logo from "../../images/kate.jpg";
 import homePageHeader from "../../images/homePageHeader.png";
+import Date from "../../components/atoms/Date";
 
 const ArticlePage = () => {
     const {id} = useParams(); // Uzyskaj identyfikator z parametrów URL
@@ -40,7 +41,7 @@ const ArticlePage = () => {
                     <div className="flex justify-start items-center pb-4">
                         <img src={Logo} className="rounded-full w-[36px] mr-2" alt="logo"/>
                         <p className="text-xs text-zinc-700 font-medium mr-2 text-work-sans p-0">Katarzyna Żałoba</p>
-                        <p className="text-xs text-zinc-700 text-work-sans p-0">{article.date}</p>
+                        <Date date={article.date}/>
                     </div>
                 <div className="pb-6">
                 <img src={article.img} className="rounded-md" alt="logo"/>

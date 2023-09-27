@@ -2,6 +2,7 @@ import React from "react";
 import "./style.css";
 import homePageHeader from "../../../images/homePageHeader.png";
 import Logo from "../../../images/kate.jpg";
+import Date from "../../atoms/Date";
 
 const HomePageHeader = ({newestArticle}) => {
 
@@ -25,7 +26,7 @@ const HomePageHeader = ({newestArticle}) => {
                     <img src={Logo} className="rounded-full md:w-[36px] mr-2 md:inline hidden" alt="logo"/>
                     <p className="text-xs text-zinc-700 font-medium mr-2 text-work-sans p-0 md:inline hidden">Katarzyna
                         Żałoba</p>
-                    <p className="text-xs text-zinc-700 text-work-sans p-0">{newestArticle.date}</p>
+                    <Date date={newestArticle.date}/>
                 </div>
             </div>
         </div>
