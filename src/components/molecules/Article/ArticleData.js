@@ -48,17 +48,58 @@ export const articlesLink = [
                         npx create-react-app my-app
                     </Blockquote>
                     <SmallestHeader>Inicjalizacja package.json</SmallestHeader>
-                    <p>Jeżeli nie mamy <i>package.json</i>, po wpisaniu tej komendy inicjalizujemy go po odpowiedzeniu na kilka pytań:</p>
+                    <p>Jeżeli nie mamy <i>package.json</i>, po wpisaniu tej komendy inicjalizujemy go po odpowiedzeniu na
+                        kilka pytań:</p>
                     <Blockquote>
                         npm init <br/><br/>
                         <Comment text="domyślne wartości"/><br/>
                         npm init -y
                     </Blockquote>
                     <SmallestHeader>Instalacja paczki w projekcie</SmallestHeader>
-                    <p>Jeżeli chcielibyśmy zainstalować jakąś paczkę w projekcie to możemy po prostu wpisać poniższą komendę do terminala:</p>
+                    <p>Jeżeli chcielibyśmy zainstalować jakąś paczkę w projekcie to możemy po prostu wpisać poniższą komendę
+                        do terminala:</p>
                     <Blockquote>
-                        npm install nazwa_paczki
+                        npm install nazwa-paczki
                     </Blockquote>
+                    <SmallestHeader>devDependencies</SmallestHeader>
+                    <p>Jeżeli chcemy zainstalować paczkę, która będzie potrzebna tylko podczas developmentu, to możemy ją
+                        zainstalować jako <i>devDependencies</i>:</p>
+                    <Blockquote>
+                        npm install --save-dev nazwa-paczki
+                    </Blockquote>
+                    <p>Przykładem jest <b>Webpack</b>, którego dodajemy właśnie do devDependencies.</p>
+                    <SmallestHeader>usunięcie zależności</SmallestHeader>
+                    <p>Gdybyśmy jednak chcieli usunąć jakąś zależność to mamy do tego komendę <i>npm uninstall</i>:</p>
+                    <Blockquote>
+                        npm uninstall nazwa-paczki
+                    </Blockquote>
+                    <p>Nie usuwamy ręcznie danej paczki, ponieważ istnienie tej paczki może być zależne od istnienia innych
+                        paczek i odwrotnie. Najbezpieczniej jest właśnie w takiej sytuacji użyć powyższej komendy.</p>
+                    <SmallestHeader>Instalacja na podstawie package.json / package-lock.json</SmallestHeader>
+                    <p>Gdy pobieramy repozytorium np. z <i>GitHub-a</i> i lokalnie nie mamy zainstalowanych paczek, które są
+                        potrzebne do odpalenia projektu, wystarczy, że wpiszemy komendę <i>npm install</i> i wszystkie potrzebne paczki zostaną zainstalowane:</p>
+                    <Blockquote>
+                        npm install
+                    </Blockquote>
+                    <SmallestHeader>Semantic versioning</SmallestHeader>
+                    <p>Znaczenie wersji:</p>
+                    <ListUnordered>
+                        <ListItem>
+                            <b>3.12.15</b> - major.minor.patch
+                            <ListUnordered>
+                                <ListItem>
+                                    <b>major</b> - duża zmiana, najczęściej niekompatybilna wstecznie
+                                </ListItem>
+                                <ListItem>
+                                    <b>minor</b> - kompatybilne wstecznie nowe funkcjonalności
+                                </ListItem>
+                                <ListItem>
+                                    <b>minor</b> - poprawione bugi.
+                                </ListItem>
+                            </ListUnordered>
+                        </ListItem>
+                    </ListUnordered>
+                    <p>Będę od teraz zwracała uwagę na <i>semver</i> po każdym <i>deployu-u</i> mojego bloga.</p>
                     <p>Photo by <a
                         href="https://unsplash.com/@pinjasaur?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Paul
                         Esch-Laurent</a> on <a
