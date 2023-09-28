@@ -24,6 +24,28 @@ import UnderSmallestHeader from "../../atoms/UnderSmallestHeader";
 
 export const articlesLink = [
         {
+            id: 100,
+            date: "28 września 2023 roku",
+            title: "React - własne hooki",
+            body: (
+                <>
+                    <SmallestHeader>Własne hooki</SmallestHeader>
+                    <p>Stworzone własne <i>hooki</i> pomagają przy wyciąganiu logiki na zewnątrz komponentu. Dzięki temu w
+                        komponencie mamy porządek. Pozwalają na stworzenie funkcji wielokrotnego użytu. Nazwę zawsze
+                        zaczynamy od słowa <b>use</b>, zgodnie z konwencją - dzięki temu od razu jest jasne, że mamy do
+                        czynienia z <i>hookiem</i>. W położeniu hooków także obowiązuje konwencja i używamy ich na samej
+                        górze, nie w blokach warunkowych. Od nas zależy jakie argumenty przyjmuje <i>custom hook</i> i co będzie zwracał.</p>
+                    <p>Photo by <a
+                        href="https://unsplash.com/@efekurnaz?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Efe
+                        Kurnaz</a> on <a
+                        href="https://unsplash.com/photos/Rs5BQj5zbf8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    </p>
+                </>
+            ),
+            tag: "react",
+            img: "https://images.unsplash.com/photo-1506123880582-b365334fd375?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1784&q=80"
+        },
+        {
             id: 99,
             date: "27 września 2023 roku",
             title: "React - useRef",
