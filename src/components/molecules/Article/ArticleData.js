@@ -41,6 +41,42 @@ export const articlesLink = [
                         interesuje nas zmiana powodująca ponowny render, to używamy wtedy oczywiście <b>useState</b>.
                         Dokumentacja Reacta mówi o tym, że <b>useRef</b> jest pudełkiem, w którym możemy przechowywać różne
                         właściwości w <b>current</b>.</p>
+                    <UnderSmallestHeader>
+                        Przykład z intervalId:
+                    </UnderSmallestHeader>
+                    <Blockquote>
+                        <b>const</b> [counter, setCounter] = useState(0);<br/>
+                        <b>const</b> intervalId = useRef();<br/><br/>
+                        useEffect(() => &#123;<br/>
+                        &nbsp;&nbsp;intervalId.current = setInterval(() => &#123;<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;setCounter(counter => counter + 1);<br/>
+                        &nbsp;&nbsp;&#125;, 1000);<br/>
+                        &#125;, []);<br/><br/>
+                        <b>const</b> stopCounter = () => clearInterval(intervalId.current);<br/><br/>
+                        <b>return</b> (<br/>
+                        &nbsp;&nbsp;&#60;><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&#60;p>&#123;counter&#125;&#60;/p><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&#60;button onClick=&#123;stopCounter&#125;>Stop&#60;/button><br/>
+                        &nbsp;&nbsp;&#60;/><br/>
+                        );
+                    </Blockquote>
+                    <p><b>useRef</b> przydaje się także do innej rzeczy, np. do znalezienia elementu w drzewie DOM. W
+                        przypadku, gdy chcemy ustawić, aby po kliknięciu na input przypisał się stan <i>focus</i> nie
+                        używamy w <i>React</i> <i>querySelector-ów</i>, ale właśnie dopisujemy wartość z <i>useRef</i> do
+                        atrybutu <i>ref</i> danego elementu.</p>
+                    <UnderSmallestHeader>
+                        Referencja do elementu w drzewie DOM:
+                    </UnderSmallestHeader>
+                    <Blockquote>
+                        <b>const</b> inputRef = useRef(null);<br/><br/>
+                        <b>return</b> (<br/>
+                        &nbsp;&nbsp;&#60;><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&#60;p>&#60;input ref=&#123;inputRef&#125; />&#60;/p><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&#60;button onClick=&#123;() => inputRef.current.focus()&#125;><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ustaw focus na input<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&#60;/button><br/>
+                        &nbsp;&nbsp;&#60;/><br/>
+                    </Blockquote>
                     <p>Photo by <a
                         href="https://unsplash.com/@joshuaryanphoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Joshua
                         Reddekopp</a> on <a
