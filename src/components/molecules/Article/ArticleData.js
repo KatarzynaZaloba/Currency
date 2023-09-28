@@ -26,7 +26,7 @@ export const articlesLink = [
         {
             id: 100,
             date: "28 września 2023 roku",
-            title: "React - własne hooki",
+            title: "React - trochę o własnych hookach",
             body: (
                 <>
                     <SmallestHeader>Własne hooki</SmallestHeader>
@@ -48,7 +48,7 @@ export const articlesLink = [
         {
             id: 99,
             date: "27 września 2023 roku",
-            title: "React - useRef",
+            title: "React - trochę o useRef",
             body: (
                 <>
                     <SmallestHeader>useRef</SmallestHeader>
