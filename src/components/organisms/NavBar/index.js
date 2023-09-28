@@ -25,7 +25,7 @@ const NavBar = ({searchTerm, onSearch}) => {
                     <SearchBar
                         searchTerm={searchTerm}
                         onSearch={onSearch}
-                        className="ml-5"/>
+                        className=""/>
                     {/*<SwitchButton/>*/}
                 </div>
                 <div className="md:hidden m-auto flex justify-center items-center">

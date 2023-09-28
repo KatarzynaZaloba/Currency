@@ -1,19 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useParams} from "react-router-dom";
 import NavBar from "../../components/organisms/NavBar";
 import Container from "../../components/atoms/Container";
 import {articlesLink} from "../../components/molecules/Article/ArticleData";
 import Footer from "../../components/molecules/Footer";
 import Logo from "../../images/kate.jpg";
-import homePageHeader from "../../images/homePageHeader.png";
 import Date from "../../components/atoms/Date";
 import TagBadge from "../../components/atoms/TagBadge";
 import AuthorName from "../../components/atoms/AuthorName";
 
 const ArticlePage = () => {
-    const {id} = useParams(); // Uzyskaj identyfikator z parametrów URL
+    const [searchTerm, setSearchTerm] = useState("");
+    const {id} = useParams();
     const article = articlesLink.find(article => article.id.toString() === id);
     const tags = article.tag.split(", ").map(tag => tag.trim());
+
+    const handleSearch = (newSearchTerm) => {
+        setSearchTerm(newSearchTerm);
+    };
 
     if (!article) {
         return (
@@ -26,7 +30,9 @@ const ArticlePage = () => {
     return (
         <>
             <Container>
-                <NavBar/>
+                <NavBar
+                    searchTerm={searchTerm}
+                    onSearch={handleSearch}/>
                 <h3 className="text-work-sans md:text-4xl text-2xl font-semibold md:leading-10 leading-7 self-stretch pb-4">
                     {article.title}
                 </h3>

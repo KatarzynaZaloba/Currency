@@ -25,7 +25,6 @@ import OneArticleCard from "../../components/organisms/OneArticleCard";
 import Button from "../../components/atoms/Button";
 
 function HomePage() {
-    console.log("HomePage is rendering");
     const [searchTerm, setSearchTerm] = useState("");
     const [numberOfPosts, setNumberOfPosts] = useState(7);
     // const [isLoading, setIsLoading] = useState(true);
