@@ -24,6 +24,78 @@ import UnderSmallestHeader from "../../atoms/UnderSmallestHeader";
 
 export const articlesLink = [
         {
+            id: 102,
+            date: "29 września 2023 roku",
+            title: "Mała powtórka ze Styled Components",
+            body: (
+                <>
+                    <SmallestHeader>Instalacja</SmallestHeader>
+                    <Blockquote>npm install styled-components</Blockquote>
+                    <UnderSmallestHeader>Dokumentacja Styled Components</UnderSmallestHeader>
+                    <Blockquote>
+                        https://styled-components.com/docs
+                    </Blockquote>
+                    <UnderSmallestHeader>Przykład użycia</UnderSmallestHeader>
+                    <Blockquote>
+                        <b>import</b> React <b>from</b> "React";<br/>
+                        <b>import</b> styled <b>from</b> "styled-components";<br/><br/>
+
+                        <b>const</b> Button = styled.button`<br/>
+                        &nbsp;&nbsp;border: 1px solid teal;<br/>
+                        &nbsp;&nbsp;padding: 10px;<br/>
+                        &nbsp;&nbsp;color: teal;<br/>
+                        &nbsp;&nbsp;background-color: white;<br/>
+                        `;<br/><br/>
+                        <b>function</b> App() &#123;<br/>
+                        &nbsp;&nbsp;<b>return</b> (<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&#60;Button&#62;Przycisk&#60;/Button&#62;<br/>
+                        &nbsp;&nbsp;);<br/>
+                        &#125;<br/>
+                    </Blockquote>
+                    <UnderSmallestHeader>Użycie propsów</UnderSmallestHeader>
+                    <Blockquote>
+                        <b>import</b> React <b>from</b> "React";<br/>
+                        <b>import</b> styled, &#123;css&#125; <b>from</b> "styled-components";<br/><br/>
+
+                        <b>const</b> Button = styled.button`<br/>
+                        &nbsp;&nbsp;border: 1px solid teal;<br/>
+                        &nbsp;&nbsp;padding: 10px;<br/>
+                        &nbsp;&nbsp;color: teal;<br/>
+                        &nbsp;&nbsp;background-color: white;<br/><br/>
+                        &nbsp;&nbsp;$&#123;(&#123;primary&#125;) => primary && css`<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;background-color: teal;<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;color: white;<br/>
+                        &nbsp;&nbsp;&#125;<br/>
+                        `;<br/><br/>
+                        <b>function</b> App() &#123;<br/>
+                        &nbsp;&nbsp;<b>return</b> (<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&#60;Button&#62;Przycisk&#60;/Button&#62;<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&#60;Button primary&#62;Przycisk&#60;/Button&#62;<br/>
+                        &nbsp;&nbsp;);<br/>
+                        &#125;<br/>
+                    </Blockquote>
+                    <p>Photo by <a href="https://unsplash.com/@russn_fckr?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">russn_fckr</a> on <a href="https://unsplash.com/photos/krV5aS4jDjA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    </p>
+                </>
+            ),
+            tag: "styled components",
+            img: "https://images.unsplash.com/photo-1456086272160-b28b0645b729?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80"
+        },
+        // {
+        //     id: 101,
+        //     date: "28 września 2023 roku",
+        //     title: "React - useState, useEffect - pułapki",
+        //     body: (
+        //         <>
+        //             <p>Photo by <a href="https://unsplash.com/@elsbethcat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Beth Macdonald</a> on <a href="https://unsplash.com/photos/gF4FmoPtU2k?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        //             </p>
+        //         </>
+        //     ),
+        //     tag: "react",
+        //     img: "https://images.unsplash.com/photo-1609131909723-a3ea20934be6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        //
+        // },
+        {
             id: 100,
             date: "28 września 2023 roku",
             title: "React - trochę o własnych hookach",
