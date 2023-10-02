@@ -13,7 +13,7 @@ const ArticlePage = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const {id} = useParams();
     const article = articlesLink.find(article => article.id.toString() === id);
-    const tags = article.tag.split(", ").map(tag => tag.trim());
+    const tags = article?.tag?.split(", ").map(tag => tag.trim());
 
     const handleSearch = (newSearchTerm) => {
         setSearchTerm(newSearchTerm);
@@ -38,7 +38,7 @@ const ArticlePage = () => {
                 </h3>
                 <div className="mb-3">
                 {tags && (
-                    tags.map((tag, index) => (
+                    tags?.map((tag, index) => (
                         <TagBadge tag={tag} key={index}/>
                     ))
                 )}
