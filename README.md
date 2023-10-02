@@ -8,6 +8,7 @@
 
 To create the application I have used:
 
+- Figma
 - HTML
 - CSS
 - Normalize
@@ -16,6 +17,11 @@ To create the application I have used:
 - ES6+ features
 - GIT
 - Markdown
+
+*Version 0.2.5 (02.10.2023):*
+- fixed bug with hover effect on "Pokaż więcej" button
+- fixed bug with mailto link in footer
+- fixed bug with .split on articles without tags in ArticlePage
 
 *Version 0.2.4 (28.09.2023):*
 - fixed bug with searching posts from ArticlePage
