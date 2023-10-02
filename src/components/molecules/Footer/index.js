@@ -1,11 +1,12 @@
 import React from "react";
-import {Link} from "react-router-dom";
 import "./style.css";
 import FooterSectionTitle from "../../atoms/FooterSectionTitle";
 import FooterSectionParagraph from "../../atoms/FooterSectionParagraph";
-import FooterSectionUndertitle from "../../atoms/FooterSectionUndertitle";
+import Mailto from "../../molecules/Mailto";
 
 const Footer = () => {
+    const email = 'kzalobafrontend@gmail.com';
+
     return (
         <footer className="bg-zinc-100 m-auto px-5 md:pb-10 pb-5">
             <div className="max-w-fit m-auto px-5 md:px-20 lg:px-40 py-4 grid grid-cols-1 gap-1">
@@ -16,8 +17,9 @@ const Footer = () => {
                             text="Jest to blog, który powstawał na przełomie kilku miesięcy. Piszę w nim o bieganiu oraz powtarzam i utrwalam materiał dotyczący web-developmentu. Chętnie wspomogę Cię także w Twoim projekcie!"/>
                     </div>
                     <div className="flex justify-start items-center">
-                        <Link to="" onClick={() => window.location = 'mailto:kzalobafrontend@gmail.com'}><FooterSectionTitle title="kzalobafrontend@gmail.com"/></Link>
-                        {/*<FooterSectionTitle title="Phone: 880 123 456 789"/>*/}
+                        <Mailto email={email} subject="Wspolpraca">
+                            <FooterSectionTitle title={email} />
+                        </Mailto>
                     </div>
                 </div>
                 {/*<div>*/}
