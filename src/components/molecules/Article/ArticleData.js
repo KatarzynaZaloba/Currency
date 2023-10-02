@@ -24,6 +24,79 @@ import UnderSmallestHeader from "../../atoms/UnderSmallestHeader";
 
 export const articlesLink = [
         {
+            id: 103,
+            date: "2 października 2023 roku",
+            title: "Podstawy systemów komputerowych",
+            body: (
+                <>
+                    <SmallestHeader>Podstawy teoretyczne systemów komputerowych</SmallestHeader>
+                    <p>Aby móc korzystać z komputera, należałoby wyposażyć ów komputer w oprogramowanie, które nazywamy <b>systemem
+                        operacyjnym (<i>ang. Operating System, OS</i>)</b></p>
+                    <p>Aby wyposażyć komputer w system operacyjny należy doprowadzić do właściwej jego instalacji na danym
+                        sprzęcie.</p>
+                    <p>System operacyjny to oprogramowanie, które stanowi interfejs pomiędzy użytkownikiem, oprogramowaniem
+                        użytkowym i urządzeniami komputera osobistego.</p>
+                    <p>Dzięki systemowi operacyjnemu użytkownik może kontrolować działanie komputera. Może to robić
+                        bezpośrednio poprzez wpisywanie konkretnych poleceń w wierszu interfejsu znakowego lub w sposób
+                        pośredni poprzez interfejs graficzny.</p>
+                    <p>Do zadań OS zalicza się:</p>
+                    <ListUnordered>
+                        <ListItem>
+                            zarządzanie procesami,
+                        </ListItem>
+                        <ListItem>
+                            zarządzanie pamięciami masowymi,
+                        </ListItem>
+                        <ListItem>
+                            zarządzanie pamięcią podręczną cache,
+                        </ListItem>
+                        <ListItem>
+                            zarządzanie pamięcią operacyjną,
+                        </ListItem>
+                        <ListItem>
+                            kontrola błędów i obsługa wyjątków,
+                        </ListItem>
+                        <ListItem>
+                            implementowanie systemu plików oraz zarządzanie nimi,
+                        </ListItem>
+                        <ListItem>
+                            kontrola dostępu do zasobów oraz uwierzytelnianie użytkowników,
+                        </ListItem>
+                        <ListItem>
+                            zarządzanie urządzeniami 1/0,
+                        </ListItem>
+                        <ListItem>
+                            zarządzanie usługami sieciowymi.
+                        </ListItem>
+                    </ListUnordered>
+                    <p>Każdy prawidłowo działający oraz będący wysokiej jakości system operacyjny powinien:</p>
+                    <ListUnordered>
+                        <ListItem>
+                            mieć przyjazny dla użytkownika interfejs,
+                        </ListItem>
+                        <ListItem>
+                            być wydajny a przede wszystkim stabilny,
+                        </ListItem>
+                        <ListItem>
+                            być stosunkowo niewielkiego rozmiaru,
+                        </ListItem>
+                        <ListItem>
+                            oferować możliwość aktualizowania i modyfikowania,
+                        </ListItem>
+                        <ListItem>
+                            udostępniać dużą liczbę aplikacji.
+                        </ListItem>
+                    </ListUnordered>
+                    <p>Photo by <a
+                        href="https://unsplash.com/@sigmund?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sigmund</a> on <a
+                        href="https://unsplash.com/photos/k3Y2iBBCag8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    </p>
+                </>
+            ),
+            tag: "systemy komputerowe",
+            img: "https://images.unsplash.com/photo-1606146485652-75b352ce408a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        },
+        {
             id: 102,
             date: "29 września 2023 roku",
             title: "Mała powtórka ze Styled Components",
@@ -74,7 +147,9 @@ export const articlesLink = [
                         &nbsp;&nbsp;);<br/>
                         &#125;<br/>
                     </Blockquote>
-                    <p>Photo by <a href="https://unsplash.com/@russn_fckr?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">russn_fckr</a> on <a href="https://unsplash.com/photos/krV5aS4jDjA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    <p>Photo by <a
+                        href="https://unsplash.com/@russn_fckr?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">russn_fckr</a> on <a
+                        href="https://unsplash.com/photos/krV5aS4jDjA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
                     </p>
                 </>
             ),
@@ -106,7 +181,8 @@ export const articlesLink = [
                         komponencie mamy porządek. Pozwalają na stworzenie funkcji wielokrotnego użytu. Nazwę zawsze
                         zaczynamy od słowa <b>use</b>, zgodnie z konwencją - dzięki temu od razu jest jasne, że mamy do
                         czynienia z <i>hookiem</i>. W położeniu hooków także obowiązuje konwencja i używamy ich na samej
-                        górze, nie w blokach warunkowych. Od nas zależy jakie argumenty przyjmuje <i>custom hook</i> i co będzie zwracał.</p>
+                        górze, nie w blokach warunkowych. Od nas zależy jakie argumenty przyjmuje <i>custom hook</i> i co
+                        będzie zwracał.</p>
                     <p>Photo by <a
                         href="https://unsplash.com/@efekurnaz?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Efe
                         Kurnaz</a> on <a
