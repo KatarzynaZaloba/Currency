@@ -24,6 +24,80 @@ import UnderSmallestHeader from "../../atoms/UnderSmallestHeader";
 
 export const articlesLink = [
         {
+            id: 104,
+            date: "3 października 2023 roku",
+            title: "Podstawy systemów komputerowych - kontynuacja",
+            body: (
+                <>
+                    <p>W poprzednim artykule pisałam o podziałach systemów komputerowych ze względu na liczbę wykonywanych
+                        zadań oraz sposób przetwarzania. Dzisiaj będzie o kolejnych rozróżnieniach.</p>
+                    <p>Gdybyśmy chcieli rozróżnić systemy komputerowe wieloprocesorowe, to rozróżnilibyśmy <b>systemy
+                        wieloprocesorowe symetryczne SMP</b> (ang. <i>Symmetric Multiprocessing)</i> i <b>wieloprocesorowe
+                        asymetryczne AMP</b> (ang. <i>Asynchronous Multiprocessing</i>).</p>
+                    <p><b>SMP</b> to systemy operacyjne do komputerów wieloprocesorowych (wielordzeniowych) dzielących
+                        wspólną magistralę systemową, zegar, pamięć i urządzenia wejścia-wyjścia. Pozwalają one na
+                        realizację zadań systemu więcej niż jednemu mikroprocesorowi. Zadania te są dzielone symetrycznie
+                        pomiędzy wszystkie <i>CPU</i>, dzięki czemu wzrasta ogólna wydajność systemu komputerowego (rodzina
+                        Windows NT, Linux).</p>
+                    <p>W przypadku <b>AMP</b> sprawa wygląda troszkę inaczej. Systemem zarządza główny procesor, a
+                        jednostki <i>CPU</i> mają zlecane inne, niezależne zadania. Przykładem pracy w układzie
+                        asymetrycznym mogą być mikroprocesory współpracujące z zewnętrznym korprocesorem, działające
+                        niezależnie, taktowane inną częstotliwością zegara itd.</p>
+                    <p>Poza tym podziałem możemy też rozróżnić dwa rodzaje systemów ze względu na <b>liczbę obsługiwanych
+                        użytkowników</b>.</p>
+                    <p><b>Systemy jednoużytkownikowe</b> - umożliwiają działanie na poziomie jednego użytkownika. Cechą
+                        szczególną jest to, że brakuje w nich mechanizmów uwierzytelniających, zabezpieczających dostęp do
+                        plików i katalogów lub takie zabezpieczenia są nieskuteczne (MS-DOS, Widows 9x).</p>
+                    <p><b>Systemy wieloużytkownikowe</b> - umożliwiają działanie <i>OS</i> przez wielu użytkowników
+                        jednocześnie i niezależnie. System potrafi przechowywać profile swoich użytkowników w taki sposób,
+                        aby inni klienci platformy nie mieli dostępu do zawartych w nich danych (Windows NT, Linux).</p>
+                    <p><b>Podział ze względu na interfejs użytkownika:</b></p>
+                    <ListUnordered>
+                        <ListItem>
+                            <b>Systemy z interfejsem znakowym/tekstowym</b> - użytkownik komunikuje się z systemem za pomocą
+                            poleceń tekstowych wpisywanych w wierszu poleceń (MS-DOS, Linux Bash, Widows Server Code).
+                        </ListItem>
+                        <ListItem>
+                            <b>Systemy z okienkowym interfejsem graficznym</b> - użytkownik komunikuje się z systemem za
+                            pomocą graficznego interfejsu użytkownika opartego na symbolach (ikonach) oraz tzw. okienkach,
+                            określanego skrótem <i>GUI</i> (ang. <i>Graphical User Interface)</i> (Windows, X Window).
+                        </ListItem>
+                    </ListUnordered>
+                    <p><b>Inne rodzaje systemów operacyjnych:</b></p>
+                    <ListUnordered>
+                        <ListItem>
+                            <b>systemy czasu rzeczywistego</b> (nag. <i>Real-Time Operating System - RTOS</i>). To systemy
+                            operacyjne reagujące na zmiany zewnętrzne w czasie rzeczywistym. Głównym kryterium jest czas w
+                            jakim system musi zareagować na zdarzenie. Systemy te dzielimy na:
+                            <ListUnordered>
+                                <ListItem>
+                                    <b>Twardy</b> (rygorystyczny) - system musi zareagować na zdarzenie w określonym czasie
+                                    i priorytet zadań jest określany jako krytyczny.
+                                </ListItem>
+                                <ListItem>
+                                    <b>Miękki</b> (łagodny) - system musi zareagować na zdarzenie w określonym czasie, ale
+                                    priorytety zadań nie są określane za krytyczne.
+                                </ListItem>
+                            </ListUnordered>
+                        </ListItem>
+                        <ListItem>
+                            <b>systemy rozproszone</b> - (ang. <i>distributed system</i>) to systemy operacyjne, w których
+                            zasoby sprzętowe i oprogramowanie są rozproszone pomiędzy komputerami połączonymi siecią
+                            (tzw. <i>klastrem</i>). Systemy rozproszone są zazwyczaj zbudowane z wielu komputerów, które nie
+                            współdzielą pamięci ani zegara.
+                        </ListItem>
+                    </ListUnordered>
+                    <p>Photo by <a
+                        href="https://unsplash.com/@christianw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Christian
+                        Wiediger</a> on <a
+                        href="https://unsplash.com/photos/WkfDrhxDMC8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    </p>
+                </>
+            ),
+            tag: "systemy komputerowe",
+            img: "https://images.unsplash.com/photo-1547394765-185e1e68f34e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        },
+        {
             id: 103,
             date: "2 października 2023 roku",
             title: "Podstawy systemów komputerowych",
