@@ -24,6 +24,72 @@ import UnderSmallestHeader from "../../atoms/UnderSmallestHeader";
 
 export const articlesLink = [
         {
+            id: 105,
+            date: "3 października 2023 roku",
+            title: "Podsumowanie kolejnego miesiąca",
+            body: (
+                <>
+                    <p>Podsumowanie będzie w tym miesiącu krótkie. Udało mi się utrzymać moje amatorskie truchtanka po
+                        lesie, ale coś się stało z moją motywacją po drodze. Może to przez taki mały kryzys biegowy nie
+                        osiągnęłam więcej niż w poprzednim miesiącu? Z drugiej strony jest to jakiś sukces, bo aktywność
+                        utrzymałam.<p>
+
+                        </p> Nie bardzo jestem w stanie dostosować się Garminowego AI i przygotowanych dla mnie
+                        treningów. Pamiętam jak kiedyś wyznaczałam sobie trasy w aplikacji garminowskiej i tym sposobem
+                        zwiedzałam każdy zakamarek Bolimowskiego Parku Krajobrazowego. Postanowiłam wziąć poprawkę i wrócić
+                        do planowania tras jak wcześniej. Czy mi się uda? Dowiemy się za miesiąc.
+                    </p>
+                    <Table>
+                        <Caption>Podsumowanie kolejnego miesiąca</Caption>
+                        <Thead>
+                            <tr className="m-auto border-2">
+                                <th className="border-2 px-3 m-auto">
+                                    lipiec
+                                </th>
+                                <th className="border-2 px-3 m-auto">
+                                    sierpień
+                                </th>
+                                <th className="border-2 px-3 m-auto">
+                                    wrzesień
+                                </th>
+                                <th className="border-2 px-3 m-auto">
+                                    różnica
+                                </th>
+                            </tr>
+                        </Thead>
+                        <tbody className="m-auto border-2">
+                        <tr className="border-2">
+                            <td className="border-2 px-2 m-auto">
+                                16,4 km
+                            </td>
+                            <td className="border-2 px-2 m-auto">
+                                32,5 km
+                            </td>
+                            <td className="border-2 px-2 m-auto">
+                                <b>31,9 km</b>
+                            </td>
+                            <td className="border-2 px-2 m-auto text-red-500">
+                                <b>-0,6 km</b>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </Table>
+                    <p>Poza podsumowaniem aktywności fizycznej chciałabym tez przejść do nauki programowania. Wystartował
+                        drugi semestr na mojej uczelni, więc będę miała sporo nauki do przerobienia. Jeśli chodzi o powtórkę
+                        materiału - jestem nadal na powtórce 11 modułu. Stwierdziłam, że w jednym tygodniu będę uczyć się
+                        moich uczelnianych materiałów, a w następnym tygodniu materiałów z kursu.</p>
+                    <p>Mam jeszcze na oku kurs ze <i>Strapi, Next i Heroku</i>. No ale nie wszytko na raz!</p>
+                    <p>Photo by <a
+                        href="https://unsplash.com/@whatyouhide?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Andrea
+                        Leopardi</a> on <a
+                        href="https://unsplash.com/photos/QVD3Xht9txA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    </p>
+                </>
+            ),
+            tag: "bieganie",
+            img: "https://images.unsplash.com/photo-1547483238-f400e65ccd56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        },
+        {
             id: 104,
             date: "3 października 2023 roku",
             title: "Podstawy systemów komputerowych - kontynuacja",

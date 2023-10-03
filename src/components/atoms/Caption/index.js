@@ -3,7 +3,7 @@ import "./style.css";
 
 const Caption = ({ children }) => {
     return (
-        <caption className="article__caption">
+        <caption className="caption-bottom">
             {children}
         </caption>
     )
