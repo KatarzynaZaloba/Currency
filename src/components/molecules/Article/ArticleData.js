@@ -87,6 +87,54 @@ export const articlesLink = [
                             udostępniać dużą liczbę aplikacji.
                         </ListItem>
                     </ListUnordered>
+                    <UnderSmallestHeader>Rodzaje systemów operacyjnych</UnderSmallestHeader>
+                    <p><b>Systemy operacyjne dzielimy m.in ze względu na liczbę wykonywanych zadań:</b></p>
+                    <ListUnordered>
+                        <ListItem>
+                            <b>Systemy jednoprogramowe</b>
+                        </ListItem>
+                        <ListItem>
+                            <b>Systemy wieloprogramowe</b>
+                        </ListItem>
+                        <ListItem>
+                            <b>Systemy wielozadaniowe</b>
+                        </ListItem>
+                    </ListUnordered>
+                    <p><b>Systemy jednoprogramowe</b> są zdolne do realizacji wyłącznie jednego zleconego przez użytkownika
+                        zadania
+                        w danym momencie.</p>
+                    <p><b>Systemy wieloprogramowe</b> są natomiast zdolne do realizacji większej niż jednego programu
+                        rezydującego
+                        w pamięci dzięki współdzieleniu mocy obliczeniowej mikroprocesora <i>(multiprogramming)</i>.</p>
+                    <p><b>Systemy wielozadaniowe</b> zdolne są do realizacji więcej niż jednego programu, poprzez
+                        współdzielenie mocy obliczeniowej mikroprocesora tak jak w przypadku <i>systemów
+                            wieloprogramowych</i>. Przełączanie pomiędzy poszczególnymi programami (procesami) jest
+                        planowane i następuje tak szybko, że użytkownik ma wrażenie ciągłego działania kilku aplikacji
+                        (ang. <i>multitasking</i>). Wprowadzono pojęcie <i>pamięci wirtualnej</i> przez co tzw. pamięć
+                        logiczna mogła być większa od fizycznej (Windows, Linux).</p>
+                    <p>Oprócz podziału systemów ze względu na liczbę zadań, dzielimy je także ze względu na sposób
+                        przetwarzania. W tym podziale istnieją <b>systemy przetwarzania bezpośredniego</b> oraz <b>systemy
+                            przetwarzania pośredniego.</b></p>
+                    <p><b>Systemy przetwarzania bezpośredniego</b> występuje wtedy, gdy system dokonuje interpretacji
+                        zadania użytkownika w czasie rzeczywistym i wykonuje go zaraz po zainicjowaniu. Istnieje
+                        bezpośrednia interakcja pomiędzy interfejsem a użytkownikiem (Windows, Linux).</p>
+                    <p><b>Systemy przetwarzania pośredniego</b> charakteryzują się specyficznym opóźnieniem między
+                        realizacją zadania przez system operacyjny, a jego zleceniem wykonania przez użytkownika. Możemy
+                        rozdzielić dwa rodzaje takich systemów:</p>
+                    <ListUnordered>
+                        <ListItem>
+                            <b>Prosty system wsadowy</b> - przygotowuje ciąg operacji w postaci tzw. wsadu. Za jego
+                            przygotowanie odpowiada operator, który po konsultacji z użytkownikami przygotowuje ciąg poleceń
+                            zapisanych na karcie perforowanej lub taśmie magnetycznej, realizowanych przez system
+                            operacyjny.
+                        </ListItem>
+                        <ListItem>
+                            <b>Złożony system wsadowy</b> - przypomina współczesne systemy wielozadaniowe, w których
+                            najczęściej wykonywane zadania są przechowywane w pamięci, a podczas obliczeń mogą być
+                            wykonywane operacje I/O dla innych zadań (ang. <i>simultaneous peripheral operation on-line</i>)
+                            lub kolejne zadania zapisane w pamięci.
+                        </ListItem>
+                    </ListUnordered>
                     <p>Photo by <a
                         href="https://unsplash.com/@sigmund?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sigmund</a> on <a
                         href="https://unsplash.com/photos/k3Y2iBBCag8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
