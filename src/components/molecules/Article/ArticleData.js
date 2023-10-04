@@ -24,6 +24,125 @@ import UnderSmallestHeader from "../../atoms/UnderSmallestHeader";
 
 export const articlesLink = [
         {
+            id: 106,
+            date: "4 października 2023 roku",
+            title: "Podstawy systemów komputerowych - część trzecia",
+            body: (
+                <>
+                    <UnderSmallestHeader>
+                        Struktura systemu operacyjnego
+                    </UnderSmallestHeader>
+                    <p>System operacyjny budują zwykle jądro systemu, oprogramowanie systemowe (m.in. sterowniki) oraz
+                        interpreter poleceń (bądź <i>GUI</i>)</p>
+                    <p>Naistotniejszym elementem <i>OS</i> jest jego jądro. Sprawuje funkcję zbioru procedur
+                        odpowiedzialnych za bezpośrednie zarządzanie daną platformą jak i za usługi, które wykorzystywane są
+                        do wprowadzania oprogramowania systemowego.</p>
+                    <p>Do najważniejszych zadać jądra systemowego zalicza się:</p>
+                    <ListUnordered>
+                        <ListItem>obsługa systemu wejścia-wyjścia</ListItem>
+                        <ListItem>zarządzanie procesami</ListItem>
+                        <ListItem>zarządzanie plikami i przestrzenią dyskową</ListItem>
+                        <ListItem>zarządzanie pamięcią operacyjną</ListItem>
+                        <ListItem>implementacja interfejsu poleceń</ListItem>
+                        <ListItem>uwierzytelnienie oraz ochrona.</ListItem>
+                    </ListUnordered>
+                    <p>Rozróżniamy trzy koncepcje jądra OS:</p>
+                    <ListUnordered>
+                        <ListItem>
+                            <b>jądro monolityczne</b>
+                        </ListItem>
+                        <ListItem>
+                            <b>mikrojądro</b>
+                        </ListItem>
+                        <ListItem>
+                            <b>jądro hybrydowe.</b>
+                        </ListItem>
+                    </ListUnordered>
+                    <p>Koncepcja <b>jądra monolitycznego</b> mówi o jądrze jako sporym programie odpowiedzialnym za
+                        realizację wszelkich najistotniejszych funkcji oraz zadań OS. Jego zaletą jest na pewno to, że
+                        funkcjonuje szybko ze względu na to, że nie jest ono rozbite na wiele odrębnych podprogramów.
+                        Również zaleta jest to, że w przypadku jego monolityczności łatwiej jest odnaleźć w jednym pliku
+                        potencjalne błędy. Do jego wad należy zaliczyć to, że trudno jest go rozbudować oraz że w przypadku
+                        błędu jądra, cały system operacyjny ulega awarii.
+                        Z tego typu jądra korzystają systemy operacyjne Unix.
+                    </p>
+                    <p>
+                        <b>Mikrojądro</b> jest niewielkie i w jego skład wchodzą mechanizmy niskopoziomowe, które sa
+                        odpowiedzialne za komunikację między procesorami, zarządzanie przestrzenią adresową oraz zarządzanie
+                        wątkami. Funkcje takie jak obsługa sterowników, systemów plików, protokołów sieciowych są
+                        przeniesione do innych specjalnych bloków, gdzie uruchamiane są jako moduły. Zaletą tego typu jądra
+                        jest to, że w przypadku błędu w jednym z modułów, nie ulega awarii cały system operacyjny. Wadą jest
+                        to, że komunikacja między modułami jest wolniejsza niż w przypadku jądra monolitycznego. Do wad
+                        zaliczymy też to, że niełatwo jest znaleźć błędy w kodzie, ponieważ spadek wydajności może być
+                        wywołany np. poprzez uruchomienie dużej liczby zadań jednocześnie. Systemem, który korzysta z tej
+                        koncepcji jest Minix.
+                    </p>
+                    <p>
+                        <b>Jądro hybrydowe</b> stanowi połączenie dwóch powyższych koncepcji. Jest połaczeniem prostoty oraz
+                        szybkości jądra monolitycznego z bezpieczeństwem i modułowością mikrojądra. Ten typ jądra uruchamia
+                        niektóre moduły w przestrzeni jądra z zamiarem doprowadzenia do spadku utraty wydajności przy
+                        zachowaniu najwyższej funkcjonalności. Jądra hybrydowe są wykorzystywane w systemach z rodziny
+                        Windows NT.
+                    </p>
+                    <p><b>Programy systemowe</b> - komponenty, które wchodzą w skład OS, ale nie stanowią części jądra.</p>
+                    <p><b>Interpreter poleceń</b> - stanowi następny komponent OS. Stanowić on może część jądra lub może
+                        odrębnym programem.</p>
+                    <p>System operacyjny charakteryzować się może różnymi cechami co uwarunkowane jest przez rodzaj
+                        zastosowanego jądra systemu. Te cechy to:</p>
+                    <ListUnordered>
+                        <ListItem>
+                            <b>Wielozadaniowość</b> - możliwość realizowania więcej niż jednego procesu na zasadzie
+                            dzielenia czasu mikroprocesora
+                        </ListItem>
+                        <ListItem>
+                            <b>Wielodostępność</b> (ang. <i>multiuser</i>) - możliwość obsługi wielu użytkowników
+                            jednocześnie
+                        </ListItem>
+                        <ListItem>
+                            <b>Wielowątkowość</b> (ang. <i>multithreading</i>) - możliwość realizowania więcej niż jednego
+                            procesu na zasadzie dzielenia czasu mikroprocesora
+                        </ListItem>
+                        <ListItem>
+                            <b>Wielobieżność</b> (ang. <i>reentrant</i>) - więcej niż jeden proces może mieć dostęp do
+                            interfejsu jądra, przez co wszystkie z nich mają możliwość korzystania z funkcji systemowych.
+                        </ListItem>
+                        <ListItem>
+                            <b>Skalowalność</b> (ang. <i>scalability</i>) - możliwość rozbudowy systemu operacyjnego przy braku spadku wydajności
+                        </ListItem>
+                        <ListItem>
+                            <b>Wywłaszczanie</b> - możliwość przerwania wykonywania procesu przez system operacyjny bez wstrzymywania całego systemu.
+                        </ListItem>
+                    </ListUnordered>
+                    {/*<UnderSmallestHeader>*/}
+                    {/*    Systemy plików*/}
+                    {/*</UnderSmallestHeader>*/}
+                    {/*<SmallestHeader>*/}
+                    {/*    Definicja informatycznych systemów komputerowych*/}
+                    {/*</SmallestHeader>*/}
+                    {/*<SmallestHeader>*/}
+                    {/*    Elementy składowe informatycznych systemów komputerowych*/}
+                    {/*</SmallestHeader>*/}
+                    {/*<SmallestHeader>*/}
+                    {/*    Funkcje informatycznych systemów komputerowych*/}
+                    {/*</SmallestHeader>*/}
+                    {/*<SmallestHeader>*/}
+                    {/*    Podział informatycznych systemów komputerowych ze względu na zastosowanie*/}
+                    {/*</SmallestHeader>*/}
+                    {/*<SmallestHeader>*/}
+                    {/*    Zasady tworzenia informatycznych systemów komputerowych*/}
+                    {/*</SmallestHeader>*/}
+                    <p>
+                        Photo by <a
+                        href="https://unsplash.com/@lorenzoherrera?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Lorenzo
+                        Herrera</a> on <a
+                        href="https://unsplash.com/photos/yP89apz2TAA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    </p>
+                </>
+            ),
+            tag: "systemy komputerowe",
+            img: "https://images.unsplash.com/flagged/photo-1569144654912-5f146d08b98b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        },
+        {
             id: 105,
             date: "3 października 2023 roku",
             title: "Podsumowanie kolejnego miesiąca",
@@ -92,7 +211,7 @@ export const articlesLink = [
         {
             id: 104,
             date: "3 października 2023 roku",
-            title: "Podstawy systemów komputerowych - kontynuacja",
+            title: "Podstawy systemów komputerowych - część druga",
             body: (
                 <>
                     <p>W poprzednim artykule pisałam o podziałach systemów komputerowych ze względu na liczbę wykonywanych
