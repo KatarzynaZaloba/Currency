@@ -24,6 +24,239 @@ import UnderSmallestHeader from "../../atoms/UnderSmallestHeader";
 
 export const articlesLink = [
         {
+            id: 107,
+            date: "5 października 2023 roku",
+            title: "Podstawy systemów komputerowych - część czwarta",
+            body: (
+                <>
+                    <UnderSmallestHeader>
+                        Systemy plików
+                    </UnderSmallestHeader>
+                    <p>Każdy system operacyjny powinien mić w sobie system plików (ang. <i>file system</i>), który zarządza
+                        sposobem zabezpieczania, zarządzania i przechowywania plików w przestrzeni pamięci masowej, np. na
+                        twardym dysku.</p>
+                    <p>
+                        <b>Plik</b> (nag. <i>file</i>) stanowi ciąg danych cechujących się określoną nazwą, rozmiarem, datą
+                        i godziną.
+                    </p>
+                    <p>
+                        System plików udostępnia użytkownikowi logiczną strukturę danych w postaci drzewa katalogowego, a
+                        sam obsługuje skomplikowane procesy zapisu i odczytu z danych. Ponadto system plików zarządza
+                        dodatkowymi atrybutami plików (w postaci metadanych) i udostępnia je programom, implementując
+                        mechanizmy kontroli dostępu do plików.
+                    </p>
+                    <SmallestHeader>
+                        Definicja informatycznych systemów komputerowych
+                    </SmallestHeader>
+                    <p>
+                        Komputerowy system informatyczny to część systemu informacyjnego. Do jego głównych zadań należy
+                        przetwarzanie informacji. Systemy informatyczne są zazwyczaj złożone z wielu komponentów, które są w
+                        stanie współpracować ze sobą.
+                    </p>
+                    <p>Systemy te pełnią ważną rolę w działaniu większości przedsiębiorstw czy instytucji państwowych. W
+                        dobie Internetu jego użytkownicy korzystają z tych systemów przy okazji zakupów on-line, zarządzania
+                        kontami bankowymi, uczenia się czy składania deklaracji podatkowych.</p>
+                    <p>
+                        Systemy informatyczne dzielimy na proste, średnie i złożone, które różnią się między sobą liczbą
+                        komponentów, stopień zaawansowania technologicznego i liczba obsługiwanych użytkowników
+                        jednocześnie.
+                    </p>
+                    <p>
+                        <b>Systemy proste</b> to systemy, które składają się z jednego komputera funkcjonującego na serwerze
+                        lokalnym, np. elektroniczny dziennik lekcyjny.
+                    </p>
+                    <p>
+                        <b>Systemem złożonym</b> natomiast będzie przykład systemu kontroli lotów.
+                    </p>
+                    <p>Proces tworzenia informatycznego systemu komputerowego nie jest łatwy, ponieważ wymaga zainwestowania
+                        znacznych środków finansowych i zebrania grupy profesjonalistów w danej dziedzinie czy szkolenia
+                        ludzi mających system obsługiwać.</p>
+                    <p>
+                        <b>Najczęściej za kluczowe czynniki w procesie tworzenia systemu to: </b>
+                    </p>
+                    <ListUnordered>
+                        <ListItem>
+                            koszty tworzenia i wdrożenia systemu,
+                        </ListItem>
+                        <ListItem>
+                            pełna zgodność ze specyfiką firmy (nomenklatura, uwarunkowania społeczne, specyfika biznesowa
+                            itp.),
+                        </ListItem>
+                        <ListItem>
+                            rzetelność przechowywanych w systemie danych,
+                        </ListItem>
+                        <ListItem>
+                            bezpieczeństwo danych,
+                        </ListItem>
+                        <ListItem>
+                            szybkość działania,
+                        </ListItem>
+                        <ListItem>
+                            funkcjonalność i czytelność interfejsu,
+                        </ListItem>
+                        <ListItem>
+                            otwartość i elastyczność systemu (np. możliwość jego rozbudowy),
+                        </ListItem>
+                        <ListItem>
+                            stabilność (odporność na awarie i ochrona przed atakami sieciowymi),
+                        </ListItem>
+                        <ListItem>
+                            możliwość uniezależnienia się w zakresie obsługi i serwisu (cesja praw autorskich do kodu
+                            źródłowego) oraz powszechność rozwiązań sprzętowych.
+                        </ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>
+                        Elementy składowe informatycznych systemów komputerowych
+                    </SmallestHeader>
+                    <p>
+                        Informatyczne systemy komputerowe to zbiór zależnych od siebie elementów. Można je pogrupować jako
+                        następujące:
+                    </p>
+                    <ListUnordered>
+                        <ListItem>
+                            <b>zasoby ludzkie</b> - potencjał umiejętności oraz wiedzy odnoszący się do przygotowania i
+                            budowania systemu, jak i również późniejszego zarządzania nim.
+                        </ListItem>
+                        <ListItem>
+                            <b>zasoby oprogramowania</b> - zbiór programów, baz danych, które są niezbędne do działania
+                            systemu.
+                        </ListItem>
+                        <ListItem>
+                            <b>zasoby informacyjne</b> - zbiór informacji, które są przechowywane w systemie i przez niego
+                            przetwarzane.
+                        </ListItem>
+                        <ListItem>
+                            <b>zasoby organizacyjne</b> - procedury serwisowania, niszczenia sprzętu, korzystania z systemu,
+                            instrukcji roboczych, ochrony elektronicznych danych osobowych.
+                        </ListItem>
+                        <ListItem>
+                            <b>zasoby techniczne</b> - systemy komputerowe oraz inne urządzenia, które są niezbędne do
+                            działania, które spełniają poniższe funkcje:
+                            <ListUnordered>
+                                <ListItem>
+                                    przechowywanie danych,
+                                </ListItem>
+                                <ListItem>
+                                    komunikacja między sprzętowymi elementami systemu,
+                                </ListItem>
+                                <ListItem>
+                                    komunikacja między użytkownikami a systemem (czytniki mowy, syntezatory mowy),
+                                </ListItem>
+                                <ListItem>
+                                    odbieranie na bieżąco danych zewnętrznych (czujniki, kamery),
+                                </ListItem>
+                                <ListItem>
+                                    interpretowanie danych wyjściowych (silniki, roboty),
+                                </ListItem>
+                            </ListUnordered>
+                        </ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>
+                        Funkcje informatycznych systemów komputerowych
+                    </SmallestHeader>
+                    <p><b>Funkcje informatycznych systemów komputerowych</b> są ściśle związane z operacjami na danych
+                        poddawanych procesowi cyfryzacji.</p>
+                    <p>Do podstawowych funkcji systemu dotyczących danych zaliczamy ich:</p>
+                    <ListUnordered>
+                        <ListItem>
+                            gromadzenie,
+                        </ListItem>
+                        <ListItem>
+                            przechowywanie,
+                        </ListItem>
+                        <ListItem>
+                            przetwarzanie,
+                        </ListItem>
+                        <ListItem>
+                            przesyłanie,
+                        </ListItem>
+                        <ListItem>
+                            prezentację.
+                        </ListItem>
+                    </ListUnordered>
+                    <p>W przypadku, gdy mamy do czynienia w systemach wspomagających zarządzanie procesami biznesowymi
+                        należy określić takie funkcje jak:</p>
+                    <ListUnordered>
+                        <ListItem>
+                            kierowanie przepływem danych,
+                        </ListItem>
+                        <ListItem>
+                            analiza procesów,
+                        </ListItem>
+                        <ListItem>
+                            zarządzanie projektami,
+                        </ListItem>
+                        <ListItem>
+                            kontrola etapów realizacji,
+                        </ListItem>
+                    </ListUnordered>
+                    <SmallestHeader>
+                        Podział informatycznych systemów komputerowych ze względu na zastosowanie
+                    </SmallestHeader>
+                    <p>Systemy informatyczne pierwotnie wykorzystywane były w sektorze finansowych oraz produkcyjnym, a
+                        aktualnie znajdują zastosowanie w bardzo wielu innych dziedzinach. Z biegiem czasu doszło do rozwoju
+                        techniki komputerowej, która zaowocowała rozwojem systemów jako takich i m.in zwiększenie
+                        efektywności zarządzania we wspomnianej branży biznesowej jak i automatyzacji produkcji w branży
+                        produkcyjnej.</p>
+                    <p>Wykorzystanie systemów informatycznych w handlu było tylko kwestią czasu. Oprócz niego zastosowanie
+                        mają także w sektorach użyteczności publicznej czy administracji.</p>
+                    <p>Na zwiększenie branż, w których systemy informatyczne znajdują zastosowanie miało niewątpliwie
+                        zwiększenie korzystania zarówno z Internetu jak i z komputerów osobistych przez społeczeństwo jak i
+                        liczne dofinansowania z funduszy unijnych projektów, które miały na celu zwiększenie stopnia
+                        cyfryzacji i informatyzacji. </p>
+                    <p>Do głównych celów wykorzystania systemów informatycznych uznaje się:</p>
+                    <ListUnordered>
+                        <ListItem>
+                            skuteczniejszą organizację pracy,
+                        </ListItem>
+                        <ListItem>
+                            wzrost efektywności zarządzania,
+                        </ListItem>
+                        <ListItem>
+                            poprawę logistyki,
+                        </ListItem>
+                        <ListItem>
+                            usprawnienie kontaktów z klientami,
+                        </ListItem>
+                        <ListItem>
+                            skrócenie procesów analizy, projektowania i ewaluacji przedsięwzięć,
+                        </ListItem>
+                        <ListItem>
+                            poprawę wyniku finansowego.
+                        </ListItem>
+                    </ListUnordered>
+                    <p>Jeżeli chcielibyśmy rozróżnić systemy informatyczne ze względu na zastosowanie, to podzielilibyśmy je na:</p>
+                    <ListUnordered>
+                        <ListItem>
+                            systemy ewidencyjno-transakcyjne,
+                        </ListItem>
+                        <ListItem>
+                            systemy informacyjno-decyzyjne,
+                        </ListItem>
+                        <ListItem>
+                            systemy wspomagania decyzji,
+                        </ListItem>
+                        <ListItem>
+                            systemy kontroli procesów,
+                        </ListItem>
+                        <ListItem>
+                            systemy eksperckie.
+                        </ListItem>
+                    </ListUnordered>
+                    {/*<SmallestHeader>*/}
+                    {/*    Zasady tworzenia informatycznych systemów komputerowych*/}
+                    {/*</SmallestHeader>*/}
+                    <p>Photo by <a
+                        href="https://unsplash.com/@dhaval?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Dhaval
+                        Parmar</a> on <a
+                        href="https://unsplash.com/photos/dnPniNPUe4o?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+                    </p>
+                </>
+            ),
+            tag: "systemy komputerowe",
+            img: "https://images.unsplash.com/photo-1516905041604-7935af78f572?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        },
+        {
             id: 106,
             date: "4 października 2023 roku",
             title: "Podstawy systemów komputerowych - część trzecia",
@@ -107,30 +340,14 @@ export const articlesLink = [
                             interfejsu jądra, przez co wszystkie z nich mają możliwość korzystania z funkcji systemowych.
                         </ListItem>
                         <ListItem>
-                            <b>Skalowalność</b> (ang. <i>scalability</i>) - możliwość rozbudowy systemu operacyjnego przy braku spadku wydajności
+                            <b>Skalowalność</b> (ang. <i>scalability</i>) - możliwość rozbudowy systemu operacyjnego przy
+                            braku spadku wydajności
                         </ListItem>
                         <ListItem>
-                            <b>Wywłaszczanie</b> - możliwość przerwania wykonywania procesu przez system operacyjny bez wstrzymywania całego systemu.
+                            <b>Wywłaszczanie</b> - możliwość przerwania wykonywania procesu przez system operacyjny bez
+                            wstrzymywania całego systemu.
                         </ListItem>
                     </ListUnordered>
-                    {/*<UnderSmallestHeader>*/}
-                    {/*    Systemy plików*/}
-                    {/*</UnderSmallestHeader>*/}
-                    {/*<SmallestHeader>*/}
-                    {/*    Definicja informatycznych systemów komputerowych*/}
-                    {/*</SmallestHeader>*/}
-                    {/*<SmallestHeader>*/}
-                    {/*    Elementy składowe informatycznych systemów komputerowych*/}
-                    {/*</SmallestHeader>*/}
-                    {/*<SmallestHeader>*/}
-                    {/*    Funkcje informatycznych systemów komputerowych*/}
-                    {/*</SmallestHeader>*/}
-                    {/*<SmallestHeader>*/}
-                    {/*    Podział informatycznych systemów komputerowych ze względu na zastosowanie*/}
-                    {/*</SmallestHeader>*/}
-                    {/*<SmallestHeader>*/}
-                    {/*    Zasady tworzenia informatycznych systemów komputerowych*/}
-                    {/*</SmallestHeader>*/}
                     <p>
                         Photo by <a
                         href="https://unsplash.com/@lorenzoherrera?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Lorenzo
