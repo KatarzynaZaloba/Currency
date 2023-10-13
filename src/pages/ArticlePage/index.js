@@ -37,22 +37,22 @@ const ArticlePage = () => {
                     {article.title}
                 </h3>
                 <div className="mb-3">
-                {tags && (
-                    tags?.map((tag, index) => (
-                        <TagBadge tag={tag} key={index}/>
-                    ))
-                )}
+                    {tags && (
+                        tags?.map((tag, index) => (
+                            <TagBadge tag={tag} key={index}/>
+                        ))
+                    )}
                 </div>
-                    <div className="flex justify-start items-center pb-4">
-                        <img src={Logo} className="rounded-full w-[36px] mr-2" alt="logo"/>
-                        <AuthorName />
-                        <Date date={article.date}/>
-                    </div>
+                <div className="flex justify-start items-center pb-4">
+                    <img src={Logo} className="rounded-full w-[36px] mr-2" alt="logo"/>
+                    <AuthorName/>
+                    <Date date={article.date}/>
+                </div>
                 <div className="pb-6">
-                <img src={article.img} className="object-fill rounded-md aspect-[5/3]" alt="logo"/>
+                    <img src={article.img} className="object-fill rounded-md aspect-[5/3]" alt="logo"/>
                 </div>
                 <div className="pb-10">
-                {article.body}
+                    {article.body}
                 </div>
             </Container>
             <Footer/>

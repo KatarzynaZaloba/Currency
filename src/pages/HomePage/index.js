@@ -56,7 +56,6 @@ function HomePage() {
                                                 title={article.title}
                                                 body={article.body}
                                                 picture={article.img}
-                                                // onLoad={() => handleImageLoad(article.id)}
                                             />
                                         </Link>
                                     ))}
