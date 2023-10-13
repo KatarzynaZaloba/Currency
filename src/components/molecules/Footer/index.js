@@ -22,35 +22,12 @@ const Footer = () => {
                         </Mailto>
                     </div>
                 </div>
-                {/*<div>*/}
-                {/*    <FooterSectionTitle title="Quick Link"/>*/}
-                {/*    <FooterSectionUndertitle title="Lifestyle"/>*/}
-                {/*    <FooterSectionUndertitle title="Lifestyle"/>*/}
-                {/*    <FooterSectionUndertitle title="Lifestyle"/>*/}
-                {/*    <FooterSectionUndertitle title="Lifestyle"/>*/}
-                {/*    <FooterSectionUndertitle title="Lifestyle"/>*/}
-                {/*    <FooterSectionUndertitle title="Lifestyle"/>*/}
-
-                {/*</div>*/}
-                {/*<div>*/}
-                {/*    <FooterSectionTitle title="Category"/>*/}
-                {/*    <FooterSectionUndertitle title="Lifestyle"/>*/}
-                {/*    <FooterSectionUndertitle title="Lifestyle"/>*/}
-                {/*    <FooterSectionUndertitle title="Lifestyle"/>*/}
-                {/*    <FooterSectionUndertitle title="Lifestyle"/>*/}
-                {/*    <FooterSectionUndertitle title="Lifestyle"/>*/}
-                {/*    <FooterSectionUndertitle title="Lifestyle"/>*/}
-                {/*</div>*/}
             </div>
             <div className="max-w-fit m-auto px-5 md:px-20 md:pb-10 pb-5 flex justify-between items-center border-t-2 py-4">
                 <div className="flex justify-start items-center">
                     <FooterSectionParagraph text="UI Design:"></FooterSectionParagraph>
                     <a href="https://www.jstemplate.net/" className="text-zinc-900 font-semibold hover:text-indigo-500 duration-30">JS Template</a>
                 </div>
-                {/*<div className="flex justify-end items-center">*/}
-                {/*    <FooterSectionUndertitle title="Polityka prywatności"/>*/}
-                {/*    <FooterSectionUndertitle title="Polityka ciasteczek"/>*/}
-                {/*</div>*/}
             </div>
         </footer>
     )
