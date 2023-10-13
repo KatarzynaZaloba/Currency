@@ -3,37 +3,22 @@ import {Link} from "react-router-dom";
 import '../../App.css';
 import '../../index.css';
 import Footer from "../../components/molecules/Footer";
-// import AboutMe from "../../components/templates/AboutMe";
 import Section from "../../components/organisms/Section";
-// import Article from "../../components/molecules/Article";
 import Container from "../../components/atoms/Container";
-// import Main from "../../components/atoms/Main";
 import {
     articlesLink
 } from "../../components/molecules/Article/ArticleData";
-// import NavBarTitle from "../../components/atoms/NavBarTitle";
-// import SearchBar from "../../components/molecules/SearchBar";
-// import SwitchButton from "../../components/molecules/SwitchButton";
 import NavBar from "../../components/organisms/NavBar";
-// import FooterSectionTitle from "../../components/atoms/FooterSectionTitle";
-// import FooterSectionUndertitle from "../../components/atoms/FooterSectionUndertitle";
-// import FooterSectionParagraph from "../../components/atoms/FooterSectionParagraph";
-// import FooterContactTitle from "../../components/atoms/FooterContactTitle";
 import HomePageHeader from "../../components/molecules/HomePageHeader";
-// import SectionTitle from "../../components/atoms/SectionTitle";
 import OneArticleCard from "../../components/organisms/OneArticleCard";
 import Button from "../../components/atoms/Button";
 
 function HomePage() {
     const [searchTerm, setSearchTerm] = useState("");
     const [numberOfPosts, setNumberOfPosts] = useState(7);
-    // const [isLoading, setIsLoading] = useState(true);
-    // const [loadedImages, setLoadedImages] = useState({});
-
     const handleSearch = (newSearchTerm) => {
         setSearchTerm(newSearchTerm);
     };
-
 
     const sortedArticles = [...articlesLink].sort((a, b) => b.id - a.id);
     const newestArticle = sortedArticles[0];
@@ -45,27 +30,8 @@ function HomePage() {
     );
     const articlesToDisplay = filteredArticles.slice(1, numberOfPosts);
 
-    // useEffect(() => {
-    //     const timer = setTimeout(() => setIsLoading(false), 3000);
-    //     return () => clearTimeout(timer);
-    // }, []);
-    //
-    // const handleImageLoad = (id) => {
-    //     console.log("Image Loaded", id);
-    //     setLoadedImages((prev) => ({...prev, [id]: true}));
-    // };
-    //
-    // const allImagesLoaded = articlesToDisplay.every(
-    //     (article) => loadedImages[article.id] !== undefined
-    // );
-
     return (
         <>
-            {/*{!allImagesLoaded ? (*/}
-            {/*    <div className="flex justify-center items-center min-h-screen">*/}
-            {/*        <div className="animate-spin rounded-full h-32 w-32 border-t-4 border-b-4 border-blue-500"></div>*/}
-            {/*    </div>*/}
-            {/*) : (*/}
                 <Container>
                     <NavBar
                         searchTerm={searchTerm}
@@ -105,7 +71,6 @@ function HomePage() {
                     />
                 </Container>
             )
-{/*}*/}
             <Footer/>
             )
         </>

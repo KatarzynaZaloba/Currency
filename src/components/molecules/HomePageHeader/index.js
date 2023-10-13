@@ -1,6 +1,5 @@
 import React from "react";
 import "./style.css";
-import homePageHeader from "../../../images/homePageHeader.png";
 import Logo from "../../../images/kate.jpg";
 import Date from "../../atoms/Date";
 import AuthorName from "../../atoms/AuthorName";
