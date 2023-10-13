@@ -18,6 +18,11 @@ To create the application I have used:
 - GIT
 - Markdown
 
+*Version 0.2.5 (13.10.2023):*
+- fixed styles of text in Footer section for bigger screens
+- added `react-icons` library
+- pinned icons of *Github* and *Linkedin* to the links to my profiles in Footer section
+
 *Version 0.2.5 (02.10.2023):*
 - fixed bug with hover effect on "Pokaż więcej" button
 - fixed bug with mailto link in footer
