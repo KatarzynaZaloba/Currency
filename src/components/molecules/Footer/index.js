@@ -1,4 +1,5 @@
 import React from "react";
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import "./style.css";
 import FooterSectionTitle from "../../atoms/FooterSectionTitle";
 import FooterSectionParagraph from "../../atoms/FooterSectionParagraph";
@@ -9,7 +10,7 @@ const Footer = () => {
 
     return (
         <footer className="bg-zinc-100 m-auto px-5 md:pb-10 pb-5">
-            <div className="max-w-fit m-auto px-5 md:px-20 lg:px-40 py-4 grid grid-cols-1 gap-1">
+            <div className="max-w-fit m-auto px-5 md:px-20 lg:px-40 py-4 grid grid-cols-1 md:grid-cols-2 gap-1">
                 <div className="col-auto">
                     <div className="break-words">
                         <FooterSectionTitle title="O projekcie"/>
@@ -20,6 +21,14 @@ const Footer = () => {
                         <Mailto email={email} subject="Wspolpraca">
                             <FooterSectionTitle title={email} />
                         </Mailto>
+                    </div>
+                    <div className="flex justify-start items-center">
+                        <a href="https://www.linkedin.com/in/katarzyna-zaloba/" target="_blank" rel="noopener noreferrer" className="mr-4">
+                            <FaLinkedin size={24} />
+                        </a>
+                        <a href="https://github.com/KatarzynaZaloba" target="_blank" rel="noopener noreferrer">
+                            <FaGithub size={24} />
+                        </a>
                     </div>
                 </div>
             </div>
