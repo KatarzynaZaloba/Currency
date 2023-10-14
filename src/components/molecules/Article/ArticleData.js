@@ -225,7 +225,8 @@ export const articlesLink = [
                             poprawę wyniku finansowego.
                         </ListItem>
                     </ListUnordered>
-                    <p>Jeżeli chcielibyśmy rozróżnić systemy informatyczne ze względu na zastosowanie, to podzielilibyśmy je na:</p>
+                    <p>Jeżeli chcielibyśmy rozróżnić systemy informatyczne ze względu na zastosowanie, to podzielilibyśmy je
+                        na:</p>
                     <ListUnordered>
                         <ListItem>
                             systemy ewidencyjno-transakcyjne,
@@ -243,6 +244,78 @@ export const articlesLink = [
                             systemy eksperckie.
                         </ListItem>
                     </ListUnordered>
+                    <p>
+                        Technika komputerowa jest już rozwinięta na tyle, aby stosować w systemach informatycznych sztuczną
+                        inteligencję opartą na sieciach neuronowych. Systemy te uczą się na bazie własnego doświadczenia.
+                        Pozwala to na podejmowanie decyzji w wielu obszarach, do których zaliczyć można medycynę, marketing,
+                        sektor finansowy czy analizę procesu produkcji.
+                    </p>
+                    <p>
+                        <b>Systemy o charakterze ewidencyjno-transakcyjnym</b> - ukierunkowane są na ewidencję działalności
+                        gospodarczej w czasie rzeczywistym, jak i również na obsługę transakcji. Przykładem mogą być systemy
+                        rachunkowości, sprzedaży, ewidencji środków finansowych czy ewidencji płac.
+                    </p>
+                    <p>
+                        <b>Systemy o charakterze informacyjno-decyzyjnym</b> - skutecznie gromadzą informacje, opracowują i
+                        zarządzają ich przepływem oraz organizują dostęp do nich. Funkcjonują na podstawie baz danych.
+                        Przetwarzają informacje, po czym rezultaty prezentowane mogą być w raportach. Przykładem może być
+                        tutaj uruchomiony przez <i>Narodowy Fundusz Zdrowia</i> zintegrowany informator pacjenta, który
+                        aktualnie połączony jest z <i>Internetowym Kontem Pacjenta</i>.
+                    </p>
+                    <p>Do głównych zadań systemów informacyjno-decyzyjnych można zaliczyć pomoc podczas podejmowania
+                        taktycznych oraz strategicznych decyzji. Systemy wspomagania decyzji można podzielić ze względu na
+                        zastosowania:
+                    </p>
+                    <ListUnordered>
+                        <ListItem>
+                            <b>grupowe</b> - wspomagające decyzje grupowe,
+                        </ListItem>
+                        <ListItem>
+                            <b>naczelnego kierownictwa</b> - wspomagające decyzje w warunkach bardzo słabej struktury
+                            informacyjnej,
+                        </ListItem>
+                        <ListItem>
+                            <b>automatyzacji biura</b> - zarządzającej dokumentami i ich obiegiem,
+                        </ListItem>
+                        <ListItem>
+                            <b>zarządzania przebiegiem pracy</b> - umożliwiające realizację procesów za pomocą narzędzi
+                            elektronicznych,
+                        </ListItem>
+                        <ListItem>
+                            <b>inżynierskie</b> - wspomagające procesy projektowania i produkcji,
+                        </ListItem>
+                    </ListUnordered>
+                    <p>
+                        <b>Systemy kontroli procesów</b> - stosowane są w przemyśle z zamiarem kontrolowania procesów
+                        produkcyjnych.
+                    </p>
+                    <p>
+                        <b>Systemy eksperckie</b> - stosowane przy generowaniu decyzji opartych o bazy wiedzy oraz
+                        mechanizmy sztucznej inteligencji. Pozwala to na kreowanie modelów sytuacji i przedstawienie
+                        potencjalnych rozwiązać oraz wyjaśnianie ich.
+                    </p>
+                    <p>
+                        <b>Zintegrowane systemy informatyczne</b> - systemy najbardziej zaawansowane stosowane we
+                        wspomaganiu zarządzania w instytucjach oraz przedsiębiorstwach przy optymalizacji procesów
+                        zewnętrznych i wewnętrznych.
+                    </p>
+                    <p>
+                        Informatyczne systemy komputerowe sklasyfikować można jako lokalne oraz zdalne, co zależne jest od
+                        ich obszaru funkcjonowania.
+                    </p>
+                    <p>
+                        <b>Systemy lokalne</b> - funkcjonują w obrębie jednego przedsiębiorstwa, instytucji, budynku lub
+                        pomieszczenia.
+                    </p>
+                    <p>
+                        <b>Struktury zdalne</b> - funkcjonują w obrębie kilku przedsiębiorstw, instytucji, budynków itd.,
+                        stanowią struktury wielomodułowe rozwijane przez lata.
+                    </p>
+                    <p>
+                        <b>Bezpieczeństwo systemów informatycznych</b> - jest najważniejszą kwestią podczas projektowania
+                        systemu oraz jego utrzymania. Prawidłowo opracowany system powininen sprawować kontrolę nad dostępem
+                        użytkownika do zasobów.
+                    </p>
                     {/*<SmallestHeader>*/}
                     {/*    Zasady tworzenia informatycznych systemów komputerowych*/}
                     {/*</SmallestHeader>*/}
