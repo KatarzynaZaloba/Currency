@@ -24,6 +24,18 @@ import UnderSmallestHeader from "../../atoms/UnderSmallestHeader";
 
 export const articlesLink = [
         {
+            id: 108,
+            date: "14 października 2023 roku",
+            title: "Podstawy systemów komputerowych - część piąta",
+            body: (
+                <>
+                    <SmallestHeader>
+                        Zasady tworzenia informatycznych systemów komputerowych
+                    </SmallestHeader>
+                </>
+            )
+        },
+        {
             id: 107,
             date: "5 października 2023 roku",
             title: "Podstawy systemów komputerowych - część czwarta",
@@ -2744,7 +2756,7 @@ export const articlesLink = [
                         <ListItem>
                             <b>browserslist</b> - przeglądarki, jakie wspieramy (można to sprawdzić
                             na
-                            stronie <a href="https://browserl.ist/" target="_blank">browserl.ist</a>)
+                            stronie <a href="https://browserl.ist/" target="_blank" rel="noreferrer">browserl.ist</a>)
                         </ListItem>
                         <ListItem>
                             <b>scripts</b> - tu definiujemy tzw. <i>npm scripts</i>
@@ -3565,9 +3577,9 @@ export const articlesLink = [
                     <SmallestHeader>Destrukturyzacja w zagnieżdżonym obiekcie</SmallestHeader>
                     <Blockquote>
                         <b>const</b> [number1, number2] = [20, 46, 18];<br/><br/>
-                        // ignorujemy drugi element<br/>
+                        <Comment text="ignorujemy drugi element"/><br/>
                         <b>const</b> [number1, , number3] = [20, 46, 18];<br/><br/>
-                        // pozostałe elementy utworzą nową tablicę<br/>
+                        <Comment text="pozostałe elementy utworzą nową tablicę"/><br/>
                         <b>const</b> [firstNumber, ...otherNumbers] = [20, 78, 11, 33];
                     </Blockquote>
                     <SmallestHeader>Łączenie tablic</SmallestHeader>
@@ -3958,9 +3970,9 @@ export const articlesLink = [
                     <Blockquote>
                         <b>const</b> products = ["jajka", "mleko", "chleb", "bułki", "czekolada"];<br/><br/>
                         products.splice(1, 1);<br/>
-                        // usuwa drugi element<br/><br/>
+                        <Comment text="usuwa drugi element"/><br/><br/>
                         products.splice(2, 2, "rajstopy Gatta", "spód do pizzy");<br/>
-                        //usuwa 3. i 4. element, dodaje dwa nowe w ich miejsce
+                        <Comment text="usuwa 3. i 4. element, dodaje dwa nowe w ich miejsce"/>
                     </Blockquote>
                     <SmallestHeader>forEach</SmallestHeader>
                     <Blockquote>
@@ -4721,7 +4733,7 @@ export const articlesLink = [
                     </ListUnordered>
                     <SmallestHeader>Orientation</SmallestHeader>
                     <Blockquote>
-                        <b>@media (orientation: landscape) &#123;</b> /* lub portrait */<br/>
+                        <b>@media (orientation: landscape) &#123;</b><Comment text="/* lub portrait */"/><br/>
                         &nbsp;&nbsp;.image &#125;<br/>
                         &nbsp;&nbsp;&nbsp;&nbsp;width: 50%;<br/>
                         &nbsp;&nbsp;&#123;<br/>
@@ -5510,13 +5522,15 @@ export const articlesLink = [
                     <p>A tutaj można utrwalić swoją wiedzę z <i>Flex-a</i>:</p>
                     <ListUnordered>
                         <ListItem>
-                            <a href="https://flexboxfroggy.com/#pl" target="_blank">Flexbox Froggy</a>
+                            <a href="https://flexboxfroggy.com/#pl" target="_blank" rel="noreferrer">Flexbox Froggy</a>
                         </ListItem>
                         <ListItem>
-                            <a href="https://mastery.games/flexboxzombies" target="_blank">Flexbox Zombies</a>
+                            <a href="https://mastery.games/flexboxzombies" target="_blank" rel="noreferrer">Flexbox
+                                Zombies</a>
                         </ListItem>
                         <ListItem>
-                            <a href="https://codepen.io/osublake/pen/dMLQJr" target="_blank">CodePen Demo</a>
+                            <a href="https://codepen.io/osublake/pen/dMLQJr" target="_blank" rel="noreferrer">CodePen
+                                Demo</a>
                         </ListItem>
                     </ListUnordered>
                 </>
@@ -6035,7 +6049,7 @@ export const articlesLink = [
                         .article__div--highlighted &#123;<br/>
                         &nbsp;&nbsp;width: 300px;<br/>
                         <b>&nbsp;&nbsp;resize: both;</b><br/>
-                        &nbsp;&nbsp;overflox: auto;<br/>//
+                        &nbsp;&nbsp;overflow: auto;<br/>
                     </Blockquote>
                     <p>Mała uwaga, też przy okazji powtórzenia materiału pewne rzeczy rozjaśnię — warto dodawać
                         ".." przed /
@@ -6257,7 +6271,8 @@ export const articlesLink = [
                         protokół <i>OpenGraph</i>
                         interesującej nas strony.</p>
                     <p>Narzędzie to znajduje się pod tym <a href="https://developers.facebook.com/tools/debug/"
-                                                            target="_blank" title="Sharing Debugger">linkiem.</a></p>
+                                                            target="_blank" rel="noreferrer"
+                                                            title="Sharing Debugger">linkiem.</a></p>
                     <p>Możemy dzięki niemu sprawdzić, w jaki sposób zostanie udostępniona konkretna strona — w tym
                         przypadku
                         udostępniona na Facebooku.</p>
@@ -6337,6 +6352,7 @@ export const articlesLink = [
                     <p>Po więcej przykładów odsyłam do dokumentacji <a
                         href="https://www.markdownguide.org/basic-syntax/"
                         target="_blank"
+                        rel="noreferrer"
                         title="Dokumentacja Markdown">Markdown</a>
                     </p>
                     <p>Po krótkim powtórzeniu, zabieram się za edycję README.md!</p>
@@ -6363,12 +6379,13 @@ export const articlesLink = [
                         początku
                         tejże fascynującej drogi.</p>
                     <p>W grudniu 2022 roku postanowiłam przebranżowić się i wreszcie zacząć programować. Trafiłam tak na
-                        kurs <a href="https://youcode.pl/" target="_blank"
+                        kurs <a href="https://youcode.pl/" target="_blank" rel="noreferrer"
                                 title="strona kursu Frontend Developer od Podstaw od YouCode">YouCode</a>.
                         Jednak wewnętrzna motywacja sprawiła, że zaczęłam szukać materiałów z innych źródeł jak np. <a
-                            href="https://www.freecodecamp.org/" target="_blank"
+                            href="https://www.freecodecamp.org/" target="_blank" rel="noreferrer"
                             title="strona freeCodeCamp">freeCodeCamp</a>
-                        czy mini-kursy <a href="https://codenga.pl/" target="_blank" title="strona Codenga">Codenga.</a>
+                        czy mini-kursy <a href="https://codenga.pl/" target="_blank" rel="noreferrer"
+                                          title="strona Codenga">Codenga.</a>
                     </p>
                     <p>Popełniłam pierwszy błąd - "latałam" po materiałach i stronach, przez to nie skupiłam się od
                         dechy do
@@ -8534,6 +8551,7 @@ export const articlesLink = [
                         np.
                         <i>var</i>, <i>let</i>, <i>function</i> itd. <a href="https://mothereff.in/js-variables"
                                                                         target="_blank"
+                                                                        rel="noreferrer"
                                                                         title="JavaScript variable name validator">Przydatna
                             stronka, do sprawdzenia, czy nazwa, której chcesz użyć, nie jest zajęta</a>.
                     </p>
@@ -8728,13 +8746,15 @@ export const articlesLink = [
                         najgorzej radzi sobie <i>IE</i>. Na kursie dowiedziałam się, że warto sprawdzać kompatybilność
                         <i>CSS</i> z różnymi wersjami różnych przeglądarek. Przydatne linki do sprawdzenia są <a
                         href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"
-                        title="MDN, a jakże">TU</a> i <a href="https://caniuse.com/" target="_blank"
-                                                         title="CanIUse">TU</a>.
+                        rel="noreferrer" title="MDN, a jakże">TU</a> i <a href="https://caniuse.com/" target="_blank"
+                                                                          title="CanIUse"
+                                                                          rel="noreferrer">TU</a>.
                         Natomiast muszę jeszcze dokładniej
                         poczytać, o co chodzi z tym <a href="https://www.w3.org/TR/css-2020/" target="_blank"
-                                                       title="Strona W3C o CSS Snapshot 2020">CSS Snapshot 2020.</a> I
+                                                       title="Strona W3C o CSS Snapshot 2020"
+                                                       rel="noreferrer">CSS Snapshot 2020.</a> I
                         wypadałoby mi odwiedzić też
-                        i <a href="https://www.w3.org/Style/CSS/" target="_blank"
+                        i <a href="https://www.w3.org/Style/CSS/" target="_blank" rel="noreferrer"
                              title="Ironicznie brzydka strona o CSS">TĄ</a> stronę, by zapoznać się z dokumentacją.
                     </p>
                     <p>
@@ -9463,12 +9483,12 @@ export const articlesLink = [
                     <p>
                         Po więcej teorii odsyłam do
                         <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"
-                           title="HTML na MDNie"><i>MDNa</i></a>
+                           title="HTML na MDNie" rel="noreferrer"><i>MDNa</i></a>
                         lub <a href="https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer"
-                               target="_blank" title="MDN - ścieżka Frontend-owca">TU</a>
+                               target="_blank" rel="noreferrer" title="MDN - ścieżka Frontend-owca">TU</a>
                         lub do stron wyżej wymienionych organizacji
-                        <a href="https://www.w3.org/" target="_blank" title="W3C">W3C</a>
-                        i <a href="https://html.spec.whatwg.org/multipage/" target="_blank"
+                        <a href="https://www.w3.org/" target="_blank" title="W3C" rel="noreferrer">W3C</a>
+                        i <a href="https://html.spec.whatwg.org/multipage/" target="_blank" rel="noreferrer"
                              title="WHATWG"><i>WHATWG</i></a>.
                     </p>
                     <p>
