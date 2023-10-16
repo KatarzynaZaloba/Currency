@@ -24,6 +24,34 @@ import UnderSmallestHeader from "../../atoms/UnderSmallestHeader";
 
 export const articlesLink = [
         {
+            id: 109,
+            date: "16 października 2023 roku",
+            title: "Trochę o treningach Garmina i kondycji",
+            body: (
+                <>
+                    <p>
+                        Od czerwca, kiedy zmieniłam swoją ścieżkę zawodową, moim drugim planem na przyszłość było powrócenie do treningów z przeszłości, gdzie przed pracą potrafiłam przebiec 8km po lesie. Przez te ponad 4 miesiące osiągnęłam na razie tyle, że mogę na razie przebiec ciągiem (i to w <em>zawrotnym</em> tempie 9:40/km) 2km.
+                    </p>
+                    <p>
+                         Używałam wcześniej treningów Garmina, ale przez to, że wyznaczany był tylko coraz dłuższy czas treningu + 5min marszu na początek i 5min marszu na koniec, rozleniwiałam się zamiast się rozwijać. Nie było brane pod uwagę tętno ani kilometraż tylko czas, więc doszło do takiej sprzeczności - jeśli już szybciej biegasz to musisz biec paradoksalnie dłużej, bo brana jest pod uwagę jedynie kwestia czasu końcowego treningu.
+                    </p>
+                    <p>
+                        Aktualnie od jakichś 2 tygodni podążam inną koncepcją - wyznaczam sobie kilometraż bazowy, który mogę przebiec w dowolnym czasie. Dodatkową motywacją o poranku do poprawienia prędkości było za każdym razem to, że jeżeli szybciej przebiegnę dany odcinek to szybciej wrócę do domu.
+                    </p>
+                    <p>
+                        Kolejną motywacją będzie to, że z każdym tygodniem będę zmieniała trasę biegu, aby móc na nowo poznać <b>Bolimowski Park Krajobrazowy</b>.
+                    </p>
+                    <p>
+                        Piszę tego posta raczej jako taki <i>kinldy reminder</i>, w którym przypominam o tym, że rzeczywistość w większości przypadków ma się nijak do kolorowych relacji, postów czy zdjęć umieszczanych w social mediach. I każdy proces wymaga czasu. I jeżeli Twoje <i>dziś</i> nie wygląda jak <i>jutro</i> to nie znaczy, że nie ma sensu kontynuować tego co robisz. Wszystko wymaga czasu i cierpliwości.
+                    </p>
+                    <p>Photo by <a href="https://unsplash.com/@esdesignisms?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Emma Simpson</a> on <a href="https://unsplash.com/photos/mNGaaLeWEp0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+                    </p>
+                </>
+            ),
+            tag: "bieganie",
+            img: "https://images.unsplash.com/photo-1477332552946-cfb384aeaf1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        },
+        {
             id: 108,
             date: "14 października 2023 roku",
             title: "Podstawy systemów komputerowych - część piąta",
@@ -32,8 +60,76 @@ export const articlesLink = [
                     <SmallestHeader>
                         Zasady tworzenia informatycznych systemów komputerowych
                     </SmallestHeader>
+                    <p>
+                        Wyróżniamy następujące etapy projektowania lub tworzenia systemów komputerowych:
+                    </p>
+                    <ListUnordered>
+                        <ListItem>
+                            analiza i określenie wymagań (modelowanie),
+                        </ListItem>
+                        <ListItem>
+                            projektowanie systemu i aplikacji,
+                        </ListItem>
+                        <ListItem>
+                            programowanie (implementacja) i dokumentowanie,
+                        </ListItem>
+                        <ListItem>
+                            testowanie i walidacja,
+                        </ListItem>
+                        <ListItem>
+                            wdrożenie systemu u odbiorcy,
+                        </ListItem>
+                        <ListItem>
+                            eksploatacja i ewaluacja systemu.
+                        </ListItem>
+                    </ListUnordered>
+                    <p>
+                        Podczas analizy wymagań powinien powstać dokument, w którym określa się funkcje, jakie ma spełniać
+                        danych system zdaniem użytkownika. Określa to <b>wymaganiem funkcjonalnym</b>.
+                    </p>
+                    <p>Podczas tego etapu sposób realizacji nie jest ważny, jednakże określa się też wymagania
+                        niefunkcjonalne takie jak wydajność czy czas odpowiedzi na żądanie użytkownika. W tej fazie
+                        opracowuje się prototyp systemu oraz jego model.
+                    </p>
+                    <p>
+                        Faza projektowania to czas, w którym wskazuje się sposoby spełnienia powyższych wymagań.
+                    </p>
+                    <p>
+                        W praktyce stosowane są projekty koncepcyjne, które mają za zadanie określić istotę rozwiązań. W
+                        systemie bankowym mogą to być encje wynikające z jego opisu rzeczywistości, np. klient, konto. Tego
+                        typu projekty są przydatne w sytuacjach, gdy np. zrezygnowano z modelowania w poprzednim etapie.
+                    </p>
+                    <UnderSmallestHeader>
+                        Różnica między projektem koncepcyjnym a modelem
+                    </UnderSmallestHeader>
+                    <p>
+                        Etap programowania to czas, w którym programiści kodują rozwiązania w obranym języku programowania.
+                        Podczas tego czasu można dokonać integracji modułów lub podsystemów stanowiących części systemu docelowego. Na tym etapie przeprowadza się testy funkcjonalne, które mają na celu sprawdzenie, czy system spełnia założenia. Po wychwyceniu błędów naprawia się je na bieżąco.
+                    </p>
+                    <p>
+                       Podczas wyżej wspomnianej fazy testowania dochodzi do próbnej eksploatacji systemu przez testerów zaznajomionych z obszarem funkcjonowania systemu z zamiarem przemianowania systemu z wersji beta na wersję gotową dla końcowego użytkownika.
+                    </p>
+                    <p>
+                        Następnym etapem będzie instalacja i skonfigurowanie systemu u klienta, jak i również zagwarantowanie należytego szkolenia dla użytkowników systemu oraz późniejszego wsparcia technicznego. Na tym etapie znajdzie się też miejsce dla działań marketingowych.
+                    </p>
+                    <p>
+                        Etap ewaluacji polega na badaniu działania systemu i nanoszeniu poprawek w celu udoskonalenia całego systemu informatycznego.
+                    </p>
+                    <p>
+                        W praktyce w budowaniu systemu komputerowego stosuje się tak zwaną <i>metodykę spiralną</i>, która polega na cyklicznym realizowaniu określonej sekwencji działań do momentu osiągnięcia rozwiązania celowego.
+                    </p>
+                    <p>
+                        Zdarza się również, że system tworzony jest w oparciu o gotowe elementy. Sposób ten wymusza przeprowadzenie analizy potrzeb klienta oraz identyfikację elementów, które we właściwym połączeniu mogłyby je spełnić. Dzięki tej metodzie możemy pominąć etap projektowania.
+                    </p>
+                    <p>Photo by <a
+                        href="https://unsplash.com/@christinhumephoto?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Christin
+                        Hume</a> on <a
+                        href="https://unsplash.com/photos/mfB1B1s4sMc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+                    </p>
                 </>
-            )
+            ),
+            tag: "systemy komputerowe",
+            img: "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
         },
         {
             id: 107,
@@ -396,7 +492,7 @@ export const articlesLink = [
                         koncepcji jest Minix.
                     </p>
                     <p>
-                        <b>Jądro hybrydowe</b> stanowi połączenie dwóch powyższych koncepcji. Jest połaczeniem prostoty oraz
+                        <b>Jądro hybrydowe</b> stanowi połączenie dwóch powyższych koncepcji. Jest połączeniem prostoty oraz
                         szybkości jądra monolitycznego z bezpieczeństwem i modułowością mikrojądra. Ten typ jądra uruchamia
                         niektóre moduły w przestrzeni jądra z zamiarem doprowadzenia do spadku utraty wydajności przy
                         zachowaniu najwyższej funkcjonalności. Jądra hybrydowe są wykorzystywane w systemach z rodziny
@@ -787,7 +883,7 @@ export const articlesLink = [
                 <>
                     <SmallestHeader>Własne hooki</SmallestHeader>
                     <p>Stworzone własne <i>hooki</i> pomagają przy wyciąganiu logiki na zewnątrz komponentu. Dzięki temu w
-                        komponencie mamy porządek. Pozwalają na stworzenie funkcji wielokrotnego użytu. Nazwę zawsze
+                        komponencie mamy porządek. Pozwalają na stworzenie funkcji wielokrotnego użytku. Nazwę zawsze
                         zaczynamy od słowa <b>use</b>, zgodnie z konwencją - dzięki temu od razu jest jasne, że mamy do
                         czynienia z <i>hookiem</i>. W położeniu hooków także obowiązuje konwencja i używamy ich na samej
                         górze, nie w blokach warunkowych. Od nas zależy jakie argumenty przyjmuje <i>custom hook</i> i co
@@ -1008,7 +1104,7 @@ export const articlesLink = [
                             znaku końca w pliku.
                         </ListItem>
                         <ListItem>
-                            <b>string</b> - jest to struktura jednorodna ciąggu znaków składających się z sekwencji typu
+                            <b>string</b> - jest to struktura jednorodna ciągu znaków składających się z sekwencji typu
                             znakowego. Teksty (<i>stringi</i>) są szczególnie istotne ze względu na to, że służą do
                             komunikacji między użytkownikiem, a komputerem.
                         </ListItem>
@@ -4651,7 +4747,7 @@ export const articlesLink = [
                         &nbsp;&nbsp;grid-template-rows: repeat(5,
                         100px);<br/>
                         &#125;<br/><br/>
-                        .container__elemenent &#123;<br/>
+                        .container__element &#123;<br/>
                         &nbsp;&nbsp;grid-column-start: 3;<br/>
                         &nbsp;&nbsp;grid-column-end: -2;<br/>
                         &nbsp;&nbsp;grid-row-start: 1<br/>
@@ -5198,10 +5294,10 @@ export const articlesLink = [
                         &lt; true
                     </Blockquote>
                     <Blockquote>
-                        > let <b>czy10JestWiekszeNiz4</b> = 10 > 4<br/>
+                        > let <b>czy10JestWiększeNiz4</b> = 10 > 4<br/>
                     </Blockquote>
                     <Blockquote>
-                        > <b>czy10JestWiekszeNiz4</b><br/>
+                        > <b>czy10JestWiększeNiz4</b><br/>
                         &lt; true
                     </Blockquote>
                     <SmallestHeader>wartości <i>falsy</i></SmallestHeader>
@@ -6147,7 +6243,7 @@ export const articlesLink = [
                                 .article__div--highlighted &#123;<br/>
                                 &nbsp;&nbsp;width: 300px;<br/>
                                 &nbsp;&nbsp;resize: both;<br/>
-                                &nbsp;&nbsp;overflox: auto;<br/>
+                                &nbsp;&nbsp;overflow: auto;<br/>
                                 &nbsp;&nbsp;height: 300px;<br/>
                                 &nbsp;&nbsp;background-image: url("../images/pink.png");<br/>
                                 <b>&nbsp;&nbsp;background-size: cover;<br/>
@@ -6177,7 +6273,7 @@ export const articlesLink = [
                                         .article__div--highlighted &#123;<br/>
                                         &nbsp;&nbsp;width: 300px;<br/>
                                         &nbsp;&nbsp;resize: both;<br/>
-                                        &nbsp;&nbsp;overflox: auto;<br/>
+                                        &nbsp;&nbsp;overflow: auto;<br/>
                                         &nbsp;&nbsp;height: 300px;<br/>
                                         &nbsp;&nbsp;background-image: url("../images/pink.png");<br/>
                                         &nbsp;&nbsp;background-size: cover;<br/>
